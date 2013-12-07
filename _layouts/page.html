@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+ 
+      {% include head.html %}
+
+<body>
+<div id="header" class="noprint">
+
+<span id="path">
+    <a href="/" accesskey="1" title="Homepage">{{site.url}}</a> <span>/ {{page.title}}</span>
+  </span>
+
+  <span id="nav">
+{% include top_links.html %}
+  </span>
+</div>
+
+        <div id="wrap">
+          <div id="content">
+            <div class="story">
+
+                {{ content }}
+
+
+          </div>
+        </div> <!-- /container -->
+
+    </body>
+</html>

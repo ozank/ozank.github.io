@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+ 
+      {% include head.html %}
+
+<body>
+<div id="header" class="noprint">
+  <span id="path">
+  </span>
+  <span id="nav">
+  </span>
+</div>
+
+        <div id="wrap">
+          <div id="content">
+            <div class="story">
+              <h1>{{site.owner.name}}</h1>
+              <div class="meta subtitle">{{site.owner.position}} at <a href="{{site.owner.companyweb}}">{{site.owner.company}} </a></div>
+            </div>
+
+<div id="contact">
+
+  <img src="{{ site.url }}/images/{{ site.owner.avatar }}" title="{{site.owner.name}}" alt="Photo of {{site.owner.name}}"/>
+
+<p>
+{% include top_links.html %}
+</p>
+
+</div>
+
+
+                {{ content }}
+
+            <div class="footer">
+              <div class="contact">
+             
+footer notlari
+
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+
+    </body>
+</html>

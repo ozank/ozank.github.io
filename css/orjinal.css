@@ -1,0 +1,361 @@
+@charset "utf-8";
+
+/*
+  Style sheet for jblevins.org.
+  Copyright (C) 2004-2013 Jason R. Blevins <jrblevin@sdf.org>
+  All rights reserved.
+*/
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, p, blockquote, th, td, iframe {
+margin: 0;
+padding: 0;
+border: 0;
+}
+
+html {
+overflow-y: scroll; /* force scrollbar */
+background-color: #e0ddda;
+}
+
+body {
+margin: 0 auto;
+font-family: "Minion Pro Caption", minion-pro-caption, "Minion Pro", "Garamond Premier Pro Caption", "Garamond Premier Pro", "Hoefler Text", Constantia, Garamond, Palatino, "Palatino Linotype", Baskerville, "Book Antiqua", Georgia, "Century Schoolbook L", serif;
+font-variant-ligatures: common-ligatures;
+-moz-font-feature-settings: "liga=1, swsh=0, cswh=0";
+text-rendering: optimizeLegibility;
+color: #333;
+}
+
+/* Font size and rhythm */
+html {
+font-size: 1em;
+}
+
+p, dt, dd, pre {
+font-size: 1em;
+line-height: 1.5em;
+}
+
+p {
+text-align: justify;
+margin-top: 0;
+margin-bottom: 1.5em;
+-webkit-hyphens: auto;
+-moz-hyphens: auto;
+hyphens: auto;
+}
+
+pre {
+padding: 1em;
+margin-bottom: 1.5em;
+}
+
+blockquote {
+padding: .2em .5em 0 .5em;
+margin-top: -.2em;
+margin-bottom: 1.3em;
+}
+
+blockquote p:last-child {
+margin-bottom: .2em;
+}
+
+math[display=block] {
+font-size: 1em;
+line-height: 1.5em;
+margin-top: 1.5em;
+margin-bottom: 1.5em;
+}
+
+h1 {
+font-size: 1.8em;
+line-height: 1.666666em;
+margin-top: .833333em;
+margin-bottom: .833333em;
+}
+
+h2 {
+font-size: 1.5em;
+line-height: 1.5em;
+margin-top: 1em;
+margin-bottom: .5em;
+}
+
+h3 {
+font-size: 1.25em;
+line-height: 1.2em;
+margin-top: .6em;
+margin-bottom: .6em;
+}
+
+h2 + h3 {
+padding-top: .6em;
+margin-top: 0;
+}
+
+h4 {
+font-size: 1.125em;
+line-height: 1.333em;
+margin-top: 1.333em;
+margin-bottom: 0;
+}
+
+.subtitle {
+font-size: .875em;
+line-height: 1.714em;
+margin-top: 0;
+margin-bottom: 1.714em;
+}
+
+h1 + div.subtitle, h1 + div.dateline {
+margin-top: -2.271em;
+margin-bottom: 1.89em;
+}
+
+hr {
+font-size: 1.5em;
+line-height: 1.5em;
+margin-top: 1.5em;
+margin-bottom: 1.5em;
+color: #e0ddda;
+text-align: center;
+border: none;
+}
+
+hr:after {
+content: "\0025c6\0000a0\0000a0\0000a0\0000a0\0025c6\0000a0\0000a0\0000a0\0000a0\0025c6";
+}
+
+a.noteref {
+font-size: .75em;
+line-height: 1em;
+}
+
+small, ol.footnotes > li > p {
+font-size: .813em;
+line-height: 1.846em;
+}
+
+li {
+line-height: 1.5em;
+}
+
+input {
+font-size: 1em;
+}
+
+/* Links */
+a:link, a:visited { color: #004491; }
+a:hover { color: #555; }
+a, img { border: none; }
+
+/* Lists */
+ul, ol { padding-left: 1.8em; margin-top: 0; margin-bottom: 1.5em; }
+ul ul, ol ol, ul ol, ol ul { margin-bottom: 0em; }
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+font-family: "Garamond Premier Pro", garamond-premier-pro, "Adobe Caslon Pro", "Minion Pro", Constantia, serif;
+font-weight: normal;
+font-style: normal;
+color: #111;
+clear: left;
+}
+
+h1 a:link, h1 a:visited, h2 a:link, h2 a:visited { color: #111; text-decoration: none; }
+h1 a:hover, h2 a:hover { color: #555; text-decoration: none; }
+h3 { font-style: italic; }
+
+/* Bordered environments */
+blockquote, code, kbd {
+background: #e9e8e7;
+border: 1px solid #e0ddda;
+-moz-border-radius: .2em;
+-webkit-border-radius: .2em;
+}
+blockquote { border-left: thick solid #e0ddda; }
+
+/* Abbreviations and Acronyms */
+abbr { letter-spacing: .1em; }
+abbr[title], acronym[title] { border-bottom: 1px dotted #d3dfee; }
+
+/* Monospace environments */
+code, pre, kbd {
+font-family: Inconsolata, inconsolata, "Source Code Pro", Terminus, Consolas, "Liberation Mono", "Bitstream Vera Sans Mono", "Andale Mono WT", "Andale Mono", Monaco, "Lucida Console", "Lucida Sans Typewriter", "Nimbus Mono L", "Courier New", Courier, monospace;
+}
+
+pre {
+background-color: #202224;
+color: #f8f8f8;
+white-space: pre;  
+overflow-x: auto;
+-moz-border-radius: .3em;
+-webkit-border-radius: .3em;
+}
+
+pre > code { display: block; border: none; background-color: inherit; }
+code, kbd { padding: 0 .3ex; }
+
+/* Tables */
+table {
+border-top: double #999897;
+border-bottom: thin solid #999897;
+border-spacing: 0;
+margin: 0 auto;
+}
+th { border-bottom: thin solid #999897; }
+td { padding: 0 .5em; }
+table.plain { border-top: none; border-bottom: none; }
+table.plain th { border-bottom: none; }
+
+dd { margin-left: 1.5em; }
+
+/* Mathematics */
+merror { display: inline; }
+math[display=block] { overflow: auto; }
+math { white-space: nowrap; }
+.eq-number { float: right; }
+
+/* Footnotes */
+a.noteref { vertical-align: super; }
+sup { line-height: 0; }
+a.noteref, sup a:link, sup a:visited { padding: 3px; }
+ol.footnotes > li > p { display: inline; }
+hr.footnotes:after { content: ""; }
+hr.footnotes {
+margin-top: 1.5em;
+margin-bottom: .5em;
+background-color: #999897;
+background-color: #e0ddda;
+height: 2px;
+text-align: left;
+margin-right: 70%;
+}
+
+/* Images */
+p img { float: right;  padding-left: 1em; }
+div.image { width: 100%; margin: 1.5em 0; display: inline-block; vertical-align: middle; }
+div.image img { display: block; margin: 0 auto; border: thin solid #d9d8d7; padding: 3px; }
+div.noborder img { border: 0; padding: 0; }
+div.image p { text-align: center; margin: 1em 0 0 0; font-size: .938em; line-height: 1.6em; font-style: italic; }
+div.image p strong { display: block; text-align: center; text-transform: uppercase; font-weight: normal; font-style: normal; }
+
+/* Fonts */
+.meta, #header { font-family: "Myriad Pro", myriad-pro, "Helvetica Neue", Helvetica, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Corbel, Verdana, sans-serif; }
+
+/* Metadata */
+.meta {
+color: #777;
+font-size: .875em;
+line-height: 1.714em;
+margin-top: 0;
+margin-bottom: 1.714em;
+}
+.meta a { color: #777; text-decoration: none; border: 0; }
+.meta a:hover { color: #222; }
+h1 + div.subtitle, h1 + div.dateline { position: relative; text-transform: uppercase; }
+
+/* Error pages */
+.error .icon { float: left; font-size: 4em; line-height: 1em; margin-right: .2em; color: #900; }
+
+/* Source code (From Twilight Color Theme for Emacs)
+Unspecified code selectors: value, cbracket, context, usertype,
+classname, specialchar, symbol, todo, linenum, url */
+code .bold { font-weight: bold; }
+code .italics { font-style: italic; }
+code .underline { text-decoration: underline; } /* LaTeX */
+code .fixed { font-family: monospace; } /* LaTeX */
+code .bibtex, /* LaTeX */
+code .keyword { font-weight: bold; color: #e5bc75; }
+code .math, /* LaTeX */
+code .date, /* ChangeLog */
+code .time, /* ChangeLog */
+code .oldfile, /* diff */
+code .string, code .regexp, code .character { color: #a8b87d }
+code .name, /* ChangeLog */
+code .newfile, /* diff */
+code .number { color: #e87856; }
+code .file, /* ChangeLog */
+code .function { color: #e3e3e3; }
+code .selector, /* css */
+code .type { font-weight: bold; color: #b5834a; }
+code .ip, /* ChangeLog */
+code .property, /* CSS */
+code .argument, /* LaTeX */
+code .optionalargument, /* LaTeX */
+code .variable { color: #869cbf; }
+code .preproc, code .comment { color: #79737a; }
+code .difflines  { font-weight: bold; } /* diff */
+
+/* Named divs */
+#wrap {
+width: 38em;
+overflow: hidden;
+margin: 0 auto 2em auto;
+padding: 2em 6em;
+background-color: #fff;
+border: 1px solid #c9c8c7;
+-moz-border-radius: .2em;
+-webkit-border-radius: .2em;
+}
+
+#header { width: 50em; height: 1.5em; margin: .75em auto .25em; color: #777; position: relative; }
+#header a { color: #777; text-decoration: none; }
+#header a:hover { color: #222; }
+#header #path { position: absolute; left: 0em; width: 50%; }
+#header #nav { position: absolute; right: 0em; text-align: right; width: 50%; }
+
+#content { width: 100%; float: left; }
+
+div.story { position: relative; }
+
+#footer { width: 100%; float: left; border-top: 1px solid #c9c8c7; margin-top: 1.5em; }
+
+/* Homepage */
+#contact img { float: left; width: 167px; height: 250px; padding: 3px; border: 1px solid #ccc; margin-right: 33px; }
+#contact p { -webkit-hyphens: none; text-align: left; }
+
+/* CV */
+#pdf-cv { width: 9em; position: absolute; top: 0; right: -3em; }
+#pdf-cv img { float: left; margin: 0 1em 1em 0; }
+#pdf-cv p { text-align: right; }
+#cv-contact { width: 100%; float: left; margin-bottom: 1.5em; }
+#cv-contact div { float: left; width: 50%; }
+
+/* Projects */
+#donate { float: right; margin-left: 2em; margin-bottom: 1em; text-align: right; }
+
+/* Directory listings (ls.cgi) */
+table.ls { border: thin solid #ccc; border-collapse: collapse; margin: 0; }
+table.ls th { border: thin solid #ccc; background-color: #eee; }
+table.ls tr.even { background-color: #e9edf2; }
+table.ls th, table.ls td { padding: .1em 1.5em; }
+table.ls td.size { text-align: right; }
+
+/* Print Stylesheet */
+@page { widows: 2; orphans: 2; }
+@media print {
+body { font-size: 12px; }
+a:link, a:visited { color: #000; }
+a { text-decoration: none; }
+hr { color: transparent; }
+.noprint { display: none; }
+#content a[href^="/"]:after { content: " (http://jblevins.org" attr(href) ") "; }
+#wrap { border: 0; }
+}
+
+@media only screen and (device-width: 768px) {
+/* 48em total: 38em body, 7em padding, 3em margin */
+#header { width: 45em; }
+#wrap { width: 38em; padding: 1em 3.5em; }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+/* 30em total: 28em body, 2em padding, 0em margin */
+.meta { -webkit-text-size-adjust: none; }
+#header { width: 29em; left: 0.5em; }
+#wrap { width: 28em; padding: .5em 1em; -moz-border-radius: 0em; -webkit-border-radius: 0em; }
+#path span { display: none; }
+#contact img { margin-right: 17px; }
+}
+

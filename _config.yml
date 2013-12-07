@@ -1,0 +1,15 @@
+name: Your New Jekyll Site
+#url: http://asuyatuyolar.org
+owner:
+  name: Ozan Keysan
+  position: Research Associate
+  company: University of Edinburgh
+  companyweb: http://www.ed.ac.uk
+  avatar: ozan.jpg
+
+#markdown: redcarpet
+#redcarpet:
+#  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables",     #"with_toc_data"]
+
+markdown: kramdown
+pygments: true
