@@ -5,9 +5,9 @@ title: Ozan Keysan
 
 I'm a Research Associate and PhD candidate in the [Institute for Energy Systems](http://www.see.ed.ac.uk/drupal/research/IES). I'm currently working [Marina Platform](http://www.marina-platform.info/) project.
 
-<!---I hold a BSc and MSc in Electrical and Electronics Engineering from METU (Turkey).-->
+<!---I hold a BSc and MSc in Electrical and Electronics Engineering from METU (Turkey).
 
-You can read my latest studies from MyPapers and have a a look at my Presentations. And here's some SoftwareTips if you're interested.
+You can read my latest studies from MyPapers and have a a look at my Presentations. And here's some SoftwareTips if you're interested..-->
 
 <p> <script type="text/javascript">
 // http://csarven.ca/hiding-email-addresses
@@ -23,7 +23,7 @@ You can read my latest studies from MyPapers and have a a look at my Presentatio
 
 ### Research Interests
 
-- Renewable Energy
+- Renewable Energy (Wind, Wave)
 - Electrical Machine Design 
 - Superconducting Machines
 - Optimisation of Electrical Machines
