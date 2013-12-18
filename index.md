@@ -7,7 +7,7 @@ I'm a Research Associate and PhD candidate in the [Institute for Energy Systems]
 
 <!---I hold a BSc and MSc in Electrical and Electronics Engineering from METU (Turkey).-->
 
-You can download my [CV](/CV) or look at my Papers and Presentations. Here's some Software Tips if you're interested.
+You can download my [CV](/cv) or look at my [publications](/papers) and Presentations. Here's some Software Tips if you're interested.
 
 <p> <script type="text/javascript">
 // http://csarven.ca/hiding-email-addresses
