@@ -15,4 +15,4 @@ Here are some software that I use (and recommend):
 * [R](http://www.r-project.org/), [RStudio](http://www.rstudio.com/) to plot pretty graphs, [Ocatave](http://www.gnu.org/software/octave/) as a replacement for Matlab, [Python](http://www.python.org/) and [Julia](http://julialang.org/) for serious work,
 * [FEMM](http://www.femm.info/wiki/HomePage) and [Opera](http://operafea.com/) for electromagnetic FEA.
 
-If you're looking for more tips visit my blog (sorry, only in Turkish): *[Asu'ya Tuyolar](http://www.asuyatuyolar.org)*
+If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'ya Tuyolar](http://www.asuyatuyolar.org)**
