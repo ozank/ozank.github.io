@@ -8,7 +8,7 @@ permalink: /presentations/index.html
 
 ### 2013
 
-
+* [IOP](http://www.iop.org/events/scientific/conferences/) Large Scale Applications of Superconductivity, [Presentation](https://www.dropbox.com/s/n04kh5bwx0t8zyh/Ozan_Keysan_10MW_HTS_11_2013.pdf)
 * [Version Control for Academics](http://dl.dropbox.com/u/2490601/Presentations/version-control/svn.html)
 * [An Introduction to Superconductivity](http://www.see.ed.ac.uk/~okeysan/idcore/idcore2.html)
 * [Superconducting Electrical Machines](https://dl.dropbox.com/u/2490601/Presentations/IDCORE/IDCORE_HTSG_June_2012.ppt)
