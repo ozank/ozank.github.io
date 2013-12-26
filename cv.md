@@ -73,7 +73,7 @@ implementation of linear machines to wave energy converters.
 |2010 | SMART R&D Grant | Design and testing of a 25 kW axial flux permanent-magnet generator. The experimental results have been used to evaluate the thermal performance of the generator and the cooling system.|
 |2010 | [Hayward Tyler](http://www.haywardtyler.com/) | Feasibility analysis of a submerged and flooded permanent-magnet generator. Thermal performance of the flooded generator has been investigated as well as the corrosion mechanisms and fluid drag losses.|
 |2009–2010 | NPower Project | The feasibility analysis of direct-drive PM generators for two wave energy converters ([Aquamarine Power](http://www.aquamarinepower.com/),[AWS Ocean Power](http://www.awsocean.com)) and two tidal energy converters ([Marine Current Turbines](http://www.marineturbines.com/), [Scotrenewables](http://www.scotrenewables.com/)) have been investigated. An analytical and optimization tool is developed, and licensed by University of Edinburgh for further use.|
-|2005–2008 | METU | A novel method to estimate the rotor speed and position of an induction motor using the fringing flux out of the rotor cage is developed. An international patent has been awarded to this work.|
+|2005–2008 | [METU](http://www.metu.edu.tr) | A novel method to estimate the rotor speed and position of an induction motor using the fringing flux out of the rotor cage is developed. An international patent has been awarded to this work.|
 
 ## Teaching Experience
 
