@@ -39,7 +39,7 @@ permalink: /cv/index.html
 ## Education
 
 |2013| PhD | [University of Edinburgh](http://www.ed.ac.uk), Institute for Energy Systems|
-|	|	| *Thesis Title: A Superconducting Generator Design for Offshore Wind Turbines*|
+|	|	| *Thesis Title: Superconducting Generators for Large Offshore Wind Turbines*|
 |2008| MSc	| [Middle East Technical University](http://www.metu.edu.tr),|
 |	|	|Electrical-Electronics Engineering|		
 |	|	|*Thesis Title: A Non-Invasive Speed and Position Sensor for Induction Machines Using External Search Coils*|
