@@ -3,7 +3,7 @@ layout: home
 title: Ozan Keysan
 ---
 
-I'm a Research Associate and PhD candidate in the [Institute for Energy Systems](http://www.see.ed.ac.uk/drupal/research/IES). I'm currently working in the [Marina Platform](http://www.marina-platform.info/) project.
+I'm a Research Associate in the [Institute for Energy Systems](http://www.see.ed.ac.uk/drupal/research/IES). I'm currently working in the [Marina Platform](http://www.marina-platform.info/) project.
 
 <!---I hold a BSc and MSc in Electrical and Electronics Engineering from METU (Turkey).-->
 
