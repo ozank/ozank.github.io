@@ -177,6 +177,6 @@ implementation of linear machines to wave energy converters.
 -  English (Fluent),   Spanish (Intermediate),   Chinese (Beginner)
 
 ## Publications
+<script src="http://bibbase.org/show?bib=http://bibbase.org/mendeley2/363361&groupby=type&jsonp=1&folding=1"></script> 
 
-<script src="http://www.bibbase.org/show?bib=www.bibbase.org/mendeley/d6cb8f0be3&&groupby=type&jsonp=1&folding=1"></script> 
 
