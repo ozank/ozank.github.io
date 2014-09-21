@@ -3,11 +3,15 @@ layout: home
 title: Ozan Keysan
 ---
 
-I'm a Research Associate in the [Institute for Energy Systems](http://www.see.ed.ac.uk/drupal/research/IES). I'm currently working in the [Marina Platform](http://www.marina-platform.info/) project.
+I'm a lecturer in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr).
 
 <!---I hold a BSc and MSc in Electrical and Electronics Engineering from METU (Turkey).-->
 
 You can download my [CV](/cv) or look at my [Publications](/papers) and [Presentations](/presentations). Here's some [Software Tips](/tips) if you're interested.
+
+Courses (Fall 2014)
+- [EE281](/ee281)
+- [EE361](/ee361)
 
 <p> <script type="text/javascript">
 // http://csarven.ca/hiding-email-addresses
@@ -19,7 +23,7 @@ You can download my [CV](/cv) or look at my [Publications](/papers) and [Present
 
 </script>
 <span class="meta">&#8226;</span> 
-+44(0)131 650 5629</p>
+(+90312) 210 4428</p>
 
 ### Research Interests
 

@@ -1,10 +1,9 @@
 name: Your New Jekyll Site
-#url: http://asuyatuyolar.org
 owner:
   name: Ozan Keysan
-  position: Research Associate
-  company: University of Edinburgh
-  companyweb: http://www.ed.ac.uk
+  position: Lecturer
+  company: Middle East Technical University
+  companyweb: http://www.metu.edu.tr
   avatar: ozan.jpg
 
 #markdown: redcarpet

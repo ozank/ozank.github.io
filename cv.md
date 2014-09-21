@@ -15,19 +15,19 @@ permalink: /cv/index.html
 <div id="cv-contact">
 
   <div>
-    Institute for Energy Systems<br />
-    University of Edinburgh<br />
-    EH9 3JL, Edinburgh, UK<br />
+    Electrical-Electronics Engineering<br />
+    Middle East Technical University<br />
+    06800, Ankara, Turkey<br />
   </div>
 
   <div>
-    Phone: +44(0)131 650 5629<br />
-    Office: FJB 1.168<br />
+    Phone: (+90 312) 210 4428<br />
+    Office: EA-304FJB 1.168<br />
     Email: <script type="text/javascript">
 
-    var string1 = "o.keysan";
+    var string1 = "ozan";
     var string2 = "@";
-    var string3 = "ed.ac.uk";
+    var string3 = "keysan.me";
     var string4 = string1 + string2 + string3;
     document.write("<a href=" + "mail" + "to:" + string1 + string2 + string3 + ">" + string4 + "</a>");
 </script><br />
@@ -48,7 +48,7 @@ permalink: /cv/index.html
 
 ## Experience
 
-|2011–Present | Research Associate | Institute for Energy Systems, University of Edinburgh|
+|2011–2014 | Research Associate | Institute for Energy Systems, University of Edinburgh|
 |2010–2012 | Electrical Machine Design Consultant | NGenTec, Edinburgh|
 |2009–2010 | Research Associate | Institute for Energy Systems, University of Edinburgh|
 |2005-2009 | Research Assistant | Middle East Technical University |
@@ -65,7 +65,7 @@ implementation of linear machines to wave energy converters.
 
 ## Research Experience & Projects
 
-|2011–Present | EU FP7 Project | [Marina Platform](http://www.marina-platform.info/) Project is an EU FP7 project with 17 industrial and academic partners. I am working as a full-time researcher in the project, which aims to design combined wave and wind energy platforms. My duty is to compare different generator topologies and power take-off systems in terms of efficiency and reliability.|
+|2011–2014 | EU FP7 Project | [Marina Platform](http://www.marina-platform.info/) Project is an EU FP7 project with 17 industrial and academic partners. I am working as a full-time researcher in the project, which aims to design combined wave and wind energy platforms. My duty is to compare different generator topologies and power take-off systems in terms of efficiency and reliability.|
 |2013 | United Arab Emirates Uni. | Design of a 5 kW permanent-magnet linear generator test rig.|
 |2013 | [GE Power Conversion](http://www.gepowerconversion.com/) | A project to validate the superconducting generator topology that I developed during my PhD. General Electric supplied the superconducting coil and test facilities for the cryogenic tests.|
 |2011 | [NGenTec](http://www.ngentec.com/) | Design consultant for a medium-speed generator design. Electromagnetic optimization a 5 MW, 300 rpm permanent-magnet generator has been completed.|
