@@ -3,7 +3,7 @@ layout: home
 title: Ozan Keysan
 ---
 
-**Courses for Fall 2014: [EE281](/ee281) <span class="meta">&#8226;</span>  [EE361](/ee361)**
+**Courses for Fall 2014: <span class="meta">&#8226;</span> [EE281](/ee281) <span class="meta">&#8226;</span>  [EE361](/ee361)**
 
 I'm a lecturer in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr).
 You can download my [CV](/cv) or look at my [Publications](/papers) and [Presentations](/presentations). Here's some [Software Tips](/tips) if you're interested.
