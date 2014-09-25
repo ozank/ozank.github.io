@@ -78,6 +78,8 @@ Interconnection of electrical elements
 ---
 # A More Generalized View
 
+--
+
 ## 1- Take a Real-World Problem
 
 <img src="https://c2.staticflickr.com/4/3639/3403005971_6bdcbb8ac5_z.jpg" alt="Drawing" style="width: 500px;"/>
@@ -86,11 +88,15 @@ Interconnection of electrical elements
 
 ## 2- Simplify and represent it as a model
 
+--
+
 <img src="http://upload.wikimedia.org/wikipedia/commons/2/2a/Electric_circuit_RCL.jpg" alt="Drawing" style="width: 600px;"/>
 ---
 # A More Generalized View
 
 ## 3- Represent the Model Mathematically & Solve
+
+--
 
 `$$     \begin{array}{ccl}
         a_{11}x_1 & + a_{12}x_2 + \cdots + & a_{1n}x = 0 \\
@@ -99,6 +105,7 @@ Interconnection of electrical elements
       \end{array} $$`
 ---
 # Not Limited to Electric Circuits
+--
 
 ## Thermal Problems
 
@@ -113,6 +120,8 @@ Thermal modelling of a thruster
 ## Mechanical Problems
 
 <img src="http://upload.wikimedia.org/wikipedia/commons/d/d0/Shanghai_Transrapid_002.jpg" alt="Drawing" style="width: 400px;"/>
+--
+
 <img src="https://raw.githubusercontent.com/ozank/ee281/master/images/train_circuit.png" alt="Drawing" style="width: 300px;"/>
 
 Mechanical modelling of a magnetic levitation train
@@ -122,6 +131,79 @@ class: center
 
 <img src="https://raw.githubusercontent.com/ozank/ee281/master/images/problem_modelling.png" alt="Drawing" style="width: 200px;"/>
 ---
+# Any questions up to here?
+
+---
+# Basics
+## SI Units:
+- kg, m, V, A, N ...
+
+## SI Prefixes:
+
+- Mega (M)   \\(10^6\\)
+- Kilo (k)   \\(10^3\\)
+- Mili (m) \\(10^{-3}\\)
+- Micro (\\(\mu\\))   \\(10^{-6}\\)
+- Nano (n)   \\(10^{-9}\\)
+- Pico (p)    \\(10^{-12}\\)
+
+---
+
+# Electric Charge
+
+The unit of charge is Columbs (C), which is equal to charge of \\(6.24 \times 10^{18}\\) electrons.
+
+<img src="http://regentsprep.org/regents/physics/phys03/afieldint/fieldf.gif" alt="Drawing" style="width: 300px;"/>
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/VFPt_charges_plus_minus_thumb.svg/300px-VFPt_charges_plus_minus_thumb.svg.png" alt="Drawing" style="width: 300px;"/>
+
+---
+# Current
+Current is the rate of charge flow: $$i=\frac{dq}{dt}$$. 
+
+1 A equals to 1 Coulomb/seconds.
+
+<img src="http://www.rkm.com.au/ANIMATIONS/animation-graphics/circuit-diagram.jpg" alt="Drawing" style="width: 300px;"/>
+
+---
+# Voltage
+
+Voltage is related to the strength of the electric field. It is analogous to pressure in a hydraulic circuit.
+
+! Voltage is always measured between two points, that is why it is also called potential difference.
+
+--
+## Analogy to Hydraulic System
+- Voltage ~ Pressure
+- Electric Current ~ Water Current
+- Tap Resistance ~ Resistance
+
+---
+# Power
+
+Power is the rate of energy (dissipating or absorbing), denoted by P:
+
+$$P=\frac{dw}{dt}$$
+
+In electric circuits power is equal to multiplication of voltage and current.
+
+$$Power = Voltage \times Current$$
+$$P = VI$$
+
+The unit of power is **Watt**.
+
+---
+# Energy
+
+The unit of energy is Joules, which is also equal to watt.seconds.
+
+$$w=\int P(t) dt = \int V(t) I(t) dt$$
+
+It is also common practice to express electrical energy in kilo-watt hours (**kWh**).
+
+Example: Electricity bills([photo1](https://raw.githubusercontent.com/ozank/ee281/master/images/fatura1.jpg), [photo2](https://raw.githubusercontent.com/ozank/ee281/master/images/fatura2.jpg)) are calculated in terms of kWh.
+
+---
+
 # Any questions?
 
 ## You can download this presentation from: [keysan.me/ee281](keysan.me/ee281)
