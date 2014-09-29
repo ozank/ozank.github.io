@@ -8,3 +8,4 @@ permalink: /ee361_presentations/index.html
 
 - [Introduction-Week#1-22/09](/presentations/ee361_intro.html)
 - [Magnetic Circuits-Week#1-24/09](/presentations/ee361_magnetic_circuits.html)
+- [Magnetic Circuits2-Week#2-29/09](/presentations/ee361_magnetic_circuits2.html)
