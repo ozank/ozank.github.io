@@ -21,8 +21,8 @@ permalink: /cv/index.html
   </div>
 
   <div>
-    Phone: (+90 312) 210 4428<br />
-    Office: EA-304FJB 1.168<br />
+    Phone: (+90 312) 210 2319<br />
+    Office: EA-304<br />
     Email: <script type="text/javascript">
 
     var string1 = "ozan";
