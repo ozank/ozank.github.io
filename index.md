@@ -19,7 +19,7 @@ For more information, you can download my [CV](/cv) or look at my [Publications]
 </script>
 
 <span class="meta">&#8226;</span> 
-(+90 312) 210 2319 <span class="meta">&#8226;</span> EA-304 </p>
+(+90 312) 210 2319 <span class="meta">&#8226;</span> [EA-304](https://goo.gl/maps/MiFNc) </p>
 
 #### Research Interests
 
