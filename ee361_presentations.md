@@ -10,4 +10,4 @@ permalink: /ee361_presentations/index.html
 - [Magnetic Circuits-Week#1-24/09](/presentations/ee361_magnetic_circuits.html)
 - [Magnetic Circuits2-Week#2-29/09](/presentations/ee361_magnetic_circuits2.html)
 - [Magnetic losses-Week#2-01/10](/presentations/ee361_hystresis_losses.html)
-
+- [Permanent Magnets-Week#3-08/10](/presentations/ee361_magnets.html)

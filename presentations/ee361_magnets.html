@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE361-Electromechanical Energy Conversion</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-361 ELECTROMECHANICAL ENERGY CONVERSION
+
+## Ozan Keysan
+
+[ozan.keysan.me](http://ozan.keysan.me)
+
+Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
+
+Office Hour: Wednesdays 11:40-12:30
+
+---
+# Losses in Magnetic Circuits
+
+## Hysteresis Loss: Proportional to Frequency
+<img src="http://www.diracdelta.co.uk/science/source/m/a/magnetic%20hysteresis/graph001.jpg" alt="Drawing" style="width: 400px;"/>
+---
+# Losses in Magnetic Circuits
+
+## Eddy Current Loss: Proportional to Frequency\\(^2\\)
+### Can be minimized by laminations
+
+<img src="http://www.electronics-tutorials.ws/transformer/trans35.gif" alt="Drawing" style="width: 400px;"/>
+
+---
+# Permanent Magnets
+
+![](http://www.ugimag.com/sites/ugimag.com/themes/ugimag/images/pics/300x300xhorshoe_magnet.jpg.pagespeed.ic.2SGF9sfEh5.jpg)
+
+---
+#Applications
+<img src="http://www.cndailymag.com/images/about/application.jpg" alt="Drawing" style="width: 600px;"/>
+
+---
+# History
+<img src="http://www.magnetnrg.com/uploads/2/0/0/5/20054943/2633149.jpg" alt="Drawing" style="width: 600px;"/>
+---
+# Neodymium Magnets (NdFeB)
+
+### Strongest
+### Expensive (250 TL/kg, £70/kg)
+
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Neodymag.jpg/1024px-Neodymag.jpg" alt="Drawing" style="width: 400px;"/>
+
+[Levitating a man](http://www.youtube.com/watch?v=q9m-hHg0gFk), [Magnet smashing](http://www.youtube.com/watch?v=Vt8NOdINJ1s), [Crushing hand](http://www.youtube.com/watch?v=0t8yDnyOaQ8)
+
+---
+# Magnetization Directions
+![](http://www.macmillmagnet.com/imges/Glossary_clip_image001.gif)
+---
+#B-H Curve of a Magnet
+
+--
+## Desired Properties:
+### Large retentivity (Remanence flux density)
+
+--
+### Large coercivity (point that crosses H axis)
+![](http://www.electronics-tutorials.ws/electromagnetism/mag20.gif)
+
+---
+# Magnet Strength Comparison
+<img src="http://www.kjmagnetics.com/images/blog/demag.curves2d.gif" alt="Drawing" style="width: 600px;"/>
+---
+# Example
+
+---
+# Real Datasheet
+### Sm-Co (Samarium-Cobalt Magnet)
+<img src="http://www.x-magnet.net/hard-magnet/images/Sm2Co17-YX-30A-Demagnetization-Hysteresgraph.gif" alt="Drawing" style="width: 600px;"/>
+
+### Magnets become less stable with increasing temperature.
+---
+## You can download this presentation from: [keysan.me/ee361](keysan.me/ee361)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
