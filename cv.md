@@ -25,9 +25,9 @@ permalink: /cv/index.html
     Office: EA-304<br />
     Email: <script type="text/javascript">
 
-    var string1 = "ozan";
+    var string1 = "keysan";
     var string2 = "@";
-    var string3 = "keysan.me";
+    var string3 = "metu.edu.tr";
     var string4 = string1 + string2 + string3;
     document.write("<a href=" + "mail" + "to:" + string1 + string2 + string3 + ">" + string4 + "</a>");
 </script><br />

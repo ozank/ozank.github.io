@@ -10,9 +10,9 @@ For more information, you can download my [CV](/cv) or look at my [Publications]
 
 <p> <script type="text/javascript">
 // http://csarven.ca/hiding-email-addresses
-    var string1 = "o.keysan";
+    var string1 = "keysan";
     var string2 = "@";
-    var string3 = "ed.ac.uk";
+    var string3 = "metu.edu.tr";
     var string4 = string1 + string2 + string3;
     document.write("<a href=" + "mail" + "to:" + string1 + string2 + string3 + ">" + string4 + "</a>");
 
