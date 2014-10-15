@@ -12,3 +12,4 @@ permalink: /ee361_presentations/index.html
 - [Magnetic losses-Week#2-01/10](/presentations/ee361_hystresis_losses.html)
 - [Permanent Magnets-Week#3-08/10](/presentations/ee361_magnets.html)
 - [AC Excitation, Mutual Inductance-Week#4-13/10](/presentations/ee361_ac_excitation.html)
+- [Ideal Transformers - Week#4-15/10](/presentations/ee361_ideal_transformers.html)
