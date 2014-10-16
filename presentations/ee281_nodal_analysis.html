@@ -30,47 +30,150 @@ class: center, middle
 Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ---
+# Review
+
+## Ohm's Law (Resistivity, Conductivity)
+
+--
+## Kirchhoff's Current Law
+
+--
+## Kirchhoff's Voltage Law
+
+--
+## Node, Branch, Loop, Mesh
+
+---
+
+# Analysis Methods
+
+## Scalability?
+
+<img src="http://www.k8iqy.com/qrprigs/2n26/2n26txrevcd.gif" alt="Drawing" style="width: 600px;"/>
+
+---
+# Analysis Methods
+
+## 1-Nodal Analysis
+### Unknown: Node Voltages
+### Uses Kirchhoff's Current Law
+
+--
+## 2-Mesh Analysis
+### Unknown: Mesh Currents
+### Uses Kirchhoff's Voltage Law
+
+---
 # Steps for Nodal Analysis
 
 ## 1-Choose a reference node (ground).
 ## 2-Label node voltages.
 ## 3-Write KCL equations for each node.
 ## 4-Solve the equations.
+---
+# Choosing Reference Node
+
+- ### Node that interconnects the most branches.
+- ### Usually at the bottom of circuit.
+- ### Label ground with one of the symbols below:
+
+![](http://www.clipartbest.com/cliparts/9iR/xn5/9iRxn56ie.png)
+---
+# Label each node voltage:
+## Except the ground node!
+
+![](https://www.rose-hulman.edu/cleo/video/streamer.php?id=240&action=attr&attr=statement_diagram
+)
 
 ---
-# Nodal Analysis with Voltage Sources
+# Write KCL for each node
 
-![](https://raw.githubusercontent.com/ozank/ee281/master/images/supernode1.png)
-
-## How many nodes?
-## How many node equations?
-
----
-# Nodal Analysis with Voltage Sources
-## Let's solve for Va and Vb
-
-![](https://raw.githubusercontent.com/ozank/ee281/master/images/supernode2.png)
----
-# Alternative Approach: Supernodes
-![](https://raw.githubusercontent.com/ozank/ee281/master/images/supernode3.png)
-
-##Remember: KCL is valid for any closed surface!
-
----
-# Example:
-### Find node voltages
-![](https://raw.githubusercontent.com/ozank/ee281/master/images/supernode_ex1.png)
+## The most practical way:
+### Use \\(-\\) sign for incoming currents.
+### Use \\(+\\) sign for outgoing currents.
 
 ---
 # Example:
-### Find v and i
-![](https://raw.githubusercontent.com/ozank/ee281/master/images/supernode_ex2.png)
+## Calculate node voltages:
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/node_example1.png)
+---
+# Example:
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/node_example1b.png)
 
 ---
 # Example:
-### Find node voltages
-![](https://raw.githubusercontent.com/ozank/ee281/master/images/supernode_ex3.png)
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/node_example2.png)
 
+---
+# Example:
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/node_example3.png)
+
+---
+#Example:
+## Obtain resistance matrix for:
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/node1.png)
+
+---
+#Example:
+## Obtain resistance matrix for:
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/node2.png)
+
+---
+# Example:
+## Resistance Matrix:
+$$
+\begin{bmatrix}
+\frac{1}{R_1}+\frac{1}{R_2} & -\frac{1}{R_2} & 0 \\\
+-\frac{1}{R_2} & \frac{1}{R_2}+ \frac{1}{R_3}+\frac{1}{R_4} & -\frac{1}{R_4} \\\
+0 & -\frac{1}{R_4}  & \frac{1}{R_4}\\\
+\end{bmatrix}
+\begin{bmatrix}
+V_a \\\
+V_b \\\
+V_c \\\
+\end{bmatrix}
+=
+\begin{bmatrix}
+I_1 \\\
+0 \\\
+-I_2 \\\
+\end{bmatrix}
+$$
+---
+# Example:
+## Remember!
+
+## Conductance = 1/ Resistance
+
+## $$G = \frac{1}{R}$$
+---
+#Conductance Matrix:
+## (Sometimes it is more convenient)
+
+$$\begin{bmatrix} G_1+G_2 & -G_2 & 0 \\\ -G_2 & G_2+ G_3+G_4 & -G_4 \\\
+0 & -G_4  & G_4 \end{bmatrix}
+\begin{bmatrix}
+V_a \\\
+V_b \\\
+V_c
+\end{bmatrix}
+=
+\begin{bmatrix}
+I_1 \\\
+0 \\\
+-I_2
+\end{bmatrix}
+$$
+
+---
+# No Escape from Linear Algebra!
+
+# $$Ax=b $$
+
+--
+# $$x=A^{-1}b $$
 ---
 # Any questions?
 
