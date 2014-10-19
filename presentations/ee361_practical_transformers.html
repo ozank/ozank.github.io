@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE361-Electromechanical Energy Conversion</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-361 ELECTROMECHANICAL ENERGY CONVERSION
+
+## Ozan Keysan
+
+[ozan.keysan.me](http://ozan.keysan.me)
+
+Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
+
+---
+# Mutual Inductance:
+
+## \\( V_{2} = M \frac{dI_1}{dt} \\)
+<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/mutual_flux.png
+" alt="Drawing" style="width: 380px;"/>
+---
+# Transformers
+
+### From small transformers in your chargers to:
+<img src="http://www.foxaudioresearch.ca/XFMR-group-lores.jpg
+" alt="Drawing" style="width: 600px;"/>
+---
+# Transformers
+
+### to very big transformers:
+<img src="http://3.bp.blogspot.com/-O5o0GzNoPNo/ThRSwkgVexI/AAAAAAAABu8/Fv88ZNaIEOY/s1600/222088_206340936072588_170822346291114_561188_4705333_n.jpg" alt="Drawing" style="width: 600px;"/>
+---
+# Transformers
+
+## Same logic behind
+
+- ### Magnetically coupled circuit
+- ### Usually has a highly permeable core (Why?)
+- ### Losses in the coil and core
+
+---
+# Ideal Transformer
+
+![](http://media.giphy.com/media/LfbLBInuSRynK/giphy.gif)
+
+### Not exists in real world!
+
+---
+# Ideal Transformer
+
+- ### The resistance of the coil is zero
+
+--
+- ### Infinitely permeable core
+
+--
+- ### No leakage flux.
+
+--
+- ### No eddy current or hystereris loss.
+
+--
+- ### Interwinding capacitance effects are neglected.##
+---
+# Ideal Transformer
+
+![](http://images.books24x7.com/bookimages/id_9293/fig4-3.jpg)
+
+### \\(e_1 = N_1 \frac{d\Phi}{dt} \;\;\; e_2 = N_2 \frac{d\Phi}{dt} \\)
+
+--
+## \\(\frac{V_1}{V_2} = \frac{e_1}{e_2} = \frac{N_1}{N_2}\\)
+---
+## Higher the number of turns
+## Higher the induced voltage.
+
+# \\(\frac{V_1}{V_2} = \frac{N_1}{N_2}\\)
+---
+# What about current?
+
+--
+## No Losses
+## \\(P_1 = P_2 \\)
+
+--
+## \\(V_1 I_1 = V_2I_2 \\)
+
+--
+## \\(\frac{V_1}{V_2} = \frac{I_2}{I_1}\\)
+
+---
+# Current is Inversely Proportional to Turns Ratio
+
+## \\(\frac{N_1}{N_2} = \frac{I_2}{I_1}\\)
+
+#### Also valid from the magnetic circuit
+---
+# Transformer Ratio
+
+# \\(a = \frac{N_1}{N_2}\\)
+
+<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/Transformer_symbol.png" alt="Drawing" style="width:400px;"/>
+
+---
+# Transformer Schematic
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Ideal_Transformar.png/320px-Ideal_Transformar.png" alt="Drawing" style="width:500px;"/>
+
+#### !Dots
+
+---
+# Transformer with Load
+<img src="http://upload.wikimedia.org/wikipedia/commons/4/49/Transformer_under_load.svg" alt="Drawing" style="width:500px;"/>
+---
+## Transformations between primary and secondary:
+
+#### From Secondary to Primary Winding
+| Refeered to Primary | Actual Value |
+| -- | -- |
+| \\(V_2' = n V_2 \quad \longleftarrow \\) | \\(V_2\\) |
+| \\(I_2' = I_2/n \quad \longleftarrow \\) | \\(I_2\\) |
+| \\(Z_2' = n^2 Z_2 \quad \longleftarrow \\) | \\(Z_2\\) |
+
+#### From Primary to Secondary Winding
+
+| Actual Value | Refeered to Secondary|
+| -- | -- |
+| \\(V_1 \quad \longrightarrow\\) | \\(V_1' = V_1 / n\\) |
+| \\(I_1 \quad \longrightarrow\\) | \\(I_1' = n I_1 \\) |
+| \\(Z_1 \quad \longrightarrow\\) | \\(Z_1' = Z_1 / n^2\\) |
+
+---
+## You can download this presentation from: [keysan.me/ee361](keysan.me/ee361)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
