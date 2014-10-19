@@ -21,7 +21,8 @@
 
 class: center, middle
 
-# EE-361 ELECTROMECHANICAL ENERGY CONVERSION
+# EE-361
+# PRACTICAL TRANSFORMERS
 
 ## Ozan Keysan
 
@@ -30,122 +31,74 @@ class: center, middle
 Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ---
-# Mutual Inductance:
-
-## \\( V_{2} = M \frac{dI_1}{dt} \\)
-<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/mutual_flux.png
-" alt="Drawing" style="width: 380px;"/>
----
-# Transformers
-
-### From small transformers in your chargers to:
-<img src="http://www.foxaudioresearch.ca/XFMR-group-lores.jpg
-" alt="Drawing" style="width: 600px;"/>
----
-# Transformers
-
-### to very big transformers:
-<img src="http://3.bp.blogspot.com/-O5o0GzNoPNo/ThRSwkgVexI/AAAAAAAABu8/Fv88ZNaIEOY/s1600/222088_206340936072588_170822346291114_561188_4705333_n.jpg" alt="Drawing" style="width: 600px;"/>
----
-# Transformers
-
-## Same logic behind
-
-- ### Magnetically coupled circuit
-- ### Usually has a highly permeable core (Why?)
-- ### Losses in the coil and core
-
----
 # Ideal Transformer
 
-![](http://media.giphy.com/media/LfbLBInuSRynK/giphy.gif)
-
-### Not exists in real world!
+- ### No losses
+- ### No leakage flux
+- ### No magnetizing current
+- ### No hysteresis
 
 ---
-# Ideal Transformer
-
-- ### The resistance of the coil is zero
-
---
-- ### Infinitely permeable core
-
---
-- ### No leakage flux.
-
---
-- ### No eddy current or hystereris loss.
-
---
-- ### Interwinding capacitance effects are neglected.##
----
-# Ideal Transformer
+# Voltage-Current-Load Transformation
 
 ![](http://images.books24x7.com/bookimages/id_9293/fig4-3.jpg)
 
-### \\(e_1 = N_1 \frac{d\Phi}{dt} \;\;\; e_2 = N_2 \frac{d\Phi}{dt} \\)
-
---
-## \\(\frac{V_1}{V_2} = \frac{e_1}{e_2} = \frac{N_1}{N_2}\\)
+## \\(\frac{V_1}{V_2} = \frac{N_1}{N_2} \quad I_1 N_1 = I_2 N_2 \\)
 ---
-## Higher the number of turns
-## Higher the induced voltage.
+# Voltage-Current-Load Transformation
 
-# \\(\frac{V_1}{V_2} = \frac{N_1}{N_2}\\)
+![](http://images.books24x7.com/bookimages/id_9293/fig4-3.jpg)
+
+## \\( V_1 = a V_2 \quad I_1 = I_2/a \\)
+## \\( Z_1 = a^2 Z_2 \\)
 ---
-# What about current?
-
---
-## No Losses
-## \\(P_1 = P_2 \\)
-
---
-## \\(V_1 I_1 = V_2I_2 \\)
-
---
-## \\(\frac{V_1}{V_2} = \frac{I_2}{I_1}\\)
+# Practical Transformers
 
 ---
-# Current is Inversely Proportional to Turns Ratio
+#Equivalent Circuit
 
-## \\(\frac{N_1}{N_2} = \frac{I_2}{I_1}\\)
+## = Ideal Transformer + External Impedances
 
-#### Also valid from the magnetic circuit
----
-# Transformer Ratio
-
-# \\(a = \frac{N_1}{N_2}\\)
-
-<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/Transformer_symbol.png" alt="Drawing" style="width:400px;"/>
+![](http://cnx.org/resources/6dc44719e43cf601fbf7cc2ad9ccc432/graphics9.png)
 
 ---
-# Transformer Schematic
-<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Ideal_Transformar.png/320px-Ideal_Transformar.png" alt="Drawing" style="width:500px;"/>
-
-#### !Dots
-
----
-# Transformer with Load
-<img src="http://upload.wikimedia.org/wikipedia/commons/4/49/Transformer_under_load.svg" alt="Drawing" style="width:500px;"/>
----
-## Transformations between primary and secondary:
-
-#### From Secondary to Primary Winding
-| Refeered to Primary | Actual Value |
-| -- | -- |
-| \\(V_2' = n V_2 \quad \longleftarrow \\) | \\(V_2\\) |
-| \\(I_2' = I_2/n \quad \longleftarrow \\) | \\(I_2\\) |
-| \\(Z_2' = n^2 Z_2 \quad \longleftarrow \\) | \\(Z_2\\) |
-
-#### From Primary to Secondary Winding
-
-| Actual Value | Refeered to Secondary|
-| -- | -- |
-| \\(V_1 \quad \longrightarrow\\) | \\(V_1' = V_1 / n\\) |
-| \\(I_1 \quad \longrightarrow\\) | \\(I_1' = n I_1 \\) |
-| \\(Z_1 \quad \longrightarrow\\) | \\(Z_1' = Z_1 / n^2\\) |
+# Winding Resistance
+[Overloaded Transformer](http://youtu.be/pCZax3vIslo?t=1m5s), [Overloaded-part2](www.youtube.com/watch?v=uMpVbnWpe0o)
+[Coil Winding](http://www.youtube.com/watch?v=I_kJCLWwI2Y)
 
 ---
+# Core losses
+<img src="http://www.electrical-forensics.com/Transformers/L05-04/TransIronCore-LG.jpg" alt="Drawing" style="width: 400px;"/>
+<img src="http://s1.hubimg.com/u/4197080_f496.jpg" alt="Drawing" style="width: 400px;"/>
+
+---
+# Leakage Flux
+<img src="http://sub.allaboutcircuits.com/images/52012.jpg" alt="Drawing" style="width: 400px;"/>
+
+---
+# Losses and Cooling
+<img src="http://www.amesimpex.com/images/oil_cooled_002.jpg" alt="Drawing" style="width: 400px;"/>
+
+---
+# Small Transformers
+![](http://www.globalspec.com/ImageRepository/LearnMore/201210/EI-Transformer-for-Electric-Tool484de69d1e254262a778c635653aa340.png)
+---
+# Large Transformers
+<img src="http://ogrforum.ogaugerr.com/fileSendAction/fcType/0/fcOid/23252098522776349/filePointer/23252098522776380/fodoid/23252098522776373/imageType/LARGE/inlineImage/true/Power-Transformer%2004.jpg" alt="Drawing" style="width: 400px;"/>
+---
+# Large Transformers
+<img src="http://upload.wikimedia.org/wikipedia/commons/8/80/Drehstromtransformater_im_Schnitt_Hochspannung.jpg" alt="Drawing" style="width: 400px;"/>
+---
+# Large Transformers
+<img src="http://commons.wikimedia.org/wiki/Transformer#mediaviewer/File:Trafostation_Alter_Hellweg_IMGP4722.jpg" alt="Drawing" style="width: 400px;"/>
+
+---
+#Square-Cube Law
+![](http://blog.sciencescore.com/wp-content/uploads/elephant-ears.jpg)
+
+[Square-Cube Law](http://www.youtube.com/watch?v=qoM17ikreio)
+---
+
 ## You can download this presentation from: [keysan.me/ee361](keysan.me/ee361)
 
 
