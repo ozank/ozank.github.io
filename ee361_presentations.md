@@ -14,3 +14,4 @@ permalink: /ee361_presentations/index.html
 - Week#4 (13/10): [AC Excitation, Mutual Inductance](/presentations/ee361_ac_excitation.html)
 - Week#4 (15/10): [Ideal Transformers](/presentations/ee361_ideal_transformers.html)
 - Week#5 (19/10): [Practical Transformers](/presentations/ee361_practical_transformers.html)
+- Week#5 (22/10): [Transformer Problems](/presentations/ee361_transformer_problems.html)
