@@ -15,3 +15,4 @@ permalink: /ee361_presentations/index.html
 - Week#4 (15/10): [Ideal Transformers](/presentations/ee361_ideal_transformers.html)
 - Week#5 (19/10): [Practical Transformers](/presentations/ee361_practical_transformers.html)
 - Week#5 (22/10): [Transformer Problems](/presentations/ee361_transformer_problems.html)
+- Week#6 (27/10): [Transformer Problems](/presentations/ee361_no_load_short_circuit.html)

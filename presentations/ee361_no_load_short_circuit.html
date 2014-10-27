@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE361-Electromechanical Energy Conversion</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-361
+# TRANSFORMER TESTS
+
+## Ozan Keysan
+
+[ozan.keysan.me](http://ozan.keysan.me)
+
+Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
+
+---
+# Phasors for Transformers
+--
+
+# No Load Operation
+
+--
+
+# Inductive Load
+
+
+---
+# How to Test a Closed System?
+
+<img src="http://img4.wikia.nocookie.net/__cb20110826090012/uncyclopedia/images/b/b9/Watermelon.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+# How to Test a Closed System?
+
+<img src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-prn1/540031_4548457841049_1216362998_n.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+# Procedure for Transformers
+
+- ## Open Circuit Test
+- ## Short Circuit Test
+
+---
+# Open Circuit Test
+## Secondary Side Open-Circuited (No Load)
+<img src="http://upload.wikimedia.org/wikipedia/commons/d/d8/Open_circuit_test.png" alt="Drawing" style="width: 800px;"/>
+---
+# Open Circuit Test
+## Secondary Side Open-Circuited (No Load)
+<img src="http://www.thic.net/factorypic/Open-Circuit%20Test.jpg" alt="Drawing" style="width: 500px;"/>
+
+---
+# Open Circuit Equivalent Circuit
+![](http://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Transformer_equivalent_circuit-2.svg/786px-Transformer_equivalent_circuit-2.svg.png)
+
+---
+# Simplified (Approximate) Equivalent Circuit
+## Open Circuit Test
+
+![](http://blog.oureducation.in/wp-content/uploads/2013/05/gg.png)
+---
+# Simplified (Approximate) Equivalent Circuit
+## Open Circuit Test
+
+<img src="http://3.bp.blogspot.com/-1a0bC7ei3-Q/TcR65oQEBkI/AAAAAAAAAU4/oUY5ZtfOduI/s1600/FIVE116.jpeg" alt="Drawing" style="width: 700px;"/>
+
+---
+# Short Circuit Test
+
+<img src="http://upload.wikimedia.org/wikipedia/commons/1/15/Short_Circuit_test.jpg " alt="Drawing" style="width: 700px;"/>
+
+#### In short-circuit test applied voltage is much smaller than the rated voltage.
+
+[What happens if you apply rated voltage at short-circuit?](http://www.youtube.com/watch?v=WkDCS8xeobg)
+
+---
+# Short Circuit Equivalent Circuit
+### Neglect Parallel Branch
+
+<img src="http://2.bp.blogspot.com/-m_qRT7Mr8LI/TcSF-EqjnhI/AAAAAAAAAVA/zqT-PrWAqt8/s1600/FIVE121.jpeg" alt="Drawing" style="width: 500px;"/>
+
+--
+#### Series impedances can be calculated
+
+---
+# Example
+
+---
+# More on Resistances
+
+--
+## Resistivity
+### $$R = \rho \frac{L}{A} \quad \Omega $$
+
+### L: length, A: Area, \\(\rho\\): Resistivity ( unit: \\(\Omega . m \\) )
+---
+# Why do we use Copper?
+
+--
+- ## **Copper:** \\(1.68 \; 10^{-8} \; \Omega.m \\)
+
+--
+- ## **Aluminium:** \\(2.82\; 10^{-8} \; \Omega.m \\)
+--
+
+- ## **Silver:** \\(1.59 \; 10^{-8} \; \Omega.m \\)
+
+--
+- ## **Gold:** \\(2.44 \; 10^{-8} \; \Omega.m \\)
+
+---
+# Transmission Lines
+## Why are the conductors (grouped)?
+
+![](http://i.stack.imgur.com/vCf6K.png)
+
+---
+# Transmission Lines
+## Why are the conductors (grouped)?
+
+![](http://i.stack.imgur.com/Icgxw.png)
+
+---
+# Transmission Lines
+## Why are the conductors (grouped)?
+
+![](http://i.stack.imgur.com/ZiMjy.png)
+---
+# Side Question
+### What are red balls on transmission lines?
+
+![](http://cache3.asset-cache.net/xc/488617183.jpg?v=1&c=IWSAsset&k=2&d=B53F616F4B95E553A5F933E4CC311B833136865F243B8B7C568ED08984A2D1B1)
+---
+# Side Question
+### What are red balls on transmission lines?
+
+![](http://www.web-l.com/things-you-wont-see-on-cnn/small-plane-caught-in-power-lines.jpg)
+
+---
+# AC Resistance vs DC Resistance
+## Which one is higher?
+
+--
+- ## AC Resistance > DC Resistance
+- ## Why?
+
+---
+# Skin Depth
+# Distribution of Current in a Wire
+![](http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Skin_depth.svg/520px-Skin_depth.svg.png)
+---
+# Skin Depth
+
+### Due to circulating eddy currents
+![](http://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Skineffect_reason.svg/293px-Skineffect_reason.svg.png)
+
+---
+# Skin Depth
+
+## Current Distribution: \\( J = J_S e ^{-d/\sigma}\\)
+
+## Skin depth: \\(\sigma = \sqrt{\frac{2 \rho}{\omega \mu_r \mu_0}}\\)
+
+---
+# Skin Depth for Copper:
+- ## 50 Hz --> 9.3 mm
+
+--
+- ## 1 kHz --> 2.1 mm
+
+--
+- ## 10 kHz --> 0.66 mm
+
+--
+- ## 100 kHz --> 0.21 mm
+
+--
+- ## 1 MHz --> 66 um
+
+---
+# How to increase conductor area without increasing thickness?
+
+## Bundled Conductors
+![](http://i.stack.imgur.com/ZiMjy.png)
+---
+# How to increase conductor area without increasing thickness?
+
+## Foil Conductors
+![](http://i00.i.aliimg.com/wsphoto/v0/899573808_1/10m-Adhesive-Copper-Foil-EMI-Shield-font-b-Tape-b-font-font-b-Conductive-b-font.jpg)
+
+---
+## Hollow Conductors
+<img src="http://sub.allaboutcircuits.com/images/52013.jpg" alt="Drawing" style="width: 400px;"/>
+---
+# AC Resistance
+
+## AC Resistance [Calculator](http://www.clemson.edu/ces/cvel/emc/calculators/Resistance_Calculator/round.html)
+
+--
+## Rule of Thumb: For 50 Hz power systems
+## $$Rac \simeq 1.1 Rdc$$
+---
+# Temperature Effect
+
+<img src="http://www.wilko.com/content/ebiz/wilkinsonplus/invt/0316169/0316169_l.jpg" alt="Drawing" style="width: 500px;"/>
+### How does the resistance change with time?
+
+---
+# Temperature Effect
+
+## Temperature Coefficient
+## $$R(T) = R(T_0)(1 + \alpha\Delta T)$$
+
+--
+### Resistivity of copper increases 30% from 20 C to 100 C.
+
+--
+### How to apply open-circuit test?
+
+---
+# Electrical Safety
+## You're just a resistor!
+
+--
+### Some incidents (warning: may be disturbing)
+[20kA Arc](www.youtube.com/watch?v=hA-w0QAaxRU),[Arc Flash](www.youtube.com/watch?v=dPJtknGmsys),[Overhead line electructed workers](http://www.youtube.com/watch?v=x8xOtw-ZP3E)
+
+---
+# Electrical Safety
+
+- ## Cut-off electricity
+
+--
+- ## Protect Yourself
+
+--
+- ## First Aid (Seconds count)
+
+--
+- ##Call for help
+
+--
+[Safety video](www.youtube.com/watch?v=6rZcQTbOfLM), [Safety video2](http://www.youtube.com/watch?v=wal2KP1bbIY), [Safety video3](http://www.youtube.com/watch?v=WNot2owIv8c)
+
+---
+# Voltage Regulation
+
+--
+## Ability of transformer to keep the output voltage constant.
+
+--
+## Ideal transformer: V at full load = V at no load
+
+--
+## Practical transformer: V at full load < V at no load
+
+---
+## You can download this presentation from: [keysan.me/ee361](keysan.me/ee361)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
