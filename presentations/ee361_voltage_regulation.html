@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE361-Electromechanical Energy Conversion</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-361
+# VOLTAGE REGULATION
+
+## Ozan Keysan
+
+[ozan.keysan.me](http://ozan.keysan.me)
+
+Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
+
+---
+# Example
+### 2000 VA, 230/115 V transformer has been tested from its primary winding:
+### Find the equivalent circuit parameters.
+--
+
+## No-load Test:
+
+### $$V_o = 230 V \quad I_o = 0.45 A \quad P_o = 30 W $$
+
+---
+#Example
+### 2000 VA, 230/115 V transformer has been tested from its primary winding:
+### Find the equivalent circuit parameters.
+
+## Short Circuit Test:
+
+### $$V_s = 13.2 V \quad I_s = 6 A \quad P_s = 20.1 W $$
+
+---
+# Voltage Regulation
+
+--
+### A transformer's ability to keep output voltage constant.
+
+
+--
+## Ideal transformer: 
+## V (full load) = V (no load)
+
+--
+## Practical transformer: 
+## V(full load) generally smaller than V (no load)
+
+---
+# Voltage Regulation
+
+# $$\frac{V_2(No\;Load)-V_2(Full\;Load)}{V_2(No\;Load)}$$
+
+## Smaller the better.
+
+---
+# Voltage Regulation
+
+- ## Inductive: \\(V_{reg}>0\\)
+
+--
+- ## Resistive: \\(V_{reg}>0\\)
+
+--
+- ## Capacitive: \\(V_{reg} = ?\\)
+---
+# Voltage Regulation
+
+![](voltage_regulation.png)
+
+---
+# Example:
+## For the same transformer used in the previous problem, calculate the voltage regulation at:
+
+## a) 0.8 pf lagging rated current
+## b) 1.0 pf rated current
+## c) 0.8 pf leading rated current
+
+### if the output voltage of the transformer is fixed at 115 V.
+
+---
+# Transformer Efficiency
+
+# $$\mathrm{Efficiency (\eta) = \frac{Pout}{Pin}}$$
+
+--
+## $$\mathrm{Efficiency (\eta) = \frac{Pout}{Pout+\mathrm{Losses}}}$$
+
+---
+# Transformer Efficiency
+
+# $$\mathrm{Efficiency (\eta) = \frac{Pout}{Pin}}$$
+
+## $$\mathrm{Efficiency (\eta) = \frac{Pin - Losses}{Pin}}$$
+
+---
+# Transformer Efficiency
+
+- ## Constant Losses: Core Losses (Eddy, Hysteresis)
+
+### $$\frac{V_1^2}{Rcore}$$
+--
+
+- ## Variable Losses: Copper Losses
+### $$I_1^2 (R_1 + R_2')$$
+---
+# Best Power Transformer
+
+- ## Efficiency as high as possible
+- ## Voltage Regulation as low as possible
+
+---
+# Example:
+## For the same transformer used in the previous problems, calculate the efficiency at rated current and 0.8 pf lagging.
+
+---
+#Question:
+## What is the point that the transformer has maximum efficiency?
+
+--
+- ## Full Load?
+
+--
+- ## Half Load ?
+
+--
+- ## No Load ?
+
+---
+# Efficiency Graph
+![](http://www.bomara.com/powerware/images/wp_efficient_transformers3.jpg)
+
+---
+# A transformer has maximum efficiency when:
+
+--
+# Copper Losses = Core Losses
+
+---
+## You can download this presentation from: [keysan.me/ee361](keysan.me/ee361)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>

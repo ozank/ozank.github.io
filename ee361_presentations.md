@@ -16,3 +16,4 @@ permalink: /ee361_presentations/index.html
 - Week#5 (19/10): [Practical Transformers](/presentations/ee361_practical_transformers.html)
 - Week#5 (22/10): [Transformer Problems](/presentations/ee361_transformer_problems.html)
 - Week#6 (27/10): [No Load-Short Circuit Tests](/presentations/ee361_no_load_short_circuit.html)
+- Week#7 (03/11): [Voltage Regulation-Efficiency](/presentations/ee361_voltage_regulation.html)
