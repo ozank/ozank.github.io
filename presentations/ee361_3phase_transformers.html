@@ -74,7 +74,7 @@ Phase sequence(?)
 ![](http://lukeb.members.sonic.net/stator_files/stator_delta_y.png)
 
 ---
-# Wye Connection
+# Wye(or Star) Connection
 <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/3_Phase_Power_Connected_to_Wye_Load.svg/2000px-3_Phase_Power_Connected_to_Wye_Load.svg.png" alt="Drawing" style="width: 400px;"/>
 
 ### \\( |V\_{line-to-line}| = \sqrt{3} \; |V\_{phase}|\\)
@@ -110,7 +110,6 @@ Phase sequence(?)
 ---
 # 3-Phase Transformers
 <img src="http://upload.wikimedia.org/wikipedia/en/f/fe/Transformer_winding_formats.jpg" alt="Drawing" style="width: 500px;"/>
-
 ---
 # Connection Options
 
@@ -127,22 +126,87 @@ Phase sequence(?)
 - ## Delta-Wye: (\\(\Delta-Y\\))
 
 ---
+# Transformer Nameplates
+<img src="http://www.clementselectrical.co.nz/Transformer-22.jpg" alt="Drawing" style="width: 300px;"/>
+
+[3-phase transformer assembly](http://www.youtube.com/watch?v=9Y958Vc5ohI&feature=BFa),
+[Info about vector group](http://en.wikipedia.org/wiki/Vector_group)
+---
 # Wye-Wye: (\\(Y-Y\\))
 ![](wye_wye.png)
+
+- ### Not very common
+- ### 3rd Harmonics problem
+- ### Phase Shift: 0
 ---
 # Delta-Delta: (\\(\Delta- \Delta\\))
 ![](delta_delta.png)
+
+- ### Common in medium voltage transformers
+- ### No 3rd Harmonics
+- ### Phase Shift: 0
 
 ---
 # Wye-Delta: (\\(Y-\Delta\\))
 ![](wye_delta_t.png)
 
+- ### Usually as step-down transformer
+- ### Phase shift: 30 deg.
 ---
 # Delta-Wye: (\\(\Delta-Y\\))
 ![](delta_wye_t.png)
 
+- ### Usually as step-up transformer
+- ### Also used in distribution transformers (because of neutral)
+- ### Phase shift: -30 deg.
 ---
 # Turns-Ratio vs Voltage Ratio
+
+- ## Turns Ratio: \\(n=\frac{N\_1}{N\_2}=\frac{V1\_{ph}}{V2\_{ph}}\\)
+--
+
+- ## Line-to-line Voltage Ratio: \\(=\frac{V1\_{line-to-line}}{V2\_{line-to-line}}\\)
+--
+
+### For (\\(Y-\Delta\\)) and (\\(\Delta-Y\\))
+### !! Line-to-line voltage  ratio \\(\ne\\) Turns ratio
+--
+
+### Line-to-line voltage ratio is more useful in 3-phase transformers
+---
+#Per-Unit Calculations
+
+--
+##Per Unit Value = \\(\mathrm{\frac{Actual\;Value}{Base\;Value}}\\)
+
+--
+## Parameters you need:
+##\\(S\_{base} \; \mathrm{and} \; V\_{base}\\)
+--
+
+## Then: \\(I\_{base}=\frac{S\_{base}}{V\_{base}},\quad Z\_{base}=\frac{V\_{base}}{I\_{base}}=\frac{V\_{base}^2}{S\_{base}} \\)
+---
+#Per-Unit Calculations
+##\\(S\_{pu}=\frac{S}{S\_{base}}\\)
+##\\(V\_{pu}=\frac{V}{V\_{base}}\\)
+##\\(I\_{pu}=\frac{I}{I\_{base}}\\)
+##\\(Z\_{pu}=\frac{Z}{Z\_{base}}\\)
+---
+#3-Phase Per-Unit Calculations
+
+## In 3-Phase \\(V\_{base}\\) is line-to-line voltage
+
+--
+## Thus:
+##\\(S\_{base}=\sqrt 3 V\_{base} I\_{base}\\)
+
+--
+##\\(I\_{base}=\frac{S\_{base}}{\sqrt 3 V\_{base}}\\)
+##\\(Z\_{base}=\frac{V\_{base}^2}{S\_{base}}=\frac{V\_{base}}{\sqrt 3 I\_{base}}\\)
+
+
+---
+#Example
 
 ---
 ## You can download this presentation from: [keysan.me/ee361](keysan.me/ee361)
