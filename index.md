@@ -5,6 +5,8 @@ title: Ozan Keysan
 
 **Courses for Fall 2014: <span class="meta">&#8226;</span> [EE281](/ee281) <span class="meta">&#8226;</span>  [EE361](/ee361)**
 
+**[STAR Projects]()(/star)**
+
 I'm a lecturer in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr).
 For more information, you can download my [CV](/cv) or look at my [Publications](/papers) and [Presentations](/presentations). Here are some [Software Tips](/tips) if you're interested.
 
@@ -18,12 +20,12 @@ For more information, you can download my [CV](/cv) or look at my [Publications]
 
 </script>
 
-<span class="meta">&#8226;</span> 
+<span class="meta">&#8226;</span>
 (+90 312) 210 2319 <span class="meta">&#8226;</span>  <a href="https://goo.gl/maps/MiFNc">EA-304</a> </p>
 
 #### Research Interests
 
 - Renewable Energy (Wind, Wave)
-- Electrical Machine Design 
+- Electrical Machine Design
 - Superconducting Machines
 - Optimisation of Electrical Machines
