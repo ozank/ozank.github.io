@@ -5,7 +5,7 @@ title: Ozan Keysan
 
 **Courses for Fall 2014: <span class="meta">&#8226;</span> [EE281](/ee281) <span class="meta">&#8226;</span>  [EE361](/ee361)**
 
-**[STAR Projects]()(/star)**
+**[STAR Projects](/star)**
 
 I'm a lecturer in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr).
 For more information, you can download my [CV](/cv) or look at my [Publications](/papers) and [Presentations](/presentations). Here are some [Software Tips](/tips) if you're interested.
