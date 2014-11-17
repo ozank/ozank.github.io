@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE361-Electromechanical Energy Conversion</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-361
+# Per-Unit System
+
+## Ozan Keysan
+
+[ozan.keysan.me](http://ozan.keysan.me)
+
+Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
+
+---
+#Per-Unit Calculations
+
+--
+##Per Unit Value = \\(\mathrm{\frac{Actual\;Value}{Base\;Value}}\\)
+
+--
+## Parameters you need:
+##\\(S\_{base} \; \mathrm{and} \; V\_{base}\\)
+
+### which are the rated power(VA) and rated voltage
+
+---
+#Per-Unit Calculations
+##\\(S\_{pu}=\frac{S}{S\_{base}}\\)
+--
+
+## \\(S\_{pu} = 0.5 \quad\\): Half-load
+--
+
+## \\(S\_{pu} = 1.0 \quad \\): Full-load
+--
+
+## \\(S\_{pu} = 1.1 \quad \\): 10% overload
+
+---
+#Per-Unit Calculations
+## We know \\(S\_{base} \; \mathrm{and} \; V\_{base}\\). Therefore:
+--
+
+# \\(I\_{base}=\frac{S\_{base}}{V\_{base}}\\)
+--
+
+## \\(Z\_{base}=\frac{V\_{base}}{I\_{base}}=\frac{V\_{base}^2}{S\_{base}} \\)
+---
+#Per-Unit Calculations
+
+##\\(S\_{pu}=\frac{S}{S\_{base}}\\)
+##\\(V\_{pu}=\frac{V}{V\_{base}}\\)
+##\\(I\_{pu}=\frac{I}{I\_{base}}\\)
+##\\(Z\_{pu}=\frac{Z}{Z\_{base}}\\)
+---
+# Why do we use Per-phase?
+
+--
+![](http://www.geni.org/globalenergy/library/national_energy_grid/turkey/graphics/teias_map.gif)
+---
+# Example
+
+## Consider a 660:220 V, 7260 VA single-phase transformer. If,
+### \\(Z\_{eq}= 0.36 + j 2.4~ \Omega\\) referred to primary. Calculate:
+
+- ### Equivalent impedance referred to secondary
+- ### Equivalent impedance in p.u on both sides
+- ### Power in p.u if a \\(20~\Omega\\) load is connected to secondary.
+
+---
+# Why do we use Per-phase?
+![](http://static.squarespace.com/static/538d65b3e4b0d6fa15b1d9a9/538fdb52e4b03adbe1ea921b/538fdb73e4b07567a85c09fd/1401936756809/W005.JPG)
+
+---
+![](http://2.bp.blogspot.com/-6N7qH53Vhu8/UwxlPh8J5qI/AAAAAAAAAHY/DGsNnJiMk54/s1600/6.png)
+---
+![](http://www.tucsontransformer.com/img/cooper-rte-substation-transformer-44-1041-np.jpg)
+---
+# Why do we use Per-phase?
+--
+
+- ## Almost always used in power systems
+
+--
+- ## Easier to spot any anomalies
+
+--
+- ## p.u values are constant on each side of the transformer
+
+--
+- ## System reduces just a series of impedances
+
+---
+# Procedure for Single Phase
+
+--
+- ## Pick \\(V\_{base}\\) and \\(S\_{base}\\)
+
+--
+- ## Use Phase Voltages (line-to-neutral)
+
+--
+- ## Calculate \\(Z\_{base}\\) and \\(I\_{base}\\)
+
+--
+- ## Convert actual values to pu.
+
+---
+# Procedure for Three Phase
+
+--
+- ## Pick \\(S\_{base}\\) for entire system (3-phase power)
+
+--
+- ## Use Line-to-Line Voltage for \\(V\_{base}\\)
+
+--
+- ## Calculate \\(Z\_{base}\\):
+
+--
+- ## Calculate \\(I\_{base}\\):
+
+--
+- ## Convert actual values to pu.
+
+---
+#3-Phase Per-Unit Calculations
+
+##\\(S\_{base}=\sqrt 3 V\_{base} I\_{base}\\)
+
+--
+##\\(I\_{base}=\frac{S\_{base}}{\sqrt 3 V\_{base}}\\)
+
+##\\(Z\_{base}=\frac{V\_{base}^2}{S\_{base}}=\frac{V\_{base}}{\sqrt 3 I\_{base}}\\)
+
+---
+#Example on 3-ph Transformers
+
+## Three single-phase, 1 MVA, 10 kV/230 V 50 Hz transformers are connected in \\(\Delta-Y\\) to form a three-phase transformer bank. Determine,
+
+- ### a) Turns-ratio
+- ### b) Line-to-line voltage ratio
+- ### c) Power Rating
+
+---
+#Example on 3-ph Transformers
+
+### Assume the total leakage reactance of each-single phase transformer referred to HV-side is:
+
+### \\(X\_{eq}= x_1 + x_2' = 10~\Omega\\)
+
+### Construct single-phase equivalent circuit of the 3-phase transformer bank (V-l-l= 10 kV)
+
+- ### d) on per phase-delta basis
+- ### e) on per-phase Y basis
+
+---
+#Example on 3-ph Transformers
+
+### Suppose that primary and secondary leakage reactances (actual values) of each single-phase transformer are given as:
+
+###\\(X\_{1}= j 5 ~\Omega\\)
+### \\(X\_{2}= j 2.65 \times 10^{-3} ~\Omega\\)
+
+
+- ### f) Draw the equivalent circuit and repeat d-e
+
+---
+#Example on 3-ph Transformers
+
+### Single-line diagram of a power system is given below:
+
+<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/3phase_ex.jpg" alt="Drawing" style="width: 800px;"/>
+
+### Obtain the single-phase equivalent circuit of the above system on the HV side (use per-phase-Wye basis, assume source is Y connected).
+
+
+---
+## You can download this presentation from: [keysan.me/ee361](keysan.me/ee361)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
