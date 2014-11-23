@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE281-Electric Circuits</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-281
+# OPAMP Applications
+# First-Order Circuits
+
+## Ozan Keysan
+
+[ozan.keysan.me](http://ozan.keysan.me)
+
+Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
+
+---
+# Capacitor Voltage & Current
+
+# \\(i = C\frac{dV}{dt}\\)
+--
+
+# \\(V = \frac{1}{C} \int_0^t i(t) dt\\)
+
+--
+
+## Energy stored in a capacitor is:
+
+# \\(w = \frac{1}{2} C V^2\\)
+
+---
+## DC Response
+
+# \\(i = C\frac{dV}{dt}\\)
+--
+
+- ## Current of capacitor is zero if there's no change in the voltage (i.e. DC voltage)
+--
+
+- ## Capacitor voltage cannot be change instantenously as this means infinite current.
+
+---
+## Parallel Capacitors
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/parallel_capacitor.png)
+--
+
+## \\(C_{eq} = C_1 + C_2 + C_3 ... + C_N\\)
+---
+# Series Capacitors
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/series_capacitors.png)
+--
+
+## \\(\frac{1}{C\_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} ... \frac{1}{C_N}\\)
+
+---
+# Series Capacitors
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/series_capacitors.png)
+
+### For two capacitors
+## \\(C_{eq} = \frac{C_1 C_2}{C_1 + C_2}\\)
+---
+#Exercise
+### What is the equivalent capacitance?
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/Ceq_ex.png)
+---
+#Exercise
+### Find the energy stored in the capacitors?
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/Cdc_ex.png)
+---
+# Inductors
+
+# \\(V = L \frac{di}{dt}\\)
+--
+
+## \\(I = \frac{1}{L} \int_0^t V(t) dt\\)
+
+--
+### Energy stored in an inductor is:
+
+# \\(w = \frac{1}{2} L I^2\\)
+
+---
+#DC Response
+--
+
+## - An inductor behaves like short-circuit under DC
+--
+
+## - Inductor current cannot be change instantenously as this means infinite voltage.
+
+---
+# Series Connection
+
+Equivalent inductance of series connected inductors are the sum of inductances:
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/series_inductors.png)
+
+## \\(L_{eq} = L_1 + L_2 + L_3 ... + L_N\\)
+
+---
+# Parallel Connection
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/parallel_inductor.png)
+
+## \\(\frac{1}{L\_{eq}} = \frac{1}{L_1} + \frac{1}{L_2} + \frac{1}{L_3} ... \frac{1}{L_N}\\)
+---
+# Exercise:
+##Find the energy stored in capacitor and inductor under DC conditions.
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/Ldc_ex.png)
+---
+# OPAMP Applications
+## Analyze the circuit:
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/opamp_integrator.png)
+
+---
+# OPAMP Applications
+
+### \\(i_R = i_C\\)
+
+### \\(i_R = V_i/R\\)
+
+### \\(i_C = -C d v_o /dt\\)
+
+### \\(dv_o = -\frac{1}{RC}v_idt\\)
+
+--
+
+### Integrating both sides:
+
+### \\(v_o = -\frac{1}{RC} \int_0^tv_i(t) dt\\)
+---
+# Integrator:
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/opamp_integrator.png)
+---
+# Exercise:
+##Find the output voltage if:
+### \\(v_1 = 10 cos (2t)~mV\\)
+### \\(v_2 = 0.5t~mV\\)
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/integrator_ex.png)
+---
+# OPAMP Applications
+## Analyze the circuit:
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/opamp_differentiator.png)
+
+---
+# OPAMP Applications
+
+### \\(i_R = i_C\\)
+
+### \\(i_R = - V_o/R\\)
+
+### \\(i_C = -C d v_i /dt\\)
+
+### \\(v_o = -RC dv_i(t)/dt\\)
+
+---
+# Differentiator
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/opamp_differentiator.png)
+
+---
+# First-Order Circuits
+
+---
+# RC Circuits
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RC_circuit.png)
+
+### Assume at t=0, the capacitor voltage is equal to \\(V_o\\)
+
+---
+# RC Circuits
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RC_circuit.png)
+
+## \\( v(t) = V_oe^{-\dfrac{t}{RC}}\\)
+
+---
+# RC Circuits
+
+## \\( v(t) = V_oe^{-\dfrac{t}{RC}}\\)
+--
+
+## Time Constant: \\(\tau\\)
+
+## \\(\tau=RC\\)
+
+--
+
+## \\( v(t) = V_oe^{-\dfrac{t}{\tau}}\\)
+
+---
+# RC Circuits
+## \\( v(t) = V_oe^{-\dfrac{t}{\tau}}\\)
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RC_tau.png)
+---
+# Exponential Decay
+
+- ### Chemical Reactions
+--
+
+- ### Fluid Dynamics
+--
+
+- ### Heat Transfer
+--
+
+- ### Atmospheric Pressure
+--
+
+- ### Radioactivity
+
+---
+# Exercise
+#### If the initial voltage of the capacitor is 60 V, then determine Vc, Vx, io.
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RC_ex1.png)
+
+---
+# RL Circuits
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RL_circuit.png)
+
+### Assume at t=0, the inductor current is equal to \\(I_o\\)
+---
+# RL Circuits
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RL_circuit.png)
+
+## \\(i(t) = I_o e^{-\dfrac{Rt}{L}}\\)
+
+---
+# RL Circuits
+## \\(i(t) = I_o e^{-\dfrac{Rt}{L}}\\)
+--
+
+## Time Constant: \\(\tau = \dfrac{L}{R}\\)
+
+--
+## \\(i(t) = I_0 e ^{-\dfrac{t}{\tau}}\\)
+---
+#Exercises
+
+---
+
+# Any questions?
+
+## You can download this presentation from: [keysan.me/ee281](http://keysan.me/ee281)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
