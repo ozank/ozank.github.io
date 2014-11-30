@@ -18,3 +18,4 @@ permalink: /ee281_presentations/index.html
 - Week#8 (17/11): [OPAMPs](/presentations/ee281_opamp.html)
 - Week#8 (20/11): [Capacitors-Inductors](/presentations/ee281_capacitor_inductor.html)
 - Week#9 (24/11): [First Order Circuits](/presentations/ee281_opamp_first_order.html)
+- Week#9 (01/12): [First Order Circuits-2](/presentations/ee281_first_order2.html)

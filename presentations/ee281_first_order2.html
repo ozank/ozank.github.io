@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE281-Electric Circuits</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-281
+# First-Order Circuits with Voltage Sources
+
+## Ozan Keysan
+
+[ozan.keysan.me](http://ozan.keysan.me)
+
+Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
+
+---
+# RC Circuits
+
+## \\( v(t) = V_oe^{-\dfrac{t}{RC}}\\)
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RC_circuit.png)
+---
+# RL Circuits
+
+## \\(i(t) = I_o e^{-\dfrac{Rt}{L}}\\)
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RL_circuit.png)
+---
+#Step Response of RC Circuits
+
+### What happens if we suddenly apply Vs?
+--
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RC_step.png)
+
+---
+#Step Response of RC Circuits
+
+### Assuming the initial voltage of the capacitor is 0:
+--
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RC_step_V.png)
+
+---
+#Step Response of RC Circuits
+
+### At \\(t=0\\) --> \\(Vc=0\\)
+### \\(t=\infty\\) --> \\(Vc=Vs\\)
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/RC_step_V.png" alt="Drawing" style="width: 400px;"/>
+
+
+---
+#Step Response of RC Circuits
+
+## \\(V_c(t)=V_s (1-e^{-t/RC})\\)
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/RC_step_V.png" alt="Drawing" style="width: 500px;"/>
+---
+#Step Response of RC Circuits
+
+### Current Waveform: \\(i_c(t) = C \dfrac{dVc}{dt} = \dfrac{V_s}{R} e^{-t/RC}\\)
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/RC_step_I.png" alt="Drawing" style="width: 450px;"/>
+---
+# Step Response of RC Circuits
+## With initial voltage \\(V_0\\)
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/RC_step_Vo.png" alt="Drawing" style="width: 400px;"/>
+---
+# Step Response of RC Circuits
+## \\(V_c(t)=V_s + (V_0 - V_s)e^{-t/RC}\\)
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/RC_step_Vo.png" alt="Drawing" style="width: 400px;"/>
+---
+# Step Response of RC Circuits
+## \\(V_c(t)=V_s + (V_0 - V_s)e^{-t/RC}\\)
+
+### At \\(t=0\\) --> \\(Vc=V_0\\)
+### \\(t=\infty\\) --> \\(Vc=Vs\\)
+
+### Generalized equation: \\( V_c(t) = V\infty + (V_0 - V\infty)e^{-t/RC}\\)
+
+---
+# Step Response of RC Circuits
+
+### Complete response = Natural Response + Forced Response
+---
+#Example
+#### Determine v(t) and calculate its value fot t=1 and t=4 seconds.
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RC_step_ex1.png)
+---
+#Example
+#### Determine v(t) and calculate its value fot t=1 and t=4 seconds.
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RC_step_ex1.png)
+---
+# Unit Functions
+## Step Function: \\(u(t)\\)
+### u(t) = 0 for t<0
+### u(t) = 1 for t>0
+
+<img src="http://www.pirobot.org/blog/0005/NeuralNetworks1_html_2489bbdb.png" alt="Drawing" style="width: 400px;"/>
+---
+#Example
+#### Determine the expression for v and i.
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RC_step_ex2.png)
+---
+#Example
+#### Determine the expression for v and i.
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RC_step_ex3.png)
+---
+# Step Response of RL Circuits
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RL_step.png)
+---
+#Step Response of RL Circuits
+### Assuming the initial current of the inductor is 0:
+--
+
+### At \\(t=0\\) --> \\(I_L=0\\)
+### \\(t=\infty\\) --> \\(I_L=Vs/R\\)
+
+---
+#Step Response of RL Circuits
+### At \\(t=0\\) --> \\(I_L=0\\)
+### \\(t=\infty\\) --> \\(I_L=Vs/R\\)
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/RL_step_V.png" alt="Drawing" style="width: 800px;"/>
+
+---
+#Step Response of RL Circuits
+### \\(I_L(t)=\dfrac{V_s}{R} (1-e^{-tR/L})\\)
+
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/RL_step_V.png" alt="Drawing" style="width: 800px;"/>
+---
+#Step Response of RL Circuits
+## Generalized equation with \\(I_0\\)
+### \\( I_L(t) = I\infty + (I_0 - I\infty)e^{-tR/L}\\)
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/RL_step_V0.png" alt="Drawing" style="width: 300px;"/>
+---
+#Example
+#### Determine the expression for i.
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RL_step_ex1.png)
+---
+#Example
+#### Determine the expression for i.
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RL_step_ex2.png)
+---
+#Example
+#### Determine the expression for i and calculate the value for t=2 s and t=5 s.
+
+![](https://raw.githubusercontent.com/ozank/ee281/master/images/RL_step_ex3.png)
+---
+# Any questions?
+
+## You can download this presentation from: [keysan.me/ee281](http://keysan.me/ee281)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
