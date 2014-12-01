@@ -20,3 +20,4 @@ permalink: /ee361_presentations/index.html
 - Week#7 (10/11): [Three Phase Transformers](/presentations/ee361_3phase_transformers.html)
 - Week#8 (17/11): [Per Unit System](/presentations/ee361_per_unit.html)
 - Week#9 (24/11): [Electromechanical Energy Conversion](/presentations/ee361_electromechanical_conversion.html)
+- Week#10 (01/12): [Virtual Work-Examples](/presentations/ee361_virtual_work.html)
