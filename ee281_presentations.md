@@ -20,3 +20,4 @@ permalink: /ee281_presentations/index.html
 - Week#9 (24/11): [First Order Circuits](/presentations/ee281_opamp_first_order.html)
 - Week#10 (01/12): [First Order Circuits-2](/presentations/ee281_first_order2.html)
 - Week#10 (04/12): [Example Problems](/presentations/ee281_exercises.html)
+- Week#12 (15/12): [First Order Applications](/presentations/ee281_first_order_applications.html)
