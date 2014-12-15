@@ -1,3 +1,9 @@
+---
+layout: page
+title: Önce Küfür Sonra Teşekkür
+permalink: /okst/index.html
+---
+
 # Önce Küfür Sonra Teşekkür
 
 Burda önereceğim programları öğrenmek biraz vakit alacaktır. Öğrenirken küfür etmekte serbesttiniz ama ilerde teşekkür edeceğinizden eminim.
