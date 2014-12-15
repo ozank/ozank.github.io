@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Version Control</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+			@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+			@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+			body { font-family: 'Droid Serif'; }
+			h1, h2, h3 {
+				font-family: 'Yanone Kaffeesatz';
+				font-weight: normal;
+			}
+			.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+		</style>
+	</head>
+	<body>
+		<textarea id="source">
+
+class: center, middle
+
+# Version Control Basics
+# Ozan Keysan
+# 13/12/2012
+---
+# What is Version Control?
+## and why you should use it?
+
+&nbsp;&nbsp;![](./images/meh.jpg)
+---
+# You're Already Using It
+<img src="images/phd_comic_filenames.gif" height="500px"/>
+---
+# By renaming your files
+
+###	paper.doc
+###	paperv2.doc
+###	paper_ozans_version.doc
+###	paper_markus_v1.doc
+###	paper_changes_combined.doc
+###	paper_final.doc
+###	paper_final_v2.doc
+###	paper_final_final.doc
+
+
+---
+# How do you backup your data?
+
+&nbsp;<img src="images/backup.jpg" width="300px"/>
+
+- Flash Drive (How often?)
+- Self E-mail
+- Ndrive (A much better way)
+	- Off-campus?
+	- VPN
+	- Slow
+	- No-internet, no-access
+
+---
+# Collaboration
+&nbsp;<img src="images/phd_email.gif" width="600px"/>
+- Hard-copy
+- E-mail
+	- Too many copies of the same file
+	- You can't edit until you get a reply
+- Common Folder
+	- Can't edit at the same file
+	- Overwrite/Accidently delete?
+---
+# Version Control
+
+- Access your files from everyone
+- Like track changes in the MS Word
+- A big UNDO button
+
+&nbsp;<img src="images/undo.jpeg" width="200px"/>
+---
+# With Version Control
+## You can:
+
+- Access any version from the original to the most recent
+- See what has changed from one version to the next
+- Edit files simultaneously
+- Give labels to distinguish a particular version
+
+---
+# Students don't use it
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/kitchener.jpg" width="300px"/>
+
+## because supervisors don't use
+---
+#Case Studies
+
+## Joint Papers/Projects
+- List changes without emails
+- Automatic backup of all versions
+- See differences between versions
+- Use templates/models
+---
+## As a supervisor, you can:
+- Keep track of your students' progress
+- Insert comments on their files.
+- No need to exchange emails, organize meetings.
+---
+# Good for
+- Text and documents
+- Codes
+- Data
+- Experiment Results
+---
+# Not Good for
+- Large binary files
+	- FEA simulation results
+- Videos, animations
+
+---
+# Other Tools
+## Mendeley
+
+<img src="images/mendeley.jpeg" width="400px"/>
+
+- A tool to organize your paper archieve
+- Share Papers
+	- PowerLab group
+	- IES Group
+- Take notes on Pdf files
+---
+# Want More?
+## Search for
+- Open Access
+- Reproducible Research
+---
+&nbsp;&nbsp;![](./images/meh2.jpg)
+
+
+</textarea>
+<script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+<script type="text/javascript">
+	var slideshow = remark.create();
+
+	// Setup MathJax
+	MathJax.Hub.Config({
+			tex2jax: {
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+			}
+	});
+	MathJax.Hub.Queue(function() {
+			$(MathJax.Hub.getAllJax()).map(function(index, elem) {
+					return(elem.SourceElement());
+			}).parent().addClass('has-jax');
+	});
+
+	MathJax.Hub.Configured();
+</script>
+</body>
+</html>
