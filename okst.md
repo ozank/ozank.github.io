@@ -16,18 +16,17 @@ Projelerde geliştireceğiniz kod veya dokümanları paylaşmak, verileriniz yed
 
 Değişik versiyon kontrol sistemleri olsa da, benim önereceğim  yazılım: [Git](http://git-scm.com/). Aşağıdaki yazılar fikir verebilir.
 
--[What is version control?](http://ozan.keysan.me/presentations/version_control/version_control_academics.html)
+- [What is version control?](http://ozan.keysan.me/presentations/version_control/version_control_academics.html)
 - [Versiyon Kontrolü nedir?](http://aliozgur.gitbooks.io/git101/content/bolum_1_-_baslangic/versiyon__kontrolu_nedir.html)
 - [Sürüm kontrolü hakkında](http://git-scm.com/book/tr/v1/Ba%C5%9Flang%C4%B1%C3%A7-S%C3%BCr%C3%BCm-Kontrol%C3%BC-Hakk%C4%B1nda)
 - [Versiyon Kontrol Sistemi Nedir?](http://koddit.com/yazilim/versiyon-kontrol-sistemi-nedir/)
 
-Eğer ikna olduysanız önereceğim site [GitHub](https://github.com/). Hesap açarken öğrenci mailiniz kullanırsanız [şu siteded](https://education.github.com/), öğrenci paketini alıp bir sürü siteden ücretsiz üyelik alabilirsiniz.
+Eğer ikna olduysanız önereceğim site [GitHub](https://github.com/). Hesap açarken öğrenci mailiniz kullanırsanız [şu siteden](https://education.github.com/), öğrenci paketini alıp bir sürü siteden ücretsiz üyelik alabilirsiniz.
 
 Git'i kullanmak için [değişik yazılımlar](http://git-scm.com/downloads/guis) olsa da yeni başlayanlar için aşağıdakileri öneririm:
 
 - [SourceTree](http://www.sourcetreeapp.com/)
-- [GİtHub Windows](https://windows.github.com/)
-
+- [GitHub Windows](https://windows.github.com/)
 
 ## İyi Bir Metin Editörü Kullanın
 
@@ -50,8 +49,8 @@ Onlarca [proje yönetimi](http://asuyatuyolar.org/2013/01/akademisyenin-internet
 
 Her ne kadar Windows varsayılan işletim sistemi olsa da, mühendislerin hala CV'lerine bilgisayar tecrübesi olarak Windows yazmaları artık komik oluyor. Bence vakit kaybetmeden Linux öğrenmenizi tavsiye ederim:
 
--[Üniversite Öğrencileri için Linux Sürümleri](http://asuyatuyolar.org/2013/01/akademisyenler-ve-universite.html)
--[Linux Live CD](http://asuyatuyolar.org/2011/07/her-eve-lazm-linux-live-cd.html)
+- [Üniversite Öğrencileri için Linux Sürümleri](http://asuyatuyolar.org/2013/01/akademisyenler-ve-universite.html)
+- [Linux Live CD](http://asuyatuyolar.org/2011/07/her-eve-lazm-linux-live-cd.html)
 
 Üstelik bilgisayarınıza kurmadan USB ya da CD üzerinden de çalıştırabilirsiniz. Linux kullanırken terminal ve Unix komutlarını kullanmayı da özellikle tavsiye ederim.
 
