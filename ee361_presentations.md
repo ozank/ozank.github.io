@@ -23,4 +23,5 @@ permalink: /ee361_presentations/index.html
 - Week#10 (01/12): [Virtual Work-Examples](/presentations/ee361_virtual_work.html)
 - Week#11 (08/12): [Multiply-Excited Systems](/presentations/ee361_multiply_excited.html)
 - Week#11 (10/12): [DC Machines](/presentations/ee361_dc_machine.html)
-- Week#1a (15/12): [DC Machines-2](/presentations/ee361_dc_machine2.html)
+- Week#12 (15/12): [DC Machines-2](/presentations/ee361_dc_machine2.html)
+- Week#13 (22/12): [DC Machine Types](/presentations/ee361_dc_machine_types.html)
