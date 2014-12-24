@@ -25,3 +25,4 @@ permalink: /ee361_presentations/index.html
 - Week#11 (10/12): [DC Machines](/presentations/ee361_dc_machine.html)
 - Week#12 (15/12): [DC Machines-2](/presentations/ee361_dc_machine2.html)
 - Week#13 (22/12): [DC Machine Types](/presentations/ee361_dc_machine_types.html)
+- Week#13 (24/12): [DC Motors](/presentations/ee361_dc_motors.html)
