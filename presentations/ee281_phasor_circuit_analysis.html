@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE281-Electric Circuits</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-281
+# Circuit Analysis with Phasors
+
+## Ozan Keysan
+
+[ozan.keysan.me](http://ozan.keysan.me)
+
+Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
+
+---
+#Phasors
+## In polar form
+
+##\\(z = x + j y = r \angle \phi\\)
+
+###or
+
+##\\(z = r ( cos (\phi) + j sin (\phi)) \\)
+---
+# Phasors
+
+## Time domain:
+## \\(v(t)=V_m cos (wt + \phi)\\)
+--
+
+## Phasor domain:
+## \\(\mathrm{V} =V_m \angle \phi\\)
+---
+#Phasor Domain
+# Derivation: \\(j \omega\\)
+# Integration:  \\(\dfrac{1}{jw}\\)
+---
+#Phasor Circuit Analysis: Resistor
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/phasor_resistor.png" alt="Drawing" style="width: 400px;"/>
+
+### Time Domain: \\(v = i R\\)
+--
+
+### Phasor Domain: \\(\mathrm{V} = \mathrm{I} R\\)
+---
+#Phasor Circuit Analysis: Resistor
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/phasor_resistance_VI.png" alt="Drawing" style="width: 400px;"/>
+
+## Same phase for voltage and current
+---
+#Phasor Circuit Analysis: Inductor
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/phasor_inductor.png" alt="Drawing" style="width: 300px;"/>
+
+### Time Domain: \\(v = L \dfrac{di}{dt}\\)
+--
+
+### Phasor Domain: \\(\mathrm{V} = j \omega L \mathrm{I}\\)
+---
+#Phasor Circuit Analysis: Inductor
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/phasor_inductor_VI.png" alt="Drawing" style="width: 400px;"/>
+
+##Current lags voltage 90 degrees
+---
+#Phasor Circuit Analysis: Capacitor
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/phasor_capacitor.png" alt="Drawing" style="width: 300px;"/>
+
+### Time Domain: \\(i = C \dfrac{dv}{dt}\\)
+--
+
+### Phasor Domain: \\(\mathrm{I} = j \omega C \mathrm{V}\quad\\)    or \\( \quad \mathrm{V} = \dfrac{1}{j\omega C} \mathrm{I}\\)
+---
+#Phasor Circuit Analysis: Capacitor
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/phasor_capacitor_VI.png" alt="Drawing" style="width: 400px;"/>
+
+## Current leads voltage 90 degrees
+---
+#Impedance
+#### Impedance is the equivalent of resistance in phasor domain
+--
+
+### \\(Z = \dfrac{V}{I} \quad\quad V = ZI\\)
+--
+
+## Resistor: \\(R\\)
+--
+
+## Inductor: \\(j \omega L\\)
+--
+
+## Capacitor: \\(\dfrac{1}{j \omega C}\\)
+---
+# Impedance
+## How do you combine a resistor and inductor?
+
+<img src="http://www.radio-electronics.com/images/inductor-with-resistance-01.gif" alt="Drawing" style="width: 400px;"/>
+--
+
+## \\(Z\_{eq}=Z\_1 + Z\_2 \\)
+--
+
+## \\(Z\_{eq}= R + j \omega L \\)
+--
+
+## \\(Z\_{eq}= R + j X = |Z| \angle \theta \\)
+---
+#Example:
+## Determine impedance, \\(v(t)\\) and \\(i(t)\\)
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/impedance_ex1.png" alt="Drawing" style="width: 800px;"/>
+---
+#Example:
+## Determine impedance, \\(v(t)\\) and \\(i(t)\\)
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/impadence_ex2.png" alt="Drawing" style="width: 800px;"/>
+---
+#Example:
+## Find the input impedance, (\\(\omega = 50 rad/s\\))
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/impedance_ex3.png" alt="Drawing" style="width: 800px;"/>
+---
+#Example:
+## Find the input impedance, (\\(\omega = 10 rad/s\\))
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/impedance_ex4.png" alt="Drawing" style="width: 800px;"/>
+---
+#Example:
+## Determine voltage \\(v_o (t)\\)
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/impedance_ex5.png" alt="Drawing" style="width: 800px;"/>
+---
+#Example:
+## Determine voltage \\(v_o (t)\\)
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/impedance_ex6.png" alt="Drawing" style="width: 800px;"/>
+---
+
+# Any questions?
+
+## You can download this presentation from: [keysan.me/ee281](http://keysan.me/ee281)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
