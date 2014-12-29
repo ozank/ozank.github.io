@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE361-Electromechanical Energy Conversion</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-361
+# Speed Control of DC Motors
+
+## Ozan Keysan
+
+[ozan.keysan.me](http://ozan.keysan.me)
+
+Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
+
+---
+# DC-Machine Equations
+
+- ## Induced Voltage Proportional to Speed
+## \\(E\_a = K\_a \omega\_m \Phi\_{pp}\\)
+--
+
+- ## Torque Proportional to Armature Current
+## \\(T =K\_a  \Phi\_{pp} I\_a \\)
+---
+# DC Machine Types
+## Different ways to connect field winding
+### - Seperately Excited
+### - Shunt Excited
+### - Series Excited
+### - Compound Machines
+---
+# Series DC Motor
+<img src="http://electriciantraining.tpub.com/14177/img/14177_44_1.jpg" alt="Drawing" style="width: 300px;"/>
+## What happens if AC is applied?
+--
+
+### Series DC Motor = Universal Motor (Workds with AC and DC)
+[How universal motors work?](http://woodgears.ca/motors/dc.html)
+---
+# Seperately Excited Motor
+## What happens if we swap field winding terminals?
+
+---
+# Speed Control of DC Motors
+### What are your options, if you want to rotate the machine slower?
+--
+
+- ## Vary the terminal voltage (\\(V_t\\))
+--
+
+- ## Vary Field Current (\\(I_f\\)) (and hence flux)
+--
+
+- ## Vary Both
+
+---
+# Steady State Operating Point
+### Intersection of motor characteristics and load curve
+
+<img src="http://www.electrical4u.com/electrical-motor/images/dc-motor-characteristics1.gif" alt="Drawing" style="width: 600px;"/>
+---
+# Hybrid Car
+## Toyota Prius
+
+![](http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2011/01/PriusEngine-537x402.jpg)
+---
+# Hybrid Car
+## Toyota Prius
+
+![](http://l.yimg.com/us.yimg.com/i/us/aut/ph/gc/greencar_f32_img2.jpg)
+
+## What happens if you drive uphill?
+---
+# Armature Voltage Control
+
+--
+- ## Speed Control over a wide range
+- ## Commonly used
+---
+# Armature Voltage Control Techniques:
+
+## Pulse-Width Modulation (PWM)
+
+![](http://www.electronickits.com/kit/complete/motor/ck1400b.jpg)
+---
+# Armature Voltage Control Techniques:
+
+## Pulse-Width Modulation (PWM)
+
+![](http://ebldc.com/wp-content/uploads/2009/08/pwm_speed.jpg)
+
+---
+# Armature Voltage Control Techniques:
+
+## H-Bridge : Bi-directional Control
+
+![](http://www.seekic.com/uploadfile/ic-circuit/200971741437282.gif)
+---
+# Field Current Control
+--
+
+- ## An external resistor or variable voltage supply
+--
+
+- ## To achieve higher speeds? -->
+--
+Decrease \\(I_f\\) (Flux weakening)
+--
+
+- ## Speed control over a narrow range
+
+---
+# Four Quadrant Operation
+
+![](http://upload.wikimedia.org/wikipedia/en/thumb/8/83/Four_quadrant_motion_control_of_a_motor.jpg/600px-Four_quadrant_motion_control_of_a_motor.jpg)
+
+[Riding a robot hand](http://www.youtube.com/watch?v=bxbjZiKAZP4)
+---
+# Electric Breaking
+
+- ## Plugging
+### Suddenly reverse the polarity of \\(V_t\\)
+--
+
+- ## Dynamic Breaking
+### Connect terminals to an external resistance.
+--
+
+- ## Regenerative Braking
+### \\(I_f\\) is increased to operate as a generator
+---
+# Control Dynamics:
+### What are the factors affecting dynamic precision?
+--
+
+- ### Inertia
+--
+
+- ### Motor Inductance
+--
+
+- ### Measurement
+--
+
+- ### Processing
+--
+
+- ### Power Electronics
+
+[Robot table tennis](http://www.youtube.com/watch?v=tIIJME8-au8), [Robot katana](http://www.youtube.com/watch?v=cR-YlZ9NdIA), [Hannover Messe](http://www.youtube.com/watch?v=hLB2WuPMel0)
+---
+# Example:
+### A 10 kW DC Shunt motor connected to 200 V supply and driving a load with the following characteristics.
+
+--
+### \\(P_l = k n^2 = 3.9\;10^{-3} n^2\\) (n: rpm)
+--
+
+### Field winding is \\(40\;  \Omega\\), Friction losses of the motor are constant and equal to 250 W.
+
+--
+### a) Calculate the motor speed if the motor is supplying rated power from its shaft.
+---
+
+### b) Determine the armature current and armature resistance  of the motor at rated load.
+### Magnetization characteristics obtained at 1500 rpm are as follows:
+
+#### <table>
+  <tr>
+    <th>Ea(V)</th>
+    <th>153.7</th>
+    <th>161.8</th>
+    <th>164.8</th>
+    <th>170.2</th>
+    <th>175</th>
+    <th>178.3</th>
+  </tr>
+  <tr>
+    <td>Ia(A)</td>
+    <td>2</td>
+    <td>3</td>
+    <td>3.3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+  </tr>
+</table>
+--
+
+### c) Calculate the total current drawn from the terminals and motor efficiency
+--
+
+### d) If the shaft speed is measured as 1700 rpm, when the armature current is 54.8 A, i) Calculate the generated voltage (neglect armature reaction),
+--
+ii)Calculate the generated voltage with armature reaction (refer to magnetization curve),
+--
+iii) Calculate the extra field current supplied to compensate the armature reactance
+
+---
+## You can download this presentation from: [keysan.me/ee361](http://keysan.me/ee361)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
