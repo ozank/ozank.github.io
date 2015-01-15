@@ -5,10 +5,13 @@ permalink: /presentations/index.html
 ---
 
 ## Recent Presentations
+
 ### 2015
+
 * Ankara Universitesi-CESUR, [Superiletkenliğin eneji alanındaki uygulamaları](https://docs.google.com/presentation/d/1uHEdoHDHlFYh4CqQxNUEgbooXijWlml-_VL3hNSf3dQ/pub?start=false&loop=false&delayms=3000)
 
 ### 2014
+
 * IET Power Electronics, Machines and Drives Conference, Manchester,  [Presentation](https://docs.google.com/presentation/d/1Is44gl0PX-vi8th24iMXxA-DQIrjGqCJt5en9xghJoE/pub?start=false&loop=false&delayms=3000)
 * Recent Developments in Offshore Renewable Energy Power Take-off Systems, METU, [Presentation](https://docs.google.com/presentation/d/15RYcaq9x5TBQZq6PfYJ_HGezz4XuVYv-rCBp_c9y3go/pub?start=false&loop=false&delayms=3000)
 * Rize RTE Üniversitesi, Yenilenebilir Enerji Sistemleri ve Süperiletken Makineler, [Sunum](https://docs.google.com/presentation/d/1PJpeJqtONpgJ46_lZC3Di2M54Pq_f2Jik6Qd7ANxH4Q/pub?start=false&loop=false&delayms=3000)
