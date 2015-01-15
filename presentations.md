@@ -5,6 +5,8 @@ permalink: /presentations/index.html
 ---
 
 ## Recent Presentations
+### 2015
+* Ankara Universitesi-CESUR, [Superiletkenliğin eneji alanındaki uygulamaları](https://docs.google.com/presentation/d/1uHEdoHDHlFYh4CqQxNUEgbooXijWlml-_VL3hNSf3dQ/pub?start=false&loop=false&delayms=3000)
 
 ### 2014
 * IET Power Electronics, Machines and Drives Conference, Manchester,  [Presentation](https://docs.google.com/presentation/d/1Is44gl0PX-vi8th24iMXxA-DQIrjGqCJt5en9xghJoE/pub?start=false&loop=false&delayms=3000)
@@ -25,7 +27,7 @@ permalink: /presentations/index.html
 * [Linear Superconducting Generators for Wave Energy Converters](http://dl.dropbox.com/u/2490601/Presentations/Ozan_Keysan_HTSG_presentation_March_2012_PEMD.ppt)
 
 
-### 2011 
+### 2011
 
 * [MARINA Platform](http://www.marina-platform.info) project meeting, 22/11/2011, [Wind Energy Power Take-Off  Options - An Introduction](http://dl.dropbox.com/u/2490601/Presentations/Ozan_Keysan_MARINA_11_2011.ppt)
 * The Joint [Centennial Conference on Applied Superconductivity](http://www.eucas2011.org), 18-23 September 2011, [A Transversal Superconducting Generator for Large Wind Turbines](http://dl.dropbox.com/u/2490601/Presentations/Ozan_Keysan_HTSG_EUCAS_2011.ppt)
