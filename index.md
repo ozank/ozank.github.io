@@ -5,7 +5,9 @@ title: Ozan Keysan
 
 **Courses for Spring 2015: <span class="meta">&#8226;</span> [EE362](/ee362) <span class="meta">&#8226;</span>  [EE564](/ee564)**
 
+<!---
 **[STAR Projects](/star)**
+-->
 
 I'm a lecturer in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr).
 For more information, you can download my [CV](/cv) or look at my [Publications](/papers) and [Presentations](/presentations). Here are some [Software Tips](/tips) if you're interested.
@@ -27,5 +29,6 @@ For more information, you can download my [CV](/cv) or look at my [Publications]
 
 - Renewable Energy (Wind, Wave)
 - Electrical Machine Design
+- Smart Grids
 - Superconducting Machines
 - Optimisation of Electrical Machines
