@@ -27,7 +27,7 @@ For more information, you can download my [CV](/cv) or look at my [Publications]
 
 #### Research Interests
 
-- Renewable Energy (Wind, Wave)
+- Renewable Energy (Wind, Wave, Solar)
 - Electrical Machine Design
 - Smart Grids
 - Superconducting Machines
