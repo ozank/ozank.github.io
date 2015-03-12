@@ -9,8 +9,8 @@ title: Ozan Keysan
 **[STAR Projects](/star)**
 -->
 
-I'm a lecturer in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr).
-For more information, you can download my [CV](/cv) or look at my [Publications](/papers) and [Presentations](/presentations). Here are some [Software Tips](/tips) if you're interested.
+I'm a assistant professor in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr).
+For more information, you can download my [CV](/cv) or have look at my [Publications](/papers) and [Presentations](/presentations). Here are some [Software Tips](/tips), if you're interested.
 
 <p> <script type="text/javascript">
 // http://csarven.ca/hiding-email-addresses
