@@ -31,7 +31,7 @@ Git'i kullanmak için [değişik yazılımlar](http://git-scm.com/downloads/guis
 
 Aşağıdaki linkler de oldukça eğitici:
 
-- https://www.atlassian.com/git/tutorials/setting-up-a-repository
+- [](https://www.atlassian.com/git/tutorials/setting-up-a-repository)
 - http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide
 - http://rypress.com/tutorials/git/
 - http://sixrevisions.com/resources/git-tutorials-beginners/
