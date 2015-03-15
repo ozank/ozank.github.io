@@ -29,6 +29,13 @@ Git'i kullanmak için [değişik yazılımlar](http://git-scm.com/downloads/guis
 - [SourceTree](http://www.sourcetreeapp.com/)
 - [GitHub Windows](https://windows.github.com/)
 
+Aşağıdaki linkler de oldukça eğitici:
+
+- https://www.atlassian.com/git/tutorials/setting-up-a-repository
+- http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide
+- http://rypress.com/tutorials/git/
+- http://sixrevisions.com/resources/git-tutorials-beginners/
+
 ## İyi Bir Metin Editörü Kullanın
 
 Evet malesef, Microsoft Word ya da NotePad metin editörü yerine geçmiyor. Önereceğim metin editörleri (kolaydan zora):
@@ -45,9 +52,9 @@ Denk geldiğiniz güzel kaynakları, makaleleri bilgisayara klasörlere kaydetme
 
 ## Programlama Dilleri
 
-Artık bir programlama dili bilmiyorsanız da öğrenmenin vakti gelmiştir. Yeni başlayanlara önerebileceğim ilk program [Python](https://www.python.org/) özellikle [IPyhton](http://ipython.org/)ı şiddetle tavsiye ederim. Eğer başka bir programlama diliyse aşinaysanız da kendinizi o konuda geliştirebilirsiniz.
+Artık bir programlama dili bilmiyorsanız da öğrenmenin vakti gelmiştir. Yeni başlayanlara önerebileceğim ilk program [Python](https://www.python.org/) özellikle [IPyhton](http://ipython.org/)'ı şiddetle tavsiye ederim. Eğer başka bir programlama diliyse aşinaysanız da kendinizi o konuda da geliştirebilirsiniz.
 
-## Proje YÖnetimi
+## Proje Yönetimi
 
 Onlarca [proje yönetimi](http://asuyatuyolar.org/2013/01/akademisyenin-internet-rehberi-proje.html) yazılımı olsa da, benim önereceğim site [Trello](https://trello.com/ozank/recommend). Cep telefonu uygulamaları ve güzel arayüzü ile yapılacak işleri organize etmek baya kolay.
 
