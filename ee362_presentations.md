@@ -13,6 +13,7 @@ permalink: /ee362_presentations/index.html
 - Week#3 (02/03): [MMF Distribution](/presentations/ee362_mmf_distribution.html)
 - Week#4 (09/03): [Winding Factors, Rotating MMF](/presentations/ee362_rotating_mmf.html)
 - Week#4 (11/03): [Example](/presentations/ee362_rotating_mmf_example.html)
+- Week#5 (16/03): [Example-2](/presentations/ee362_mmf_exercise.html)
 
 #### FAQ:
 - [How can I convert slides to pdf?](https://github.com/gnab/remark/issues/50): In Chrome, use print preview then save to pdf.
