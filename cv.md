@@ -48,6 +48,7 @@ permalink: /cv/index.html
 
 ## Experience
 
+|2014–  | Assistant Professor| Electrical-Electronics Engineering, METU|
 |2011–2014 | Research Associate | Institute for Energy Systems, University of Edinburgh|
 |2010–2012 | Electrical Machine Design Consultant | NGenTec, Edinburgh|
 |2009–2010 | Research Associate | Institute for Energy Systems, University of Edinburgh|
