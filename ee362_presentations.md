@@ -16,6 +16,7 @@ permalink: /ee362_presentations/index.html
 - Week#5 (16/03): [Example-2](/presentations/ee362_mmf_exercise.html)
 - Week#5 (18/03): [Induction Motors](/presentations/ee362_induction_motors.html)
 - Week#6 (23/03): [Equivalent Circuit of Induction Motors](/presentations/ee362_induction_motor_equivalent_circuit.html)
+- Week#7 (25/03): [Power Flow of Induction Motors](/presentations/ee362_induction_motor_power_torque.html)
 
 #### FAQ:
 - [How can I convert slides to pdf?](https://github.com/gnab/remark/issues/50): In Chrome, use print preview then save to pdf.
