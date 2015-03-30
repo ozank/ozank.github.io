@@ -265,7 +265,7 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 # How to increase the starting torque?
 --
 
-## 1- Increase rotor resistance
+## Increase rotor resistance
 
 - ## Easy for wound rotor induction motors: Connect external resistance
 --
@@ -273,20 +273,59 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 - ## How about for squirrel-cage induction motors?
 --
 : Deep bar rotor
+---
+# Maximum Torque Point
+
+<img src="http://raise.spd.louisville.edu/ECE252/images/L19-18.gif" alt="Drawing" style="width: 400px;"/>
+
+### \\(T\_e = \dfrac{3 V\_{th}^2}{(R\_{th}+\dfrac{r'\_2}{s})^2 + (X\_{th}+X'\_2)^2}\dfrac{r'\_2}{s \omega\_s}\\)
+
+---
+# Maximum Torque Point
+
+<img src="http://people.ucalgary.ca/~aknigh/electrical_machines/induction/basics/images/figs/thevenin_cct.gif" alt="Drawing" style="width: 486px;"/>
+
+## \\( T\_e = \dfrac{P\_{ag}}{\omega\_s} \quad \\)
+
+### Maximum torque point = Maximum airgap power point
+---
+# Maximum Torque Point
+
+<img src="http://people.ucalgary.ca/~aknigh/electrical_machines/induction/basics/images/figs/thevenin_cct.gif" alt="Drawing" style="width: 486px;"/>
+
+## What is the condition for maximium airgap Power?
 --
 
+### Maximum Power Transfer Theorem: \\(\dfrac{r'\_2}{s}= \sqrt{R\_{th}^2+ (X\_{th}+X'\_2)^2}\\)
+---
+## Slip for maximum torque
 
-##2- Change the Stator Voltage Frequency
+### \\(s\_{maxT}= \dfrac{r'\_2}{\sqrt{R\_{th}^2+ (X\_{th}+X'\_2)^2}}\\)
+--
 
-- ## Use power electronics to generate AC
+## Maximum Torque (substitute s)
+
+### \\(T\_{max} = 3 \dfrac{ 0.5 V\_{th}^2}{\omega\_s}\dfrac{1}{(R\_{th}+\sqrt{R\_{th}^2 + (X\_{th}+X'\_2)^2}}\\)
+
+
+### Notice that \\(s\_{maxT}\\) depends on \\(r'\_2\\) but \\(T\_{max}\\) doesn't.
+
+---
+# How can you run the motor at maximum torque?
+
+--
+- ## Calculate \\(s\_{maxT}\\)
+--
+
+- ## Vary the stator voltage frequency (\\(f\_e\\)) to match that.
+
+- ## Use power electronics to generate variable frequency
+
+
+#### [Tesla Insane Mode](https://youtu.be/LpaLgF1uLB8?t=38s), [Tesla Insane Mode- Slow Motion](https://youtu.be/Y8-S7FghyEA?t=27s)
 
 ---
 ## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
-
----
-# Maximum Torque Characteristics
-
-# How can we calculate the maximum torque?
 
 ---
 # Example
