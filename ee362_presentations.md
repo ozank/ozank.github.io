@@ -19,6 +19,7 @@ permalink: /ee362_presentations/index.html
 - Week#6 (25/03): [Power Flow of Induction Motors](/presentations/ee362_induction_motor_power_torque.html)
 - Week#7 (30/03): [Torque in Induction Motors](/presentations/ee362_induction_motor_torque_curve.html)
 - Week#7 (01/04): [Starting Current in Induction Motors](/presentations/ee362_induction_motor_starting_current.html)
+- Week#8 (08/04): [Operation Modes](/presentations/ee362_induction_motor_control.html)
 
 #### FAQ:
 - [How can I convert slides to pdf?](https://github.com/gnab/remark/issues/50): In Chrome, use print preview then save to pdf.
