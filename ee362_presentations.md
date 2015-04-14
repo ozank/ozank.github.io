@@ -22,6 +22,7 @@ permalink: /ee362_presentations/index.html
 - Week#8 (08/04): [Operation Modes](/presentations/ee362_induction_motor_control.html)
 - Week#8 (08/04): [Recitation Hour](/presentations/ee362_recitation.html)
 - Week#9 (13/04): [Speed Control - Synchronous Machines](/presentations/ee362_induction_VF_synchronous_motors.html)
+- Week#9 (15/04): [Synchronous Machines](/presentations/ee362_synchronous_motors.html)
 
 #### FAQ:
 - [How can I convert slides to pdf?](https://github.com/gnab/remark/issues/50): In Chrome, use print preview then save to pdf.
