@@ -58,9 +58,63 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ### $$\alpha = 0.003862\;K^{-1}$$
 
 ---
+# Torque Output
+
+# Torque \\(\propto\\) Electric Loading
+
+## Electric loading limited by maximum temperature
 
 
+---
+# Methods for Thermal Analysis
+--
 
+### From difficult to easy
+--
+
+- ## Experiment
+--
+
+- ## CFD (Computational Fluid Dynamics)
+--
+
+- ## FEA (Finite Element Analysis)
+--
+
+- ## Lumped Parameter Model
+---
+# Thermal CFD
+## Requires intense computation
+
+<img src="http://www.cd-adapco.com/sites/default/files/7763.png" alt="Drawing" style="width: 800px;"/>
+
+---
+
+# Thermal FEA
+
+## Only models conduction
+
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/temp_distribution.png" alt="Drawing" style="width: 350px;"/>
+
+#### Temperature distribution of a slot
+
+---
+# Thermal Lumped Parameter Network
+
+<img src="http://img.directindustry.com/images_di/photo-g/cad-software-3d-55004-6365145.jpg" alt="Drawing" style="width: 600px;"/>
+
+
+#### Have a look at [Motor-CAD](http://www.motor-design.com/motorcad.php) software
+
+---
+# Thermal Lumped Parameter Network
+
+<img src="http://www.usinenouvelle.com/industry/img/motor-cad-thermal-optimisation-of-motors-000040140-4.jpg" alt="Drawing" style="width: 600px;"/>
+---
+# Basics of Heat Transfer
+--
+
+<img src="http://beodom.com/assets/images/education/principles-thermal-insulation/heat-transmittance-means.jpg" alt="Drawing" style="width: 800px;"/>
 ---
 # Lumped Thermal Network
 
@@ -91,7 +145,72 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 # Thermal Resistance
 
 <img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/thermal_resistance.png" alt="Drawing" style="width: 500px;"/>
+
 ---
+# Thermal Resistance
+
+### Similar to electrical resistance
+
+#\\(R= \dfrac{l}{kA}\\)
+--
+
+- ## \\(k\\): thermal conductivity 
+
+---
+# Thermal Conductivity of Some Materials
+--
+
+- ## Water: 
+--
+0.58 W/(mK)
+--
+
+- ## Ice: 
+--
+2.2 W/(mK)
+--
+
+- ## Concrete: 1-1.5 W/(mK)
+--
+
+- ## Insulating Brick: 0.15 W/(mK)
+
+---
+# Thermal Conductivity of Metals
+--
+
+- ## Aluminum: 
+--
+205 W/(mK)
+
+--
+- ## Iron: 
+--
+80 W/(mK)
+--
+
+- ## Copper: 
+--
+400 W/(mK)
+
+--
+
+- ## Gold: 
+--
+310 W/(mK)
+--
+
+- ## Epoxy: 0.35 W/(mK)
+--
+
+### [Ref](http://en.wikipedia.org/wiki/List_of_thermal_conductivities)
+---
+
+
+
+
+---
+
 # Rule of Thumbs
 
 ### Not very accurate but useful for initial calculations
@@ -121,95 +240,38 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 --
 
 - ## Liquid-Forced Convection: 50-20.000 W/(m2.C)
----
-# Thermal FEA
-
-## Temperature distribution of a slot
-
-# Thermal Resistance
-
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/temp_distribution.png" alt="Drawing" style="width: 400px;"/>
----
-# Thermal CFD
-## Requires intense computation
-
-<img src="http://www.cd-adapco.com/sites/default/files/7763.png" alt="Drawing" style="width: 800px;"/>
 
 ---
-# Thermal Lumped Parameter Network
+# Why do elephants have big ears?
 
-<img src="http://img.directindustry.com/images_di/photo-g/cad-software-3d-55004-6365145.jpg" alt="Drawing" style="width: 800px;"/>
-
-
-#### Have a look at [Motor-CAD](http://www.motor-design.com/motorcad.php) software
+<img src="http://rateeveryanimal.com/wp-content/uploads/2014/11/elephant.jpg" alt="Drawing" style="width: 700px;"/>
 
 ---
-# Thermal Lumped Parameter Network
+#Square-Cube Law
+## (Heat \\(\propto\\) Mass, Heat Dissipation \\(\propto\\) Surface Area)
+<img src="http://rateeveryanimal.com/wp-content/uploads/2014/11/elephant.jpg" alt="Drawing" style="width: 700px;"/>
 
-<img src="http://www.usinenouvelle.com/industry/img/motor-cad-thermal-optimisation-of-motors-000040140-4.jpg" alt="Drawing" style="width: 800px;"/>
----
-# Heat Transfer
-
-<img src="http://beodom.com/assets/images/education/principles-thermal-insulation/heat-transmittance-means.jpg" alt="Drawing" style="width: 800px;"/>
-
----
-# Thermal Conduction
-
-### Similar to resistance
-
-#\\(R= \dfrac{l}{kA}\\)
---
-
-- ## \\(k\\): thermal conductivity 
-
----
-# Thermal Conduction
-
-### Thermal Conductivity of Some Materials
---
-
-- ## Aluminum: 205 W/(mK)
---
- 
-- ## Concrete: 1-1.5 W/(mK)
---
-
-- ## Insulating Brick: 0.15 W/(mK)
---
-
-- ## Copper: 
---
-400 W/(mK)
---
-
-- ## Epoxy: 0.35 W/(mK)
---
-
-- ## Gold: 
---
-310 W/(mK)
-
---
-- ## Ice: 
---
-2.2 W/(mK)
-
-- ## Water: 
---
-0.58 W/(mK)
-
---
-- ## Iron: 
---
-80 W/(mK)
-
-#### [Ref](http://en.wikipedia.org/wiki/List_of_thermal_conductivities)
+[Square-Cube Law](http://www.youtube.com/watch?v=qoM17ikreio)
 ---
 
-#### Have a look at [Motor-CAD](http://www.motor-design.com/motorcad.php) software
+# Losses and Cooling
+<img src="http://www.amesimpex.com/images/oil_cooled_002.jpg" alt="Drawing" style="width: 400px;"/>
 
 ---
- 
+# Losses and Cooling: Small Transformers
+<img src="http://www.globalspec.com/ImageRepository/LearnMore/201210/EI-Transformer-for-Electric-Tool484de69d1e254262a778c635653aa340.png" alt="Drawing" style="width: 400px;"/>
+
+---
+# Losses and Cooling: Large Transformers
+<img src="http://ogrforum.ogaugerr.com/fileSendAction/fcType/0/fcOid/23252098522776349/filePointer/23252098522776380/fodoid/23252098522776373/imageType/LARGE/inlineImage/true/Power-Transformer%2004.jpg" alt="Drawing" style="width: 500px;"/>
+---
+# Losses and Cooling: Large Transformers
+<img src="http://upload.wikimedia.org/wikipedia/commons/8/80/Drehstromtransformater_im_Schnitt_Hochspannung.jpg" alt="Drawing" style="width: 300px;"/>
+---
+# Losses and Cooling: Large Transformers
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Trafostation_Alter_Hellweg_IMGP4722.jpg/1280px-Trafostation_Alter_Hellweg_IMGP4722.jpg" alt="Drawing" style="width: 750px;"/>
+
+---
 ## DC Resistance
 
 ### \\(R\_{dc}= \dfrac{l}{\sigma A}\\)
