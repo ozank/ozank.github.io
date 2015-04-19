@@ -205,41 +205,111 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ### [Ref](http://en.wikipedia.org/wiki/List_of_thermal_conductivities)
 ---
+# Conduction Heat Loss
 
+# \\(P = \dfrac{\Delta T}{R}\\)
 
+# \\(P = \dfrac{T\_2 - T\_1}{R}\\)
 
 
 ---
+# Fluid Temperature Rise
 
-# Rule of Thumbs
+### For a liquid cooled system
 
-### Not very accurate but useful for initial calculations
---
+# \\(\Delta T = \dfrac{P}{Q . d. C\_p}\\)
 
-## Current Density
---
+### \\(Q\\): Volume flow rate (m3/s)
+### \\(d\\): Density
+### \\(C\_p\\): Specific heat capacity (J/kgC) 
 
-- ## Totally Enclosed: 1.5-5 A/mm2
---
-
-- ## Fan-cooled: 5-10 A/mm2
---
-
-- ## Liquid-cooled: 10-10 A/mm2
---
 ---
-# Rule of Thumbs
+# Convection
 
-##  Heat Transfer Coefficient
+# Heat transfer on the surface between solids and liquids (or gaseous)
+---
+
+# Convection
+
+## Difficult to analyze accurately
 --
 
-- ## Air-Natural Convection: 5-10 W/(m2.C)
+## Two types of Convection:
 --
 
-- ## Air-Forced Convection: 10-300 W/(m2.C)
+- ## Natural Convection
 --
 
-- ## Liquid-Forced Convection: 50-20.000 W/(m2.C)
+- ## Forced Convection
+
+---
+# Types of Flow
+--
+
+- ## Laminar FLow
+--
+
+- ## Turbulent Flow
+
+### Enhanced heat transfer
+
+---
+# Turbulance
+
+<img src="https://nanosync.files.wordpress.com/2011/03/offshore_hdt_019op.jpg" alt="Drawing" style="width: 700px;"/>
+
+
+---
+# Heisenberg:
+--
+
+<img src="https://pbs.twimg.com/profile_images/421396899036295168/jRjL34RS.jpeg" alt="Drawing" style="width: 400px;"/>
+## Not Walter White
+
+---
+# Heisenberg
+
+<img src="http://www.nature.com/polopoly_fs/7.11207.1372177498!/image/1.13270_Heisenberg-ALAMY-B3YK1N.jpg_gen/derivatives/landscape_630/1.13270_Heisenberg-ALAMY-B3YK1N.jpg" alt="Drawing" style="width: 500px;"/>
+
+### Werner Heisenberg: Key creator of quantum mechanics, uncertainity principle
+
+---
+
+# I would ask God two questions:
+--
+
+#'Why quantum mechanics, and why turbulence.'
+--
+
+#I think he will have answer for the first one. 
+
+---
+## Convection Thermal Resistance
+--
+
+# \\(R_c = \dfrac{1}{A h}\\)
+--
+
+## A: Area
+--
+
+## h: Convection heat transfer coefficient (W/m2/C)
+---
+# h: Convection Heat Transfer Coefficient
+--
+
+## Depends on the surface properties
+--
+
+## Flow Rate, density
+--
+
+## Reynolds Number
+--
+
+## And others (Nusselt number, prandtl number)
+
+#### Have a look at MotorCAD and Dave Staton's presentation if you're interested
 
 ---
 # Why do elephants have big ears?
@@ -270,150 +340,101 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ---
 # Losses and Cooling: Large Transformers
 <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Trafostation_Alter_Hellweg_IMGP4722.jpg/1280px-Trafostation_Alter_Hellweg_IMGP4722.jpg" alt="Drawing" style="width: 750px;"/>
-
 ---
-## DC Resistance
+# Radiation
 
-### \\(R\_{dc}= \dfrac{l}{\sigma A}\\)
+## Radiant Heaters
 
+<img src="http://willowbrookhangars.com/wp-content/uploads/2014/01/AmbiRad-radiant-tube-heater.jpg" alt="Drawing" style="width: 750px;"/>
 ---
-# Resistance of a Coil
+## Radiant Heaters
 
+<img src="http://www.gardenista.com/files/styles/733_0s/public/img/sub/uimg/05-2012/700_az-patio-heater-wood-table.jpg" alt="Drawing" style="width: 400px;"/>
 ---
-# Insulation
+# Reflective Blankets
+
+<img src="http://www.containerstore.com/catalogimages/175768/10061869EmergencyBlanketSlvr_x.jpg" alt="Drawing" style="width: 500px;"/>
+---
+# Radiation Heat Transfer
+### Black body radiation
+
+### \\(h_R\\): heat transfer coefficient for radiation
+
+
+## \\(h\_R = \dfrac{\rho \epsilon F (T\_1^4-T\_2^4)}{T\_1 - T\_2}\\)
+---
+### \\(h\_R = \dfrac{\rho \epsilon F (T\_1^4-T\_2^4)}{T\_1 - T\_2}\\)
 --
 
-## Average dielectric strength: 1 kV/mil (~ 40 kV/mm)
-
-#### (*)1000 mil = 1 inch
+### \\(\rho\\): Stefan-Boltzmann constant (\\(5.67x10^{-8}  W/m^2/K^4\\) )
 --
 
-## Stator should be insulated for:
-
-- ### In-turn shorts
-- ### Phase-Ground shorts
-- ### Phase-Phase shorts
-
-
----
-# Insulation
-
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/insulation.png" alt="Drawing" style="width: 700px;"/>
----
-# Insulation
-
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/slot_insulation.png" alt="Drawing" style="width:600px;"/>
----
-# Slot Insulation Types
-
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/slot_insulation_types.png" alt="Drawing" style="width:750px;"/>
----
-# Insulation Temperature Class
-
-- ## Class A: 105 C
+### \\(\epsilon\\): emissivity of radiating surface (ε ≤ 1)
 --
 
-- ## Class B: 130 C
+### \\(F\\): view factor (≤ 1) – calculated from geometry
 --
 
-- ## Class F: 155 C
+### \\(T\_1, T\_2\\) absolute temperature of radiant and ambient (K)
+---
+# Emissivity of Materials
 --
 
-- ## Class H: 180 C
-
-
-### Insulation life time halves for each 10 C rise in operating
-
----
-# Insulation
-
-## PWM inverters cause voltage spikes or standing voltage waves
-
-## PWM inverters can cause corona insulation faults
----
-# Insulation
-
-## Under 250 VAC, phase-to-phase insulation is not required
-
-## For higher voltages end turns should be insulated
-
----
-# Slot Design
-
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/slot_design.png" alt="Drawing" style="width:800px;"/>
-
-
-Ref: Tim Miller - Lecture 14
----
-# Slot Design
-
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/slot_fill.png" alt="Drawing" style="width:800px;"/>
-
-
-Ref: Tim Miller - Lecture 14
-
----
-# High Slot Fill Designs
-
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/slot_fill.png" alt="Drawing" style="width:800px;"/>
----
-# Air Wound Designs
-
-
-<img src="http://cdn.instructables.com/F1B/57PQ/FPKF9S1C/F1B57PQFPKF9S1C.LARGE.jpg" alt="Drawing" style="width:700px;"/>
-
----
-# AC Resistance
-
-### Resistance factor: \\(k\_{Ru}=\dfrac{R\_{ac}}{R\_{dc}}\\)
-
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/coil.png" alt="Drawing" style="width: 300px;"/>
----
-# Critical Conductor Height
-
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/critical_conductor_height.png" alt="Drawing" style="width: 600px;"/>
-
----
-# Ways to Reduce AC Resistances
+## Aluminum: (black anodized: 0.86), (polished: 0.03-0.1)
 --
 
-- ### Divide conductors into subconductors
+## Copper: (polished:0.02, heavily-oxidized:0.78) 
 --
 
-- ### Instead of dividing large conductors and transposing them, use parallel paths
+## Iron: (polished:0.07, heavily-oxidized:0.38)
 --
 
-- ## Use multi-thread twisted conductors (litz wire, roebel cable)
+### Example problem (Dave Staton's presentation pg 52)
 
 ---
+# Enclosed Channel
+## Heat Transfer Coefficient 
 
-# Ways to Reduce AC Resistances
+### Dave Staton (page 30 )  
 
-# Litz Wire
-
-<img src="http://www.coonerwire.com/wp-content/gallery/litz-wire/litz-wire_003.jpg" alt="Drawing" style="width: 750px;"/>
-
-
-[Types](http://www.newenglandwire.com/products/litz-wire-and-formed-cables/types-and-constructions), [Litz Wire Applications](http://www.litz-wire.com/applications.php), [Litz Wire theory](http://www.newenglandwire.com/products/litz-wire-and-formed-cables/theory)
----
-# Ways to Reduce AC Resistances
-
-# Litz Wire
-
-<img src="http://www.eis-asia.com/litz%20wire/Image3.jpg" alt="Drawing" style="width: 750px;"/>
-
-[Types](http://www.newenglandwire.com/products/litz-wire-and-formed-cables/types-and-constructions), [Litz Wire Applications](http://www.litz-wire.com/applications.php), [Litz Wire theory](http://www.newenglandwire.com/products/litz-wire-and-formed-cables/theory)
----
-# Roebel Cable
-
-### For very high frequencies, superconductors
-
-<img src="http://www.victoria.ac.nz/__data/assets/image/0019/262207/varieties/ls_medium.jpg" alt="Drawing" style="width: 800px;"/>
-
-[More info](http://www.itep.kit.edu/hts4fusion2011/downloads/1C3.pdf), [Transpositiion of conductors](http://www.electrotechnik.net/2011/10/transposition-of-conductors.html), [Transposition](http://en.wikipedia.org/wiki/Transposition_%28telecommunications%29), [Continuously Transposed Conductors](http://www.samdongamerica.com/products/ctc-continuously-transposed-conductor)
 
 ---
+# Rule of Thumbs
 
+### Not very accurate but useful for initial calculations
+--
+
+## Current Density
+--
+
+- ## Totally Enclosed: 1.5-5 A/mm2
+--
+
+- ## Fan-cooled: 5-10 A/mm2
+--
+
+- ## Liquid-cooled: 10-10 A/mm2
+--
+---
+# Rule of Thumbs
+
+##  Heat Transfer Coefficient
+--
+
+- ## Air-Natural Convection: 5-10 W/(m2.C)
+--
+
+- ## Air-Forced Convection: 10-300 W/(m2.C)
+--
+
+- ## Liquid-Forced Convection: 50-20.000 W/(m2.C)
+
+
+---
+# Application Examples
+
+## Dave Staton Presentation  (from page 75) 
+---
 ## You can download this presentation from: [keysan.me/ee564](http://keysan.me/ee564)
 
     </textarea>
