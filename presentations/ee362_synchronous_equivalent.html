@@ -48,23 +48,6 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 <img src="http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/design/images/figs/oc_test.jpg" alt="Drawing" style="width: 300px;"/>
 
 ---
-# Torque in Synchronous Machines
---
-
-# \\(T = K \Phi\_f \Phi\_R sin (\delta)\\)
---
-
-### \\(K\\): Constant (we'll see what it is in the following weeks)
---
-
-### \\(\Phi_f\\): Field generated flux (rotor-side)
---
-
-### \\(\Phi\_R\\): Resultant (or Air-gap) flux (\\(\Phi\_R = \Phi\_f + \Phi\_{ar}\\))
---
-
-## \\(\delta\\): Load-angle (very important!)
----
 # Armature Reaction
 --
 : No Stator Current
@@ -82,6 +65,23 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ## \\(B\_{R}\\): Resultant flux density
 
 ![](./images/sync_flux4.svg)
+---
+# Torque in Synchronous Machines
+--
+
+# \\(T = K \Phi\_f \Phi\_R sin (\delta)\\)
+--
+
+### \\(K\\): Constant (we'll see what it is in the following weeks)
+--
+
+### \\(\Phi_f\\): Field generated flux (rotor-side)
+--
+
+### \\(\Phi\_R\\): Resultant (or Air-gap) flux (\\(\Phi\_R = \Phi\_f + \Phi\_{ar}\\))
+--
+
+## \\(\delta\\): Load-angle (very important!)
 ---
 # Torque vs Load Angle
 
@@ -136,10 +136,112 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ##\\(\rightarrow \Phi\_{R}= \Phi\_f + \Phi\_{ar}\\)
 ---
 #Phasor Diagram
+--
 
+# \\(\vec{\Phi\_R} = \vec{\Phi\_f} + \vec{\Phi\_{ar}}\\)
+--
+
+# \\(\vec{E\_R} = \vec{E\_f} + \vec{E\_{ar}}\\)
+---
+#Phasor Diagram
+
+## \\(\vec{E\_{ar}}\;\\) lags \\(\;\vec{\Phi\_{ar}}\\) 90 degrees
+--
+
+### Armature reaction can be represented as a voltage drop in an inductance
+--
+
+## \\(\vec{E\_{ar}} = -j X\_{Q} \vec{I\_a}\\) 
+--
+
+## \\(\vec{E\_{R}} = \vec{E\_{f}} -j X\_{Q} \vec{I\_a}\\)
+
+---
+# Simple Equivalent Circuit
+--
+
+#### Assumption: Cylindrical rotor (constant air-gap)
+--
+
+<img src="./images/sync_simple_equivalent.png" alt="Drawing" style="width: 500px;"/>
+
+### \\(\vec{E\_{R}} = \vec{E\_{f}} -j X\_{Q} \vec{I\_a}\\)
+---
+# Simple Equivalent Circuit
+
+## However, there is also the leakage flux: 
+--
+\\(\;jX\_{l}\\)
+--
+
+## Define stator total reactance as:
+# \\(jX\_S = jX_Q + jX_l\\)
+
+### Thus, the equivalent circuit becomes:
+
+---
+# Simple Equivalent Circuit
+
+<img src="./images/sync_simple_equivalent2.png" alt="Drawing" style="width: 500px;"/>
+
+### \\(\vec{E\_{R}} = \vec{E\_{f}} -j X\_{Q} \vec{I\_a}\\)
 ---
 # Equivalent Circuit
 
+## What about the resistance of the phase windings?
+
+<img src="./images/sync_simple_equivalent3.png" alt="Drawing" style="width: 600px;"/>
+---
+## Motoring and Generating Convention
+### Remember synchronous machines are mostly used as generators.
+
+<img src="./images/sync_simple_equivalent4.png" alt="Drawing" style="width: 600px;"/>	
+
+---
+## Remember the Equivalent Circuit is per Phase
+
+### Synchronous machines can be Wye or Delta connected
+
+<img src="./images/synch_wye.png" alt="Drawing" style="width: 500px;"/>
+---
+## Remember the Equivalent Circuit is per Phase
+
+### Synchronous machines can be Wye or Delta connected
+
+<img src="./images/synch_delta	.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Most important definitions
+
+--
+
+- ## Load Angle (\\(\delta\\)): Angle between phase voltage and field voltage
+--
+
+- ## Power Factor Angle (\\(\theta\\)): Angle between phase voltage and current.
+---
+# Load Angle and Power Factor
+
+<img src="./images/synch_phasor.png" alt="Drawing" style="width: 800px;"/>
+
+### Neglect \\(R\_a\\) for now.
+
+---
+## A few exercises with the simple equivalent circuit
+
+### Neglect \\(R\_a\\) for now.
+
+<img src="./images/sync_simple_equivalent2.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Full Equivalent Circuit
+
+### Including the field circuit
+
+<img src="./images/synch_full_circuit.png" alt="Drawing" style="width: 800px;"/>
+--
+
+### \\(L\_f\\) can be neglected at steady state (DC) conditions
 ---
 ## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
 ---
