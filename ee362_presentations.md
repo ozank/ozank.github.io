@@ -24,6 +24,7 @@ permalink: /ee362_presentations/index.html
 - Week#9 (13/04): [Speed Control - Synchronous Machines](/presentations/ee362_induction_VF_synchronous_motors.html)
 - Week#9 (15/04): [Synchronous Machines](/presentations/ee362_synchronous_motors.html)
 - Week#10 (20/04): [Synchronous Machine Equivalent Circuit](/presentations/ee362_synchronous_equivalent.html)
+- Week#10 (22/04): [Synchronous Generator Voltage Regulation](/presentations/ee362_synchronous_voltage_regulation.html)
 
 #### FAQ:
 - [How can I convert slides to pdf?](https://github.com/gnab/remark/issues/50): In Chrome, use print preview then save to pdf.
