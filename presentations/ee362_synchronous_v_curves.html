@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE362-Electromechanical Energy Conversion-II</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-362 ELECTROMECHANICAL ENERGY CONVERSION-II
+
+# Synchronous Machines
+
+## Ozan Keysan
+
+[ozan.keysan.me](http://ozan.keysan.me)
+
+Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
+
+---
+# Synchronous Machines can be operated:
+--
+
+# Standalone:
+--
+
+## \\(P\_{mech}\\) and \\(I\_f\\) must be controlled for constant V and f.
+
+--
+
+# Connected to Infinite Bus: 
+--
+
+## Voltage and Frequency constant regardless of power.
+
+---
+# Synchronous Generator Connected to Infinite Bus
+
+<img src="http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/parallel/images/figs/gen_on_bus.gif" alt="Drawing" style="width: 600px;"/>
+
+## Constant Terminal Voltage and Speed
+---
+## Synchronous Generator Connected to Infinite Bus
+
+
+# \\(\vec{E\_f} = \vec{V\_t} \pm (R\_a + j X\_s)\vec{I\_a}\\)
+
+
+## \\(+\\): Generating
+
+
+## \\(-\\): Motoring
+
+
+## \\(V\_t\\): Constant (Infinite Bus)
+
+---
+# Constant Power, Variable Excitation
+
+
+# Power =  \\( 3 V\_t I\_a cos (\theta)\\) 
+ 
+## \\(P\\)  constant, \\(V\_t\\) constant
+--
+
+## \\(I\_a cos (\theta)\\) constant!
+--
+
+## From geometry: \\(E\_f sin (\delta) = X\_s I\_a cos (\theta)\\)  = Constant
+
+
+## [Animation](http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/parallel/infinite_bus%20_op.html)
+
+---
+# V-Curves
+--
+: Generating Mode
+
+<img src="http://cnx.org/resources/6de6fb9681b86029171c18599b512085/graphics17.png" alt="Drawing" style="width: 500px;"/>
+
+Source: Fitzgerald, Electric Machinery
+
+---
+#V-Curves
+
+## Different power factor characteristics for generating mode and motoring mode!
+--
+
+## Remember:
+
+### Generating: \\(\vec{E\_f} = \vec{V\_t} + (R\_a + j X\_s)\vec{I\_a}\\)
+
+### Motoring: \\(\vec{E\_f} = \vec{V\_t} - (R\_a + j X\_s)\vec{I\_a}\\)
+
+---
+#V-Curves: Motoring Mode
+
+<img src="http://electrical4u.com/electrical/wp-content/uploads/2013/05/V-curves-for-a-synchronous-motor-with-variable-excitation-20-02-15.gif" alt="Drawing" style="width: 500px;"/>
+
+## In motoring mode, excess If makes pf. leading.
+---
+# Some Useful Animations
+
+### [Constant excitation, variable load](http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/parallel/infinite_bus%20_op.html)
+
+### [Constant power, variable excitation](http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/parallel/infinite_bus%20_op.html)
+
+### [V-curves of a synchronous motor](http://www.ece.umn.edu/users/riaz/anim/synchronous_motor_Vcurves.html)
+
+### [Synchronous generator capability curves](http://www.ece.umn.edu/users/riaz/anim/sm_V.html)
+
+### [Other Animations](http://www.ece.umn.edu/users/riaz/animations/listanimations.html)
+---
+# Synchronous Condenser
+--
+
+## A Synchronous motor operating at no-load
+
+<img src="http://electrical4u.com/electrical/wp-content/uploads/2013/05/V-curves-for-a-synchronous-motor-with-variable-excitation-20-02-15.gif" alt="Drawing" style="width: 300px;"/>
+
+### Used to deliver or to absorb VAR by controlling \\(I_f\\)
+### Can behave as a capacitor or an inductor!
+---
+# Synchronous Condenser
+
+## Any difference compared to a motor?
+
+<img src="http://bloximages.chicago2.vip.townnews.com/timesjournal.com/content/tncms/assets/v3/editorial/1/05/105d6e1a-f751-56ac-aeb6-c8cc8a28252e/51956c3d15676.image.jpg" alt="Drawing" style="width: 750px;"/>
+---
+# Largest Synchronous Condenser
+
+### Built in 2014, for Brasil Power Grid
+
+<img src="http://www.weg.net/var/ezflow_site/storage/images/media-center/noticias/produtos-e-solucoes/maiores-compensadores-sincronos-do-brasil-produzidos-pela-weg/6039478-16-eng/WEG-Manufactures-Mega-Synchronous-Condensers_noticia_detalhe_w.jpg" alt="Drawing" style="width: 350px;"/>
+
+### 100 MVAr, 300 tons,  built by [WEG](http://www.weg.net/us/Media-Center/News/Products-Solutions/WEG-Manufactures-Mega-Synchronous-Condensers), [Manufacturing Video](https://www.youtube.com/watch?v=8g6CssH5iWo)
+
+---
+# Power of a Synchronous Machine
+--
+
+## We already showed: \\(E\_f sin (\delta) = X\_s I\_a cos (\theta)\\)
+
+### Note: We neglected \\(R\_a\\)
+--
+
+## Write Power equation in terms of \\(E\_f\\)
+--
+
+# \\(P = 3 V\_t  I\_a cos (\theta) \\)
+---
+
+# Power of a Synchronous Machine
+
+
+## We already showed: \\(E\_f sin (\delta) = X\_s I\_a cos (\theta)\\)
+
+### Note: We neglected \\(R\_a\\)
+
+
+## Write Power equation in terms of \\(E\_f\\)
+
+
+# \\(P = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s}\\)
+---
+
+# Power of a Synchronous Machine
+
+# \\(P = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s}\\)
+--
+
+## What about Torque?
+--
+
+### Neglect losses (core, copper etc)
+
+# \\(P = T \omega\_s\\)
+---
+
+# Torque of a Synchronous Machine
+
+# \\(T = \dfrac{P}{\omega\_s }\\)
+
+# \\(T = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s \omega\_s }\\)
+---
+# Torque of a Synchronous Machine
+
+## Remember the previous weeks:
+--
+
+## \\(T = T\_{max} sin (\delta)\\)
+--
+
+## \\(T\_{max} = \dfrac{3 V\_t E\_f}{X\_s \omega\_s }\\)
+---
+
+# Torque of a Synchronous Machine
+
+## \\(T\_{max} = \dfrac{3 V\_t E\_f}{X\_s \omega\_s }\\)
+
+<img src="http://i.stack.imgur.com/DmWrO.png" alt="Drawing" style="width: 450px;"/>
+
+---
+# Example:
+--
+
+## 500 MVA, 3-phase, 4-pole, Y-connected synchronous generator connected to 22 kV infinite bus.
+--
+ Prime mover power (i.e. mechanical power) is set to 300 MW.
+--
+
+### a) Find E and load angle for a power factor of 0.8 lagging.
+--
+
+### b) Double check the load angle from the power expression.
+--
+
+### c) The field current is changed, and the power factor is adjusted to unity at 300 MW. Calculate the new load angle and the E.
+
+---
+
+## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
+---
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
