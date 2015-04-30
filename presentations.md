@@ -8,6 +8,7 @@ permalink: /presentations/index.html
 
 ### 2015
 
+* ODTÜ Elektrik Müh, [Elektrik Makineleri ve Güç Elektroniği Opsiyon Tanıtımı](https://docs.google.com/presentation/d/128lohMTBVDAOZl9q8SzXT4HCoFsondeH2lE10goHrto/edit?usp=sharing)
 * Ankara Universitesi-CESUR, [Superiletkenliğin eneji alanındaki uygulamaları](https://docs.google.com/presentation/d/1uHEdoHDHlFYh4CqQxNUEgbooXijWlml-_VL3hNSf3dQ/pub?start=false&loop=false&delayms=3000)
 
 ### 2014
