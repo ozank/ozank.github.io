@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE362-Electromechanical Energy Conversion-II</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-362 ELECTROMECHANICAL ENERGY CONVERSION-II
+
+# Synchronous Machines
+
+## Ozan Keysan
+
+[ozan.keysan.me](http://ozan.keysan.me)
+
+Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
+
+---
+# Power of a Synchronous Machine
+--
+
+# \\(P = 3 V\_t  I\_a cos (\theta) \\)
+--
+
+# \\(P = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s}\\)
+---
+
+# Torque of a Synchronous Machine
+--
+
+## Divide Power by \\(\omega\_{s}\\)
+--
+
+# \\(T = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s \omega\_s }\\)
+---
+# Generalized Power Transfer in AC Systems
+
+## \\(P = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s}\\)
+
+<img src="http://www.openelectrical.org/wiki/images/7/75/AC_Transmission_Model.PNG" alt="Drawing" style="width: 500px;"/>
+
+---
+# Generalized Power Transfer in AC Systems
+
+## In Transmission Systems
+
+<img src="http://www.wspgroup.com/Globaln/WSP_Group/Projects/Beauly-Denney%20Overhead%20Transmission%20Line.jpg?width=800&height=500&mode=crop&anchor=middlecenter" alt="Drawing" style="width: 600px;"/>
+---
+# Generalized Power Transfer in AC Systems
+
+## In Wireless Communication
+
+<img src="http://cdn4.explainthatstuff.com/how-antennas-work.png" alt="Drawing" style="width: 600px;"/>
+---
+# Generalized Power Transfer in AC Systems
+
+## In Wave Energy Converters
+
+<img src="http://www.scottishenergynews.com/wp-content/uploads/2014/11/Pelamis-team.jpg" alt="Drawing" style="width: 600px;"/>
+
+#### [Pelamis WEC Operation](https://www.youtube.com/watch?v=skhxokeecHk), [Full Story](https://www.youtube.com/watch?v=ziLtIbwFXB8)
+---
+# Generalized Power Transfer in AC Systems
+
+## In Wave Energy Converters
+
+<img src="http://buildipedia.com/images/masterformat/Channels/Operations/2011.11.03_pelamis/images/Pelamis_wave_energy_at_sea_|_credit_-_Umanji_Solar.jpg" alt="Drawing" style="width: 500px;"/>
+
+#### [Pelamis WEC Operation](https://www.youtube.com/watch?v=skhxokeecHk), [Full Story](https://www.youtube.com/watch?v=ziLtIbwFXB8)
+
+---
+# Generalized Power Transfer in AC Systems
+
+## What if we have a lossy system?
+--
+
+<img src="./images/sync_simple_equivalent3.png" alt="Drawing" style="width: 600px;"/>
+---
+# Power Transfer in Lossy AC Systems
+
+### \\(P = \dfrac{E_1 E_2}{Z} cos (\delta - \phi_z)- \dfrac{E_2^2}{Z^2}R\\)
+--
+
+or
+
+## \\(P = \dfrac{E_1 E_2}{Z} sin (\delta + \alpha_z)- \dfrac{E_2^2}{Z^2}R\\)
+
+### where \\(\alpha_z = 90 - \phi_z\\)
+
+#### See section 5.4 of Fitzgerald for detailed derivation.
+---
+# Power Transfer in Lossy AC Systems
+
+## \\(P = \dfrac{E_1 E_2}{Z} sin (\delta + \alpha_z)- \dfrac{E_2^2}{Z^2}R\\)
+
+### If \\(R \approx 0 \\) then \\(Z \approx X_s \\)
+--
+
+## \\(P = \dfrac{E_1 E_2}{Z} sin (\delta )\\)
+---
+# Cylindrical Machine vs. Salient Pole
+--
+
+<img src="http://1.bp.blogspot.com/-abfAw-qVR6g/T9il-2u0-wI/AAAAAAAABo0/gg53eqWmfyg/s1600/stator.png" alt="Drawing" style="width: 600px;"/>
+
+### Salient Pole: Position dependent air-gap reluctance(and hence inductance; \\(L=N^2/R\\))
+ 
+---
+# D-Q Axis
+--
+
+<img src="http://lh4.ggpht.com/-hHkxzXhl9E4/TgegixkBCfI/AAAAAAAABoU/88gA-WY2rfc/2_thumb1.jpg?imgmax=800" alt="Drawing" style="width: 500px;"/>
+---
+
+# D-Q Axis
+
+<img src="http://lh4.ggpht.com/-hHkxzXhl9E4/TgegixkBCfI/AAAAAAAABoU/88gA-WY2rfc/2_thumb1.jpg?imgmax=800" alt="Drawing" style="width: 300px;"/>
+--
+
+## Direct Axis: d-axis
+--
+
+## Quadrature Axis: q-axis
+---
+# D-Q Axis
+
+<img src="http://www.copper.org/publications/newsletters/innovations/2000/06/images/cu_sprcndrs_fig2.gif" alt="Drawing" style="width: 500px;"/>
+---
+# D-Q Axis
+
+
+
+## Salient Pole Machine: \\(X_d > X_q\\)
+
+## Cylindrical Machine: \\(X_d = X_q = X\_s\\)
+---
+
+# Phasor Diagram in a Salient Pole Machine
+
+--
+
+## Seperate \\(I_a\\) in to two components:
+--
+
+- ## Direct-axis current: \\(I_d\\)
+--
+
+- ## Quadrature-axis current: \\(I_q\\) (in-phase with \\(E_f\\))
+--
+
+### and \\(\vec{I_a} = \vec{I_d} + \vec{I_q}\\)
+
+---
+# Phasor Diagram in a Salient Pole Machine
+
+## without \\(R_a\\)
+
+---
+# Phasor Diagram in a Salient Pole Machine
+
+## including \\(R_a\\)
+
+
+
+---
+## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
+---
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>

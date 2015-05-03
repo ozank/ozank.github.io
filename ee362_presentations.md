@@ -27,6 +27,7 @@ permalink: /ee362_presentations/index.html
 - Week#10 (22/04): [Synchronous Generator Voltage Regulation](/presentations/ee362_synchronous_voltage_regulation.html)
 - Week#11 (27/04): [Synchronous Machine Operating Modes](/presentations/ee362_synchronous_parallel_power.html)
 - Week#11 (29/04): [Synchronous Machine V-curves, Power-Torque Relation](/presentations/ee362_synchronous_v_curves.html)
+- Week#12 (04/05): [Salient Pole Synchronous Machines](/presentations/ee362_power_salient.html)
 
 #### FAQ:
 - [How can I convert slides to pdf?](https://github.com/gnab/remark/issues/50): In Chrome, use print preview then save to pdf.
