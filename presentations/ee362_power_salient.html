@@ -148,6 +148,8 @@ or
 
 ## Salient Pole Machine: \\(X_d > X_q\\)
 
+### (Usually \\(X_q = 0.6 - 0.7 \; X_d\\))
+
 ## Cylindrical Machine: \\(X_d = X_q = X\_s\\)
 ---
 
@@ -155,28 +157,97 @@ or
 
 --
 
-## Seperate \\(I_a\\) in to two components:
+## Separate \\(I_a\\) in to two components:
 --
 
-- ## Direct-axis current: \\(I_d\\)
+## \\(\vec{I_a} = \vec{I_d} + \vec{I_q}\\)
 --
 
-- ## Quadrature-axis current: \\(I_q\\) (in-phase with \\(E_f\\))
+- ## Direct-axis current \\(I_d\\): In phase with \\(\phi_f\\)
 --
 
-### and \\(\vec{I_a} = \vec{I_d} + \vec{I_q}\\)
-
+- ## Quadrature-axis current \\(I_q\\): Perpendicular to \\(\phi_f\\), and therefore in-phase with \\(E_f\\)
 ---
 # Phasor Diagram in a Salient Pole Machine
 
-## without \\(R_a\\)
+## Some key points:
+--
+
+## \\(|E_f| = V_t cos(\delta) + X_d I_d \\)
+--
+
+## \\(I_d \\) has more effect on \\(E_f\\) (creates field flux)
+---
+# Phasor Diagram in a Salient Pole Machine
+
+## Some key points:
+--
+
+## \\( V_t sin(\delta) = X_q I_q \\)
+--
+
+## \\( I_q \\) has more effect on load angle \\(\delta\\) (creates torque)
 
 ---
 # Phasor Diagram in a Salient Pole Machine
 
 ## including \\(R_a\\)
 
+<img src="http://cnx.org/resources/329a95aa825734c4aefa0410fb168ce7908257ba/graphics22.png" alt="Drawing" style="width: 500px;"/>
+---
+# Phasor Diagram in a Salient Pole Machine
 
+## including \\(R_a\\)
+
+## \\(|E_f| = V_t cos(\delta) + X_d I_d + R_a I_q \\)
+--
+
+## \\( V_t sin(\delta) + R_a I_d = X_q I_q \\)
+---
+# Power in Salient Pole Machines
+
+## Again the similar geometry tricks:
+
+## Start with: \\(P = 3 V\_t  I\_a cos (\theta) \\)
+--
+
+## \\( I\_a cos (\theta) =\\)
+--
+\\( I\_d sin (\delta) + I\_q cos (\delta) \\)
+--
+
+## \\(P = 3 V\_t (I\_d sin (\delta) + I\_q cos (\delta) ) \\)
+---
+# Power in Salient Pole Machines
+
+## \\( V_t sin(\delta) = X_q I_q \\)
+--
+ \\( \rightarrow I_q =\dfrac{V_t sin(\delta)}{Xq} \\)
+--
+
+## \\( V_t cos(\delta) = E_f - X_d I_d \\)
+--
+ \\( \rightarrow I_d =\dfrac{E_f - V_t cos (\delta)}{X_d} \\)
+---
+# Power in Salient Pole Machines
+
+### \\(P_{ph} = \dfrac{V_t E_f}{X_d}sin(\delta) \\ + \dfrac{V_t^2(X_d - X_q)}{2 X_d X_q}sin(2\delta)\\)
+
+---
+# Power in Salient Pole Machines
+
+<img src="http://cnx.org/resources/c1caa2c9ed56cb47f52f1586de0b94c1/graphics24.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Power in Salient Pole Machines
+
+#### \\(P = 3 \left[ \dfrac{V_t E_f}{X_d}sin(\delta)+ \dfrac{V_t^2(X_d - X_q)}{2 X_d X_q}sin(2\delta) \right]\\)
+--
+
+- ### First Term: Same with Cylindrical Machines
+--
+
+- ### Second Term: Reluctance Power (Independent of  \\(E_f\\) and therefore \\(I_f\\))
 
 ---
 ## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
