@@ -28,6 +28,9 @@ permalink: /ee362_presentations/index.html
 - Week#11 (27/04): [Synchronous Machine Operating Modes](/presentations/ee362_synchronous_parallel_power.html)
 - Week#11 (29/04): [Synchronous Machine V-curves, Power-Torque Relation](/presentations/ee362_synchronous_v_curves.html)
 - Week#12 (04/05): [Salient Pole Synchronous Machines](/presentations/ee362_power_salient.html)
+- Week#13 (11/05): [Salient Pole Synchronous Machines](/presentations/ee362_synch_problems.html)
+- Week#13 (13/05): [Single Phase Induction Motors](/presentations/ee362_single_phase_induction.html)
+
 
 #### FAQ:
 - [How can I convert slides to pdf?](https://github.com/gnab/remark/issues/50): In Chrome, use print preview then save to pdf.
