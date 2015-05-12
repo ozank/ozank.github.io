@@ -73,7 +73,7 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 --
 
-### \\(\mathrm{F(\theta, t)} = \dfrac{1}{2} F\_{max} [cos (\theta\_e + \omega t)+ cos (\theta\_e - \omega t)\\)
+#### \\(\mathrm{F(\theta, t)} = \dfrac{1}{2} F\_{max} [cos (\theta\_e + \omega t)+ cos (\theta\_e - \omega t)]\\)
 
 
 ### \\(\omega t\\): Forward rotating component
@@ -123,36 +123,145 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ### Motor cannot self-start, we need some modifications.
 
 ---
+# What about two-phase configuration?
+--
+
+## Will it create a rotating MMF?
+--
+
+<img src="http://www.powerguru.org/wordpress/wp-content/uploads/2012/08/Two-phase-AC-machine-where-there-is-a-fixed-field-system-on-the-rotor.jpg" alt="Drawing" style="width: 700px;"/>
 
 ---
-# Single Phase Induction Motors
+# What about two-phase configuration?
 
+## Will it create a rotating MMF?
+
+<img src="http://i.stack.imgur.com/FULre.png" alt="Drawing" style="width: 700px;"/>
+
+---
+# What about two-phase configuration?
+
+## Will it create a rotating MMF?: YES
+
+<img src="https://c.mql5.com/2/3/phasor.gif" alt="Drawing" style="width: 700px;"/>
+
+[Animation](http://www.ece.umn.edu/users/riaz/anim/dq_transformations.html)
+---
+
+# Two-phase winding can create rotating MMF
+--
+
+# but, how can you imitate two phase excitation, using a single-phase supply?
+
+---
+# Split-Phase Motors
+--
+
+## Two orthogonal(\\(\pi / 2 \\) electrical) windings:
+--
+
+## 1- Main (running) Winding: 
+--
+
+## 2- Auxiliary (starting)  Winding: 
+--
+
+- ### Higher resistance-to-reactance (R/X) ratio
+--
+
+- ### A thinner wire is used
+---
+
+# Split-Phase Motors
+
+### Unbalanced winding creates phase difference even if the same voltage is applied
+
+<img src="http://electrical4u.com/electrical/wp-content/uploads/2013/08/split-phase-induction-motor.png" alt="Drawing" style="width: 700px;"/>
+
+[Split-phase machine animation](http://people.ucalgary.ca/~aknigh/electrical_machines/other/images/flash/main_aux_pulse.swf)
+---
+
+# Split-Phase Motors
+
+### Creates a net torque at start
+
+<img src="./images/split_phase_torque.png" alt="Drawing" style="width: 550px;"/>
+---
+# Centrifugal Switch
+
+### Disconnects the axillary switch when the machine reaches 75% of \\(\omega_s\\), from this point the machine is a single phase machine
+
+<img src="http://motorinduction.weebly.com/uploads/1/3/9/6/13964537/_3816596_orig.png" alt="Drawing" style="width: 500px;"/>
+
+[Electronic Centrifugal Switches](https://www.youtube.com/watch?v=xlXXXVflLuc)
+---
+
+# Split-Phase Motors
+
+<img src="http://3.bp.blogspot.com/_G2DcxjbHspE/TFhvi38ZjMI/AAAAAAAAACI/TqGI53KIArc/s320/split+phase.GIF" alt="Drawing" style="width: 300px;"/>
+
+- ### Moderate starting torque
+- ### Low starting current
+- ### Used in fans, pumps, office equipment
+
+---
+# Capacitor-start Type Motors
+--
+
+## Phase displacement is created by a series capacitor instead of using unbalanced windings
+--
+
+<img src="http://sub.allaboutcircuits.com/images/02488.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Capacitor-start Type Motors
+
+<img src="./images/capacitor_start.png" alt="Drawing" style="width: 750px;"/>
+
+---
+# Capacitor-start Type Motors
+
+<img src="./images/capacitor_start_torque.png" alt="Drawing" style="width: 550px;"/>
+---
+# Capacitor-start Type Motors
+
+<img src="http://sub.allaboutcircuits.com/images/02488.png" alt="Drawing" style="width: 400px;"/>
+
+- ## High starting torque
+- ## Used in compressors, refrigerators
+
+---
+# Capacitor-start Type Motors
+
+<img src="http://www.zjidealmotor.com/pic/yl.jpg" alt="Drawing" style="width: 700px;"/>
 
 ### [How does a single phase induction motor work?](https://www.youtube.com/watch?v=awrUxv7B-a8)
 
 ---
-# Starting Methods for Single Phase Motors
+# Other Types
+# Permanent-split capacitor motor
 
-[Single Phase Induction Motor Types](http://www.ibiblio.org/kuphaldt/electricCircuits/AC/AC_13.html)
-
-
-[Split-Phase Machines](http://people.ucalgary.ca/~aknigh/electrical_machines/other/images/flash/main_aux_pulse.swf)
-
-
-- # Capacitor Start
-
+<img src="http://sub.allaboutcircuits.com/images/02486.png" alt="Drawing" style="width: 500px;"/>
 
 ---
-# Capacitor Start Machines
+# Other Types
+## Capacitor-run motor
 
-<img src="http://www.zjidealmotor.com/pic/yl.jpg" alt="Drawing" style="width: 700px;"/>
+<img src="http://sub.allaboutcircuits.com/images/02489.png" alt="Drawing" style="width: 500px;"/>
 
 ---
-# Capacitor Start Machines
+## Equivalent Circuit of Single Phase Induction Motors
 
-## Centrifugal Switch
+## At standstill
 
-<img src="http://www.sinotech.com/images/ac/induction7.jpg" alt="Drawing" style="width: 400px;"/>
+
+<img src="./images/single_phase_eq1.png" alt="Drawing" style="width: 550px;"/>
+---
+## Equivalent Circuit of Single Phase Induction Motors
+
+## While running
+
+<img src="./images/single_phase_eq2.png" alt="Drawing" style="width: 550px;"/>
 
 ---
 ## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
