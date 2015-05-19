@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE362-Electromechanical Energy Conversion-II</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-362 ELECTROMECHANICAL ENERGY CONVERSION-II
+
+# Recitation Hour
+
+## Ozan Keysan
+
+[ozan.keysan.me](http://ozan.keysan.me)
+
+Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
+
+---
+# Induction Motors
+
+---
+# Ex 1: EE362- Year 2004 MT2:Q3
+--
+
+### A 3-phase, 4-pole, Y-connected, 208 V (line), 50 Hz induction motor is run under no-load conditions and the following data are obtained:
+--
+
+### \\(I\_1 = 1.562 A\\)
+### \\(P\_{in} = 432 W\\)
+--
+
+### a1) Find core loss resistance(\\(R\_c\\)) and magnetizing impedance (\\(X\_m\\))
+
+---
+
+### Now, the motor is run under 8.73 Nm load, and it is found that it draws 5.5 A 0.944 pf lagging, and the slip is measured as s=0.05. The stator phase ac resistance is measured as \\(1.2 \Omega\\)
+--
+
+### a2) Find the other parameters of the equivalent circuit
+
+
+#### Note: Assume the shunt branch is moved to supply terminals, and assume x1=x2'
+---
+
+### Now, assume the motor is driven by an inverter that can produce an output voltage in the range of 0-208 V (line-to-line). The frequency can be controlled in the range of 0-200 Hz. It is desired to run this motor at 150 Hz.
+--
+
+### b) Calculate the terminal voltage required to keep the pole flux constant at the rated value.
+
+
+---
+
+### Now, assume the motor is driven by an inverter that can produce an output voltage in the range of 0-208 V (line-to-line). The frequency can be controlled in the range of 0-200 Hz. It is desired to run this motor at 150 Hz.
+
+
+### c) Is the inverter capable of running the motor at the voltage level in part (b)? Otherwise suggest and operating mode and calculate the operating flux per pole as a ratio of the rated flux.
+---
+
+### Now, assume the motor is driven by an inverter that can produce an output voltage in the range of 0-208 V (line-to-line). The frequency can be controlled in the range of 0-200 Hz. It is desired to run this motor at 150 Hz.
+
+
+### d) Calculate the torque output of the motor at a slip of 0.0.5.
+
+---
+# Q2: Ahmet Rumeli Solved Problems: Q6.5
+
+### A 6-pole, \\(215 \sqrt{3}\\), Y-connected, 60 Hz wound rotor induction motor has the following specifications
+--
+
+### Stator impedance: \\(Z\_1 = 0.2 + j0.38 \Omega\\)
+### Referred Rotor impedance: \\(Z\_2' = 0.12 + j0.38 \Omega\\) at standstill
+
+### The motor is used as a crane motor, which lifts and lowers a load that produces 160 Nm.
+
+
+#### Neglect friction. Parallel branch moved to primary terminals
+---
+
+### a) While lifting the load at constant speed, find the stable operating slip?
+--
+
+### a2) What is the slip at maximum torque?
+--
+
+### b) While lifting the  load at constant speed, the supply voltage is cut and the load is left to move freely. What happens if the rated load is reapplied at slip:
+--
+
+### b1) Less than 1.244?
+--
+
+### b2) Greater than 1.244? What is the type of operation in this case?
+---
+
+### c) What is the minimum lifting speed which can be achieved by reducing the applied voltage? Find the voltage and the corresponding speed.
+--
+
+### d) With this new voltage, if you need to reduce the speed down to 600 rpm. What should be the value of the external resistance that is connected in seris with the rotor resistance?
+
+---
+## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
+---
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>

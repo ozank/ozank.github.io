@@ -30,7 +30,7 @@ permalink: /ee362_presentations/index.html
 - Week#12 (04/05): [Salient Pole Synchronous Machines](/presentations/ee362_power_salient.html)
 - Week#13 (11/05): [Synchronous Machine Exercises](/presentations/ee362_synch_problems.html)
 - Week#13 (13/05): [Single Phase Induction Motors](/presentations/ee362_single_phase_induction.html)
-
+- Week#14 (13/05): [Recitation Hour](/presentations/ee362_recitation2.html)
 
 #### FAQ:
 - [How can I convert slides to pdf?](https://github.com/gnab/remark/issues/50): In Chrome, use print preview then save to pdf.
