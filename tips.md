@@ -16,3 +16,5 @@ Here are some software that I use (and recommend):
 * [FEMM](http://www.femm.info/wiki/HomePage) and [Opera](http://operafea.com/) for electromagnetic FEA.
 
 If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'ya Tuyolar](http://www.asuyatuyolar.org)**
+
+* [Önce Küfür Sonra Teşekkür](/okst)
