@@ -111,6 +111,27 @@ implementation of linear machines to wave energy converters.
 
 ------------
 
+## Academic Work
+
+- Associate Editor, [IET Renewable Power Generation](http://digital-library.theiet.org/content/journals/iet-rpg)
+
+|Reviews for   | IEEE Transactions of Industrial Electronics|
+|              | IEEE Transactions of Industrial Informatics|
+|              | IET Renewable Power Generation Journal|
+|              | IEEE International Conference on Electrical Machines and Drives|
+|              | IET Power Electronics, Machines and Drives Conference|
+|              | IEEE International Conference on Electrical Machines|
+
+## Memberships
+
+|2011–Present  | IET Member |
+|2011–Present  | IEEE Power and Energy Society Member |
+|2010–Present  | UK Magnetics Society Member |
+|2005–Present  | TMMOB Electrical Engineers Society Member |
+
+------------
+
+
 ## Honours & Awards
 
 |2013 | Staff Scholarship, *University of Edinburgh*.|
@@ -142,23 +163,6 @@ implementation of linear machines to wave energy converters.
 
 ------------
 
-## Memberships
-
-|2011–Present  | IEEE Member |
-|2011–Present  | IEEE Power and Energy Society Member |
-|2010–Present  | UK Magnetics Society Member |
-|2005–Present  | TMMOB Electrical Engineers Society Member |
-
-## Academic Work
-
-|Reviews for   | IEEE Transactions of Industrial Electronics|
-|              | IEEE Transactions of Industrial Informatics|
-|              | IET Renewable Power Generation Journal|
-|              | IEEE International Conference on Electrical Machines and Drives|
-|              | IET Power Electronics, Machines and Drives Conference|
-|              | IEEE International Conference on Electrical Machines|
-
-------------
 
 ## Software
 
