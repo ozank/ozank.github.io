@@ -22,9 +22,12 @@ Fablab Edinburgh bizim ODTÜ için düşündüğümüzden daha mütevazi ve ufak
 - Ayrıca bir de kimya labına erişimleri var
 - (Tüm listeye [şu linkten](http://www.homepages.ed.ac.uk/v1ctalal/resources.html) ulaşabilirsiniz)
 
+Fablab'da iki tane 3 boyutlu yazıcı var ama öğrenciler 2 tane daha yapmış. Mesela aşağıdakinin kasası FabLab'daki frezeyle üretilmiş.
+
 <img src="../images/fablab_masalar.jpg" alt="Drawing" style="width: 600px;"/>
 
-<img src="../images/fablab_ed.jpg" alt="Drawing" style="width: 600px;"/>
+<img src="../images/fablab_freze.jpg" alt="Drawing" style="width: 600px;"/>
+
 ## Yönetim
 
 Bir adet akademik danışman ([Adam Stokes](http://www.homepages.ed.ac.uk/v1ctalal/people.html)), ve lab sorumlusu Costa. Labda genelde Costa bulunuyor, aletler hakkında bir ön bilgilendirme yapıyor, zaman zaman büyük gruplara toplu eğitim vermeye çalışıyorlarmış. Perşembeleri açık gün, isteyen gelip istediği şeyi tasarlayabiliyor.
