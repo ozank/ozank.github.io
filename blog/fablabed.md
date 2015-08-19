@@ -8,7 +8,7 @@ permalink: /blog/fablabed/index.html
 
 Edinburgh Üniversitesi [Fablab+](http://www.homepages.ed.ac.uk/v1ctalal/index.html)'ı 2015 yılında açtı, benim de burayı gezme imkanım oldu. Hatta gezerken oraya yazın staj yapmaya gelmiş Sabancı Üniversitesi'nden 3 genç lisans öğrencisiyle de tanıştım.
 
-<img src="../images/fablab_ed.jpg" alt="Drawing" style="width: 800px;"/>
+<img src="../images/fablab_ed.jpg" alt="Drawing" style="width: 600px;"/>
 
 
 ## Mekan-Aletler
