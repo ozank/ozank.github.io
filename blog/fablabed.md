@@ -40,7 +40,7 @@ FabLab arka planında ise asıl [Edinburgh Research and Innovation](http://www.r
 - 3D tarama, 3D yazıcı, CNC, PCB prototipleme
 - Elektronik, Donanım ve Kimya çalıştayları
 
-<img src="../images/fablab_isler.jpg" alt="Drawing" style="width: 200px;"/>
+<img src="../images/fablab_isler.jpg" alt="Drawing" style="width: 300px;"/>
 
 Bu hizmetlerde kullanılan aletin saat ücretine göre ve kullanılan malzemenin giderine göre şirketlerden bir ücret talep ediliyor. Araştırma projelerinde akademisyenler uzun süreli kullanacaksa, onlara da araştırma projelerinde bütçe ayırmalarını istiyorlar. Öğrenciler bir akademisyenin onayını alıp FabLab'ı kullanabiliyor (ancak Perşembeleri herkese açık).
 
