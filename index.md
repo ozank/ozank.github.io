@@ -3,7 +3,7 @@ layout: home
 title: Ozan Keysan
 ---
 
-**Courses for Spring 2015: <span class="meta">&#8226;</span> [EE362](/ee362) <span class="meta">&#8226;</span>  [EE564](/ee564)**
+**Courses for Fall 2015: <span class="meta">&#8226;</span> [EE361](/ee361) <span class="meta">&#8226;</span>  [EE281](/ee281)**
 
 <!---
 **[STAR Projects](/star)**
@@ -28,7 +28,7 @@ For more information, you can download my [CV](/cv) or have look at my [Publicat
 #### Research Interests
 
 - Renewable Energy (Wind, Wave, Solar)
-- Electrical Machine Design
+- Design and Optimisation of Electrical Machines
 - Smart Grids
 - Superconducting Machines
-- Optimisation of Electrical Machines
+- Permanent-Magnet Machines

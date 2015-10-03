@@ -3,6 +3,12 @@ layout: page
 title: Courses
 permalink: /courses/index.html
 ---
+
+## Fall 2015
+
+- [EE361](/ee361): Electromechanical Energy Conversion-I
+- [EE281](/ee281): Electric Circuits
+
 ## Spring 2015
 
 - [EE362](/ee362): Electromechanical Energy Conversion-II
@@ -10,5 +16,5 @@ permalink: /courses/index.html
 
 ## Fall 2014
 
-- [EE361](/ee361): Electromechanical Energy Conversion-I
-- [EE281](/ee281): Electric Circuits
+- EE361: Electromechanical Energy Conversion-I
+- EE281: Electric Circuits
