@@ -15,12 +15,13 @@ Before contacting me for an appointment, please check my schedule. You can use [
 
 ## Ideal way to ask for an appointment:
 
-1. Check my schedule above and find a suitable slot.
+1.Check my schedule above and find a suitable slot.
 
-2. Create an event in your calendar program and send me an event invitation (.ics file):
+2.Create an event in your calendar program and send me an event invitation (.ics file):
 
 a) using [Gmail](https://support.google.com/calendar/answer/37161?hl=en-GB&ctx=tltp&rd=1)
+
 b) using [Outlook](http://smallbusiness.chron.com/send-invitation-outlook-calendar-gmail-account-74988.html)
 
-3. If I am available, I'll accept your invitation and it will be added to my calendar automatically. If not, I'll propose an alternative time.
+3.If I am available, I'll accept your invitation and it will be added to my calendar automatically. If not, I'll propose an alternative time.
 
