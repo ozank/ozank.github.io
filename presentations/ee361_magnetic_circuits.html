@@ -29,19 +29,28 @@ class: center, middle
 
 Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
-Office Hour: Wednesdays 11:40-12:30
+---
+# Electric Circuits
+
+## Analogy to Hydraulic System
+
+### - Voltage --> Pressure
+### - Electric Current --> Water Current
+### - Hydraulic Resistance --> Resistance
+
 
 ---
 
 # Magnetic Circuits
 
-### Magnetic circuits are analogous to electric circuits:
+## Magnetic circuits are analogous to electric circuits:
 
 <img src="magnetic_electric_circuit.png" alt="Drawing" style="width: 800px;"/>
 ---
 # Magnetic Circuits
 
 ## Materials: 
+
 | Electric Circuits | Magnetic Circuits |
 | -- | -- | -- |
 | **Conductors:** Copper, Aluminum | **Ferromagnets**: Iron, Electrical Steel |
@@ -49,85 +58,106 @@ Office Hour: Wednesdays 11:40-12:30
 ||Copper, Water (Diamagnetic)|
 || Air, Aluminum (Paramagnetic) |
 
-### Air is a circuit element in magnetic circuits!
+---
+# Magnetic vs Electric Circuit
+--
+
+## Conductivity of Copper vs Air?
+--
+
+### Copper is \\(10^{22}\\) times more conductive than air.
+--
+
+### Copper is \\(10^{7}\\) times more conductive than sea water.
+--
+
+### Iron is JUST 3000 times more "permeable" than air
+
+## Therefore, air is a circuit element in magnetic circuits!
 ---
 # Magnetic Circuits
 
 ## Flux (Wb)
-## Flux Density (Wb/m^2 or T)
+--
+
+## Flux Density (Wb/m\\(^2\\) or T)
+--
+
 ## Magneto-motive Force (MMF), (A.turns)
 
 ---
 
 # Magnetic Circuits and Maxwell Equations:
 
-$$\textrm{Gauss' Law}\quad \nabla \cdot \vec{E}  =  \frac{\rho}{\varepsilon_0} $$
-$$\textrm{Gauss' Law ($\vec{B}$ Fields)} \quad \nabla \cdot \vec{B}  =  0 $$
-$$\textrm{Faraday's Law} \quad \nabla \times\quad \vec{E}  = - \frac{\partial \vec{B}}{\partial t}$$
-$$\textrm{Ampere's Law} \quad \nabla \times \vec{B}  =  \mu_0 \vec{J} + \mu_0\varepsilon_0\frac{\partial \vec{E}}{\partial t}$$
+#### $$\textrm{Gauss' Law}\quad \nabla \cdot \vec{E}  =  \frac{\rho}{\varepsilon_0} $$
+#### $$\textrm{Gauss' Law ($\vec{B}$ Fields)} \quad \nabla \cdot \vec{B}  =  0 $$
+#### $$\textrm{Faraday's Law} \quad \nabla \times\quad \vec{E}  = - \frac{\partial \vec{B}}{\partial t}$$
+#### $$\textrm{Ampere's Law} \quad \nabla \times \vec{B}  =  \mu_0 \vec{J} + \mu_0\varepsilon_0\frac{\partial \vec{E}}{\partial t}$$
+
+#### [More info](http://www.maxwells-equations.com/), [Who's afraid of Maxwell equations?](http://majr.com/docs/Whos_Afraid_of_Maxwells_Equations_By_Elya_Joffe.pdf)
 
 ---
 # Ampere's Law
 
-$$\oint_C {\vec{H}.d\vec{\ell}}=$$
+### \\(\oint_C {\vec{H}.d\vec{\ell}}\\)=
+--
 
-$$= \iint_{closed S} \vec{J}.\vec{n}dA = \sum I_n $$
+### \\( \iint_{closed S} \vec{J}dA = \sum I_n \\)
 
-Magnetic field intensity(H) is independent of the material properties!
+#### Magnetic field intensity(H) is independent of the material properties!
 
 ![](http://farside.ph.utexas.edu/teaching/302l/lectures/img740.png)
 
 ---
 # Gauss Law (for Magnetism)
 
-$$\nabla \cdot {B} =0$$
+## \\(\nabla \cdot {B} =0\\)
 
-$$\iint_{closed S} \vec{B}.\vec{n}dA = 0$$
+## \\(\iint_{S} \vec{B}.\vec{dA} = 0 \\)
 --
 
-### Practical Meaning: 
-- There are no magnetic flux sources. 
-- No magnets with single pole!
+## Practical Meaning: 
+### - There are no magnetic flux sources. 
+### - No magnets with single pole!
 ---
 
 # Ohm's Law (for Magnetic Circuit)
 
-## Electric Circuits:
+## Electric Circuits: \\(\quad \quad V=IR\\)
+--
 
-$$V=IR$$
+## Magnetic Circuits: \\( \quad \quad \mathcal{F} = \Phi \mathcal{R} \\)
+--
 
-## Magnetic Circuits
+## Electrical Resistance: \\(\quad  R = \frac{\rho l}{A} = \frac{l}{\sigma A}\\)
+--
 
-$$\mathcal{F} = \Phi \mathcal{R}$$
-
-## Reluctance
-
-$$\mathcal{R} = \frac{l}{\mu A}$$
+## Magnetic Reluctance: \\(\quad \quad \mathcal{R} = \frac{l}{\mu A}\\)
 
 ---
 # Current Density vs. Magnetic Flux Density
 
 ## Current Density = Conductivity x Electric Field
 
-$$\vec{J}=\rho \vec{E}$$
+## $$\vec{J}=\rho \vec{E}$$
 
 --
 ## Flux Density = Permeability x Magnetic Field
 
-$$\vec{B} = \mu \vec{H}$$
+## $$\vec{B} = \mu \vec{H}$$
 
 ---
 #Permeability
 
 ## Permeability of free space:
 
-$$\mu_0 = 4 \pi 10^{-7} \quad H/m$$
+## $$\mu_0 = 4 \pi 10^{-7} \quad H/m$$
 
 --
 
 ## Common to define permeability relative to vacuum:
 
-$$\mu = \mu_o . \mu_r$$
+## $$\mu = \mu_o . \mu_r$$
 
 ---
 # Exercise
