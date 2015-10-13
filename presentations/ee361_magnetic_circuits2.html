@@ -28,9 +28,52 @@ class: center, middle
 [ozan.keysan.me](http://ozan.keysan.me)
 
 Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
+---
+# Review
+
+## Magnetic circuits are analogous to electric circuits:
+
+<img src="magnetic_electric_circuit.png" alt="Drawing" style="width: 800px;"/>
+---
+# Ampere's Law
+
+
+### \\(\oint_C {\vec{H}.d\vec{\ell}} = \sum I_n = NI \\)
+
+### Integral of H around a closed contour C is equal to the net current passing through the path.
+
+<img src="http://farside.ph.utexas.edu/teaching/302l/lectures/img740.png" alt="Drawing" style="width: 300px;"/>
+
+### Remember the right hand rule!
+---
+# Ampere's Law
+
+## Magneto-Motive Force (\\(\mathcal{F}\\))
+
+## \\( \mathcal{F} = NI \\)
+--
+
+## Electric Circuits: \\(\quad \quad V=IR\\)
+
+## Magnetic Circuits: \\( \quad \quad \mathcal{F} = \Phi \mathcal{R} \\)
 
 ---
 # Exercise
+
+---
+## What happens if you double the current?
+--
+
+## \\( \mathcal{F} = NI \\)  
+--
+
+## Current is doubled --> MMF is doubled
+--
+
+## \\( \mathcal{F} = \Phi \mathcal{R} \\) 
+--
+
+### [Breaking Bad - Magnets](https://youtu.be/J0IqVC8mTwk?t=47s)
 
 ---
 
@@ -74,6 +117,48 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 - ### B limit => Saturation
 
 <img src="http://people.ucalgary.ca/~aknigh/electrical_machines/fundamentals/images/figs/bh_sat.png" alt="Drawing" style="width: 500px;"/>
+
+---
+
+# Faraday's Law
+
+### \\(\nabla \times \vec{E}  = - \dfrac{\partial \vec{B}}{\partial t}\\)
+
+### which equals to:
+
+--
+### $$\oint_C \vec{E} dl  = - \dfrac{d\Phi}{dt} = -\dfrac{d}{dt}\iint \vec{B} dA$$
+
+### !! The most important equation for EE362
+
+---
+# Faraday's Law
+
+### Induced Voltage in a Coil
+
+### \\(\oint \vec{E} dl = -\dfrac{d \Phi}{dt}\\)
+
+## \\(e = -\dfrac{d \Phi}{dt} = -\dfrac{d}{dt}\iint \vec{B} dA\\)
+---
+# Ways to generate voltage in a coil
+--
+
+- ## Time variation of flux (e.g. AC excitation)
+--
+
+- ## Due to conductor movement in a stationary field
+--
+
+- ## Rotation (e.g. motors)
+--
+
+- ## Deformation of coil (Area changes)
+
+---
+# Faraday's Law
+
+## Total voltage in a coil with N turns
+## \\(V_{coil} = N\frac{d \Phi}{dt} = \frac{d \lambda}{dt}\\)
 ---
 
 # Flux Linkage
@@ -84,20 +169,6 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ### \\(\lambda = N_{turns} \Phi \\) (turn. Weber)
 
 <img src="http://img.tfd.com/mgh/cep/thumb/B-magnetic-flux-field-of-a-short-coil.jpg" alt="Drawing" style="width: 300px;"/>
-
-[Breaking Bad - Magnets](https://youtu.be/J0IqVC8mTwk?t=47s)
----
-
-# Faraday's Law
-
-### \\(\oint \vec{E} dl = -\frac{\partial\Phi}{\partial t}\\)
-
-## \\(e = -\frac{d \Phi}{dt} = -\frac{d\oint \vec{B} d\vec{A}}{dt} \\)
---
-
-## Total voltage in a coil with N turns
-## \\(V_{coil} = N\frac{d \Phi}{dt} = \frac{d \lambda}{dt}\\)
-
 ---
 
 # Kircchoff's Voltage Law Out!
@@ -105,12 +176,6 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 
 Watch: [Walter Lewin-part1](https://www.youtube.com/watch?v=eqjl-qRy71w), [part2](https://www.youtube.com/watch?v=1bUWcy8HwpM)
----
-# Ways to generate voltage in a coil
-
-- ## Time variation of flux (e.g. AC excitation)
-- ## Due to conductor movement in a stationary field
-- ## Air-gap flux density change (rotation)
 
 ---
 # Relation between Magnetic and Electric Circuits
