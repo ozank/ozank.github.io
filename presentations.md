@@ -8,6 +8,7 @@ permalink: /presentations/index.html
 
 ### 2015
 
+* Aselsan, [Rüzgar Türbinleri Jeneratör Sistemleri](https://docs.google.com/presentation/d/1GuMfGU77NcYJu3rGbK5eWvilPFw5URcZUiLjTVJkE-Y/edit?usp=sharing)
 * UK MagSoc Event, Edinburgh, Alasdair McDonald [How can electrical machine and drivetrain design influence Offshore Wind Cost of Energy?](https://docs.google.com/presentation/d/1hHpeSlyrqR6OqKgF4uOt2bNV5zqS3j4IMCx7Huad4e0/edit?usp=sharing)
 * UK MagSoc Event, Edinburgh, [Superconducting Technology for Large Offshore Wind Turbines](https://docs.google.com/presentation/d/1uYJwFvBlhV6UWXFh-XtOV2KOcER2-t5Sj5dnYJbyHXU/edit?usp=sharing)
 * AGEP, ODTÜ Kuzey Kıbrıs Sunumu [Milli Sondaj Kulesi Sunumu](http://ozan.keysan.me/presentations/kamag.html)
