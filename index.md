@@ -10,7 +10,11 @@ title: Ozan Keysan
 -->
 
 I'm an assistant professor in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr).
-For more information, you can download my [CV](/cv) or have look at my [Publications](/papers) and [Presentations](/presentations). Here are some [Software Tips](/tips), if you're interested.
+For more information about me, you can download my [CV](/cv) or have look at my [Publications](/papers) and [Presentations](/presentations). 
+
+You can find a few [software Tips](/tips) here and a few [webpages](/links) that can be helpful. Also, I collect [these links](/explained) that can help you to understand some difficult concepts.
+
+#### Contact:
 
 <p> <script type="text/javascript">
 // http://csarven.ca/hiding-email-addresses
