@@ -312,7 +312,7 @@ div.story { position: relative; }
 #footer { width: 100%; float: left; border-top: 1px solid #c9c8c7; margin-top: 1.5em; }
 
 /* Homepage */
-#contact img { float: left; width: 200px; height: 250px; padding: 3px 3px 300px 3px; border: 1px solid #ccc; margin-right: 33px; }
+#contact img { float: left; width: 200px; height: 250px; padding: 10px 3px; border: 1px solid #ccc; margin-right: 33px; }
 #contact p { -webkit-hyphens: none; text-align: left; }
 
 /* CV */
