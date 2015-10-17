@@ -41,7 +41,7 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 * [What matrices actually are](https://nolaymanleftbehind.wordpress.com/2011/07/10/linear-algebra-what-matrices-actually-are/)
 * [An Intuitive Guide to Linear Algebra](http://betterexplained.com/articles/linear-algebra-guide/)
 * [Eigenvectors and Eigenvalues](http://setosa.io/ev/eigenvectors-and-eigenvalues/)
-* [A Beginner’s Guide to Eigenvectors, PCA, Covariance and Entropy](http://deeplearning4j.org/eigenvector)
+* [A Beginner’s Guide to Eigenvectors, Covariance and Entropy](http://deeplearning4j.org/eigenvector)
 
 ### Probability
 
