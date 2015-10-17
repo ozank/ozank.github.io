@@ -12,7 +12,7 @@ title: Ozan Keysan
 I'm an assistant professor in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr).
 For more information about me, you can download my [CV](/cv) or have look at my [Publications](/papers) and [Presentations](/presentations). 
 
-You can find a few [software tips](/tips). Also, I collect these [these links](/explained) that can help you to understand some difficult concepts.
+You can find a few [software tips](/tips). Also, I collect [these links](/explained) that can help you to understand some difficult concepts.
 
 #### Contact:
 

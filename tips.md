@@ -37,7 +37,6 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 * [Tips for Public Speaking](http://speaking.io/)
 * [Effective Presentations](https://thesistips.wordpress.com/2013/06/29/effective-presentations-part-2-preparing-conference-presentations/)
 * [How to find visuals?](http://designrope.com/design/find-stock-photos-dont-suck/)
-* 
 
 #### Nice Plots
 
