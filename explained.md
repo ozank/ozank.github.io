@@ -31,6 +31,9 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 ### Mawxell's Equations
 
 * [Maxwell’s Unification Revolution](https://medium.com/starts-with-a-bang/maxwell-s-unification-revolution-849d47da7fe)
+* [Maxwell's Equations](http://www.maxwells-equations.com/)
+* [Who's afraid of Maxwell Equations?](http://majr.com/docs/Whos_Afraid_of_Maxwells_Equations_By_Elya_Joffe.pdf)
+* [Feynman Lectures of Maxwell Equations](http://feynmanlectures.caltech.edu/II_18.html)
 
 ### Control
 
