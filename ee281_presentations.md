@@ -8,7 +8,7 @@ permalink: /ee281_presentations/index.html
 
 
 
-- Week#4 (13/10): [Node Voltage Analysis](/presentations/ee281_nodal_analysis.html)
+
 - Week#4 (16/10): [Supernode](/presentations/ee281_supernode.html)
 - Week#5 (23/10): [Supermesh](/presentations/ee281_supermesh.html)
 - Week#6 (27/10): [Superposition-Source Transformations](/presentations/ee281_superposition.html)
