@@ -7,9 +7,6 @@ permalink: /ee281_presentations/index.html
 ## Presentations for EE281
 
 
-
-
-- Week#4 (16/10): [Supernode](/presentations/ee281_supernode.html)
 - Week#5 (23/10): [Supermesh](/presentations/ee281_supermesh.html)
 - Week#6 (27/10): [Superposition-Source Transformations](/presentations/ee281_superposition.html)
 - Week#7 (13/11): [Max. Power Transfer-OPAMPs](/presentations/ee281_max_power_opamp.html)
