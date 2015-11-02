@@ -21,7 +21,8 @@
 
 class: center, middle
 
-# EE-361 ELECTROMECHANICAL ENERGY CONVERSION
+# EE-361
+# TRANSFORMERS
 
 ## Ozan Keysan
 
@@ -30,37 +31,127 @@ class: center, middle
 Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ---
-# Mutual Inductance:
+# Ideal Transformer
 
-## \\( V_{2} = M \frac{dI_1}{dt} \\)
-<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/mutual_flux.png
-" alt="Drawing" style="width: 380px;"/>
+<img src="http://fweb.wallawalla.edu/class-wiki/upload/thumb/a/a3/IdealTransformer1-nka.jpg/360px-IdealTransformer1-nka.jpg" alt="Drawing" style="width: 720px;"/>
+
 ---
-# Transformers
+# Ideal Transformer
+
+![](http://images.books24x7.com/bookimages/id_9293/fig4-3.jpg)
+
+### \\(e_1 = N_1 \frac{d\Phi}{dt} \;\;\; e_2 = N_2 \frac{d\Phi}{dt} \\)
+
+--
+## \\(\frac{V_1}{V_2} = \frac{e_1}{e_2} = \frac{N_1}{N_2}\\)
+---
+## Higher the number of turns
+--
+
+## Higher the induced voltage.
+
+# \\(\frac{V_1}{V_2} = \frac{N_1}{N_2}\\)
+---
+# What about current?
+
+--
+## No Losses (Ideal Transformer)
+## \\(P_1 = P_2 \\)
+
+--
+## \\(V_1 I_1 = V_2I_2 \\)
+
+--
+## \\(\dfrac{V_1}{V_2} = \dfrac{I_2}{I_1}\\)
+
+---
+# Current is Inversely Proportional to Turns Ratio
+--
+
+## \\(\dfrac{N_1}{N_2} = \dfrac{I_2}{I_1}\\)
+--
+
+### Also valid from the magnetic circuit:
+### MMF on both sides are equal
+
+---
+# Transformer Ratio
+
+# \\(a = \frac{N_1}{N_2}\\)
+
+<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/Transformer_symbol.png" alt="Drawing" style="width:360px;"/>
+
+---
+# Transformer Schematic
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Ideal_Transformar.png/320px-Ideal_Transformar.png" alt="Drawing" style="width:700px;"/>
+
+### Beware of Dots
+
+---
+# Transformer with Load
+<img src="http://upload.wikimedia.org/wikipedia/commons/4/49/Transformer_under_load.svg" alt="Drawing" style="width:500px;"/>
+---
+## Transformations between primary and secondary:
+
+## From Secondary to Primary Winding
+
+## Refeered to Primary <-- Actual Value
+
+## \\(V_2' = a V_2 \quad \longleftarrow \\)  \\(V_2\\)
+--
+
+## \\(I_2' = I_2/a \quad \longleftarrow \\)  \\(I_2\\)
+--
+
+## \\(Z_2' = a^2 Z_2 \quad \longleftarrow \\)  \\(Z_2\\) 
+
+---
+## Transformations between primary and secondary:
+
+## From Primary to Secondary Winding
+
+## Actual Value --> Refeered to Secondary
+
+## \\(V_1 \quad \longrightarrow\\)  \\(V_1' = V_1 / a\\)
+--
+
+## \\(I_1 \quad \longrightarrow\\)  \\(I_1' = a I_1 \\)
+--
+
+## \\(Z_1 \quad \longrightarrow\\) \\(Z_1' = Z_1 / a^2\\)
+
+---
+## Unfortunately ideal transformers do not exist
+ 
+
+![](http://media.giphy.com/media/LfbLBInuSRynK/giphy.gif)
+---
+# Real Transformers
+--
 
 ### From small transformers in your chargers to:
 <img src="http://www.foxaudioresearch.ca/XFMR-group-lores.jpg
 " alt="Drawing" style="width: 600px;"/>
 ---
-# Transformers
+# Real Transformers
 
 ### to very big transformers:
 <img src="http://3.bp.blogspot.com/-O5o0GzNoPNo/ThRSwkgVexI/AAAAAAAABu8/Fv88ZNaIEOY/s1600/222088_206340936072588_170822346291114_561188_4705333_n.jpg" alt="Drawing" style="width: 600px;"/>
 ---
+
+# Transformers, same logic behind
+--
+
+## Mutual Inductance:  \\( V_{2} = M \dfrac{dI_1}{dt} \\)
+<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/mutual_flux.png
+" alt="Drawing" style="width: 350px;"/>
+---
+
 # Transformers
 
-## Same logic behind
-
-- ### Magnetically coupled circuit
-- ### Usually has a highly permeable core (Why?)
-- ### Losses in the coil and core
-
----
-# Ideal Transformer
-
-![](http://media.giphy.com/media/LfbLBInuSRynK/giphy.gif)
-
-### Not exists in real world!
+- ## Magnetically coupled circuit
+- ## Usually has a highly permeable core (Why?)
+- ## Losses in the coil and core
 
 ---
 # Ideal Transformer
@@ -78,72 +169,6 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 --
 - ### Interwinding capacitance effects are neglected.##
----
-# Ideal Transformer
-
-![](http://images.books24x7.com/bookimages/id_9293/fig4-3.jpg)
-
-### \\(e_1 = N_1 \frac{d\Phi}{dt} \;\;\; e_2 = N_2 \frac{d\Phi}{dt} \\)
-
---
-## \\(\frac{V_1}{V_2} = \frac{e_1}{e_2} = \frac{N_1}{N_2}\\)
----
-## Higher the number of turns
-## Higher the induced voltage.
-
-# \\(\frac{V_1}{V_2} = \frac{N_1}{N_2}\\)
----
-# What about current?
-
---
-## No Losses
-## \\(P_1 = P_2 \\)
-
---
-## \\(V_1 I_1 = V_2I_2 \\)
-
---
-## \\(\frac{V_1}{V_2} = \frac{I_2}{I_1}\\)
-
----
-# Current is Inversely Proportional to Turns Ratio
-
-## \\(\frac{N_1}{N_2} = \frac{I_2}{I_1}\\)
-
-#### Also valid from the magnetic circuit
----
-# Transformer Ratio
-
-# \\(a = \frac{N_1}{N_2}\\)
-
-<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/Transformer_symbol.png" alt="Drawing" style="width:400px;"/>
-
----
-# Transformer Schematic
-<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Ideal_Transformar.png/320px-Ideal_Transformar.png" alt="Drawing" style="width:500px;"/>
-
-#### !Dots
-
----
-# Transformer with Load
-<img src="http://upload.wikimedia.org/wikipedia/commons/4/49/Transformer_under_load.svg" alt="Drawing" style="width:500px;"/>
----
-## Transformations between primary and secondary:
-
-#### From Secondary to Primary Winding
-| Refeered to Primary | Actual Value |
-| -- | -- |
-| \\(V_2' = a V_2 \quad \longleftarrow \\) | \\(V_2\\) |
-| \\(I_2' = I_2/a \quad \longleftarrow \\) | \\(I_2\\) |
-| \\(Z_2' = a^2 Z_2 \quad \longleftarrow \\) | \\(Z_2\\) |
-
-#### From Primary to Secondary Winding
-
-| Actual Value | Refeered to Secondary|
-| -- | -- |
-| \\(V_1 \quad \longrightarrow\\) | \\(V_1' = V_1 / a\\) |
-| \\(I_1 \quad \longrightarrow\\) | \\(I_1' = a I_1 \\) |
-| \\(Z_1 \quad \longrightarrow\\) | \\(Z_1' = Z_1 / a^2\\) |
 
 ---
 ## You can download this presentation from: [keysan.me/ee361](http://keysan.me/ee361)

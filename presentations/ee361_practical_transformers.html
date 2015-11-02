@@ -31,33 +31,20 @@ class: center, middle
 Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ---
-# Ideal Transformer
-
-- ### No losses
-- ### No leakage flux
-- ### No magnetizing current
-- ### No hysteresis
-
----
-# Voltage-Current-Load Transformation
-
-![](http://images.books24x7.com/bookimages/id_9293/fig4-3.jpg)
-
-## \\(\frac{V_1}{V_2} = \frac{N_1}{N_2} \quad I_1 N_1 = I_2 N_2 \\)
----
-# Voltage-Current-Load Transformation
-
-![](http://images.books24x7.com/bookimages/id_9293/fig4-3.jpg)
-
-## \\( a = \frac{N_1}{N_2} \\)
-## \\( V_1 = a V_2 \:,\: I_1 = I_2/a \:,\: Z_1 = a^2 Z_2 \\)
----
 # Practical Transformers
 
-- ### Losses
-- ### Leakage flux
-- ### Magnetizing current
-- ### Hysteresis
+- ## Losses
+--
+ (Copper and Core)
+--
+
+- ## Leakage flux
+--
+
+- ## Magnetizing current
+--
+
+- ## Hysteresis
 
 ---
 #Practical Transformer Equivalent Circuit
@@ -68,14 +55,14 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ![](http://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Transformer_equivalent_circuit-2.svg/786px-Transformer_equivalent_circuit-2.svg.png)
 
 ---
-# Winding Resistances:
-## (\\(R_1, R_2\\)) or (\\(R_p, R_s\\))
+# Winding Resistances: (\\(R_1, R_2\\)) or (\\(R_p, R_s\\))
 
 - ## Resistance of the copper
-   [Winding machine](http://www.youtube.com/watch?v=I_kJCLWwI2Y), [Winding for large transformers](http://youtu.be/yYFm3vxOVgw?t=24s)
+   [Winding machine](http://www.youtube.com/watch?v=I_kJCLWwI2Y), [Winding for large transformers](http://youtu.be/yYFm3vxOVgw?t=24s), [Toroidal winding](https://www.youtube.com/watch?v=E-FpeRf3RvQ)
 --
 
-- #### Question: In a step-down transformer which one is larger? \\(R_1\\) or \\(R_2\\)
+- ### Question: In a step-down transformer which one is larger?
+###  \\(R_1\\) or \\(R_2\\)?
 
 --
 - ## Copper Losses: \\(I^2 R \\)
@@ -85,6 +72,8 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ---
 # Leakage Flux
+--
+
 ## Leakage Reactance: \\( X_{leakage} \\)
 ![](http://www.electrical4u.com/images/transformer-core-winding.gif)
 
@@ -92,26 +81,33 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ---
 # How to minimize leakage flux?
+--
 
 ![](http://s200.org/images/U207.jpg)
 
 - ## Where is the secondary winding?
 ---
-# Leakage Flux
+# How to minimize leakage flux?
 
 <img src="http://sub.allaboutcircuits.com/images/52012.jpg" alt="Drawing" style="width: 400px;"/>
 
 ---
 # Magnetizing Flux
+--
+
+## A term represents the necessary flux in the core.
+
 ##Magnetizing Reactance: \\( X_{m} \\)
+
 ![](http://www.electrical4u.com/images/transformer-core-winding.gif)
 
 ---
 # Core Losses
 
 - ## Hysteresis Loss (\\(\propto\\) Frequency)
-![](http://info.ee.surrey.ac.uk/Workshop/advice/coils/loop_area.png)
 
+
+<img src="http://info.ee.surrey.ac.uk/Workshop/advice/coils/loop_area.png" alt="Drawing" style="width: 700px;"/>
 
 ---
 # Core Losses
@@ -125,19 +121,24 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 --
 ### Use Laminated Core
-<img src="http://www.electrical-forensics.com/Transformers/L05-04/TransIronCore-LG.jpg" alt="Drawing" style="width: 400px;"/>
+<img src="http://www.electrical-forensics.com/Transformers/L05-04/TransIronCore-LG.jpg" alt="Drawing" style="width: 700px;"/>
 ---
 ## How to minimize eddy current loss?
-### Use Laminated Core
+## Use Laminated Core
 
-<img src="http://s1.hubimg.com/u/4197080_f496.jpg" alt="Drawing" style="width: 400px;"/>
+<img src="http://s1.hubimg.com/u/4197080_f496.jpg" alt="Drawing" style="width: 600px;"/>
+---
+#Excitation Current
+
+## $$I_e(t) = I_c(t) + I_m(t)$$
+### Excitation Current = Core Loss Component + Magnetizing Component
 ---
 # Losses and Cooling
-<img src="http://www.amesimpex.com/images/oil_cooled_002.jpg" alt="Drawing" style="width: 400px;"/>
+<img src="http://www.amesimpex.com/images/oil_cooled_002.jpg" alt="Drawing" style="width: 600px;"/>
 
 ---
 # Losses and Cooling: Small Transformers
-<img src="http://www.globalspec.com/ImageRepository/LearnMore/201210/EI-Transformer-for-Electric-Tool484de69d1e254262a778c635653aa340.png" alt="Drawing" style="width: 400px;"/>
+<img src="http://www.globalspec.com/ImageRepository/LearnMore/201210/EI-Transformer-for-Electric-Tool484de69d1e254262a778c635653aa340.png" alt="Drawing" style="width: 500px;"/>
 
 ---
 # Losses and Cooling: Large Transformers
@@ -150,12 +151,13 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Trafostation_Alter_Hellweg_IMGP4722.jpg/1280px-Trafostation_Alter_Hellweg_IMGP4722.jpg" alt="Drawing" style="width: 750px;"/>
 
 ---
-![](http://blog.sciencescore.com/wp-content/uploads/elephant-ears.jpg)
+<img src="http://blog.sciencescore.com/media/elephant-ears1.jpg" alt="Drawing" style="width: 850px;"/>
+
 
 ---
 #Square-Cube Law
 ## (Heat \\(\propto\\) Mass, Heat Dissipation \\(\propto\\) Surface Area)
-<img src="http://blog.sciencescore.com/wp-content/uploads/elephant-ears.jpg" alt="Drawing" style="width: 500px;"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Angry_elephant_ears.jpg/1280px-Angry_elephant_ears.jpg" alt="Drawing" style="width: 500px;"/>
 
 [Square-Cube Law](http://www.youtube.com/watch?v=qoM17ikreio)
 ---
