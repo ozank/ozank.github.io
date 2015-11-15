@@ -12,6 +12,15 @@ Burda önereceğim programları öğrenmek biraz vakit alacaktır. Öğrenirken 
 
 Kolay gelsin.
 
+## EE361 Ödevlerinde MATLAB kullanımı
+
+S: EE361 ödevlerini yapmakla geçirdiğim vaktin, iki katını ödevi bilgisayar geçirmeye ve Matlab öğrenmeye harcıyorum. Kağıtta yapsak olmaz mı?
+
+C: Evet, Matlab öğrenmenin zaten yoğun olan programınıza ekstra bir yük getirdiğinin farkındayız. Ancak, mezun olduğunuzda CV'nizde bilgisayar bilgisi kısmına MS Office ve Windows 7 dışında yazabileceğiniz birkaç yazılım olmasının da sizler için faydalı olacağını düşünüyoruz. İlk ödevlerde biraz alışma sorunu yaşasanız da, sonraki ödevlerde Matlab zor kavramları anlamanızda yardımcı bir araç, ve mezun olduğunuzda iş hayatınızda büyük ihtimal kullanacağınız bir yazılım olacak.
+
+Bu arada, yaygın olarak kullanılsa da özgür yazılım olmadığı için pek Matlab kullanmamaya çalışıyorum. Matlab yerine kullanabileceğiniz yazılımlardan birkaçı: [Octave](https://www.gnu.org/software/octave/), [Python](https://www.python.org/), [R](https://www.r-project.org/), [Modelica](https://www.modelica.org/).
+
+
 ## Versiyon Kontrolü Kullanın
 Projelerde geliştireceğiniz kod veya dokümanları paylaşmak, verileriniz yedeklemek için çok faydalı bir sistem. Alışması biraz zaman alsa da öğrendikten sonra, versiyon kontrolü olmadan bunca zaman nasıl çalışmışım diyeceksiniz.
 
