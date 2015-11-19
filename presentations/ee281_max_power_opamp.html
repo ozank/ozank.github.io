@@ -22,8 +22,8 @@
 class: center, middle
 
 # EE-281
+# Thevenin-Norton Theorems
 # Maximum Power Transfer
-# OPAMPs
 
 ## Ozan Keysan
 
@@ -36,8 +36,64 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ### Any linear two-terminal circuit can be replaced by a voltage source and a series resistance.
 
-![](./images/thevenin_equivalent.png)
+<img src="./images/thevenin_equivalent.png" alt="Drawing" style="width: 400px;"/>
+---
+# Thevenin's Theorem
 
+### Procedure for finding thevenin equivalent
+
+## 1- Find open circuit voltage (\\(V\_{th}=V\_{oc}\\))
+
+<img src="./images/thevenin_open.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Thevenin's Theorem
+
+### Procedure for finding thevenin equivalent
+
+## 1- Turn off independen sources and find equivalent circuit (\\(R\_{th}=R\_{eq}\\))
+
+<img src="./images/thevenin_R.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Example
+
+### Find the thevenin equivalent of the circuit between a and b.
+
+<img src="./images/thevenin_ex.png" alt="Drawing" style="width: 700px;"/>
+---
+# Example-2
+
+### Find the thevenin equivalent of the circuit between a and b.
+
+<img src="./images/thevenin_ex2.png" alt="Drawing" style="width: 700px;"/>
+---
+# Norton's Theorem
+
+### Any linear two-terminal circuit can be replaced by a current source and a parallel resistance.
+
+<img src="./images/norton_equivalent.png" alt="Drawing" style="width: 400px;"/>
+---
+# Norton's Equivalent
+
+#### Norton equivalent is the source transformed version of thevenin equivalent.
+
+## \\(I\_N = \dfrac{V\_{TH}}{R\_{TH}}\\)
+
+## \\(R\_N = R\_{TH}\\)
+--
+
+### Short circuit current gives the norton current
+
+## \\(I\_{SC} = I\_{N}\\)
+---
+# Example
+
+### Find the norton equivalent of the circuit between a and b.
+
+<img src="./images/norton_ex.png" alt="Drawing" style="width: 700px;"/>
+---
+# More exercise on Monday!
 
 ---
 # Why do they specifiy resistance of a speaker?
