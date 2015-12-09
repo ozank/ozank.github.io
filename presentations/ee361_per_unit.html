@@ -40,7 +40,7 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ## Parameters you need:
 ##\\(S\_{base} \; \mathrm{and} \; V\_{base}\\)
 
-### which are the rated power(VA) and rated voltage
+### which are the rated power(VA) and the rated voltage
 
 ---
 #Per-Unit Calculations
@@ -76,15 +76,20 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 --
 ![](http://www.geni.org/globalenergy/library/national_energy_grid/turkey/graphics/teias_map.gif)
+
 ---
-# Example
+# Why do we use Per-phase?
 
-## Consider a 660:220 V, 7260 VA single-phase transformer. If,
-### \\(Z\_{eq}= 0.36 + j 2.4~ \Omega\\) referred to primary. Calculate:
+## Turkey Grid Control Room (Gölbaşı)
 
-- ### Equivalent impedance referred to secondary
-- ### Equivalent impedance in p.u on both sides
-- ### Power in p.u if a \\(20~\Omega\\) load is connected to secondary.
+<img src="http://www.teias.gov.tr/Images/10.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+# Why do we use Per-phase?
+
+## USA Grid Control Room
+
+<img src="http://tacticaldefensemedia.com/wp-content/uploads/2014/10/Cyber-1024x667.jpg" alt="Drawing" style="width: 700px;"/>
 
 ---
 # Why do we use Per-phase?
@@ -110,13 +115,26 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 - ## System reduces just a series of impedances
 
 ---
+# Example
+
+## Consider a 660:220 V, 7260 VA single-phase transformer. If,
+### \\(Z\_{eq}= 0.36 + j 2.4~ \Omega\\) referred to primary. Calculate:
+
+- ### Equivalent impedance in p.u on the primary side
+--
+
+- ### Equivalent impedance in p.u and actual value on the secondary side
+--
+
+- ### Power in p.u if a \\(20~\Omega\\) load is connected to secondary (assume secondacry terminal voltage is 220 V).
+---
 # Procedure for Single Phase
 
 --
 - ## Pick \\(V\_{base}\\) and \\(S\_{base}\\)
 
 --
-- ## Use Phase Voltages (line-to-neutral)
+- ## Use **Phase Voltages** (line-to-neutral)
 
 --
 - ## Calculate \\(Z\_{base}\\) and \\(I\_{base}\\)
@@ -131,13 +149,13 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 - ## Pick \\(S\_{base}\\) for entire system (3-phase power)
 
 --
-- ## Use Line-to-Line Voltage for \\(V\_{base}\\)
+- ## Use **Line-to-Line Voltage** for \\(V\_{base}\\)
 
 --
-- ## Calculate \\(Z\_{base}\\):
+- ## Calculate \\(Z\_{base}\\)
 
 --
-- ## Calculate \\(I\_{base}\\):
+- ## Calculate \\(I\_{base}\\)
 
 --
 - ## Convert actual values to pu.
@@ -145,14 +163,31 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ---
 #3-Phase Per-Unit Calculations
 
-##\\(S\_{base}=\sqrt 3 V\_{base} I\_{base}\\)
+##\\(S\_{base}=\sqrt 3 V\_{base(l-l)} I\_{base}\\)
 
 --
-##\\(I\_{base}=\frac{S\_{base}}{\sqrt 3 V\_{base}}\\)
+##\\(I\_{base}=\frac{S\_{base}}{\sqrt 3 V\_{base(l-l)}}\\)
+--
 
-##\\(Z\_{base}=\frac{V\_{base}^2}{S\_{base}}=\frac{V\_{base}}{\sqrt 3 I\_{base}}\\)
+##\\(Z\_{base}=\frac{V\_{base(l-l)}^2}{S\_{base}}=\frac{V\_{base(l-l)}}{\sqrt 3 I\_{base}}\\)
+
+---
+## Comparison of 3-Ph & 1-Ph Base Values
 
 
+### Power 
+
+### \\((P\_{base}, Q\_{base}, S\_{base})\_{3-phase} = 3 VA\_{(base/1-phase)}\\)
+--
+
+### Voltage
+
+### \\(V\_{base(line-to-line)} = \sqrt{3} V\_{base-1phase}\\)
+--
+
+### Current
+
+### \\(I\_{base(per-phase-\Delta)} =\dfrac{I\_{base(per-phase-\Delta)}}{\sqrt{3}}\\)
 
 ---
 ## You can download this presentation from: [keysan.me/ee361](http://keysan.me/ee361)
