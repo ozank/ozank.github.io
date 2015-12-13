@@ -115,8 +115,11 @@ implementation of linear machines to wave energy converters.
 
 - Associate Editor, [IET Renewable Power Generation](http://digital-library.theiet.org/content/journals/iet-rpg)
 
-|Reviews for   | IEEE Transactions of Industrial Electronics|
-|              | IEEE Transactions of Industrial Informatics|
+- Rapporteur, EU [Cost Action](http://www.cost.eu/)
+
+|Reviews for   | IEEE Transactions on Industrial Electronics|
+|              | IEEE Transactions on Industrial Informatics|
+|              | IEEE Transactions on Applied Superconductivity|
 |              | IET Renewable Power Generation Journal|
 |              | IEEE International Conference on Electrical Machines and Drives|
 |              | IET Power Electronics, Machines and Drives Conference|
