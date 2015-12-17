@@ -73,14 +73,93 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ---
 # What would happen in this circuit?
 
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/single_phase_reluctance_motor.png" alt="Drawing" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/single_phase_reluctance_motor.png" alt="Drawing" style="width: 700px;"/>
+---
+# Can you guess the torque expression?
+
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/single_phase_reluctance_motor.png" alt="Drawing" style="width: 700px;"/>
+---
+# Rotational Sytems:
+--
+
+## Remember in linear systems:
+
+### \\(f = - \dfrac{\partial W\_{mag}(\Phi, x)}{\partial x} |\_{\Phi = constant}\\) 
+
+### or  alternatively use Co-energy:
+
+### \\(f = \dfrac{\partial W'\_{mag}(\mathcal{F}, x)}{\partial x} |\_{\mathcal{F} = constant}\\) 
 
 ---
-# Reluctance Motor Example
-[Graph](https://docs.google.com/spreadsheets/d/1MDdJiaDq6uIzYzGMhTugNqbFBcJJClO-m_LqdGe1ZQ4/edit?usp=sharing)
+# Rotational Sytems:
 
-[How reluctance machine work](http://www.youtube.com/watch?v=_OWPU56-tDY),
-[With PM Rotor](http://www.youtube.com/watch?v=ChJXW7VDMhw)
+
+## Similarly in linear systems:
+
+### \\(T = - \dfrac{\partial W\_{mag}(\Phi, \theta)}{\partial \theta} |\_{\Phi = constant}\\) 
+
+### or  alternatively 
+
+### \\(f = \dfrac{\partial W'\_{mag}(\mathcal{F}, \theta)}{\partial \theta} |\_{\mathcal{F} = constant}\\) 
+
+#### [More information](http://engineering.nyu.edu/mechatronics/Control_Lab/Criag/Craig_RPI/SenActinMecha/EM_Motion_Fundamentals_2.pdf)
+---
+# How can we achieve a constant rotation?
+--
+
+## Single Phase Reluctance Motor
+
+<img src="http://www.nxp.com/files/graphic/other/MOTORSRIMG.gif" alt="Drawing" style="width: 400px;"/>
+
+---
+# Single Phase Reluctance Motor
+
+<img src="http://www.amci.com/tutorials/images/stepper-motor-animated-1.1.gif" alt="Drawing" style="width: 700px;"/>
+
+### [Magnetic Flux](https://www.youtube.com/watch?v=hDJnLt7cBTY),  [with PM rotor](https://www.youtube.com/watch?v=ChJXW7VDMhw)
+
+---
+# Reluctance Motors
+
+<img src="http://electrical-engineering-portal.com/wp-content/uploads/switched-reluctance-motor-characteristics-work-principles-t.jpg" alt="Drawing" style="width: 600px;"/>
+
+[More info](http://electrical-engineering-portal.com/characteristics-and-work-principles-of-switched-reluctance-sr-motor)
+---
+# Reluctance Motors
+
+<img src="http://www.abb-conversations.com/wp-content/uploads/2012/11/ABB-IE4-Synchronous-Reluctance-Motor-SynRM.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+# Who is this guy?
+
+<img src="http://i0.wp.com/www.johnwmorehead.com/wp-content/uploads/2012/11/dysonmotor.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+# James Dyson
+
+<img src="http://i.telegraph.co.uk/multimedia/archive/02331/Dyson070912_2331798b.jpg" alt="Drawing" style="width: 700px;"/>
+
+### [Digital Motor](https://www.youtube.com/watch?v=6kcGltYWz3k), [Operating Principle](https://www.youtube.com/watch?v=yajwmhe96pg), [Manufacturing](https://www.youtube.com/watch?v=L5IROOrHg5w)
+
+---
+# Dyson uses Reluctance Motors
+
+<img src="https://larryfire.files.wordpress.com/2010/04/dyson-digital-motor-exploded-view1.jpg" alt="Drawing" style="width: 800px;"/>
+
+### [Digital Motor](https://www.youtube.com/watch?v=6kcGltYWz3k), [Operating Principle](https://www.youtube.com/watch?v=yajwmhe96pg), [Manufacturing](https://www.youtube.com/watch?v=L5IROOrHg5w)
+
+---
+# Reluctance Motor Example:
+
+## Calculate the torque waveform
+--
+
+###  with constant current.
+
+### with sinusoidal current
+
+
+[Torque Graphs](https://docs.google.com/spreadsheets/d/1MDdJiaDq6uIzYzGMhTugNqbFBcJJClO-m_LqdGe1ZQ4/edit?usp=sharing)
 
 ---
 # Summary
@@ -89,9 +168,11 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ## Magnetic Circuit Tries
 --
 
-- ## To maximize the inductance
-- ## To minimize the reluctance (\\(L=N^2/R\\))
+- ### To maximize the inductance, to minimize the reluctance (\\(L=N^2/R\\))
 
+- ### To decrease the magnetic energy (increase co-energy)
+
+## Rotational systems similar to linear, but take derivative of magnetic energy in terms of \\(\theta\\) 
 
 ---
 ## You can download this presentation from: [keysan.me/ee361](http://keysan.me/ee361)
