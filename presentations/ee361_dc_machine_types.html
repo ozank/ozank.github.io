@@ -80,26 +80,43 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ## What about a generator?
 ---
 # Efficiency
-### \\(\eta = \dfrac{P\_{out}}{P\_{in}}\\)
+## \\(\eta = \dfrac{P\_{out}}{P\_{in}}\\)
 --
 
-### Motor Efficiency
-### \\(\eta = \dfrac{P\_{mech}}{P\_{elec}}\\)
+## Efficiency of a DC Motor
+## \\(\eta = \dfrac{P\_{mech}}{P\_{elec}}\\)
 --
 \\(=\dfrac{T\_m \omega\_m}{V\_t I\_a}=\dfrac{T\_m \omega\_m}{T\_m \omega\_m + Losses} \\)
 ---
 # Efficiency
-### \\(\eta = \dfrac{P\_{out}}{P\_{in}}\\)
+## \\(\eta = \dfrac{P\_{out}}{P\_{in}}\\)
 
-### Generator Efficiency
+## Efficiency of a DC Generator
 ### \\(\eta = \dfrac{P\_{elec}}{P\_{mech}}\\)
 --
 \\(=\dfrac{V\_t I\_a}{T\_m \omega\_m}=\dfrac{V\_t I\_a}{V\_t I\_a + Losses} \\)
+
+---
+# DC Machine Types
+## Different ways to connect field winding
+### - Separately Excited
+### - Shunt Excited
+### - Series Excited
+### - Compound Machines
+---
+# Operating as a Generator
+---
+# Separately Excited DC Generator
+<img src="http://cnx.org/resources/1a0fc7a424e633c62ac4fb3e20d75ceb/graphics1.png" alt="Drawing" style="width: 674px;"/>
+
+### - Flexible Control (Field Current can be varied independently)
+--
 ---
 #Magnetization Characteristics
 ## What is the relation between \\(I_f\\) and \\(E_a\\)?
 --
 ![](http://www.electrical4u.com/wp-content/uploads/2013/10/magnetic-curve-of-dc-generator-25.10.13.png)
+
 ---
 #Magnetization Characteristics
 ### In the Linear Region
@@ -117,12 +134,11 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 #Armature Reaction
 ### What happens to the magnetic field if a current applied?
 
-<img src="http://janison.cyriljackson.wa.edu.au/janison/Science/Physics3A3B/Physics3A/PHY3A_WestOne/content/005_electromagnetic_induction/images/pic068.jpg" alt="Drawing" style="width: 600px;"/>
 --
 
-### Increases at the upper portion, decreases at the lowe portion
+## Increases at the upper portion, decreases at the lower portion
 
-### Flux denstiy distribution is distorted.
+## Flux density distribution is distorted.
 
 ---
 #Armature Reaction
@@ -137,7 +153,7 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 <img src="http://2.bp.blogspot.com/-PMuoT2hVbUs/Ux_zN18g4jI/AAAAAAAAAmM/Tkde5aoHOLk/s1600/armature+reaction.png" alt="Drawing" style="width: 450px;"/>
 ---
 #Armature Reaction
-### Can be neglected at small \\(I_a\\)
+### Armature reaction can be neglected at small \\(I_a\\)
 
 ###  \\(\phi\_f = \dfrac{MMF}{\mathrm{R}\_{eq}}= \dfrac{N\_fI\_f}{\mathrm{R}\_{eq}}\\)
 --
@@ -146,34 +162,30 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ### \\(\phi\_f = \dfrac{N\_fI\_f - N\_a I\_a}{\mathrm{R}\_{eq}}\\)
 ### Thus, \\(E_a\\) reduced due to increasing \\(I_a\\)
----
-# DC Machine Types
-## Different ways to connect field winding
-### - Seperately Excited
-### - Shunt Excited
-### - Series Excited
-### - Compound Machines
----
-# Seperately Excited DC Generator
-<img src="http://cnx.org/resources/1a0fc7a424e633c62ac4fb3e20d75ceb/graphics1.png" alt="Drawing" style="width: 674px;"/>
 
-### - Flexible Control (Field Current can be varied independently)
---
 ### - Vt-Ia Characteristics?
 ---
-# Seperately Excited DC Generator
+# Separately Excited DC Generator
 ### - Vt-Ia Characteristics
-![](http://nuclearpowertraining.tpub.com/h1011v2/img/h1011v2_92_1.jpg)
+
+<img src="http://nuclearpowertraining.tpub.com/h1011v2/img/h1011v2_92_1.jpg" alt="Drawing" style="width: 600px;"/>
 
 ---
 # Shunt DC Generator
-## Field is connected in parallel to Armature
+--
+
+## Field is connected in parallel to the Armature
+--
+
 <img src="http://electriciantraining.tpub.com/14177/img/14177_29_1.jpg" alt="Drawing" style="width: 400px;"/>
+--
 
 ## \\(V_f=V_t\\) ==> \\(I_f = V_t/R_f\\)
 ---
 # Shunt DC Generator
-## Self-Excitation
+## Can we start generating voltage without any external source(i.e. self-excitation)?
+--
+
 <img src="http://4.bp.blogspot.com/-2LzEQAU5wjk/TePx5d9UEaI/AAAAAAAAABI/ESfExlaYVFU/s320/10.JPG" alt="Drawing" style="width: 500px;"/>
 ---
 # Shunt DC Generator
@@ -187,14 +199,22 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 <img src="http://www.scrigroup.com/files/limba/engleza/electronics/63_poze/image046.jpg" alt="Drawing" style="width: 500px;"/>
 ---
 # Series DC Generator
-## Field winding in series with armature
-<img src="http://electriciantraining.tpub.com/14177/img/14177_44_1.jpg" alt="Drawing" style="width: 400px;"/>
+--
 
-### \\(I_f = I_a\\)
+## Field winding in series with armature
+--
+
+<img src="http://electriciantraining.tpub.com/14177/img/14177_44_1.jpg" alt="Drawing" style="width: 350px;"/>
+
+## Field current = Armature Current \\(I_f = I_a\\)
+--
+
 ### Not widely used as a generator as the voltage regulation is not good.
 ---
 # Compound DC Generators
-## Has both series and shunt winding
+--
+
+## Shunt and Series windings combined together
 
 <img src="http://www.learn-about-electronics.com/images/Compound-wound-generator.gif" alt="Drawing" style="width: 400px;"/>
 
@@ -202,9 +222,19 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ---
 # Compound DC Generators
 
+
 <img src="http://www.industrial-electronics.com/images/elec3-4-3.jpg" alt="Drawing" style="width: 600px;"/>
 
 ### Series winding can be additive or subtractive
+---
+# Summary
+
+### Different DC Machine Types with different characteristics
+
+### - Separately Excited
+### - Shunt Excited
+### - Series Excited
+### - Compound Machines
 
 ---
 ## You can download this presentation from: [keysan.me/ee361](http://keysan.me/ee361)
