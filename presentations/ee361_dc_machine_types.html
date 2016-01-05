@@ -31,10 +31,13 @@ class: center, middle
 Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ---
-# Induced Voltage in Armature
+# Review: 
+--
+Induced Voltage in Armature
 
 --
 ## \\(E\_a = K\_a \omega\_m \Phi\_{pp}\\)
+--
 
 - ### \\(E\_a\\): Induced armature voltage (DC-average)
 - ### \\(K\_a\\): Armature Constant
@@ -84,7 +87,7 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 --
 
 ## Efficiency of a DC Motor
-## \\(\eta = \dfrac{P\_{mech}}{P\_{elec}}\\)
+### \\(\eta = \dfrac{P\_{mech}}{P\_{elec}}\\)
 --
 \\(=\dfrac{T\_m \omega\_m}{V\_t I\_a}=\dfrac{T\_m \omega\_m}{T\_m \omega\_m + Losses} \\)
 ---
@@ -98,21 +101,30 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ---
 # DC Machine Types
-## Different ways to connect field winding
-### - Separately Excited
-### - Shunt Excited
-### - Series Excited
-### - Compound Machines
+--
+
+## Everthing is same just different ways of connecting the field winding!
+--
+<img src="images/dc_machine_types.jpg" alt="Drawing" style="width: 800px;"/>
+
 ---
-# Operating as a Generator
+<img src="images/dc_machine_types.jpg" alt="Drawing" style="width: 800px;"/>
+
+## - Series Excited
+## - Shunt Excited
+## - Compound Machines
+## - Separately Excited
+
 ---
-# Separately Excited DC Generator
+# Separately Excited DC Machines
+
 <img src="http://cnx.org/resources/1a0fc7a424e633c62ac4fb3e20d75ceb/graphics1.png" alt="Drawing" style="width: 674px;"/>
 
-### - Flexible Control (Field Current can be varied independently)
---
+### Field is excited with a separate source
+### Flexible Control (Field Current controls \\(\phi\_{pp}\\))
+
 ---
-#Magnetization Characteristics
+# Magnetization Characteristics
 ## What is the relation between \\(I_f\\) and \\(E_a\\)?
 --
 ![](http://www.electrical4u.com/wp-content/uploads/2013/10/magnetic-curve-of-dc-generator-25.10.13.png)
@@ -125,38 +137,68 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 --
 
 ### Induced Voltage
-## \\(E_a = K_a K_f \omega_m I_f\\)
+## \\(E_a = K_a \omega_m \phi = K_a \omega_m K_f  I_f\\)
 --
 
 ### Torque
 ## \\(T = K_a K_f I_a I_f\\)
 ---
-#Armature Reaction
-### What happens to the magnetic field if a current applied?
-
+## We have a motor running at constant speed under constant load.
 --
+
+## What happens if we suddenly increase the load?
+---
+#Speed Regulation
+--
+
+## Speed Regulation \\(=\dfrac{\omega\_0 - \omega\_{rated}}{\omega\_{rated}}\\)
+
+- ### \\(\omega_0\\) : Rotational Speed at no-load
+- ### \\(\omega\_{rated}\\) : Rotational Speed at full load
+
+####(Note the similarity with the voltage regulation in transformers)
+---
+# Now let's operate as a generator
+## Constant mechanical power, constant speed.
+--
+
+## What happens if we increase the electrical load (armature current)?
+---
+# Separately Excited DC Generator
+## Vt-Ia Characteristics
+
+<img src="http://nuclearpowertraining.tpub.com/h1011v2/img/h1011v2_92_1.jpg" alt="Drawing" style="width: 600px;"/>
+---
+# Voltage Regulation
+
+## Terminal voltage difference from no-load to full-load
+
+#\\(=\dfrac{V\_{t(no-load)} - V\_{t(full-load)} }{V\_{t(full-load)}}\\)
+
+---
+#Armature Reaction
+### What happens to the airgap magnetic field if a current applied?
 
 ## Increases at the upper portion, decreases at the lower portion
 
 ## Flux density distribution is distorted.
 
 ---
-#Armature Reaction
+## Armature Reaction
 ## Becomes significant with increasing \\(I_a\\)
 
 <img src="http://commonelectricaldoubts.files.wordpress.com/2014/05/brush.png" alt="Drawing" style="width: 600px;"/>
----
+
 
 #Armature Reaction
 ## Becomes significant with increasing \\(I_a\\)
 
 <img src="http://2.bp.blogspot.com/-PMuoT2hVbUs/Ux_zN18g4jI/AAAAAAAAAmM/Tkde5aoHOLk/s1600/armature+reaction.png" alt="Drawing" style="width: 450px;"/>
----
+
 #Armature Reaction
 ### Armature reaction can be neglected at small \\(I_a\\)
 
 ###  \\(\phi\_f = \dfrac{MMF}{\mathrm{R}\_{eq}}= \dfrac{N\_fI\_f}{\mathrm{R}\_{eq}}\\)
---
 
 ### With armature reaction
 
@@ -164,23 +206,28 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ### Thus, \\(E_a\\) reduced due to increasing \\(I_a\\)
 
 ### - Vt-Ia Characteristics?
----
-# Separately Excited DC Generator
-### - Vt-Ia Characteristics
-
-<img src="http://nuclearpowertraining.tpub.com/h1011v2/img/h1011v2_92_1.jpg" alt="Drawing" style="width: 600px;"/>
 
 ---
-# Shunt DC Generator
+# Shunt Wound DC Machine
+
+--
+<img src="http://electriciantraining.tpub.com/14177/img/14177_29_1.jpg" alt="Drawing" style="width: 400px;"/>
+
 --
 
-## Field is connected in parallel to the Armature
+## Field winding is connected in parallel to the Armature
 --
+
+## \\(V_f=V_t\\) 
+--
+==> \\(I_f = V_t/R_f\\)
+---
+# Shunt Motor
 
 <img src="http://electriciantraining.tpub.com/14177/img/14177_29_1.jpg" alt="Drawing" style="width: 400px;"/>
---
 
-## \\(V_f=V_t\\) ==> \\(I_f = V_t/R_f\\)
+## Shunt motor has good speed regulation
+###(5-15% difference from no load to full load)
 ---
 # Shunt DC Generator
 ## Can we start generating voltage without any external source(i.e. self-excitation)?
@@ -198,39 +245,72 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 <img src="http://www.scrigroup.com/files/limba/engleza/electronics/63_poze/image046.jpg" alt="Drawing" style="width: 500px;"/>
 ---
-# Series DC Generator
---
+# Series Wound DC Machine
+
+<img src="http://electriciantraining.tpub.com/14177/img/14177_44_1.jpg" alt="Drawing" style="width: 450px;"/>
 
 ## Field winding in series with armature
---
+
+## Field current = Armature Current  ==> \\(I_f = I_a\\)
+
+---
+# Series Wound DC Motor
 
 <img src="http://electriciantraining.tpub.com/14177/img/14177_44_1.jpg" alt="Drawing" style="width: 350px;"/>
 
-## Field current = Armature Current \\(I_f = I_a\\)
+### \\(V\_t = E_a + (R\_a + R\_f) I_a\\)
 --
+
+### \\(E_a = K_a \omega_m \phi \\) ==> \\(\phi = K_s I_a\\)
+--
+
+### \\(T_e = K_a \phi I_a = K_a K_s I_a^2\\)
+
+---
+# Series DC Motor
+
+<img src="http://www.eblogbd.com/wp-content/uploads/2013/05/dc-series-motor-characteristics.bmp.jpg?b7cee5" alt="Drawing" style="width: 800px;"/>
+
+---
+# Series DC Motor
+## Torque is proportional to \\(I_a^2\\)
+## High starting torque
+## At no load speed increases dangerously
+
+---
+# Series DC Generator
+
+<img src="http://electriciantraining.tpub.com/14177/img/14177_44_1.jpg" alt="Drawing" style="width: 450px;"/>
+
 
 ### Not widely used as a generator as the voltage regulation is not good.
+
 ---
-# Compound DC Generators
---
+# Compound DC Machines
 
 ## Shunt and Series windings combined together
+--
 
 <img src="http://www.learn-about-electronics.com/images/Compound-wound-generator.gif" alt="Drawing" style="width: 400px;"/>
 
-### Series winding can be additive or subtractive
+### Series winding can be additive(more common) or subtractive
 ---
 # Compound DC Generators
 
 
 <img src="http://www.industrial-electronics.com/images/elec3-4-3.jpg" alt="Drawing" style="width: 600px;"/>
 
-### Series winding can be additive or subtractive
+### Commonly adjusted to be flat compounded, thus to achieve zero voltage regulation.
+
 ---
 # Summary
 
-### Different DC Machine Types with different characteristics
+### All DC machines have same equations;
+--
+but different field winding connections give different characteristics.
+--
 
+## DC Machine Types
 ### - Separately Excited
 ### - Shunt Excited
 ### - Series Excited
