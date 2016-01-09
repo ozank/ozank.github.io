@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE361-Electromechanical Energy Conversion</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-361
+# DC Machine Problems
+
+## Ozan Keysan
+
+[ozan.keysan.me](http://ozan.keysan.me)
+
+Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
+
+---
+# DC-Machine Equations
+
+- ## Induced Voltage Proportional to Speed
+## \\(E\_a = K\_a \omega\_m \Phi\_{pp}\\)
+--
+
+- ## Torque Proportional to Armature Current
+## \\(T =K\_a  \Phi\_{pp} I\_a \\)
+---
+# DC Machine Types
+## Different ways to connect field winding
+### - Seperately Excited
+### - Shunt Excited
+### - Series Excited
+### - Compound Machines
+---
+# Ex-1:
+## A 10 kW DC Shunt motor connected to 200 V supply and driving a load with the following characteristics.
+
+--
+## \\(P_l = k n^2 = 3.9\;10^{-3} n^2\\) (n: speed in rpm)
+--
+
+## Friction losses of the motor are constant and equal to 250 W.
+--
+
+## Field winding is \\(40\;  \Omega\\), 
+
+---
+## a) Calculate the motor speed if the motor is supplying rated power from its shaft at steady state.
+---
+
+## b) Determine the armature current and armature resistance  of the motor at rated load.
+
+## Magnetization characteristics obtained at 1500 rpm are as follows:
+
+## <table>
+  <tr>
+    <th>Ea(V)&nbsp;</th>
+    <th>153.7&nbsp;</th>
+    <th>161.8&nbsp;</th>
+    <th>164.8&nbsp;</th>
+    <th>170.2&nbsp;</th>
+    <th>175&nbsp;</th>
+    <th>178.3&nbsp;</th>
+  </tr>
+  <tr>
+    <td>Ia(A)</td>
+    <td>2</td>
+    <td>3</td>
+    <td>3.3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+  </tr>
+</table>
+---
+
+## c) Calculate the total current drawn from the terminals and motor efficiency
+
+<!-- 
+d) If the shaft speed is measured as 1700 rpm, when the armature current is 54.8 A;
+
+
+## i) Calculate the generated voltage (neglect armature reaction),
+
+
+## ii)Calculate the generated voltage with armature reaction (refer to magnetization curve),
+
+
+## iii) Calculate the extra field current supplied to compensate the armature reactance
+-->
+
+---
+# Ex-2:
+
+## Consider two identical DC machies having an  armature resistance \\(R_a = 0.2 \Omega \\) and a field winding resistance of \\(R_f = 120 \Omega \\). 
+--
+
+## One of the machines is used as a shunt motor to drive the other as a separately excited generator.
+---
+
+## The shunt motor draws 6 kW from a constant voltage source \\(V\_t = 120 V\\). The excitation currents of both machines are equal and the rotational loss is constant \\(P\_{rot}=200 W\\) per machine.
+
+--
+
+## a) Draw the complete circuit diagram.
+--
+
+## b) Calculate the induced voltage and efficiency of the motor.
+---
+
+## c) Assuming the induced voltage of the generator is 110.2 V,  Find the armature current,  output power, and efficieny of the generator.
+--
+
+## d) Complete the power flow diagram of the system, and calculate the overall efficiency.
+---
+## You can download this presentation from: [keysan.me/ee361](http://keysan.me/ee361)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
