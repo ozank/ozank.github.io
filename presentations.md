@@ -6,6 +6,10 @@ permalink: /presentations/index.html
 
 ## Recent Presentations
 
+### 2016
+
+* Disiplinlerarası Tasarım Stüdyosu, [Design from an engineering perspective](http://ozan.keysan.me/presentations/design_from_engineering.html)
+
 ### 2015
 
 * ODTÜ Havacılık ve Uzay Müh,Wind Energy and Turbine Technology, [Wind Turbine Power Take-off Systems](https://docs.google.com/presentation/d/1hAog4lWxXLFdPDYfOLiywXa-U9KJ50Lm0AYwQ_PXh_M/edit?usp=sharing)
