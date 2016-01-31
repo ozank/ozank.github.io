@@ -8,7 +8,7 @@ permalink: /presentations/index.html
 
 ### 2016
 
-* Disiplinlerarası Tasarım Stüdyosu, [Design from an engineering perspective](http://ozan.keysan.me/presentations/design_from_engineering.html)
+* Disiplinlerarası Tasarım Stüdyosu, [Design from an engineering perspective](http://keysan.me/presentations/design_from_engineering.html)
 
 ### 2015
 
@@ -17,7 +17,7 @@ permalink: /presentations/index.html
 * Aselsan, [Rüzgar Türbinleri Jeneratör Sistemleri](https://docs.google.com/presentation/d/1GuMfGU77NcYJu3rGbK5eWvilPFw5URcZUiLjTVJkE-Y/edit?usp=sharing)
 * UK MagSoc Event, Edinburgh, Alasdair McDonald [How can electrical machine and drivetrain design influence Offshore Wind Cost of Energy?](https://docs.google.com/presentation/d/1hHpeSlyrqR6OqKgF4uOt2bNV5zqS3j4IMCx7Huad4e0/edit?usp=sharing)
 * UK MagSoc Event, Edinburgh, [Superconducting Technology for Large Offshore Wind Turbines](https://docs.google.com/presentation/d/1uYJwFvBlhV6UWXFh-XtOV2KOcER2-t5Sj5dnYJbyHXU/edit?usp=sharing)
-* AGEP, ODTÜ Kuzey Kıbrıs Sunumu [Milli Sondaj Kulesi Sunumu](http://ozan.keysan.me/presentations/kamag.html)
+* AGEP, ODTÜ Kuzey Kıbrıs Sunumu [Milli Sondaj Kulesi Sunumu](http://keysan.me/presentations/kamag.html)
 * ODTÜ Elektrik Müh, [Elektrik Makineleri ve Güç Elektroniği Opsiyon Tanıtımı](https://docs.google.com/presentation/d/128lohMTBVDAOZl9q8SzXT4HCoFsondeH2lE10goHrto/edit?usp=sharing)
 * Ankara Universitesi-CESUR, [Superiletkenliğin eneji alanındaki uygulamaları](https://docs.google.com/presentation/d/1uHEdoHDHlFYh4CqQxNUEgbooXijWlml-_VL3hNSf3dQ/pub?start=false&loop=false&delayms=3000)
 
