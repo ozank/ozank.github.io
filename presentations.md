@@ -8,6 +8,7 @@ permalink: /presentations/index.html
 
 ### 2016
 
+* Tübitak-1000, Enerji Alanı, [Elektrik Enerjisi Sunumu](https://docs.google.com/presentation/d/1gw27TPaHgj9yFgZ8PzE3Js1YFSMgcSZIQE1Md_Vx5AU/edit?usp=sharing)
 * Disiplinlerarası Tasarım Stüdyosu, [Design from an engineering perspective](http://keysan.me/presentations/design_from_engineering.html)
 
 ### 2015
