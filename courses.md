@@ -3,6 +3,10 @@ layout: page
 title: Courses
 permalink: /courses/index.html
 ---
+## Spring 2016
+
+- [EE362](/ee362): Electromechanical Energy Conversion-II
+- [EE564](/ee564): Design of Electrical Machines
 
 ## Fall 2015
 
