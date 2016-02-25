@@ -29,7 +29,9 @@ The main idea of the project is to control a robot using  a smart glove. In the 
 ## 4- Basic Railgun/Coilgun Implementation
 
 A [coilgun](https://en.wikipedia.org/wiki/Coilgun) or Gauss gun is a type of projectile accelerator consisting of one or more coils used as electromagnets in the configuration of a linear motor that accelerate a ferromagnetic or conducting projectile to high velocity. You have two options in this project:
+
 a) Development of an experimental setup to demosntrate basics of a coil cun
+
 b) Finite-element modelling of a rail gun using [Comsol](https://www.comsol.com/)
 
 ## 5- Wireless Battery Charger
@@ -71,7 +73,7 @@ In this project, laboratory measurement equipments (such as torque meter, tachom
 
 # Free Projects
 
-The links below are the fascinating garage projects(not all related to Electrical Engineering) that I have collected over years, but unfortunately couldn't find any time to realize them. If you feel PASSIONATE about any of these projects, come and talk to me and I can assign it as a star project.
+The links below are the fascinating garage projects(not all related to Electrical Engineering) that I have collected over years, but unfortunately couldn't find any time to realize them. If you feel PASSIONATE about any of these projects, come and talk to me and I might assign it as a star project.
 
 
 - [Variable frequency drive for AC induction motor](http://blog.hardcore.lt/mic/archives/011040.html)
