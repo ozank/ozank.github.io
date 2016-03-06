@@ -5,9 +5,8 @@ title: Ozan Keysan
 
 **Courses for Spring 2015: <span class="meta">&#8226;</span> [EE362](/ee362) <span class="meta">&#8226;</span>  [EE564](/ee564)**
 
-<!---
-**[STAR Projects](/star)**
--->
+
+**[STAR Projects-2016](/star)**
 
 I'm an assistant professor in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr).
 For more information about me, you can download my [CV](/cv) or have look at my [Publications](/papers) and [Presentations](/presentations). 

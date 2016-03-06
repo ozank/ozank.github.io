@@ -10,7 +10,7 @@ For more information please visit the [official project webpage](http://star.eee
 
 Here are a few projects that I offer this year:
 
-If you are planning to choose one of these projects, please come and visit me to ask any questions and clarify your mind.
+If you are planning to choose one of these projects, please feel free to  come and visit me (I am mostly in C-114) to ask any questions. Then please fill the application form using this link: [http://goo.gl/forms/OCBGSDv0tL](http://goo.gl/forms/OCBGSDv0tL), so I can keep a track of applications.
 
 ## 1- 3D Printed Electric Motors
 
