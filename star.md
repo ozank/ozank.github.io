@@ -22,9 +22,13 @@ Flying time of [quad-copters](http://en.wikipedia.org/wiki/Quadcopter) is limite
 
 **What you will learn:** Design of a step-up, step-down power supply. How to handle the harmonics in a long transmission cable. Optimization algorithms to choose the best design parameters.
 
+**Requirements:** Basic power electronics and PCB manufacturing knowledge is required.
+
 ## 3- Robot Control with a Smart Glove
 
 The main idea of the project is to control a robot using  a smart glove. In the project both hardware and software will be implemented. Therefore, it is preferred to have some experience in PCB design (Eagle, Proteus etc), ambition on communication protocols(I2C,SPI) and data filtering. This project will be developed in collaboration with [BAMA](http://www.bamateknoloji.com)
+
+**Requirements:** Basic microcontroller and programming knowledge is required.
 
 ## 4- Basic Railgun/Coilgun Implementation
 
@@ -73,7 +77,7 @@ In this project, laboratory measurement equipments (such as torque meter, tachom
 
 # Free Projects
 
-The links below are the fascinating garage projects(not all related to Electrical Engineering) that I have collected over years, but unfortunately couldn't find any time to realize them. If you feel PASSIONATE about any of these projects, come and talk to me and I might assign it as a star project.
+In the links below, you can find fascinating garage projects(not all related to Electrical Engineering) that I have collected over years, but unfortunately couldn't find any time to realize them. If you feel PASSIONATE about any of these projects, come and talk to me and I might assign it as a star project.
 
 
 - [Variable frequency drive for AC induction motor](http://blog.hardcore.lt/mic/archives/011040.html)
