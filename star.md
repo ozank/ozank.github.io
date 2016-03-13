@@ -97,3 +97,4 @@ In the links below, you can find fascinating garage projects(not all related to 
 - [Bitscope](http://www.bitscope.com/blog/EK/?p=FJ09A)
 - [Open Desk](https://www.opendesk.cc/) 
 - [Secret Knock Detecting Door Lock](http://grathio.com/2009/11/secret_knock_detecting_door_lock/#more)
+- [Drawing Bot](http://makezine.com/2016/03/11/evil-mad-scientist-launches-axidraw/)
