@@ -8,6 +8,7 @@ permalink: /presentations/index.html
 
 ### 2016
 
+* ODTÜ, Araştırma Bilgi Günleri, [Newton Fund](https://docs.google.com/presentation/d/1uHEdoHDHlFYh4CqQxNUEgbooXijWlml-_VL3hNSf3dQ/edit?usp=sharing)
 * Tübitak-1000, Enerji Alanı, [Elektrik Enerjisi Sunumu](https://docs.google.com/presentation/d/1gw27TPaHgj9yFgZ8PzE3Js1YFSMgcSZIQE1Md_Vx5AU/edit?usp=sharing)
 * Disiplinlerarası Tasarım Stüdyosu, [Design from an engineering perspective](http://keysan.me/presentations/design_from_engineering.html)
 
@@ -20,7 +21,7 @@ permalink: /presentations/index.html
 * UK MagSoc Event, Edinburgh, [Superconducting Technology for Large Offshore Wind Turbines](https://docs.google.com/presentation/d/1uYJwFvBlhV6UWXFh-XtOV2KOcER2-t5Sj5dnYJbyHXU/edit?usp=sharing)
 * AGEP, ODTÜ Kuzey Kıbrıs Sunumu [Milli Sondaj Kulesi Sunumu](http://keysan.me/presentations/kamag.html)
 * ODTÜ Elektrik Müh, [Elektrik Makineleri ve Güç Elektroniği Opsiyon Tanıtımı](https://docs.google.com/presentation/d/128lohMTBVDAOZl9q8SzXT4HCoFsondeH2lE10goHrto/edit?usp=sharing)
-* Ankara Universitesi-CESUR, [Superiletkenliğin eneji alanındaki uygulamaları](https://docs.google.com/presentation/d/1uHEdoHDHlFYh4CqQxNUEgbooXijWlml-_VL3hNSf3dQ/pub?start=false&loop=false&delayms=3000)
+* Ankara Universitesi-CESUR, [Superiletkenliğin eneji alanındaki uygulamaları](https://docs.google.com/presentation/d/1faw8dVxYoz_jsJRa6igICBzAtsH83xKLbax7HoxeY3M/edit?usp=sharing)
 
 ### 2014
 
