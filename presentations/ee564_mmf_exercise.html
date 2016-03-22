@@ -30,31 +30,109 @@ class: center, middle
 Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ---
-# Exercise
+# Group Exercise
 --
 
-### 10-pole 50 Hz Y connected 3-phase alternator has an airgap flux density of:
-
-
-### \\(B(\theta)=sin(\theta)+0.25 sin(3\theta)+0.15sin(5\theta)\\)
+### 10-pole 50 Hz Y connected 3-phase alternator has:
 --
 
-### Machine has 210 slots, double layer winding with 4 turns/coil
+### 210 slots, double layer winding with 4 turns/coil
 --
 
 ### Coil pitch:18 slots, coil spread: 60 degrees
 --
 
+----
+### a) Find the synchronous speed (in rpm)
+--
+
+### b) Find the slots per pole per phase
+--
+
+### c) Find the number of series turns/phase (poles are connected in series)
+---
+# Group Exercise
+
+### 10-pole 50 Hz Y connected 3-phase alternator has:
+
+### 210 slots, double layer winding with 4 turns/coil
+
+### Coil pitch:18 slots, coil spread: 60 degrees
+----
+--
+
+### d) Calculate coil pitch in electrical degrees
+--
+
+### e) Calculate the pitch factor, distribution factor and the winding factor
+
+---
+# Group Exercise
+
+#### If the machine has  an [airgap flux density](https://www.google.com/search?q=plot+x&ie=utf-8&oe=utf-8#q=plot+sin%28x%29+%2B+0.25*sin%283*x%29+%2B+0.15*sin%285*x%29) of:
+
+
+### \\(B(\theta)=sin(\theta)+0.25 sin(3\theta)+0.15sin(5\theta)\\)
+
+--
+
 ### Airgap Diameter: 1.5m, Core length: 0.5 m
 --
 
-### Find the RMS of phase voltage and line voltages.
+### Find the flux per pole (\\(\Phi_p\\)) for each component
+
+--
+
+### Hint: Calculate the fundamental first, and the other harmonics afterwards.
+### \\(\Phi\_{1} = B\_{average} . A\_{pole}\\)
+---
+
+## Now find the RMS of phase voltage and line voltages.
+--
+
+### \\(V\_{rms(i)} = \dfrac{1}{\sqrt{2}} 2\pi f\_i k\_{w(i)}  N\_{ph} \Phi\_{(i)} \\) which is equal to:
+--
+ 
+### \\(V\_{rms(i)} = 4.44 f\_i k\_{w(i)}  N\_{ph} \Phi\_{(i)} \\)
+
+### \\(i\\): harmonic order, \\(\quad f\\): frequency
+### \\(k_w\\): winding factor
+### \\(N_{ph}\\): number of coils per phase
+### \\(\Phi\\): flux per pole.
+
+---
+# True RMS
+
+### RMS values of all harmonics
+
+# \\(\sqrt{\sum{V_{rms-i}^2}}\\)
+
+### For fundamental, 3rd and 5th harmonics
+
+# True RMS = \\(\sqrt{V\_{1}^2+V\_{3}^2+V\_{5}^2}\\)
+
+---
+# Induced Voltages
+
+## V1=8696 V
+## V3=1166 V
+## V5=119 V
+
+## Waveform of the [total phase voltage](https://www.google.com.tr/search?q=plot+x&ie=utf-8&oe=utf-8&gws_rd=cr&ei=JrLxVtM3wpawAZ_KlbAM#q=plot+8696*sqrt%282%29*sin%28x%29+-+1166*sqrt%282%29*sin%283*x%29+%2B+119*sqrt%282%29*sin%285*x%29)
+
+---
+# Line Voltage
+
+## \\(V\_{BA}=V\_{Bn}-V\_{An}\\)
+## No 3rd Voltage Harmonics in Y-connected line-to-line voltages
+
+## Waveform of the [line voltage](https://www.google.com.tr/search?q=plot+x&ie=utf-8&oe=utf-8&gws_rd=cr&ei=JrLxVtM3wpawAZ_KlbAM#q=plot+%288696*sqrt%282%29*sin%28x%29+-+1166*sqrt%282%29*sin%283*x%29+%2B+119*sqrt%282%29*sin%285*x%29%29-%288696*sqrt%282%29*sin%28x-2*pi%2F3%29+-+1166*sqrt%282%29*sin%283*%28x-2*pi%2F3%29%29+%2B+119*sqrt%282%29*sin%285*%28x-2*pi%2F3%29%29)
 
 ---
 #Exercise:
 
 ### The diameter of a rotor of a 4 kW, 50 Hz, two-pole induction motor is 98 mm and the length is 82 mm. 
--- 
+--
 
 ### Assume 1% rated slip and calculate the machine constant and the average tangential stress.
 
