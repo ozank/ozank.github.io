@@ -23,11 +23,11 @@ class: center, middle
 
 # EE-362 ELECTROMECHANICAL ENERGY CONVERSION-II
 
-# Induction Motors
+# Induction Machines
 
 ## Ozan Keysan
 
-[ozan.keysan.me](http://ozan.keysan.me)
+[keysan.me](http://keysan.me)
 
 Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
@@ -35,91 +35,79 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 # Induction Motors
 --
 
-## Lenz Law and Eddy Currents
+## Operation Principle: Lenz Law and Eddy Currents
 --
 
-## Let's see a few videos
+### [Magnet in a copper tube](https://youtu.be/5BeFoz3Ypo4?t=25s)
 
-#### [Video1](https://youtu.be/5BeFoz3Ypo4?t=25s)
-
-####[Video2](https://www.youtube.com/watch?v=keMpUaoA3Tg)
 --
 
 ### [What happens if I rotate a magnet over an aluminium disk?](https://youtu.be/H5O0DJ65RdA?t=40s)
+--
+
+## How to obtain the same effect without any moving parts?
+--
+
+ ## Rotating MMF with 3-phase: [Coca Cola Motor](https://youtu.be/cIf9iPskgJs)
+---
+## Rotating MMFs : \\(\mathcal{F\_R} = \dfrac{3}{2}\mathcal{F\_{max}}cos(\theta - \omega t)\\)
+
+<img src="http://www.ece.umn.edu/users/riaz/animations/sinvec.gif" alt="Drawing" style="width: 850px;"/>
+
 
 ---
 # Induction Motors
 
-### Stator: 3-phase distributed winding 
---
+<img src="http://www.electricmotorshop.co.uk/ekmps/shops/kbrewinds/resources/Design/amtecs-motor.jpg" alt="Drawing" style="width: 300px;"/>
 
-<img src="http://www.virajindustries.net/index_files/3.jpg" alt="Drawing" style="width: 600px;"/>
-
----
-## Excite Each Phase with AC 
---
-
-<img src="http://www.ece.umn.edu/users/riaz/animations/sinwaves0.gif" alt="Drawing" style="width: 750px;"/>
-
----
-## Rotating MMFs
-
-### Same effect as rotating a magnet but no moving parts
-
-<img src="http://www.ece.umn.edu/users/riaz/animations/sinvec.gif" alt="Drawing" style="width: 800px;"/>
-
----
-# Fundamental of an Induction Motor
---
-
-## [Coca Cola Motor](https://youtu.be/cIf9iPskgJs)
-
----
-# Induction Motors
 --
 
 - ## Robust, Simple Structure
---
 
-- ## No brushes, or magnets
---
+- ## No electric brushes = no-maintenance
 
-- ## Cheap
---
 
-- ### 95 % of the motors in industry are induction motors
-
----
-# Induction Motors
---
-
-## Stator:
---
-
-### 3-phase double-layer distributed winding, excited by AC
---
-
-## Rotor:
---
-
-### 1) [Wound Rotor](http://www.ewh.ieee.org/soc/es/Nov1997/09/B_WOU1.JPG):  With winding similar to stator
---
-
-### 2) Squirrel Cage Rotor: Short-circuited aluminium bars
+- ## No expensive magnets = Inexpensive
 
 ---
 # Induction Motors
 
-## Squirrel Cage
+<img src="http://www.electricmotorshop.co.uk/ekmps/shops/kbrewinds/resources/Design/amtecs-motor.jpg" alt="Drawing" style="width: 300px;"/>
 
-![](http://mindprod.com/image/jgloss/squirrelcagewheel.jpg)
+## 95 % of the motors used in industry are induction motors
+
+---
+# Induction Motor: Stator Side
+
+## 3-phase double-layer distributed winding
+## Excited with balanced 3-phase AC currents
+
+<img src="http://blog.caranddriver.com/wp-content/uploads/2011/11/Loading-wires-into-the-stator.jpg" alt="Drawing" style="width: 600px;"/>
+
+---
+# Induction Motor: Rotor Side
+--
+
+## 1) [Wound Rotor](http://www.ewh.ieee.org/soc/es/Nov1997/09/B_WOU1.JPG):  Again with three-phase winding similar to the stator
+--
+
+## 2) Squirrel Cage Rotor: Short-circuited aluminium bars
 
 ---
 # Induction Motors
 
-## Squirrel Cage Rotor
+# Squirrel Cage
 
-<img src="http://www.nidec.com/en-NA/technology/motor/basic/00026/~/media/nidec-com/en-global/technology/motor/basic/00026/img_basic_00026_02" alt="Drawing" style="width: 600px;"/>
+<img src="http://mindprod.com/image/jgloss/squirrelcagewheel.jpg" alt="Drawing" style="width: 600px;"/>
+
+
+
+---
+# Squirrel Cage Rotor
+
+## Short-circuited aluminium bars
+
+<img src="http://www.nidec.com/en-NA/technology/motor/basic/00026/~/media/nidec-com/en-global/technology/motor/basic/00026/img_basic_00026_02" alt="Drawing" style="width: 700px;"/>
 
 [How does an induction motor works?](https://youtu.be/LtJoJBUSe28?t=24s)
 
@@ -131,35 +119,33 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ## Synchronous Speed:
 --
- Speed of the rotating stator excitation
+ Speed of the stator excitation
 --
 
-- ### Electrical speed:
+## Electrical speed:
 --
 \\(\quad \omega_e = 2 \pi f_s \\) rad/s
 --
 
-- ### Mechanical speed:
+## Mechanical speed:
 --
-\\(\quad \omega_m = \dfrac{\omega_e}{p/2} = \dfrac{2\pi f_s}{p/2}\\) rad/s
+\\(\quad \omega_m = \dfrac{\omega_e}{p/2} = \frac{2\pi f_s}{p/2}\\)
 --
 
-- ### Mechanical speed:
+## Mechanical speed:
 --
-\\(\quad n_s = \dfrac{120 f_s}{p} \\) rpm
+\\(\quad n_s = \dfrac{120 f_s}{p} \\) RPM
 
 ---
-# Some Definitions
+# Slip:
+--
+ Difference between rotor speed and stator speed in p.u.
 --
 
-## SLIP:
---
- Difference between rotor speed and stator speed
+# \\(s = \dfrac{\omega_s - \omega_r}{\omega_s}\\)
 --
 
-## \\(s = \dfrac{\omega_s - \omega_r}{\omega_s}\\)
-
-## \\(s = \dfrac{n_s - n_r}{n_s}\\)
+# \\(s = \dfrac{n_s - n_r}{n_s}\\)
 
 ---
 # Slip
@@ -176,9 +162,9 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ----
 
-## \\(n_r = (1-s) n_s\\)
-
 ## \\(\omega_r = (1-s) \omega_s\\)
+
+## \\(n_r = (1-s) n_s\\)
 
 ---
 
@@ -195,7 +181,7 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ## What happens to \\(f_r\\) when the rotor is rotating at synchronous speed?
 --
 
-> ## No relative motion between rotor and stator, no induced voltage:  \\(f_r = 0\\)
+> ## No relative speed between rotor and stator, no induced voltage:  \\(f_r = 0\\)
 
 ---
 # Frequency of the induced rotor currents: \\(f_r\\)
@@ -213,6 +199,24 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 --
 
 # Thus, they are also called asynchronous motors.
+---
+# Exercise:
+--
+
+## A three-phase 50 Hz, 6-pole induction motor rotates at a slip of 5% (0.05). Calculate:
+
+--
+### a) Electrical synchronous speed in rad/s
+--
+
+### b) Mechanical synchronous speed in rpm
+--
+
+### c) Actual rotor speed in rpm
+--
+
+### d) Frequency of induced rotor current in Hz
+
 ---
 ## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
 

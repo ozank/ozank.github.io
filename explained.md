@@ -28,6 +28,7 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 * [Discrete Cosine Transformations](http://www.datagenetics.com/blog/november32012/index.html)
 * [Fourier Image Filtering](http://david.li/filtering/)
 * [An Intuitive Explanation of Fourier Theory](http://cns-alumni.bu.edu/~slehar/fourier/fourier.html)
+* [Graphical Algebra and Fourier Analysis](https://acko.net/files/gltalks/toolsforthought)
 
 ### Mawxell's Equations
 
