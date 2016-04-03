@@ -45,11 +45,11 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ---
 ## Determination of Equivalent Circuit Parameters
 
-### Equivalent tests for induction machines:
+## Equivalent tests for induction machines:
 
-- ## Open-circuit Test == No-Load Test
+- # Open-circuit Test == No-Load Test
 
-- ## Short-circuit test == Locked Rotor Test
+- # Short-circuit test == Locked Rotor Test
 ---
 ## Determination of Equivalent Circuit Parameters
 
@@ -60,12 +60,12 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 - ## Total Power:
 --
-\\(\quad P\_{in}=3V\_1 I\_1 cos(\theta)\\)
+\\(\quad P\_{in}=3V\_{1} I\_{1} cos(\theta)\\)
 --
 
-- ## Stator Power Loss:
+- ## Stator Copper Loss:
 --
-\\(\quad P\_{cu1}=3 I\_1^2 r\_1\\)
+\\(\quad P\_{cu1}=3 I\_{1}^2 r\_1\\)
 --
 
 - ## Core Loss:
@@ -116,26 +116,37 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ---
 # Mechanical Power
 
-- ### Gap Power: \\(\quad P\_{ag} = 3 I\_{2}'^2 \dfrac{r'\_2}{s} \\)
-- ### Rotor Copper Loss: \\(\quad P\_{cu2}=3 I\_1^2 r'\_2\\)
-- ### Gross Mechanical Power \\(\quad P\_{mech} = 3 I\_{2}'^2 \dfrac{(1-s)}{s}r'\_2 \\)
+## Gap Power: \\(\quad P\_{ag} = 3 I\_{2}'^2 \dfrac{r'\_2}{s} \\)
+## Rotor Copper Loss: \\(\quad P\_{cu2}=3 I\_1^2 r'\_2\\)
 --
 
-- ### \\( P\_{cu2}\\) can also be expressed in terms of \\( P\_{ag}\\) 
+## \\( P\_{cu2}\\) can also be expressed in terms of \\( P\_{ag}\\) 
 ---
 # Mechanical Power
 
-- ### Gap Power: \\(\quad P\_{ag} = 3 I\_{2}'^2 \dfrac{r'\_2}{s} \\)
-- ### Rotor Copper Loss: \\(\quad P\_{cu2}=3 I\_1^2 r'\_2\\)
-- ### Gross Mechanical Power \\(\quad P\_{mech} = 3 I\_{2}'^2 \dfrac{(1-s)}{s}r'\_2 \\)
+## Gap Power: \\(\quad P\_{ag} = 3 I\_{2}'^2 \dfrac{r'\_2}{s} \\)
+## Rotor Copper Loss: \\(\quad P\_{cu2}=3 I\_1^2 r'\_2\\)
 
-- ### \\( P\_{cu2} = s  P\_{ag} \quad  \\) and \\( \quad  P\_{mech}  = (1-s)  P\_{ag}  \\)
+## \\( P\_{cu2} = s  P\_{ag} \quad  \\) 
+
 ---
 # Mechanical Power
 
-### Gross Mechanical Power is the Generated Power
+## Gap Power: \\(\quad P\_{ag} = 3 I\_{2}'^2 \dfrac{r'\_2}{s} \\)
 
-### Net Power = 
+## Gross Mech. Power = Gap Power - Rotor Copper Loss
+
+## \\(P\_{mech} = 3 I\_{2}'^2 \dfrac{(1-s)}{s}r'\_2 \\)
+
+## \\( P\_{mech}  = (1-s)  P\_{ag}  \\)
+
+---
+
+# Mechanical Power
+
+## Gross Mechanical Power is the Generated Power
+
+## Net Power = 
 --
 Gross Power - Rotational Losses
 --
@@ -151,18 +162,20 @@ Gross Power - Rotational Losses
 # Efficiency
 --
 
-## Output Power / Input Power
+# Output Power / Input Power
 --
 
-## \\(\eta=\dfrac{P\_{out}}{P\_{in}}\\)
+# \\(\eta=\dfrac{P\_{out}}{P\_{in}}\\)
 
 
-#### Don't forget the rotational losses!
+## Don't forget the rotational losses!
 
 ---
 # Example
 
 ## What is the efficiency of the motor in the last exercise if the rotor is running with a slip of s=0.05?
+
+(Assume the parallel branch is moved to the primary side.)
 
 ---
 ## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)

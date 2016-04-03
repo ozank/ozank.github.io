@@ -32,80 +32,39 @@ class: center, middle
 Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ---
-# Initial Equivalent Circuit
-
-<img src="http://myelectrical.com/Portals/0/SunBlogNuke/2/WindowsLiveWriter/InductionMotorEquivalentCircuit_D7EF/Induction%20Motor%20Equivalent%20Circuit%20-%20Simplified_thumb.png" alt="Drawing" style="width: 800px;"/>
----
-# Equivalent Circuit with Mechanical Power
-
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/induction_motor_power_flow.png" alt="Drawing" style="width: 700px;"/>
-
----
-# Power Flow in Induction Motors
---
-
-- ## Total Power:
---
-\\(\quad P\_{in}=3V\_1 I\_1 cos(\theta)\\)
---
-
-- ## Stator Power Loss:
---
-\\(\quad P\_{cu1}=3 I\_1^2 r\_1\\)
---
-
-- ## Core Loss:
---
-\\(\quad P\_{c}=3 \dfrac{E\_1^2}{R\_c} \approxeq 3 \dfrac{V\_1^2}{R\_c}\\)
-
----
-# Power Flow in Induction Motors
-
-## Electrical Power Transferred to Rotor?
---
-
-- ## Airgap Power:
---
-\\( P\_{ag} = P\_{in}-P\_{cu1}-P\_{c} \\)
-
-## or 
---
-
-## \\(\quad P\_{ag} = 3 I\_{2}'^2 \dfrac{r'\_2}{s} \\)
-
----
-# Mechanical Power
-
-- ### Gap Power: \\(\quad P\_{ag} = 3 I\_{2}'^2 \dfrac{r'\_2}{s} \\)
-- ### Rotor Copper Loss: \\(\quad P\_{cu2}=3 I\_1^2 r'\_2\\)
-- ### Gross Mechanical Power \\(\quad P\_{mech} = 3 I\_{2}'^2 \dfrac{(1-s)}{s}r'\_2 \\)
----
-# Power Flow in Induction Motors
-
-<img src="http://image.slidesharecdn.com/inductionmachines-121207220052-phpapp01/95/induction-machines-33-638.jpg?cb=1354940117" alt="Drawing" style="width: 800px;"/>
-
----
-# Efficiency
---
-
-## Output Power / Input Power
---
-
-## \\(\eta=\dfrac{P\_{out}}{P\_{in}}\\)
-
----
 # Mechanical Power
 --
 
 ### Linear Motion
+--
+
 ## Power(W) = Force (N) x Speed (m/s)
 --
 
 ### Rotational Motion
+--
+
 ## Power(W) = Torque (Nm) x Rotational Speed (rad/s)
 --
 
 ## \\(P = T \omega \\) \\( \quad \rightarrow T = \dfrac{P}{\omega} \\)
+
+---
+
+### Can you guess a few applications that require high start-up torque?
+--
+
+## Electric Cars: [Tesla Model S Induction Motor](https://youtu.be/NaV7V07tEMQ?t=18s)
+
+![](http://www.plugincars.com/sites/default/files/model-s-review-620a.jpg)
+
+---
+# Importance of Start-up Torque
+
+## [Tesla vs BMW M4](https://youtu.be/Y0LxAhzdPEI?t=28s)
+<img src="http://s3.amazonaws.com/digitaltrends-uploads-prod/2014/01/2014-BMW-M4-Coupe-front-angle.jpg" alt="Drawing" style="width: 600px;"/>
+
+[Tesla Induction Motor Info](https://www.technologyreview.com/s/410636/tesla-roadster/), [Tesla Model S Dashboard](https://www.youtube.com/watch?v=qiWpRiMNKyM)
 
 ---
 # Torque-Power Relation
@@ -187,7 +146,15 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ### \\(T\_e = \dfrac{3 V\_{th}^2}{(R\_{th}+\dfrac{r'\_2}{s})^2 + (X\_{th}+X'\_2)^2}\dfrac{r'\_2}{s \omega\_s}\\)
 --
 
-## If you're lazy, replace:
+## If you're in a hurry, replace:
+### \\(V\_{th} \rightarrow V\_1 \quad R\_{th} \rightarrow R\_1 \quad X\_{th} \rightarrow X\_1\\)
+---
+#Torque 
+
+### \\(T\_e = \dfrac{3 V\_{1}^2}{(R\_{1}+\dfrac{r'\_2}{s})^2 + (X\_{1}+X'\_2)^2}\dfrac{r'\_2}{s \omega\_s}\\)
+--
+
+## If you're in a hurry, replace:
 ### \\(V\_{th} \rightarrow V\_1 \quad R\_{th} \rightarrow R\_1 \quad X\_{th} \rightarrow X\_1\\)
 ---
 
@@ -231,24 +198,6 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ### \\(T\_{start} = \dfrac{3 V\_{th}^2}{(R\_{th}+r'\_2)^2 + (X\_{th}+X'\_2)^2}\dfrac{r'\_2}{\omega\_s}\\)
 
 ---
-# Start-up Torque
-
-### Can you guess a few applications that require high start-up torque?
---
-
-## Electric Cars: [Tesla Model S Induction Motor](https://youtu.be/NaV7V07tEMQ?t=18s)
-
-![](http://www.plugincars.com/sites/default/files/model-s-review-620a.jpg)
-
----
-# Importance of Start-up Torque
-
-## [Tesla vs BMW M4](https://youtu.be/uki71gN7ahc?t=28s)
-<img src="http://s3.amazonaws.com/digitaltrends-uploads-prod/2014/01/2014-BMW-M4-Coupe-front-angle.jpg" alt="Drawing" style="width: 600px;"/>
-
-[Tesla Induction Motor Info](http://my.teslamotors.com/roadster/technology/motor)
-
----
 # Round #2
 --
 
@@ -258,7 +207,7 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 #### [Tesla Insane Mode](https://youtu.be/LpaLgF1uLB8?t=38s), [Tesla Insane Mode- Slow Motion](https://youtu.be/Y8-S7FghyEA?t=27s)
 
-#### More info: [Tesla Model S 0-100 km in 3.4 seconds](http://www.gizmag.com/tesla-model-p85d-driver-assist/34123/), [Tesla Induction Motor Info](http://my.teslamotors.com/roadster/technology/motor)
+#### More info: [Tesla Model S 0-100 km in 3.4 seconds](http://www.gizmag.com/tesla-model-p85d-driver-assist/34123/), [Tesla Induction Motor Info](https://chargedevs.com/newswire/elon-musk-cooling-not-power-to-weight-ratio-is-the-challenge-with-ac-induction-motors/)
 
 ---
 # How to increase the starting torque?
