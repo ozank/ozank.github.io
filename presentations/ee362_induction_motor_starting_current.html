@@ -32,53 +32,11 @@ class: center, middle
 Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ---
-# So What Happened to the Grid Yesterday?
---
-
-## [TEIAS Map](http://www.emo.org.tr/ekler/821e4acae0886a8_ek.jpg)
---
-
-## \\(T\_e - T\_{mech}= J \dfrac{d\omega}{dt}\\)
---
-
-## [Cascading Failure](http://upload.wikimedia.org/wikipedia/commons/b/bd/Networkfailure.gif)
-
-
----
-# Back to Induction Motors
+# Induction Motors
 
 <img src="http://articles.maritimepropulsion.com/image.axd?picture=2011%2f4%2fQEC_110218+qec+govan+prop+unit+install+262.jpg" alt="Drawing" style="width: 450px;"/>
 
-## 20 MW Induction Motor for [HMS Queen Elizabeth](http://special.defensenews.com/Uploads/queen_elizabeth_carrier.pdf)
----
-
-# Equivalent Circuit
-
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/induction_motor_power_flow.png" alt="Drawing" style="width: 700px;"/>
-
-### \\( P\_{mech} = T (1-s) \omega\_s = 3 I\_{2}'^2 \dfrac{(1-s)}{s}r'\_2 \\)
-
----
-# Use Thevenin Equivalent Circuit
-## For Easier Analysis
-
-
-<img src="http://people.ucalgary.ca/~aknigh/electrical_machines/induction/basics/images/figs/thevenin_cct.gif" alt="Drawing" style="width: 486px;"/>
---
-
-### \\(V\_{th} = \dfrac{(R\_c // jX\_m)}{R\_1 + jX\_1 + (R\_c // jX\_m)}V\_1\\)
-
-### \\(Z\_{th} = (R\_1 + jX\_1) // (R\_c // jX\_m)\\)
-
----
-
-# Torque Characteristics
-## Can you guess the waveform wrt rotor speed?
-
-### \\(T\_e = \dfrac{3 V\_{th}^2}{(R\_{th}+\dfrac{r'\_2}{s})^2 + (X\_{th}+X'\_2)^2}\dfrac{r'\_2}{s \omega\_s}\\)
-
-
-
+## 20 MW Induction Motor for [HMS Queen Elizabeth](http://www.aircraftcarrieralliance.co.uk/~/media/Files/A/Aircraft-Carrier-Alliance-V2/documents/key-facts-v2.pdf)
 ---
 #Typical Torque Curve of an Induction Motor
 
@@ -87,45 +45,88 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ## [Torque Graphs](https://docs.google.com/spreadsheets/d/1YVq94hV64z6VSiN8q-v7XydcfLR3xLdcp-5GhdYZg6Y/edit?usp=sharing)
 
 ---
-#Typical Current Curve of an Induction Motor
+# Maximum Torque Point
 
-<img src="http://www.ibiblio.org/kuphaldt/electricCircuits/AC/02473.png" alt="Drawing" style="width: 800px;"/>
+<img src="http://raise.spd.louisville.edu/ECE252/images/L19-18.gif" alt="Drawing" style="width: 400px;"/>
 
+### \\(s\_{maxT}= \dfrac{r'\_2}{\sqrt{R\_{th}^2+ (X\_{th}+X'\_2)^2}}\\)
 ---
-# Start-up Torque
 
-## Electric Cars: [Tesla Model S Induction Motor](https://youtu.be/NaV7V07tEMQ?t=18s)
-
-![](http://www.plugincars.com/sites/default/files/model-s-review-620a.jpg)
-
----
-## [Tesla vs Lamborghini LP570-4 Super Trofeo](https://youtu.be/r4CnSS4OG4A?t=34s)
-<img src="http://www.dsf.my/wp-content/uploads/2014/03/Lamborghini-BlancpainSuper-Trofeo-Race-Series8.jpg" alt="Drawing" style="width: 500px;"/>
-
-
-#### [Tesla Insane Mode](https://youtu.be/LpaLgF1uLB8?t=38s), [Tesla Insane Mode- Slow Motion](https://youtu.be/Y8-S7FghyEA?t=27s)
-
-#### More info: [Tesla Model S 0-100 km in 3.4 seconds](http://www.gizmag.com/tesla-model-p85d-driver-assist/34123/), [Tesla Induction Motor Info](http://my.teslamotors.com/roadster/technology/motor)
-
----
 # Maximum Torque Point
 
 <img src="http://raise.spd.louisville.edu/ECE252/images/L19-18.gif" alt="Drawing" style="width: 400px;"/>
 
 ### \\(T\_{max} = 3 \dfrac{ 0.5 V\_{th}^2}{\omega\_s}\dfrac{1}{(R\_{th}+\sqrt{R\_{th}^2 + (X\_{th}+X'\_2)^2}}\\)
 ---
+
 # Maximum Power Point
+--
+
+### \\(s\_{maxP}= \dfrac{r'\_2}{r'\_2 + \sqrt{(R\_{th}+r'\_2)^2+ (X\_{th}+X'\_2)^2}}\\)
+--
+
+# \\(s\_{maxT} \ne s\_{maxP} \\)
 
 ---
-# Current Limiting Methods
+# Complete Torque Characteristics
+
+<img src="http://people.ucalgary.ca/~aknigh/electrical_machines/induction/basics/images/figs/trq_speed.gif" alt="Drawing" style="width: 800px;"/>
+---
+
+# Operation Modes of Induction Motors
+
+--
+
+# 1- Motoring
+--
+
+# 2- Generating
+--
+
+# 3- Braking
 
 ---
-## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
+# Motoring
+
+## Power Flow: Electrical to Mechanical
+
+## Slip: \\(0 < s < 1\\)
+
+---
+# Generating
+
+## Power Flow: Mechanical to Electrical
+
+## Slip: \\(s < 0\\)
+
+
+---
+# Braking (Plugging)
+
+## Power Flow: Mechanical+Electrical to Heat
+
+## Slip: \\(s > 1\\)
+
+
+---
+# Machine Dynamics
+
+## Torque Balance Equation
+
+## \\(T\_{elec} - T\_{load} - T\_{friction} = J \dfrac{d \omega}{dt} \\)
+
+
+---
+# Four-Quadrant Operation
+
+<img src="http://lh4.ggpht.com/_X6JnoL0U4BY/S1hWPpFVASI/AAAAAAAAH6g/2f2K5R2I-I0/tmp2B719_thumb1_thumb.png" alt="Drawing" style="width: 800px;"/>
+
+
 
 ---
 # Example
 
-### A 480 V, 50 hp induction motor is drawing 60 A at 0.85 pf lagging.	
+### A Y-connected 480 V(l-l), 50 hp induction motor is drawing 60 A at 0.85 pf lagging.	
 --
  The stator copper losses are 2kW and the rotor copper losses are 700W.
 --
@@ -135,22 +136,17 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 - ### The air gap power.
 --
 
-- ### The converted power.
+- ### The gross mechanical power.
 --
 
-- ### The output power.
+- ### The net output power.
 --
 
 - ### The efficiency of the motor
---
-
-- ### Torque of the motor
---
-
-- ### Rotational speed of the rotor
 
 ---
-
+## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
+---
     </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
     <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
