@@ -23,7 +23,7 @@ class: center, middle
 
 # EE-362 ELECTROMECHANICAL ENERGY CONVERSION-II
 
-# Speed Control & Synchronous Machines
+# Synchronous Machines
 
 ## Ozan Keysan
 
@@ -42,23 +42,39 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 --
 
 
-## Rotor: 
+## Rotor (Field Windings): 
 - ### Either Salient Pole or Cylindrical
 - ## Excited with DC!
 
 ---
-# Synchronous Machines
+# Synchronous Machines: Rotor
 
 ## Rotor needs brushes for DC excitation (slip rings)
 
 <img src="http://i00.i.aliimg.com/img/pb/650/800/250/1274757629384_hz-myalibaba-web4_2624.JPG" alt="Drawing" style="width: 500px;"/>
 ---
 
-# Synchronous Machines
+# Synchronous Machines: Rotor
 
-# Cylindrical Rotor vs Salient Pole
+# Cylindrical vs Salient Pole
 
 <img src="http://1.bp.blogspot.com/-abfAw-qVR6g/T9il-2u0-wI/AAAAAAAABo0/gg53eqWmfyg/s1600/stator.png" alt="Drawing" style="width: 700px;"/>
+---
+
+# Cylindrical vs Salient Pole
+
+<img src="http://1.bp.blogspot.com/-y12ci3GcaX8/UQA1b3GLtFI/AAAAAAAAJXE/OlfQyz55J2M/s1600/Fig+2.2+AC+GENERATOR+ROTORS.jpg" alt="Drawing" style="width: 600px;"/>
+---
+# Cylindrical Rotor
+
+<img src="http://www.engineerlive.com/sites/engineerlive/files/SULZERDMA083_Gas_fired_power_station_Thailand_pic2_PR3552_65778.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+# Salient Pole Rotor
+
+<img src="http://voith.com/swe-en/m_VH_Budarhals_rotor.png" alt="Drawing" style="width: 700px;"/>
+
+
 ---
 # Synchronous Machines
 
@@ -155,14 +171,219 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 # Even Bigger: [Three Gorges Dam](http://en.wikipedia.org/wiki/Three_Gorges_Dam), China
 --
 
-<img src="http://assets.knowledge.allianz.com/img/allianz_knowledge_environment_renewable_energy_hydropower_three_gorges_turbine_rtr1hm_58648.jpg" alt="Drawing" style="width: 700px;"/>
+<img src="https://www.allianz.com/v_1428922792000/en/about_us/open-knowledge/img/allianz_knowledge_environment_renewable_energy_hydropower_three_gorges_turbine_rtr1hm_58648.jpg" alt="Drawing" style="width: 700px;"/>
 
 #### Total Power Capacity: 22.5 GW (1/3 of Turkey's  Consumption)
 [Video1](https://www.youtube.com/watch?v=sB6SwPHPEtQ), [Video2](https://www.youtube.com/watch?v=FUo8hrA0CEU)
+---
+# Induced Voltage in Stator Windings?
+--
+<img src="http://www.alternative-energy-tutorials.com/images/stories/wind/alt64.gif" alt="Drawing" style="width: 800px;"/>
+
+---
+
+# Induced Voltage in Stator Windings?
+
+## Induced voltage \\(\propto\\) Field Current \\(\times\\) Frequency
+
+### (Beware of saturation & residual magnetism)
+
+<img src="http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/design/images/figs/oc_test.jpg" alt="Drawing" style="width: 300px;"/>
+---
+
+# Induced Voltage
+
+# Cause \\(\rightarrow\\)Effect
+--
+
+## \\(I\_{field}\\)
+--
+\\(\rightarrow MMF\_{field}\\)
+--
+\\(\rightarrow \Phi\_f\\)
+--
+\\(\rightarrow e\_a,e\_b, e\_c\\)
+
+--
+##\\(\rightarrow I\_a,I\_b,I\_c\\)
+--
+\\(\rightarrow MMF\_{armature} \\)
+--
+\\(\rightarrow \Phi\_{ar} \\)
+--
+
+##\\(\rightarrow \Phi\_{R}= \Phi\_f + \Phi\_{ar}\\)
+
+---
+# Armature Reaction
+--
+: No Stator Current
+
+![](./images/sync_flux1.svg)
+---
+# Armature Reaction: Lagging Current
+
+![](./images/sync_flux2.svg)
+---
+## \\(B\_{ar}\\): Armature reaction flux density
+
+![](./images/sync_flux3.svg)
+---
+## \\(B\_{R}\\): Resultant flux density
+
+![](./images/sync_flux4.svg)
+---
+
+# Torque in Synchronous Machines
+--
+
+# \\(T = K \Phi\_f \Phi\_R sin (\delta)\\)
+--
+
+### \\(K\\): Constant (we'll see what it is in the following weeks)
+--
+
+### \\(\Phi_f\\): Field generated flux (rotor-side)
+--
+
+### \\(\Phi\_R\\): Resultant (or Air-gap) flux (\\(\Phi\_R = \Phi\_f + \Phi\_{ar}\\))
+--
+
+## \\(\delta\\): Load-angle (very important!)
+
+---
+# Torque vs Load Angle
+
+## \\(\delta > 0 \\): Generating Action
+--
+
+## \\(\delta < 0 \\): Motoring Action
+--
+
+## \\(\delta = \pm \dfrac{\pi}{2} \\): Maximum torque point
+--
+
+## \\(\delta = 0 \\): Zero Torque (Donkey eats the carrot)
+---
+# Torque vs Load Angle
+
+<img src="./images/synchronous_load_angle.png" alt="Drawing" style="width: 700px;"/>
+---
+# Review
+
+## \\(\Phi_f \,,\, B_f\\): Field flux (density)
+--
+
+## \\(\Phi\_{ar} \,,\, B\_{ar}\\): Armature flux (density) (0 at no load)
+--
+
+## \\(\Phi_R \,,\, B_R\\): Resultant (air-gap) flux (density)
+
+---
+#Phasor Diagram
+
+## \\(\vec{E\_{ar}}\;\\) lags \\(\;\vec{\Phi\_{ar}}\\) 90 degrees
+--
+
+### Armature reaction can be represented as a voltage drop in an inductance
+--
+
+## \\(\vec{E\_{ar}} = -j X\_{Q} \vec{I\_a}\\) 
+--
+
+## \\(\vec{E\_{R}} = \vec{E\_{f}} -j X\_{Q} \vec{I\_a}\\)
+
+---
+# Simple Equivalent Circuit
+--
+
+#### Assumption: Cylindrical rotor (constant air-gap)
+--
+
+<img src="./images/sync_simple_equivalent.png" alt="Drawing" style="width: 500px;"/>
+
+### \\(\vec{E\_{R}} = \vec{E\_{f}} -j X\_{Q} \vec{I\_a}\\)
+---
+# Simple Equivalent Circuit
+
+## However, there is also the leakage flux: 
+--
+\\(\;jX\_{l}\\)
+--
+
+## Define stator total reactance as:
+# \\(jX\_S = jX_Q + jX_l\\)
+
+### Thus, the equivalent circuit becomes:
+
+---
+# Simple Equivalent Circuit
+
+<img src="./images/sync_simple_equivalent2.png" alt="Drawing" style="width: 500px;"/>
+
+## \\(\vec{E} = \vec{E\_{f}} -j X\_{s} \vec{I\_a}\\)
+---
+## What about the resistance of the phase windings?
+
+<img src="./images/sync_simple_equivalent3.png" alt="Drawing" style="width: 600px;"/>
+
+## \\(\vec{V\_{ph}} = \vec{E\_{f}} -(j X\_{s}+R\_{a}) \vec{I\_a}\\)
+
+---
+## Motoring and Generating Convention
+### Remember synchronous machines are mostly used as generators.
+
+<img src="./images/sync_simple_equivalent4.png" alt="Drawing" style="width: 600px;"/>	
+
+---
+## Remember the Equivalent Circuit is per Phase
+
+### Synchronous machines can be Wye or Delta connected
+
+<img src="./images/synch_wye.png" alt="Drawing" style="width: 500px;"/>
+---
+## Remember the Equivalent Circuit is per Phase
+
+### Synchronous machines can be Wye or Delta connected
+
+<img src="./images/synch_delta.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Most important definitions
+
+--
+
+- ## Load Angle (\\(\delta\\)): Angle between phase voltage and field voltage
+--
+
+- ## Power Factor Angle (\\(\theta\\)): Angle between phase voltage and current.
+---
+# Load Angle and Power Factor
+
+<img src="./images/synch_phasor.png" alt="Drawing" style="width: 800px;"/>
+
+## Neglect \\(R\_a\\) for now.
+
+---
+## A few exercises with the simple equivalent circuit
+
+## Neglect \\(R\_a\\) for now.
+
+<img src="./images/sync_simple_equivalent2.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Full Equivalent Circuit
+
+### Including the field circuit
+
+<img src="./images/synch_full_circuit.png" alt="Drawing" style="width: 800px;"/>
+--
+
+### \\(L\_f\\) can be neglected at steady state (DC) conditions
 
 ---
 ## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
----
+
     </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
     <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
