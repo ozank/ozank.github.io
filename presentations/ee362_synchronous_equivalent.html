@@ -23,7 +23,7 @@ class: center, middle
 
 # EE-362 ELECTROMECHANICAL ENERGY CONVERSION-II
 
-# Synchronous Machines
+# Equivalent Circuit of Synchronous Machines
 
 ## Ozan Keysan
 
@@ -33,13 +33,13 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ---
 
-# Induced Voltage in Stator Windings?
+# Review: Induced Voltage
 --
 <img src="http://www.alternative-energy-tutorials.com/images/stories/wind/alt64.gif" alt="Drawing" style="width: 800px;"/>
 
 ---
 
-# Induced Voltage in Stator Windings?
+# Review: Field Current
 
 ## Induced voltage \\(\propto\\) Field Current \\(\times\\) Frequency
 
@@ -48,130 +48,61 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 <img src="http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/design/images/figs/oc_test.jpg" alt="Drawing" style="width: 300px;"/>
 
 ---
-# Armature Reaction
---
-: No Stator Current
-
-![](./images/sync_flux1.svg)
----
-# Armature Reaction: Lagging Current
-
-![](./images/sync_flux2.svg)
----
-## \\(B\_{ar}\\): Armature reaction flux density
-
-![](./images/sync_flux3.svg)
----
-## \\(B\_{R}\\): Resultant flux density
-
-![](./images/sync_flux4.svg)
----
-# Torque in Synchronous Machines
+# Review: Torque in Synchronous Machines
 --
 
 # \\(T = K \Phi\_f \Phi\_R sin (\delta)\\)
 --
 
 ### \\(K\\): Constant (we'll see what it is in the following weeks)
---
+
 
 ### \\(\Phi_f\\): Field generated flux (rotor-side)
---
+
 
 ### \\(\Phi\_R\\): Resultant (or Air-gap) flux (\\(\Phi\_R = \Phi\_f + \Phi\_{ar}\\))
---
 
 ## \\(\delta\\): Load-angle (very important!)
+
 ---
 # Torque vs Load Angle
 
 ## \\(\delta > 0 \\): Generating Action
---
 
 ## \\(\delta < 0 \\): Motoring Action
---
 
 ## \\(\delta = \pm \dfrac{\pi}{2} \\): Maximum torque point
---
 
 ## \\(\delta = 0 \\): Zero Torque (Donkey eats the carrot)
+
 ---
 # Torque vs Load Angle
 
-<img src="http://i.stack.imgur.com/DmWrO.png" alt="Drawing" style="width: 648px;"/>
+<img src="./images/synchronous_load_angle.png" alt="Drawing" style="width: 700px;"/>
 ---
-# Review
-
-## \\(\Phi_f \,,\, B_f\\): Field flux (density)
---
-
-## \\(\Phi\_{ar} \,,\, B\_{ar}\\): Armature flux (density) (0 at no load)
---
-
-## \\(\Phi_R \,,\, B_R\\): Resultant (air-gap) flux (density)
----
-
-# Review
-
-
-# Cause \\(\rightarrow\\)Effect
---
-
-## \\(I\_{field}\\)
---
-\\(\rightarrow MMF\_{field}\\)
---
-\\(\rightarrow \Phi\_f\\)
---
-\\(\rightarrow e\_a,e\_b, e\_c\\)
-
---
-##\\(\rightarrow I\_a,I\_b,I\_c\\)
---
-\\(\rightarrow MMF\_{armature} \\)
---
-\\(\rightarrow \Phi\_{ar} \\)
---
-
-##\\(\rightarrow \Phi\_{R}= \Phi\_f + \Phi\_{ar}\\)
----
-#Phasor Diagram
---
-
-# \\(\vec{\Phi\_R} = \vec{\Phi\_f} + \vec{\Phi\_{ar}}\\)
---
-
-# \\(\vec{E\_R} = \vec{E\_f} + \vec{E\_{ar}}\\)
----
-#Phasor Diagram
+# Equivalent Circuit: Armature Reaction
 
 ## \\(\vec{E\_{ar}}\;\\) lags \\(\;\vec{\Phi\_{ar}}\\) 90 degrees
 --
 
-### Armature reaction can be represented as a voltage drop in an inductance
---
+## Armature reaction can be represented as a voltage drop in an inductance
+
 
 ## \\(\vec{E\_{ar}} = -j X\_{Q} \vec{I\_a}\\) 
---
-
-## \\(\vec{E\_{R}} = \vec{E\_{f}} -j X\_{Q} \vec{I\_a}\\)
 
 ---
 # Simple Equivalent Circuit
---
 
 #### Assumption: Cylindrical rotor (constant air-gap)
---
 
 <img src="./images/sync_simple_equivalent.png" alt="Drawing" style="width: 500px;"/>
 
 ### \\(\vec{E\_{R}} = \vec{E\_{f}} -j X\_{Q} \vec{I\_a}\\)
+
 ---
 # Simple Equivalent Circuit
 
-## However, there is also the leakage flux: 
---
-\\(\;jX\_{l}\\)
+## However, there is also the leakage flux: \\(\;jX\_{l}\\)
 --
 
 ## Define stator total reactance as:
@@ -184,13 +115,23 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 <img src="./images/sync_simple_equivalent2.png" alt="Drawing" style="width: 500px;"/>
 
-### \\(\vec{E\_{R}} = \vec{E\_{f}} -j X\_{Q} \vec{I\_a}\\)
 ---
 # Equivalent Circuit
 
-## What about the resistance of the phase windings?
+## The armature windings has some resistance: \\(R_a\\)
 
 <img src="./images/sync_simple_equivalent3.png" alt="Drawing" style="width: 600px;"/>
+---
+# Equivalent Circuit
+
+## Common Values:
+
+## \\(jX_Q \approx 1-2 \\) pu
+
+## \\(jX_l \approx 0.1-0.2 \\) pu
+
+## \\(R_a \approx 0.01\\)  pu (Thus can be neglected in some cases)
+
 ---
 ## Motoring and Generating Convention
 ### Remember synchronous machines are mostly used as generators.
@@ -233,18 +174,134 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 <img src="./images/sync_simple_equivalent2.png" alt="Drawing" style="width: 500px;"/>
 
+### What happens with leading, lagging and unity power factor?
 ---
-# Full Equivalent Circuit
+## Repeat the same with \\(R\_a\\) included
 
-### Including the field circuit
+<img src="./images/sync_simple_equivalent3.png" alt="Drawing" style="width: 600px;"/>
+
+### What happens with leading, lagging and unity power factor?
+---
+# Full Equivalent Circuit with Field Circuit
 
 <img src="./images/synch_full_circuit.png" alt="Drawing" style="width: 800px;"/>
 --
 
 ### \\(L\_f\\) can be neglected at steady state (DC) conditions
+
+## Remember \\(I\_f\\) can be controlled to adjust \\(E\_f\\) 
+---
+## That big generator is equivalent to:
+
+
+<img src="http://www.intechopen.com/source/html/38933/media/image37.jpeg" alt="Drawing" style="width: 350px;"/>
+
+#### Enercon Wind Turbine Synchronous Generator (12 rpm)
+
+---
+
+# Full Equivalent Circuit with Field Circuit
+
+<img src="./images/synch_full_circuit.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Operation Modes:
+--
+ Standalone Generating
+
+### You have a single diesel generator supplying a load
+--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LqpQZd9XxJM" frameborder="0" allowfullscreen></iframe>
+
+---
+# Standalone Generating
+
+# Challenge:
+
+- ## Keep the terminal voltage constant
+- ## Keep the frequency of the electricity constant
+	
+--
+
+### Assume we have a inductive load (lagging pf)
+### Assume the field current and speed is constant and see what happens with increasing load.
+
+---
+# Lagging Power Factor
+
+<img src="./images/sync_lagging_pf.png" alt="Drawing" style="width: 450px;"/>
+
+### As load increases, \\(V_t\\) considereably decreases.
+
+#### Assumptions: Speed constant, \\(I_f\\) constant
+---
+# Unity Power Factor
+
+<img src="./images/sync_unity_pf.png" alt="Drawing" style="width: 600px;"/>
+
+### As load increases, \\(V_t\\) slightly decreases.
+
+#### Assumptions: Speed constant, \\(I_f\\) constant
+---
+# Leading Power Factor
+
+<img src="./images/sync_leading_pf.png" alt="Drawing" style="width: 550px;"/>
+
+### As load increases, \\(V_t\\) slightly increases.
+
+#### Assumptions: Speed constant, \\(I_f\\) constant
+---
+# Voltage Regulation
+--
+
+## \\(V\_{reg}= \dfrac{V\_{no-load}-V\_{full-load}}{V\_{full-load}}\\)
+
+---
+
+## In a power grid, we want the frequency and voltage to be constant.
+--
+
+# Solution?
+--
+
+# Control Field Current
+
+---
+# AVR?
+--
+ : Automatic Voltage Regulator
+--
+
+![](http://www.chinageneratoravr.com/wp-content/uploads/2012/03/15A-AVR.jpg)
+---
+---
+# What does this device do?
+
+![](http://www.findsminimodelhotbulbengines.dk/boksermotor%202.JPG-for-web-LARGE.jpg)
+---
+# Speed Controller (Speed Governor)
+
+![](http://www.eagleridgetech.com/images/Centrifugal_governor.png)
+
+### Centrifugal Flyball System
+
+---
+# Watt's  Steam Engine
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/clhE-t8txT8" frameborder="0" allowfullscreen></iframe>
+--
+
+### [We're still using the same technology](https://www.youtube.com/watch?v=SShU1EkCRhs)
+---
+# Speed control ensures constant frequency
+
+
+---
+## Full Control Scheme of a Diesel Generator
+
+<img src="http://www.intechopen.com/source/html/44431/media/image1_w.jpg" alt="Drawing" style="width: 750px;"/>
 ---
 ## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
----
 
     </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
