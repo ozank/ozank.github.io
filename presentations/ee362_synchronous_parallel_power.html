@@ -32,16 +32,10 @@ class: center, middle
 Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ---
-## Standalone Operation of a Synchronous Generator
---
 
-## Two Independent Control Loops
---
+# Full Equivalent Circuit with Field Circuit
 
-## As electrical load increases, we should increase the mechanical input power: To keep the speed constant
---
-
-## As current increases, we should control the field current (for constant terminal voltage)
+<img src="./images/synch_full_circuit.png" alt="Drawing" style="width: 800px;"/>
 
 ---
 # Lagging Power Factor (no field control)
@@ -68,17 +62,16 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 #### Assumptions: Speed constant, \\(I_f\\) constant
 ---
-# AVR : Automatic Voltage Regulator
+## Standalone Operation of a Synchronous Generator
+--
 
-![](http://www.chinageneratoravr.com/wp-content/uploads/2012/03/15A-AVR.jpg)
+## Two Independent Control Loops
+--
 
-## Controls field current to keep the output voltage constant
----
-## Full Control Scheme of a Diesel Generator
+## As electrical load increases, we should increase the mechanical input power: To keep the speed constant
+--
 
-<img src="http://www.intechopen.com/source/html/44431/media/image1_w.jpg" alt="Drawing" style="width: 600px;"/>
-
-#### [What to do if your generator is not working](https://www.youtube.com/watch?v=-LR62sm7USU)
+## As current increases, we should control the field current (for constant terminal voltage)
 
 ---
 # Parallel Operation Synchronous Generators
@@ -112,7 +105,7 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ## Infinite Bus:
 
-- ### So large that voltage and frequency assumed to be constant independent of power flow
+## An electric source so large that voltage and frequency assumed to be constant independent of power flow
 
 ---
 ## Synchronous Generator Connected to Infinite Bus
@@ -178,15 +171,122 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ## [Animation](http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/parallel/infinite_bus%20_op.html)
 
 ---
-# Group Exercise
+# Power of a Synchronous Machine
 --
 
-# Draw \\(I\_f\\) vs \\(I\_a\\) for constant power
+## We already showed: \\(E\_f sin (\delta) = X\_s I\_a cos (\theta)\\)
 
+### Note: We neglected \\(R\_a\\)
+--
+
+## Write Power equation in terms of \\(E\_f\\)
+--
+
+# \\(P = 3 V\_t  I\_a cos (\theta) \\)
+---
+
+# Power of a Synchronous Machine
+
+
+## We already showed: \\(E\_f sin (\delta) = X\_s I\_a cos (\theta)\\)
+
+### Note: We neglected \\(R\_a\\)
+
+
+## Write Power equation in terms of \\(E\_f\\)
+
+
+# \\(P = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s}\\)
+---
+
+# Power of a Synchronous Machine
+
+# \\(P = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s}\\)
+--
+
+## What about Torque?
+--
+
+### Neglect losses (core, copper etc)
+
+# \\(P = T \omega\_s\\)
+---
+
+# Torque of a Synchronous Machine
+
+# \\(T = \dfrac{P}{\omega\_s }\\)
+
+# \\(T = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s \omega\_s }\\)
+---
+# Torque of a Synchronous Machine
+
+## Remember the previous weeks:
+--
+
+## \\(T = T\_{max} sin (\delta)\\)
+--
+
+## \\(T\_{max} = \dfrac{3 V\_t E\_f}{X\_s \omega\_s }\\)
+---
+
+# Torque of a Synchronous Machine
+
+## \\(T\_{max} = \dfrac{3 V\_t E\_f}{X\_s \omega\_s }\\)
+
+<img src="http://i.stack.imgur.com/DmWrO.png" alt="Drawing" style="width: 450px;"/>
+
+---
+# Generalized Power Transfer in AC Systems
+
+## \\(P = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s}\\)
+
+<img src="http://www.openelectrical.org/wiki/images/7/75/AC_Transmission_Model.PNG" alt="Drawing" style="width: 500px;"/>
+
+---
+# Generalized Power Transfer in AC Systems
+
+## In Transmission Systems
+
+<img src="http://www.wspgroup.com/Globaln/WSP_Group/Projects/Beauly-Denney%20Overhead%20Transmission%20Line.jpg?width=800&height=500&mode=crop&anchor=middlecenter" alt="Drawing" style="width: 600px;"/>
+---
+# Generalized Power Transfer in AC Systems
+
+## In Wireless Communication
+
+<img src="http://cdn4.explainthatstuff.com/how-antennas-work.png" alt="Drawing" style="width: 600px;"/>
+---
+# Generalized Power Transfer in AC Systems
+
+## In Wave Energy Converters
+
+<img src="http://www.scottishenergynews.com/wp-content/uploads/2014/11/Pelamis-team.jpg" alt="Drawing" style="width: 600px;"/>
+
+#### [Pelamis WEC Operation](https://www.youtube.com/watch?v=JYzocwUfpNg), [Full Story](https://www.youtube.com/watch?v=ziLtIbwFXB8)
+---
+# Generalized Power Transfer in AC Systems
+
+## In Wave Energy Converters
+
+<img src="http://buildipedia.com/images/masterformat/Channels/Operations/2011.11.03_pelamis/images/Pelamis_wave_energy_at_sea_|_credit_-_Umanji_Solar.jpg" alt="Drawing" style="width: 500px;"/>
+
+#### [Pelamis WEC Operation](https://www.youtube.com/watch?v=JYzocwUfpNg), [Full Story](https://www.youtube.com/watch?v=ziLtIbwFXB8)
+
+---
+# Power Flow
+
+# DC Systems:
+
+## Power flows from high potential to low potential
+
+--
+
+# AC Systems:
+
+## Power flows from leading voltage source to lagging voltage source
 ---
 
 ## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
----
+
 
     </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
