@@ -8,6 +8,7 @@ permalink: /presentations/index.html
 
 ### 2016
 
+* ODTÜ Güç ve Enerji Kongresi [Current Trends and Challenges in Wind Energy](https://docs.google.com/presentation/d/1P6MdOSiaULh4ER0X-CHea7ilb3HtPa9qUvMtzMrF6Og/edit?usp=sharing)
 * Bilkent University, Seminar, [Current Trends and Challenges in Wind Energy](https://docs.google.com/presentation/d/1P6MdOSiaULh4ER0X-CHea7ilb3HtPa9qUvMtzMrF6Og/edit?usp=sharing)
 * ODTÜ, Araştırma Bilgi Günleri, [Newton Fund](https://docs.google.com/presentation/d/1uHEdoHDHlFYh4CqQxNUEgbooXijWlml-_VL3hNSf3dQ/edit?usp=sharing)
 * Tübitak-1000, Enerji Alanı, [Elektrik Enerjisi Sunumu](https://docs.google.com/presentation/d/1gw27TPaHgj9yFgZ8PzE3Js1YFSMgcSZIQE1Md_Vx5AU/edit?usp=sharing)
