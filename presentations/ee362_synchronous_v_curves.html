@@ -38,21 +38,37 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 # Standalone:
 --
 
-## \\(P\_{mech}\\) and \\(I\_f\\) must be controlled for constant V and f.
+### \\(P\_{mech}\\) and \\(I\_f\\) must be controlled for constant \\(V_t\\) and f.
 
+## \\(P = 3 V_t I_a cos (\theta)\\) Watt
 --
 
-# Connected to Infinite Bus: 
+### or 
+
+## \\(P = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s}\\)  (if \\(R_a\\) is neglected)
+---
+# Synchronous Machines can be operated:
+
+
+# Standalone:
+
+### \\(P\_{mech}\\) and \\(I\_f\\) must be controlled for constant \\(V_t\\) and f.
+
+## What about Q (Reactive power)?
 --
 
-## Voltage and Frequency constant regardless of power.
+## \\(Q = 3 V_t I_a sin (\theta)\\) VAR 
+--
+
+## \\(Q = \dfrac{3 V\_t (E\_f cos(\delta)-V\_t)}{X\_s} \\)  (\\(R_a\\) neglected)
 
 ---
+
 # Synchronous Generator Connected to Infinite Bus
 
 <img src="http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/parallel/images/figs/gen_on_bus.gif" alt="Drawing" style="width: 600px;"/>
 
-## Constant Terminal Voltage and Speed
+## Constant terminal voltage and speed
 ---
 ## Synchronous Generator Connected to Infinite Bus
 
@@ -66,24 +82,33 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ## \\(-\\): Motoring
 
 
-## \\(V\_t\\): Constant (Infinite Bus)
+## \\(V\_t\\): Constant (when connected to infinite bus)
+
+---
+## Synchronous Generator Connected to Infinite Bus
+--
+
+## Constant Excitation, Variable Load (Circle Diagram)
+--
+
+## Constant Power, Variable Excitation
+
+
+## [Animation](http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/parallel/infinite_bus%20_op.html)
 
 ---
 # Constant Power, Variable Excitation
 
-
-# Power =  \\( 3 V\_t I\_a cos (\theta)\\) 
- 
-## \\(P\\)  constant, \\(V\_t\\) constant
---
-
-## \\(I\_a cos (\theta)\\) constant!
---
-
 ## From geometry: \\(E\_f sin (\delta) = X\_s I\_a cos (\theta)\\)  = Constant
 
+## \\(E_f\\) moves on horizontal line
+---
 
-## [Animation](http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/parallel/infinite_bus%20_op.html)
+# Group Exercise
+--
+
+# Draw \\(I\_f\\) vs \\(I\_a\\) for constant power
+
 
 ---
 # V-Curves
@@ -95,21 +120,10 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 Source: Fitzgerald, Electric Machinery
 
 ---
-#V-Curves
-
-## Different power factor characteristics for generating mode and motoring mode!
+#V-Curves: Motoring Mode
 --
 
-## Remember:
-
-### Generating: \\(\vec{E\_f} = \vec{V\_t} + (R\_a + j X\_s)\vec{I\_a}\\)
-
-### Motoring: \\(\vec{E\_f} = \vec{V\_t} - (R\_a + j X\_s)\vec{I\_a}\\)
----
-# Group Exercise
---
-
-# Draw \\(I\_f\\) vs \\(I\_a\\) for constant power
+## Different characteristics for motoring and generating modes
 
 ---
 #V-Curves: Motoring Mode
@@ -172,7 +186,77 @@ Source: Fitzgerald, Electric Machinery
 ### c) The field current is changed, and the power factor is adjusted to unity at 300 MW. Calculate the new load angle and the E.
 
 ---
+# Synchronous Machine Tests
+--
 
+## Open-Circuit Characteristics (OCC)
+
+<img src="http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/design/images/figs/oc_test.jpg" alt="Drawing" style="width: 300px;"/>
+
+### At open-circuit friction and core losses can also be estimated.
+---
+# Short-Circuit Characteristics (SCC)
+--
+
+## Armature wndings short circuited, a small If is applied
+--
+
+<img src="http://circuitglobe.com/wp-content/uploads/2016/01/Synchronous-Impedance-Methos-fig-5-compressor.jpg" alt="Drawing" style="width: 400px;"/>
+
+---
+# OCC vs SCC
+
+<img src="http://electrical-riddles.com/upload/images/723392592_99.GIF" alt="Drawing" style="width: 616px;"/>
+
+---
+# Determination of Xs
+
+## If \\(R_a\\) is small:
+
+# \\(X\_s = \dfrac{V\_{(OC)}}{Ia\_{(SC)}}\\)
+
+--
+
+### For better approximation measure \\(R\_{a(dc)}\\) when the machine is stationary.
+
+---
+# Determination of Xs
+
+## \\(X\_s\\) can be calculated both for saturated and unsaturated regions
+--
+
+<img src="http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/design/images/figs/xs_plot.jpg" alt="Drawing" style="width: 454px;"/>
+---
+# Operating Limits of Synchronous Machines
+--
+
+## What are the factors that limit the power output from the synchronous generator?
+---
+# Operating Limits of Synchronous Machines
+
+
+- ## Stator Heating: \\(\propto I_a^2\\)
+--
+
+- ## Rotor Heating: Limited \\( I_f\\) = Limited \\( E_f\\)
+--
+
+- ## Mechanical Power Input Limit
+--
+
+- ## Stability Limit \\(\delta < 90 \\)
+### Most cases it is much smaller for extra safety
+
+---
+# Operating Limits of Synchronous Machines
+<img src="./images/synch_limits.png" alt="Drawing" style="width: 650px;"/>
+---
+# Real Data
+
+<img src="./images/cummins_stability.png" alt="Drawing" style="width: 650px;"/>
+
+### [Source:Cummins Generators](http://power.cummins.com/sites/default/files/literature/technicalpapers/PT-6001-ImpactofPowerFactorLoads-en.pdf)
+---
 ## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
 ---
 
