@@ -32,88 +32,6 @@ class: center, middle
 Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ---
-# Power of a Synchronous Machine
---
-
-# \\(P = 3 V\_t  I\_a cos (\theta) \\)
---
-
-# \\(P = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s}\\)
----
-
-# Torque of a Synchronous Machine
---
-
-## Divide Power by \\(\omega\_{s}\\)
---
-
-# \\(T = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s \omega\_s }\\)
----
-# Generalized Power Transfer in AC Systems
-
-## \\(P = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s}\\)
-
-<img src="http://www.openelectrical.org/wiki/images/7/75/AC_Transmission_Model.PNG" alt="Drawing" style="width: 500px;"/>
-
----
-# Generalized Power Transfer in AC Systems
-
-## In Transmission Systems
-
-<img src="http://www.wspgroup.com/Globaln/WSP_Group/Projects/Beauly-Denney%20Overhead%20Transmission%20Line.jpg?width=800&height=500&mode=crop&anchor=middlecenter" alt="Drawing" style="width: 600px;"/>
----
-# Generalized Power Transfer in AC Systems
-
-## In Wireless Communication
-
-<img src="http://cdn4.explainthatstuff.com/how-antennas-work.png" alt="Drawing" style="width: 600px;"/>
----
-# Generalized Power Transfer in AC Systems
-
-## In Wave Energy Converters
-
-<img src="http://www.scottishenergynews.com/wp-content/uploads/2014/11/Pelamis-team.jpg" alt="Drawing" style="width: 600px;"/>
-
-#### [Pelamis WEC Operation](https://www.youtube.com/watch?v=skhxokeecHk), [Full Story](https://www.youtube.com/watch?v=ziLtIbwFXB8)
----
-# Generalized Power Transfer in AC Systems
-
-## In Wave Energy Converters
-
-<img src="http://buildipedia.com/images/masterformat/Channels/Operations/2011.11.03_pelamis/images/Pelamis_wave_energy_at_sea_|_credit_-_Umanji_Solar.jpg" alt="Drawing" style="width: 500px;"/>
-
-#### [Pelamis WEC Operation](https://www.youtube.com/watch?v=skhxokeecHk), [Full Story](https://www.youtube.com/watch?v=ziLtIbwFXB8)
-
----
-# Generalized Power Transfer in AC Systems
-
-## What if we have a lossy system?
---
-
-<img src="./images/sync_simple_equivalent3.png" alt="Drawing" style="width: 600px;"/>
----
-# Power Transfer in Lossy AC Systems
-
-### \\(P = \dfrac{E_1 E_2}{Z} cos (\delta - \phi_z)- \dfrac{E_2^2}{Z^2}R\\)
---
-
-or
-
-## \\(P = \dfrac{E_1 E_2}{Z} sin (\delta + \alpha_z)- \dfrac{E_2^2}{Z^2}R\\)
-
-### where \\(\alpha_z = 90 - \phi_z\\)
-
-#### See section 5.4 of Fitzgerald for detailed derivation.
----
-# Power Transfer in Lossy AC Systems
-
-## \\(P = \dfrac{E_1 E_2}{Z} sin (\delta + \alpha_z)- \dfrac{E_2^2}{Z^2}R\\)
-
-### If \\(R \approx 0 \\) then \\(Z \approx X_s \\)
---
-
-## \\(P = \dfrac{E_1 E_2}{Z} sin (\delta )\\)
----
 # Cylindrical Machine vs. Salient Pole
 --
 
@@ -140,7 +58,9 @@ or
 ---
 # D-Q Axis
 
-<img src="http://www.copper.org/publications/newsletters/innovations/2000/06/images/cu_sprcndrs_fig2.gif" alt="Drawing" style="width: 500px;"/>
+<img src="http://www.copper.org/publications/newsletters/innovations/2000/06/images/cu_sprcndrs_fig2.gif" alt="Drawing" style="width: 450px;"/>
+
+### Remember [reluctance torque](https://www.youtube.com/watch?v=hDJnLt7cBTY)
 ---
 # D-Q Axis
 
@@ -167,6 +87,8 @@ or
 --
 
 - ## Quadrature-axis current \\(I_q\\): Perpendicular to \\(\phi_f\\), and therefore in-phase with \\(E_f\\)
+
+
 ---
 # Phasor Diagram in a Salient Pole Machine
 
@@ -193,7 +115,7 @@ or
 
 ## including \\(R_a\\)
 
-<img src="http://cnx.org/resources/329a95aa825734c4aefa0410fb168ce7908257ba/graphics22.png" alt="Drawing" style="width: 500px;"/>
+<img src="./images/salient_phasor.png" alt="Drawing" style="width: 800px;"/>
 ---
 # Phasor Diagram in a Salient Pole Machine
 
@@ -236,18 +158,41 @@ or
 ---
 # Power in Salient Pole Machines
 
-<img src="http://cnx.org/resources/c1caa2c9ed56cb47f52f1586de0b94c1/graphics24.png" alt="Drawing" style="width: 800px;"/>
-
+<img src="./images/power_salient.png" alt="Drawing" style="width: 800px;"/>
 ---
 # Power in Salient Pole Machines
 
-#### \\(P = 3 \left[ \dfrac{V_t E_f}{X_d}sin(\delta)+ \dfrac{V_t^2(X_d - X_q)}{2 X_d X_q}sin(2\delta) \right]\\)
+### \\(P = 3 \left[ \dfrac{V_t E_f}{X_d}sin(\delta)+ \dfrac{V_t^2(X_d - X_q)}{2 X_d X_q}sin(2\delta) \right]\\)
 --
 
-- ### First Term: Same with Cylindrical Machines
+- ## First Term: Same with Cylindrical Machines
 --
 
-- ### Second Term: Reluctance Power (Independent of  \\(E_f\\) and therefore \\(I_f\\))
+- ## Second Term: Reluctance Power (Independent of  \\(E_f\\), even exists if \\(I_f=0\\))
+---
+
+# Example:
+
+### A 3-phase star connected salient pole generator has a direct-axis impedance of \\(10 \Omega\\), and quadrature axis impedance of \\(6.5 \Omega\\).
+--
+
+### If the generator is supplying 10 A, with a phase angle of 20 degrees lagging. Calculate:
+--
+
+
+### a) Load Angle
+--
+
+### b) D-Q components of the armature current
+--
+
+### c) Magnitude of Ef
+
+---
+## Graphical (Modern) Phasor Diagram
+--
+
+### Resolve the same problem with the graphical method.
 
 ---
 ## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
