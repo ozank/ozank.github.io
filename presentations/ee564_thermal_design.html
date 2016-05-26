@@ -354,15 +354,12 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 <img src="http://www.containerstore.com/catalogimages/175768/10061869EmergencyBlanketSlvr_x.jpg" alt="Drawing" style="width: 500px;"/>
 ---
-# Radiation Heat Transfer
-### Black body radiation
+# Radiation Heat Loss (Black body radiation)
 
-### \\(h_R\\): heat transfer coefficient for radiation
+### \\(q_R\\): radiation heat flow (W/m2)
 
 
-## \\(h\_R = \dfrac{\rho \epsilon F (T\_1^4-T\_2^4)}{T\_1 - T\_2}\\)
----
-### \\(h\_R = \dfrac{\rho \epsilon F (T\_1^4-T\_2^4)}{T\_1 - T\_2}\\)
+## \\(q\_R = \rho \epsilon F (T\_1^4-T\_2^4)\\)
 --
 
 ### \\(\rho\\): Stefan-Boltzmann constant (\\(5.67x10^{-8}  W/m^2/K^4\\) )
@@ -376,10 +373,30 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 
 ### \\(T\_1, T\_2\\) absolute temperature of radiant and ambient (K)
 ---
+
+# Radiation Heat Transfer
+
+### \\(h_R\\): heat transfer coefficient for radiation (for lumped parameter network)
+
+
+## \\(h\_R = \dfrac{\rho \epsilon F (T\_1^4-T\_2^4)}{T\_1 - T\_2}\\)
+--
+
+### \\(\rho\\): Stefan-Boltzmann constant (\\(5.67x10^{-8}  W/m^2/K^4\\) )
+--
+
+### \\(\epsilon\\): emissivity of radiating surface (ε ≤ 1)
+--
+
+### \\(F\\): view factor (≤ 1) – calculated from geometry
+
+---
 # Emissivity of Materials
 --
 
 ## Aluminum: (black anodized: 0.86), (polished: 0.03-0.1)
+
+[Effects of Anodization on Radiational Heat Transfer](http://www.aavid.com/product-group/extrusions-na/anodize), [How Heat Sink Anodization Improves Thermal Performance](http://www.qats.com/cms/2010/11/09/how-heat-sink-anondization-improves-thermal-performance-part-1-of-2/)
 --
 
 ## Copper: (polished:0.02, heavily-oxidized:0.78) 
@@ -388,7 +405,7 @@ Office: EA-304 <span class="meta">&#8226;</span> Tel: 210 2319
 ## Iron: (polished:0.07, heavily-oxidized:0.38)
 --
 
-### Example problem (Dave Staton's presentation pg 52)
+### Example problem (Dave Staton's Thermal Design presentation pg 52)
 
 ---
 # Enclosed Channel
