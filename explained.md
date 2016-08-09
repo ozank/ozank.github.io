@@ -65,6 +65,7 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 * [Mechanics, Radiation and Heat](http://www.feynmanlectures.caltech.edu/I_toc.html)
 * [Electromagnetism and Matter](http://www.feynmanlectures.caltech.edu/II_toc.html)
 * [Quantum Mechanics](http://www.feynmanlectures.caltech.edu/III_toc.html)
+* [Faraday's Cage](https://sinews.siam.org/DetailsPage/TabId/900/ArtMID/2243/ArticleID/757/Surprises-of-the-Faraday-Cage.aspx)
 
 ### Mechanics
 
