@@ -6,10 +6,9 @@ permalink: /blog/ardeb/index.html
 
 # ARDEB Proje İstatistikleri
 Ozan Keysan  
-23/08/2016  
+25/09/2016  
 
 TÜBİTAK geçtiğimiz haftalarda ARDEB projelerinin desteklenme oranları ve aktarılan bütçelerle ilgili bir [doküman](https://www.tubitak.gov.tr/sites/default/files/ardeb_stat_2016_12.pdf) yayınladı. Ancak bu doküman çok fikir vermediği için yayınlanan tablodaki verileri kullanarak, üniversitelerdeki proje istatistiklerini (biraz da çalıştığım kurum olan ODTÜ açısından) birkaç grafikle açıklamaya çalıştım. Kullandığım araçlar ve yöntemle ilgili detaylara yazının sonundan ulaşabilirsiniz.
-
 
 ## Önerilen-Desteklenen Proje Sayıları
 
@@ -17,7 +16,7 @@ ARDEB programına önerilen proje sayılarında yıllara göre düzenli bir art�
 
 
 <div class="figure" style="text-align: center">
-<img src="ardeb_plots_files/figure-html/unnamed-chunk-2-1.png" alt="Şekil-1- Yıllara göre ARDEB'e sunulan ve kabul edilen proje sayıları."  />
+<img src="../images/ardeb/unnamed-chunk-2-1.png" alt="Şekil-1- Yıllara göre ARDEB'e sunulan ve kabul edilen proje sayıları."  />
 <p class="caption">Şekil-1- Yıllara göre ARDEB'e sunulan ve kabul edilen proje sayıları.</p>
 </div>
 
@@ -29,7 +28,7 @@ ODTÜ'de de yıllara göre önerilen proje sayılarında bir artış gözlemlens
 
 
 <div class="figure" style="text-align: center">
-<img src="ardeb_plots_files/figure-html/unnamed-chunk-3-1.png" alt="Şekil-2- Önerilen proje sayılarının üniversiteler düzeyinde yıllara göre değişimi (2015'de 300'den fazla proje öneren üniversiteler arasında)."  />
+<img src="../images/ardeb/unnamed-chunk-3-1.png" alt="Şekil-2- Önerilen proje sayılarının üniversiteler düzeyinde yıllara göre değişimi (2015'de 300'den fazla proje öneren üniversiteler arasında)."  />
 <p class="caption">Şekil-2- Önerilen proje sayılarının üniversiteler düzeyinde yıllara göre değişimi (2015'de 300'den fazla proje öneren üniversiteler arasında).</p>
 </div>
 
@@ -37,7 +36,7 @@ ODTÜ'de de yıllara göre önerilen proje sayılarında bir artış gözlemlens
 Desteklenen proje sayılarına baktığımızda ise ilk sırayı 95 proje ile İTÜ'nün aldığını görüyoruz. ODTÜ'nün ise genel trende aykırı olarak 2015 yılında kabul edilen proje sayılarında sert bir düşüşle 7.liğe düştüğünü görüyoruz. Aynı dönemde proje başvuruları artmasına rağmen, kabul edilen proje sayısındaki bu düşüş kaygılandırıcı.
 
 <div class="figure" style="text-align: center">
-<img src="ardeb_plots_files/figure-html/unnamed-chunk-4-1.png" alt="Şekil-3- Desteklenen proje sayılarının üniversiteler düzeyinde yıllara göre değişimi (2015'de 60'dan fazla projesi desteklenen üniversiteler arasında)."  />
+<img src="../images/ardeb/unnamed-chunk-4-1.png" alt="Şekil-3- Desteklenen proje sayılarının üniversiteler düzeyinde yıllara göre değişimi (2015'de 60'dan fazla projesi desteklenen üniversiteler arasında)."  />
 <p class="caption">Şekil-3- Desteklenen proje sayılarının üniversiteler düzeyinde yıllara göre değişimi (2015'de 60'dan fazla projesi desteklenen üniversiteler arasında).</p>
 </div>
 
@@ -48,7 +47,7 @@ Desteklenen proje sayılarına baktığımızda ise ilk sırayı 95 proje ile İ
 
 
 <div class="figure" style="text-align: center">
-<img src="ardeb_plots_files/figure-html/unnamed-chunk-5-1.png" alt="Şekil-4- 2015 yılında ARDEB'den en fazla destek alan 20 üniversite."  />
+<img src="../images/ardeb/unnamed-chunk-5-1.png" alt="Şekil-4- 2015 yılında ARDEB'den en fazla destek alan 20 üniversite."  />
 <p class="caption">Şekil-4- 2015 yılında ARDEB'den en fazla destek alan 20 üniversite.</p>
 </div>
 
@@ -152,7 +151,7 @@ Desteklenen proje sayılarına baktığımızda ise ilk sırayı 95 proje ile İ
 
 
 <div class="figure" style="text-align: center">
-<img src="ardeb_plots_files/figure-html/unnamed-chunk-7-1.png" alt="Şekil-5- 2011-2015 yılları arasında ARDEB'den en fazla destek alan 20 üniversite (Enflasyona göre 2016 yılına dengelenmiş)."  />
+<img src="../images/ardeb/unnamed-chunk-7-1.png" alt="Şekil-5- 2011-2015 yılları arasında ARDEB'den en fazla destek alan 20 üniversite (Enflasyona göre 2016 yılına dengelenmiş)."  />
 <p class="caption">Şekil-5- 2011-2015 yılları arasında ARDEB'den en fazla destek alan 20 üniversite (Enflasyona göre 2016 yılına dengelenmiş).</p>
 </div>
 
@@ -257,7 +256,7 @@ En yüksek proje kabul oranına sahip üç üniversitenin de vakıf üniversites
 
 
 <div class="figure" style="text-align: center">
-<img src="ardeb_plots_files/figure-html/unnamed-chunk-9-1.png" alt="Şekil-6- Üniversiteler bazında projelerin kabul oranları (2015 yılında 10MTL'den fazla destek almış üniversiteler arasında)."  />
+<img src="../images/ardeb/unnamed-chunk-9-1.png" alt="Şekil-6- Üniversiteler bazında projelerin kabul oranları (2015 yılında 10MTL'den fazla destek almış üniversiteler arasında)."  />
 <p class="caption">Şekil-6- Üniversiteler bazında projelerin kabul oranları (2015 yılında 10MTL'den fazla destek almış üniversiteler arasında).</p>
 </div>
 
@@ -365,10 +364,8 @@ En yüksek proje kabul oranına sahip üç üniversitenin de vakıf üniversites
 </tbody>
 </table>
 
-
-
 ## Teknik Detaylar
 
-Eğer aynı verileri kullanarak başka analizler yapmak isterseniz, hem [ARDEB proje istatistiklerinin excel haline](),  hem de bu grafikleri oluşturmak için kullanılan [kodlara]() [GitHub sayfamdan]() ulaşabilirsiniz. TÜBİTAK'ın yayınladığı tüm istatistiklere ise  [şu sayfadan](https://www.tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/icerik-akademik-destek-istatistikleri) ulaşabilirsiniz.
+Eğer aynı verileri kullanarak başka analizler yapmak isterseniz, hem [ARDEB proje istatistiklerinin excel haline](https://github.com/ozank/ardeb/blob/master/ardeb_stat_2016_12.xlsx?raw=true),  hem de bu grafikleri oluşturmak için kullanılan [kodlara]() [GitHub sayfamdan](https://github.com/ozank/ardeb) ulaşabilirsiniz. TÜBİTAK'ın yayınladığı tüm istatistiklere ise  [şu sayfadan](https://www.tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/icerik-akademik-destek-istatistikleri) ulaşabilirsiniz.
 
-Bu analizdeki tüm grafikleri [R]()/[Rstudio]() kullanılarak hazırladım. Bu sayfadaki verilerin hiçbir haklı saklı değildir. Kaynak göstererek ya da göstermeyerek istediğiniz gibi paylaşabilirsiniz.
+Bu analizdeki tüm grafikleri [R](https://www.r-project.org/)/[Rstudio](https://www.rstudio.com/) kullanılarak hazırladım. Bu sayfadaki verilerin hiçbir haklı saklı değildir. Kaynak göstererek ya da göstermeyerek istediğiniz gibi paylaşabilirsiniz.
