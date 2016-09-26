@@ -8,11 +8,11 @@ permalink: /blog/ardeb/index.html
 Ozan Keysan  
 25/09/2016  
 
-TÜBİTAK geçtiğimiz haftalarda ARDEB projelerinin desteklenme oranları ve aktarılan bütçelerle ilgili bir [doküman](https://www.tubitak.gov.tr/sites/default/files/ardeb_stat_2016_12.pdf) yayınladı. Ancak bu doküman çok fikir vermediği için yayınlanan tablodaki verileri kullanarak, üniversitelerdeki proje istatistiklerini (biraz da çalıştığım kurum olan ODTÜ açısından) birkaç grafikle açıklamaya çalıştım. Kullandığım araçlar ve yöntemle ilgili detaylara yazının sonundan ulaşabilirsiniz.
+TÜBİTAK geçtiğimiz haftalarda ARDEB projelerinin desteklenme oranları ve aktarılan bütçelerle ilgili bir [doküman](https://www.tubitak.gov.tr/sites/default/files/ardeb_stat_2016_12.pdf) yayınladı. Ancak bu doküman çok fikir vermediği için yayınlanan tablodaki verileri kullanarak, üniversitelerdeki proje istatistiklerini (biraz da çalıştığım kurum olan ODTÜ açısından) birkaç grafikle açıklamaya çalıştım. Kullandığım araçlar ve yöntemle ilgili detaylara yazının sonunda ulaşabilirsiniz.
 
 ## Önerilen-Desteklenen Proje Sayıları
 
-ARDEB programına önerilen proje sayılarında yıllara göre düzenli bir artış göze çarpıyor. Ancak, kabul edilen proje sayılarındaki artış daha yavaş kalmış. Hatta 2015 yılında 2014'e göre daha az sayıda proje kabul edilmiş. Bu yüzden 2011'de %25 olan kabul oranları, 2015'de %18'lere düşmüş.
+Tahmin edildiği gibi ARDEB programına önerilen proje sayılarında yıllara göre düzenli bir artış göze çarpıyor. Ancak, kabul edilen proje sayılarındaki artış başvuruya göre daha yavaş kalmış. Hatta 2015 yılında 2014'e göre daha az sayıda proje kabul edilmiş. Bu yüzden 2011'de %25 olan kabul oranları, 2015'de %18'lere düşmüş.
 
 
 <div class="figure" style="text-align: center">
@@ -251,7 +251,7 @@ Desteklenen proje sayılarına baktığımızda ise ilk sırayı 95 proje ile İ
 
 Üniversitelerin proje kabul oranlarını karşılaştırdığımızda ise ilgi çekici bir trendle karşılaşıyoruz. 2015 yılında proje kabul oranlarında birinciliği %40'lık bir oran ile Bilkent Üniversitesi almış. İlk üç sırada ise vakıf üniversiteleri (Bilkent, Sabancı, Koç) yer alıyor. Koç ve Sabancı Üniversitesi 2013 yılında %50 kabul oranının üstüne çıkmışlar. ODTÜ 2015 yılı öncesinde %30-40 bandıydayken, 2015 yılında %24 civarına gerilemiş durumda. Grafiklerde görünmese bile, Boğaziçi Üniversitesi de benzer bir trende sahip.
 
-En yüksek proje kabul oranına sahip üç üniversitenin de vakıf üniversitesi olması, bence proje yazım ve başvuru aşamalarında vakıf üniversitelerinin hocalarına sağladığı profosyonel destek hizmetleriyle açıklamak mümkün. Ancak sonuçta, ARDEB projeleri için verilen %50'lik kurum katkı payı düşünüldüğünde, devlet üniversitelerinin de proje başvuru ve yazım süreci için profesyonel bir destek mekanizması oluşturması daha amantıklı olacaktır.
+En yüksek proje kabul oranına sahip üç üniversitenin de vakıf üniversitesi olması, bence proje yazım ve başvuru aşamalarında vakıf üniversitelerinin hocalarına sağladığı profosyonel destek hizmetleriyle açıklamak mümkün. Ancak sonuçta, ARDEB projeleri için verilen %50'lik kurum katkı payı düşünüldüğünde, devlet üniversitelerinin de proje başvuru ve yazım süreci için profesyonel bir destek mekanizması oluşturması daha mantıklı olacaktır.
 
 
 
@@ -366,6 +366,6 @@ En yüksek proje kabul oranına sahip üç üniversitenin de vakıf üniversites
 
 ## Teknik Detaylar
 
-Eğer aynı verileri kullanarak başka analizler yapmak isterseniz, hem [ARDEB proje istatistiklerinin excel haline](https://github.com/ozank/ardeb/blob/master/ardeb_stat_2016_12.xlsx?raw=true),  hem de bu grafikleri oluşturmak için kullanılan [kodlara]() [GitHub sayfamdan](https://github.com/ozank/ardeb) ulaşabilirsiniz. TÜBİTAK'ın yayınladığı tüm istatistiklere ise  [şu sayfadan](https://www.tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/icerik-akademik-destek-istatistikleri) ulaşabilirsiniz.
+Eğer aynı verileri kullanarak başka analizler yapmak isterseniz, hem [ARDEB proje istatistiklerinin excel haline](https://github.com/ozank/ardeb/blob/master/ardeb_stat_2016_12.xlsx?raw=true),  hem de bu grafikleri oluşturmak için kullanılan kodlara [GitHub sayfamdan](https://github.com/ozank/ardeb) ulaşabilirsiniz. TÜBİTAK'ın yayınladığı tüm istatistiklere ise  [şu sayfadan](https://www.tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/icerik-akademik-destek-istatistikleri) ulaşabilirsiniz.
 
 Bu analizdeki tüm grafikleri [R](https://www.r-project.org/)/[Rstudio](https://www.rstudio.com/) kullanılarak hazırladım. Bu sayfadaki verilerin hiçbir haklı saklı değildir. Kaynak göstererek ya da göstermeyerek istediğiniz gibi paylaşabilirsiniz.
