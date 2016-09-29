@@ -345,13 +345,13 @@ hr { color: transparent; }
 }
 
 @media only screen and (device-width: 768px) {
-/* 48em total: 38em body, 7em padding, 3em margin */
+48em total: 38em body, 7em padding, 3em margin
 #header { width: 45em; }
 #wrap { width: 38em; padding: 1em 3.5em; }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-/* 30em total: 28em body, 2em padding, 0em margin */
+30em total: 28em body, 2em padding, 0em margin
 .meta { -webkit-text-size-adjust: none; }
 #header { width: 29em; left: 0.5em; }
 #wrap { width: 28em; padding: .5em 1em; -moz-border-radius: 0em; -webkit-border-radius: 0em; }
