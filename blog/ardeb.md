@@ -15,7 +15,7 @@ TÜBİTAK geçtiğimiz haftalarda ARDEB projelerinin desteklenme oranları ve ak
 Tahmin edildiği gibi ARDEB programına önerilen proje sayılarında yıllara göre düzenli bir artış göze çarpıyor. Ancak, kabul edilen proje sayılarındaki artış başvuruya göre daha yavaş kalmış. Hatta 2015 yılında 2014'e göre daha az sayıda proje kabul edilmiş. Bu yüzden 2011'de %25 olan kabul oranları, 2015'de %18'lere düşmüş.
 
 
-<div class="figure" style="text-align: center">
+<div class="image" style="text-align: center">
 <img src="../images/ardeb/unnamed-chunk-2-1.png" alt="Şekil-1- Yıllara göre ARDEB'e sunulan ve kabul edilen proje sayıları."  />
 <p class="caption">Şekil-1- Yıllara göre ARDEB'e sunulan ve kabul edilen proje sayıları.</p>
 </div>
@@ -27,7 +27,7 @@ Tahmin edildiği gibi ARDEB programına önerilen proje sayılarında yıllara g
 ODTÜ'de de yıllara göre önerilen proje sayılarında bir artış gözlemlense de, diğer üniversitelere göre yeterince artmadığından, ODTÜ 2011 yılında önerilen proje sayısında 3. konumdayken, 2015 yılında 8.liğe gerilemiş durumda.
 
 
-<div class="figure" style="text-align: center">
+<div class="image" style="text-align: center">
 <img src="../images/ardeb/unnamed-chunk-3-1.png" alt="Şekil-2- Önerilen proje sayılarının üniversiteler düzeyinde yıllara göre değişimi (2015'de 300'den fazla proje öneren üniversiteler arasında)."  />
 <p class="caption">Şekil-2- Önerilen proje sayılarının üniversiteler düzeyinde yıllara göre değişimi (2015'de 300'den fazla proje öneren üniversiteler arasında).</p>
 </div>
@@ -46,7 +46,7 @@ Desteklenen proje sayılarına baktığımızda ise ilk sırayı 95 proje ile İ
 2015 yılında en çok ARDEB fonu aktarılan üniversitelerde ilk sırayı yaklaşık 30 Milyon TL destek ile Bilkent Üniversitesi almış. Onu sırasıyla ODTÜ ve İTÜ takip ediyor.
 
 
-<div class="figure" style="text-align: center">
+<div class="image" style="text-align: center">
 <img src="../images/ardeb/unnamed-chunk-5-1.png" alt="Şekil-4- 2015 yılında ARDEB'den en fazla destek alan 20 üniversite."  />
 <p class="caption">Şekil-4- 2015 yılında ARDEB'den en fazla destek alan 20 üniversite.</p>
 </div>
@@ -150,7 +150,7 @@ Desteklenen proje sayılarına baktığımızda ise ilk sırayı 95 proje ile İ
 
 
 
-<div class="figure" style="text-align: center">
+<div class="image" style="text-align: center">
 <img src="../images/ardeb/unnamed-chunk-7-1.png" alt="Şekil-5- 2011-2015 yılları arasında ARDEB'den en fazla destek alan 20 üniversite (Enflasyona göre 2016 yılına dengelenmiş)."  />
 <p class="caption">Şekil-5- 2011-2015 yılları arasında ARDEB'den en fazla destek alan 20 üniversite (Enflasyona göre 2016 yılına dengelenmiş).</p>
 </div>
@@ -255,7 +255,7 @@ En yüksek proje kabul oranına sahip üç üniversitenin de vakıf üniversites
 
 
 
-<div class="figure" style="text-align: center">
+<div class="image" style="text-align: center">
 <img src="../images/ardeb/unnamed-chunk-9-1.png" alt="Şekil-6- Üniversiteler bazında projelerin kabul oranları (2015 yılında 10MTL'den fazla destek almış üniversiteler arasında)."  />
 <p class="caption">Şekil-6- Üniversiteler bazında projelerin kabul oranları (2015 yılında 10MTL'den fazla destek almış üniversiteler arasında).</p>
 </div>
