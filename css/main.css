@@ -235,7 +235,10 @@ margin-right: 70%;
 /* Images */
 p img { float: right;  padding-left: 1em; }
 div.image { width: 100%; margin: 1.5em 0; display: inline-block; vertical-align: middle; }
-div.image img { display: block; margin: 0 auto; border: thin solid #d9d8d7; padding: 3px; }
+div.image img { max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    display: block; margin: 0 auto; border: thin solid #d9d8d7; padding: 3px; }
 div.noborder img { border: 0; padding: 0; }
 div.image p { text-align: center; margin: 1em 0 0 0; font-size: .938em; line-height: 1.6em; font-style: italic; }
 div.image p strong { display: block; text-align: center; text-transform: uppercase; font-weight: normal; font-style: normal; }
