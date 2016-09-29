@@ -35,7 +35,7 @@ ODTÜ'de de yıllara göre önerilen proje sayılarında bir artış gözlemlens
 
 Desteklenen proje sayılarına baktığımızda ise ilk sırayı 95 proje ile İTÜ'nün aldığını görüyoruz. ODTÜ'nün ise genel trende aykırı olarak 2015 yılında kabul edilen proje sayılarında sert bir düşüşle 7.liğe düştüğünü görüyoruz. Aynı dönemde proje başvuruları artmasına rağmen, kabul edilen proje sayısındaki bu düşüş kaygılandırıcı.
 
-<div class="figure" style="text-align: center">
+<div class="image" style="text-align: center">
 <img src="../images/ardeb/unnamed-chunk-4-1.png" alt="Şekil-3- Desteklenen proje sayılarının üniversiteler düzeyinde yıllara göre değişimi (2015'de 60'dan fazla projesi desteklenen üniversiteler arasında)."  />
 <p class="caption">Şekil-3- Desteklenen proje sayılarının üniversiteler düzeyinde yıllara göre değişimi (2015'de 60'dan fazla projesi desteklenen üniversiteler arasında).</p>
 </div>
