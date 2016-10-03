@@ -3,6 +3,10 @@ layout: page
 title: Courses
 permalink: /courses/index.html
 ---
+## Fall 2016
+
+- [EE361](/ee361): Electromechanical Energy Conversion-I
+
 ## Spring 2016
 
 - [EE362](/ee362): Electromechanical Energy Conversion-II
