@@ -3,7 +3,7 @@ layout: home
 title: Ozan Keysan
 ---
 
-**Courses for Spring 2015: <span class="meta">&#8226;</span> [EE362](/ee362) <span class="meta">&#8226;</span>  [EE564](/ee564)**
+**Courses for Fall 2016: <span class="meta">&#8226;</span> [EE361](/ee361)**
 
 
 **Research Group: [METU PowerLab](http://power.eee.metu.edu.tr/)**
