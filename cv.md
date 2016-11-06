@@ -21,8 +21,8 @@ permalink: /cv/index.html
   </div>
 
   <div>
-    Phone: (+90 312) 210 2319<br />
-    Office: EA-304<br />
+    Phone: (+90 312) 210 7586<br />
+    Office: C-113<br />
     Email: <script type="text/javascript">
 
     var string1 = "keysan";
