@@ -23,6 +23,7 @@ class: center, middle
 
 # EE-361
 # TRANSFORMER TESTS
+## Open-Circuit, Short-Circuit Test
 
 ## Ozan Keysan
 
@@ -30,15 +31,7 @@ class: center, middle
 
 Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
----
-# Phasors for Transformers
---
 
-# No Load Operation
-
---
-
-# Inductive Load
 
 
 ---
@@ -48,8 +41,10 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
 # How to Test a Closed System?
+--
 
-### [Hastasına Yer Uçağı Şahin](http://www.sahibinden.com/listing/vasita-otomobil-tofas-hastasina-yer-ucagi-sahin-1995-241699230/detail)
+## Open-Short Circuit Test for Thevenin-Norton Circuits
+<img src="http://4.bp.blogspot.com/-CXJsUnoMvPQ/TgKn3G1nCYI/AAAAAAAAARU/hRzkQWFWNIU/s1600/thevenins.jpg" alt="Drawing" style="width: 400px;"/>
 
 ---
 # Procedure for Transformers
@@ -73,7 +68,8 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 # Simplified (Approximate) Equivalent Circuit
 ## Open Circuit Test
 
-![](http://blog.oureducation.in/wp-content/uploads/2013/05/gg.png)
+<img src="./images/Transformer_equivalent_circuit_parallel_moved.svg" alt="Drawing" style="width: 800px;"/>
+
 ---
 # Simplified (Approximate) Equivalent Circuit
 ## Open Circuit Test
@@ -83,13 +79,16 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ---
 # Short Circuit Test
 
-<img src="http://upload.wikimedia.org/wikipedia/commons/1/15/Short_Circuit_test.jpg " alt="Drawing" style="width: 700px;"/>
+<img src="./images/Short_Circuit_test.jpg " alt="Drawing" style="width: 700px;"/>
 
 In short-circuit test applied voltage is much smaller than the rated voltage.
+### \\(V\_1 \ll V\_{rated} \\)
+
+
 
 [What happens if you apply rated voltage at short-circuit?](http://www.youtube.com/watch?v=WkDCS8xeobg)
 
-[Trafo Kısa Devre](https://www.youtube.com/watch?v=_Qh822feKZo), [Bursa trafo patlaması](http://www.radikal.com.tr/turkiye/trafo-patladi-su-dolum-tesisi-yandi-1472920/)
+[Trafo Kısa Devre](https://www.youtube.com/watch?v=_Qh822feKZo), [Bursa trafo patlaması](http://www.olay.com.tr/bursa-da-trafo-patlamasi-panige-sebep-oldu/78434/)
 ---
 # Short Circuit Equivalent Circuit
 ### Neglect Parallel Branch! 
@@ -121,139 +120,6 @@ In short-circuit test applied voltage is much smaller than the rated voltage.
 ## Short Circuit Test:
 
 ### $$V_s = 13.2 V \quad I_s = 6 A \quad P_s = 20.1 W $$
-
----
-# More on Resistances
-
---
-## Resistivity
-### $$R = \rho \frac{L}{A} \quad \Omega $$
-
-### L: length, A: Area, \\(\rho\\): Resistivity ( unit: \\(\Omega . m \\) )
----
-# Why do we use Copper?
-
---
-- ## **Copper:** \\(1.68 \; 10^{-8} \; \Omega.m \\)
-
---
-- ## **Aluminium:** \\(2.82\; 10^{-8} \; \Omega.m \\)
---
-
-- ## **Silver:** \\(1.59 \; 10^{-8} \; \Omega.m \\)
-
---
-- ## **Gold:** \\(2.44 \; 10^{-8} \; \Omega.m \\)
-
----
-# Transmission Lines
-## Why are the conductors (grouped)?
-
-![](http://i.stack.imgur.com/vCf6K.png)
-
----
-# Transmission Lines
-## Why are the conductors (grouped)?
-
-![](http://i.stack.imgur.com/Icgxw.png)
-
----
-# Transmission Lines
-## Why are the conductors (grouped)?
-
-![](http://i.stack.imgur.com/ZiMjy.png)
----
-# Side Question
-### What are red balls on transmission lines?
-
-![](http://cache3.asset-cache.net/xc/488617183.jpg?v=1&c=IWSAsset&k=2&d=B53F616F4B95E553A5F933E4CC311B833136865F243B8B7C568ED08984A2D1B1)
----
-# Side Question
-### What are red balls on transmission lines?
-
-![](http://www.web-l.com/things-you-wont-see-on-cnn/small-plane-caught-in-power-lines.jpg)
-
----
-# AC Resistance vs DC Resistance
-## Which one is higher?
-
---
-- ## AC Resistance > DC Resistance
-- ## Why?
-
----
-# Skin Depth
-# Distribution of Current in a Wire
-![](http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Skin_depth.svg/450px-Skin_depth.svg.png)
----
-# Skin Depth
-
-### Due to circulating eddy currents
-![](http://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Skineffect_reason.svg/293px-Skineffect_reason.svg.png)
-
----
-# Skin Depth
-
-## Current Distribution: \\( J = J_S e ^{-d/\sigma}\\)
-
-## Skin depth: \\(\sigma = \sqrt{\frac{2 \rho}{\omega \mu_r \mu_0}}\\)
-
----
-# Skin Depth for Copper:
-- ## 50 Hz --> 9.3 mm
-
---
-- ## 1 kHz --> 2.1 mm
-
---
-- ## 10 kHz --> 0.66 mm
-
---
-- ## 100 kHz --> 0.21 mm
-
---
-- ## 1 MHz --> 66 um
-
----
-# How to increase conductor area without increasing thickness?
-
-## Bundled Conductors
-![](http://i.stack.imgur.com/ZiMjy.png)
----
-# How to increase conductor area without increasing thickness?
-
-## Foil Conductors
-![](http://i00.i.aliimg.com/wsphoto/v0/899573808_1/10m-Adhesive-Copper-Foil-EMI-Shield-font-b-Tape-b-font-font-b-Conductive-b-font.jpg)
-
----
-## Hollow Conductors
-<img src="http://sub.allaboutcircuits.com/images/52013.jpg" alt="Drawing" style="width: 400px;"/>
----
-# AC Resistance
-
-## AC Resistance [Calculator](http://www.clemson.edu/ces/cvel/emc/calculators/Resistance_Calculator/round.html)
-
---
-## Rule of Thumb: For 50 Hz power systems
-## $$Rac \simeq 1.1 Rdc$$
----
-# Temperature Effect
-
-<img src="http://www.wilko.com/content/ebiz/wilkinsonplus/invt/0316169/0316169_l.jpg" alt="Drawing" style="width: 500px;"/>
-### How does the resistance change with time?
-
----
-# Temperature Effect
-
-## Temperature Coefficient
-## $$R(T) = R(T_0)(1 + \alpha\Delta T)$$
-
---
-### Resistivity of copper increases 30 % from 20 C to 100 C.
-
---
-### How to apply open-circuit, short-circuit tests??
----
 
 
 
