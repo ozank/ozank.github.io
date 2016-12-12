@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Begüm Kabagöz
-permalink: /blog/begum/index.html
+permalink: /references/begum/index.html
 ---
 
 # Reference Letter for Begüm Kabagöz
