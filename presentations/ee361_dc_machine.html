@@ -40,10 +40,11 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ### \\(T \propto \dfrac{d \mathrm{L}}{d \theta} + \dfrac{d \mathrm{M}}{d \theta} \\)
 ---
 
-# Review:Dynamic Equations
 ## Coupled mechanical and electrical systems
 
-### \\(v_o = Ri + \dfrac{d\lambda}{di}\\)
+### \\(v_o = Ri + L \dfrac{di}{dt}\\)
+
+### \\(T\_{elec} =  \dfrac{\partial W'\_{mag}}{\partial \theta} \\)
 
 ### \\(f\_{mech} = K (x-x_0) + B \dfrac{dx}{dt} + M \dfrac{d^2x}{d^2t}  \\)
 
@@ -74,20 +75,44 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ### [How DC motors work?](http://www.youtube.com/watch?v=LAtPHANEfQo)
 ---
-# Flux per-pole & Induced Voltage
+# Induced Voltage in a Rotating Coil 
+
+![](https://raw.githubusercontent.com/ozank/ee361/master/images/emec_ex1.png)
+---
+# Induced Voltage in a Rotating Coil
+
+# \\(\Phi_{max} = 2 \hat{B} r l\\)
 --
 
-# \\(\Phi = \dfrac{2 \hat{B} d l }{p}\\)
+### When the coil is rotating with \\(\omega_r\\)
+ 
+# \\(\Phi(t) = \Phi_{max} cos(\omega t)\\)
 
-## p: pole number
+## \\(V\_{coil}= -N \dfrac{d\Phi}{dt}=N \omega \Phi_{max} sin(\omega t)\\)
 
 ---
-# Number of Poles
+## Now think everthing in polar coordinates
+--
+
+## It's possible to divide the machine to sub poles
+--
 
 <img src="http://images.books24x7.com/bookimages/id_25412/fig3-2.jpg" alt="Drawing" style="width: 700px;"/>
 
 ## A) 2-pole (or 1-pole-pair), B) 4-pole (or 2-pole-pairs) 
 
+
+---
+# Flux per-pole & Induced Voltage
+--
+
+## \\(B\_{av} =  \dfrac{2}{\pi} \hat{B}\\)
+
+## \\(A\_{pole} =  \dfrac{2 \pi r l }{p}\\)  (p: pole number)
+
+--
+
+## \\(\Phi\_{pole} = B\_{av}A\_{pole}= \dfrac{4 \hat{B} r l }{p}\\)
 
 ---
 # How can you increase the torque of a DC Machine?
