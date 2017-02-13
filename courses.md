@@ -3,9 +3,17 @@ layout: page
 title: Courses
 permalink: /courses/index.html
 ---
+## Spring 2017
+
+- [EE362](/ee361): Electromechanical Energy Conversion-II
+- [EE462](/ee462): Utilization of Electric Energy
+- [ID403](http://tdi.metu.edu.tr): Collaborative Design Studio
+
 ## Fall 2016
 
 - [EE361](/ee361): Electromechanical Energy Conversion-I
+- [ID403](http://tdi.metu.edu.tr): Collaborative Design Studio
+
 
 ## Spring 2016
 

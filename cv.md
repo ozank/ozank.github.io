@@ -56,16 +56,39 @@ permalink: /cv/index.html
 
 ----
 
+## Academic-Administrative Work
+
+- [Advisor to Dean](), (2014-Present)
+
+- [Design Factor](http://tdi.metu.edu.tr), Member of Executive Board
+
+- Associate Editor, [IET Renewable Power Generation](http://digital-library.theiet.org/content/journals/iet-rpg)
+
+- Rapporteur, EU [Cost Action](http://www.cost.eu/)
+
+|Reviews for   | IEEE Transactions on Industrial Electronics|
+|              | IEEE Transactions on Industrial Informatics|
+|              | IEEE Transactions on Applied Superconductivity|
+|              | IET Renewable Power Generation Journal|
+|              | IEEE International Conference on Electrical Machines and Drives|
+|              | IET Power Electronics, Machines and Drives Conference|
+|              | IEEE International Conference on Electrical Machines|
+
+----
+
 ## Research Interests
 
-My main area of interest is in the design and development of electrical
-machines. In particular, I am working on novel machine topologies such
-as superconducting machines and permanent-magnet machines. I also worked
-on the structural and thermal analysis of electrical machines and
-implementation of linear machines to wave energy converters.
+My main area of interests are renewable energy, design of electric machines, and power electronics. In particular, I am working on novel drive-train concepts for wind energy such as high-temperature superconducting machines and direct-drive generators. I am also interested in modular and fault-tolerant electrical machines.
 
 ## Research Experience & Projects
 
+|2016-2017| ASELSAN Rail-Gun Project| Electromagnetic Design and Optimization of a 200kJ-2MJ Rail Gun.|
+|2016| BAP| Design of a Modular Data Acqusition Board.|
+|2016| Andar Servo| Design and Manufacturing of a Eddy Current Dampr for Aeorospace Application|
+|2016| Andar Servo| Design and Manufacturing of a Brushless PM Servo Motor.|
+|2016-2017| BAP| Design of a Modular Data Acqusition Board.|
+|2015 | Newton Fund Mobility Grant | Design of a superconducting wind turbine prototype.|
+|2014–2016 | TUBITAK 2232 Project | Design of modular and fault-tolerant generators for direct-drive wind turbines.|
 |2011–2014 | EU FP7 Project | [Marina Platform](http://www.marina-platform.info/) Project is an EU FP7 project with 17 industrial and academic partners. I am working as a full-time researcher in the project, which aims to design combined wave and wind energy platforms. My duty is to compare different generator topologies and power take-off systems in terms of efficiency and reliability.|
 |2013 | United Arab Emirates Uni. | Design of a 5 kW permanent-magnet linear generator test rig.|
 |2013 | [GE Power Conversion](http://www.gepowerconversion.com/) | A project to validate the superconducting generator topology that I developed during my PhD. General Electric supplied the superconducting coil and test facilities for the cryogenic tests.|
@@ -77,6 +100,17 @@ implementation of linear machines to wave energy converters.
 |2005–2008 | [METU](http://www.metu.edu.tr) | A novel method to estimate the rotor speed and position of an induction motor using the fringing flux out of the rotor cage is developed. An international patent has been awarded to this work.|
 
 ## Teaching Experience
+
+### Middle East Technical University
+
+For a full list of courses that I am teaching please visit my [Courses](/courses) page.
+
+- EE281: Electric Circuits
+- EE361: Electromechanical Energy Conversion-I
+- EE362: Electromechanical Energy Conversion-2
+- EE462: Utilization of Electrical Energy
+- EE564: Design of Electrical Machines
+- ID403: Collaborative Design Studio
 
 ### University of Edinburgh
 
@@ -101,29 +135,7 @@ implementation of linear machines to wave energy converters.
 -   Marzia Akbari, *"Comparison and control of power take-off systems for
     combined wind/wave energy platforms"*, MSc Thesis, 2013.
 
-### Middle East Technical University
-
-**Laboratory Supervision**
-
--   Electromechanical Energy Conversion I-II (EE361, EE362).
--   Static Power Conversion (EE463).
--   Laboratory coordinator (4 semesters).
-
 ------------
-
-## Academic Work
-
-- Associate Editor, [IET Renewable Power Generation](http://digital-library.theiet.org/content/journals/iet-rpg)
-
-- Rapporteur, EU [Cost Action](http://www.cost.eu/)
-
-|Reviews for   | IEEE Transactions on Industrial Electronics|
-|              | IEEE Transactions on Industrial Informatics|
-|              | IEEE Transactions on Applied Superconductivity|
-|              | IET Renewable Power Generation Journal|
-|              | IEEE International Conference on Electrical Machines and Drives|
-|              | IET Power Electronics, Machines and Drives Conference|
-|              | IEEE International Conference on Electrical Machines|
 
 ## Memberships
 
@@ -152,6 +164,8 @@ implementation of linear machines to wave energy converters.
 
 ## Courses & Seminars
 
+- Design Thinking(?)
+- Aalto?
 -   Future Reliable Renewable Energy Conversion Systems, 4th Flagship Seminar, Chongqing, China, 2012.
 -   Supervising Postgraduate Research, Iain Davidson, 2013.
 -   Large-Scale Parallel Computing, University of Edinburgh, 2013.
@@ -166,25 +180,25 @@ implementation of linear machines to wave energy converters.
 
 ------------
 
-
 ## Software
 
-- **Programming:** Python, R, Matlab, C++.
-- **Finite Element Analysis:** Opera, FEMM, ANSYS, Gmsh, GetDP.
-- **Computer Aided Design:** SolidWorks, AutoCad.
-- **Computational Fluid Dynamics:** OpenFOAM.
+- **Analysis:** R, Matlab, C++, Python.
+- **FEA:** ANSYS Maxwell,  Comsol, Opera, FEMM.
+- **CAD:** SolidWorks, AutoCad.
+- **Other:** LaTeX, [Github](http://github.com/ozank).
 
 ## Activities & Hobbies
 
-- Mountaineering:   Active Member of METU Mountaineering Club
-- Sailing:          Dinghy and Yacht Sailing, Certificate of Competence For Operators of Pleasure Craft.
-- Blogging:         *[asuyatuyolar.org](http://www.asuyatuyolar.org)*
+- Mountaineering: Active Member of METU Mountaineering Club
+- Sailing: Dinghy and Yacht Sailing, Certificate of Competence For Operators of Pleasure Craft.
+- Blogging: *[asuyatuyolar.org](http://www.asuyatuyolar.org)*, *[keysan.me/blog](http://keysan.me/blog)*
 
 ## Languages
 
 -  English (Fluent),   Spanish (Intermediate),   Chinese (Beginner)
 
-## Publications
+## Publications-Completed Theses
+
 <script src="http://bibbase.org/show?bib=http://bibbase.org/mendeley2/363361&groupby=type&jsonp=1&folding=1"></script> 
 
 
