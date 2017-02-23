@@ -10,73 +10,71 @@ For more information please visit the [official project webpage](http://star.eee
 
 Here are a few projects that I offer this year:
 
-If you are planning to choose one of these projects, please feel free to  come and visit me (I am mostly in C-114) to ask any questions. Then please fill the application form using this link: [http://goo.gl/forms/OCBGSDv0tL](http://goo.gl/forms/OCBGSDv0tL), so I can keep a track of applications.
+If you are planning to choose one of these projects, please feel free to  come and visit me or Mesut Ugur to ask any questions. Then please fill the application form using this link: [http://goo.gl/forms/OCBGSDv0tL](http://goo.gl/forms/OCBGSDv0tL), so I can keep a track of applied students.
 
-## 1- 3D Printed Electric Motors
+## 1. Finite element analysis of a permanent magnet electrical machine using Ansys/Maxwell
 
-The aim of this project is to manufacture novel electric motors(or transformers, inductors) using 3D printers instead of conventional manufacturing methods. [Magnetic Iron PLA](http://www.proto-pasta.com/pages/magnetic-iron-pla) materials will be used in the project. Students with an experience in mechanical drawign software and 3D printers are preferred.
+The aim of this project is to understand the characteristics of an electrical machine, construct a model in Maxwell, obtain the performance of the machine and verify the design by using finite element analysis tools. The machine is a modular permanent magnet machine to be used in an integrated modular motor drive application.
 
-## 2- Design of a Tethered Quad-copter for Continuous Flying:
+**Things you will learn:** Electrical machine design procedure, finite element analysis
+**Requirements:** Electromechanical energy conversion knowledge 
 
-Flying time of [quad-copters](http://en.wikipedia.org/wiki/Quadcopter) is limited to 10-15 minutes due to battery capacity. Although, a ground powered quad-copter can fly continuously and perform its mission (ie image processing, continuous video recording) for extended periods. In this project, you will design a power supply and transmission cable for a ground powered quad-copter. The aim is to minimize the mass of the transmission wire, thus it is necessary to design a step-up power converter (ie. use thinner wire using high-voltage, low current).
+## 2. Development of the motor drive and control embedded software using DSP Cards
 
-**What you will learn:** Design of a step-up, step-down power supply. How to handle the harmonics in a long transmission cable. Optimization algorithms to choose the best design parameters.
+The aim of this project is to develop electrical motor drive and control algorithms and to implement embedded motor drive software on microcontrollers consisting of DSP. The software will be utilized in an integrated modular motor drive application.
 
-**Requirements:** Basic power electronics and PCB manufacturing knowledge is required.
+**Things you will learn:** System implementation with microcontrollers, embedded software, electric motor drive systems
 
-## 3- Robot Control with a Smart Glove
+**Requirements:** Basic motor drive system knowledge, Basic microcontroller knowledge, familiarity with C programming
 
-The main idea of the project is to control a robot using  a smart glove. In the project both hardware and software will be implemented. Therefore, it is preferred to have some experience in PCB design (Eagle, Proteus etc), ambition on communication protocols(I2C,SPI) and data filtering. This project will be developed in collaboration with [BAMA](http://www.bamateknoloji.com)
+## 3. Design of a filter inductor with planar magnetics
 
-**Requirements:** Basic microcontroller and programming knowledge is required.
+The aim of this project is to model, analyze and design a DC bus filter inductor using planar magnetics. Simulations will be performed for the verification of the design and the inductor will be tested experimentally. The filter will be utilized in an integrated modular motor drive application.
 
-## 4- Basic Railgun/Coilgun Implementation
+**Things you will learn:** Inductor design, PCB design, finite element analysis
+**Requirements:** Electromagnetic principles 
 
-A [coilgun](https://en.wikipedia.org/wiki/Coilgun) or Gauss gun is a type of projectile accelerator consisting of one or more coils used as electromagnets in the configuration of a linear motor that accelerate a ferromagnetic or conducting projectile to high velocity. You have two options in this project:
+## 4. Design and loss characterization of power converters consisting of GaN power FETs 
 
-a) Development of an experimental setup to demosntrate basics of a coil cun
+The aim of this project is to design a motor drive inverter power stage and characterize its losses. The new generation wide band gap (WBG) Gallium Nitride (GaN) power semiconductor devices will be used. The inverter analytical model will be obtained and a program will be developed for the efficiency analysis of the converter. The results will be verified using experimental tests. The inverter will be used in an integrated modular motor drive application.
 
-b) Finite-element modelling of a rail gun using [Comsol](https://www.comsol.com/)
+**Things you will learn:** New generation power semiconductors, motor drive inverters, efficiency analysis of power converters
 
-## 5- Wireless Battery Charger
+**Requirements:** Basic power semiconductor knowledge, basic power electronics knowledge 
 
-Wireless battery charging or wireless inductive charging as it is also called, is a method for transferring electrical energy from a charger to a device without the need for a physical wire connection. The aim of this project is to design and implement a battery charger which can charge a 3.2V Li-Ion battery wirelessly from a 24V DC supply. The charger should also indicate the voltage level of the battery.
+## 5. Thermal modeling, analysis and design of an Integrated Modular Motor Drive Application
 
-**What you will learn:** Battery charger technology, wireless power transfer, PCB design and manufacturing
+The aim of this project is to obtain a thermal model of a multi-part system having different heat sources, analyze the thermal behavior of individual parts. A natural, air-cooled or waver-cooled heat sink and cooling system will be developed for the system with the given specifications. The system is an integrated modular motor drive having heat sources such as; power semiconductors, integrated circuits, capacitors, inductors, motor windings, motor iron parts etc.
 
-**Requirements:** Basic power converter knowledge, basic PCB design experience, magnetic design knowledge
+**Things you will learn:** Cooling of electrical machines, power electronics and motor drives, integrated modular motor drives
 
-## 6- Power supply for a data acquisition and monitoring system:
+**Requirements:** Basic energy conversion, power converter, electrical machine and motor drive knowledge 
 
-Data acquisition devices are widely used in power systems for monitoring and control purposes. The aim of this project is to design and implement an isolated 50W power supply with multiple outputs (15V and 24V) which is fed from the mains (230V AC). This power supply is intended to be used on a data acquisition and monitoring device.
+## 6. Design of a micro-controller hardware platform for an Integrated Modular Motor Drive Application
 
-**What you will learn:**  DC power supplies, isolated DC/DC converter, PCB design and manufacturing
+The aim of this project is to design and implement a controller printed circuit board for an integrated modular motor drive system using microcontrollers with DSP. A modular PCB will be developed having multiple microcontrollers with a master/slave topology. On the hardware, measurements, communication, pulse width modulation, gate drive circuits will also be implemented.
 
-**Requirements:** Basic power converter knowledge, basic PCB design experience
+**Things you will learn:** Printed circuit board design, microcontrollers, power electronics and motor drive control systems
 
-## 7- Data acquisition and monitoring system software:
+**Requirements:** Basic power electronics knowledge, basic PCB design experience
 
-The aim of this project is to implement a software on [Raspberry Pi2](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/) for a data acquisition and monitoring device to be used on power systems. The software should include data acquisition from several analog inputs, real-time data visualisation, processing and recording. This project will be in collaboration with [OpenLab Tools](http://www.openlabtools.org/)
+## 7. Design of a power stage and gate drive PCB of an Integrated Modular Motor Drive Application
 
-**What you will learn:**  Graphical user interfaces (GUI), real-time data acquisition systems, Internet of things, Linux
+The aim of this project is to design and implement a power converter and gate drive printed circuit board for an integrated modular motor drive system using GaN power FETs. The PCB layout will be optimized for high frequency and high power interfaces. Conducted and radiated Electromagnetic Interference (EMI) analysis will be performed.
+Things you will learn: Printed circuit board design, power converter design with GaNs, high frequency PCB layout optimization, EMI analysis
 
-**Requirements:** Basic programming experience
+**Requirements:** Basic power electronics knowledge, basic PCB experience, familiarity with EMI concepts
 
-## 8- Auto-tuning of the control system of a DC/DC converter:
+## 8- Manufacturing of a Motor Control Experimental Test-Rig
 
-Conventional offline design of controllers for DC/DC power converters is complicated by unknown load characteristics, as well as uncertainties within the converter itself. Controllers with auto-tuning capability have the advantage of overcoming such issues. The aim of this project is to implement an auto-tuning algorithm on a digital control environment (such as Digital Signal Controllers) to be used on a simple low power DC/DC buck converter. The converter is also to be designed and implemented.
+In this project, laboratory control test setup for EE462 and EE565 will be manufactured and tested. Students will gain experience in hardware-in-the-loop equipment and Simulink software. The project will be implemented using A Texas Instrument decelopment board, which is commonly used in industry.
 
-**What you will learn:** DC/DC converters, digital control of power electronics devices, PCB design and manufacturing, software implementation of digital control
+## Other Projects
 
-**Requirements:** Basic power converter knowledge, experience in basic PCB design and embedded software
+If you are not interested in any of the projects above, but if you still would like to learn some knowledge on power electronics, electric machines and renewable energy. You are very welcome to attend the [PowerLab](http://power.eee.metu.edu.tr/) weekly meetings and journal club. 
 
-## 9- Manufacturing of Open Lab Tools
-
-In this project, laboratory measurement equipments (such as torque meter, tachometer) for the Machinery Lab will be designed and manufactured. Students with some experience in programming, PCB manufacturing and 3D printers are preferred. This project will be in collaboration with [OpenLab Tools](http://www.openlabtools.org/).
-
-
-# Free Projects
-
+<!---
+## Open Projects
 In the links below, you can find fascinating garage projects(not all related to Electrical Engineering) that I have collected over years, but unfortunately couldn't find any time to realize them. If you feel PASSIONATE about any of these projects, come and talk to me and I might assign it as a star project.
 
 
@@ -98,3 +96,5 @@ In the links below, you can find fascinating garage projects(not all related to 
 - [Open Desk](https://www.opendesk.cc/) 
 - [Secret Knock Detecting Door Lock](http://grathio.com/2009/11/secret_knock_detecting_door_lock/#more)
 - [Drawing Bot](http://makezine.com/2016/03/11/evil-mad-scientist-launches-axidraw/)
+-->
+
