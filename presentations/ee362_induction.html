@@ -69,20 +69,29 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 # Electric Machine Parts
 --
 
-### Rotor
+## Rotor
 --
 
-### Stator
+## Stator
 --
 
-### Airgap
+## Airgap
 --
 
-![](http://4.bp.blogspot.com/-CravkLOg9R4/UQfKrmjUivI/AAAAAAAAAWE/mXrWi7BGzms/s1600/induction-motor-construction.gif)
+## Tooth
+--
+
+## Slot
 
 ---
-# Distributed Winding
+# Electric Machine Parts
 
+<img src="http://osaglobalprocurement.com/Images/ElectroInside.gif" alt="Drawing" style="width: 700px;"/>
+
+---
+# Electric Machine Parts
+
+<img src="http://4.bp.blogspot.com/-CravkLOg9R4/UQfKrmjUivI/AAAAAAAAAWE/mXrWi7BGzms/s1600/induction-motor-construction.gif" alt="Drawing" style="width: 700px;"/>
 
 ---
 
@@ -105,9 +114,6 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ### How many different magnetic coupling designs can you find?
 ### You have lots of permanent magnet, Iron and Copper, but no electric source.
----
-
-# Armature Winding
 
 ---
 # WHY 3 PHASE? (but not 2 or 5?)
@@ -133,35 +139,60 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 # Rotating Magnetic Field !!
 ## The most important term for EE362
 
+## What is it??
+--
+
+### [Coca-Cola Motor](https://www.youtube.com/watch?v=cIf9iPskgJs)
+
+### [Simplest AC Motor](https://www.youtube.com/watch?v=vbh_yR9Ngc0)
+
 ---
-# Single Phase AC
+# Single Phase AC: A time varying signal
 
 # \\(I=sin(\omega t)\\)
 
 <img src="http://i.imgur.com/c9P9FPl.gif" alt="Drawing" style="width: 700px;"/>
 
-x-axis: Time
+### X-axis: Time
 ---
 # MMF created by a single coil
-### Assume sinusoidal distribution (Multiply with  \\(cos(\theta)\\))
 
-## \\(MMF=F_m(cos(\theta) sin(\omega t)\\)
+<img src="https://www.researchgate.net/profile/Naser_Hossein_Motlagh/publication/283498836/figure/fig9/AS:292402709053441@1446725646108/Figure-32-Lines-of-magnetic-flux-around-a-conductor-and-a-cylindrical-coil.png" alt="Drawing" style="width: 700px;"/>
+
+### If excited by DC:
+
+## \\(MMF=F_m cos(\theta)\\)
+
+---
+# MMF created by a single coil
+
+## What happens if the coil is excited with AC?
+--
+
+### DC excitation waveform multiplied with a time varying sinusoid: \\(sin(\omega t)\\)
+
+## \\(MMF=F_m cos(\theta) sin(\omega t)\\)
 --
 
 ## Standing wave!
 
-<img src="http://www.air-worldwide.com/uploadedImages/Blog/seiche.gif" alt="Drawing" style="width: 600px;"/>
+<img src="http://www.air-worldwide.com/uploadedImages/Blog/seiche.gif" alt="Drawing" style="width: 700px;"/>
 
 
 
 ---
-<img src="http://impiousdigest.com/wp-content/uploads/nikola-tesla-quotes-god-if-you-want-to-find-the-secrets-of-the-universe-think-in-terms-of-car-gallery-trends.jpg" alt="Drawing" style="width: 800px;"/>
+<img src="https://sayingimages.com/wp-content/uploads/tesla-quotes.jpg" alt="Drawing" style="width: 750px;"/>
 
 
 ---
 # Three Phase AC
 
+
+<img src="http://powerbyproxi.com/wp-content/uploads/2013/08/Nikola-Tesla-Electricity1.jpg" alt="Drawing" style="width: 500px;"/>
+
+
 ## Invented by Nicola Tesla in 1880s
+
 
 ### was independently invented by [Galileo Ferraris](https://en.wikipedia.org/wiki/Galileo_Ferraris), [Mikhail Dolivo-Dobrovolsky](https://en.wikipedia.org/wiki/Mikhail_Dolivo-Dobrovolsky), [Jonas Wenström](https://en.wikipedia.org/wiki/Jonas_Wenstr%C3%B6m) 
 ---
@@ -176,21 +207,59 @@ x-axis: Time
 # Three Phase AC: Rotating MMF
 
 <img src="http://www.ece.umn.edu/users/riaz/animations/sinvec.gif" alt="Drawing" style="width: 800px;"/>
+
+---
+# Let's derive it:
+## Yes it is boring, but quite important.
+### [Simplest AC Motor](https://www.youtube.com/watch?v=vbh_yR9Ngc0)
+--
+
+#### You have three coils, seperated with \\(2 \pi/3 \\) radians and excited with 3-phase current.
+
+## \\(I\_A (t) = I\_m cos (\omega t )\\)
+## \\(I\_B (t) = I\_m cos (\omega t - 2\pi /3 )\\)
+## \\(I\_C (t) = I\_m cos (\omega t - 4\pi /3)\\)
 ---
 <img src="https://frankgermano.files.wordpress.com/2013/10/quote-if-edison-had-a-needle-to-find-in-a-haystack-he-would-proceed-at-once-with-the-diligence-of-the-nikola-tesla-287671.jpg" alt="Drawing" style="width: 600px;"/>
+
+---
+## \\(F\_A (t) = F\_m cos (\theta) cos (\omega t )\\)
+## \\(F\_B (t) = F\_m cos (\theta - 2\pi/3) cos (\omega t )\\)
+## \\(F\_C (t) = F\_m cos (\theta- 4\pi/3) cos (\omega t )\\)
+--
+
+## \\(F\_{total} (t) = F\_A + F\_B + F\_C \\)
+--
+
+## \\(F\_{total} (t) = \dfrac{3}{2}F\_m cos (\theta - \omega t) \\)
+---
+# Rotation MMF
+
+## \\(F\_{total} (t) = \dfrac{3}{2}F\_m cos (\theta - \omega t) \\)
+
+### Generalized solution:
+--
+
+## N-phase 
+
+## \\(F\_{total} (t) = \dfrac{N\_{phase}}{2}F\_m cos (\theta - \omega t) \\)
+
+
 ---
 # Fundamental Idea of all AC Machines
 --
 
-<img src="http://wrightresults.com/wp-content/uploads/2014/04/donkey-and-carrot.jpg" alt="Drawing" style="width: 600px;"/>
+<img src="http://familywings.org/wp-content/uploads/2012/01/donkey-and-carrot.jpg" alt="Drawing" style="width: 600px;"/>
 ---
 # Rotating MMF
 
-<img src="http://qph.is.quoracdn.net/main-qimg-d7fda83b79737838adce561bd0f35f1b?convert_to_webp=true" alt="Drawing" style="width: 600px;"/>
+<img src="https://addicted2success.com/wp-content/uploads/2016/01/Thomas-Edison1.jpg" alt="Drawing" style="width: 600px;"/>
+
+---
+<img src="https://s-media-cache-ak0.pinimg.com/originals/92/86/54/9286549c76feba31890b5cce45690e0d.jpg" alt="Drawing" style="width: 600px;"/>
 
 ---
 <img src="http://www.tarihiolaylar.com/img/galeri/galeri_teslanin-cevabi-jpg_366628251_1440509349.jpg" alt="Drawing" style="width: 800px;"/>
-
 
 ---
 ## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
