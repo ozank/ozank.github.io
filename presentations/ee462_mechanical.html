@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE462-Utilization of Electtrical Energy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-462 UTILIZATION OF ELECTRICAL ENERGY
+
+# Mechanical Systems
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+
+# Linear Motion
+--
+
+### \\(\vec{f} = m \dfrac{d\vec{v}}{dt} \\) 
+--
+
+### It is more common to use "u" in mechanical systems
+
+### \\(u = \dfrac{dx}{dt} \\), \\(a = \dfrac{du}{dt} \\)  
+
+### \\(f\_{elec} - f\_{mech} = m \dfrac{du}{dt} \\) 
+--
+
+### Stored energy: \\(W = \dfrac{1}{2}m u^2\\)
+
+---
+
+# Rotational Motion
+--
+
+### \\(\vec{T} = J \dfrac{d\vec{\omega}}{dt} \\) 
+
+--
+
+### \\(\omega= \dfrac{d \theta}{dt} \\)  
+
+### \\(T\_{elec} - T\_{mech} = J \dfrac{d \omega }{dt} \\) 
+--
+
+### Stored energy: \\(W = \dfrac{1}{2}J \omega^2\\)
+
+---
+
+# Moment of Inertia
+--
+
+## What is its unit?
+--
+: \\(kg m^2\\)
+
+--
+
+<img src="http://ichef.bbci.co.uk/news/640/cpsprodpb/5E90/production/_85580242_85580241.jpg" alt="Drawing" style="width:600px;"/>
+
+---
+# Importance of Inertia in Drive Systems
+--
+
+## [Old Diesel Engine](https://www.youtube.com/watch?v=nFQ64a_cGXg)
+
+## [Engine Start](https://www.youtube.com/watch?v=iPyvKOWl7PY)
+--
+
+## Flywheel store kinetic energy, reduce speed ripples
+--
+
+## Reduces the dynamic performance of the drive 
+--
+
+
+## Large energy to dissipate in dynamic braking 
+---
+
+## What is the most common shape in electric motors?
+--
+
+## Cylinder
+--
+
+### What is the inertia of a solid cylinder?
+--
+
+
+## \\(J = \rho \dfrac{\pi}{2} R^4 L\\)
+--
+
+## \\(J = \dfrac{1}{2}M R^2\\)
+
+
+---
+# Rotational Inertia of Different Shapes
+
+<img src="http://www.physics.louisville.edu/cldavis/phys298/notes/rot_KEMofI2.jpg" alt="Drawing" style="width:800px;"/>
+
+---
+## Comparison of Different Shapes
+
+<img src="http://i.imgur.com/gsI96Gh.gif" alt="Drawing" style="width:700px;"/>
+---
+# Frictional Forces
+
+
+---
+## You can download this presentation from: [keysan.me/ee462](http://keysan.me/ee462)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
