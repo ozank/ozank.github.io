@@ -50,14 +50,27 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## $$\oint_C {\vec{H}.d\vec{\ell}} = N I $$
 --
 
-## $$ H = \dfrac{NI}{g} $$
+## $$ H = \dfrac{NI}{l} $$
+
+
+### \\(l\\) is the total integration length, or total airgap lenght if there is an infitinely permeable core.
 ---
 # Magnetic Field Intensity (H) in a Machine
 
 ## Single Coil
 --
 
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/mmf_single_coil.png" alt="Drawing" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/mmf_single_coil.png" alt="Drawing" style="width: 800px;"/>
+---
+# A few real-life examples
+
+### Chevy Spark EV [Motor Manufacturing](http://blog.caranddriver.com/we-build-the-chevy-spark-evs-ac-permanent-magnet-motor/)
+
+### [Disributed winding schematic](https://www.researchgate.net/profile/Jakob_Igelspacher/publication/241174581/figure/fig3/AS:340780838342662@1458259891354/Fig-4-Schematic-example-of-a-distributed-winding-of-an-axial-flux-induction-machine.jpg)
+
+### [Preformed coils](http://heinrich-schuemann.de/2.9.1/tl_files/images/produkte/stand3.jpg), [Preformed coils-2](https://en.partzsch.de/files/Komponenten/Staenderwicklungen/Formspulen/galerie/formspulen_6.jpg)
+
+### [Coils in the stator](https://emdxd.files.wordpress.com/2015/08/form.jpg), [Coils in the stator-2](https://4.imimg.com/data4/YY/YY/GLADMIN-/wp-content-uploads-2015-11-diamond_coils_03-500x500.jpg)
 ---
 # Constructing MMF Distribution
 --
@@ -70,12 +83,32 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## (MMF contribution from each coil)
 ---
 # Distributed Winding
---
 
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/distributed_coil.png" alt="Drawing" style="width: 500px;"/>
+### Many coils are connected in series and distributed over many slot to achine a more sinusoidal MMF distribution
+
+--
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/distributed_coil.png" alt="Drawing" style="width: 400px;"/>
 ---
 # Distributed Winding MMF
-<img src="http://cnx.org/resources/027491cac1a030cbcf2399c127519d441dcd034d/graphics15.png" alt="Drawing" style="width: 800px;"/>
+
+### Let's calculate the MMF distribution of the following coils with superposition method.
+--
+
+<img src="https://archive.cnx.org/resources/4c32a23bdea4d9526203717809c6d6c8bf92e77e/graphics13.png" alt="Drawing" style="width: 500px;"/>
+---
+# Distributed Winding MMF
+
+## If there were just one concentrated the coil, the MMF distribution would be be like:
+
+<img src="http://www.eeeguide.com/wp-content/uploads/2015/12/MMF-of-Distributed-AC-Windings.jpg" alt="Drawing" style="width: 500px;"/>
+
+---
+# Distributed Winding MMF
+
+### Let's calculate the MMF with the distributed coil:
+--
+
+<img src="https://archive.cnx.org/resources/8cbc00b4366fcb581988511a2b55b5bdee858576/graphics14.png" alt="Drawing" style="width: 600px;"/>
 
 ---
 # Distributed Winding Manufacturing
@@ -108,13 +141,35 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 - ## 12 slots
 - ## 3-phase (2 pole)
-- ## full-pitch
+- ## full-pitch (?)
 - ## Each coil has N-turns
 
 ---
+## Full-Pitch Coil ?
+--
+
+<img src="https://www.electrical4u.com/wp-content/uploads/2013/04/full-pitched-short-pitched-winding-11.10.13.png" alt="Drawing" style="width: 800px;"/>
+
+---
+## Full-Pitch Coil ?
 
 
+<img src="./images/full_pitch.png" alt="Drawing" style="width: 700px;"/>
 
+### (a)Full-pitched coil,  (b) Short-pitched coil
+
+---
+
+## Exercise: How to combine distributed winding with 3-phase?
+
+## Draw the following winding diagram.
+
+- ## 12 slots
+- ## 3-phase (2 pole)
+- ## full-pitch (?)
+- ## Each coil has N-turns
+
+---
 # Number of Poles
 --
 : 2-pole machine
@@ -155,7 +210,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 #Group Quiz
 --
 
-## Q1: 12 slot, distributed winding, Single Phase, (2 slots per pole per phase)
+## Q1: 12 slot, distributed winding, Single Phase, (2 slots per pole per phase). Full-pitched.
 --
 
 ### a) Draw the winding diagram in a developed diagram
