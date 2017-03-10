@@ -137,11 +137,17 @@ class: center, middle
 
 <img src="./images/ee462/load_inertia.png" alt="Drawing" style="width:700px;"/>
 ---
-## Motor with Load Inertia
+## Motor with Shaft: Equivalent Circuit
 
-### Equivalent Circuit
+<img src="./images/ee462/load_inertia_equivalent.png" alt="Drawing" style="width:600px;"/>
 
-<img src="./images/ee462/load_inertia_equivalent.png" alt="Drawing" style="width:700px;"/>
+### [Low-pass Pi Filter](https://en.wikipedia.org/wiki/Electronic_filter)
+
+### [Pi-Section Filters](http://www.kb6nu.com/tag/pi-network/)
+
+### [Modelling Shaft Stiffness in Simulink](https://www.mathworks.com/help/physmod/sps/powersys/ref/mechanicalshaft.html)
+
+### [Stiffness Animation](http://lpsa.swarthmore.edu/Systems/MechRotating/RotMechSysElem.html), [Drag Race](https://www.youtube.com/watch?v=mfJejgODr3E)
 ---
 ## Reading Materials
 
@@ -158,9 +164,9 @@ class: center, middle
 ### [Dynamics of a motor](http://www2.ece.ohio-state.edu/~passino/lab2_rotary_dynamics.pdf)
 
 ---
-# Dynamics of Mechanical Systems
+# Dynamics of Mechanical Systems: Resonance
 
-## Resonance
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Resonant_frequency_amplitude.svg/524px-Resonant_frequency_amplitude.svg.png" alt="Drawing" style="width:300px;"/>
 
 ### [Transfer function and mathematical modelling](https://www.slideshare.net/vishalgohel12195/transfer-function-and-mathematical-modeling)
 --
@@ -182,20 +188,181 @@ class: center, middle
 
 
 ---
-# Frictional Forces
+# Frictional Forces 
+--
+
+## Damping
+--
+
+<img src="http://www.maplesoft.com/view.aspx?SI=3926/forced_oscillations125.gif" alt="Drawing" style="width:600px;"/>
 
 ---
+# Frictional Forces: Coulomb friction
 
-## Couplings
+<img src="http://www.20sim.com/webhelp/coulombfriction_zoom80.jpg" alt="Drawing" style="width:500px;"/>
 
+### Constant force (does not change with speed)
+
+---
+# Frictional Forces: Viscous friction (Damping)
+
+<img src="http://www.20sim.com/webhelp/viscousfriction_zoom80.jpg" alt="Drawing" style="width:500px;"/>
+
+## Proportional to speed (\\(T= B \omega\\))
+---
+# Frictional Forces: Static friction
+
+### Extra friction (or stiction) at zero speed
+
+<img src="./images/ee462/friction.png" alt="Drawing" style="width:400px;"/>
+
+### Usually small and ignored in linear models
+---
+# Frictional Forces: Coulomb + Viscous
+
+### Extra friction (or stiction) at zero speed
+
+<img src="http://www.20sim.com/webhelp/coulombviscousfriction_zoom80.jpg" alt="Drawing" style="width:400px;"/>
+
+### [How to model in Simulink?](https://www.mathworks.com/help/simulink/slref/coulombandviscousfriction.html)
+
+---
+# Windage Torque
+--
+
+## Proportional to  \\(\omega^2\\)
+
+## \\(T \propto \omega^2\\)
+--
+
+## \\(P \propto \omega^3\\)
+
+--
+
+### Can be represented as damping if the speed is varying in a narrow range:
+
+## \\(T_B + T_W = B' \omega \\)
+---
+## Example: Drag Force in a Car
+
+<img src="https://images.cdn.circlesix.co/image/1/700/0/uploads/posts/2016/12/d278e6ad9147d08e4bf5c0bd4e8156a9.jpg" alt="Drawing" style="width:500px;"/>
+
+## \\(F = \dfrac{1}{2} \rho A C_D v^2 \\)
+---
+# Drag Coefficient
+
+<img src="http://www.aquaphoenix.com/lecture/matlab5/images-large/drag_coefficients.jpg" alt="Drawing" style="width:700px;"/>
+---
+# Drag Coefficient Comparison
+
+<img src="http://insideevs.com/wp-content/uploads/2014/06/ev-CdAs.jpg" alt="Drawing" style="width:800px;"/>
+---
+## Coupling Mechanisms: Direct Coupling
+
+<img src="http://3.bp.blogspot.com/-TJY53HY54o4/VKLxCEmiFPI/AAAAAAAAAwc/McACFqormIA/s1600/flanged-gear-coupling-lovejoy.png" alt="Drawing" style="width:300px;"/>
+
+### Sleeve Coupling
+
+
+---
+## Coupling Mechanisms: Direct Coupling
+
+<img src="http://image.dhgate.com/albu_254058321_00/1.0x0.jpg" alt="Drawing" style="width:360px;"/>
+
+### Jaw Type Coupling
+
+
+---
+## Coupling Mechanisms
+
+### Direct Coupling
+
+<img src="http://i1270.photobucket.com/albums/jj620/dykb1982/5x8mm-3.jpg~original" alt="Drawing" style="width:500px;"/>
+
+### Spiral Type Coupling
+
+---
+## Coupling Mechanisms
+
+## Gearbox
+
+<img src="http://www.wattdrive.com/images/news/product-news/2013-02/watt-drive-explosion-proof-gearbox-72.png" alt="Drawing" style="width:500px;"/>
+
+### Gear Ratio = \\( \omega\_{in}:\omega\_{out}\\)
+
+#### [Simulink Gearbox](https://www.mathworks.com/help/physmod/simscape/ref/gearbox.html)
+---
+## Coupling Mechanisms
+
+## Rack and Pinion
+
+<img src="http://coewww.rutgers.edu/classes/mae/mae488/hw/lectures/1116_files/gear2.gif" alt="Drawing" style="width:500px;"/>
+
+### From rotational to linear motion
+---
+## Coupling Mechanisms
+
+## Belt Coupling
+
+<img src="http://3.imimg.com/data3/OQ/AV/MY-733410/c-i-v-belt-pulley-500x500.jpg" alt="Drawing" style="width:500px;"/>
 
 ---
 
 # Coupling Issues
 
+## [Shaft Misalignment](https://www.youtube.com/watch?v=MXAsKFnCqUE)
+
 ## [Unbalanced rotor](https://www.youtube.com/watch?v=R2hO--TIjjA)
 
 ## [Rotor Critical Speed](https://www.youtube.com/watch?v=dO51IjGKrTM)
+---
+
+# Load Types
+--
+
+## Centrifugal Loads (Pump, Fan, etc)
+
+<img src="http://www.gouldspumps.com/getattachment/Products/VCW/VCW.jpg.aspx" alt="Drawing" style="width:500px;"/>
+
+## \\(T\_{load} = k \omega^2\\)
+## \\(P\_{load} = k \omega^3\\)
+---
+## Constant Power Loads 
+### Paper rolling machine
+
+<img src="http://i01.i.aliimg.com/img/pb/771/552/230/1259236602019_hz_myalibaba_web9_537.jpg" alt="Drawing" style="width:400px;"/>
+
+### Constant tension should be applied at constant linear speed
+---
+## Constant Torque Loads
+### Compressors
+
+<img src="http://www.machineco.com/Compressor_Air_15HP_V-4cyl_RKMachinery_1.JPG" alt="Drawing" style="width:400px;"/>
+
+## \\(P\_{load} = k \omega\\)
+---
+## Constant Torque Loads: Conveyors
+
+<img src="http://www.linearmotiontips.com/wp-content/uploads/2016/04/ETM-Motors-for-direct-drive-of-conveyor.jpg" alt="Drawing" style="width:400px;"/>
+
+### Usually there is a high starting torque (to overcome static friction)
+---
+## Constant Torque Loads: Crane Hoists
+
+<img src="http://www.morrow.com/sites/default/files/images/parts/drives/feature.jpg" alt="Drawing" style="width:400px;"/>
+
+### There exist a viscous friction force combined with load mass
+
+### \\(T\_{load} = B \omega + T\_{mech}\\)
+
+### Requires a four-quadrant drive
+---
+## Constant Torque Loads: Crane Hoists
+
+### Four quadrant operation
+
+<img src="./images/ee462/crane.png" alt="Drawing" style="width:500px;"/>
+
 ---
 ## You can download this presentation from: [keysan.me/ee462](http://keysan.me/ee462)
 
