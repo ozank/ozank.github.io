@@ -66,10 +66,10 @@ permalink: /cv/index.html
 
 - Rapporteur, EU [Cost Action](http://www.cost.eu/)
 
-|Reviews for   | IEEE Transactions on Industrial Electronics|
+|Reviews for   | IET Renewable Power Generation Journal|
 |              | IEEE Transactions on Industrial Informatics|
 |              | IEEE Transactions on Applied Superconductivity|
-|              | IET Renewable Power Generation Journal|
+|              | IEEE Transactions on Industrial Electronics|
 |              | IEEE International Conference on Electrical Machines and Drives|
 |              | IET Power Electronics, Machines and Drives Conference|
 |              | IEEE International Conference on Electrical Machines|
@@ -84,9 +84,8 @@ My main area of interests are renewable energy, design of electric machines, and
 
 |2016-2017| ASELSAN Rail-Gun Project| Electromagnetic Design and Optimization of a 200kJ-2MJ Rail Gun.|
 |2016| BAP| Design of a Modular Data Acqusition Board.|
-|2016| Andar Servo| Design and Manufacturing of a Eddy Current Dampr for Aeorospace Application|
+|2016| Andar Servo| Design and Manufacturing of a Eddy Current Damper for Aeorospace Application|
 |2016| Andar Servo| Design and Manufacturing of a Brushless PM Servo Motor.|
-|2016-2017| BAP| Design of a Modular Data Acqusition Board.|
 |2015 | Newton Fund Mobility Grant | Design of a superconducting wind turbine prototype.|
 |2014–2016 | TUBITAK 2232 Project | Design of modular and fault-tolerant generators for direct-drive wind turbines.|
 |2011–2014 | EU FP7 Project | [Marina Platform](http://www.marina-platform.info/) Project is an EU FP7 project with 17 industrial and academic partners. I am working as a full-time researcher in the project, which aims to design combined wave and wind energy platforms. My duty is to compare different generator topologies and power take-off systems in terms of efficiency and reliability.|
@@ -103,7 +102,7 @@ My main area of interests are renewable energy, design of electric machines, and
 
 ### Middle East Technical University
 
-For a full list of courses that I am teaching please visit my [Courses](/courses) page.
+For a full list of courses that I thought please visit my [Courses](/courses) webpage.
 
 - EE281: Electric Circuits
 - EE361: Electromechanical Energy Conversion-I
@@ -128,12 +127,6 @@ For a full list of courses that I am teaching please visit my [Courses](/courses
 
 -   The Industrial Doctoral Centre for Offshore Renewable Energy
     (four-year EngD programme), *"Introduction to Superconductivity and Superconducting Generators"*.
-
-**Supervision:**
-
--   Mario Recio Lara, *"Development of a mobile phone application to detect speed and faults of electrical machines"*, MSc Thesis, 2013.
--   Marzia Akbari, *"Comparison and control of power take-off systems for
-    combined wind/wave energy platforms"*, MSc Thesis, 2013.
 
 ------------
 
@@ -190,15 +183,22 @@ For a full list of courses that I am teaching please visit my [Courses](/courses
 ## Activities & Hobbies
 
 - Mountaineering: Active Member of METU Mountaineering Club
-- Sailing: Dinghy and Yacht Sailing, Certificate of Competence For Operators of Pleasure Craft.
+- Sailing: Dinghy and Yacht Sailing, (Certificate of Competence For Operators of Pleasure Craft).
 - Blogging: *[asuyatuyolar.org](http://www.asuyatuyolar.org)*, *[keysan.me/blog](http://keysan.me/blog)*
 
 ## Languages
 
 -  English (Fluent),   Spanish (Intermediate),   Chinese (Beginner)
 
-## Publications-Completed Theses
+## Publications
 
 <script src="http://bibbase.org/show?bib=http://bibbase.org/mendeley2/363361&groupby=type&jsonp=1&folding=1"></script> 
+
+## Completed Theses
+
+-   Öztürk Şahin Alemdar, *"Design and Implementation of an Unregulated DC/DC Transformer Module Using LLC Resonant Converter"*, MSc Thesis, 2016. 
+-   Mario Recio Lara, *"Development of a mobile phone application to detect speed and faults of electrical machines"*, MSc Thesis, 2013.
+-   Marzia Akbari, *"Comparison and control of power take-off systems for
+    combined wind/wave energy platforms"*, MSc Thesis, 2013.
 
 

@@ -3,7 +3,7 @@ layout: home
 title: Ozan Keysan
 ---
 
-**Courses this semester: [EE362](/ee362) <span class="meta">&#8226;</span> [EE462](/ee462)**
+**This semester: [EE362](/ee362) <span class="meta">&#8226;</span> [EE462](/ee462)**
 
 
 **Research Group: [METU PowerLab](http://power.eee.metu.edu.tr/)**
