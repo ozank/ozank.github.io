@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE462-Utilization of Electtrical Energy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-462 UTILIZATION OF ELECTRICAL ENERGY
+
+# DC Motor Drives
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Motor Drives
+--
+
+## Torque Control (Current Control)
+
+## Speed Control
+
+
+---
+
+# Motor Drives
+
+
+<img src="./images/ee462/motor_drive_control.png" alt="Drawing" style="width: 700px;"/>
+---
+
+# Motor Drives
+
+
+<img src="./images/ee462/motor_drive_control2.png" alt="Drawing" style="width: 600px;"/>
+
+
+---
+# DC Motor Drives wrt Supply
+--
+
+# DC/DC Drives
+--
+
+# AC/DC Drives
+--
+
+# 3Ph AC/DC Drives
+
+
+---
+#DC/DC Drives: Simplest PWM Generator
+
+<img src="./images/ee462/simple_pwm.png" alt="Drawing" style="width: 800px;"/>
+--
+
+## A few definitions:
+
+### D: duty cycle, fs: switching frequency, T: period
+
+---
+#DC/DC Drives: Simplest PWM Generator
+
+<img src="./images/ee462/simple_pwm.png" alt="Drawing" style="width: 800px;"/>
+
+## \\(V\_{dc}= \dfrac{t\_{on}}{T}V\_s = D V\_s\\)
+
+---
+#DC/DC Drives: Simplest PWM Generator
+
+<img src="./images/ee462/simple_pwm.png" alt="Drawing" style="width: 800px;"/>
+
+### What is the problem with this configuration as a DC motor drive?
+--
+
+### Inductive Load! Solution: add a frewheeling diode
+
+---
+#One-Quadrant DC Motor Drive
+
+## Chopper with Freewheeling Diode
+
+<img src="./images/ee462/one_quadrant_dc_drive.png" alt="Drawing" style="width: 800px;"/>
+---
+
+#One-Quadrant DC Motor Drive
+
+
+### Forward Motoring Mode
+--
+
+### \\(V_s = L_a \dfrac{di_a}{dt}+R_a i_a + E_a\\)
+--
+
+### Frewheeling Mode
+### \\(0 = L_a \dfrac{di_a}{dt}+R_a i_a + E_a\\)
+
+---
+
+#One-Quadrant DC Motor Drive
+--
+
+<img src="./images/ee462/one_quadrant_continuous.png" alt="Drawing" style="width: 400px;"/>
+### Continuous Mode of Operation
+
+---
+#One-Quadrant DC Motor Drive
+--
+
+#### Armature time constant: \\(\tau_a =\dfrac{L_a}{R_a}\\)
+--
+
+#### Forward Motoring Mode:
+
+###\\(i_a(t) = I_1 e^{(-t/\tau_a)}+ \dfrac{V_s-E_a}{R_a} (1- e^{(-t/\tau_a)})\\)
+--
+
+### If \\(T<<\tau_a\\),  using Taylor series approximation:
+
+###\\(i_a(t) \approx I_1 (1- \dfrac{t}{\tau_a}) + \dfrac{V_s-E_a}{L_a} t\\)
+
+---
+
+### Freewheeling Mode:
+--
+
+The magnitude of current at the beginning of the freewheeling cycle:
+
+###\\(I_2 = I_1 e^{(-dt/\tau_a)}+ \dfrac{V_s-E_a}{R_a} (1- e^{(-dT/\tau_a)})\\)
+--
+
+###\\(i_a(t) = I_2 e^{(-t/\tau_a)} - \dfrac{E_a}{R_a} (1- e^{(-t/\tau_a)})\\)
+--
+
+#### If \\(T<<\tau_a\\),  using Taylor series approximation:
+
+###\\(i_a(t) \approx I_2 (1- \dfrac{t}{\tau_a}) - \dfrac{E_a}{L_a} t\\)
+
+---
+## Continuous Mode of Operation
+
+### Reading for Derivations [Ch10](http://onlinelibrary.wiley.com/book/10.1002/9780470876541)
+
+### Current Ripple: \\(\Delta I = I_2 - I_1\\)
+
+### Current Ripple: \\(\Delta I = \dfrac{V_s}{R_a} \Bigg[\dfrac{1-e^{-dT/\tau_a} + e^{-T/\tau_a} - e ^{-(1-d)T/\tau_a}}{1-e^{-T/\tau_a}}\Bigg]\\)
+
+--
+
+### Max. current ripple occurs when:
+--
+\\(d=0.5\\)
+--
+
+### Max. ripple \\(\approx \dfrac{V_s}{R_a}tanh(\dfrac{T}{4\tau_a})\\)
+
+---
+## Discontinuous Mode 
+--
+
+## Discontinuous conduction may occur when:
+--
+
+## - Ea is high
+--
+
+## - Load is light (small Ia)
+--
+
+## - T is long (small switching frequency)
+--
+
+## - \\(\tau_a\\) is small (low inductance)
+---
+
+## Discontinuous Mode 
+
+## Group Exercise:
+--
+
+# Plot Ia, Is, Id, Va
+
+---
+## Discontinuous Mode 
+
+<img src="./images/ee462/one_quadrant_discontinuous.png" alt="Drawing" style="width: 500px;"/>
+
+---
+## Discontinuous Mode 
+
+### \\(\beta = \dfrac{\tau_a}{T} ln (\dfrac{V_s-E_a}{E_a} (1-e^{-dT/\tau_a})+1) \\)
+--
+
+### Chopper gets into discontinuous mode when:
+
+### \\( 1-d-\beta > 0 \\)
+--
+
+### \\(d_c = \dfrac{\tau_a}{T} ln ( 1+ \dfrac{E_a}{V_s} (e^{T/\tau_a})-1) \\)
+
+### If \\(d \lt d_c \rightarrow \\) discontinuous mode  
+
+---
+## Discontinuous Mode 
+
+### Approximate method
+
+### If \\(T << \tau_a\\)
+### \\(\beta \approx \dfrac{(V_s - E_a)d}{E_a}\\)
+
+--
+### Chopper gets into discontinuous mode when:
+
+### \\( 1-d-\beta > 0  \rightarrow d V_s \lt E_a\\)
+
+---
+## DC Chopper
+
+### Averaging Method
+--
+
+### If \\(T << \tau_a\\)
+
+
+### \\(V\_{dc} = d V\_{s}\\)
+
+### \\(I\_{av}= \dfrac{V\_{dc}-E\_a}{R\_a}\\)
+
+### \\(T\_{av}= K I\_{av}\\)
+
+---
+# First Quadrant Chopper
+
+### Positive Torque & Positive Speed
+### Positive Current & Positive Voltage
+--
+
+<img src="http://www.circuitstoday.com/wp-content/uploads/2012/01/Chopper-First-Quadrant.jpg" alt="Drawing" style="width: 750px;"/>
+
+---
+# Second Quadrant Chopper
+
+### Negative Torque & Positive Speed
+### Negative Current & Positive Voltage
+--
+
+<img src="http://www.circuitstoday.com/wp-content/uploads/2012/01/Chopper-Second-Quadrant.jpg" alt="Drawing" style="width: 750px;"/>
+
+---
+# Two-Quadrant Chopper
+
+### Combine the previous choppers 
+--
+
+<img src="http://www.circuitstoday.com/wp-content/uploads/2012/01/Chopper-Two-Quadrant.jpg" alt="Drawing" style="width: 750px;"/>
+
+---
+# Two-Quadrant Chopper
+
+### Forward Motoring: T1, D4
+### Regenerative Braking: T4, D1 
+
+<img src="./images/ee462/two_quadrant.png" alt="Drawing" style="width: 600px;"/>
+---
+# Alternative Two-Quadrant Chopper
+
+<img src="./images/ee462/alternative_two_quadrant.png" alt="Drawing" style="width: 650px;"/>
+
+---
+# Four-Quadrant Chopper
+## Combine double two-quadrant choppers
+
+<img src="./images/ee462/four_quadrant.png" alt="Drawing" style="width: 650px;"/>
+
+
+---
+## You can download this presentation from: [keysan.me/ee462](http://keysan.me/ee462)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
