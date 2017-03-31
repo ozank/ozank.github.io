@@ -291,6 +291,112 @@ The magnitude of current at the beginning of the freewheeling cycle:
 
 <img src="./images/ee462/four_quadrant.png" alt="Drawing" style="width: 650px;"/>
 
+---
+# Four-Quadrant Chopper
+## Operating Modes
+
+---
+## Exercise
+
+---
+# Control of Four-Quadrant Choppers
+--
+
+## PWM control
+--
+
+<img src="https://qph.ec.quoracdn.net/main-qimg-5aaab7d90b562ccbe1a65aaf75f06c9b-c" alt="Drawing" style="width: 600px;"/>
+---
+# Control of Four-Quadrant Choppers
+
+## PWM control
+
+- ### Switching Frequency: Fixed at Carrier Freq.
+--
+
+- ### Speed Response: Fast
+--
+
+- ### Ripple Current: Fixed
+--
+
+- ### Filter Size: Usually Small
+
+
+---
+# Control of Four-Quadrant Choppers
+
+## Hysteresis Control
+
+<img src="https://au.mathworks.com/help/physmod/sps/powersys/ug/gs_fig_19.gif" alt="Drawing" style="width: 450px;"/>
+---
+# Control of Four-Quadrant Choppers
+
+## Hysteresis Control
+
+- ### Switching Frequency: Varying
+--
+
+- ### Speed Response: Faster
+--
+
+- ### Ripple Current: Adjustable
+--
+
+- ### Filter Size: Depends on current hysteresis
+
+---
+
+# Motor Drives
+
+
+<img src="./images/ee462/motor_drive_control.png" alt="Drawing" style="width: 700px;"/>
+
+- [Control Tutorials - DC Motor PID Controller](http://ctms.engin.umich.edu/CTMS/index.php?example=MotorSpeed&section=ControlPID)
+
+- [PID without a PhD](http://m.eet.com/media/1112634/f-wescot.pdf)
+
+---
+# Input to the Chopper
+--
+
+## Diode Rectifier
+
+<img src="./images/ee462/chopper_input.png" alt="Drawing" style="width: 700px;"/>
+---
+# Input to the Chopper
+
+## Diode Rectifier
+--
+
+## Advantages:
+
+- ### Near Unity Power Factor
+- ### No Control Input
+--
+
+## Disadvantages
+
+- ### No Regenerative Braking
+
+---
+# Input to the Chopper
+
+## How to enable bi-directional power flow?
+--
+
+<img src="https://puserscontentstorage.blob.core.windows.net/userimages/cf3e2b5d-8391-4350-a2c8-acb324804778/5b75fc3f-dc2c-4996-8467-42a9ab850178image19.png" alt="Drawing" style="width: 500px;"/>
+---
+
+# Input to the Chopper
+
+## Regenerating Converter
+
+- ### Converter is operated with a firing angle close to 180 degree
+
+- ### Only when \\(V\_s > 1.35 V\_{l-l(rms)}\\) regenerating is possible
+---
+# Conclusions
 
 ---
 ## You can download this presentation from: [keysan.me/ee462](http://keysan.me/ee462)

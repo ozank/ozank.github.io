@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE462-Utilization of Electtrical Energy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-462 UTILIZATION OF ELECTRICAL ENERGY
+
+# AC to DC Motor Drives
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Review:
+--
+
+## Half-wave Controlled Rectifier?
+--
+
+<img src="https://kullabs.com/uploads/image024.gif" alt="Drawing" style="width: 800px;"/>
+
+---
+
+# 1-Ph AC Input DC Motor Drives
+--
+
+## Single Phase Full-wave Rectifier
+
+<img src="./images/ee462/single_phase_full_wave.png" alt="Drawing" style="width: 500px;"/>
+
+
+---
+## Single Phase Full-wave Rectifier
+
+<img src="./images/ee462/single_phase_full_wave2.png" alt="Drawing" style="width: 700px;"/>
+
+
+---
+## Single Phase Full-wave Rectifier
+
+
+## \\( V\_d = \dfrac{1}{\pi} \int\_{\alpha}^{\pi + \alpha} \sqrt{2}V_s sin(\omega t) d(\omega t)\\)
+--
+
+## \\( V\_d = \dfrac{2\sqrt{2}}{\pi} V\_s cos (\alpha)\\)
+--
+
+## \\( V\_d = 0.9 V\_s cos (\alpha)\\)
+
+
+#### Ref: Mohan Chapter-6: Single Phase Converters
+
+---
+## Single Phase Full-wave Rectifier
+
+<img src="./images/ee462/Vd_full_wave_rectifier.png" alt="Drawing" style="width: 750px;"/>
+
+#### Ref: Mohan Chapter-6: Single Phase Converters
+
+---
+## Single Phase Full-wave Rectifier
+
+### Harmonics on the Source Side
+
+<img src="./images/ee462/single_phase_rectifier_harmonics.png" alt="Drawing" style="width: 550px;"/>
+
+#### Fourier expansion of a square wave
+
+---
+## Single Phase Full-wave Rectifier
+
+### with Non-zero Line Inductance (\\(L_s\\))
+
+<img src="./images/ee462/single_phase_full_wave_Ls.png" alt="Drawing" style="width: 500px;"/>
+
+### Implies non-zero commutation period
+---
+## Single Phase Full-wave Rectifier
+
+
+### Implies non-zero commutation period
+
+<img src="./images/ee462/single_phase_rectifier_commutation
+.png" alt="Drawing" style="width: 750px;"/>
+
+#### Ref: Mohan Chapter-6: Single Phase Converters
+
+---
+
+## Application as a DC Motor Drive
+
+<img src="./images/ee462/single_phase_thyristor_drive
+.png" alt="Drawing" style="width: 500px;"/>
+
+---
+
+## Application as a DC Motor Drive
+
+### Can you plot the waveforms?
+--
+
+<img src="./images/ee462/single_phase_thyristor_drive_cont.png" alt="Drawing" style="width: 800px;"/>
+
+### Continuous Conduction Mode
+---
+## Application as a DC Motor Drive
+
+### Continuous Conduction Mode
+
+## \\( V\_d \approx 0.9 V\_s cos (\alpha) - \dfrac{2}{\pi} \omega L\_s I\_{d(min)} \\)
+
+
+
+---
+
+## Application as a DC Motor Drive
+
+<img src="./images/ee462/single_phase_thyristor_drive_discont.png" alt="Drawing" style="width: 800px;"/>
+
+### Discontinuous Conduction Mode
+
+---
+# 3-Phase Thyristor Rectifiers
+
+<img src="./images/ee462/3ph_thyristor_rectifier.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# 3-Phase Thyristor Rectifiers
+
+## Can you plot the waveforms?
+---
+
+
+<img src="./images/ee462/3ph_thyristor_voltage.png" alt="Drawing" style="width: 750px;"/>
+
+---
+# 3-Phase Thyristor Rectifiers
+
+<img src="./images/ee462/3ph_thyristor_voltage2.png" alt="Drawing" style="width: 750px;"/>
+
+### \\(V\_{do}= \dfrac{3\sqrt{2}}{\pi}V\_{l-l} = 1.35 V\_{l-l}\\)
+--
+
+### \\(V\_{d\alpha}= \dfrac{3\sqrt{2}}{\pi}V\_{l-l} cos (\alpha)= 1.35 V\_{l-l} cos (\alpha)\\)
+
+---
+# Effect of Supply Reactance
+--
+
+### Introduces a voltage drop on the rectified side
+
+- ### Single Phase: \\(\dfrac{2\omega L_s}{\pi}I_a\\)
+--
+
+- ### Three Phase: \\(\dfrac{3\omega L_s}{\pi}I_a\\)
+--
+
+- ### Resultant voltage in a 3-ph rectifier:
+
+### \\(V\_{d\alpha}= \dfrac{3\sqrt{2}}{\pi}V\_{l-l} cos (\alpha) - \dfrac{3\omega L_s}{\pi}I_a \\)
+
+---
+# Applications as DC Motor Drives
+
+
+---
+## You can download this presentation from: [keysan.me/ee462](http://keysan.me/ee462)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
