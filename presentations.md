@@ -6,6 +6,12 @@ permalink: /presentations/index.html
 
 ## Recent Presentations
 
+
+### 2017
+
+
+* [EEE Induction Course](https://docs.google.com/presentation/d/1R1ZmGRX_92i5elfx05uXmj9EHNj2sKrFu8xxosCMkmk/pub?start=false&loop=false&delayms=3000)
+
 ### 2016
 
 * ODTÜ Güç ve Enerji Kongresi [Current Trends and Challenges in Wind Energy](https://docs.google.com/presentation/d/1P6MdOSiaULh4ER0X-CHea7ilb3HtPa9qUvMtzMrF6Og/edit?usp=sharing)
