@@ -32,16 +32,115 @@ class: center, middle
 Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
+## Full Operating Range of Induction Machines
+
+<img src="http://3.bp.blogspot.com/-UgtGzlAh8Hg/TjfvfIq4RWI/AAAAAAAABB0/JgP5kaYr1V0/s1600/ABB190.jpeg" alt="Drawing" style="width: 800px;"/>
+
+---
+
+# Operation Modes of Induction Motors
+
+--
+
+# 1- Motoring
+--
+
+# 2- Generating
+--
+
+# 3- Braking (Plugging)
+
+---
+# Motoring
+
+## Slip: \\(0 < s < 1\\)
+--
+
+## Power Flow: Electrical to Mechanical
+
+<img src="http://pubs.sciepub.com/ajeee/4/2/3/bigimage/fig1.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Generating
+
+## Slip: \\(s < 0\\)
+
+## Power Flow: Mechanical to Electrical
+
+
+
+
+
+---
+# Braking (Plugging)
+### Slip: \\(s > 1\\)
+
+## Power Flow: Mechanical+Electrical to Heat
+--
+
+<img src="https://3.bp.blogspot.com/-Y_HjqnZLkig/Vs1oeZuSv0I/AAAAAAAAA64/z0xwXGgqfR4/s1600/plugging-on-induction-motor.jpeg" alt="Drawing" style="width: 600px;"/>
+
+### Plugging obtained by interchanging two stator phases
+
+---
+# Machine Dynamics
+
+## Torque Balance Equation
+
+## \\(T\_{elec} - T\_{load} - T\_{friction} = J \dfrac{d \omega}{dt} \\)
+
+
+---
+# Four-Quadrant Operation
+
+<img src="http://lh4.ggpht.com/_X6JnoL0U4BY/S1hWPpFVASI/AAAAAAAAH6g/2f2K5R2I-I0/tmp2B719_thumb1_thumb.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Linear Approximation of Torque
+--
+
+## Accurate torque expression
+### Valid for all values of slip
+
+### \\(T\_e = \dfrac{3 V\_{th}^2}{(R\_{th}+\dfrac{r'\_2}{s})^2 + (X\_{th}+X'\_2)^2}\dfrac{r'\_2}{s \omega\_s}\\)
+
+--
+
+### However, under steady-state conditions, slip is usually very small (<5%)
+---
+# Linear Approximation of Torque
+
+## \\(s < 0.05\\)
+--
+
+## \\(\dfrac{r\_2'}{s} >> R\_{th}, X\_{th}, X\_{2}'\\)
+
+### Torque equation becomes
+--
+
+### \\(T\_{e} \approx \dfrac{3 V\_{th}^2 s}{r'\_2 \omega\_s}\\)
+---
+# Linear Approximation of Torque
+
+## \\(T\_{e} \approx \dfrac{3 V\_{th}^2 s}{r'\_2 \omega\_s}\\)
+
+
+## \\(T\_{e} \approx k s\\)  
+
+## (only valid for small values of s)
+
+---
+
 # Control of Induction Motors
 ---
 
 # Speed Control Problems
 --
 
-- ## Load constant, Speed reference changed
+- ## Load constant, Speed reference is changed
 --
 
-- ## You want the speed constant, but load torque is changing, 
+- ## You want the speed constant, but load torque is changed 
 --
 
 - ## Both speed reference and load variable
@@ -122,9 +221,10 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ---
 # Flux Weakening Range
 
-## Voltage is not increased beyond rated.
+### Voltage is not increased beyond rated
+### If the torque is kept constant at high speeds, power limit will be exceeded.
 
-<img src="http://lh6.ggpht.com/_X6JnoL0U4BY/S1huqYNgsAI/AAAAAAAAINw/Fo55efK7w8s/tmp32315_thumb1_thumb.png?imgmax=800" alt="Drawing" style="width: 600px;"/>
+<img src="http://lh6.ggpht.com/_X6JnoL0U4BY/S1huqYNgsAI/AAAAAAAAINw/Fo55efK7w8s/tmp32315_thumb1_thumb.png?imgmax=800" alt="Drawing" style="width: 500px;"/>
 
 
 ---
@@ -135,8 +235,10 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 <img src="http://www.ibiblio.org/kuphaldt/electricCircuits/AC/02512.png" alt="Drawing" style="width: 700px;"/>
 
+### Rotor Currents are dissipated as heat
+
 ---
-# Rotor Resistance Control
+# Slip Energy Recovery
 
 ## Use a Converter to Increase Efficiency
 
@@ -188,31 +290,76 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## [Bard Offshore Wind Farm](http://www.bard-offshore.de/en/concepts/wecs/nacelle.html)
 
 ---
-# Example
+## Exercises
 
-### A 480 V, 50 hp induction motor is drawing 60 A at 0.85 pf lagging.	
---
- The stator copper losses are 2kW and the rotor copper losses are 700W.
---
- The friction and windage losses are 600 W, the core losses are 1800 W and the stray losses are negligible, find:
+### Yıldırım Üçtug Solved Problems, Feb 2004, CH2 - Q4:
 --
 
-- ### The air gap power.
+### The following observations are made on a 3-phase, 50-Hz, Y-connected, 380 V rms line-to-line induction motor with negligible stator winding resistance and core loss.
 --
 
-- ### The converted power.
+### i) At no-load the motor is rotating at 745 rpm.
 --
 
-- ### The output power.
+### ii) The stator can not be started with a heavy load, but it only starts when the load torque is reduced to 236 Nm
 --
 
-- ### The efficiency of the motor
+### iii) When the motor is running at rated speed, the load is gradually increased and it is found that the rotor speed reduced down to 600 rpm, but after it decelerates and stops.
+
+---
+
+# CH2 - Q4:
+
+### The following observations are made on a 3-phase, 50-Hz, Y-connected, 380 V rms line-to-line induction motor with negligible stator winding resistance and core loss.
+
+### i) At no-load the motor is rotating at 745 rpm.
+
+### ii) Starting Torque =  236 Nm
+
+
+### iii) Maximum torque at 600 rpm.
+
 --
 
-- ### Torque of the motor
---
+## b-c) Calculate the referred rotor resistance and total leakage reactance (stator+rotor)?
+---
 
-- ### Rotational speed of the rotor
+# CH2 - Q4:
+
+### The following observations are made on a 3-phase, 50-Hz, Y-connected, 380 V rms line-to-line induction motor with negligible stator winding resistance.
+
+### i) At no-load the motor is rotating at 745 rpm.
+
+### ii) Starting Torque =  236 Nm
+
+
+### iii) Maximum torque at 600 rpm.
+
+
+### d) If the rotational power is 1518 W, find the air-gap power, rotor copper loss, internal mechanical power and the net output power when the rotor is rotating at 712.5 rpm
+
+---
+
+# CH2 - Q4:
+
+### The following observations are made on a 3-phase, 50-Hz, Y-connected, 380 V rms line-to-line induction motor with negligible stator winding resistance and core loss.
+
+### i) At no-load the motor is rotating at 745 rpm.
+
+### ii) Starting Torque =  236 Nm
+
+
+### iii) Maximum torque at 600 rpm.
+
+
+### e) Calculate the efficiency at 712.5 rpm
+
+---
+# Solutions
+
+## [Download Solutions](https://www.dropbox.com/s/5z57zzdlzeba0z9/362_recitation.pdf?dl=1)
+
+
 
 ---
 
