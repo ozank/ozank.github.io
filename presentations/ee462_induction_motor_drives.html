@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE462-Utilization of Electtrical Energy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-462 UTILIZATION OF ELECTRICAL ENERGY
+
+# Induction Motor Drives
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Speed Control Problems
+
+
+---
+# Voltage Control Techniques
+
+
+
+---
+## SCR Based AC Voltage Controller
+
+<img src="http://www.daenotes.com/images/3-phase-motor-control-using-SCR.JPG" alt="Drawing" style="width: 500px;"/>
+
+
+### Generates sinusoidal voltages and hence only preferred in small motors (with fan loads)
+
+---
+## SCR Based AC Voltage Controller
+
+### AC voltage is chopped, so that RMS value is reduced
+
+
+<img src="./images/ee462/SCR1.png" alt="Drawing" style="width: 350px;"/>
+
+---
+## SCR Based AC Voltage Controller
+
+### AC voltage is chopped, so that RMS value is reduced
+
+
+<img src="./images/ee462/SCR2.png" alt="Drawing" style="width: 500px;"/>
+
+---
+## Speed Control by Rotor Resistance Control
+
+<img src="./images/ee462/resistance_control1.png" alt="Drawing" style="width: 500px;"/>
+
+---
+## Speed Control by Rotor Resistance Control
+
+<img src="./images/ee462/resistance_control2.png" alt="Drawing" style="width: 700px;"/>
+
+### Duty cycle of the chopper can be adjusted to control the equivalent resistance.
+
+
+---
+## Speed Control by Rotor Resistance Control
+
+<img src="./images/ee462/resistance_control3.png" alt="Drawing" style="width: 300px;"/>
+--
+
+### Power dissipated in resistor:
+--
+\\(P\_{av}=I\_d^2 R\_{ex} (1-D)\\)
+--
+
+### \\(P\_{av}=3 I\_{2(rms)}^2 R\_{ex-eq}\\)
+--
+
+### \\(R\_{ex-eq}=\dfrac{1}{2} (1-D) R\_{ex}\\)
+---
+## Speed Control by Rotor Resistance Control
+
+<img src="./images/ee462/resistance_control4.png" alt="Drawing" style="width: 700px;"/>
+
+### \\(P_{ag}=T \omega_s\\)
+--
+
+### \\(P\_{rotor} = s P\_{ag} \approx V\_d I\_d = \dfrac{3\sqrt{6}}{\pi} s E\_2 I\_d\\)
+---
+## Speed Control by Rotor Resistance Control
+
+<img src="./images/ee462/resistance_control4.png" alt="Drawing" style="width: 700px;"/>
+
+### \\( s P\_{ag} = s T \omega_s = s \dfrac{3\sqrt{6}}{\pi}  E\_2 I\_d\\)
+
+### \\(T \propto I_d\\)
+
+---
+## Rotor Slip Energy Recovery
+
+### Instead of dissipating return to source
+
+<img src="http://circuitglobe.com/wp-content/uploads/2016/02/SLIP-ENERGY-RECOVERY-FIGURE.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+## Rotor Slip Energy Recovery
+
+<img src="./images/ee462/slip_energy_recovery.png" alt="Drawing" style="width: 600px;"/>
+
+### For torque control measure Id and vary firing angle
+---
+## Speed Control via Line Frequency Control
+
+### \\(T\_e = \dfrac{3 V\_{th}^2}{(R\_{th}+\dfrac{r'\_2}{s})^2 + (X\_{th}+X'\_2)^2}\dfrac{r'\_2}{s \omega\_s}\\)
+
+---
+# Linear Approximation of Torque
+--
+
+## Accurate torque expression
+### Valid for all values of slip
+
+### \\(T\_e = \dfrac{3 V\_{th}^2}{(R\_{th}+\dfrac{r'\_2}{s})^2 + (X\_{th}+X'\_2)^2}\dfrac{r'\_2}{s \omega\_s}\\)
+
+--
+
+### However, under steady-state conditions, slip is usually very small (<5%)
+---
+# Linear Approximation of Torque
+
+## \\(s < 0.05\\)
+--
+
+## \\(\dfrac{r\_2'}{s} >> R\_{th}, X\_{th}, X\_{2}'\\)
+
+### Torque equation becomes
+--
+
+### \\(T\_{e} \approx \dfrac{3 V\_{th}^2 s}{r'\_2 \omega\_s}\\)
+---
+# Linear Approximation of Torque
+
+## \\(T\_{e} \approx \dfrac{3 V\_{th}^2 s}{r'\_2 \omega\_s}\\)
+
+
+## \\(T\_{e} \approx k s\\)  
+
+## (only valid for small values of s)
+---
+
+# Speed Control via Line Frequency Control
+
+## What happens if we reduce f, with constant V?
+--
+
+## \\(\Phi\\) increases, core will saturate
+
+## Not desirable!
+--
+
+## How can we keep \\(\Phi\\) constant?
+
+
+---
+# Speed Control via Line Frequency Controls
+
+## Constant V/f (or Constant Flux) Operation 
+---
+
+# Constant V/f Operation
+
+### Alternative representation of linear torque expression
+
+### \\(T\_{e} \approx \dfrac{3 V\_{th}^2 s}{r'\_2 \omega\_s}\\)
+--
+\\(= \dfrac{3 V\_{th}^2 s}{r'\_2 \omega\_s} \dfrac{\omega\_s}{\omega\_s}\\)
+--
+
+## \\(T\_{e} \approx \dfrac{3}{r'\_2} {(\dfrac{V\_{th}}{\omega\_s})}^2 \omega\_{slip}\\)
+
+## Torque is proportional to slip speed!
+
+---
+# Constant V/f Operation
+
+<img src="./images/ee462/Vf_torque.png" alt="Drawing" style="width: 750px;"/>
+
+---
+# Example
+--
+
+## 3-Phase, 440 V, 60 Hz, 10 hp, 1746 rpm, 4-pole induction motor is driven by constant flux operation.
+--
+
+### a) Plot torque-speed curve (linear portion) for the stator terminal frequencies of 60 Hz and 45 Hz.
+--
+
+### b) For a squared-power load, which requires rated torque at rated speed, calculate the operating speeds.
+
+---
+### Use a Variable Voltage-Frequency Source
+
+<img src="http://radio.feld.cvut.cz/matlab/toolbox/powersys/stud_c56.gif" alt="Drawing" style="width: 650px;"/>
+
+---
+# Constant Flux Operation
+
+### \\(T\_{max}\\) is constant  
+<img src="http://www.scielo.br/img/revistas/jbsmse/v29n1/a04fig01.gif" alt="Drawing" style="width: 400px;"/>
+--
+
+### What happens if the speed is increased beyond rated speed under V/f control?
+
+---
+# Flux Weakening Range
+
+### If the torque is kept constant at high speeds, power limit will be exceeded
+### Even if you wanted to increase, there may be a limit on the input voltage level
+
+<img src="http://lh6.ggpht.com/_X6JnoL0U4BY/S1huqYNgsAI/AAAAAAAAINw/Fo55efK7w8s/tmp32315_thumb1_thumb.png?imgmax=800" alt="Drawing" style="width: 450px;"/>
+
+---
+# Constant Flux Operation
+
+<img src="http://www.ece.umn.edu/users/riaz/animations/vf3.gif" alt="Drawing" style="width: 400px;"/>
+---
+
+# Flux weakening
+
+<img src="http://www.gozuk.com/image/vf-pattern.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+# Constant V/f Operation
+
+## Remember, we assumed \\(V\_1 \approx E\_1\\)
+--
+
+## This assumption is less valid when:
+--
+
+- ### High loads (I is high)
+--
+
+- ### Lower speeds (voltage drop on R is more visible)
+--
+
+
+## Need to boost the voltage to neutralize this effect! 
+---
+
+# Constant V/f Operation with Voltage Boost
+
+<img src="./images/ee462/voltage_boost.png" alt="Drawing" style="width: 750px;"/>
+
+---
+# 3-Phase Voltage Source Inverter (VSI)
+--
+## Two level VSI
+
+<img src="./images/ee462/vsi.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# 3-Phase Voltage Source Inverter (VSI)
+
+## Operating Principle
+
+### Do not close:
+
+- ### S1 and S4
+- ### S3 and S6
+- ### S2 and S5
+
+## never at the same time!
+
+---
+## Square wave
+
+<img src="./images/ee462/vsi_pwm.png" alt="Drawing" style="width: 300px;"/>
+
+---
+## PWM with Two-Level VSI
+
+<img src="http://machinedesign.com/site-files/machinedesign.com/files/uploads/2014/10/Yaskawa-2_0.gif" alt="Drawing" style="width: 700px;"/>
+
+---
+
+## PWM with Two-Level VSI
+
+<img src="./images/ee462/vsi_pwm2.png" alt="Drawing" style="width:600px;"/>
+
+---
+## PWM with Two-Level VSI
+
+### Amplitude modulation index
+
+## \\(m\_a=\dfrac{\hat{V}\_m}{\hat{V}\_{cr}}\\)
+
+### Frequency modulation index
+
+## \\(m\_f=\dfrac{f\_{cr}}{f\_m}\\)
+
+---
+## PWM with Two-Level VSI
+
+### For modulation index: 0 <m <1:
+
+## \\(V1\_{ll} = \dfrac{\sqrt{3}}{2\sqrt{2}} m\_a V\_d = 0.612 m\_a V\_d\\)
+
+---
+## Typical Voltage-Current Waveforms
+
+<img src="./images/ee462/vsi_pwm3.png" alt="Drawing" style="width:600px;"/>
+---
+
+## Overmodulation (m>1)
+
+<img src="./images/ee462/vsi_pwm4.png" alt="Drawing" style="width:550px;"/>
+---
+
+## Overmodulation (m>1)
+
+<img src="./images/ee462/vsi_pwm5.png" alt="Drawing" style="width:300px;"/>
+
+---
+# Harmonics Effects
+
+
+---
+
+## You can download this presentation from: [keysan.me/ee462](http://keysan.me/ee462)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
