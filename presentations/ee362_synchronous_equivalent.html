@@ -32,22 +32,6 @@ class: center, middle
 Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
-
-# Review: Induced Voltage
---
-<img src="http://www.alternative-energy-tutorials.com/images/stories/wind/alt64.gif" alt="Drawing" style="width: 800px;"/>
-
----
-
-# Review: Field Current
-
-## Induced voltage \\(\propto\\) Field Current \\(\times\\) Frequency
-
-### (Beware of saturation & residual magnetism)
-
-<img src="http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/design/images/figs/oc_test.jpg" alt="Drawing" style="width: 300px;"/>
-
----
 # Review: Torque in Synchronous Machines
 --
 
@@ -79,36 +63,6 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 # Torque vs Load Angle
 
 <img src="./images/synchronous_load_angle.png" alt="Drawing" style="width: 700px;"/>
----
-# Equivalent Circuit: Armature Reaction
-
-## \\(\vec{E\_{ar}}\;\\) lags \\(\;\vec{\Phi\_{ar}}\\) 90 degrees
---
-
-## Armature reaction can be represented as a voltage drop in an inductance
-
-
-## \\(\vec{E\_{ar}} = -j X\_{Q} \vec{I\_a}\\) 
-
----
-# Simple Equivalent Circuit
-
-#### Assumption: Cylindrical rotor (constant air-gap)
-
-<img src="./images/sync_simple_equivalent.png" alt="Drawing" style="width: 500px;"/>
-
-### \\(\vec{E\_{R}} = \vec{E\_{f}} -j X\_{Q} \vec{I\_a}\\)
-
----
-# Simple Equivalent Circuit
-
-## However, there is also the leakage flux: \\(\;jX\_{l}\\)
---
-
-## Define stator total reactance as:
-# \\(jX\_S = jX_Q + jX_l\\)
-
-### Thus, the equivalent circuit becomes:
 
 ---
 # Simple Equivalent Circuit
@@ -124,7 +78,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ---
 # Equivalent Circuit
 
-## Common Values:
+## Typical Values:
 
 ## \\(jX_Q \approx 1-2 \\) pu
 
@@ -138,18 +92,6 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 <img src="./images/sync_simple_equivalent4.png" alt="Drawing" style="width: 600px;"/>	
 
----
-## Remember the Equivalent Circuit is per Phase
-
-### Synchronous machines can be Wye or Delta connected
-
-<img src="./images/synch_wye.png" alt="Drawing" style="width: 500px;"/>
----
-## Remember the Equivalent Circuit is per Phase
-
-### Synchronous machines can be Wye or Delta connected
-
-<img src="./images/synch_delta.png" alt="Drawing" style="width: 500px;"/>
 
 ---
 # Most important definitions
@@ -168,20 +110,6 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ### Neglect \\(R\_a\\) for now.
 
 ---
-## A few exercises with the simple equivalent circuit
-
-### Neglect \\(R\_a\\) for now.
-
-<img src="./images/sync_simple_equivalent2.png" alt="Drawing" style="width: 500px;"/>
-
-### What happens with leading, lagging and unity power factor?
----
-## Repeat the same with \\(R\_a\\) included
-
-<img src="./images/sync_simple_equivalent3.png" alt="Drawing" style="width: 600px;"/>
-
-### What happens with leading, lagging and unity power factor?
----
 # Full Equivalent Circuit with Field Circuit
 
 <img src="./images/synch_full_circuit.png" alt="Drawing" style="width: 800px;"/>
@@ -190,26 +118,13 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ### \\(L\_f\\) can be neglected at steady state (DC) conditions
 
 ## Remember \\(I\_f\\) can be controlled to adjust \\(E\_f\\) 
----
-## That big generator is equivalent to:
-
-
-<img src="http://www.intechopen.com/source/html/38933/media/image37.jpeg" alt="Drawing" style="width: 350px;"/>
-
-#### Enercon Wind Turbine Synchronous Generator (12 rpm)
-
----
-
-# Full Equivalent Circuit with Field Circuit
-
-<img src="./images/synch_full_circuit.png" alt="Drawing" style="width: 800px;"/>
 
 ---
 # Operation Modes:
 --
  Standalone Generating
 
-### You have a single diesel generator supplying a load
+### Assume you have a single diesel generator supplying a load
 --
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LqpQZd9XxJM" frameborder="0" allowfullscreen></iframe>
 
@@ -217,39 +132,54 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 # Standalone Generating
 
 # Challenge:
-
-- ## Keep the terminal voltage constant
-- ## Keep the frequency of the electricity constant
-	
 --
 
-### Assume we have a inductive load (lagging pf)
-### Assume the field current and speed is constant and see what happens with increasing load.
+- ## Keep the terminal voltage constant
+--
+
+- ## Keep the frequency of the electricity constant
+	
+---
+# Standalone Generation
+--
+
+## Assume we have a resistive load (unity pf)
+--
+
+## Assume the field current and speed is kept constant and see what happens to terminal voltage as we increase the load.
 
 ---
-# Lagging Power Factor
+## Standalone Generation with Unity Power Factor
 
-<img src="./images/sync_lagging_pf.png" alt="Drawing" style="width: 450px;"/>
+### Speed is kept constant.
+### \\(I_f\\) is kept constant and hence magnitude of \\(E_f\\) constant
 
-### As load increases, \\(V_t\\) considereably decreases.
-
-#### Assumptions: Speed constant, \\(I_f\\) constant
----
-# Unity Power Factor
+--
 
 <img src="./images/sync_unity_pf.png" alt="Drawing" style="width: 600px;"/>
 
-### As load increases, \\(V_t\\) slightly decreases.
+## As load increases, \\(V_t\\) slightly decreases. [Animation](http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/stand_alone/sa_phasors.html)
 
-#### Assumptions: Speed constant, \\(I_f\\) constant
+
+---
+## Standalone Generation with Lagging Power Factor
+
+### Magnitude of \\(E_f\\) constant
+--
+
+<img src="./images/sync_lagging_pf.png" alt="Drawing" style="width: 450px;"/>
+
+### As load increases, \\(V_t\\) considereably decreases. [Animation](http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/stand_alone/sa_phasors.html)
+
+
 ---
 # Leading Power Factor
 
 <img src="./images/sync_leading_pf.png" alt="Drawing" style="width: 550px;"/>
 
-### As load increases, \\(V_t\\) slightly increases.
+### As load increases, \\(V_t\\) slightly increases. [Animation](http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/stand_alone/sa_phasors.html)
 
-#### Assumptions: Speed constant, \\(I_f\\) constant
+
 ---
 # Voltage Regulation
 --
@@ -258,13 +188,13 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
 
-## In a power grid, we want the frequency and voltage to be constant.
+## In a standalone power system, we want to keep the frequency and voltage constant.
 --
 
 # Solution?
 --
 
-# Control Field Current
+## Control Field Current to adjust \\(E_f\\) so that constant \\(V_t\\) magnitude can be achieved
 
 ---
 # AVR?
@@ -279,11 +209,11 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ![](http://www.findsminimodelhotbulbengines.dk/boksermotor%202.JPG-for-web-LARGE.jpg)
 ---
-# Speed Controller (Speed Governor)
-
 ![](http://www.eagleridgetech.com/images/Centrifugal_governor.png)
+--
 
-### Centrifugal Flyball System
+## Speed Governor: 
+## Centrifugal Flyball System works as a speed controller
 
 ---
 # Watt's  Steam Engine
