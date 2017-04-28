@@ -338,7 +338,194 @@ class: center, middle
 <img src="./images/ee462/vsi_pwm5.png" alt="Drawing" style="width:300px;"/>
 
 ---
+## VSI Controller
+
+<img src="./images/ee462/vsi_controller.png" alt="Drawing" style="width:700px;"/>
+
+---
+## Drive Topologies
+--
+
+### PWM-VSI with a Diode Rectifier
+
+<img src="./images/ee462/converter1.png" alt="Drawing" style="width:750px;"/>
+
+---
+## Drive Topologies
+
+### Square Wave-VSI with a Controlled Rectifier
+
+<img src="./images/ee462/converter2.png" alt="Drawing" style="width:750px;"/>
+
+---
+## Drive Topologies
+
+### Current Source Inverter
+
+<img src="./images/ee462/converter3.png" alt="Drawing" style="width:750px;"/>
+---
+## Drive Topologies
+
+### Current Source Inverter
+
+<img src="./images/ee462/current_source_inverter.png" alt="Drawing" style="width:350px;"/>
+
+---
+# Challenges of Variable Frequency Drives
+---
+
+## High Dynamic Performance
+--
+
+## Low Inertia Rotor
+
+<img src="https://www.toyodenki.co.jp/en/products/industrial/lineup/motor/img/dsd-02.jpg" alt="Drawing" style="width:600px;"/>
+
+
+### But beware of natural frequencies (especially at high speeds)
+
+---
+
+# Thermal Challenges
+--
+
+## Variable Speed vs. Cooling
+
+--
+
+<img src="http://www.newpages2u.com/images/1383893906bb9b6dc038900e31425bd8c6c9203257.jpg" alt="Drawing" style="width:500px;"/>
+
+
+### Induction Motor Internal Fan
+---
+## Variable Speed vs. Cooling
+
+<img src="http://img.directindustry.com/images_di/photo-g/162644-10119156.jpg" alt="Drawing" style="width:400px;"/>
+
+### Motor with External Fan
+---
+## Variable Speed vs. Cooling
+
+<img src="https://s-media-cache-ak0.pinimg.com/originals/f7/08/d6/f708d62b036887f0a1356c9f3dff35d1.gif" alt="Drawing" style="width:600px;"/>
+
+### Inverter driven motors usually equipped with PTC thermistors
+---
+## Variable Speed vs. Cooling
+
+<img src="http://www.globalspec.com/npapics/70/112662_110620121180_ExhibitPic.jpg" alt="Drawing" style="width:400px;"/>
+
+### Inverter driven motors usually equipped with PTC thermistors
+---
+# Additional Losses
+--
+
+- ## Stator-rotor copper losses
+
+## \\(P\_{loss}=3 \sum_{k=1}^{\infty} (R\_s + R\_r') I^2_k  \\)
+
+--
+- ## Core losses!
+
+---
+## Derating of a general purpose motor
+
+<img src="http://www.acdrive.org/image/harmonic-voltage-factor.jpg" alt="Drawing" style="width:500px;"/>
+
+### \\(HVF = \sqrt{ \sum_{k=5}^{\infty} (\dfrac{V_n}{n})^2}  \\)
+
+#### More info: [WEG-Inverter Driven Motors](http://ecatalog.weg.net/files/wegnet/WEG-induction-motors-fed-by-pwm-50029350-technical-article-english.pdf)
+---
+# Challenges: Life-time
+--
+
+## High dv/dt!
+
+### With IGBT it can be around 3000V/μS
+--
+
+## Reduces the insulation lifetime
+--
+
+## Introduce additional losses (core)
+--
+
+## Puts a limit on the motor cable length
+
+---
+# High dv/dt filters
+--
+
+<img src="https://www.lcautomation.com/Images/ocw/6446_401_300.jpg" alt="Drawing" style="width:350px;"/>
+
+#### A few commercial products:
+
+[Eagtop](http://www.passivedevice.com/5-8-dvdt-filters.html), [MTECorp](http://www.mtecorp.com/pages_lang/wp-content/uploads/INSTR-019Rel041119dVdTFilterSeriesA440-600VACUserManual.pdf), [Schaffner](http://www.schaffner.com/products/power-magnetics/dvdt-filters/)
+
+
+#### A better but more expensive product is [sine wave filters](http://chziri.com/en/Catalogue/Sine-Wave-Filter-24.html)
+---
+# Challenges: Life-time
+
+## Bearing/Shaft Currents
+--
+
+<img src="./images/ee462/bearing_current1.png" alt="Drawing" style="width:500px;"/>
+
+#### [Further Info](http://www.kyservice.com/wp-content/uploads/2017/03/EASA-Shaft-Bearing-Currents.pdf)
+---
+# Challenges: Life-time
+
+## Bearing/Shaft Currents
+
+<img src="./images/ee462/bearing_current2.png" alt="Drawing" style="width:500px;"/>
+
+#### [Further Info](http://www.kyservice.com/wp-content/uploads/2017/03/EASA-Shaft-Bearing-Currents.pdf)
+---
+# Challenges: Life-time
+
+## Bearing/Shaft Currents
+
+<img src="./images/ee462/bearing_current3.png" alt="Drawing" style="width:500px;"/>
+
+#### [Further Info](http://www.kyservice.com/wp-content/uploads/2017/03/EASA-Shaft-Bearing-Currents.pdf)
+---
+# Challenges: Life-time
+
+## Bearing/Shaft Currents
+
+<img src="http://www.vibescorp.ca/eibd_images/3.jpg" alt="Drawing" style="width:750px;"/>
+
+#### [Further Info](http://www.kyservice.com/wp-content/uploads/2017/03/EASA-Shaft-Bearing-Currents.pdf)
+
+---
+## Bearing/Shaft Currents
+### Reduction: Use Symmetrical multi-core cable
+
+### Use HF Bonding Strap
+
+<img src="./images/ee462/symmetrical_cable.png" alt="Drawing" style="width:600px;"/>
+
+#### [Further Info-ABB Application Note](https://library.e.abb.com/public/8c253c2417ed0238c125788f003cca8e/ABB_Technical_guide_No5_RevC.pdf)
+---
+## Bearing/Shaft Currents
+### Reduction: Use Common Mode Chokes
+
+<img src="http://www.mhw-intl.com/wp-content/uploads/2012/01/MHW-M117-2-Clamp-System.jpg" alt="Drawing" style="width:500px;"/>
+
+#### [Common Mode Chokes](http://www.mhw-intl.com/applications/by-solution/cmc/)
+---
+## Bearing/Shaft Currents
+### Reduction: Use Ceramic Bearing 
+
+### Ceramic is not conducting, hence no bearing currents
+
+<img src="http://www.bocabearings.com/Files/Images/Full-Ceramic-Bearings-1.jpg" alt="Drawing" style="width:600px;"/>
+
+---
+
 # Harmonics Effects
+
+<img src="https://www.mathworks.com/help/physmod/sps/ref/pwm_generator_three_phase_three_level_model_plot.png" alt="Drawing" style="width:700px;"/>
 ---
 
 # Inverter Harmonics
@@ -347,12 +534,16 @@ class: center, middle
 <img src="http://www.acdrive.org/image/harmonic-torques.jpg" alt="Drawing" style="width:700px;"/>
 
 ### Torque due to higher frequency current harmonics
+
 ---
 # Inverter Harmonics
 
-<img src="http://www.acdrive.org/image/harmonic-voltage-factor.jpg" alt="Drawing" style="width:700px;"/>
+## Over-modulation range
 
-### Reduction in efficiency
+### Would you prefer Wye or Delta connection to reduce harmonics?
+--
+
+### Would you prefer Wye or Delta connection for higher speed operation?
 
 ---
 ## Motor Harmonics
@@ -366,7 +557,46 @@ class: center, middle
 <img src="http://www.eeeguide.com/wp-content/uploads/2016/10/Cogging-and-Crawling-1.jpg" alt="Drawing" style="width:650px;"/>
 ---
 ### Cogging Torque
+--
 
+### Why does the rotor is skewed?
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Wirnik_by_Zureks.jpg/1200px-Wirnik_by_Zureks.jpg" alt="Drawing" style="width:550px;"/>
+
+---
+# Acoustic Noise
+--
+: Fan Blades
+
+<img src="https://www.turbines-rc.com/4612-thickbox_default/changesun-12-blade-64mm-edf-ducted-fan-2600kv-motor-4s.jpg" alt="Drawing" style="width:300px;"/>
+
+## Can you guess the frequency of the noise?
+--
+
+## \\(f= N\_{blades}*f\_{rotor}\\)
+---
+# Acoustic Noise
+--
+: Magnetic Pull
+
+<img src="http://www.evtechexpo.com/assets/files/images/news%20pages/Exhibitor%20News/MDL_%20Equipmake_EVTech_Newsletter_11_March_2016_Picture.jpg" alt="Drawing" style="width:300px;"/>
+
+## Can you guess the frequency of the noise?
+--
+
+## Most dominant: \\(2*f\_{switching}\\)
+
+### Avoid noise around 2 kHz ([Online Tone Generator](http://onlinetonegenerator.com/))
+---
+
+# Dunning-Kruger Effect
+--
+
+<img src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAgdAAAAJDZjNzZlZWRlLTNiZWYtNGI3OS05YWEwLThhNWMwNjY1YjViZQ.jpg" alt="Drawing" style="width:500px;"/>
+---
+# Dunning-Kruger Effect
+
+<img src="https://www.cheatography.com/uploads/davidpol_1447558649_dunning-kruger-0011.jpg" alt="Drawing" style="width:750px;"/>
 
 ---
 
