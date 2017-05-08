@@ -63,6 +63,20 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## \\(Q = \dfrac{3 V\_t (E\_f cos(\delta)-V\_t)}{X\_s} \\) 
 
 ---
+# Direction of P, Q?
+--
+
+## Power (P) flows from leading side to lagging side
+--
+
+## Reactive Power (Q) flows from over-excited to under-excited side.
+
+--
+
+## Lagging pf generator supplies Q, lagging pf motor absorbs Q
+
+
+---
 
 # Synchronous Generator Connected to Infinite Bus
 
@@ -86,12 +100,14 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
 ## Synchronous Generator Connected to Infinite Bus
+
+### There exists two main operating modes:
 --
 
-## Constant Excitation, Variable Load (Circle Diagram)
+- ## Constant Excitation, Variable Load (Circle Diagram)
 --
 
-## Constant Power, Variable Excitation
+- ## Constant Power, Variable Excitation
 
 
 ## [Animation](http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/parallel/infinite_bus%20_op.html)
@@ -107,7 +123,9 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 # Group Exercise
 --
 
-# Draw \\(I\_f\\) vs \\(I\_a\\) for constant power
+## For a generator connected to infinite bus:
+
+# Draw \\(I\_f\\) vs \\(I\_a\\) if the power kept constant.
 
 
 ---
@@ -169,12 +187,13 @@ Source: Fitzgerald, Electric Machinery
 ### 100 MVAr, 300 tons,  built by [WEG](http://www.weg.net/us/Media-Center/News/Products-Solutions/WEG-Manufactures-Mega-Synchronous-Condensers), [Manufacturing Video](https://www.youtube.com/watch?v=8g6CssH5iWo)
 
 ---
-# Example:
+## Example:
 --
 
 ## 500 MVA, 3-phase, 4-pole, Y-connected synchronous generator connected to 22 kV infinite bus.
 --
- Prime mover power (i.e. mechanical power) is set to 300 MW.
+
+## Prime mover power (i.e. mechanical power) is set to 300 MW.
 --
 
 ### a) Find E and load angle for a power factor of 0.8 lagging.
@@ -184,6 +203,37 @@ Source: Fitzgerald, Electric Machinery
 --
 
 ### c) The field current is changed, and the power factor is adjusted to unity at 300 MW. Calculate the new load angle and the E.
+
+---
+# Operating Limits of Synchronous Machines
+--
+
+## What are the factors that limit the power output from the synchronous generator?
+---
+# Operating Limits of Synchronous Machines
+
+
+- ## Stator Heating: \\(\propto I_a^2\\)
+--
+
+- ## Rotor Heating: Limited \\( I_f\\) = Limited \\( E_f\\)
+--
+
+- ## Mechanical Power Input Limit
+--
+
+- ## Stability Limit \\(\delta < 90 \\)
+### Most cases it is much smaller for extra safety
+
+---
+# Operating Limits of Synchronous Machines
+<img src="./images/synch_limits.png" alt="Drawing" style="width: 650px;"/>
+---
+# Real Data
+
+<img src="./images/cummins_stability.png" alt="Drawing" style="width: 600px;"/>
+
+### [Source:Cummins Generators](http://power.cummins.com/sites/default/files/literature/technicalpapers/PT-6001-ImpactofPowerFactorLoads-en.pdf)
 
 ---
 # Synchronous Machine Tests
@@ -226,72 +276,6 @@ Source: Fitzgerald, Electric Machinery
 --
 
 <img src="http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/design/images/figs/xs_plot.jpg" alt="Drawing" style="width: 454px;"/>
----
-# Operating Limits of Synchronous Machines
---
-
-## What are the factors that limit the power output from the synchronous generator?
----
-# Operating Limits of Synchronous Machines
-
-
-- ## Stator Heating: \\(\propto I_a^2\\)
---
-
-- ## Rotor Heating: Limited \\( I_f\\) = Limited \\( E_f\\)
---
-
-- ## Mechanical Power Input Limit
---
-
-- ## Stability Limit \\(\delta < 90 \\)
-### Most cases it is much smaller for extra safety
-
----
-# Operating Limits of Synchronous Machines
-<img src="./images/synch_limits.png" alt="Drawing" style="width: 650px;"/>
----
-# Real Data
-
-<img src="./images/cummins_stability.png" alt="Drawing" style="width: 650px;"/>
-
-### [Source:Cummins Generators](http://power.cummins.com/sites/default/files/literature/technicalpapers/PT-6001-ImpactofPowerFactorLoads-en.pdf)
----
-# Direction of P, Q?
---
-
-## Power (P) flows from leading side to lagging side
---
-
-## Reactive Power (Q) flows from over-excited to under-excited side.
-
---
-
-## Lagging pf generator supplies Q, lagging pf motor absorbs Q
-
-[Power flow in synchronous machines](http://www.ece.umd.edu/class/enee474.F2003/PDF%20Files/MG.pdf)
-
----
-# Temperature Effect
-
-<img src="http://www.wilko.com/content/ebiz/wilkinsonplus/invt/0316169/0316169_l.jpg" alt="Drawing" style="width: 500px;"/>
-### How does the resistance change with time?
-
----
-# Temperature Effect
-
-## Temperature Coefficient
-## $$R(T) = R(T_0)(1 + \alpha\Delta T)$$
---
-
-### For copper (at 20 C)
-
-### $$\alpha = 0.003862\;K^{-1}$$
-
-[Ref1](http://hyperphysics.phy-astr.gsu.edu/hbase/tables/rstiv.html), [Ref2](http://en.wikipedia.org/wiki/Electrical_resistivity_and_conductivity)
-
---
-### Resistivity of copper increases 30% from 20 C to 100 C.
 
 
 ---
