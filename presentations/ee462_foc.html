@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE462-Utilization of Electtrical Energy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-462 UTILIZATION OF ELECTRICAL ENERGY
+
+# Basics of the Field Oriented Control
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+
+# Background Information Reading Material
+
+### [Vector Control for Dummies](https://www.switchcraft.org/learning/2016/12/16/vector-control-for-dummies)
+
+### [What is Field Oriented Control?](http://www.copleycontrols.com/Motion/pdf/Field-Oriented-Control.pdf)
+
+### [Field Oriented Control](https://mycourses.aalto.fi/pluginfile.php/155905/mod_resource/content/4/Lecture10.pdf)
+
+### [Field Oriented Control of AC Motors](http://www.ti.com/lit/an/bpra073/bpra073.pdf)
+
+### [Sensorless PMSM Field Oriented Control](http://cache.nxp.com/assets/documents/data/en/reference-manuals/DRM148.pdf)
+
+### [Space Vector PWM](https://www.switchcraft.org/learning/2017/3/15/space-vector-pwm-intro)
+
+---
+# Three Phase AC
+
+<img src="http://www.ece.umn.edu/users/riaz/animations/sinwaves0.gif" alt="Drawing" style="width: 750px;"/>
+---
+# Three Phase AC: Rotating MMF
+
+<img src="http://www.ece.umn.edu/users/riaz/animations/vecmovieslow.gif" alt="Drawing" style="width: 500px;"/>
+---
+# Three Phase AC: Rotating MMF
+
+<img src="http://www.ece.umn.edu/users/riaz/animations/sinvec.gif" alt="Drawing" style="width: 800px;"/>
+
+---
+# Fundamental Idea of all AC Machines
+
+
+<img src="http://wrightresults.com/wp-content/uploads/2014/04/donkey-and-carrot.jpg" alt="Drawing" style="width: 600px;"/>
+
+
+### Field Oriented Control (FOC) is keeping the carrot exactly at the optimum distance (i.e. 90 degrees)
+ 
+---
+# Some Useful Mathematical Tools
+--
+
+- ## Clarke Transformation
+- ## Park Transformation
+
+
+---
+# [Clarke](https://en.wikipedia.org/wiki/Edith_Clarke) Transformation
+## (a-b-c) to \\(\alpha \beta \\) Transformation
+
+## From three-phase to two orthogonal phase transformation
+--
+
+### Note: In a balanced three-phase system, \\(I_a + I_b + I_c =0\\)  so there is redundant information and system can be reduced to two variables.
+
+---
+# Clarke Transformation
+
+<img src="https://www.keil.com/pack/doc/CMSIS/DSP/html/clarke.gif" alt="Drawing" style="width: 600px;"/>
+
+---
+# Clarke Transformation
+
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/36e05ba56ec15de753eb9f3c60983bc874e31370" alt="Drawing" style="width: 750px;"/>
+
+---
+# Park Transformation
+--
+
+## From stationary frame to rotationary frame
+--
+
+## Instead of dealing with sinusoidal signals, just  use the magnitudes.
+--
+
+## When reconstructing signals use the rotor position information
+
+---
+# Park Transformation
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/58664f0f2994ca78b5145f29/1483099927549/?format=750w" alt="Drawing" style="width: 750px;"/>
+
+
+
+---
+# Park Transformation
+--
+
+## \\(I\_d = I\_\alpha  cos(\theta) + I\_\beta sin (\theta)\\)
+--
+
+## \\(I\_q = I\_\beta  cos(\theta) - I\_\alpha sin (\theta)\\)
+--
+
+<img src="./images/ee462/park_transform.png" alt="Drawing" style="width: 400px;"/>
+
+---
+## Reference Frames
+
+<img src="./images/ee462/reference_frames.png" alt="Drawing" style="width: 750px;"/>
+---
+## Clarke and Park Transformations
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/5866535e414fb5c4d35ed4cb/1483101083243/ClarkePark_Animation?format=500w" alt="Drawing" style="width: 500px;"/>
+---
+# Torque and Flux Control
+--
+
+# Id: Proportional to flux in the airgap
+--
+
+# Iq: Proportional to torque generated
+
+
+---
+# Inverse Transforms
+--
+
+## Required to apply reference voltage and current waveforms (sinusoidals)
+--
+
+- ## Inverse Park Transform
+- ## Inverse Clarke Transform
+
+
+---
+# Inverse Park Transform
+--
+
+## From rotation frame to stationary frame
+--
+
+
+## \\(I\_\alpha = I\_d  cos(\theta) - I\_q sin (\theta)\\)
+--
+
+## \\(I\_\beta = I\_q  cos(\theta) + I\_d sin (\theta)\\)
+
+---
+
+## Inverse Clarke Transform
+
+### From two-axis orthogonal plane to 3-phase stationary frame.
+
+<img src="http://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/171/3750._F764D653_.JPG" alt="Drawing" style="width: 500px;"/>
+
+---
+## Whole Workflow
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/58c88acd579fb3efb64797c9/1489537751460/?format=1000w" alt="Drawing" style="width: 750px;"/>
+
+---
+# Classical Vector Control Diagram
+
+<img src="http://3l4sbp4ao2771ln0f54chhvm.wpengine.netdna-cdn.com/wp-content/uploads/2016/07/Vector-Block-Diagram.gif" alt="Drawing" style="width: 600px;"/>
+
+---
+# Vector Control in PMSM
+
+<img src="http://www.mdpi.com/sensors/sensors-17-00973/article_deploy/html/images/sensors-17-00973-g007.png" alt="Drawing" style="width: 750px;"/>
+
+---
+# Vector Control in Induction Motors
+
+
+<img src="https://www.mathworks.com/help/physmod/sps/powersys/ug/electric_drives223.gif" alt="Drawing" style="width: 600px;"/>
+
+---
+## You can download this presentation from: [keysan.me/ee462](http://keysan.me/ee462)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
