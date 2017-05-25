@@ -199,6 +199,81 @@ class: center, middle
 <img src="https://www.mathworks.com/help/physmod/sps/powersys/ug/electric_drives223.gif" alt="Drawing" style="width: 600px;"/>
 
 ---
+# SVPWM
+--
+
+## Space Vector Pulse Width Modulation
+--
+
+<img src="https://www.mathworks.com/help/physmod/sps/powersys/ref/svpwmgenerator2level_sectors.jpg" alt="Drawing" style="width: 500px;"/>
+
+### Approximate the reference voltage by a combination of 8 switching patterns
+
+---
+# Two-Level Inverter
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/58fe88ba3a04117b78eda510/1493076202195/?format=1000w" alt="Drawing" style="width: 800px;"/>
+---
+# [Voltage Vectors](https://www.switchcraft.org/learning/2017/3/15/space-vector-pwm-intro)
+--
+
+### There are 8 combinations (\\(2^3\\)) (Note that, you can't open the top and bottom switches simultenously).
+
+<img src="./images/ee462/voltage_vectors.png" alt="Drawing" style="width: 450px;"/>
+
+---
+# For example: \\(V_4\\): 100
+--
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/58fe8b655016e163f2febb78/1493076844542/?format=1000w" alt="Drawing" style="width: 750px;"/>
+---
+# For example: \\(V_5\\): 101
+--
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/58fe97e82994caa7f860f9a7/58fe97e9d1758e34037dfacc/1493080117024/PowerElectronics-101.png?format=1000w" alt="Drawing" style="width: 750px;"/>
+
+---
+# Voltage Vectors
+
+### 000 - V0 (zero vector)
+### 001 - V1 (Phase +U)
+### 010 - V2 (Phase +V)
+### 011 - V3 (Phase -W)
+### 100 - V4 (Phase +W)
+### 101 - V5 (Phase -V)
+### 110 - V6 (Phase -U)
+### 111 - V7 (zero vector)
+---
+# Voltage Synthesizing
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/58fea6c8ebbd1a25ce89c905/1494287982183/Basic-Vectors-with-reference.png?format=500w" alt="Drawing" style="width: 500px;"/>
+---
+# Voltage Synthesizing
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/58fea923197aea4f7f28f61a/58fea9286a49632401d63e94/1493084598485/SVPWM-1.png?format=1000w" alt="Drawing" style="width: 700px;"/>
+---
+# PWM Generation
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/59110ff0ebbd1a1c7143886d/1494290426838/?format=1000w" alt="Drawing" style="width: 700px;"/>
+---
+# PWM Generation
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/59111028c534a5947d523098/1494290481944/?format=1000w" alt="Drawing" style="width: 550px;"/>
+
+### Switching Sequence: 000-001-011-111
+---
+# PWM Generation
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/58feacf5d482e9da38497463/1493085606567/?format=1000w" alt="Drawing" style="width: 700px;"/>
+
+---
+# Voltage Limits
+
+
+---
+# Third Harmonic Injection
+
+---
 ## You can download this presentation from: [keysan.me/ee462](http://keysan.me/ee462)
 
 
