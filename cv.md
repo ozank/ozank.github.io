@@ -58,9 +58,11 @@ permalink: /cv/index.html
 
 ## Academic-Administrative Work
 
-- [Advisor to Dean](), (2014-Present)
+- [Advisor to Dean](https://muhfd.metu.edu.tr/), (2014-Present)
 
-- [Design Factor](http://tdi.metu.edu.tr), Member of Executive Board
+- [METU-Wind Center](http://ruzgem.metu.edu.tr/), Member of the Executive Board
+
+- [Design Factory](http://tdi.metu.edu.tr), Member of the Executive Board
 
 - Associate Editor, [IET Renewable Power Generation](http://digital-library.theiet.org/content/journals/iet-rpg)
 
@@ -82,7 +84,8 @@ My main area of interests are renewable energy, design of electric machines, and
 
 ## Research Experience & Projects
 
-|2016-2017| ASELSAN Rail-Gun Project| Electromagnetic Design and Optimization of a 200kJ-2MJ Rail Gun.|
+|2017| ASELSAN MW Wind Turbine| Feasibility analysis and design of a MW sized direct-drive wind turbine generator.|
+|2016-2017| ASELSAN Rail-Gun Project| Electromagnetic Design and Optimization of a 200kJ-2MJ Electromagnetic Launcher.|
 |2016| BAP| Design of a Modular Data Acqusition Board.|
 |2016| Andar Servo| Design and Manufacturing of a Eddy Current Damper for Aeorospace Application|
 |2016| Andar Servo| Design and Manufacturing of a Brushless PM Servo Motor.|
@@ -157,8 +160,8 @@ For a full list of courses that I thought please visit my [Courses](/courses) we
 
 ## Courses & Seminars
 
-- Design Thinking(?)
-- Aalto?
+- [HPI], Design Thinking Workshop, 3 days, 2016.
+- [Aalto Design Factory](https://designfactory.aalto.fi/), Design factory crash course, 2 days, 2015.
 -   Future Reliable Renewable Energy Conversion Systems, 4th Flagship Seminar, Chongqing, China, 2012.
 -   Supervising Postgraduate Research, Iain Davidson, 2013.
 -   Large-Scale Parallel Computing, University of Edinburgh, 2013.
