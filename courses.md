@@ -3,6 +3,12 @@ layout: page
 title: Courses
 permalink: /courses/index.html
 ---
+
+## Fall 2017
+
+- [EE361](/ee361): Electromechanical Energy Conversion-II
+- [EE463](/ee463): Static Power Conversion-I
+
 ## Spring 2017
 
 - [EE362](/ee362): Electromechanical Energy Conversion-II
@@ -13,7 +19,6 @@ permalink: /courses/index.html
 
 - [EE361](/ee361): Electromechanical Energy Conversion-I
 - [ID403](http://tdi.metu.edu.tr): Collaborative Design Studio
-
 
 ## Spring 2016
 
@@ -32,5 +37,5 @@ permalink: /courses/index.html
 
 ## Fall 2014
 
-- EE361: Electromechanical Energy Conversion-I
-- EE281: Electric Circuits
+- [EE361](/ee361): Electromechanical Energy Conversion-I
+- [EE281](/ee281): Electric Circuits
