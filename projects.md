@@ -4,9 +4,14 @@ title: Projects
 permalink: /projects/index.html
 ---
 
-## Projects
+## Ongoing Projects
+|2017| ASELSAN UGES | **Feasibility analysis and design of a 2.5MW direct-drive wind turbine generator:** In this project technoeconomic analysis of different generator technologies are performed to find the most suitable generator technology for ASELSAN. A detailed electromagnetic, structural and thermal optimization of a direct-drive generator using FEA tools is presented. Project budget: *87.000 TL *.|
 
-|2017| ASELSAN MW Wind Turbine| Feasibility analysis and design of a MW sized direct-drive wind turbine generator.|
+
+
+## Completed Projects
+
+
 |2016-2017| ASELSAN Rail-Gun Project| Electromagnetic Design and Optimization of a 200kJ-2MJ Electromagnetic Launcher.|
 |2016| BAP| Design of a Modular Data Acqusition Board.|
 |2016| Andar Servo| Design and Manufacturing of a Eddy Current Damper for Aeorospace Application|
