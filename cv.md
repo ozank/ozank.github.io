@@ -84,6 +84,8 @@ My main area of interests are renewable energy, design of electric machines, and
 
 ## Research Experience & Projects
 
+For more details please visit the [my projects](/projects) page.
+
 |2017| ASELSAN MW Wind Turbine| Feasibility analysis and design of a MW sized direct-drive wind turbine generator.|
 |2016-2017| ASELSAN Rail-Gun Project| Electromagnetic Design and Optimization of a 200kJ-2MJ Electromagnetic Launcher.|
 |2016| BAP| Design of a Modular Data Acqusition Board.|
@@ -199,9 +201,11 @@ For a full list of courses that I thought please visit my [Courses](/courses) we
 
 ## Completed Theses
 
--   Öztürk Şahin Alemdar, *"Design and Implementation of an Unregulated DC/DC Transformer Module Using LLC Resonant Converter"*, MSc Thesis, 2016. 
--   Mario Recio Lara, *"Development of a mobile phone application to detect speed and faults of electrical machines"*, MSc Thesis, 2013.
--   Marzia Akbari, *"Comparison and control of power take-off systems for
-    combined wind/wave energy platforms"*, MSc Thesis, 2013.
+For on going theses, please visit [theses](/theses) page.
+
+- Melih Var, *Improvement of the Electric Field Distribution in the Medium Voltage Gas Insulated Inductive Voltage Transformer*, 2017
+- Öztürk Şahin Alemdar, *Design and Implementation of an Unregulated DC/DC Transformer Module Using LLC Resonant Converter*, MSc Thesis, [pdf version](http://etd.lib.metu.edu.tr/upload/12620665/index.pdf), 2016. 
+- Mario Recio Lara, *Development of a mobile phone application to detect speed and faults of electrical machines*, MSc Thesis, University of Edinburgh, 2013.
+- Marzia Akbari, *Comparison and control of power take-off systems for combined wind/wave energy platforms*, MSc Thesis, University of Edinburgh, 2013.
 
 
