@@ -5,6 +5,7 @@ permalink: /projects/index.html
 ---
 
 ## Ongoing Projects
+
 |2017| ASELSAN UGES | **Feasibility analysis and design of a 2.5MW direct-drive wind turbine generator:** In this project technoeconomic analysis of different generator technologies are performed to find the most suitable generator technology for ASELSAN. A detailed electromagnetic, structural and thermal optimization of a direct-drive generator using FEA tools is presented. Project budget: *87.000 TL *.|
 
 
