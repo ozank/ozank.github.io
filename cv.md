@@ -195,7 +195,7 @@ For a full list of courses that I thought please visit my [Courses](/courses) we
 
 ## Publications
 
-<script src="http://bibbase.org/show?bib=http://bibbase.org/mendeley2/363361&groupby=type&jsonp=1&folding=1"></script> 
+<script src="http://bibbase.org/show?bib=http://bibbase.org/mendeley2/363361&groupby=type&jsonp=1&folding=1&authorFirst=1"></script> 
 
 ## Completed Theses
 
