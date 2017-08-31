@@ -5,7 +5,6 @@ title: Ozan Keysan
 
 **This semester: [EE361](/ee361) <span class="meta">&#8226;</span> [EE463](/ee463)**
 
-
 **Research Group: [METU PowerLab](http://power.eee.metu.edu.tr/)**
 
 <!--
@@ -14,7 +13,7 @@ title: Ozan Keysan
 
 -->
 
-I'm an assistant professor in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr). My research group is  [METU PowerLab](http://power.eee.metu.edu.tr/). For more information about me, you can download my [CV](/cv) or have look at my [Publications](/papers) and [Presentations](/presentations). 
+I'm an assistant professor in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr). My research group is  [METU PowerLab](http://power.eee.metu.edu.tr/). For more information about me, you can download my [CV](/cv) or have look at my [Publications](/papers), [Theses](/presentations), [Projects](/projects) and [Presentations](/presentations). 
 
 You can find a few [software tips](/tips). Also, I collect [these links](/explained) that can help you to understand some difficult concepts, and write random stuff in my [blog](/blog).
 
