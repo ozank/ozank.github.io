@@ -7,7 +7,7 @@ permalink: /projects/index.html
 ## Ongoing Projects
 
 |2018-2019| USA TDA | **USA Trade and Development Agency, METU Smart Campus Project:** Two high performance actuators (linear and axial flux permanent magnet) will be designed and manufactured in this project. The aim is to manufacture these actuators in Turkey instead of exporting. *Project budget: 198.000 TL*.|
-| --- | --- | ---: |
+|:---:|:---:|:---|
 |2017-2018| ASELSAN MGEO | **Design of a high performance linear servo actuator and PCB Motor:** Two high performance actuators (linear and axial flux permanent magnet) will be designed and manufactured in this project. The aim is to manufacture these actuators in Turkey instead of exporting. *Project budget: 198.000 TL*.|
 |2017-2018| TUBITAK 3501 | **Development of a 7,5 kW Permanent Magnet Integrated Modular Motor Drive System:** The aim of this project is to develop an IMMD system where the electric motor and its drive are integrated into a single package. The motor and drive will consist of several modules to increase fault tolerance.  Gallium Nitride (GaN) power semiconductor devices will be used to reduce the size and increase the efficiency. *Project budget: 177.000 TL*.|
 |2017| ASELSAN UGES | **Feasibility analysis and design of a 2.5MW direct-drive wind turbine generator:** In this project techno-economic analysis of different generator technologies are performed to find the most suitable generator technology for ASELSAN. A detailed electromagnetic, structural and thermal optimization of a direct-drive generator using FEA tools is presented. *Project budget: 87.000TL*.|
