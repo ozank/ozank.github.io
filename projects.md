@@ -8,8 +8,6 @@ permalink: /projects/index.html
 
 |2018-2019| USA TDA | **USA Trade and Development Agency, METU Smart Campus Project:** Two high performance actuators (linear and axial flux permanent magnet) will be designed and manufactured in this project. The aim is to manufacture these actuators in Turkey instead of exporting. *Project budget: 198.000 TL*.|
 
-----
-
 |2017-2018| ASELSAN MGEO | **Design of a high performance linear servo actuator and PCB Motor:** Two high performance actuators (linear and axial flux permanent magnet) will be designed and manufactured in this project. The aim is to manufacture these actuators in Turkey instead of exporting. *Project budget: 198.000 TL*.|
 
 ----
