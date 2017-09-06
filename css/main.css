@@ -205,7 +205,7 @@ margin: 0 auto;
 }
 th { border-bottom: thin solid #999897; }
 td { padding: 0 .5em; }
-table.plain { border-top: none; border-bottom: none; }
+table.plain { border-top: none; border-bottom: thin solid #999897; }
 table.plain th { border-bottom: none; }
 
 dd { margin-left: 1.5em; }
