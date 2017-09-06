@@ -202,10 +202,11 @@ border-top: double #999897;
 border-bottom: thin solid #999897;
 border-spacing: 0;
 margin: 0 auto;
+text-align: justify;
 }
 th { border-bottom: thin solid #999897; }
-td { padding: 0 .5em; }
-table.plain { border-top: none; border-bottom: thin solid #999897; }
+td { padding: 0 .5em;  padding-bottom: 0.5em; border-bottom: thin solid #999897;}
+table.plain { border-top: none; border-bottom: none; }
 table.plain th { border-bottom: none; }
 
 dd { margin-left: 1.5em; }
