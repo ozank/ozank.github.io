@@ -9,6 +9,7 @@ permalink: /presentations/index.html
 
 ### 2017
 
+* METU, Newton Fund Offshore Wind Workshop, [Future Generator Technologies for Offshore Wind Turbines](https://docs.google.com/presentation/d/1Z-OeGlsTIpST3BkvIrYIyqnbJWVgmD0mm25EXoVOUmY/edit?usp=sharing)
 * ITU, Smart Cities Workshop, [Ongoing Projects in METU](https://docs.google.com/presentation/d/1pGkhLkTJZ2CVeZnZvys9XVILh_8oEzLXFvWnq53YMSo/edit?usp=sharing)
 * ODTÜ Elektrik Müh, [Elektrik Makineleri ve Güç Elektroniği Opsiyon Tanıtımı](https://docs.google.com/presentation/d/122GDko0669QFa4uZ-lHofiCkT9vBViwZTxZVhW2lACY/edit?usp=sharing)
 * [EEE Induction Course](https://docs.google.com/presentation/d/1R1ZmGRX_92i5elfx05uXmj9EHNj2sKrFu8xxosCMkmk/pub?start=false&loop=false&delayms=3000)
