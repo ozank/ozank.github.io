@@ -9,11 +9,11 @@ permalink: /tips/index.html
 Here are some software that I use (and recommend):
 
 * [Mendeley](http://www.mendeley.com/) to organize my research papers and references,
-* [GitHub](https://github.com/ozank) for developing my projects, [Dropbox](https://db.tt/eUKTasZ) to synchronize my files,
+* [GitHub](https://github.com/ozank) for developing and publishing my work, [Dropbox](https://db.tt/eUKTasZ) to synchronize my files,
 * [Vim](http://www.makeuseof.com/tag/top-7-reasons-to-give-the-vim-text-editor-a-chance/) for programming and editing text,
 * [LaTeX](http://www.latex-project.org/) to write my papers, reports, dissertation etc.,
 * [R](http://www.r-project.org/), [RStudio](http://www.rstudio.com/) to plot pretty graphs, [Octave](http://www.gnu.org/software/octave/) as a replacement for Matlab, [Python](http://www.python.org/) and [Julia](http://julialang.org/) for serious work,
-* [FEMM](http://www.femm.info/wiki/HomePage) and [Opera](http://operafea.com/) for electromagnetic FEA.
+* [FEMM](http://www.femm.info/wiki/HomePage) and [Opera](http://operafea.com/), [ANSYS Maxwell](http://www.ansys.com/products/electronics/ansys-maxwell), [Comsol](https://www.comsol.com/) for electromagnetic FEA.
 * If you are not sure what to use, check [Digital Research Tools](http://dirtdirectory.org/)
 
 If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'ya Tuyolar](http://www.asuyatuyolar.org)**
@@ -25,12 +25,11 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 
 #### Collaborative Writing
 
-* [ShareLaTeX](https://www.sharelatex.com/)
+* [Overleaf](https://www.overleaf.com/signup?ref=3b0bbc32e797) (LaTeX)
 * [Authorea (LaTeX)](https://authorea.com/)
 * [Online Markdown Editor](http://dillinger.io/)
 * [StackEdit](https://stackedit.io/)
 * [Scholarly Markdown](http://scholarlymarkdown.com/)
-* [PenFlip](http://www.penflip.com/)
 
 #### Presentations
 
@@ -58,7 +57,10 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 
 * [Purdue Online Writing Lab](https://owl.english.purdue.edu/owl/resource/607/02/)
 * [How to read a paper?](http://blizzard.cs.uwaterloo.ca/keshav/home/Papers/data/07/paper-reading.pdf)
+* [How to write a paper](http://www.wisdom.weizmann.ac.il/~oded/PS/re-writing.pdf)
 * [How NOT to write a paper?](http://web.cs.iastate.edu/~honavar/write-not.pdf)
+* [Writing Advice for Students](http://web.science.mq.edu.au/~rdale/resources/writingnotes/index.html)
+* [Reading for graduate students](http://matt.might.net/articles/books-papers-materials-for-graduate-students/)
 
 #### Other
 
@@ -67,3 +69,19 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 * [How to write good abstacts?](http://blogs.lse.ac.uk/impactofsocialsciences/2011/06/20/essential-guide-writing-good-abstracts/)
 * [Pocket Organizer](http://pocketmod.com/v2/)
 * [OpenResearch](https://openresearch.wordpress.com/)
+
+### A Few Nice Reads
+
+* [The days are long but the decades are short](http://blog.samaltman.com/the-days-are-long-but-the-decades-are-short)
+* [The Most Important Thing I Learned in My 20's](https://medium.com/@adambraun/the-most-important-thing-i-learned-in-my-20s-677e2ed1a70f)
+ [http://www.nytimes.com/2010/08/08/business/08consume.html](http://www.nytimes.com/2010/08/08/business/08consume.html?_r=1)
+* [Why Procrastinators Procrastinate](https://waitbutwhy.com/2013/10/why-procrastinators-procrastinate.html)
+* [You are not behind](http://zackkanter.com/2016/01/13/you-are-not-behind/)
+* [A Protocol for Dying](http://hintjens.com/blog:115)
+* [Life is Short](http://paulgraham.com/vb.html)
+* [There's Plenty of Room at the Bottom](http://www.zyvex.com/nanotech/feynman.html)
+* [If Money Doesn't Make You Happy Then You Probably Aren't Spending It 
+Right](http://scholar.harvard.edu/files/danielgilbert/files/if-money-doesnt-make-you-happy.nov-12-20101.pdf)
+* [Why aren’t we getting richer? The scarring tissue theory](https://lemire.me/blog/2011/10/10/why-arent-we-getting-richer-the-scarring-tissue-theory/)
+* [Pricing Experiments You Might Not Know, But Can Learn From](https://conversionxl.com/blog/pricing-experiments-you-might-not-know-but-can-learn-from/)
+
