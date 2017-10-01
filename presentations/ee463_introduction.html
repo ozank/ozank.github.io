@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE463-Static Power Conversion-I</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-463 STATIC POWER CONVERSION-I
+## (aka Power Electronics-I)
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Introduction to Power Processing
+
+<img src="./images/ee463/power_processing.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Control is almost always needed
+--
+
+<img src="./images/ee463/power_processing_control.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# What are the desired factors?
+--
+
+## - High Efficiency
+--
+
+## - High Power Density (Small Size)
+--
+
+## - Reliable, high quality output (and input) power
+--
+
+## - Minimum Cost
+---
+# Applications of Power Electronics
+--
+
+## - <1W in portable equipments
+--
+
+## - ~100Ws for power supplies, house hold applications
+--
+
+## - Several kWs for industrial motor drives
+--
+
+## - >1 MW for grid applications (HVDC transmission, renewable energy)
+---
+
+# Examples
+---
+
+# Laptop Charger (and other PE components)
+### Can you plot the main components?
+
+<img src="http://www.targus.com/content/images/thumbs/0000685_laptop-charger-with-usb-fast-charging-port.jpeg" alt="Drawing" style="width: 500px;"/>
+
+---
+# Laptop Charger (and other PE components)
+
+<img src="./images/ee463/laptop_charger.png" alt="Drawing" style="width: 750px;"/>
+
+---
+#Power Electronics in an Electric Car
+
+<img src="https://inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Tesla-Model-S.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+#Power Electronics in an Electric Car
+
+<img src="./images/ee463/electric_car.png" alt="Drawing" style="width: 750px;"/>
+
+---
+#Grid Connected PV System
+
+<img src="http://www.sunwindenergy.com/sites/default/files/field/image/pv_1_mw_india.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+#Grid Connected PV System
+
+<img src="http://solarenergyengineering.asmedigitalcollection.asme.org/data/journals/jseedo/936388/sol_139_05_054502_f001.png" alt="Drawing" style="width: 800px;"/>
+
+---
+
+#Wind Turbine
+
+<img src="https://www.nrel.gov/news/features/images/20110429_wind_pix18890_large.jpg" alt="Drawing" style="width: 800px;"/>
+
+---
+
+#Wind Turbine
+
+## Back-to-back Converter
+
+<img src="https://www.intechopen.com/source/html/39956/media/image2.png" alt="Drawing" style="width: 800px;"/>
+
+---
+
+#Wind Turbine
+
+## Some other options (for smaller turbines)
+
+<img src="https://www.intechopen.com/source/html/39956/media/image63.png" alt="Drawing" style="width: 800px;"/>
+
+
+
+
+---
+Intro icin mohan video
+
+http://ecee.colorado.edu/~ecen5797/course_material/Lecture1slide.pdf
+
+
+---
+# Main Elements of Electric Drives
+
+<img src="./images/ee462/electric_drive2.png" alt="Drawing" style="width: 750px;"/>
+
+---
+
+# Multi-Disciplinary Nature of Electric Drives
+
+<img src="./images/ee462/multi_disciplinary.png" alt="Drawing" style="width: 750px;"/>
+
+
+---
+## You can download this presentation from: [keysan.me/ee462](http://keysan.me/ee462)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
