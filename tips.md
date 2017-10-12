@@ -61,12 +61,12 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 * [How NOT to write a paper?](http://web.cs.iastate.edu/~honavar/write-not.pdf)
 * [Writing Advice for Students](http://web.science.mq.edu.au/~rdale/resources/writingnotes/index.html)
 * [Reading for graduate students](http://matt.might.net/articles/books-papers-materials-for-graduate-students/)
+* [How to write good abstacts?](http://blogs.lse.ac.uk/impactofsocialsciences/2011/06/20/essential-guide-writing-good-abstracts/)
 
 #### Other
 
 * [Digital Research Tools](http://dirtdirectory.org/)
 * [Academic Blogging](http://matt.might.net/articles/how-to-blog-as-an-academic/)
-* [How to write good abstacts?](http://blogs.lse.ac.uk/impactofsocialsciences/2011/06/20/essential-guide-writing-good-abstracts/)
 * [Pocket Organizer](http://pocketmod.com/v2/)
 * [OpenResearch](https://openresearch.wordpress.com/)
 
@@ -74,14 +74,17 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 
 * [The days are long but the decades are short](http://blog.samaltman.com/the-days-are-long-but-the-decades-are-short)
 * [The Most Important Thing I Learned in My 20's](https://medium.com/@adambraun/the-most-important-thing-i-learned-in-my-20s-677e2ed1a70f)
- [http://www.nytimes.com/2010/08/08/business/08consume.html](http://www.nytimes.com/2010/08/08/business/08consume.html?_r=1)
+* [But Will It Make You Happy?](http://www.nytimes.com/2010/08/08/business/08consume.html?_r=1)
 * [Why Procrastinators Procrastinate](https://waitbutwhy.com/2013/10/why-procrastinators-procrastinate.html)
 * [You are not behind](http://zackkanter.com/2016/01/13/you-are-not-behind/)
 * [A Protocol for Dying](http://hintjens.com/blog:115)
 * [Life is Short](http://paulgraham.com/vb.html)
 * [There's Plenty of Room at the Bottom](http://www.zyvex.com/nanotech/feynman.html)
+* [Cargo Cult Science, Richard Feynman](http://calteches.library.caltech.edu/51/2/CargoCult.htm)
 * [If Money Doesn't Make You Happy Then You Probably Aren't Spending It 
 Right](http://scholar.harvard.edu/files/danielgilbert/files/if-money-doesnt-make-you-happy.nov-12-20101.pdf)
 * [Why aren’t we getting richer? The scarring tissue theory](https://lemire.me/blog/2011/10/10/why-arent-we-getting-richer-the-scarring-tissue-theory/)
 * [Pricing Experiments You Might Not Know, But Can Learn From](https://conversionxl.com/blog/pricing-experiments-you-might-not-know-but-can-learn-from/)
-
+* [A day at the park](http://kiriakakis.net/comics/mused/a-day-at-the-park)
+* [Academic Assholes](https://thesiswhisperer.com/2013/02/13/academic-assholes/)
+* [9 Useless PhD Transferable Skills In An Industry Job](http://www.nextscientist.com/useless-phd-transferable-skills/)
