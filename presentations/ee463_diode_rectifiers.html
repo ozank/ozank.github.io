@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE463-Static Power Conversion-I</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-463 STATIC POWER CONVERSION-I
+
+# Diode Rectifiers
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Announcement
+
+## Until next week:
+
+- ### Please open a [GitHub](https://github.com/) account
+
+- ### Read [basics](https://www.atlassian.com/git/tutorials/what-is-version-control) on version control ([and more](http://keysan.me/okst/))
+
+- ### Install PSIM using the teaching license I've sent
+
+---
+# Line Frequency Diode Rectifiers
+--
+
+<img src="./images/ee463/rectifier_block.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Line Frequency Diode Rectifiers
+
+## Ideal Rectifier
+--
+
+- ## Ripple free DC output
+--
+
+- ## Sinusoidal (THD=0) input current
+--
+
+- ## High Efficieny
+--
+
+- ## Small Size (High Power Density)
+
+---
+# Simplest Case: One diode with resistive load
+--
+
+<img src="./images/ee463/one_diode_R.png" alt="Drawing" style="width: 600px;"/>
+
+## Can you plot the voltage-current waveforms?
+--
+
+### What about the average voltage?
+
+---
+# One Diode with R-L Load
+--
+
+<img src="./images/ee463/one_diode_RL.png" alt="Drawing" style="width: 600px;"/>
+--
+
+## Let's plot the equivalent circuits
+
+---
+# One Diode with R-L Load
+--
+
+## Diode continues to conduct for extended period
+--
+
+<img src="./images/ee463/one_diode_RL_waveform.png" alt="Drawing" style="width: 600px;"/>
+---
+
+# One Diode with R-L Load
+--
+
+## Diode continues to conduct for extended period:
+
+# Commutation!
+
+--
+## How does the average voltage change with commutation?
+--
+
+## It becomes smaller!
+
+---
+
+# One Diode with back-emf (i.e. DC Motor)
+
+<img src="./images/ee463/one_diode_Ea.png" alt="Drawing" style="width: 600px;"/>
+
+--
+
+### Current starts flowing when vs > Ed
+
+---
+# One Diode with back-emf (i.e. DC Motor)
+--
+
+<img src="./images/ee463/one_diode_Ea_waveform.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Single-Phase Diode Rectifier
+
+<img src="https://i1.adis.ws/i/maplin/AQ98G_1" alt="Drawing" style="width: 600px;"/>
+
+## Bridge Rectifer
+
+---
+# Single-Phase Diode Rectifier
+
+<img src="./images/ee463/single_phase_diode.png" alt="Drawing" style="width: 600px;"/>
+
+## Let's assume ideal source (Ls=0) to start with
+---
+# Single-Phase Diode Rectifier
+
+### Also assume load draws constant current (id)
+--
+
+<img src="./images/ee463/bridge_rectifier_id.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Single-Phase Diode Rectifier
+
+## Can you calculate the average output voltage?
+--
+
+## Can you plot the input current waveform?
+--
+
+## What about the THD of input current?
+
+---
+# Single-Phase Diode Rectifier
+
+<img src="./images/ee463/bridge_rectifier_is.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Effect of Line Inductance
+--
+
+<img src="./images/ee463/bridge_rectifier_Ls.png" alt="Drawing" style="width: 500px;"/>
+
+## Can you still draw square current from grid?
+--
+
+### There has to be finite time between +Id to -Id transition.
+
+---
+# Let's start with a simple circuit
+--
+
+ <img src="./images/ee463/single_phase_commutation.png" alt="Drawing" style="width: 500px;"/>
+
+---
+## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
