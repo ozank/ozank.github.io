@@ -144,6 +144,12 @@ class: center, middle
 --
 
 <img src="./images/ee463/bridge_rectifier_id.png" alt="Drawing" style="width: 500px;"/>
+---
+# Single-Phase Diode Rectifier
+
+### Let's redraw it
+
+<img src="./images/ee463/redrawn_single_phase_rectifier.png" alt="Drawing" style="width: 500px;"/>
 
 ---
 # Single-Phase Diode Rectifier
@@ -161,6 +167,78 @@ class: center, middle
 
 <img src="./images/ee463/bridge_rectifier_is.png" alt="Drawing" style="width: 800px;"/>
 
+## THD of current (square waveform)=
+--
+ \\(\frac{\sqrt{1-\frac{2\sqrt{2}}{\pi}^2}}{\frac{2\sqrt{2}}{\pi}}\\)
+
+---
+# Single-Phase Diode Rectifier
+
+<img src="./images/ee463/bridge_rectifier_is.png" alt="Drawing" style="width: 800px;"/>
+
+## THD of current (square waveform)= \\(\frac{\sqrt{0.19}}{0.9}=0.484\\)
+
+---
+# A Big Paranthesis on Fourier Series
+--
+
+> ## All waveforms, no matter what you scribble or observe in the universe, are actually just the sum of simple sinusoids of different frequencies.
+
+---
+# Fourier Series
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/LznjC4Lo7lE?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+[Interactive Fourier Series](https://bl.ocks.org/jinroh/raw/7524988/), [Complex Orbits](https://www.youtube.com/watch?v=QVuU2YCwHjw), [Singing Train](https://www.youtube.com/watch?v=vdNCrj14cK0), [Useful applets](http://www.falstad.com/fourier), [Fourier examples](http://ptolemy.eecs.berkeley.edu/eecs20/week8/examples.html)
+
+[More Useful Links on Fourier Series](http://keysan.me/explained/)
+---
+# Fourier Series
+
+<img src="http://mathworld.wolfram.com/images/equations/FourierSeries/NumberedEquation1.gif" alt="Drawing" style="width: 600px;"/>
+--
+
+### Coefficients
+<img src="http://www.sosmath.com/fourier/fourier1/img18.gif" alt="Drawing" style="width: 400px;"/>
+
+---
+# Some Important Functions
+--
+
+### Even function:
+--
+\\(f(-t)=f(t)\\)
+--
+\\(\rightarrow b_h=0\\)
+
+--
+
+### Odd function:
+--
+\\(f(-t)=-f(t)\\)
+--
+\\(\rightarrow a_h=0\\)
+--
+
+### Half-wave:
+--
+\\(f(t)=-f(t+T/2)\\)
+--
+
+### \\(\rightarrow a_h=b_h=0\\) for even harmonics
+--
+
+### Even quarter-wave:
+--
+ Even and Half-wave symmetry
+--
+
+### \\(\rightarrow b_h=0\\) for all harmonics
+
+### \\(\rightarrow a_h=0\\) for even harmonics
+
+
+
 ---
 # Effect of Line Inductance
 --
@@ -177,6 +255,99 @@ class: center, middle
 --
 
  <img src="./images/ee463/single_phase_commutation.png" alt="Drawing" style="width: 500px;"/>
+
+--
+
+### Draw the equivalent circuits at each interval
+---
+### Voltage Waveforms
+--
+
+ <img src="./images/ee463/commutation_2_diode.png" alt="Drawing" style="width: 800px;"/>
+ 
+---
+## How to calculate the commutation period (u)?
+--
+
+## \\(cos(u) = 1- \dfrac{\omega L_s I_d}{\sqrt{2} V_s}\\)
+--
+
+- ## Ls, Id increases commutation time
+--
+
+- ## Vs reduces commutation time
+
+---
+## How does the average voltage changes?
+--
+
+## \\(Vd= \dfrac{0.9 Vs}{2} - \dfrac{Au}{2\pi}\\)
+--
+
+## Reduction in average voltage
+## \\(\Delta Vd= \dfrac{\omega Ls}{2\pi} Id\\)
+---
+
+## What about commutation in single phase rectifier?
+
+<img src="./images/ee463/bridge_rectifier_Ls.png" alt="Drawing" style="width: 500px;"/>
+
+---
+## Voltage-Current Waveforms
+
+<img src="./images/ee463/1ph_rectifier_commutation.png" alt="Drawing" style="width: 650px;"/>
+
+---
+## How does the average voltage changes?
+--
+### Similar to previous case,but:
+
+- ### Current goes from -Id to Id
+- ### Commutation happens twice (2Au)
+--
+
+## \\(Vd= 0.9 Vs - \dfrac{2 \omega Ls}{\pi} Id\\)
+---
+
+# Rectifier with DC Side Voltage
+--
+
+<img src="./images/ee463/rectifier_Vdc.png" alt="Drawing" style="width: 650px;"/>
+
+---
+# Can you plot the voltage waveforms?
+--
+
+<img src="./images/ee463/rectifier_Vdc_voltage.png" alt="Drawing" style="width: 700px;"/>
+
+---
+# Average current
+
+## \\(Id\_{av}= \dfrac{\int_b^f i(\theta) d \theta}{\pi}  \\)
+--
+
+## What is the short circuit current (when Vd=0)?
+--
+
+## \\(Id\_{(short-circuit)} = \dfrac{Vs}{\omega Ls}\\)
+---
+
+## How does the average current changes with Vd?
+--
+
+ <img src="./images/ee463/rectifier_Vd_Id.png" alt="Drawing" style="width: 700px;"/>
+
+---
+## What about THD vs Id current?
+--
+
+ <img src="./images/ee463/rectifier_Id_THD.png" alt="Drawing" style="width: 750px;"/>
+
+---
+## Crest Factor vs Id current?
+--
+
+ <img src="./images/ee463/rectifier_Id_crest.png" alt="Drawing" style="width: 750px;"/>
 
 ---
 ## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
