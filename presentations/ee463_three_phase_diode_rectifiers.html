@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE463-Static Power Conversion-I</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-463 STATIC POWER CONVERSION-I
+
+# 3-Phase Diode Rectifiers
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+
+## 3-Phase Half Wave Rectifier
+--
+
+### N-Phase Generalized Form
+--
+
+<img src="./images/ee463/n_phase_half_bridge.png" alt="Drawing" style="width: 600px;"/>
+
+---
+## 3-Phase Half Wave Rectifier
+
+## Voltage Waveforms
+
+<img src="./images/ee463/3ph_half_bridge_voltage.png" alt="Drawing" style="width: 600px;"/>
+---
+## 3-Phase Half Wave Rectifier
+
+
+## Average Voltage?
+--
+
+## \\(V\_{dc}= \dfrac{3\sqrt{6}}{2 \pi} V\_{rms}\\)
+
+--
+
+### Comparison with the single phase rectifier?
+
+---
+## 3-Phase Full Wave (Bridge) Rectifier
+
+<img src="http://2.bp.blogspot.com/-cumirN3mjC0/UiVln-LDtTI/AAAAAAAAALw/f9hwfKSzZb0/s640/3-Phase-Bridge-Rectifier1.jpg" alt="Drawing" style="width: 600px;"/>
+
+---
+## 3-Phase Full Wave (Bridge) Rectifier
+--
+
+<img src="./images/ee463/3ph_full_bridge.png" alt="Drawing" style="width: 700px;"/>
+
+---
+## 3-Phase Full Wave (Bridge) Rectifier
+
+### Ignore Ls and redraw
+--
+
+<img src="./images/ee463/3ph_full_bridge2.png" alt="Drawing" style="width: 500px;"/>
+
+---
+## 3-Phase Full Wave (Bridge) Rectifier
+
+### Can you draw the voltage and current waveforms?
+--
+
+<img src="./images/ee463/3ph_diode_voltage.png" alt="Drawing" style="width: 800px;"/>
+---
+## 3-Phase Full Wave (Bridge) Rectifier
+
+### Can you draw the voltage and current waveforms?
+
+<img src="./images/ee463/3ph_diode_voltage2.png" alt="Drawing" style="width: 800px;"/>
+
+---
+## 3-Phase Full Wave (Bridge) Rectifier
+
+## Average voltage?
+--
+
+## \\(V\_{dc}= \dfrac{3\sqrt{6}}{ \pi} V\_{ph}\\)
+
+### or
+--
+
+## \\(V\_{dc}= \dfrac{3\sqrt{2}}{ \pi} V\_{l-l} = 1.35 V\_{l-l}\\)
+
+### =540 Vdc for a 400 V grid
+---
+## What about the current waveforms?
+--
+
+<img src="./images/ee463/3ph_diode_current.png" alt="Drawing" style="width: 800px;"/>
+---
+
+## What about the current waveforms?
+
+### What are the differences wrt single phase?
+--
+
+<img src="./images/ee463/3ph_diode_current2.png" alt="Drawing" style="width: 800px;"/>
+
+## No 3rd order harmonics!
+
+---
+# Comparison of Rectifiers
+
+---
+
+# Commutation
+
+
+---
+## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
