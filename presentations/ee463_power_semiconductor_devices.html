@@ -23,7 +23,7 @@ class: center, middle
 
 # EE-463 STATIC POWER CONVERSION-I
 
-# 3-Phase Diode Rectifiers
+# Power Semiconductor Devices
 
 ## Ozan Keysan
 
@@ -32,6 +32,212 @@ class: center, middle
 ### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
+# Diode
+
+<img src="https://www.servocity.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/6/0/605126_diodes_1500px.jpg" alt="Drawing" style="width: 600px;"/>
+
+---
+# Power Diode (>50 A)
+
+<img src="https://5.imimg.com/data5/TQ/GS/MY-1177100/diode-250x250.jpg" alt="Drawing" style="width: 400px;"/>
+
+---
+# Ideal Diode
+
+<img src="https://www.elprocus.com/wp-content/uploads/2016/08/Ideal-Diode.jpg" alt="Drawing" style="width: 800px;"/>
+
+---
+# Ideal Diode
+
+## V-I Characteristics
+
+<img src="https://www.electrical4u.com/images/2017/march/1488428722.PNG" alt="Drawing" style="width: 500px;"/>
+
+---
+# Practical Diode
+
+## Important Parameters
+--
+
+- ## Forward Voltage
+--
+
+- ## Reverse Break-down Voltage
+--
+
+- ## On-resistance
+--
+
+- ## Turn-on, turn-off times (forward, reverse-recovery)
+
+---
+# Practical Diode: V-I Characteristics
+
+<img src="https://www.learningaboutelectronics.com/images/Diode-characteristics-curve.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# A few Data-sheets
+
+
+---
+# Diode Switching Waveforms
+
+<img src="./images/ee463/diode_switching.png" alt="Drawing" style="width: 500px;"/>
+
+###Exaggerated view
+---
+# Diode Switching Waveforms
+
+## Turn-off transient
+
+
+---
+# Reverse Recovery
+--
+
+<img src="./images/ee463/diode_reverse_recovery.png" alt="Drawing" style="width: 500px;"/>
+
+### Reverse current is required to remove carrier charges
+
+
+--
+# Reverse Recovery
+
+
+---
+# Losses
+--
+
+# Conduction Losses
+--
+
+- ## Increases with current
+--
+
+## Switching Losses
+--
+
+- ## Increases with turn-on, turn-off-time
+--
+
+- ## Increases with switching frequency
+
+---
+# Switching Losses
+
+## Linearized
+
+<img src="./images/ee463/diode_switching_loss.png" alt="Drawing" style="width: 500px;"/>
+---
+# Thyristor
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Thyristor_circuit_symbol.svg/600px-Thyristor_circuit_symbol.svg.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Thyristor
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Thyristor.svg/800px-Thyristor.svg.png" alt="Drawing" style="width: 800px;"/>
+
+--
+## Four layer PNPN semiconductor (and two-transistor equivalent circuit)
+--
+
+## A diode you can delay on-state with gate signal(pulse)
+--
+
+## but no control while turning-off
+
+---
+# Thyristor
+
+<img src="https://www.radios-tv.co.uk/wp-content/uploads/2016/04/thyristor1.jpg" alt="Drawing" style="width: 600px;"/>
+---
+# Thyristor
+
+<img src="https://cdn3.volusion.com/jjraz.uhwvm/v/vspfiles/photos/MCC95-12IO8B-2.jpg?1450700625" alt="Drawing" style="width: 600px;"/>
+---
+# Thyrsitor
+--
+
+- ### Has the highest current and voltage rating among other devices
+--
+
+- ### Slow switching device (eg compared to MOSFET)
+--
+
+- ### Latching switch (can be turned on by Ig, but cannot be turned off)
+
+---
+# Thyristor
+## V-I Characteristics
+
+- ### Reverse Blocking
+- ### Forward Blocking
+- ### Forward Conducting
+
+---
+# Thyristor
+## V-I Characteristics
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Thyristor_I-V_diagram.svg/1280px-Thyristor_I-V_diagram.svg.png" alt="Drawing" style="width: 700px;"/>
+
+---
+# Thyristor
+## V-I Characteristics
+
+<img src="http://www.circuitstoday.com/wp-content/uploads/2009/09/SCR-Voltage-Current-Characteristics.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+# Types of Thyristors
+--
+
+- ## SCR (Silicon Controlled Rectifier)
+--
+
+- ## TRIAC, DIAC
+--
+
+- ## GTO (Gate Turn-Off Tyhristor)
+
+---
+# GTOs
+
+<img src="http://www.electronicshub.org/wp-content/uploads/2015/05/GTO-Symbols.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+# GTOs
+
+<img src="https://www.dynexsemi.com/assets/images/common/_landscape_med/DSC_8196.jpg" alt="Drawing" style="width: 700px;"/>
+
+- ## Used at very [high power levels](https://www.dynexsemi.com/products/semiconductors/gate-turn-off-thyristors)
+
+---
+# GTOs
+
+- ## Fully contrallable switch
+- ## Can be turned-on and turned-off
+- ## Turn-on achieved by positive current pulse
+- ## Turn-off achieved by negative current pulse
+
+---
+# Types of Thyristors
+
+## TRIAC
+
+- ## Bi-directional device
+
+- ## TRIACs can be triggered by positive or negative current
+
+
+
+---
+# MOSFET
+
+
+---
+# IGBT
+
+
 
 ## 3-Phase Half Wave Rectifier
 --
@@ -151,7 +357,6 @@ class: center, middle
 
 ## \\(V\_{dc}= \dfrac{3\sqrt{2}}{ \pi} V\_{l-l} - \dfrac{3}{\pi}\omega L_s I_d\\)
 
-### [More info](http://fpec.ucf.edu/docs/pec_ebook/Chapter%207.pdf)
 
 ### [MultiSim Simulation](https://www.multisim.com/discover/)
 ---
