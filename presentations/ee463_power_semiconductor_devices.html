@@ -82,27 +82,71 @@ class: center, middle
 ---
 # Diode Switching Waveforms
 
-<img src="./images/ee463/diode_switching.png" alt="Drawing" style="width: 500px;"/>
+<img src="./images/ee463/diode_switching.png" alt="Drawing" style="width: 450px;"/>
 
-###Exaggerated view
+### [More info](http://ecee.colorado.edu/~ecen5797/course_material/Ch4slides.pdf)
+#### Eriksson, Fundamentals of Power Electronics, Ch4
+
 ---
 # Diode Switching Waveforms
 
 ## Turn-off transient
 
+<img src="./images/ee463/diode_turn_off.png" alt="Drawing" style="width: 600px;"/>
 
 ---
-# Reverse Recovery
---
+# Diode Switching Waveforms
 
-<img src="./images/ee463/diode_reverse_recovery.png" alt="Drawing" style="width: 500px;"/>
+## Turn-off transient
+
+<img src="./images/ee463/diode_minority_charge.png" alt="Drawing" style="width: 600px;"/>
 
 ### Reverse current is required to remove carrier charges
 
-
---
+---
 # Reverse Recovery
 
+### Diode conducts a reverse current during turn-off
+
+<img src="https://www.electrical4u.com/images/2017/march/1488793575.PNG" alt="Drawing" style="width: 600px;"/>
+
+### \\(t\_{rr}\\): Reverse recovery time, \\(I\_{rr}\\): Reverse recovery current
+
+---
+# Reverse Recovery
+
+<img src="https://www.allaboutcircuits.com/uploads/articles/1112A-PSD_(5).png" alt="Drawing" style="width: 700px;"/>
+
+### [Softness Factor](https://www.allaboutcircuits.com/technical-articles/a-review-on-power-semiconductor-devices/)
+
+### [Reverse recovery](https://electronics.stackexchange.com/questions/13912/what-is-the-reverse-recovery-time-in-a-diode)
+
+### [Fast diode vs Slow Diode](https://www.circuitlab.com/circuit/jyymtc/diode-reverse-recovery-time-demo/)
+
+---
+# Types of Power Diodes
+--
+
+- ## Standard Recovery
+--
+
+- ## Fast (ultra-fast) Recovery
+--
+
+- ## [Schottky Diode](https://www.youtube.com/watch?v=GtH8lAzQf2A)
+
+- ### Majority carrier (due to metal layer)
+- ### No recovered charge, \\(t\_{rr}=0\\)
+- ### Limited to low voltage (<100V)
+
+---
+# Types of Power Diodes
+--
+
+<img src="./images/ee463/diode_types.png" alt="Drawing" style="width: 800px;"/>
+--
+
+### What is the relation between \\(V\_{max}\\) and \\(V\_{F}\\)?
 
 ---
 # Losses
@@ -114,7 +158,8 @@ class: center, middle
 - ## Increases with current
 --
 
-## Switching Losses
+
+# Switching Losses
 --
 
 - ## Increases with turn-on, turn-off-time
@@ -129,10 +174,21 @@ class: center, middle
 
 <img src="./images/ee463/diode_switching_loss.png" alt="Drawing" style="width: 500px;"/>
 ---
+# Losses
+
+## Extra Reading Material
+
+- ### [Fast, Faster, Fastest](http://www.ixys.com/Documents/AppNotes/IXAN0060.pdf)
+- ### [Power Losses, Thermal Considerations](http://www.irf.com/electronics/power-losses)
+- ### [Calculation of conduction losses in a power rectifier](http://www.st.com/content/ccc/resource/technical/document/application_note/d6/8b/bb/1b/a8/b4/4d/c6/CD00003894.pdf/files/CD00003894.pdf/jcr:content/translations/en.CD00003894.pdf)
+
+---
 # Thyristor
+--
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Thyristor_circuit_symbol.svg/600px-Thyristor_circuit_symbol.svg.png" alt="Drawing" style="width: 600px;"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Thyristor_circuit_symbol.svg/600px-Thyristor_circuit_symbol.svg.png" alt="Drawing" style="width: 400px;"/>
 
+## A diode with a gate terminal!
 ---
 # Thyristor
 
@@ -140,9 +196,13 @@ class: center, middle
 
 --
 ## Four layer PNPN semiconductor (and two-transistor equivalent circuit)
---
+---
 
-## A diode you can delay on-state with gate signal(pulse)
+# Thyristor
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Thyristor.svg/800px-Thyristor.svg.png" alt="Drawing" style="width: 800px;"/>
+
+## A diode that you can delay on-state with gate signal(pulse)
 --
 
 ## but no control while turning-off
@@ -155,8 +215,18 @@ class: center, middle
 # Thyristor
 
 <img src="https://cdn3.volusion.com/jjraz.uhwvm/v/vspfiles/photos/MCC95-12IO8B-2.jpg?1450700625" alt="Drawing" style="width: 600px;"/>
+
 ---
-# Thyrsitor
+# Thyristor: Controlled Rectifier
+--
+
+<img src="http://www.electronics-tutorials.ws/power/power13.gif" alt="Drawing" style="width: 500px;"/>
+
+### More on thyristor rectifiers next week!
+
+
+---
+# Thyristor
 --
 
 - ### Has the highest current and voltage rating among other devices
@@ -176,13 +246,12 @@ class: center, middle
 - ### Forward Conducting
 
 ---
-# Thyristor
 ## V-I Characteristics
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Thyristor_I-V_diagram.svg/1280px-Thyristor_I-V_diagram.svg.png" alt="Drawing" style="width: 700px;"/>
 
 ---
-# Thyristor
+
 ## V-I Characteristics
 
 <img src="http://www.circuitstoday.com/wp-content/uploads/2009/09/SCR-Voltage-Current-Characteristics.jpg" alt="Drawing" style="width: 700px;"/>
@@ -202,7 +271,7 @@ class: center, middle
 ---
 # GTOs
 
-<img src="http://www.electronicshub.org/wp-content/uploads/2015/05/GTO-Symbols.jpg" alt="Drawing" style="width: 700px;"/>
+<img src="http://www.electronicshub.org/wp-content/uploads/2015/05/GTO-Symbols.jpg" alt="Drawing" style="width: 400px;"/>
 
 ---
 # GTOs
@@ -228,137 +297,109 @@ class: center, middle
 
 - ## TRIACs can be triggered by positive or negative current
 
+---
+# Types of Thyristors
 
+## TRIAC: Two anti-parallel thyristors
+
+<img src="http://www.electronics-tutorials.ws/wp-content/uploads/2013/08/power19.gif" alt="Drawing" style="width: 700px;"/>
+
+---
+# MOSFET
+--
+
+## Metal-Oxide Semiconductor Field-Effect Transistor
+--
+
+<img src="https://www.allaboutcircuits.com/uploads/articles/1112A-PSD_(8).png" alt="Drawing" style="width: 550px;"/>
 
 ---
 # MOSFET
 
+<img src="https://www.allaboutcircuits.com/uploads/articles/1112B-PSD_(10).png" alt="Drawing" style="width: 700px;"/>
+
+---
+# MOSFET
+
+## V-I Characteristics
+
+<img src="https://www.allaboutcircuits.com/uploads/articles/1112B-PSD_(12).png" alt="Drawing" style="width: 700px;"/>
+
+### To be discussed more in detail throughout the semester
+---
+
+## Equivalent Circuit
+
+<img src="./images/ee463/mosfet_equivalent.png" alt="Drawing" style="width: 300px;"/>
+
+### Cgs: large, constant
+### Cgd: small, highly nonlinear
+### Cds: intermediate, nonlinear
+
+---
+
+## MOSFET Comparison
+
+<img src="./images/ee463/mosfet_comparison.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# IGBT
+--
+
+## Insulated-Gate Bipolar Transistor
+--
+
+<img src="https://www.dynexsemi.com/assets/images/common/_landscape_med/DSC_8215_1.jpg" alt="Drawing" style="width: 700px;"/>
 
 ---
 # IGBT
 
+<img src="https://www.electrical4u.com/images/2017/february/1487085416.PNG" alt="Drawing" style="width: 600px;"/>
 
-
-## 3-Phase Half Wave Rectifier
---
-
-### N-Phase Generalized Form
---
-
-<img src="./images/ee463/n_phase_half_bridge.png" alt="Drawing" style="width: 600px;"/>
+### [IGBT](https://www.youtube.com/watch?v=3HDzqDZaprE)
+### [IGBT, when to use them?](https://www.youtube.com/watch?v=RxRJW09A_XA)
+### [IGBT or MOSFET?](https://www.youtube.com/watch?v=nxhvLEWa7R4)
 
 ---
-## 3-Phase Half Wave Rectifier
-
-## Voltage Waveforms
-
-<img src="./images/ee463/3ph_half_bridge_voltage.png" alt="Drawing" style="width: 600px;"/>
----
-## 3-Phase Half Wave Rectifier
-
-
-## Average Voltage?
+# IGBT
 --
 
-## \\(V\_{dc}= \dfrac{3\sqrt{6}}{2 \pi} V\_{rms}\\)
-
+- ## Slower compared to MOSFET
 --
 
-### Comparison with the single phase rectifier?
-
----
-## 3-Phase Full Wave (Bridge) Rectifier
-
-<img src="http://2.bp.blogspot.com/-cumirN3mjC0/UiVln-LDtTI/AAAAAAAAALw/f9hwfKSzZb0/s640/3-Phase-Bridge-Rectifier1.jpg" alt="Drawing" style="width: 600px;"/>
-
----
-## 3-Phase Full Wave (Bridge) Rectifier
+- ## Lower on-resistance
 --
 
-<img src="./images/ee463/3ph_full_bridge.png" alt="Drawing" style="width: 700px;"/>
-
----
-## 3-Phase Full Wave (Bridge) Rectifier
-
-### Ignore Ls and redraw
+- ## Can withstand higher voltages (upto 1700V)
 --
 
-<img src="./images/ee463/3ph_full_bridge2.png" alt="Drawing" style="width: 500px;"/>
+- ## Easy to parallel (positive temperature coefficient)
+---
+# IGBT Comparison
+
+<img src="./images/ee463/igbt_comparison.png" alt="Drawing" style="width: 800px;"/>
+
+### To be discussed more in detail throughout the semester
 
 ---
-## 3-Phase Full Wave (Bridge) Rectifier
-
-### Can you draw the voltage and current waveforms?
+## Some New Transistor Technologies
 --
 
-<img src="./images/ee463/3ph_diode_voltage.png" alt="Drawing" style="width: 800px;"/>
----
-## 3-Phase Full Wave (Bridge) Rectifier
+# GaN
 
-### Can you draw the voltage and current waveforms?
-
-<img src="./images/ee463/3ph_diode_voltage2.png" alt="Drawing" style="width: 800px;"/>
+<img src="http://www.gansystems.com/_includes/ckfinder/userfiles/images/GS61004B%20v01.png" alt="Drawing" style="width: 800px;"/>
 
 ---
-## 3-Phase Full Wave (Bridge) Rectifier
+## Some New Transistor Technologies
 
-## Average voltage?
---
 
-## \\(V\_{dc}= \dfrac{3\sqrt{6}}{ \pi} V\_{ph}\\)
+# SiC
 
-### or
---
-
-## \\(V\_{dc}= \dfrac{3\sqrt{2}}{ \pi} V\_{l-l} = 1.35 V\_{l-l}\\)
-
-### =540 Vdc for a 400 V grid
----
-## What about the current waveforms?
---
-
-<img src="./images/ee463/3ph_diode_current.png" alt="Drawing" style="width: 800px;"/>
----
-
-## What about the current waveforms?
-
-### What are the differences wrt single phase?
---
-
-<img src="./images/ee463/3ph_diode_current2.png" alt="Drawing" style="width: 800px;"/>
-
-## No 3rd order harmonics!
+<img src="http://newsroom.toyota.co.jp/pages/news/images/2014/05/20/1330/20140520_01_w450_h230.jpg" alt="Drawing" style="width: 800px;"/>
 
 ---
-# Comparison of Rectifiers
+# Data-Sheet Exercise
 
----
-
-# Commutation
---
-
-<img src="./images/ee463/3ph_commutation1.png" alt="Drawing" style="width: 700px;"/>
-
----
-# Commutation
---
-
-<img src="./images/ee463/3ph_commutation2.png" alt="Drawing" style="width: 800px;"/>
-
----
-# Average Voltage
-
-## Without Commutation
-
-## \\(V\_{dc}= \dfrac{3\sqrt{2}}{ \pi} V\_{l-l} = 1.35 V\_{l-l}\\)
---
-
-## With Commutation
-
-## \\(V\_{dc}= \dfrac{3\sqrt{2}}{ \pi} V\_{l-l} - \dfrac{3}{\pi}\omega L_s I_d\\)
-
-
-### [MultiSim Simulation](https://www.multisim.com/discover/)
 ---
 ## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
 
