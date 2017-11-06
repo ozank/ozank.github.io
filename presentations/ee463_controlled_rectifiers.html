@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE463-Static Power Conversion-I</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-463 STATIC POWER CONVERSION-I
+
+# Controlled Rectifiers
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Thyristor Rectifiers
+--
+
+- ## HVDC Transmission Systems
+--
+
+- ## DC Motor Drives
+--
+
+- ## Traction Applications
+
+--
+- ## Industrial Loads (Welding, Heating etc)
+
+---
+# Thyristor Rectifiers
+--
+
+## General Schematic
+<img src="./images/ee463/thyristor_rectifier.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Thyristor Rectifiers
+--
+
+## Operating Quadrants
+
+<img src="./images/ee463/thyristor_rectifier_VI.png" alt="Drawing" style="width: 400px;"/>
+
+
+### Capable of supplying negative Vd (Q4, Inversion)
+---
+# Simple Circuits
+--
+
+## Thyristor with R load
+
+<img src="./images/ee463/thyristor_R.png" alt="Drawing" style="width: 400px;"/>
+
+### Can you plot the voltage output?
+
+---
+# Simple Circuits
+
+## Thyristor with R load
+
+<img src="./images/ee463/thyristor_R_output.png" alt="Drawing" style="width: 800px;"/>
+---
+
+# Simple Circuits
+
+## Thyristor with RL load
+
+<img src="./images/ee463/thyristor_RL.png" alt="Drawing" style="width: 400px;"/>
+
+### Can you plot the voltage output?
+
+---
+# Simple Circuits
+
+## Thyristor with RL load
+
+<img src="./images/ee463/thyristor_RL_output.png" alt="Drawing" style="width: 800px;"/>
+
+
+---
+
+# Simple Circuits
+
+## Load with DC
+
+<img src="./images/ee463/thyristor_DC.png" alt="Drawing" style="width: 400px;"/>
+
+### Can you plot the voltage output?
+
+---
+# Simple Circuits
+
+<img src="./images/ee463/thyristor_DC_output.png" alt="Drawing" style="width: 750px;"/>
+
+---
+## Thyristor with RL load
+## but also add a Freewheeling diode
+--
+
+<img src="./images/ee463/thyristor_RL_freewheeling.png" alt="Drawing" style="width: 500px;"/>
+
+## What are the differences?
+
+---
+## Thyristor with freewheeling diode
+--
+
+<img src="./images/ee463/thyristor_RL_freewheeling_output.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Single Phase Thyristor Rectifier
+--
+
+<img src="./images/ee463/single_phase_thyristor.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Single Phase Thyristor Rectifier
+
+## Ideal Case
+
+<img src="./images/ee463/single_phase_thyristor_ideal.png" alt="Drawing" style="width: 500px;"/>
+
+### Can you plot the output voltages?
+
+---
+## It is identical to diode rectifier with \\(\alpha=0\\)
+--
+
+<img src="./images/ee463/single_phase_thyristor_0.png" alt="Drawing" style="width: 800px;"/>
+
+---
+
+## What about with a large firing angle?
+
+<img src="./images/ee463/single_phase_thyristor_nonzero.png" alt="Drawing" style="width: 750px;"/>
+
+---
+## How can you calculate the average voltage?
+--
+
+## \\(Vd_\alpha= \dfrac{2\sqrt{2}Vs}{\pi} cos(\alpha)\\)
+--
+
+- ### \\(\alpha = 0 \rightarrow\\) Diode rectifier
+--
+
+- ### \\(\alpha < \pi/2 \rightarrow Vd >0\\) 
+--
+
+- ### \\(\alpha > \pi/2 \rightarrow Vd < 0\\)  
+
+---
+# Operating Modes
+
+<img src="./images/ee463/thyristor_operating_modes.png" alt="Drawing" style="width: 750px;"/>
+---
+# Power Flow
+--
+
+### \\(P = \dfrac{1}{T}\int p(t) dt\\)
+
+--
+
+### \\(P = I_d \dfrac{1}{T}\int v_d(t) dt = 0.9 V_s I_d cos(\alpha)\\)
+
+---
+# Line Current
+
+<img src="./images/ee463/thyristor_Is.png" alt="Drawing" style="width: 750px;"/>
+
+### Shifted by \\(\alpha\\), but still a square wave
+--
+
+## Harmonics, THD, I1?
+--
+
+## What about PF, DPF?
+
+---
+## Real Power, Apparent Power
+--
+
+<img src="./images/ee463/thyristor_power.png" alt="Drawing" style="width: 750px;"/>
+
+### [MultiSim](https://www.multisim.com/content/kRQKTtG5FCPiYqpQ89p5jD/controlled-rectifier/open/)
+
+---
+## Single Phase Rectifier with Freewheeling Diode
+--
+
+<img src="http://lh4.ggpht.com/_iakZ3FdExeg/TdnH76eDk0I/AAAAAAAABHs/Q2DUaT227YU/EEEbold99_thumb2.jpg?imgmax=800" alt="Drawing" style="width: 600px;"/>
+
+## Can you plot the voltage, current waveform?
+--
+
+## What are the advantages, disadvantages?
+
+---
+
+# How can you make this circuit cheaper?
+
+<img src="http://lh4.ggpht.com/_iakZ3FdExeg/TdnH76eDk0I/AAAAAAAABHs/Q2DUaT227YU/EEEbold99_thumb2.jpg?imgmax=800" alt="Drawing" style="width: 600px;"/>
+
+---
+
+# Full Bridge Half Controlled Rectifier
+--
+
+<img src="http://lh3.ggpht.com/_iakZ3FdExeg/TdrTo-QlQrI/AAAAAAAABHw/167kB105yJw/EEEbold10013.jpg?imgmax=800" alt="Drawing" style="width: 600px;"/>
+
+## D1, D2 works as freewheeling diodes
+--
+
+## Vd cannot be negative
+
+---
+# Full Bridge Half Controlled Rectifier
+
+## Alternative (Same Output)
+
+<img src="http://lh5.ggpht.com/_iakZ3FdExeg/TdrTzVkJw1I/AAAAAAAABH8/XneGHuIuHBc/EEEbold101_thumb3.jpg?imgmax=800" alt="Drawing" style="width: 600px;"/>
+
+### D3 can be removed (depending on load, and thyristor gate signals)
+
+---
+# Commutation
+
+
+---
+
+## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
