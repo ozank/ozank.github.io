@@ -245,8 +245,149 @@ class: center, middle
 
 ---
 # Commutation
+--
+
+## With source side inductance (Ls)
+--
+
+<img src="./images/ee463/thyristor_Ls.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Commutation
+--
+
+## Can you plot the voltage and current outputs?
+--
+
+<img src="./images/ee463/thyristor_commutation.png" alt="Drawing" style="width: 700px;"/>
+---
+# Commutation
+
+## Effect on the output voltage
+--
+
+### \\(A_u =  \sqrt{2}V_s (cos (\alpha) - cos (\alpha + u)) = 2\omega L_s I_d\\)
+--
+
+### \\(cos(\alpha + u) = cos (\alpha) - \dfrac{2\omega L_s I_d}{\sqrt{2}V_s}\\)
+---
+# Commutation
+
+## Voltage drop due to commutation
+--
+
+### \\(\Delta V\_{du} = \dfrac{A_u}{\pi} = \dfrac{2\omega L_s I_d}{\pi}\\)
+--
+
+### \\(V_d = 0.9 V_s cos(\alpha) - \dfrac{2\omega L_s I_d}{\pi} \\)
+
+---
+# Example 
+
+## Mohan Ex. 6.1
+
+---
+## Practical Thyristor Converter
+--
+
+### Consider a case as a DC motor drive
+
+--
+
+<img src="./images/ee463/practical_thyristor.png" alt="Drawing" style="width: 600px;"/>
+
+---
+## Practical Thyristor Converter
+
+## Continuous Conduction (id is always > 0)
+--
+
+<img src="./images/ee463/thyristor_continuous_conduction.png" alt="Drawing" style="width: 750px;"/>
+--
+
+### Average voltage with commutation?
+--
+
+### \\(V\_d \approx 0.9 V\_s cos(\alpha) - \dfrac{2\omega L\_s I\_{d,min}}{\pi} \\)
+
+---
+## Practical Thyristor Converter
+
+## Continuous Conduction (id is always > 0)
 
 
+<img src="./images/ee463/thyristor_continuous_conduction.png" alt="Drawing" style="width: 750px;"/>
+
+
+### Average Current?
+--
+
+
+### \\(I\_d =  \dfrac{V_d - E_d}{r_d} \\)
+
+---
+## Practical Thyristor Converter
+
+### What happens if Id is small?
+
+---
+## Practical Thyristor Converter
+
+## Discontinuous Conduction
+
+<img src="./images/ee463/thyristor_discontinuous_conduction.png" alt="Drawing" style="width: 750px;"/>
+
+---
+## Practical Thyristor Converter
+
+## Discontinuous Conduction
+
+<img src="./images/ee463/thyristor_discontinuous_conduction2.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Inverter Mode
+--
+
+## 90 < Firing Angle < 180
+--
+
+### Average power<0 (Power flows from DC to AC)
+
+<img src="./images/ee463/thyristor_Ls.png" alt="Drawing" style="width: 400px;"/>
+
+### Only with active power source on DC side
+
+---
+# Inverter Mode
+## 90 < Firing Angle < 180
+
+<img src="./images/ee463/thyristor_inverter_mode.png" alt="Drawing" style="width: 800px;"/>
+---
+# Inverter Mode
+## With voltage source
+
+<img src="./images/ee463/thyristor_inverter_voltage.png" alt="Drawing" style="width: 500px;"/>
+
+---
+
+# Inverter Mode
+## With voltage source
+### Vd vs Id (with commutation)
+--
+
+<img src="./images/ee463/thyristor_inverter_Vd_Id.png" alt="Drawing" style="width: 700px;"/>
+---
+# Inverter Mode
+## Thyristor Voltage
+--
+
+<img src="./images/ee463/thyristor_inverter_device_voltage.png" alt="Drawing" style="width: 750px;"/>
+--
+
+## Extinction Angle (\\(\gamma = 180 - (\alpha + u)\\))
+--
+
+### Extinction time should be larger than thyristor turn-off time (\\(t_q\\))!
 ---
 
 ## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
