@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE463-Static Power Conversion-I</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-463 STATIC POWER CONVERSION-I
+
+# 3-Phase Controlled Rectifiers
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Review
+## N-Phase Half Wave Rectifier
+
+<img src="./images/ee463/n_phase_half_bridge.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Review
+
+## 3-Phase Half Wave Diode Rectifier
+
+<img src="./images/ee463/3ph_half_bridge_voltage.png" alt="Drawing" style="width: 600px;"/>
+---
+
+# Review
+
+## 3-Phase Half Wave Diode Rectifier Average Voltage?
+--
+
+## \\(V\_{dc}= \dfrac{3\sqrt{6}}{2 \pi} V\_{ph,rms}\\)
+
+###or 
+
+## \\(V\_{dc}= \dfrac{3\sqrt{2}}{2 \pi} V\_{ll,rms}\\)
+
+---
+# Half-bridge Tyristor Rectifier
+
+<img src="http://lh3.ggpht.com/-kPBowC5Q8oE/Tf_VIqQNDLI/AAAAAAAABdE/8o6SQlRpiCc/10_thumb2.jpg?imgmax=800" alt="Drawing" style="width: 600px;"/>
+
+---
+# Half-bridge Tyristor Rectifier
+
+<img src="http://4.bp.blogspot.com/-RadaC6s7kzY/Tg_l-Qy5GxI/AAAAAAAAAj0/1QXrn66OiWc/s1600/3+fasa+setengah+gelombang.JPG" alt="Drawing" style="width: 750px;"/>
+
+---
+# Half-bridge Tyristor Rectifier
+
+## Average Voltage?
+--
+
+## \\(V\_{dc(\alpha)}= \dfrac{3\sqrt{6}}{2 \pi} V\_{ph,rms} cos (\alpha)\\)
+
+###or 
+
+## \\(V\_{dc(\alpha)}= \dfrac{3\sqrt{2}}{2 \pi} V\_{ll,rms} cos (\alpha)\\)
+
+---
+# Half-bridge Tyristor Rectifier
+
+## Disadvantages?
+--
+
+## Can you plot the current waveforms?
+
+---
+# Full-bridge Tyristor Rectifier
+
+TBC
+---
+
+## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
