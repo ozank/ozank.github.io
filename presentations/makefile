@@ -1,4 +1,4 @@
-HTML_FILES= $(wildcard *.html)
+HTML_FILES= $(wildcard ee361*.html)
 PDF_FILES= $(HTML_FILES:.html=.pdf)
 
 .SUFFIXES: .html .pdf
