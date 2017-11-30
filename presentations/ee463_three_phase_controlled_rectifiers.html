@@ -277,21 +277,31 @@ s
 <img src="./images/ee463/3ph_thyristor_line_inductance.png" alt="Drawing" style="width: 600px;"/>
 
 ---
+# Effect of Ls (Commutation)
+--
+
+## Line inductance
+
+### Should be a minimum of 5%
+
+### \\(\omega L\_s = 0.05 \dfrac{V\_{l-l}/\sqrt{3}}{I\_{s1}}\\)
+
+---
 # Commutation: \\(\alpha =0 \\), \\(L\_s =0 \\)
 
-<img src="https://en.0wikipedia.org/index.php?q=aHR0cHM6Ly91cGxvYWQud2lraW1lZGlhLm9yZy93aWtpcGVkaWEvY29tbW9ucy85LzkxL0JyaWRnZV9yZWN0aWZpZXJfYXRfYWxwaGElM0QwX3UlM0QwLnBuZw" alt="Drawing" style="width: 700px;"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Bridge_rectifier_at_alpha%3D0_u%3D0.png" style="width: 700px;"/>
 ---
 # Commutation: \\(\alpha =0 \\), \\(L\_s > 0 \\)
 
-<img src="https://en.0wikipedia.org/index.php?q=aHR0cHM6Ly91cGxvYWQud2lraW1lZGlhLm9yZy93aWtpcGVkaWEvY29tbW9ucy8xLzE4L0JyaWRnZV9yZWN0aWZpZXJfYXRfYWxwaGElM0QwX3UlM0QyMC5wbmc" alt="Drawing" style="width: 700px;"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Bridge_rectifier_at_alpha%3D0_u%3D20.png" style="width: 700px;"/>
 ---
 # Commutation: \\(\alpha =20 \\), \\(L\_s > 0 \\)
 
-<img src="https://en.0wikipedia.org/index.php?q=aHR0cHM6Ly91cGxvYWQud2lraW1lZGlhLm9yZy93aWtpcGVkaWEvY29tbW9ucy83LzdjL0JyaWRnZV9yZWN0aWZpZXJfYXRfYWxwaGElM0QyMF91JTNEMjAucG5n" alt="Drawing" style="width: 700px;"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Bridge_rectifier_at_alpha%3D20_u%3D20.png" style="width: 700px;"/>
 ---
 # Commutation: \\(\alpha =40 \\), \\(L\_s > 0 \\)
 
-<img src="https://en.0wikipedia.org/index.php?q=aHR0cHM6Ly91cGxvYWQud2lraW1lZGlhLm9yZy93aWtpcGVkaWEvY29tbW9ucy82LzZkL0JyaWRnZV9yZWN0aWZpZXJfYXRfYWxwaGElM0Q0MF91JTNEMjAucG5n" alt="Drawing" style="width: 700px;"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Bridge_rectifier_at_alpha%3D40_u%3D20.png" alt="Drawing" style="width: 700px;"/>
 ---
 # Effect of Ls (Commutation)
 
@@ -300,7 +310,7 @@ s
 # Effect of Ls (Commutation)
 --
 
-### \\(A_u = \omega Ls Id\\)  (repeats every \\(\pi/3\\))
+### \\(A_u = \omega Ls Id\\)  (repeats itself every \\(\pi/3\\))
 --
 
 ### \\(V\_{d(\alpha)}= \dfrac{3\sqrt{2}}{\pi} V\_{ll,rms} cos (\alpha) - \dfrac{ 3 \omega Ls Id}{\pi}\\)
@@ -321,6 +331,94 @@ s
 - ### Resultant voltage in a 3-ph rectifier:
 
 ### \\(V\_{d\alpha}= \dfrac{3\sqrt{2}}{\pi}V\_{l-l} cos (\alpha) - \dfrac{3\omega L_s}{\pi}I_a \\)
+
+---
+# Line Current with Commutation
+--
+
+## What about THD?
+--
+
+## What about the DPF?
+---
+# Line Current with Commutation
+
+<img src="./images/ee463/3ph_commutation_current.png" alt="Drawing" style="width: 800px;"/>
+--
+
+##  \\(DPF  \approx cos(\alpha + \frac{1}{2}u)\\)
+---
+
+# Line Current with Commutation
+
+## Harmonics get smaller with \\(\alpha\\) and \\(u\\)
+
+<img src="./images/ee463/harmonics_commutation.png" alt="Drawing" style="width: 750px;"/>
+
+---
+# Practical Converter
+
+<img src="./images/ee463/3ph_practical_thyristor.png" alt="Drawing" style="width: 550px;"/>
+---
+# Practical Converter
+
+## Continuous Conduction
+
+<img src="./images/ee463/3ph_continious_conduction.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Practical Converter
+
+## Discontinuous Conduction
+
+<img src="./images/ee463/3ph_discontinuous_mode.png" alt="Drawing" style="width: 800px;"/>
+---
+# Inverter Mode of Operation
+--
+
+## \\(\pi/2 < \alpha < \pi \\)
+
+<img src="./images/ee463/3ph_thyristor_inverter.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Inverter Mode of Operation
+
+## Two Quadrant Operation
+
+--
+
+<img src="./images/ee463/3ph_thyristor_two_quadrant.png" alt="Drawing" style="width: 400px;"/>
+
+### Two quadrant operation with source side voltage (i.e. DC motor)
+---
+
+## How can you obtain four-quadrant operation?
+--
+
+## Use two seperate converters
+
+<img src="http://keysan.me/presentations/images/ee462/3ph_thyristor_motor_drive_regenerative.png" alt="Drawing" style="width: 500px;"/>
+
+### Ref: Mohan Chapter 13 DC Motor Drives
+---
+
+## How can you obtain four-quadrant operation?
+
+## Use two seperate converters
+
+<img src="https://vet.bme.hu/sites/default/files/tamop/vivem319en/Images/image005.png" alt="Drawing" style="width: 750px;"/>
+
+### Ref: Mohan Chapter 13 DC Motor Drives
+---
+
+## Voltage Waveform Distortion
+
+<img src="./images/ee463/3ph_thyristor_notching1.png" alt="Drawing" style="width: 750px;"/>
+---
+
+## Voltage Waveform Distortion
+
+<img src="./images/ee463/3ph_thyristor_notching2.png" alt="Drawing" style="width: 750px;"/>
 
 ---
 ## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
