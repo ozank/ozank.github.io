@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE463-Static Power Conversion-I</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-463 STATIC POWER CONVERSION-I
+
+# An Introduction to DC/DC Converters
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# DC/DC Converters
+--
+
+## Can be used to:
+--
+
+# Step down the input voltage
+--
+
+# Step up the input voltage
+
+--
+
+# or Both
+
+---
+
+# DC/DC Converter Applications
+--
+
+## All Types of Power Supplies
+
+<img src="https://ae01.alicdn.com/kf/HTB1Ba.UJFXXXXbcXVXXq6xXFXXXk/DC-DC-Step-Down-Buck-Converter-Power-Supply-Module-24V-12V-9V-to-5V-5A-25W.jpg" alt="Drawing" style="width: 500px;"/>
+
+---
+
+## DC/DC Converter Applications
+--
+
+## Renewables: PV
+
+<img src="http://www.scielo.org.co/img/revistas/rfiua/n63/n63a08i01.gif" alt="Drawing" style="width: 600px;"/>
+
+---
+
+## DC/DC Converter Applications
+--
+
+## Electric Cars/Traction
+
+<img src="https://www.homepower.com/sites/default/files/articles/671/docs/1_HP124_pg34_Prange-1.jpg" alt="Drawing" style="width: 800px;"/>
+---
+
+## DC/DC Converter Applications
+
+
+## Electric Cars/Traction
+
+<img src="http://www.allegromicro.com/~/media/Images/Design/Hall-Effect-Current-Sensing-In-Hybrid-Electric-Vehicle-HEV-Applications/fig1.ashx?w=500&h=300&as=1&la=en&hash=461371BD1D96B5FAA2D1FDB40AC2AE5B783EE728" alt="Drawing" style="width: 800px;"/>
+
+---
+
+## DC/DC Converter Applications
+
+
+## Electric Cars/Traction
+
+### [200 kW SiC DC/DC Converter](https://www.iisb.fraunhofer.de/en/research_areas/vehicle_electronics/dcdc_converters/projects/200_kw_full_sic_dcdc_converter.html)
+
+<img src="https://www.iisb.fraunhofer.de/en/research_areas/vehicle_electronics/dcdc_converters/projects/200_kw_full_sic_dcdc_converter/_jcr_content/stage/stageParsys/stage_slide/image.img.jpg/1455519027706_keyvis-200kW-DC-DCConverter.jpg" alt="Drawing" style="width: 700px;"/>
+
+
+---
+
+# Which components do you see?
+
+
+<img src="http://hi-z.com/wp-content/uploads/2016/08/DC-to-DC-Converter-TEG-MODULE.jpg" alt="Drawing" style="width: 600px;"/>
+
+---
+
+# Which components do you see?
+
+<img src="https://images-na.ssl-images-amazon.com/images/I/51Ds0P5msZL._SX342_.jpg" alt="Drawing" style="width: 600px;"/>
+
+---
+# Step-Down (Buck) Converter:
+
+## Simplest Case
+
+<img src="./images/ee463/switch_mode_dc_dc.png" alt="Drawing" style="width: 450px;"/>
+
+---
+# Step-Down (Buck) Converter:
+
+## Simplest Case
+
+<img src="./images/ee463/switch_mode_dc_dc2.png" alt="Drawing" style="width: 700px;"/>
+
+---
+# Let's make the output voltage smoother
+--
+
+## Add a Low Pass Filter (eg LC Filter)
+
+<img src="./images/ee463/step_down_low_pass.png" alt="Drawing" style="width: 700px;"/>
+
+---
+# Let's make the output voltage smoother
+--
+
+## LC Filter Characteristics (More in the following weeks)
+
+<img src="https://www.maximintegrated.com/en/images/appnotes/883/883Fig04a.gif" alt="Drawing" style="width: 550px;"/>
+
+---
+## Why do we have the diode for?
+
+<img src="./images/ee463/step_down_low_pass.png" alt="Drawing" style="width: 600px;"/>
+
+--
+
+## Freewheeling Diode: Conducts when switch is off
+
+---
+## Operating Modes (in CCM)
+
+<img src="./images/ee463/buck_converter_voltages.png" alt="Drawing" style="width: 600px;"/>
+
+
+
+CCM: Continuous Conduction Mode
+---
+
+## Step-Down (Buck) Converter:
+--
+
+#\\(V_o = D V_d\\)
+--
+
+### Neglecting losses
+
+#\\(I_o = I_d/D\\)
+
+---
+
+### Transition to DCM
+
+
+
+
+DCM: Discontinuous Conduction Mode
+
+
+---
+## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
