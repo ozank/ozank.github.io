@@ -10,6 +10,7 @@ permalink: /presentations/index.html
 ### 2017
 
 * [French-Turkish Innovation Day, METU Technopark](https://www.ftinnovationdays2017.com/), [Smart Campus Projects in METU](https://docs.google.com/presentation/d/1x1pxn8TNPNpuZutw_qd3Hcdr5t0hew08CulHOooWGZs/edit?usp=sharing)
+* METU, [Practical Aspects of DC Motor and Drives](https://docs.google.com/presentation/d/1XveRzNLUcjYO3Micyx0Hd8ln29yodHI5m_z4AlIQQmo/edit?usp=sharing)
 * METU, [Applications of Superconductivity](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8069354)
 * METU, [PowerLab Introduction](https://docs.google.com/presentation/d/1BPYdgpPDQjWYKpd2VYRGdAKeLVnbxjC2oZ_ZtTDjsyA/edit?usp=sharing)
 * METU, Newton Fund Offshore Wind Workshop, [Future Generator Technologies for Offshore Wind Turbines](https://docs.google.com/presentation/d/1Z-OeGlsTIpST3BkvIrYIyqnbJWVgmD0mm25EXoVOUmY/edit?usp=sharing)
