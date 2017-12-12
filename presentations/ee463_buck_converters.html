@@ -129,6 +129,7 @@ class: center, middle
 
 <img src="./images/ee463/step_down_low_pass.png" alt="Drawing" style="width: 700px;"/>
 
+### [Buck Converter Simulation](https://www.plexim.com/academy/power-electronics/buck-conv)
 ---
 # Let's make the output voltage smoother
 --
@@ -222,6 +223,141 @@ CCM: Continuous Conduction Mode
 
 ### Critical current is max, when D=0.5
 
+---
+# Voltage Ripple
+--
+
+<img src="./images/ee463/buck_ripple.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Voltage Ripple
+--
+
+### \\(\Delta V\_o = \dfrac{\Delta Q}{C}\\)
+--
+
+### \\(\Delta V\_o = \dfrac{\Delta I\_L T\_s}{8C}\\)
+
+--
+
+### \\( \dfrac{\Delta V\_o}{V\_0}= \dfrac{(1-D) T\_s^2 }{8LC} \\)
+--
+
+## Can you put it in a much nicer form?
+
+---
+# Voltage Ripple
+
+### \\( \dfrac{\Delta V\_o}{V\_0}= \dfrac{(1-D) T\_s^2 }{8LC} \\)
+--
+
+### \\( \dfrac{\Delta V\_o}{V\_0}= \dfrac{\pi^2 (1-D) }{2} {\bigg(\dfrac{f\_c}{f\_s}\bigg)}^2 \\)
+
+---
+
+# Step-Up (Boost) Converter
+--
+
+<img src="./images/ee463/boost_converter.png" alt="Drawing" style="width: 700px;"/>
+---
+
+# Step-Up (Boost) Converter
+
+## Can you plot the on & off states?
+--
+
+<img src="./images/ee463/boost_on_off.png" alt="Drawing" style="width: 800px;"/>
+--
+
+### Mechanical Analogy: Ram Pump
+
+### [How the ram pump works?](https://www.youtube.com/watch?v=i31hGJ93OTg), [How to make a ram pump](https://www.youtube.com/watch?v=0S2u_tdZkHs), [Largest ram pump](https://www.youtube.com/watch?v=pORYUjKoSuA)
+---
+# Step-Up (Boost) Converter
+--
+
+## Can you plot the voltage & current waveforms?
+--
+
+## Can you find the relation between \\(V_o\\)  and \\(V_d\\)?
+--
+
+## [Plexim Simulation](https://www.plexim.com/academy/power-electronics/boost-conv)
+---
+
+# Step-Up (Boost) Converter
+--
+
+<img src="./images/ee463/boost_on_off_voltage.png" alt="Drawing" style="width: 650px;"/>
+
+---
+
+# Step-Up (Boost) Converter
+--
+
+## \\(V\_d t\_{on} + (V\_d-V\_o)t\_{off}=0\\)
+--
+
+## \\( \dfrac{V\_o}{V\_d} = \dfrac{T\_s}{t\_{off}} = \dfrac{1}{1-D} \\)
+--
+
+## \\( \dfrac{I\_o}{I\_d} = (1-D) \\)
+
+---
+# Transition to DCM
+--
+
+<img src="./images/ee463/boost_boundary.png" alt="Drawing" style="width: 650px;"/>
+---
+# Transition to DCM
+--
+
+<img src="./images/ee463/boost_boundary2.png" alt="Drawing" style="width: 650px;"/>
+
+---
+# DCM
+--
+
+### Occurs at light loads
+
+<img src="./images/ee463/boost_dcm.png" alt="Drawing" style="width: 650px;"/>
+---
+# DCM
+--
+
+### In order to keep Vo constant
+
+<img src="./images/ee463/boost_dcm2.png" alt="Drawing" style="width: 600px;"/>
+---
+
+# Ideal vs. Reality
+--
+
+## What is Vo as D goes to 1?
+--
+
+<img src="./images/ee463/boost_ideal.png" alt="Drawing" style="width: 450px;"/>
+
+---
+## Output Ripple
+--
+
+### Can you derive the operating modes?
+--
+
+<img src="./images/ee463/boost_ripple.png" alt="Drawing" style="width: 600px;"/>
+---
+
+# Buck-Boost Converter
+--
+
+## Can you obtain the operating modes?
+--
+
+<img src="./images/ee463/buck_boost.png" alt="Drawing" style="width: 450px;"/>
+
+
+## [Plexim Simulation](https://www.plexim.com/academy/power-electronics/buckboost-conv) 
 ---
 ## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
 
