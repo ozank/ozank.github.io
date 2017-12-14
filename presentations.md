@@ -9,6 +9,9 @@ permalink: /presentations/index.html
 
 ### 2017
 
+
+* [TMMOB, Enerjinin Geleceği Sempozyumu](http://tmmobenerjisempozyumu.org/), [Rüzgar Türbinleri için Yenilikçi Generatör Teknolojileri](https://docs.google.com/presentation/d/1vP-5_YQuELD0dK9h2Nfeuh6tkN_-2SlyAMf_LF2xkxE/edit?usp=sharing)
+
 * [French-Turkish Innovation Day, METU Technopark](https://www.ftinnovationdays2017.com/), [Smart Campus Projects in METU](https://docs.google.com/presentation/d/1x1pxn8TNPNpuZutw_qd3Hcdr5t0hew08CulHOooWGZs/edit?usp=sharing)
 * METU, [Practical Aspects of DC Motor and Drives](https://docs.google.com/presentation/d/1XveRzNLUcjYO3Micyx0Hd8ln29yodHI5m_z4AlIQQmo/edit?usp=sharing)
 * METU, [Applications of Superconductivity](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8069354)
