@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE463-Static Power Conversion-I</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-463 STATIC POWER CONVERSION-I
+
+# 3-Phase Controlled Rectifiers
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Review
+## N-Phase Half Wave Rectifier
+
+<img src="./images/ee463/n_phase_half_bridge.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Review
+
+## 3-Phase Half Wave Diode Rectifier
+
+<img src="./images/ee463/3ph_half_bridge_voltage.png" alt="Drawing" style="width: 600px;"/>
+---
+
+# Review
+
+## 3-Phase Half Wave Diode Rectifier Average Voltage?
+--
+
+## \\(V\_{dc}= \dfrac{3\sqrt{6}}{2 \pi} V\_{ph,rms}\\)
+
+###or 
+
+## \\(V\_{dc}= \dfrac{3\sqrt{2}}{2 \pi} V\_{ll,rms}\\)
+---
+# Half-bridge Tyristor Rectifier
+
+<img src="http://img.directindustry.com/images_di/photo-mg/111909-6817621.jpg" alt="Drawing" style="width: 600px;"/>
+---
+# Half-bridge Tyristor Rectifier
+
+<img src="http://lh3.ggpht.com/-kPBowC5Q8oE/Tf_VIqQNDLI/AAAAAAAABdE/8o6SQlRpiCc/10_thumb2.jpg?imgmax=800" alt="Drawing" style="width: 600px;"/>
+
+---
+# Half-bridge Tyristor Rectifier
+
+<img src="http://4.bp.blogspot.com/-RadaC6s7kzY/Tg_l-Qy5GxI/AAAAAAAAAj0/1QXrn66OiWc/s1600/3+fasa+setengah+gelombang.JPG" alt="Drawing" style="width: 750px;"/>
+
+---
+# Half-bridge Tyristor Rectifier
+
+## Average Voltage?
+--
+
+## \\(V\_{dc(\alpha)}= \dfrac{3\sqrt{6}}{2 \pi} V\_{ph,rms} cos (\alpha)\\)
+
+###or 
+
+## \\(V\_{dc(\alpha)}= \dfrac{3\sqrt{2}}{2 \pi} V\_{ll,rms} cos (\alpha)\\)
+
+---
+# Half-bridge Tyristor Rectifier
+
+## Disadvantages?
+--
+
+## Can you plot the current waveforms?
+
+---
+# Full-bridge Tyristor Rectifier
+
+<img src="./images/ee463/3ph_thyristor.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Full-bridge Tyristor Rectifier
+
+<img src="./images/ee462/3ph_thyristor_rectifier_simplified.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Full-bridge Tyristor Rectifier
+
+## Can you plot the voltage output?
+--
+
+
+<img src="./images/ee463/3ph_thyristor_0.png" alt="Drawing" style="width: 800px;"/>
+
+### Diode Rectifier (or \\(\alpha=0\\))
+---
+
+# Full-bridge Tyristor Rectifier
+
+### Diode Rectifier (or \\(\alpha=0\\))
+
+<img src="https://en.0wikipedia.org/index.php?q=aHR0cHM6Ly91cGxvYWQud2lraW1lZGlhLm9yZy93aWtpcGVkaWEvY29tbW9ucy90aHVtYi8yLzJlLzNfcGhhc2VfcmVjdGlmaWNhdGlvbl8yLnN2Zy82NzdweC0zX3BoYXNlX3JlY3RpZmljYXRpb25fMi5zdmcucG5n" alt="Drawing" style="width: 600px;"/>
+---
+
+# Full-bridge Tyristor Rectifier
+
+### What kind of waveform is it?
+
+<img src="https://sub.allaboutcircuits.com/images/03269.png" alt="Drawing" style="width: 800px;"/>
+
+---
+
+# Full-bridge Tyristor Rectifier
+
+### Output voltage follows line to line voltages!
+
+<img src="http://people.ucalgary.ca/~aknigh/vsd/ssim/images/figs/three_phase_diode_line_line.gif" alt="Drawing" style="width: 800px;"/>
+
+
+---
+
+# Full-bridge Tyristor Rectifier
+
+### Output voltage follows line to line voltages!
+
+<img src="
+https://en.0wikipedia.org/index.php?q=aHR0cHM6Ly91cGxvYWQud2lraW1lZGlhLm9yZy93aWtpcGVkaWEvY29tbW9ucy85LzkxL0JyaWRnZV9yZWN0aWZpZXJfYXRfYWxwaGElM0QwX3UlM0QwLnBuZw" alt="Drawing" style="width: 600px;"/>
+
+---
+
+# Full-bridge Tyristor Rectifier
+
+## Non-zero firing angle
+--
+
+<img src="./images/ee463/3ph_thyristor_nonzero.png" alt="Drawing" style="width: 800px;"/>
+---
+
+# Full-bridge Tyristor Rectifier
+
+## Non-zero firing angle
+--
+
+<img src="./images/ee463/3ph_thyristor_nonzero2.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Full-bridge Tyristor Rectifier
+
+## What about the current?
+--
+
+<img src="./images/ee463/3ph_thyristor_current.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Full-bridge Tyristor Rectifier
+
+## What about the average output voltage?
+
+<img src="./images/ee463/3ph_thyristor_nonzero2.png" alt="Drawing" style="width: 800px;"/>
+--
+
+### \\(V\_{d(\alpha)}= \dfrac{3\sqrt{2}}{\pi} V\_{ll,rms} cos (\alpha)\\)
+
+
+### Twice of the half-bridge case
+
+---
+# Output Voltage vs. Firing Angle
+--
+
+<img src="./images/ee462/3phase_thyristor_0.png" alt="Drawing" style="width: 800px;"/>
+---
+# Output Voltage vs. Firing Angle
+
+<img src="./images/ee462/3phase_thyristor_30.png" alt="Drawing" style="width: 800px;"/>
+---
+# Output Voltage vs. Firing Angle
+
+<img src="./images/ee462/3phase_thyristor_60.png" alt="Drawing" style="width: 800px;"/>
+---
+# Output Voltage vs. Firing Angle
+
+<img src="./images/ee462/3phase_thyristor_90.png" alt="Drawing" style="width: 800px;"/>
+---
+# Output Voltage vs. Firing Angle
+
+<img src="./images/ee462/3phase_thyristor_120.png" alt="Drawing" style="width: 800px;"/>
+---
+# Output Voltage vs. Firing Angle
+
+<img src="./images/ee462/3phase_thyristor_150.png" alt="Drawing" style="width: 800px;"/>
+---
+# Output Voltage vs. Firing Angle
+
+<img src="./images/ee462/3phase_thyristor_180.png" alt="Drawing" style="width: 800px;"/>
+s
+
+---
+
+## Current Waveform: No triple harmonics
+#### Comparison: <a href="https://www.google.com.tr/?gfe_rd=cr&ei=XqrmWLLjEc-z8weYuJvgDA&gws_rd=ssl#q=sin(x)%2Bsin(3x)/3%2Bsin(5x)/5%2Bsin(7x)/7%2Bsin(9x)/9%2Bsin(11x)/11%2Bsin(13x)/13%2Bsin(15x)/15%2Bsin(17x)/17">Single Phase</a>, <a href="https://www.google.com.tr/?gfe_rd=cr&ei=warmWK-gCM-z8weYuJvgDA&gws_rd=ssl#q=sin(x)-sin(5x)/5-sin(7x)/7%2Bsin(11x)/11%2Bsin(13x)/13-sin(17x)/17-sin(19x)/19">Three Phase</a>
+--
+
+<img src="./images/ee463/3ph_tyhristor_current.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Full-bridge Tyristor Rectifier
+
+## Current Waveform: 
+--
+
+## Fundamental RMS:  \\(I_{s1}=\frac{\sqrt{6}}{\pi}= 0.78 I_d\\)
+--
+
+## Total RMS:  \\(I_{s}=\sqrt{\frac{2}{3}} I_d = 0.816 I_d\\)
+
+--
+
+## THD= 31.08 %
+
+---
+# Full-bridge Tyristor Rectifier
+
+## Current Waveform: 
+--
+
+## DPF=??
+
+---
+# Full-bridge Tyristor Rectifier
+
+## Current Waveform: 
+
+
+## DPF= \\(cos (\phi_1)\\) = \\(cos (\alpha)\\)
+--
+
+## PF = ?
+
+---
+# Full-bridge Tyristor Rectifier
+
+## Current Waveform: 
+
+
+## DPF= \\(cos (\phi_1)\\) = \\(cos (\alpha)\\)
+
+## PF = \\(\dfrac{I\_{s1}}{I\_{s}}cos (\alpha) \\)
+
+---
+# Full-bridge Tyristor Rectifier
+
+## Current Waveform: 
+
+<img src="./images/ee463/thyristor_power_factor.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Effect of Ls (Commutation)
+--
+
+<img src="./images/ee463/3ph_thyristor_line_inductance.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Effect of Ls (Commutation)
+--
+
+## Line inductance
+
+### Should be a minimum of 5%
+
+### \\(\omega L\_s = 0.05 \dfrac{V\_{l-l}/\sqrt{3}}{I\_{s1}}\\)
+
+---
+# Commutation: \\(\alpha =0 \\), \\(L\_s =0 \\)
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Bridge_rectifier_at_alpha%3D0_u%3D0.png" style="width: 700px;"/>
+---
+# Commutation: \\(\alpha =0 \\), \\(L\_s > 0 \\)
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Bridge_rectifier_at_alpha%3D0_u%3D20.png" style="width: 700px;"/>
+---
+# Commutation: \\(\alpha =20 \\), \\(L\_s > 0 \\)
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Bridge_rectifier_at_alpha%3D20_u%3D20.png" style="width: 700px;"/>
+---
+# Commutation: \\(\alpha =40 \\), \\(L\_s > 0 \\)
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Bridge_rectifier_at_alpha%3D40_u%3D20.png" alt="Drawing" style="width: 700px;"/>
+---
+# Effect of Ls (Commutation)
+
+<img src="./images/ee463/3ph_thyristor_commutation.png" alt="Drawing" style="width: 800px;"/>
+---
+# Effect of Ls (Commutation)
+--
+
+### \\(A_u = \omega Ls Id\\)  (repeats itself every \\(\pi/3\\))
+--
+
+### \\(V\_{d(\alpha)}= \dfrac{3\sqrt{2}}{\pi} V\_{ll,rms} cos (\alpha) - \dfrac{ 3 \omega Ls Id}{\pi}\\)
+
+---
+
+# Effect of Ls (Commutation)
+--
+
+### Introduces a voltage drop on the rectified side
+
+- ### Single Phase: \\(\dfrac{2\omega L_s}{\pi}I_a\\)
+--
+
+- ### Three Phase: \\(\dfrac{3\omega L_s}{\pi}I_a\\)
+--
+
+- ### Resultant voltage in a 3-ph rectifier:
+
+### \\(V\_{d\alpha}= \dfrac{3\sqrt{2}}{\pi}V\_{l-l} cos (\alpha) - \dfrac{3\omega L_s}{\pi}I_a \\)
+
+---
+# Line Current with Commutation
+--
+
+## What about THD?
+--
+
+## What about the DPF?
+---
+# Line Current with Commutation
+
+<img src="./images/ee463/3ph_commutation_current.png" alt="Drawing" style="width: 800px;"/>
+--
+
+##  \\(DPF  \approx cos(\alpha + \frac{1}{2}u)\\)
+---
+
+# Line Current with Commutation
+
+## Harmonics get smaller with \\(\alpha\\) and \\(u\\)
+
+<img src="./images/ee463/harmonics_commutation.png" alt="Drawing" style="width: 750px;"/>
+
+---
+# Practical Converter
+
+<img src="./images/ee463/3ph_practical_thyristor.png" alt="Drawing" style="width: 550px;"/>
+---
+# Practical Converter
+
+## Continuous Conduction
+
+<img src="./images/ee463/3ph_continious_conduction.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Practical Converter
+
+## Discontinuous Conduction
+
+<img src="./images/ee463/3ph_discontinuous_mode.png" alt="Drawing" style="width: 800px;"/>
+---
+# Inverter Mode of Operation
+--
+
+## \\(\pi/2 < \alpha < \pi \\)
+
+<img src="./images/ee463/3ph_thyristor_inverter.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Inverter Mode of Operation
+
+## Two Quadrant Operation
+
+--
+
+<img src="./images/ee463/3ph_thyristor_two_quadrant.png" alt="Drawing" style="width: 400px;"/>
+
+### Two quadrant operation with source side voltage (i.e. DC motor)
+---
+
+## How can you obtain four-quadrant operation?
+--
+
+## Use two seperate converters
+
+<img src="http://keysan.me/presentations/images/ee462/3ph_thyristor_motor_drive_regenerative.png" alt="Drawing" style="width: 500px;"/>
+
+### Ref: Mohan Chapter 13 DC Motor Drives
+---
+
+## How can you obtain four-quadrant operation?
+
+## Use two seperate converters
+
+<img src="https://vet.bme.hu/sites/default/files/tamop/vivem319en/Images/image005.png" alt="Drawing" style="width: 750px;"/>
+
+### Ref: Mohan Chapter 13 DC Motor Drives
+---
+
+## Voltage Waveform Distortion
+
+<img src="./images/ee463/3ph_thyristor_notching1.png" alt="Drawing" style="width: 750px;"/>
+---
+
+## Voltage Waveform Distortion
+
+<img src="./images/ee463/3ph_thyristor_notching2.png" alt="Drawing" style="width: 750px;"/>
+
+---
+## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
