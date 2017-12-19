@@ -470,27 +470,184 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
 
-## Power Electronics Applications
+## Thermal Design in Power Electronics
+--
+
+- ### Determine your components
+--
+
+- ### Calculate the losses
+--
+
+- ### Get the thermal resistances fron datasheet
+--
+
+- ### Determine the max. heatsink thermal resistance
+--
+
+- ### Find a heatsink, decide on cooling type (natural, forced)
+--
+
+- ### Iterate until you get a reasonable operating temp.
+
+
+---
+# Typical Thermal Circuit
+
+<img src="http://jestineyong.com/wp-content/uploads/2012/06/heatsink3.jpg" alt="Drawing" style="width: 500px;"/>
+---
+# Typical Thermal Circuit
+
+<img src="http://jestineyong.com/wp-content/uploads/2012/06/heatsink1.jpg" alt="Drawing" style="width: 750px;"/>
+
+--
+
+### Capacitances can be neglected for steady state analysis.
+### Be careful with low heat capacity (tiny) components
+
+---
+# Design Exercise
+--
+
+- ### [IGBT: STGW40H120DF2](http://www.st.com/resource/en/datasheet/stgw40h120df2.pdf)
+--
+
+### Find relevant parameters:
+
+--
+
+### Package Type
+
+### Junction to Case Thermal Resistance
+
+### Junction to Ambient (if used without a heatsink)
+
+---
+
+# Design Exercise
+- ### [IGBT: STGW40H120DF2](www.st.com/resource/en/datasheet/stgw40h120df2.pdf)
+
+### Don't forget the freewheeling diode
+
+<img src="http://www.ni.com/cms/images/devzone/tut/image458298215476905931.jpg" alt="Drawing" style="width: 750px;"/>
+
+---
+# Choose a Heatsink
+
+<img src="https://www.allaboutcircuits.com/uploads/articles/heatsink_diagram-revise.png" alt="Drawing" style="width: 500px;"/>
+
+### [How to moun heatsinks?](https://www.fairchildsemi.com/application-notes/AN/AN-4166.pdf)
+
+#### Useful links:[Online Heat Sink Calculator](https://www.heatsinkcalculator.com), [Heat Sink Calculator](https://www.allaboutcircuits.com/tools/heat-sink-calculator/),  [Characteristics of common packages](http://www.giangrandi.ch/electronics/thcalc/thcalc.shtml)
+
+---
+# Choose a Heatsink
+### Suitable for TO-247 Package
+--
+
+<img src="http://www.newark.com/productimages/standard/en_US/4835085.jpg" alt="Drawing" style="width: 300px;"/>
+--
+
+- ### [R2A-CT4-38E -  Heat Sink](http://www.newark.com/ohmite/r2a-ct4-38e/to-247-heat-sink/dp/73T7839)
+---
+
+# Choose a Heatsink
+### Suitable for TO-247 Package
+
+## Check:
+
+- ### Heatsink to ambient thermal resistance
+--
+
+- ### Thermal resistance vs. air flow
+
+---
+# How to
+--
+
+- ## Calculate losses?
+--
+
+- ## Junction temperature
+--
+
+- ## Maximum operating limit
 
 
 
 ---
+# Things to consider
+--
 
+## Hot spots!
 
+<img src="http://www.powerelectronics.com/sites/powerelectronics.com/files/styles/article_featured_standard/public/uploads/2014/03/032514advthermal.jpg?itok=W6ScMrQq" alt="Drawing" style="width: 600px;"/>
+
+---
+# Things to consider
+--
+
+## Transients!
+### Can be dominant for small (low heat capacity) components
+
+<img src="https://www.electronics-cooling.com/wp-content/uploads/2016/09/graph-1-1024x1024.jpg" alt="Drawing" style="width: 450px;"/>
+
+---
+# Things to consider
+--
+
+## Ambient Temperature
+### Not always at 25 C. Check the standards
+--
+
+- ### Commercial: 0 ° to 70 °C
+- ### Industrial: -40 ° to 85 °C
+- ### Military: -55 ° to 125 °C
+
+---
+# Things to consider
+--
+
+## Non idealities in contact surface
+
+--
+
+<img src="https://cdn.comsol.com/wordpress/2014/08/Thermal-contact-resistance.jpg" alt="Drawing" style="width: 750px;"/>
+
+---
+# Things to consider
+--
+
+## Non idealities in contact surface
+
+--
+## That's way we use thermal paste
+
+<img src="http://www.pcstats.com/articleimages/201110/installFM1_5112.jpg" alt="Drawing" style="width: 500px;"/>
+
+---
+# Things to consider
+--
+
+## Non-uniform cooling
+### Especially on stacked components on single heatsink
+
+<img src="https://i.stack.imgur.com/AUsWM.jpg" alt="Drawing" style="width: 450px;"/>
 
 
 ---
-# Enclosed Channel
-## Heat Transfer Coefficient 
 
-### Dave Staton (page 30 )  
+# Useful Readings:
+### Application notes are your friends
+--
 
+- ### [Thermal Resistance Theory and Practice](https://www.infineon.com/dgdl/smdpack.pdf?fileId=db3a304330f6860601311905ea1d4599)
+- ### [Thermal resistance of IGBT Modules, Semikron](https://www.semikron.com/dl/service-support/downloads/download/semikron-application-note-thermal-resistances-of-igbt-modules-en-2014-11-30-rev-01/)
+- ### [Thermal effects and junction temperature evaluation of Power MOSFETs](http://www.st.com/content/ccc/resource/technical/document/application_note/7b/bb/a2/32/f5/9d/46/2f/DM00241971.pdf/files/DM00241971.pdf/jcr:content/translations/en.DM00241971.pdf)
+- ### [Heatsink Characteristics, IR](https://www.infineon.com/dgdl/an-1057.pdf?fileId=5546d462533600a401535591d3170fbd)
+- ### [Thermal Design of Power Electronic Circuits](https://arxiv.org/pdf/1607.01578.pdf)
+- ### [How to moun heatsinks?](https://www.fairchildsemi.com/application-notes/AN/AN-4166.pdf)
 
-
----
-# Application Examples
-
-## Dave Staton Presentation  (from page 75) 
 ---
 ## You can download this presentation from: [keysan.me/ee564](http://keysan.me/ee564)
 
