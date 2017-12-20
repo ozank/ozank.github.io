@@ -32,12 +32,20 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 
 ---
-# Review
+### Review
 --
 
-## Multiply-excited Systems
-### Electromagnetic systems try to increase Inductance (Self + Mutual) 
+### Electromagnetic systems try to increase Inductance
+--
+
+### For multipy excited systems consider the total inductance : (Self + Mutual) 
+
 ### \\(T \propto \dfrac{d \mathrm{L}}{d \theta} + \dfrac{d \mathrm{M}}{d \theta} \\)
+--
+
+### \\(T\_{mech}= \dfrac{1}{2} \dfrac{dL\_{11}}{d\theta}i\_1^2 + \dfrac{1}{2} \dfrac{dL\_{22}}{d\theta}i\_2^2\\)
+### \\(\quad\quad\quad + \dfrac{dM}{d\theta} i\_1 i\_2\\)
+
 ---
 
 ## Coupled mechanical and electrical systems
@@ -49,16 +57,38 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ### \\(f\_{mech} = K (x-x_0) + B \dfrac{dx}{dt} + M \dfrac{d^2x}{d^2t}  \\)
 
 #### [How do satellites align themselves?](http://www.youtube.com/watch?v=n_6p-1J551Y)
+---
+
+#Introduction to Electric Machines
+--
+
+## Generators = Motors
+
+## No difference between a [DC motor and generator](http://www.youtube.com/watch?v=6kgzrXFSDwA)
 
 ---
-#Review: Lorenz Force
+#Introduction to Electric Machines
+<img src="http://www.intechopen.com/source/html/38933/media/image37.jpeg" alt="Drawing" style="width: 400px;"/>
+---
+# Types of Electric Motors
+![](http://www.electrical4u.com/electrical-motor/images/electrical-motor.gif)
+---
+# DC Machines
+
+## Design a DC motor
+
+<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/emec_ex1.png" alt="Drawing" style="width: 550px;"/>
+
+---
+#Lorenz Force
 
 ## \\(\vec{F} = \vec{J} \times \vec{B}\\)
 
-![](http://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Regla_mano_derecha_Laplace.svg/600px-Regla_mano_derecha_Laplace.svg.png)
+![](http://sharkphysics.weebly.com/uploads/8/5/9/5/8595301/265734720.png?452)
 
 #### [Magnetic Force and Relativity](http://www.youtube.com/watch?v=1TKSfAkWWN0)
 ---
+
 # Lorenz Force in Macroscopic Scale
 
 ## Force in a conductor 
@@ -70,6 +100,19 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## \\(F\_{total} = I\;B\;l \\)
 
 ---
+# DC Motor Animation
+<img src="http://www.cvel.clemson.edu/auto/actuators/images/DC_Motor.gif" alt="Drawing" style="width: 600px;"/>
+
+---
+# DC Motor Construction
+
+<img src="http://4.bp.blogspot.com/-VFWHqvl13tU/T6_tQ2Bvk_I/AAAAAAAACBE/iS0-nZv90Fw/s640/dc+motors+components2.JPG" alt="Drawing" style="width: 800px;"/>
+
+---
+# Electric Commutator
+![](http://1.bp.blogspot.com/-13XK9MkbZHA/T6_omiWJm7I/AAAAAAAAB_c/A6GBqsp2700/s640/COMMUTATOR+EXAMPLE.JPG)
+
+---
 # DC Machine Working Principle
 <img src="http://hyperphysics.phy-astr.gsu.edu/hbase/magnetic/imgmag/dcmop.gif" alt="Drawing" style="width: 550px;"/>
 
@@ -77,25 +120,61 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ---
 # Induced Voltage in a Rotating Coil 
 
-![](https://raw.githubusercontent.com/ozank/ee361/master/images/emec_ex1.png)
+<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/emec_ex1.png" alt="Drawing" style="width: 600px;"/>
+
+---
+## How can you calculate maximum flux \\(\Phi_{max} \\)?
+--
+
+## Two methods:
+--
+
+- ## Integrate in Polar Coordinates
+--
+
+- ## Calculate \\(B\_{av} \\) then multiply with pole area.
+
+---
+
+## \\(\Phi_{max} = \int_0^L \int_0^\pi \hat{B}sin(\theta) dA \; l\\)
+--
+
+## \\(\Phi_{max} = \int_0^L \int_0^\pi \hat{B}sin(\theta) rd\theta \; l\\)
+--
+
+## \\(\Phi_{max} = 2 \hat{B} r L\\)
+---
+
+## Or calculate \\(B\_{av} \\) then multiply with pole area.
+--
+
+## \\(B\_{av} =  \dfrac{2}{\pi} \hat{B}\\)
+--
+
+## Area= \\(  \dfrac{2 \pi r L }{2}\\)
+--
+
+## \\(\Phi_{max} = 2 \hat{B} r L\\)
+
 ---
 # Induced Voltage in a Rotating Coil
 
-# \\(\Phi_{max} = 2 \hat{B} r l\\)
+# \\(\Phi_{max} = 2 \hat{B} r L\\)
 --
 
 ### When the coil is rotating with \\(\omega_r\\)
  
 # \\(\Phi(t) = \Phi_{max} cos(\omega t)\\)
 
-## \\(V\_{coil}= -N \dfrac{d\Phi}{dt}=N \omega \Phi_{max} sin(\omega t)\\)
+### \\(V\_{coil}= -N \dfrac{d\Phi}{dt}=N \omega \Phi_{max} sin(\omega t)\\)
+
+
 
 ---
-## Now think everthing in polar coordinates
+
+## You can have more than 2 poles in a machine
 --
 
-## It's possible to divide the machine to sub poles
---
 
 <img src="http://images.books24x7.com/bookimages/id_25412/fig3-2.jpg" alt="Drawing" style="width: 700px;"/>
 
@@ -108,13 +187,26 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ## \\(B\_{av} =  \dfrac{2}{\pi} \hat{B}\\)
 
-## \\(A\_{pole} =  \dfrac{2 \pi r l }{p}\\)  (p: pole number)
+## \\(A\_{pole} =  \dfrac{2 \pi r L }{p}\\)  (p: pole number)
 
 --
 
-## \\(\Phi\_{pole} = B\_{av}A\_{pole}= \dfrac{4 \hat{B} r l }{p}\\)
+## \\(\Phi\_{pole} = B\_{av}A\_{pole}= \dfrac{4 \hat{B} r L }{p}\\)
 ---
-# Induced Voltage
+# Induced Voltage Waveform
+--
+
+## For single coil with commutator (brushes)
+
+<img src="https://wtfamps.files.wordpress.com/2016/04/full-wave.png?w=300&h=225" alt="Drawing" style="width: 500px;"/>
+
+### Mechanical brushes works as a diode rectifier
+
+
+---
+# Induced Voltage Waveform
+--
+
 
 ## In a two pole machine:
 --
@@ -122,6 +214,9 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## \\(E\_{av} =  \dfrac{2}{\pi} E\_{max}\\)
 
 ## \\(E\_{av} =  \dfrac{2}{\pi} N \omega \Phi\_{max}\\)
+
+---
+
 
 ---
 # How can you increase the torque of a DC Machine?
