@@ -58,6 +58,7 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 * [Kalman Filter in Pictures](http://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/)
 * [Poor Man's Explanation of Kalman Filtering](http://digi.physic.ut.ee/mw/images/d/d5/Poormankalman.pdf)
 * [Kalman and Bayesien Filters](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
+* [Visual Explanation of Markov Chains](http://setosa.io/blog/2014/07/26/markov-chains/index.html)
 * [Markov Chains](http://jeremykun.com/2015/04/06/markov-chain-monte-carlo-without-all-the-bullshit/)
 * [Understanding the Basis of the Kalman Filter ](https://www.cl.cam.ac.uk/~rmf25/papers/Understanding%20the%20Basis%20of%20the%20Kalman%20Filter.pdf)
 
