@@ -10,24 +10,35 @@ Please wait a few seconds until the publication list is updated. You can also ha
 
 burda bir link [deneme](#deneme)
 
-## 2014
+# 2016-2017
 
-{% for i in (1..10) %}
+## EE362-2017
+
+{% for i in (1..12) %}
 
 <div class="image">
-<img src="../images/evaluation/ee281_2014/file-{{ i }}.jpg" ><br>
+<img src="../images/evaluation/ee362_2017/file-{{ i }}.jpg" ><br>
 </div>
 
-
 {% endfor %}
 
 
-{% for image in site.static_files %}
-    {% if image.path contains 'ee281_2014/' %}
-        <a href="{{ site.baseurl }}{{ image.path }}" target="_blank">
-            <img src="{{ site.baseurl }}{{ image.path }}" alt="" class="img-thumbnail" />
-        </a>
-    {% endif %}
+## EE462-2017
+
+{% for i in (1..3) %}
+
+<div class="image">
+<img src="../images/evaluation/ee462_2017/file-{{ i }}.jpg" ><br>
+</div>
+
 {% endfor %}
 
-## deneme
+## EE361-2016
+
+{% for i in (1..8) %}
+
+<div class="image">
+<img src="../images/evaluation/ee361_2016/file-{{ i }}.jpg" ><br>
+</div>
+
+{% endfor %}
