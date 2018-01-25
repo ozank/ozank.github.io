@@ -12,11 +12,23 @@ Here you can find all the comments from student's evaluation forms without any c
 - If you would like to give anonymous comments, you can use [this link](http://bit.do/ee361)
 - or you can throw anonymous letters under my door.
 
-Links to each years evaluation forms:
+Links to each year's evaluation forms:
 
 - [2016-2017](#2016-2017)
 - [2015-2016](#2015-2016)
 - [2014-2015](#2014-2015)
+
+Here's a short summart of my evaluation scores:
+
+|                  | Department Rank | Faculty Rank | Percentile |
+|------------------|-----------------|--------------|------------|
+| 2016-2017 Spring | 6               | 41           | 14         |
+| 2016-2017 Fall   | 3               | 36           | 16         |
+| 2015-2016 Spring | 22              | 175          | 17         |
+| 2015-2016 Fall   | 35              | 222          | 15         |
+| 2014-2015 Spring | 6               | 74           | 8          |
+| 2014-2015 Fall   | 14              | 107          | 10         |
+
 
 # 2016-2017
 
