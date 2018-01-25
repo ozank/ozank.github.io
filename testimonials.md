@@ -12,7 +12,7 @@ Please wait a few seconds until the publication list is updated. You can also ha
 ## 2014
 
  {% for image in site.static_files %}
-    {% if image.path contains 'images/evaluation/ee281_2014/' %}
+    {% if image.path contains './images/evaluation/ee281_2014/' %}
         <a href="{{ site.baseurl }}{{ image.path }}" target="_blank">
             <img src="{{ site.baseurl }}{{ image.path }}" alt="" class="img-thumbnail" />
         </a>
