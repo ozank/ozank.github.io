@@ -13,7 +13,7 @@ Please wait a few seconds until the publication list is updated. You can also ha
 ## 2014
 
 {% for i in (1..10) %}
-<img src="../images/evaluation/ee281_2014/file-{{ i }}.jpg"><br>
+<img src="../images/evaluation/ee281_2014/file-{{ i }}.jpg" alt="" div="image" ><br>
 {% endfor %}
 
 
