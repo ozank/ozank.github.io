@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Testimonials from students
-permalink: /papers/index.html
+permalink: /testimonials/index.html
 ---
 
 ## Testimonials
