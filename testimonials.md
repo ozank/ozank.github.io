@@ -6,9 +6,17 @@ permalink: /testimonials/index.html
 
 ## Testimonials
 
-Please wait a few seconds until the publication list is updated. You can also have a look at my [Google Scholar](http://scholar.google.com/citations?user=dzuKyxwAAAAJ&hl=en) and [Mendeley](http://www.mendeley.com/profiles/ozan-keysan/) account.
+Here you can find all the comments from student's evaluation forms without any censor. I respect your comments and I believe your comments makes me a better educator. Here are a few ways to give your feedback:
 
-burda bir link [deneme](#deneme)
+- Email me, or come to my office to discuss
+- If you would like to give anonymous comments, you can use [this link](http://bit.do/ee361)
+- or you can throw anonymous letters under my door.
+
+Links to each years evaluation forms:
+
+- [2016-2017](#2016-2017)
+- [2015-2016](#2016-2017)
+- [2014-2015](#2016-2017)
 
 # 2016-2017
 
