@@ -29,6 +29,7 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 * [Fourier Image Filtering](http://david.li/filtering/)
 * [An Intuitive Explanation of Fourier Theory](http://cns-alumni.bu.edu/~slehar/fourier/fourier.html)
 * [Graphical Algebra and Fourier Analysis](https://acko.net/files/gltalks/toolsforthought)
+* [But what is the Fourier Transform? A visual introduction.](https://www.youtube.com/watch?v=spUNpyF58BY)
 
 ### Mawxell's Equations
 
@@ -40,6 +41,9 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 ### Control
 
 * [PID without a PhD](http://m.eet.com/media/1112634/f-wescot.pdf)
+* [PID without a PhD-Short Version](http://www.wescottdesign.com/articles/pid/pidWithoutAPhd.pdf)
+* [Feedback Systems: An Introduction for Scientists and Engineers](http://www.cds.caltech.edu/~murray/amwiki/index.php/Main_Page)
+* [Improving the Beginner’s PID – Introduction](http://brettbeauregard.com/blog/2011/04/improving-the-beginners-pid-introduction/)
 
 ### Linear Algebra
 
