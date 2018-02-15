@@ -7,6 +7,9 @@ permalink: /presentations/index.html
 ## Recent Presentations
 
 
+### 2018
+* ODTÜ Elektrik Müh, [Elektrik Makineleri ve Güç Elektroniği Opsiyon Tanıtımı](https://docs.google.com/presentation/d/1JlkndQ2R4Itzq1C7RBSsm-8AQR65vce--tyruTaKW-U/edit?usp=sharing)
+
 ### 2017
 
 * GÜNAM, [Power Electronics for PV Systems](/presentations/power_electronics_for_PV.html)
