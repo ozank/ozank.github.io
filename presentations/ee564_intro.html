@@ -85,97 +85,22 @@ Enercon 7.5 MW, Direct-Drive Wind Turbine Generator (Synchronous Motor)
 --
 
 - # 97%
-
-
-
-
-
-
 ---
-# Where's the Energy Coming From?
+# Richard Feynman: Electricity
 --
 
-## Simple Electric System
+<iframe width="750" height="500" src="https://www.youtube-nocookie.com/embed/kS25vitrZ6g?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/electric_grid.png" alt="Drawing" style="width: 800px;"/>
----
-# Electric System of Turkey
---
-
-## Capacity: 71.8 GW
---
-
-## Max. Consumption: 43 GW (~22 million kettles)
---
-
-## Per Capita Consumption: 3310 kWh/year
-
----
----
-# Sources of Energy (Turkey)
-
-## Hydro: 24%
-<img src="http://www.nukte.org/files/images/hidrolik/hidrolik.jpg" alt="Drawing" style="width: 500px;"/>
-
----
-# Sources of Energy (Turkey)
-
-## Coal: 27%
-<img src="http://vlscopenhagen.files.wordpress.com/2009/12/coal-plant1.jpg" alt="Drawing" style="width: 400px;"/>
-
----
-# Sources of Energy (Turkey)
-
-## Natural Gas: 43%
-<img src="http://image.dieselpowermag.com/f/news/1207dp_is_the_natural_gas_really_greener/41858160/1207dp_01%2Bis_the_natural_gas_really_greener%2Bshell_gtl_plant_in_qatar.jpg" alt="Drawing" style="width: 500px;"/>
----
-# Sources of Energy (Turkey)
-
-## Wind: 2.5%
-
-<img src="http://www.demirer.com.tr/santral/dares/03k.jpg" alt="Drawing" style="width: 500px;"/>
-
----
-<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/turkiye_elektrik_iletim.png" alt="Drawing" style="width: 750px;"/>
-
-[Detailed Map](http://www.geni.org/globalenergy/library/national_energy_grid/turkey/graphics/teias_map.gif)
-
----
-# Power Transformers
-
-<img src="http://3.bp.blogspot.com/-O5o0GzNoPNo/ThRSwkgVexI/AAAAAAAABu8/Fv88ZNaIEOY/s1600/222088_206340936072588_170822346291114_561188_4705333_n.jpg" alt="Drawing" style="width: 600px;"/>
-
-#### A three-phase 225 MVA, 275 kV power transformer, 241 tonnes
-
-#### (Courtesy of Scottish Hydro)
-
----
-# Why do we need transformers?
---
-
-## [War of Currents](http://en.wikipedia.org/wiki/War_of_Currents)
-
-<img src="http://img.memecdn.com/thunderstruck_o_2855333.jpg" alt="Drawing" style="width: 600px;"/>
----
-
-<img src="http://media-cache-ak0.pinimg.com/736x/c9/d1/12/c9d112af91a3ce04e6318b782d2191bc.jpg" alt="Drawing" style="width: 800px;"/>
-
----
-## Direct-Current Grid
-####- The magnitude of voltage could not be changed (without power electronics).
-####- Low-voltage transmission is inefficient
-####- Transformers don't work with DC
---
-
-## Alternating-Current Grid
-####- Transformers can be used to step-up voltage
-####- Thinner/Cheaper transmission cables
-####- Energy can be transferred to long distances
-####- More Efficient (Including the efficiency of the transformer)
 ---
 ## So let's see how these machines work?
 --
-<img src="http://www.henniker.org.uk/images/places/local_a/ed-central/princes_a/Maxwell_Statue_00.jpg" alt="Drawing" style="width: 750px;"/>
+<img src="https://www.bbvaopenmind.com/wp-content/uploads/2016/06/bbva-openmind-maxwell-1-ppal.jpg" alt="Drawing" style="width: 750px;"/>
+---
+## So let's see how these machines work?
+
+
+<img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/5c/3a/3d/maxwell-statue.jpg" alt="Drawing" style="width: 750px;"/>
+
 
 ---
 # Maxwell Equations
@@ -193,40 +118,50 @@ Enercon 7.5 MW, Direct-Drive Wind Turbine Generator (Synchronous Motor)
 ### $$\textrm{Gauss' Law}\quad \nabla \cdot \vec{E}  =  \frac{\rho}{\varepsilon_0} $$
 --
 
-### $$\textrm{Gauss' Law ($\vec{B}$ Fields)} \quad \nabla \cdot \vec{B}  =  0 $$
+### $$\textrm{Faraday's Law} \quad \nabla \times \vec{E}  = - \frac{\partial \vec{B}}{\partial t}$$
 --
 
 ## Need a reminder for vector calculus?
 
 ## [Curl](http://betterexplained.com/articles/vector-calculus-understanding-circulation-and-curl/), [Divergence](http://betterexplained.com/articles/divergence/), [Cross Product](http://betterexplained.com/articles/vector-calculus-understanding-the-dot-product/)
-
 ---
+# Divergence: \\(\nabla \cdot\\)
 
-# Maxwell Equations:
+<img src="./images/ee564/divergence.png" alt="Drawing" style="width: 500px;"/>
 
-### $$\textrm{Faraday's Law} \quad \nabla \times \vec{E}  = - \frac{\partial \vec{B}}{\partial t}$$
 --
-
-### $$\textrm{Ampere's Law} \quad \nabla \times \vec{H}  =  \vec{J} + \varepsilon_0\frac{\partial \vec{E}}{\partial t}$$
-
-### [More info](http://www.maxwells-equations.com/), [Who's afraid of Maxwell equations?](http://majr.com/docs/Whos_Afraid_of_Maxwells_Equations_By_Elya_Joffe.pdf)
+## 1,2,3: Positive divergence, 4: Negative
 
 ---
-# Maxwell Equations:
+# Curl: \\(\nabla \times \\)
 
-## $$\textrm{Gauss' Law:}\quad \nabla \cdot \vec{E}  =  \frac{\rho}{\varepsilon_0} $$
+<img src="./images/ee564/curl.png" alt="Drawing" style="width: 750px;"/>
+
+--
+## 1,2,3,4,5: High Curl, 6-7: No Curl
+
+---
+### $$\textrm{Faraday's Law} \quad \nabla \times \vec{E}  = - \frac{\partial \vec{B}}{\partial t}$$
+
+<img src="./images/ee564/curl_E.png" alt="Drawing" style="width: 750px;"/>
+
+---
+# Gauss' Law:
+
+# $$ \nabla \cdot \vec{E}  =  \frac{\rho}{\varepsilon_0} $$
+--
 
 ## Integral form: 
 
-## $$\oint_S {E dA} = {Q \over \varepsilon_0}$$
+# $$\oint_S {E dA} = {Q \over \varepsilon_0}$$
 
 ---
-# Maxwell Equations: 
-## Gauss' Law(Magnetic Field): 
+# Gauss' Law (for Magnetic Field): 
 
-### $$\nabla \cdot \vec{B}  =  0 $$
+## $$\nabla \cdot \vec{B}  =  0 $$
+--
 
-### $$\oint_S {B dA} = 0$$
+## $$\oint_S {B dA} = 0$$
 --
 
 ### Practical Meaning: 
@@ -234,54 +169,312 @@ Enercon 7.5 MW, Direct-Drive Wind Turbine Generator (Synchronous Motor)
 ### - No magnets with single pole!
 
 ---
-# Maxwell Equations: Faraday's Law
+# Faraday's Law
+
+### !! The most important equation for motor design
+--
 
 ### $$\nabla \times \vec{E}  = - \frac{\partial \vec{B}}{\partial t}$$
 --
 
 ### $$\oint_C \vec{E} dl  = - \frac{\partial \Phi}{\partial t} = -\frac{d}{dt}\iint B dA$$
 
-### !! The most important equation for EE362
-
-### [Induction Melting](https://www.youtube.com/watch?v=8i2OVqWo9s0), [Levitation](https://www.youtube.com/watch?v=txmKr69jGBk)
----
-# Maxwell Equations: Ampere's Law
-
-### $$ \nabla \times \vec{H}  =  \vec{J} + \varepsilon_0\frac{\partial \vec{E}}{\partial t}$$
+### (-) Sign: Lenz Laz
 --
 
-### Neglect the [displacement current](https://en.wikipedia.org/wiki/Amp%C3%A8re%27s_circuital_law) part. 
+### [Induction Melting](https://www.youtube.com/watch?v=8i2OVqWo9s0), [Levitation](https://www.youtube.com/watch?v=txmKr69jGBk)
+
+
+---
+# Ampere's Law:
+--
+
+### $$\nabla \times \vec{H}  =  \vec{J} + \varepsilon_0\frac{\partial \vec{E}}{\partial t}$$
+
+--
+
+### Neglecting the [displacement current](https://en.wikipedia.org/wiki/Amp%C3%A8re%27s_circuital_law) part (i.e. quasi-static state)
+### and in integral form. 
+
+### $$\oint_C {\vec{H}.d\vec{\ell}} = \iint \vec{J}dA = \sum I_n $$
+---
+
+# Ampere's Law:
+
+### Problem of neglecting displacement current:
+ 
+<img src="./images/ee564/displacement_current.png" alt="Drawing" style="width: 350px;"/>
+
+---
+# Ampere's Law:
 
 ### $$\oint_C {\vec{H}.d\vec{\ell}} = \iint \vec{J}dA = \sum I_n $$
 
+### Magnetic field intensity(H) is independent of the material properties!
+
+![](http://farside.ph.utexas.edu/teaching/302l/lectures/img740.png)
+
+
+
+---
+## Material Properties:
+--
+
+## \\(\sigma\\)
+--
+: Conductivity
+--
+
+## \\(\rho\\)
+--
+: Resistivity
+--
+
+# \\(\mathbf{J}=\sigma \mathbf{E}\\)
+
+--
+## Resistivity and Conductivity of Copper?
+--
+
+## \\(\sigma = 5.96\,10^{7}\\)
+--
+S/m, or 1/Ωm
+
+--
+## \\(\rho = 1.68\,10^{-8}\\) Ωm
+
+
+---
+## Material Properties:
+--
+
+## \\(\varepsilon\\)
+--
+: Electric Permittivity
+--
+
+# \\(\mathbf{D}=\varepsilon \mathbf{E}\\)
+--
+
+## \\(\varepsilon_0\\): Permittivity of free space
+--
+
+## \\(\varepsilon_0= 8.85\,10^{-12}\\)
+--
+ F/m, or
+--
+ As/Vm
+
+### Materials with high permittivity (dielectric constant) used in capacitors, (mica, ceramis, metal oxides etc)
+
 ---
 
-# Electric Circuits vs Magnetic Circuits
+## Material Properties:
+--
+
+## \\(\mu\\)
+--
+: Magnetic Permeability
+--
+
+# \\(\mathbf{B}=\mu \mathbf{H}\\)
+--
+
+## \\(\mu_0\\): Permeability of free space
+--
+
+## \\(\mu_0= 4\pi\,10^{-7}\\)
+--
+ H/m, or
+--
+ Vs/Am
+
+### Materials with high permeability (ferromagnets) used in inductors 
+
+---
+# Material Properties
+--
+
+## Other Important Parameters for Motor Design
+--
+
+# Thermal:
+
+- ## Thermal Conductivity, Heat Capacity...
+
+--
+
+# Mechanical:
+
+- ## Density, Strength, Young's Modulus...
+
+---
+# Material Properties:
+--
+
+## Isotropic:
+--
+Parameter is constant for all directions
+
+## e.g.: \\(\mu_x=\mu_y=\mu_z\\)
+--
+
+## Otherwise it is anisotropic
+
+--
+
+## Can be constant (linear material)
+--
+
+## Can be non-linear (for example magnetic saturation)
+
+--
+
+## Can be depedent to temperature (e.g. condutivity)...
+---
 
 ## Electric Materials
 --
 
-### Conductors: Copper, Aluminum...
-### Insulators: Plastic, Air...
+## Conductors:
+--
+ Copper, Aluminium, Iron...
+--
+
+## Insulators: Plastic, Air...
+
+--
+
+## How conductive copper is compared to air?
+--
+
+### Copper is \\(10^{22}\\) times more conductive than air.
+--
+
+### Copper is \\(10^{7}\\) times more conductive than sea water.
+
 ---
-# Magnetic Materials
+# Electric Materials
+
+## What is the best conductor?
+
+--
+- ## **Copper:** \\(1.68 \; 10^{-8} \; \Omega.m \\)
+
+--
+- ## **Aluminium:** \\(2.82\; 10^{-8} \; \Omega.m \\)
 --
 
-## Conductors --> Ferromagnets
-### Large permeability ( `\(\mu_r >> 1\)`)
-<img src="https://c1.staticflickr.com/3/2716/4468925382_6c3ceecbfe.jpg" alt="Drawing" style="width: 500px;"/>
+- ## **Silver:** \\(1.59 \; 10^{-8} \; \Omega.m \\)
+
+--
+- ## **Gold:** \\(2.44 \; 10^{-8} \; \Omega.m \\)
 ---
-# Non-Magnetic Materials
-## Insulator --> Non-magnetic
+## Why some connectors are gold plated?
+
+![](http://www.safestchina.com/products_image/hdmi-cable-1-3v-1080p-gold-plated-41946.jpg)
+
+
+### Gold Plated High Speed HDMI cable [1199 TL](http://www.hepsiburada.com/monster-black-platinum-hdmi-kablo-15-metre-p-HBV000006CXNE): SCAM!
+
+---
+# What about the price?
 --
 
-### Diamagnetic ( `\(\mu_r \lesssim 1\)`) (very slightly repulsed)
-###- Copper
-###- Water
+# Copper vs. Aluminium
+--
+<img src="./aluminium_price.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# What about the price?
+
+# Copper vs. Aluminium
+
+
+<img src="./copper_price.png" alt="Drawing" style="width: 600px;"/>
+---
+
+# Electric vs. Magnetic Materials
 --
 
-### Paramagnetic ( `\(\mu_r \gtrsim 1\)`) (very slightly attracted)
-###- Aluminum
+## Conductors --> 
+--
+Ferromagnets
+--
+ (e.g. Iron, Cobalt)
+
+## Large permeability ( `\(\mu_r >> 1\)`)
+<img src="https://c1.staticflickr.com/3/2716/4468925382_6c3ceecbfe.jpg" alt="Drawing" style="width: 450px;"/>
+
+---
+# Non-magnetic Materials
+--
+
+## Paramagnetic 
+### ( `\(\mu_r \gtrsim 1\)`) (very slightly attracted)
+### E.g.:Aluminium
+--
+
+## Diamagnetic 
+### ( `\(\mu_r \lesssim 1\)`) (very slightly repulsed)
+
+### E.g.: Copper, Water, [Frogs](https://www.youtube.com/watch?v=KlJsVqc0ywM)
+
+---
+# Electric Circuits
+
+## Analogy to Hydraulic System
+
+### - Voltage --> Pressure
+### - Electric Current --> Water Current
+### - Hydraulic Resistance --> Resistance
+
+
+---
+
+# Magnetic Circuits
+
+## Magnetic circuits are analogous to electric circuits:
+
+<img src="magnetic_electric_circuit.png" alt="Drawing" style="width: 800px;"/>
+---
+# Magnetic Circuits
+
+## Materials: 
+
+| Electric Circuits | Magnetic Circuits |
+| -- | -- | -- |
+| **Conductors:** Copper, Aluminum | **Ferromagnets**: Iron, Electrical Steel |
+| **Insulators:** Air, Plastic | **Non-magnetics:** |
+||Copper, Water (Diamagnetic)|
+|| Air, Aluminum (Paramagnetic) |
+
+
+---
+# Magnetic vs Electric Circuit
+--
+
+## Copper is \\(10^{22}\\) times more conductive than air.
+--
+
+## What about permeability of Iron vs Air?
+--
+
+## Iron is JUST 3000 times more "permeable" than air
+
+## Therefore, air is a circuit element in magnetic circuits!
+
+
+---
+# Magnetic Circuits
+
+## Flux (Wb)
+--
+
+## Flux Density (Wb/m\\(^2\\) or T)
+--
+
+## Magneto-motive Force (MMF), (A.turns)
 
 ---
 # Ohm's Law (for Magnetic Circuit)
@@ -299,6 +492,23 @@ Enercon 7.5 MW, Direct-Drive Wind Turbine Generator (Synchronous Motor)
 ### Reluctance
 
 ### $$\mathcal{R} = \frac{l}{\mu A}$$
+---
+#  A note on symbols.
+
+## $$\mathcal{F} = \Phi \mathcal{R}$$
+
+## In the [textbook](https://books.google.com.tr/books?id=7XkxDQAAQBAJ&pg=PA60&lpg=PA60&dq=current+linkage+MMF&source=bl&ots=sEturQtDGU&sig=bm5WgK8_CeKLG82Hq526OWLDn7E&hl=tr&sa=X&ved=0ahUKEwj4lezSoLDZAhVKCcAKHR8RBKsQ6AEIJzAA#v=onepage&q=current%20linkage%20MMF&f=false):
+--
+
+- ## Magneto-motive force = NI = [Current Linkage](http://www.electropedia.org/iev/iev.nsf/display?openform&ievref=121-11-46)
+--
+
+## $$ NI = MMF =\mathcal{F} = \Theta$$
+
+### For latest offical, symbols refer to [IEC Standars](http://www.electropedia.org/iev/iev.nsf/index?openform&part=121)
+
+### [Conventional Magnetic Symbols](https://www.d.umn.edu/~snorr/ece4501s4/MAGCKTS.PDF)
+
 ---
 # Current Density vs. Magnetic Flux Density
 
@@ -321,40 +531,41 @@ Enercon 7.5 MW, Direct-Drive Wind Turbine Generator (Synchronous Motor)
 
 ---
 
-# Flux Linkage
 
-### \\(\lambda\\) : Flux Linkage
-### \\(\Phi\\) : Flux per turn
-
-### \\(\lambda = N_{turns} \Phi \\) (turn. Weber)
-
-<img src="http://img.tfd.com/mgh/cep/thumb/B-magnetic-flux-field-of-a-short-coil.jpg" alt="Drawing" style="width: 300px;"/>
----
-# Ways to generate voltage in a coil
-
-- ## Time variation of flux (e.g. AC excitation)
-- ## Due to conductor movement in a stationary field
-- ## Air-gap flux density change (rotation)
-
----
-
-# B-H Characteristics
+# Linearity vs. Non-linearity
+--
 
 ## $$\vec{B} = \mu \vec{H} $$
+--
 
-## Linear Materials
+# Linear B-H Characteristics
 
-- ### Air
 
-## Non-linear Materials
- 
-- ### Iron
-- ### B limit => Saturation
+- ## Air
 
 ---
-# Magnetic Saturation
+# B-H Curve of Air (Linear)
+--
 
-<img src="http://people.ucalgary.ca/~aknigh/electrical_machines/fundamentals/images/figs/bh_sat.png" alt="Drawing" style="width: 600px;"/>
+<img src="http://www.itacanet.org/wp-content/uploads/2011/06/mag-600x521.jpg" alt="Drawing" style="width: 300px;"/>
+--
+
+- ## Slope gives permeability (\\(\mu = \frac{B}{H}\\))
+--
+
+- ## Constant Slope = Linear Material
+
+---
+
+## Non-Linear B-H Characteristics
+
+- ### Iron, Cast-Steel ...
+
+--
+
+<img src="http://www.itacanet.org/wp-content/uploads/2011/06/fermags-600x488.jpg" alt="Drawing" style="width: 400px;"/>
+
+## B is limited by saturation
 
 ---
 # Magnetic Saturation
@@ -390,11 +601,13 @@ Enercon 7.5 MW, Direct-Drive Wind Turbine Generator (Synchronous Motor)
 ---
 # Eddy Current Losses
 ### Created by Induced Voltage in a Conductor
+
+<img src="https://qph.ec.quoracdn.net/main-qimg-2281a0706817db86c3543886405ab1d5" alt="Drawing" style="width: 400px;"/>
+
 #### [Magnet in a Copper Tube](http://www.youtube.com/watch?v=keMpUaoA3Tg)
 --
 
-### Power Dissipated
-### \\(P= \frac{ V \pi^2 B_{peak}^2 d^2 f^2}{k \rho}\\)
+### Power Dissipated: \\(P= \frac{ V \pi^2 B_{peak}^2 d^2 f^2}{k \rho}\\)
 
 ---
 
@@ -411,6 +624,301 @@ Enercon 7.5 MW, Direct-Drive Wind Turbine Generator (Synchronous Motor)
 <img src="http://www.ahousebythepark.com/journal/wp-content/uploads/2009/02/induction.jpg" alt="Drawing" style="width: 300px;"/>
 
 [Levitating Coil](http://www.youtube.com/watch?v=VydPQuLyEns), [Induction Heater](http://www.youtube.com/watch?v=aOsbIP3y2Wg)
+
+---
+
+## Assumptions we used to make in EE361, but not in this course
+
+--
+## - All flux contained in magnetic circuit (no leakage)
+--
+
+## - Uniform flux distribution in the core
+--
+
+## - Flux travels straight in airgaps (no fringing)
+--
+
+## - In some cases infinite permeability is assumed
+
+
+---
+
+# Faraday's Law of Induction
+--
+
+### \\(\nabla \times \vec{E}  = - \dfrac{\partial \vec{B}}{\partial t}\\)
+
+### which equals to:
+
+--
+### $$\oint_C \vec{E} dl  = - \dfrac{d\Phi}{dt} = -\dfrac{d}{dt}\iint \vec{B} dA$$
+
+---
+# Faraday's Law of Induction
+
+
+### Induced Voltage in a Coil
+
+## $$ e= \oint \vec{E} dl = -\dfrac{d \Phi}{dt}$$
+
+## $$ e = -\dfrac{d \Phi}{dt} = -\dfrac{d}{dt}\int \vec{B} dA$$
+---
+# Ways to generate voltage in a coil
+--
+
+- ## Time variation of flux (e.g. AC excitation)
+--
+
+- ## Due to conductor movement in a stationary field
+--
+
+- ## Rotation (e.g. motors)
+--
+
+- ## Deformation of coil (Area changes)
+
+<img src="./images/ee564/inducing_voltage.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Faraday's Law of Induction
+
+
+## Total voltage in a coil with N turns
+## \\(V_{coil} = N\dfrac{d \Phi}{dt} = \dfrac{d \lambda}{dt}\\)
+---
+
+# Flux Linkage
+
+### \\(\lambda\\) : Flux Linkage (Warning, in the textbook shown by [\\(\Psi\\))](http://www.electropedia.org/iev/iev.nsf/display?openform&ievref=121-11-24)
+### \\(\Phi\\) : Flux per turn
+
+### \\(\lambda = N_{turns} \Phi \\) (turn. Weber)
+
+<img src="http://img.tfd.com/mgh/cep/thumb/B-magnetic-flux-field-of-a-short-coil.jpg" alt="Drawing" style="width: 300px;"/>
+
+---
+
+
+# Relation between Magnetic and Electric Circuits
+
+--
+<img src="http://2.bp.blogspot.com/-Lm15GER7L20/VieZ0DjOoRI/AAAAAAAAAXA/RQHcpv7aBfk/s1600/inductor%2Bsymbol.jpg" alt="Drawing" style="width: 300px;"/>
+--
+
+# \\( L = \dfrac{d \lambda}{d I}\\)
+
+---
+# Relation between Magnetic and Electric Circuits
+
+## What happens if you double the number of turns?
+--
+
+## Inductance increases with \\(N^2\\)
+---
+# Inductance
+
+## Inductance is the flux linkage created per ampere
+
+## \\( L =  N \dfrac{d \Phi}{dI}= \dfrac{d \lambda}{d I}\\)
+
+## \\( L =  \dfrac{N^2}{R}\\)
+
+---
+# Mutual Inductance:
+
+## Magnetic Interaction between two coils.
+
+## Exists if current in one coil induces voltage in another coil.
+
+[Example](https://www.miniphysics.com/uy1-mutual-inductance.html)
+
+---
+# Mutual Inductance:
+
+## \\( V_{2} = M \frac{dI_1}{dt} \\)
+<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/mutual_flux.png
+" alt="Drawing" style="width: 380px;"/>
+
+---
+# Magnetic Stored Energy
+
+## What is the energy stored in an inductor?
+--
+
+## \\(W = \dfrac{1}{2} L i^2 \\)
+
+## But why? And what if L is variable?
+
+---
+
+# Magnetic Energy
+## \\(dw = \mathcal{F}(t) d \Phi(t) \\)
+
+--
+## \\(W = \int_{\Phi_1}^{\Phi_2} \mathcal{F} d \Phi \\)
+
+--
+## Magnetic Energy Density
+## \\(W = \int_{B_1}^{B_2} H d B \\)
+
+---
+# Total Energy Stored (Linear Systems)
+
+## Initial B=0
+
+## \\(W = \dfrac{1}{2}R \Phi^2 =\dfrac{1}{2}\dfrac{\mathcal{F}^2}{R}\\)
+or
+## \\(W = \dfrac{1}{2}\dfrac{Volume}{\mu} B^2 \\)
+---
+# Hysteresis Loss
+
+<img src="http://info.ee.surrey.ac.uk/Workshop/advice/coils/BH_loss.png" alt="Drawing" style="width: 800px;"/>
+
+[Real Data-sheet of electrical steel](http://cogent-power.com/products/non-oriented-electrical-steel/magnetic-qualities)
+
+
+---
+# Magnetic Materials
+---
+
+# Electrical Steel Laminations
+
+<img src="http://is2.ecplaza.com/ecplaza2/products/6/6b/6b9/96679658/high-quality-silicon.jpg" alt="Drawing" style="width: 300px;"/>
+
+--
+
+- ## Used for Low Frequency (50-500 Hz)
+--
+
+- ## Easy to [manufacture](https://www.youtube.com/watch?v=qmg_W_pcYhY) & [Cheap](https://www.alibaba.com/product-detail/electrical-silicon-steel-laminates_1891355946.html)
+---
+
+# (Soft) Ferrite Cores
+
+<img src="http://www.tomita-electric.com/mt/mt-static/themes/tomita/css/images/en/catimg-ferrite.jpg" alt="Drawing" style="width: 700px;"/>
+--
+
+- ### Sintered Iron Oxide + Manganese/Zinc
+--
+
+- ### Low Saturation Point (0.4-0.5 T)
+--
+
+- ### Brittle
+--
+
+- ### High Permeability (\\(\mu_r\\): 1500-3000)
+
+---
+## (Soft) Ferrite Cores
+
+## Used as [Chokes](https://www.youtube.com/watch?v=LuMlM8zWQFk) and Filters
+--
+
+<img src="https://hottconsultants.files.wordpress.com/2014/03/ch05fg322.jpg" alt="Drawing" style="width: 500px;"/>
+
+<img src="https://images-na.ssl-images-amazon.com/images/I/51n5lh70xEL._SY355_.jpg" alt="Drawing" style="width: 200px;"/>
+
+---
+#Quick Question
+--
+
+## Is it easier to store energy with high or low permeable material?
+--
+
+## \\(W = \dfrac{1}{2}\dfrac{Volume}{\mu} B^2 \\)
+
+## Sometimes, air-gaps are added deliberately to increase energy storing capacity of a core.
+
+---
+## E-core without gap
+--
+
+<img src="https://ae01.alicdn.com/kf/HTB1c2EbMVXXXXbDXVXXq6xXFXXXa/EE65B-font-b-E-b-font-shape-large-power-font-b-transformer-b-font-ferrite-font.jpg" alt="Drawing" style="width: 500px;"/>
+
+---
+## E-core with gap
+--
+
+<img src="http://www.encyclopedia-magnetica.com/lib/exe/fetch.php/etd_core_gapped_magnetica.jpg" alt="Drawing" style="width: 500px;"/>
+
+---
+##Gapped Toroids
+
+<img src="http://www.hitachimetals.com/materials-products/amorphous-nanocrystalline/microlite-inductor-cores/images/gapped_toroids.jpg" alt="Drawing" style="width: 600px;"/>
+
+---
+# A Better Solution?
+--
+
+## Distributed Gap Cores
+
+<img src="https://www.bestmadeinkorea.com/product-photo/Minerals%20&%20Metallurgy/Other%20Metals%20&%20Metal%20Products/Powder%20Core/Powder-Core.gif" alt="Drawing" style="width: 600px;"/>
+
+---
+# Distributed Gap Cores
+--
+
+- ## Low Permeability (\\(\mu_r\\): 20-200)
+--
+
+- ## Has different types:
+--
+
+- ## KOOL Mu Powder
+- ## MPP
+- ## Iron Powder
+
+---
+## KOOL Mu Powder Core
+
+<img src="https://www.mag-inc.com/Media/Magnetics/Image-Library/Product%20Images/Powder%20Core%20Images/Kool%20Mu/Kool-Mu-Shapes.png" alt="Drawing" style="width: 600px;"/>
+
+---
+## KOOL Mu Powder Core
+
+### Lower Core Loss wrt Steel
+
+<img src="https://www.mag-inc.com/getattachment/Products/Powder-Cores/Kool-Mu-Cores/Large-Kool-Mu-Core-Shapes/Kool-Mu-and-Silicon-Steel-Comparison/KoolMuvsSiliconSteelLoss.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Distributed Gap Cores
+
+<img src="https://www.mag-inc.com/getattachment/Products/Powder-Cores/Learn-More-about-Powder-Cores/PowderCoreOverviewMatrix.png" alt="Drawing" style="width: 400px;"/>
+
+---
+## Amorphous and Nanocrystalline Laminations
+
+<img src="https://image.ec21.com/image/cnzhaojing/oimg_GC10207450_CA10207463/Amorphous-Metal-Core---Magnetic-Core.jpg" alt="Drawing" style="width: 300px;"/>
+
+- ## Very High Perbeability (\\(\mu_r\\): up to 10.000)
+- ## High Efficiency transformers (for medium frequency)
+- ## Expensive
+
+---
+# Comparison of Materials
+
+<img src="http://nanoc.imr.tohoku.ac.jp/eng/image/research/roadmap2.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Comparison of Materials
+
+<img src="http://www.nikkindenjikogyo.co.jp/images/merit02-english.png" alt="Drawing" style="width: 900px;"/>
+
+---
+# More Reading Materials
+
+- ### [Soft Magnetic Core Application Notes](http://www.allegromicro.com/~/media/Files/Technical-Documents/Arnold/Soft-Magnetics-Applications-Guide.ashx?la=en)
+
+- ### [TI Magnetic Core Characteristics](http://www.ti.com/lit/ml/slup124/slup124.pdf)
+
+- ### [Practical and Potential Applications of Soft Magnetic Powder Cores](http://global-sei.com/technology/tr/bn82/pdf/82-02.pdf)
+
+- ### [Choice of the Magnetic Core](http://www.sirio-ic.com/index.php/en/i-magneticore-en.html)
+
+
+
 
 ---
 ## You can download this presentation from: [keysan.me/ee564](http://keysan.me/ee564)
