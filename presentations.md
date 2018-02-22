@@ -8,6 +8,8 @@ permalink: /presentations/index.html
 
 
 ### 2018
+
+* [ETAMSS-2018](http://etamss18.com/), YTÜ İstanbul, [Applications of Superconductivity in the Energy Area](https://docs.google.com/presentation/d/19QCto2-yS9RVU1lNNOFczYReHepg4rLw_64gX-LAiXs/edit?usp=sharing)
 * ODTÜ Elektrik Müh, [Elektrik Makineleri ve Güç Elektroniği Opsiyon Tanıtımı](https://docs.google.com/presentation/d/1JlkndQ2R4Itzq1C7RBSsm-8AQR65vce--tyruTaKW-U/edit?usp=sharing)
 
 ### 2017
