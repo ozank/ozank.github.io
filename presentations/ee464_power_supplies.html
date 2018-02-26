@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE464-Static Power Conversion-II</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-464 STATIC POWER CONVERSION-II
+
+# Switching Power Supplies
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Regulated Power Supplies
+--
+
+- ## Regulated Output Voltage
+--
+
+- ## Electric Isolation
+--
+
+- ## Minimum size, weight
+--
+
+- ## Minimum cost
+--
+
+- ## Maximum efficiency
+
+---
+
+# Linear Regulators
+
+--
+
+<img src="https://c.76.my/Malaysia/lm7805-voltage-regulator-arelectronics-1710-24-F582919_1.jpg" alt="Drawing" style="width: 500px;"/>
+
+---
+# Linear Power Supplies
+--
+
+
+<img src="./images/ee464/linear_power_supply.png" alt="Drawing" style="width: 700px;">
+
+---
+# Linear Power Supplies
+--
+
+- ## Low frequency transformer: large and heavy
+--
+
+- ## BJT operates in linear region: dissipates heat
+--
+
+- ## Efficiency is around 30-60%
+--
+
+- ## Advantage:
+--
+Minimum EMI Problems
+
+
+---
+# Switching DC Power Supply
+--
+
+<img src="./images/ee464/smps.png" alt="Drawing" style="width: 800px;">
+---
+# Switching DC Power Supply
+--
+
+## Multiple Output Case
+
+<img src="./images/ee464/smps_multiple.png" alt="Drawing" style="width: 600px;">
+
+---
+# Case Study:
+--
+
+## [Apple Charger Teardown](http://www.righto.com/2015/11/macbook-charger-teardown-surprising.html)
+
+<img src="http://static.righto.com/images/magsafe/inside-w600.jpg" alt="Drawing" style="width: 600px;">
+
+---
+## [Apple Charger Teardown](http://www.righto.com/2015/11/macbook-charger-teardown-surprising.html)
+
+<img src="http://static.righto.com/images/magsafe/components1-w750.png" alt="Drawing" style="width:600px;">
+
+
+---
+# Transformer Analysis
+--
+
+<img src="./images/ee464/transformer.png" alt="Drawing" style="width: 800px;">
+
+---
+# Flyback Converter
+--
+
+<img src="./images/ee464/flyback.png" alt="Drawing" style="width: 600px;">
+
+## Derived from buck-boost converter
+
+---
+# Flyback Converter with Isolation
+
+<img src="./images/ee464/flyback_isolated.png" alt="Drawing" style="width: 600px;">
+
+---
+# Flyback Converter with Isolation
+
+## Can you plot the operating modes?
+---
+
+# Flyback Converter with Isolation
+
+## Switch ON
+
+<img src="./images/ee464/flyback_on.png" alt="Drawing" style="width: 600px;">
+
+---
+
+# Flyback Converter with Isolation
+
+## Switch OFF
+
+<img src="./images/ee464/flyback_off.png" alt="Drawing" style="width: 600px;">
+
+---
+
+# Flyback Converter with Isolation
+
+<img src="./images/ee464/flyback_waveform.png" alt="Drawing" style="width: 700px;">
+
+---
+# TBC
+
+
+---
+## You can download this presentation from: [keysan.me/ee464](http://keysan.me/ee464)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
