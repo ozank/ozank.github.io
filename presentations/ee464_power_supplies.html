@@ -236,7 +236,7 @@ Minimum EMI Problems
 
 - ## [Flyback transformer tutorial: function and design](https://www.eetimes.com/document.asp?doc_id=1273089)
 
-- ### [Flyback Converter Video](https://www.youtube.com/watch?v=2B3SmWHeAOc)
+- ## [Flyback Converter Video](https://www.youtube.com/watch?v=2B3SmWHeAOc)
 ---
 # Flyback Variations
 --
@@ -257,7 +257,290 @@ Minimum EMI Problems
 
 <img src="./images/ee464/forward_converter.png" alt="Drawing" style="width: 700px;">
 ---
-# TBC
+# Forward Converter
+--
+
+## Can you obtain the output voltage characteristics?
+--
+
+# Quiz -Q1
+--
+
+# Quiz -Q2
+
+## Choose a duty cycle and turns ratio, to get 12V DC from a 200V DC input.
+
+
+
+---
+
+# Forward Converter
+
+--
+## A buck converter with added turns ratio
+
+# \\(\dfrac{V_o}{V_d} =\dfrac{N_2}{N_1} D \\)
+
+---
+# Forward Converter
+
+<img src="./images/ee464/forward_converter.png" alt="Drawing" style="width: 700px;">
+
+## What happens at the instant switch is off, it the transformer is not ideal?
+
+---
+# Forward Converter
+
+<img src="./images/ee464/forward_converter.png" alt="Drawing" style="width: 700px;">
+
+## A discharging path for Lm should be added.
+
+---
+# Pratical Forward Converter
+
+<img src="./images/ee464/practical_forward.png" alt="Drawing" style="width: 800px;">
+
+## A transformer with two-primary windings
+
+---
+
+# Pratical Forward Converter
+
+<img src="./images/ee464/practical_forward_Lm.png" alt="Drawing" style="width: 800px;">
+
+## A transformer with two-primary windings
+---
+
+# Pratical Forward Converter
+
+## Switch is ON
+
+### L is charged by input current
+
+### Same with the ideal case:
+
+- ### D1 On 
+- ### D2 Off
+- ### D3 Off 
+---
+
+# Pratical Forward Converter
+
+## Switch is OFF
+
+### L discharges (feeds the load)
+--
+
+### Lm is discharged to the source
+
+### \\(i_1 = - i_m \\)
+--
+
+### KCL: \\(N_1 i_1 = N_2 i_2 - N_3 i_3\\)
+
+### For proper operation the transformer should be "reset" before next ON period
+---
+# Pratical Forward Converter
+
+<img src="./images/ee464/forward_waveform.png" alt="Drawing" style="width: 600px;">
+
+---
+# Pratical Forward Converter
+### For proper operation the transformer should be "reset" before next ON period
+
+## \\(t\_m < (1-D) T\_s\\)
+--
+
+## \\(D\_{max}\\)
+--
+\\(=\dfrac{1}{1+ (N\_3 / N\_1)}\\)
+
+---
+### Same with the ideal case:
+
+### D1 On
+### D2 Off
+### D3 Off 
+---
+### What happens if D is large, and transformer does not reset completely?
+--
+
+<img src="./images/ee464/forward_saturation.png" alt="Drawing" style="width: 450px;">
+
+#### In the figure Dmax=0.5
+
+### Saturation, increased core losses, reduced Lm
+---
+# Forward Converter Alternatives
+--
+
+## Two-switch forward converter
+
+<img src="./images/ee464/forward_two_switch.png" alt="Drawing" style="width: 600px;">
+
+---
+# Forward Converter Alternatives
+
+## Two-switch forward converter
+--
+
+<img src="./images/ee464/forward_two_switch2.jpg" alt="Drawing" style="width: 800px;">
+
+---
+## Two-switch forward converter
+
+## Advantages:
+--
+
+ ## Does not require a snubber circuit
+--
+
+## Less voltage stress on MOSFETs
+--
+
+## Can supply multiple isolated outputs
+--
+
+## Low power losses and noise
+---
+
+## Two-switch forward converter
+
+## Disadvantages:
+--
+
+## Slightly more expensive
+--
+
+## Larger component count
+---
+
+##  Interleaved forward converter
+
+<img src="./images/ee464/interleaved_forward.png" alt="Drawing" style="width: 750px;">
+---
+# Push-Pull Converter
+--
+
+<img src="./images/ee464/push_pull.png" alt="Drawing" style="width: 750px;">
+
+### Uses a center-tapped transformer
+
+---
+# Push-Pull Converter
+
+## Switch(T1) ON, Switch(T2) OFF
+
+### D1 conducts, D2 reverse-biased
+--
+
+### \\(v\_{oi}= \dfrac{N\_2}{N\_1} V\_d \\)
+--
+
+### \\(v\_{L}= v\_{oi} - V\_o = \dfrac{N\_2}{N\_1} V\_d - V\_o  \\)
+
+
+### \\(i\_L\\) increases linearly
+---
+# Push-Pull Converter
+
+<img src="./images/ee464/push_pull_operation.png" alt="Drawing" style="width: 750px;">
+
+---
+
+# Push-Pull Converter
+
+## Switches(T1 and T2) OFF
+### For a period of \\(\Delta\\)
+--
+
+### Both D1 and D2 conducts
+
+### \\(I\_{D1} = I\_{D2} = 0.5 I\_{L} \\)
+
+### \\(v\_{oi}= 0 \\)
+--
+
+### Therefore \\(v\_{L}= -V\_o  \\)
+
+### Inductor discharges and feeds the load
+
+---
+
+# Push-Pull Converter
+
+## Switch(T2) ON, Switch(T1) OFF
+### Symmetrical operation with the previous
+
+### \\(v\_{oi}= \dfrac{N\_2}{N\_1} V\_d \\)
+--
+
+### \\(v\_{L}= v\_{oi} - V\_o = \dfrac{N\_2}{N\_1} V\_d - V\_o  \\)
+
+
+### \\(i\_L\\) increases linearly
+---
+
+# Push-Pull Converter
+
+## Repeating waveforms for Ts/2
+
+## \\(D T\_s + \Delta = \dfrac{T\_s}{2}  \\)
+
+
+## \\(\Delta  = \dfrac{(1-2D)}{2}T\_s  \\)
+
+---
+
+# Push-Pull Converter
+
+## Output voltage characteristics?
+--
+
+## Use the inductor voltage
+--
+
+# \\(\dfrac{V_o}{V_d} =\dfrac{2N_2}{N_1} D \\)
+
+### Twice of the forward converter
+---
+# Push-Pull Converter
+### Comparison of Magnetic Flux in the Core
+
+<img src="./images/ee464/push_pull_magnetic.png" alt="Drawing" style="width: 700px;">
+
+---
+# Extra Materials
+
+## Flyback Converter
+
+#### [ECEN4517 Lecture Notes](http://ecee.colorado.edu/ecen4517/materials/flyback.pdf)
+
+#### [Flyback Transformer Tutorial](https://www.eetimes.com/document.asp?doc_id=1273089)
+
+#### [Optimised Flyback Design](http://www.eenewspower.com/content/step-step-optimised-flyback-design)
+
+#### [Switch Mode Power Supply (SMPS) Topologies](http://ww1.microchip.com/downloads/en/AppNotes/01207B.pdf)
+
+#### [ECE5797 SMPSs](http://ecee.colorado.edu/~ecen5797/course_material/Ch6slides.pdf)
+
+#### [Flyback Converter, Transformer Design](https://coefs.uncc.edu/mnoras/files/2013/03/Transformer-and-Inductor-Design-Handbook_Chapter_13.pdf)
+
+#### [Design Guide Flyback Converter](https://www.fairchildsemi.com/application-notes/AN/AN-4137.pdf)
+
+#### [Design Guidelines for Flyback Converter](https://www.monolithicpower.com/Portals/0/Documents/Products/Documents/appnotes/AN069_r1.0.pdf)
+
+---
+# Extra Materials
+
+## Forward Converter
+
+### [Forward Converter, Transformer, Inductor Design](https://coefs.uncc.edu/mnoras/files/2013/03/Transformer-and-Inductor-Design-Handbook_Chapter_14.pdf)
+
+### [Forward Converter Design](https://www.mouser.com/pdfdocs/2-10.pdf)
+
+### [Forward Converter Tutorial Video](https://training.ti.com/topology-tutorial-what-forward-converter)
+
 ---
 ## You can download this presentation from: [keysan.me/ee464](http://keysan.me/ee464)
 
