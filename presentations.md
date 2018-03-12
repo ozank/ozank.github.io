@@ -9,6 +9,7 @@ permalink: /presentations/index.html
 
 ### 2018
 
+* ODTÜ Güç ve Enerji Kongresi [Current Trends and Challenges in Wind Energy](https://docs.google.com/presentation/d/1kdIjzmVdQaqsxEBxTar-SW3NS-t2UEYVPczvxvVp5Io/edit?usp=sharing)
 * [iCoMET 2018](http://icomet.iba-suk.edu.pk/), [Renewable Energy Technologies and Transition to Smart Grid](https://docs.google.com/presentation/d/173P3EJUwLTsmLwbekUMyTDU2O0J2OXnD1kOhxAE8kM4/edit?usp=sharing)
 * [ETAMSS-2018](http://etamss18.com/), YTÜ İstanbul, [Applications of Superconductivity in the Energy Area](https://docs.google.com/presentation/d/19QCto2-yS9RVU1lNNOFczYReHepg4rLw_64gX-LAiXs/edit?usp=sharing)
 * ODTÜ Elektrik Müh, [Elektrik Makineleri ve Güç Elektroniği Opsiyon Tanıtımı](https://docs.google.com/presentation/d/1JlkndQ2R4Itzq1C7RBSsm-8AQR65vce--tyruTaKW-U/edit?usp=sharing)
