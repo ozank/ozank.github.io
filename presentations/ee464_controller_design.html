@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE464-Static Power Conversion-II</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-464 STATIC POWER CONVERSION-II
+
+# Controller Design in Power Electronics
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Control in Power Electronics
+
+<img src="http://www.smu.ca/faculty/adelmerabet/images/WECS_000.JPG" alt="Drawing" style="width: 800px;">
+
+## Control of a Wind Turbine
+---
+
+# Control in Power Electronics
+--
+
+## Most DC/DC converters controlled by analog controllers:
+--
+
+- ### Micro-controllers not fast enough at high switching frequencies
+--
+
+- ### Cheap (just an IC and a few passive elements)
+--
+
+- ### Could be integrated to with drive circuit ([LM1771](http://www.ti.com/product/LM1771/datasheet/abstract#snvs44619))
+---
+# Control in Power Electronics
+
+<img src="http://ecee.colorado.edu/ecen4517/exp/exp3/BuckMPPT.gif" alt="Drawing" style="width: 700px;">
+
+### Control with microcontroller
+---
+# Control in Power Electronics
+
+<img src="https://m.eet.com/media/1120288/c0799-figure1.gif" alt="Drawing" style="width: 500px;">
+
+### Control with error amplifier
+---
+## Buck Converter Controller
+--
+
+<img src="./images/ee464/buck_controller.png" alt="Drawing" style="width: 800px;">
+---
+## Buck Converter Controller
+--
+
+<img src="./images/ee464/buck_control_blocks.png" alt="Drawing" style="width: 800px;">
+---
+# Control Loop Stability
+## Don't worry, will be revisited!
+--
+
+- ## Small steady-state error
+--
+(gain at low frequencies should be large)
+
+--
+
+- ## No resonance
+--
+(gain at switching frequency should be small)
+
+--
+
+- ## Enough [phase-margin](https://www.youtube.com/watch?v=ThoA4amCAX4)
+--
+( usually at least 45 degree phase margin is aimed for stability)
+---
+
+# Phase Margin
+
+<img src="https://microchip.wdfiles.com/local--files/asp0107%3Aphase-gain-margins/GainPhaseMargins.png" alt="Drawing" style="width: 450px;">
+
+## Difference to -180 degrees when the gain is unity (0dB)
+
+---
+# Phase Margin
+
+<img src="https://m.eet.com/media/1054965/BassoFig39x.jpg" alt="Drawing" style="width: 750px;">
+
+---
+# Small Signal Analysis
+## Don't worry, will be revisited!
+--
+
+### Small Signal Model of a Transistor (EE311)
+
+<img src="https://qph.ec.quoracdn.net/main-qimg-2cccbfdf48fa4f0e27cb8b108e5a756f" alt="Drawing" style="width: 650px;">
+
+---
+# Small Signal Analysis
+--
+
+## For a parameter, x:
+--
+
+- ## \\(x\\): total quantity
+--
+
+- ## \\(X\\): steady-state (DC) component
+--
+
+- ## \\(\tilde{x}\\): AC term (small-signal variation)
+
+--
+
+## \\(x = X + \tilde{x}\\)
+
+---
+# Small Signal Analysis
+--
+
+## For the buck converter
+
+## \\(v_o = V_o + \tilde{v}_o\\)
+
+## \\(d = D + \tilde{d}\\)
+
+##  \\(i_L = I_L + \tilde{i}_L\\)
+
+## \\(v_s = V_s + \tilde{v}_s\\)
+
+---
+# Small Signal Analysis
+
+## Average Model of the buck converter
+
+<img src="./images/ee464/buck_average.png" alt="Drawing" style="width: 700px;">
+---
+# Small Signal Analysis
+
+## For the buck converter
+
+## Let's derive the small signal model
+--
+
+### \\(v_x = V_s D + \tilde{v}_s D + V_s \tilde{d}\\)
+--
+\\(\approx v_sD + V_s\tilde{d}\\)
+--
+
+### For current
+
+### \\(i_s = i_L d = (I_L + \tilde{i}_L)(D +\tilde{d})\\)
+
+### \\(\approx i_L D + I_L \tilde{d}\\)
+---
+
+# Buck Converter Small Signal Model
+--
+
+<img src="./images/ee464/buck_small_signal.png" alt="Drawing" style="width: 700px;">
+
+---
+# Transfer Functions
+--
+
+## RC Filter
+--
+
+<img src="https://www.mathworks.com/help/examples/analogdevicesadalm1000_product/win64/RCCircuit.png" alt="Drawing" style="width: 800px;">
+
+---
+# Transfer Functions
+--
+
+## RC Filter [Bode Plot](http://www.onmyphd.com/?p=bode.plot)
+--
+
+<img src="https://i.stack.imgur.com/ukOfZ.png" alt="Drawing" style="width: 600px;">
+
+### [Bode Plotter](http://www.onmyphd.com/?p=bode.plot.online.generator) ,[Wolfram Alpha Plotter](https://www.wolframalpha.com/input/?i=transfer+function+(1)%2F(3*(s%5E2%2B2*s%2B1))
+---
+## Transfer Functions
+
+## Let's do for the LCR part of the converter
+--
+
+<img src="./images/ee464/buck_filter_s_domain.png" alt="Drawing" style="width: 450px;">
+
+### Representation in the s-domain
+
+---
+## Transfer Functions
+
+## Let's do for the LCR part of the converter
+--
+
+
+### \\(\dfrac{v_o(s)}{v_x(s)}=\dfrac{1}{LC(s^2 +(1/RC)s+1/LC)}\\)
+--
+
+
+### \\(v_x(s)= V_s d(s)\\)
+--
+
+### Transfer function in terms of d(s)
+
+### \\(\dfrac{v_o(s)}{d(s)}=\dfrac{V_s}{LC(s^2 +(1/RC)s+1/LC)}\\)
+---
+# Realistic RLC
+--
+
+## Non-ideal elements can effect stability
+--
+
+- ## Resistance of the inductor
+--
+
+- ## ESR of capacitor (series resistance)
+
+---
+## Let's repeat the case with non-ideal capacitor
+--
+
+<img src="./images/ee464/nonideal_RLC.png" alt="Drawing" style="width: 500px;">
+
+## Capacitor with series resistance
+---
+## Let's repeat the case with non-ideal capacitor
+--
+
+### \\(\dfrac{v_o(s)}{d(s)}=\\)
+--
+
+#### \\(\dfrac{V_s}{LC}\dfrac{1 + s r_C R}{s^2(1+r_C/R) +s(1/RC+r_C/L)+1/LC)}\\)
+--
+
+### Can be simplified by assuming \\(r_C << R\\)
+--
+
+### \\(\dfrac{V_s}{LC}\dfrac{1 + s r_C R}{s^2 +s(1/RC+r_C/L)+1/LC)}\\)
+--
+
+### Notice the extra zero introduced by ESR!
+---
+### PWM Block Transfer Function
+--
+
+## \\(d=\dfrac{v_c}{V_p}\\)
+
+### for a saw-tooth PWM generator with Vp peak voltage
+--
+
+### Transfer function
+
+
+## \\(\dfrac{d(s)}{v_c(s)}=\dfrac{1}{V_p}\\)
+
+---
+## PWM Block Transfer Function
+
+## Be careful with high-frequency control bandwidth
+--
+
+<img src="./images/ee464/pwm_variation.png" alt="Drawing" style="width: 700px;">
+
+---
+## What about in switching components?
+--
+
+## Problem:
+--
+
+- ## Multi-mode systems (topology changes with switching)
+--
+
+- ## Different transfer function for on-off states
+--
+
+- ## Can use non-linear controller, or multiple linear controllers (but difficult to implement)
+
+---
+## What about in switching components?
+--
+
+## Solution:
+--
+
+- ## Convert multi-mode to single-mode system
+--
+
+- ## Linearizing the system with averaging wrt duty cycle
+--
+
+- ## Use a linear controller with required characteristics
+---
+
+## Ready?
+--
+
+## Down the rabbit hole
+
+<img src="https://res.cloudinary.com/jerrick/image/upload/c_fit,f_auto,fl_progressive,q_auto,w_1140/qtx7wqekatzo2jjr8cgd" alt="Drawing" style="width: 400px;">
+
+
+---
+## Linearization with State-Space Averaging
+--
+
+- ## Represent everthing in matrix form
+--
+
+- ## Inductor current, and capacitor voltage as state variables
+--
+
+- ## Obtain two states (for switch on and siwtch off)
+--
+
+- ## Find the weighted average
+---
+
+## Linearization with State-Space Averaging
+--
+
+## Obtain two states (for switch on and siwtch off)
+--
+
+
+## \\(\dot{x} = A_1 x + B_1 v_d\\)   (for switch on, dTs)
+--
+
+## \\(\dot{x} = A_2 x + B_2 v_d\\)   (for switch off, (1-d)Ts)
+
+### where, A1 and A2 are state matrices
+
+### B1 and B2 are vectors
+
+---
+# Example:
+
+## Mohan 10.1
+
+---
+
+## Linearization with State-Space Averaging
+--
+
+## Find weighted average
+--
+
+
+## \\(A = d A_1 + (1-d) A_2\\) 
+
+## \\(B = d B_1 + (1-d) B_2\\) 
+--
+
+## \\(\dot{x} = A x + B v_d\\)   (for switch off, (1-d)Ts)
+---
+
+## Similar calculations for the output voltage
+
+## \\(v_o = C_1 x \\)   (for switch on, dTs)
+
+## \\(v_o = C_2 x \\)   (for switch off, (1-d)Ts)
+
+## where C1 and C2 are transposed vectors
+
+---
+
+## Similar calculations for the output voltage
+
+## \\(v_o = C x \\)   
+
+## \\(C = d C_1 + (1-d) C_2\\)  
+## where C1 and C2 are transposed vectors
+
+---
+# Example (Mohan 10-1)
+
+## Find the transfer function of forward converter
+--
+
+<img src="./images/ee464/forward_controller.png" alt="Drawing" style="width: 700px;">
+
+## Note the state variables
+---
+# Example (Mohan 10-1)
+
+## Switch ON
+--
+
+<img src="./images/ee464/forward_controller_on.png" alt="Drawing" style="width: 700px;">
+
+---
+# Example (Mohan 10-1)
+
+## Switch OFF
+--
+
+<img src="./images/ee464/forward_controller_off.png" alt="Drawing" style="width: 700px;">
+---
+# Example (Mohan 10-1)
+
+## Bode Plot (Gain)
+
+<img src="./images/ee464/forward_bode_gain.png" alt="Drawing" style="width: 650px;">
+
+---
+# Example (Mohan 10-1)
+
+## Bode Plot (Phase)
+
+<img src="./images/ee464/forward_bode_phase.png" alt="Drawing" style="width: 650px;">
+
+---
+# Flyback Converter
+--
+
+## Bode Plot (Gain)
+
+<img src="./images/ee464/flyback_bode_gain.png" alt="Drawing" style="width: 650px;">
+
+---
+# Flyback Converter
+--
+
+## Bode Plot (Phase)
+
+<img src="./images/ee464/flyback_bode_phase.png" alt="Drawing" style="width: 650px;">
+
+---
+# Controller Design
+--
+
+## Generalized Compensated Error Amplifier
+--
+
+
+<img src="./images/ee464/error_amplifier.png" alt="Drawing" style="width: 800px;">
+
+---
+## Types of Error Amplifier
+
+TBA
+
+---
+## Type-2 Error Amplifier
+--
+
+<img src="./images/ee464/type2_amplifier.png" alt="Drawing" style="width: 800px;">
+
+## Notice the boost at the crossover frequency
+---
+
+## More Information
+
+<img src="http://sattalks.org/wp-content/uploads/icebergfloat-640x410.jpg" alt="Drawing" style="width: 600px;">
+
+---
+## More Information
+
+- ### Fundamentals of Power Electronics, Erickson
+
+- ### [Phase Margin, Crossover Frequency, and Stability](https://www.eeweb.com/profile/cody-miller/articles/bode-plot-phase-margin-crossover-frequency-and-stability)
+
+- ### [Loop Stability Analysis of Voltage Mode Buck Regulator](http://www.ti.com/lit/an/slva301/slva301.pdf)
+
+- ### [DC-DC Converters Feedback and Control](http://www.onsemi.com/pub/Collateral/TND352-D.PDF)
+
+- ### [Modeling and Loop Compensation Design](http://cds.linear.com/docs/en/application-note/AN149fa.pdf)
+
+- ### [Compensator Design Procedure](https://www.infineon.com/dgdl/an-1162.pdf?fileId=5546d462533600a40153559a8e17111a)
+
+---
+## You can download this presentation from: [keysan.me/ee464](http://keysan.me/ee464)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
