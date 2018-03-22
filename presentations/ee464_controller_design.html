@@ -393,7 +393,37 @@ class: center, middle
 
 ## \\(C = d C_1 + (1-d) C_2\\)  
 ## where C1 and C2 are transposed vectors
+---
+### Use Small signal model 
+Equations 10.46-10.52
+--
 
+###\\(x = X + \tilde{x}\\)
+--
+
+### \\(\dot{\tilde{x}}= AX + B V_d + A\tilde{x}\\)
+### \\( \quad \quad + [(A_1-A_2)X + (B_1 - B_2)V_d]\tilde{d}\\)
+
+--
+### In the steady state:
+
+## \\(\dot{X}\\)=0
+
+Use derivations from eq.10.53-10.59
+---
+# Steady State DC Voltage Transfer Function
+--
+
+## \\(\dfrac{V_o}{V_d} = -C A^{-1}B\\)
+
+---
+# Small Signal Model to Get AC Transfer Function
+--
+
+### \\(T_p(s)=\dfrac{\tilde{v}_o(s)}{\tilde{d}(s)}\\)
+
+### \\(=C[sI-A]^{-1}[(A_1-A_2)X + (B_1-B_2)V_d] \\)
+### \\(\quad + (C_1-C_2)X)]\\)
 ---
 # Example (Mohan 10-1)
 
@@ -421,6 +451,76 @@ class: center, middle
 ---
 # Example (Mohan 10-1)
 
+## Steady State Transfer Function
+--
+
+### \\(\dfrac{V_o}{V_d} = -C A^{-1}B\\)
+--
+
+### \\(\dfrac{V_o}{V_d} = D \dfrac{R+ r_C}{R+(r_C + r_L)}\\)
+--
+
+### If parasitic resistances are small
+--
+
+### \\(\dfrac{V_o}{V_d} \approx D \\)
+
+---
+# Example (Mohan 10-1)
+
+## AC Transfer Function
+--
+
+### \\(T_p(s)=\dfrac{\tilde{v}_o(s)}{\tilde{d}(s)}\\)
+--
+
+#### \\(T_p(s)=V_d \dfrac{1 + s r_C C}{LC [s^2 + s (1/RC + (r_C + r_L)/L)+ 1/LC]}\\)
+--
+
+## Remember this equation?
+--
+
+### \\(s^2 + 2 \xi \omega_0 s + \omega_0^2\\)
+
+---
+# Example (Mohan 10-1)
+
+## AC Transfer Function
+
+
+### \\( s^2 + 2 \xi \omega_0 s + \omega_0^2\\)
+--
+
+### \\(\omega_0 = \dfrac{1}{\sqrt{LC}}\\)
+--
+
+### \\(\xi = \dfrac{1/RC + (r_C + r_L)/L}{2\omega_0}\\)
+
+---
+# Example (Mohan 10-1)
+
+## AC Transfer Function Becomes
+
+### \\(T_p(s)=V_d \dfrac{\omega_0^2}{\omega_z} \dfrac{s + \omega_z}{s^2 + 2 \xi \omega_0 s + \omega_0^2}\\)
+
+### where \\(\omega_z = \dfrac{1}{r_C C}\\)
+---
+# Example (Mohan 10-1)
+
+### Put the parameters into the equation
+
+#### \\(V_d = 8 V\\)
+#### \\(V_o = 5 V\\)
+#### \\(r_L = 20 m\Omega\\)
+#### \\(L = 5 \mu H\\)
+#### \\(r_C = 10 m\Omega\\)
+#### \\(C = 2 mF\\)
+#### \\(R = 200 m\Omega\\)
+#### \\(f_s = 200 kHz\\)
+
+---
+# Example (Mohan 10-1)
+
 ## Bode Plot (Gain)
 
 <img src="./images/ee464/forward_bode_gain.png" alt="Drawing" style="width: 650px;">
@@ -431,6 +531,17 @@ class: center, middle
 ## Bode Plot (Phase)
 
 <img src="./images/ee464/forward_bode_phase.png" alt="Drawing" style="width: 650px;">
+---
+# Flyback Converter
+--
+
+#### Equation 10-86
+
+### \\(T_p(s)=\dfrac{\tilde{v}_o(s)}{\tilde{d}(s)}\\)
+--
+
+### \\(T\_p(s)=V\_d f(D)  \dfrac{(1 + s/\omega\_{z1})(1 - s/\omega\_{z2})}{as^2 + bs + c}\\)
+
 
 ---
 # Flyback Converter
@@ -447,7 +558,17 @@ class: center, middle
 ## Bode Plot (Phase)
 
 <img src="./images/ee464/flyback_bode_phase.png" alt="Drawing" style="width: 650px;">
+---
+## How to obtain bode plots with software?
+--
 
+- ### [Control Design of a Boost Converter Using Frequency Response Data](https://www.mathworks.com/help/slcontrol/examples/control-design-of-a-boost-converter-using-frequency-response-data.html)
+- ### [https://www.mathworks.com/videos/pid-controller-tuning-for-a-buck-converter-1504291092156.html](https://www.mathworks.com/videos/pid-controller-tuning-for-a-buck-converter-1504291092156.html)
+- ### [Design digital controllers for power electronics using simulation](https://www.mathworks.com/discovery/power-electronics-simulation.html)
+- ### [Bode Response of Simulink Model](https://www.mathworks.com/help/slcontrol/gs/bode-response-of-simulink-model.html)
+- ### [How to Run an AC Sweep with PSIM?](https://www.youtube.com/watch?v=nbFo-NMeY_w)
+- ### [Peak Current Control with PSIM](https://powersimtech.com/drive/uploads/2016/03/Tutorial-Peak-current-mode-control.pdf)
+- ### [Plexim-Frequency Analysis of Buck Converter ](https://www.plexim.com/support/application-examples/187) 
 ---
 # Controller Design
 --
@@ -460,21 +581,84 @@ class: center, middle
 
 ---
 ## Types of Error Amplifier
-
-TBA
-
----
-## Type-2 Error Amplifier
 --
 
-<img src="./images/ee464/type2_amplifier.png" alt="Drawing" style="width: 800px;">
+### Common Ones:
 
-## Notice the boost at the crossover frequency
+- ### Type-1
+
+- ### Type-2
+
+- ### Type-3
+
+
+---
+# Type-1 Error Amplifier
+
+<img src="https://venable.biz/wp-content/uploads/2017/09/type-1-amplifier.png" alt="Drawing" style="width: 600px;">
+
+## Simple Integrator
+
+## Has one pole at the origin
+
+---
+# Type-1 Error Amplifier
+
+<img src="https://venable.biz/wp-content/uploads/2017/09/type-1-amplifier-1.png" alt="Drawing" style="width: 600px;">
+
+
+---
+## Type-2 Error Amplifier (Most Common Type)
+--
+
+<img src="https://venable.biz/wp-content/uploads/2017/09/type-2-amplifier.png" alt="Drawing" style="width: 600px;">
+
+### Has two poles: at origin and one at zero-pole pair
+### 90 degrees pahase boost can be obtained due to single zero
+---
+
+## Type-2 Error Amplifier (Most Common Type)
+--
+
+<img src="https://venable.biz/wp-content/uploads/2017/09/transfer-function-type-2-amp.png" alt="Drawing" style="width: 600px;">
+
+### Note the phase boost
+
+---
+
+## Type-3 Error Amplifier
+--
+
+<img src="https://venable.biz/wp-content/uploads/2017/09/type-3-amp.png" alt="Drawing" style="width: 350px;">
+
+### has two zeros can can boost up to 180 degrees
+---
+
+## Putting all Together
+--
+
+## A controller just increases the gain (Proportional)
+--
+
+<img src="./images/ee464/gain_vs_phase_margin.png" alt="Drawing" style="width: 800px;">
+
+### Increasing gain usually reduces phase margin (and reduces stability)
+
+---
+
+## Putting all Together
+--
+
+## A proper controller  (adjust gain and phase margin)
+--
+
+<img src="./images/ee464/bode_plot_with_controller.png" alt="Drawing" style="width: 800px;">
+
 ---
 
 ## More Information
 
-<img src="http://sattalks.org/wp-content/uploads/icebergfloat-640x410.jpg" alt="Drawing" style="width: 600px;">
+<img src="https://venable.biz/wp-content/uploads/2017/09/type-3-amp.png" alt="Drawing" style="width: 600px;">
 
 ---
 ## More Information
