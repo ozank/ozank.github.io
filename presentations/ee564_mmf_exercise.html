@@ -473,63 +473,68 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ## gives an idea about the magnitude of the coil voltage (or MMF) compared to concentrated and full-pitched winding.
 
+---
+# Group Exercise
+--
+
+### A rotating magnetic flux created by a 3-ph 50 Hz, 600 rpm alternator has a distribution of magnetic flux density:
+--
+
+### \\(B(\theta)=\hat{B}_1 sin(\theta)+\hat{B}_3 sin(3\theta)+\hat{B}_5sin(5\theta)\\)
+--
+
+### \\(B(\theta)=0.9sin(\theta)+0.25 sin(3\theta)+0.18sin(5\theta)\\)
+
+---
+
+# Group Exercise
+
+## The machine has:
+
+- ### 180 slots, double-layer winding, Y-connected
+--
+
+- ### Each coil has 3 turns with a span of 15 slots
+--
+
+- ### Armature diameter = 135 cm
+--
+
+- ### Effective axial length = 0.5 m
 
 ---
 # Group Exercise
 --
 
-### 10-pole 50 Hz Y connected 3-phase alternator has:
+## Draw the winding diagram
 --
 
-### 210 slots, double layer winding with 4 turns/coil
+## Calculate the MMF for:
 --
 
-### Coil pitch:18 slots, coil spread: 60 degrees
+- ### ia=1 A, ib=-0.5 A, ic=-0.5A
 --
 
-----
-### a) Find the synchronous speed (in rpm)
---
-
-### b) Find the slots per pole per phase
---
-
-### c) Find the number of series turns/phase (poles are connected in series)
+- ### ia= -0.5A, ib=1 A, ic=-0.5A
 ---
+
+
 # Group Exercise
 
-### 10-pole 50 Hz Y connected 3-phase alternator has:
-
-### 210 slots, double layer winding with 4 turns/coil
-
-### Coil pitch:18 slots, coil spread: 60 degrees
-----
+## Calculate:
 --
 
-### d) Calculate coil pitch in electrical degrees
+- ## Number of poles, pole area
 --
 
-### e) Calculate the pitch factor, distribution factor and the winding factor
-
----
-# Group Exercise
-
-#### If the machine has  an [airgap flux density](https://www.google.com/search?q=plot+x&ie=utf-8&oe=utf-8#q=plot+sin%28x%29+%2B+0.25*sin%283*x%29+%2B+0.15*sin%285*x%29) of:
-
-
-### \\(B(\theta)=sin(\theta)+0.25 sin(3\theta)+0.15sin(5\theta)\\)
-
+- ## Fundamental flux per-pole
 --
 
-### Airgap Diameter: 1.5m, Core length: 0.5 m
+- ## Winding and distribution factors for each winding
 --
 
-### Find the flux per pole (\\(\Phi_p\\)) for each component
+- ## Induced voltage rms per phase and line-to-line
 
---
-
-### Hint: Calculate the fundamental first, and the other harmonics afterwards.
-### \\(\Phi\_{1} = B\_{average} . A\_{pole}\\)
 ---
 
 ## Now find the RMS of phase voltage and line voltages.
@@ -559,11 +564,11 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ---
 # Induced Voltages
 
-## V1=8696 V
-## V3=1166 V
-## V5=119 V
+## V1=4482 V
+## V3=613 V
+## V5=49.5 V
 
-## Waveform of the [total phase voltage](https://www.google.com.tr/search?q=plot+x&ie=utf-8&oe=utf-8&gws_rd=cr&ei=JrLxVtM3wpawAZ_KlbAM#q=plot+8696*sqrt%282%29*sin%28x%29+-+1166*sqrt%282%29*sin%283*x%29+%2B+119*sqrt%282%29*sin%285*x%29)
+## Waveform of the [total phase voltage](https://www.google.com.tr/search?ei=67W3WqSJDMOv6ATzqZ_QDQ&q=plot+4482*sqrt%282%29*sin%28x%29+-+613*sqrt%282%29*sin%283*x%29+%2B+49.5*sqrt%282%29*sin%285*x%29&oq=plot+4482*sqrt%282%29*sin%28x%29+-+613*sqrt%282%29*sin%283*x%29+%2B+49.5*sqrt%282%29*sin%285*x%29&gs_l=psy-ab.3...10186.25518.0.26977.18.18.0.0.0.0.317.2643.0j12j3j1.16.0....0...1c.1.64.psy-ab..2.0.0....0.DBXGbFsm7D8)
 
 ---
 # Line Voltage
@@ -571,7 +576,324 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## \\(V\_{BA}=V\_{Bn}-V\_{An}\\)
 ## No 3rd Voltage Harmonics in Y-connected line-to-line voltages
 
-## Waveform of the [line voltage](https://www.google.com.tr/search?q=plot+x&ie=utf-8&oe=utf-8&gws_rd=cr&ei=JrLxVtM3wpawAZ_KlbAM#q=plot+%288696*sqrt%282%29*sin%28x%29+-+1166*sqrt%282%29*sin%283*x%29+%2B+119*sqrt%282%29*sin%285*x%29%29-%288696*sqrt%282%29*sin%28x-2*pi%2F3%29+-+1166*sqrt%282%29*sin%283*%28x-2*pi%2F3%29%29+%2B+119*sqrt%282%29*sin%285*%28x-2*pi%2F3%29%29)
+## Waveform of the [line voltage](https://www.google.com.tr/search?ei=R7a3WoqpNszO6AS415iIDg&q=plot+4482*sqrt%286%29*sin%28x%29+%2B+49.5*sqrt%286%29*sin%285*x%29&oq=plot+4482*sqrt%286%29*sin%28x%29+%2B+49.5*sqrt%286%29*sin%285*x%29&gs_l=psy-ab.3...4540.15170.0.25670.9.9.0.0.0.0.179.1246.0j9.9.0....0...1c.1.64.psy-ab..0.0.0....0.8eSFbs9SpcI)
+
+---
+# Fractional Slot Windings
+--
+
+### Slots-per-pole-per-phase (q) is fractional
+--
+
+- ### Gives more choice in winding design
+--
+
+- ### Voltage waveform can be improved by eliminating certain harmonics
+--
+
+- ### Vast possibilities, but not every possibility produces a symmetrical rotating MMF
+
+
+---
+
+## Fractional Slot Example
+--
+
+## Consider a 10-pole machine
+--
+
+## What can be the number of slots?
+--
+
+- ## 30 slots? q=
+--
+1
+
+--
+
+- ## 60 slots? q=
+--
+2
+
+- ## How about 42 slots?
+--
+
+## q = 42/(10*3) = 7/5
+ 
+---
+## 42 slot, 10 pole
+
+<img src="./images/ee564/42_slot.png" alt="Drawing" style="width: 500px;">
+
+---
+## 42 slot, 10 pole
+
+
+## Phase shift between coils?
+--
+
+### \\(360*(10/2)/42=42.85^o\\)
+--
+
+### Let's choose a coil span of 4 slots. Coil pitch?
+--
+
+### \\(42.85*4 = 171.5^o\\), Pitch factor?
+--
+
+### \\(sin(171.5/2) = 0.997\\)
+
+---
+## Conditions for Symmetrical Rotating MMF
+--
+
+### 1- Number of coils per phase winding should be an integer
+--
+
+### Single-layer windings:
+
+## \\(\dfrac{Q}{2m} = pq \in N\\)
+--
+
+
+### Double-layer windings:
+
+## \\(\dfrac{Q}{m} = 2pq \in N\\)
+
+### Easier to achieve with double-layer
+
+
+---
+## Conditions for Symmetrical Rotating MMF
+--
+
+### 2- The angle between phase windings (\\(\alpha\_{ph}\\)) should be an integer multiple of slot angle \\(\alpha_z\\)
+--
+
+### Normal Systems:
+
+### \\(\dfrac{\alpha\_{ph}}{\alpha\_{z}}=\dfrac{Q}{mt} \in N\\)
+
+### t: largest common divider of Q and p
+
+### Reading Assignment Sections 2-9:2-12
+
+---
+# Winding Voltage Phasor Diagrams
+
+<img src="./images/ee564/voltage_phasor.png" alt="Drawing" style="width: 500px;">
+
+---
+# Voltage induced in a straight wire?
+
+<img src="http://www.solitaryroad.com/c1048/ole3.gif" alt="Drawing" style="width: 450px;">
+---
+# Voltage induced in a straight wire?
+
+# \\(e = Blv\\)
+
+## v: linear velocity
+---
+# Winding Voltage Phasor Diagrams
+
+## 2 pole, 3phase, 12 slot machine
+--
+
+<img src="./images/ee564/voltage_phasor_12slot.png" alt="Drawing" style="width: 800px;">
+
+---
+# Winding Voltage Phasor Diagrams
+
+## Induced Phase Voltages
+--
+
+<img src="./images/ee564/voltage_phasor_phase.png" alt="Drawing" style="width: 800px;">
+
+---
+## Two possible ways to put the coils
+--
+
+## Lap winding
+--
+
+
+<img src="./images/ee564/lap_winding.png" alt="Drawing" style="width: 750px;">
+
+### Most common type
+
+---
+
+
+## Concentric winding
+--
+
+
+<img src="./images/ee564/concentric_winding.png" alt="Drawing" style="width: 400px;">
+
+### They have exactly the same voltage waveforms
+
+---
+
+
+## Fractional Slot Example:
+--
+
+## 12 slot, 10 pole, single layer
+--
+
+<img src="./images/ee564/12slot_10pole.png" alt="Drawing" style="width: 400px;">
+
+---
+
+## Fractional Slot Example:
+--
+
+### \\(\alpha_u=\\)
+--
+\\(360*5/12=150^o\\)
+--
+
+<img src="./images/ee564/12slot_10pole2.png" alt="Drawing" style="width: 400px;">
+
+---
+
+## Fractional Slot Example:
+
+
+### Phase Induced Voltage
+
+<img src="./images/ee564/12slot_10pole3.png" alt="Drawing" style="width: 800px;">
+
+---
+
+# Example (2-16)
+
+### Create a voltage phasor diagram of a single layer integral slot winding for which Q=36, p=2, m=3
+--
+
+<img src="./images/ee564/voltage_phasor_ex.png" alt="Drawing" style="width: 450px;">
+ 
+
+---
+
+#Fractional Single Layer vs Double Layer
+
+# Q=6, m=3, p=2, q=1/2
+--
+
+<img src="./images/ee564/fractional_single_double.png" alt="Drawing" style="width: 750px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+# Winding Manufacturing
+
+## Slot Layout
+--
+
+<img src="./images/ee564/slot_layout.png" alt="Drawing" style="width: 600px;">
+
+---
+# Random Wound Coils
+
+<img src="./images/ee564/random_wound_coil.png" alt="Drawing" style="width: 800px;">
+
+### [Random wound coil insertion](https://www.youtube.com/watch?v=5P6YVi2mB6Q)
+---
+
+# Form Wound Coils
+
+<img src="./images/ee564/form_wound_coil.png" alt="Drawing" style="width: 800px;">
+
+### [Enercon Generator](https://www.youtube.com/watch?v=MgGk2WvK80M), (8:28)
+
+---
+
+
+# Semi-closed vs Open Slot
+
+<img src="./images/ee564/open_slot.png" alt="Drawing" style="width: 500px;">
+
+---
+
+# Fill Factor Comparison
+--
+
+## Random Wound Coil
+
+<img src="./images/ee564/fill_factor_random.png" alt="Drawing" style="width: 500px;">
+
+
+---
+
+# Fill Factor Comparison
+--
+
+## Random Wound Coil
+
+<img src="./images/ee564/fill_factor_random.png" alt="Drawing" style="width: 500px;">
+
+---
+
+# Fill Factor Comparison
+--
+
+## Form Wound Coil
+
+<img src="./images/ee564/form_wound.png" alt="Drawing" style="width: 450px;">
+
+## Up to 65% fill factor
+---
+
+## High Slot Fill Examples
+
+<img src="./images/ee564/high_slot_fill.png" alt="Drawing" style="width: 800px;">
+
+
+---
+# Needle Winding
+--
+
+<img src="./images/ee564/needle_winding.jpg" alt="Drawing" style="width: 650px;">
+
+### [BLDC winding](https://www.youtube.com/watch?v=p6ezfPZCSKI), [High Speed Needle Winding](https://www.youtube.com/watch?v=BHUujXg1rf0), [Direct drive winding](https://www.youtube.com/watch?v=-Ao6axiOVRw)
+
+---
+
+# Open Pole Winding
+--
+
+<img src="./images/ee564/open_winding.png" alt="Drawing" style="width: 650px;">
+
+### [Chained Poles](https://www.youtube.com/watch?v=-_ZkQh8fF5w)
+---
+
+
+## Self Bonding Wire
+
+<img src="https://2.wlimg.com/product_images/bc-full/dir_34/993310/self-bonding-wire-1377157.jpg" alt="Drawing" style="width: 800px;">
+
+---
+
+
+
+
+
+
+
+
+
+
 
 ---
 #Exercise:
