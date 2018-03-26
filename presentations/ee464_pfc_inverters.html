@@ -23,7 +23,7 @@ class: center, middle
 
 # EE-464 STATIC POWER CONVERSION-II
 
-# Controller Design in Power Electronics
+# PFC & DC/AC Converters (Inverters)
 
 ## Ozan Keysan
 
@@ -32,7 +32,250 @@ class: center, middle
 ### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
-# Control in Power Electronics
+# PFC?
+--
+
+## Power Factor Correction
+
+--
+## Power Factor of a 1Ph Diode Rectifier?
+--
+
+<img src="./images/ee464/pfc_diode_rectifier.png" alt="Drawing" style="width: 600px;">
+
+---
+## Diode Rectifier
+
+### Source current
+
+<img src="./images/ee464/pfc_diode_waveform.png" alt="Drawing" style="width: 700px;">
+---
+# PFC required for many applications
+--
+
+- ### Computer Power Supplies, LED Drives
+--
+
+- ### Arc Furnaces
+--
+
+- ### Welding
+
+<img src="http://www.gedikwelding.com/wp-content/uploads/2016/10/PoWerPlus-TIG-200-DC-PFC-Product.jpg" alt="Drawing" style="width: 300px;">
+---
+
+# PFC Circuit
+--
+
+<img src="./images/ee464/pfc.png" alt="Drawing" style="width: 700px;">
+
+---
+
+# PFC Current
+--
+
+<img src="./images/ee464/pfc_current.png" alt="Drawing" style="width: 500px;">
+
+
+
+---
+
+# PFC Current
+
+## Critical Current Mode (Discontinuous Current Mode)
+--
+
+<img src="./images/ee464/pfc_crm.png" alt="Drawing" style="width: 600px;">
+
+
+---
+# PFC Effect
+--
+
+<img src="https://toshiba.semicon-storage.com/content/dam/toshiba-ss/std/product/linear/powersupply/pfc/__icsFiles/artimage/2013/01/15/cprmafd0000/a3.gif" alt="Drawing" style="width: 800px;">
+
+---
+
+## Commercial PFC Controllers
+--
+
+- ### [Toshiba-TB6819AFG](https://toshiba.semicon-storage.com/tr/product/linear/power-supply/pfc-ic/pfc-crm-ic.html)
+
+- ### [OnSemi PFC Controllers](http://www.onsemi.com/PowerSolutions/parametrics.do?id=981)
+
+- ### [TI PFC Controllers](http://www.ti.com/power-management/offline-isolated-dcdc-controllers-converters/factor-correction/products.html#p1694=Single-phase%20PFC&p1131=CCM)
+
+- ### [TI UCC28180](http://www.ti.com/product/UCC28180/datasheet/abstract#SLUSBQ56054)
+
+---
+## PFC Application Study: Welding Circuit
+--
+
+<img src="https://www.fairchildsemi.com/Assets/-Blockdiagram-Widgets/images/Welding-Induction-Heating-Welding-Machine-01.jpg" alt="Drawing" style="width: 800px;">
+
+---
+
+# DC/AC Converters
+--
+
+# Inverters
+
+<img src="https://rudgeenergy.co.uk/wp-content/uploads/2017/08/Solar-pv-inverters-Rudge-Energy.jpg" alt="Drawing" style="width: 600px;">
+
+---
+# Block Diagram
+
+### AC Motor drive with unidirectional power flow
+--
+
+<img src="./images/ee464/inverter_unidirectional.png" alt="Drawing" style="width: 800px;">
+---
+# Block Diagram
+
+### AC Motor drive with bidirectional power flow
+--
+
+<img src="./images/ee464/inverter_bidirectional.png" alt="Drawing" style="width: 800px;">
+
+
+---
+# Operating Quadrants
+
+<img src="./images/ee464/inverter_mode.png" alt="Drawing" style="width: 500px;">
+
+	
+
+---
+# Operating Quadrants
+
+<img src="./images/ee464/inverter_mode2.png" alt="Drawing" style="width: 600px;">
+
+
+???
+### sunum notlari
+
+\\(x^2\\)
+---
+
+# One Leg Inverter
+--
+
+<img src="./images/ee464/one_leg_inverter.png" alt="Drawing" style="width: 750px;">
+
+### Building block for almost all inverter types
+---
+
+# PWM Generation
+--
+
+## Sinusoidal PWM (SPWM)
+--
+
+- ## The most common type
+--
+
+- ## Many other PWM Techniques (wait 2 weeks)
+
+---
+
+# Sinusiodal PWM
+--
+
+### Compare a sinusoidal wave with a carrier triangular wave
+--
+
+<img src="./images/ee464/svpwm1.png" alt="Drawing" style="width: 600px;">
+---
+
+
+# Sinusiodal PWM
+--
+
+
+
+<img src="./images/ee464/svpwm2.png" alt="Drawing" style="width: 400px;">
+
+---
+
+
+# Sinusiodal PWM
+--
+
+
+
+<img src="./images/ee464/analog_svpwm.png" alt="Drawing" style="width: 700px;">
+### Analog generation of svpwm
+
+---
+# PWM in one leg inverter
+--
+
+<img src="./images/ee464/svpwm_one_leg.png" alt="Drawing" style="width: 650px;">
+
+---
+# Some Definitions
+--
+
+## Frequency Modulation Ratio
+--
+
+## \\(m_f = \dfrac{f_s}{f_1}\\)
+
+## \\(f_s\\): Switching frequency
+## \\(f_1\\): Fundamental frequency of AC output
+---
+
+# What is \\(m_f\\) for this case?
+
+<img src="./images/ee464/svpwm_one_leg.png" alt="Drawing" style="width: 650px;">
+
+---
+## \\(m_f\\) selection
+
+---
+# Some Definitions
+--
+
+## Modulation Index
+--
+
+## (Amplitude Modulation Ratio)
+--
+
+## \\(m\_a=\dfrac{\hat{V}\_{control}}{\hat{V}\_{triangle}}\\)
+--
+
+## Linear region: \\(m_a<1\\)
+--
+
+## Overmodulation: \\(m_a>1\\)
+
+---
+## Overmodulation in SPWM
+--
+
+<img src="./images/ee464/overmodulation.png" alt="Drawing" style="width: 450px;">
+
+---
+## Overmodulation in SPWM
+
+## Worst Case?
+--
+
+## Square Wave
+
+---
+
+
+
+
+
+
+
+
+
+---
+Control in Power Electronics
 
 <img src="http://www.smu.ca/faculty/adelmerabet/images/WECS_000.JPG" alt="Drawing" style="width: 800px;">
 
