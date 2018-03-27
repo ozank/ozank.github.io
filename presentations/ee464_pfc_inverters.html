@@ -231,6 +231,42 @@ class: center, middle
 
 ---
 ## \\(m_f\\) selection
+--
+
+## Preferred to have a high value (\\(m_f>21\\))
+
+- ### i.e 2 kHz for 50 Hz: \\(m_f=40\\)
+--
+
+- ### May not be possible for larger power applications
+--
+
+- ### Be aware of [audible noise](http://onlinetonegenerator.com/) (not only fs, but also its harmonics)
+--
+
+- ### Asynchronous PWM can be used but not preferred
+---
+## Synchronous PWM
+
+### \\(f_s\\) is an integer multiple of  \\(f_1\\)
+
+<img src="./images/ee464/svpwm_one_leg.png" alt="Drawing" style="width: 300px;">
+--
+
+- ### \\(m_f\\) is integer
+--
+
+- ### If not (asynchronous PWM), subharmonics of \\(f_1\\) is generated
+---
+## \\(m_f\\) selection
+--
+
+## Small Frequency Modulation (\\(m_f<21\\))
+
+- ### Synchronous PWM should be used
+--
+ 
+- ### \\(m_f\\) should be an odd integer
 
 ---
 # Some Definitions
@@ -250,673 +286,254 @@ class: center, middle
 
 ## Overmodulation: \\(m_a>1\\)
 
+
+---
+# Linear Region
+--
+
+### Fundamental voltage magnitude varies linearly with \\(m_a\\)
+--
+
+### \\(\hat{V}\_{ao1}= m\_a \dfrac{V\_d}{2}\\)
+--
+
+### \\(V\_{ao}= \dfrac{v\_{control}}{\hat{V}\_{triangle}} \dfrac{V\_d}{2}\\)
+--
+
+### Other harmonics does NOT change linearly with \\(\hat{V}\_{ao1}\\)
+---
+# PWM Harmonics
+--
+
+## FFT in linear region
+--
+
+<img src="./images/ee464/pwm_linear_harmonics.png" alt="Drawing" style="width: 800px;">
+
+## Notice the sidebands
+
+---
+# [PWM Harmonics](https://www.google.com.tr/search?ei=fVW5Wpm9G6Lg6ATYtquYCg&q=plot+0.8*sin%28x%29%2B0.22*sin%2837*x%29%2B0.818*sin%2839*x%29%2B0.22*sin%2841*x%29%2B0.314*sin%2877*x%29%2B0.314*sin%2879*x%29%2B0.139*sin%2881*x%29%2B0.139*sin%2875*x%29%2B0.013*sin%2883*x%29%2B0.013*sin%2873*x%29%2B0.171*sin%28117*x%29%2B0.176*sin%28119*x%29%2B0.176*sin%28115*x%29%2B0.104*sin%28121*x%29%2B0.104*sin%28113*x%29%2B0.105*sin%28155*x%29%2B0.105*sin%28157*x%29%2B0.115*sin%28153*x%29%2B0.115*sin%28159*x%29%2B0.016*sin%28143*x%29%2B0.016*sin%28131*x%29&oq=plot+0.8*sin%28x%29%2B0.22*sin%2837*x%29%2B0.818*sin%2839*x%29%2B0.22*sin%2841*x%29%2B0.314*sin%2877*x%29%2B0.314*sin%2879*x%29%2B0.139*sin%2881*x%29%2B0.139*sin%2875*x%29%2B0.013*sin%2883*x%29%2B0.013*sin%2873*x%29%2B0.171*sin%28117*x%29%2B0.176*sin%28119*x%29%2B0.176*sin%28115*x%29%2B0.104*sin%28121*x%29%2B0.104*sin%28113*x%29%2B0.105*sin%28155*x%29%2B0.105*sin%28157*x%29%2B0.115*sin%28153*x%29%2B0.115*sin%28159*x%29%2B0.016*sin%28143*x%29%2B0.016*sin%28131*x%29&gs_l=psy-ab.3...48885.70566.0.71020.15.15.0.0.0.0.0.0..0.0....0...1c.1.64.psy-ab..15.0.0....0.-PE9gd4ffFo)
+--
+
+<img src="./images/ee464/pwm_harmonics_table.png" alt="Drawing" style="width: 550px;">
+---
+# PWM Harmonics
+
+## Advantageous to choose \\(m_f\\) as odd integer:
+
+--
+
+- ### Results in odd symmetry (\\(f(-t)=-f(t)\\))
+--
+
+- ### Results in half-wave symmetry (\\(f(t)=-f(t+T/2)\\))
+--
+
+- ### No even harmonics are present
+--
+
+- ### Only sine components exist (no cosine harmonics component)
+
 ---
 ## Overmodulation in SPWM
 --
 
-<img src="./images/ee464/overmodulation.png" alt="Drawing" style="width: 450px;">
+### Control signals gets bigger than the triangle waveform
+
+<img src="./images/ee464/overmodulation.png" alt="Drawing" style="width: 400px;">
 
 ---
 ## Overmodulation in SPWM
 
-## Worst Case?
+### Possible to create higher magnitude, but induce harmonics of \\(f_1\\)
 --
 
-## Square Wave
+<img src="./images/ee464/harmonics_overmodulation.png" alt="Drawing" style="width: 800px;">
 
 ---
+## Over-modulation in SPWM
 
+## Worst Case?:
+--
+Square Wave
 
-
-
-
-
-
-
+<img src="./images/ee464/pwm_square.png" alt="Drawing" style="width: 600px;">
 
 ---
-Control in Power Electronics
+## Over-modulation in SPWM
 
-<img src="http://www.smu.ca/faculty/adelmerabet/images/WECS_000.JPG" alt="Drawing" style="width: 800px;">
+## Square Wave Harmonics
 
-## Control of a Wind Turbine
----
-
-# Control in Power Electronics
---
-
-## Most DC/DC converters controlled by analog controllers:
---
-
-- ### Micro-controllers not fast enough at high switching frequencies
---
-
-- ### Cheap (just an IC and a few passive elements)
---
-
-- ### Could be integrated to with drive circuit ([LM1771](http://www.ti.com/product/LM1771/datasheet/abstract#snvs44619))
----
-# Control in Power Electronics
-
-<img src="http://ecee.colorado.edu/ecen4517/exp/exp3/BuckMPPT.gif" alt="Drawing" style="width: 700px;">
-
-### Control with microcontroller
----
-# Control in Power Electronics
-
-<img src="https://m.eet.com/media/1120288/c0799-figure1.gif" alt="Drawing" style="width: 500px;">
-
-### Control with error amplifier
----
-## Buck Converter Controller
---
-
-<img src="./images/ee464/buck_controller.png" alt="Drawing" style="width: 800px;">
----
-## Buck Converter Controller
---
-
-<img src="./images/ee464/buck_control_blocks.png" alt="Drawing" style="width: 800px;">
----
-# Control Loop Stability
-## Don't worry, will be revisited!
---
-
-- ## Small steady-state error
---
-(gain at low frequencies should be large)
-
---
-
-- ## No resonance
---
-(gain at switching frequency should be small)
-
---
-
-- ## Enough [phase-margin](https://www.youtube.com/watch?v=ThoA4amCAX4)
---
-( usually at least 45 degree phase margin is aimed for stability)
----
-
-# Phase Margin
-
-<img src="https://microchip.wdfiles.com/local--files/asp0107%3Aphase-gain-margins/GainPhaseMargins.png" alt="Drawing" style="width: 450px;">
-
-## Difference to -180 degrees when the gain is unity (0dB)
+<img src="./images/ee464/harmonics_square.png" alt="Drawing" style="width: 700px;">
 
 ---
-# Phase Margin
+## Over-modulation in SPWM
 
-<img src="https://m.eet.com/media/1054965/BassoFig39x.jpg" alt="Drawing" style="width: 750px;">
-
----
-# Small Signal Analysis
-## Don't worry, will be revisited!
+## Square Wave Peak Voltage?
 --
 
-### Small Signal Model of a Transistor (EE311)
-
-<img src="https://qph.ec.quoracdn.net/main-qimg-2cccbfdf48fa4f0e27cb8b108e5a756f" alt="Drawing" style="width: 650px;">
-
----
-# Small Signal Analysis
+### \\(\hat{V}\_{ao1}= \dfrac{4}{\pi} \dfrac{V\_d}{2} = 1.273 \dfrac{V\_d}{2}\\)
 --
 
-## For a parameter, x:
---
+## Fundamental harmonics:
 
-- ## \\(x\\): total quantity
---
 
-- ## \\(X\\): steady-state (DC) component
---
-
-- ## \\(\tilde{x}\\): AC term (small-signal variation)
-
---
-
-## \\(x = X + \tilde{x}\\)
-
----
-# Small Signal Analysis
---
-
-## For the buck converter
-
-## \\(v_o = V_o + \tilde{v}_o\\)
-
-## \\(d = D + \tilde{d}\\)
-
-##  \\(i_L = I_L + \tilde{i}_L\\)
-
-## \\(v_s = V_s + \tilde{v}_s\\)
-
----
-# Small Signal Analysis
-
-## Average Model of the buck converter
-
-<img src="./images/ee464/buck_average.png" alt="Drawing" style="width: 700px;">
----
-# Small Signal Analysis
-
-## For the buck converter
-
-## Let's derive the small signal model
---
-
-### \\(v_x = V_s D + \tilde{v}_s D + V_s \tilde{d}\\)
---
-\\(\approx v_sD + V_s\tilde{d}\\)
---
-
-### For current
-
-### \\(i_s = i_L d = (I_L + \tilde{i}_L)(D +\tilde{d})\\)
-
-### \\(\approx i_L D + I_L \tilde{d}\\)
----
-
-# Buck Converter Small Signal Model
---
-
-<img src="./images/ee464/buck_small_signal.png" alt="Drawing" style="width: 700px;">
-
----
-# Transfer Functions
---
-
-## RC Filter
---
-
-<img src="https://www.mathworks.com/help/examples/analogdevicesadalm1000_product/win64/RCCircuit.png" alt="Drawing" style="width: 800px;">
-
----
-# Transfer Functions
---
-
-## RC Filter [Bode Plot](http://www.onmyphd.com/?p=bode.plot)
---
-
-<img src="https://i.stack.imgur.com/ukOfZ.png" alt="Drawing" style="width: 600px;">
-
-### [Bode Plotter](http://www.onmyphd.com/?p=bode.plot.online.generator) ,[Wolfram Alpha Plotter](https://www.wolframalpha.com/input/?i=transfer+function+(1)%2F(3*(s%5E2%2B2*s%2B1))
----
-## Transfer Functions
-
-## Let's do for the LCR part of the converter
---
-
-<img src="./images/ee464/buck_filter_s_domain.png" alt="Drawing" style="width: 450px;">
-
-### Representation in the s-domain
-
----
-## Transfer Functions
-
-## Let's do for the LCR part of the converter
---
-
-
-### \\(\dfrac{v_o(s)}{v_x(s)}=\dfrac{1}{LC(s^2 +(1/RC)s+1/LC)}\\)
---
-
-
-### \\(v_x(s)= V_s d(s)\\)
---
-
-### Transfer function in terms of d(s)
-
-### \\(\dfrac{v_o(s)}{d(s)}=\dfrac{V_s}{LC(s^2 +(1/RC)s+1/LC)}\\)
----
-# Realistic RLC
---
-
-## Non-ideal elements can effect stability
---
-
-- ## Resistance of the inductor
---
-
-- ## ESR of capacitor (series resistance)
-
----
-## Let's repeat the case with non-ideal capacitor
---
-
-<img src="./images/ee464/nonideal_RLC.png" alt="Drawing" style="width: 500px;">
-
-## Capacitor with series resistance
----
-## Let's repeat the case with non-ideal capacitor
---
-
-### \\(\dfrac{v_o(s)}{d(s)}=\\)
---
-
-#### \\(\dfrac{V_s}{LC}\dfrac{1 + s r_C R}{s^2(1+r_C/R) +s(1/RC+r_C/L)+1/LC)}\\)
---
-
-### Can be simplified by assuming \\(r_C << R\\)
---
-
-### \\(\dfrac{V_s}{LC}\dfrac{1 + s r_C R}{s^2 +s(1/RC+r_C/L)+1/LC)}\\)
---
-
-### Notice the extra zero introduced by ESR!
----
-### PWM Block Transfer Function
---
-
-## \\(d=\dfrac{v_c}{V_p}\\)
-
-### for a saw-tooth PWM generator with Vp peak voltage
---
-
-### Transfer function
-
-
-## \\(\dfrac{d(s)}{v_c(s)}=\dfrac{1}{V_p}\\)
-
----
-## PWM Block Transfer Function
-
-## Be careful with high-frequency control bandwidth
---
-
-<img src="./images/ee464/pwm_variation.png" alt="Drawing" style="width: 700px;">
-
----
-## What about in switching components?
---
-
-## Problem:
---
-
-- ## Multi-mode systems (topology changes with switching)
---
-
-- ## Different transfer function for on-off states
---
-
-- ## Can use non-linear controller, or multiple linear controllers (but difficult to implement)
-
----
-## What about in switching components?
---
-
-## Solution:
---
-
-- ## Convert multi-mode to single-mode system
---
-
-- ## Linearizing the system with averaging wrt duty cycle
---
-
-- ## Use a linear controller with required characteristics
----
-
-## Ready?
---
-
-## Down the rabbit hole
-
-<img src="https://res.cloudinary.com/jerrick/image/upload/c_fit,f_auto,fl_progressive,q_auto,w_1140/qtx7wqekatzo2jjr8cgd" alt="Drawing" style="width: 400px;">
+### \\(\hat{V}\_{aoh}= \dfrac{\hat{V}\_{ao1}}{h}\\)
 
 
 ---
-## Linearization with State-Space Averaging
---
+# Over-modulation Index Variation
 
-- ## Represent everthing in matrix form
---
 
-- ## Inductor current, and capacitor voltage as state variables
---
-
-- ## Obtain two states (for switch on and siwtch off)
---
-
-- ## Find the weighted average
----
-
-## Linearization with State-Space Averaging
---
-
-## Obtain two states (for switch on and siwtch off)
---
-
-
-## \\(\dot{x} = A_1 x + B_1 v_d\\)   (for switch on, dTs)
---
-
-## \\(\dot{x} = A_2 x + B_2 v_d\\)   (for switch off, (1-d)Ts)
-
-### where, A1 and A2 are state matrices
-
-### B1 and B2 are vectors
-
----
-# Example:
-
-## Mohan 10.1
-
----
-
-## Linearization with State-Space Averaging
---
-
-## Find weighted average
---
-
-
-## \\(A = d A_1 + (1-d) A_2\\) 
-
-## \\(B = d B_1 + (1-d) B_2\\) 
---
-
-## \\(\dot{x} = A x + B v_d\\)   (for switch off, (1-d)Ts)
----
-
-## Similar calculations for the output voltage
-
-## \\(v_o = C_1 x \\)   (for switch on, dTs)
-
-## \\(v_o = C_2 x \\)   (for switch off, (1-d)Ts)
-
-## where C1 and C2 are transposed vectors
-
----
-
-## Similar calculations for the output voltage
-
-## \\(v_o = C x \\)   
-
-## \\(C = d C_1 + (1-d) C_2\\)  
-## where C1 and C2 are transposed vectors
----
-### Use Small signal model 
-Equations 10.46-10.52
---
-
-###\\(x = X + \tilde{x}\\)
---
-
-### \\(\dot{\tilde{x}}= AX + B V_d + A\tilde{x}\\)
-### \\( \quad \quad + [(A_1-A_2)X + (B_1 - B_2)V_d]\tilde{d}\\)
-
---
-### In the steady state:
-
-## \\(\dot{X}\\)=0
-
-Use derivations from eq.10.53-10.59
----
-# Steady State DC Voltage Transfer Function
---
-
-## \\(\dfrac{V_o}{V_d} = -C A^{-1}B\\)
-
----
-# Small Signal Model to Get AC Transfer Function
---
-
-### \\(T_p(s)=\dfrac{\tilde{v}_o(s)}{\tilde{d}(s)}\\)
-
-### \\(=C[sI-A]^{-1}[(A_1-A_2)X + (B_1-B_2)V_d] \\)
-### \\(\quad + (C_1-C_2)X)]\\)
----
-# Example (Mohan 10-1)
-
-## Find the transfer function of forward converter
---
-
-<img src="./images/ee464/forward_controller.png" alt="Drawing" style="width: 700px;">
-
-## Note the state variables
----
-# Example (Mohan 10-1)
-
-## Switch ON
---
-
-<img src="./images/ee464/forward_controller_on.png" alt="Drawing" style="width: 700px;">
-
----
-# Example (Mohan 10-1)
-
-## Switch OFF
---
-
-<img src="./images/ee464/forward_controller_off.png" alt="Drawing" style="width: 700px;">
----
-# Example (Mohan 10-1)
-
-## Steady State Transfer Function
---
-
-### \\(\dfrac{V_o}{V_d} = -C A^{-1}B\\)
---
-
-### \\(\dfrac{V_o}{V_d} = D \dfrac{R+ r_C}{R+(r_C + r_L)}\\)
---
-
-### If parasitic resistances are small
---
-
-### \\(\dfrac{V_o}{V_d} \approx D \\)
-
----
-# Example (Mohan 10-1)
-
-## AC Transfer Function
---
-
-### \\(T_p(s)=\dfrac{\tilde{v}_o(s)}{\tilde{d}(s)}\\)
---
-
-#### \\(T_p(s)=V_d \dfrac{1 + s r_C C}{LC [s^2 + s (1/RC + (r_C + r_L)/L)+ 1/LC]}\\)
---
-
-## Remember this equation?
---
-
-### \\(s^2 + 2 \xi \omega_0 s + \omega_0^2\\)
-
----
-# Example (Mohan 10-1)
-
-## AC Transfer Function
-
-
-### \\( s^2 + 2 \xi \omega_0 s + \omega_0^2\\)
---
-
-### \\(\omega_0 = \dfrac{1}{\sqrt{LC}}\\)
---
-
-### \\(\xi = \dfrac{1/RC + (r_C + r_L)/L}{2\omega_0}\\)
-
----
-# Example (Mohan 10-1)
-
-## AC Transfer Function Becomes
-
-### \\(T_p(s)=V_d \dfrac{\omega_0^2}{\omega_z} \dfrac{s + \omega_z}{s^2 + 2 \xi \omega_0 s + \omega_0^2}\\)
-
-### where \\(\omega_z = \dfrac{1}{r_C C}\\)
----
-# Example (Mohan 10-1)
-
-### Put the parameters into the equation
-
-#### \\(V_d = 8 V\\)
-#### \\(V_o = 5 V\\)
-#### \\(r_L = 20 m\Omega\\)
-#### \\(L = 5 \mu H\\)
-#### \\(r_C = 10 m\Omega\\)
-#### \\(C = 2 mF\\)
-#### \\(R = 200 m\Omega\\)
-#### \\(f_s = 200 kHz\\)
-
----
-# Example (Mohan 10-1)
-
-## Bode Plot (Gain)
-
-<img src="./images/ee464/forward_bode_gain.png" alt="Drawing" style="width: 650px;">
-
----
-# Example (Mohan 10-1)
-
-## Bode Plot (Phase)
-
-<img src="./images/ee464/forward_bode_phase.png" alt="Drawing" style="width: 650px;">
----
-# Flyback Converter
---
-
-#### Equation 10-86
-
-### \\(T_p(s)=\dfrac{\tilde{v}_o(s)}{\tilde{d}(s)}\\)
---
-
-### \\(T\_p(s)=V\_d f(D)  \dfrac{(1 + s/\omega\_{z1})(1 - s/\omega\_{z2})}{as^2 + bs + c}\\)
+<img src="./images/ee464/overmodulation_variation.png" alt="Drawing" style="height: 500px;">
 
 
 ---
-# Flyback Converter
---
+# Single-Phase Half-Bridge Inverter
 
-## Bode Plot (Gain)
+<img src="./images/ee464/one_leg_inverter.png" alt="Drawing" style="width: 750px;">
 
-<img src="./images/ee464/flyback_bode_gain.png" alt="Drawing" style="width: 650px;">
+
+### In order to have equal capacitor voltage, io cannot have a DC component
 
 ---
-# Flyback Converter
---
+# Single-Phase Full-Bridge Inverter
 
-## Bode Plot (Phase)
+<img src="./images/ee464/full_bridge_inverter.png" alt="Drawing" style="width: 750px;">
 
-<img src="./images/ee464/flyback_bode_phase.png" alt="Drawing" style="width: 650px;">
+
+### Voltage level is twice of the half bridge inverter
+
 ---
-## How to obtain bode plots with software?
---
+# Bipolar PWM 
 
-- ### [Control Design of a Boost Converter Using Frequency Response Data](https://www.mathworks.com/help/slcontrol/examples/control-design-of-a-boost-converter-using-frequency-response-data.html)
-- ### [https://www.mathworks.com/videos/pid-controller-tuning-for-a-buck-converter-1504291092156.html](https://www.mathworks.com/videos/pid-controller-tuning-for-a-buck-converter-1504291092156.html)
-- ### [Design digital controllers for power electronics using simulation](https://www.mathworks.com/discovery/power-electronics-simulation.html)
-- ### [Bode Response of Simulink Model](https://www.mathworks.com/help/slcontrol/gs/bode-response-of-simulink-model.html)
-- ### [How to Run an AC Sweep with PSIM?](https://www.youtube.com/watch?v=nbFo-NMeY_w)
-- ### [Peak Current Control with PSIM](https://powersimtech.com/drive/uploads/2016/03/Tutorial-Peak-current-mode-control.pdf)
-- ### [Plexim-Frequency Analysis of Buck Converter ](https://www.plexim.com/support/application-examples/187) 
----
-# Controller Design
---
-
-## Generalized Compensated Error Amplifier
+## Same with the full-bridge DC/DC converter 
 --
 
 
-<img src="./images/ee464/error_amplifier.png" alt="Drawing" style="width: 800px;">
-
----
-## Types of Error Amplifier
+### \\(T\_{A+}\\) and \\(T\_{B-}\\) are turn on and off together
 --
 
-### Common Ones:
-
-- ### Type-1
-
-- ### Type-2
-
-- ### Type-3
-
-
----
-# Type-1 Error Amplifier
-
-<img src="https://venable.biz/wp-content/uploads/2017/09/type-1-amplifier.png" alt="Drawing" style="width: 600px;">
-
-## Simple Integrator
-
-## Has one pole at the origin
-
----
-# Type-1 Error Amplifier
-
-<img src="https://venable.biz/wp-content/uploads/2017/09/type-1-amplifier-1.png" alt="Drawing" style="width: 600px;">
-
-
----
-## Type-2 Error Amplifier (Most Common Type)
+### \\(T\_{A-}\\) and \\(T\_{B+}\\) are complimetary of \\(T\_{A+}\\) and \\(T\_{B-}\\)
 --
 
-<img src="https://venable.biz/wp-content/uploads/2017/09/type-2-amplifier.png" alt="Drawing" style="width: 600px;">
+## Can give \\(V\_d\\) or \\(-V\_d\\)
 
-### Has two poles: at origin and one at zero-pole pair
-### 90 degrees pahase boost can be obtained due to single zero
----
-
-## Type-2 Error Amplifier (Most Common Type)
---
-
-<img src="https://venable.biz/wp-content/uploads/2017/09/transfer-function-type-2-amp.png" alt="Drawing" style="width: 600px;">
-
-### Note the phase boost
 
 ---
+# Bi-polar Voltage Switching
 
-## Type-3 Error Amplifier
---
-
-<img src="https://venable.biz/wp-content/uploads/2017/09/type-3-amp.png" alt="Drawing" style="width: 350px;">
-
-### has two zeros can can boost up to 180 degrees
+<img src="./images/ee464/bipolar1.png" alt="Drawing" style="width: 600px;">
 ---
 
-## Putting all Together
+# Bi-polar Voltage Switching
+
+<img src="./images/ee464/bipolar2.png" alt="Drawing" style="width: 700px;">
+---
+# Bi-polar PWM
+
+<img src="./images/ee464/bipolar_sine.png" alt="Drawing" style="width: 600px;">
+
+---
+# Bi-polar PWM
+### Voltage level is twice of the half bridge inverter
 --
 
-## A controller just increases the gain (Proportional)
+## Linear Region
+
+### \\(\hat{V}\_{o1}= m\_a V\_d\\)
 --
 
-<img src="./images/ee464/gain_vs_phase_margin.png" alt="Drawing" style="width: 800px;">
+## Overmodulation
 
-### Increasing gain usually reduces phase margin (and reduces stability)
+### \\(V\_d < \hat{V}\_{o1} <   \dfrac{4}{\pi}  V\_d\\)
+---
+# Bi-polar PWM
+
+## Harmonics
+--
+
+## Same harmonics (as there is just offset in the waveform)
+
+
+<img src="./images/ee464/pwm_linear_harmonics.png" alt="Drawing" style="width: 800px;">
+
+---
+# Source Side Current
+--
+
+<img src="./images/ee464/inverter_filter.png" alt="Drawing" style="width: 800px;">
+---
+
+# Source Side Current
+
+## Has DC and AC (with \\(2f_1\\)) component.
+--
+
+<img src="./images/ee464/bipolar_source_current.png" alt="Drawing" style="width: 600px;">
+
+
+---
+# Unipolar PWM
+
+## Same with the full-bridge DC/DC converter 
+
+
+### \\(T\_{A+}\\) and \\(T\_{B+}\\) are controlled seperately
+
+### \\(T\_{A-}\\) and \\(T\_{B-}\\) are complimetary of \\(T\_{A+}\\) and \\(T\_{B+}\\)
+--
+
+## Can give \\(V\_d\\), \\(0\\), \\(-V\_d\\)
+
+## \\(V\_o = 0 \\) if \\(T\_{A+}\\) and \\(T\_{B+}\\) are ON
+## \\(V\_o = 0 \\) if \\(T\_{A-}\\) and \\(T\_{B-}\\) are ON
+
+
+---
+# Uni-polar Voltage Switching
+
+<img src="./images/ee464/unipolar1.png" alt="Drawing" style="width: 700px;">
 
 ---
 
-## Putting all Together
---
+# Uni-polar Voltage Switching
 
-## A proper controller  (adjust gain and phase margin)
---
-
-<img src="./images/ee464/bode_plot_with_controller.png" alt="Drawing" style="width: 800px;">
-
+<img src="./images/ee464/unipolar2.png" alt="Drawing" style="width: 700px;">
 ---
 
-## More Information
+# Uni-polar PWM Sine Output
+--
 
-<img src="http://sattalks.org/wp-content/uploads/icebergfloat-640x410.jpg" alt="Drawing" style="width: 600px;">
-
+<img src="./images/ee464/unipolar_sine.png" alt="Drawing" style="width: 600px;">
 ---
-## More Information
 
-- ### Fundamentals of Power Electronics, Erickson
+# Uni-polar PWM Sine Output
+--
 
-- ### [Phase Margin, Crossover Frequency, and Stability](https://www.eeweb.com/profile/cody-miller/articles/bode-plot-phase-margin-crossover-frequency-and-stability)
+<img src="./images/ee464/unipolar_sine2.png" alt="Drawing" style="width: 800px;">
+---
 
-- ### [Loop Stability Analysis of Voltage Mode Buck Regulator](http://www.ti.com/lit/an/slva301/slva301.pdf)
+# Uni-polar PWM Harmonics
+--
 
-- ### [DC-DC Converters Feedback and Control](http://www.onsemi.com/pub/Collateral/TND352-D.PDF)
+## Harmonics of twice the switching frequency.
+--
 
-- ### [Modeling and Loop Compensation Design](http://cds.linear.com/docs/en/application-note/AN149fa.pdf)
+ <img src="./images/ee464/unipolar_pwm_harmonics.png" alt="Drawing" style="width: 800px;">
+---
+## Harmonics Comparison
+--
 
-- ### [Compensator Design Procedure](https://www.infineon.com/dgdl/an-1162.pdf?fileId=5546d462533600a40153559a8e17111a)
+### Bipolar PWM
+
+ <img src="./images/ee464/bipolar_harmonics2.png" alt="Drawing" style="width: 800px;">
+--
+
+### Unipolar PWM
+ <img src="./images/ee464/unipolar_harmonics2.png" alt="Drawing" style="width: 800px;">
+
 
 ---
 ## You can download this presentation from: [keysan.me/ee464](http://keysan.me/ee464)
