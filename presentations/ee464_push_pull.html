@@ -209,6 +209,216 @@ twice of the half bridge
 # Three Phase Inverters
 --
 
+<img src="http://www.amicavfd.com.img.800cdn.com/UploadFiles/20150925_15204855.jpg" alt="Drawing" style="width: 500px;">
+---
+
+# Three Phase Inverters
+--
+
+<img src="http://in.element14.com/productimages/large/en_GB/42270890.jpg" alt="Drawing" style="width:800px;">
+---
+
+# Three Phase Voltage-Source Inverter
+--
+
+<img src="./images/ee464/three_phase_inverter.png" alt="Drawing" style="width: 750px;">
+
+### Three inverter legs are connected in parallel
+
+---
+# Three Phase Voltage-Source Inverters
+--
+
+- ## Do not open top and bottom switches at the same time
+--
+
+- ## Point (o) is not needed put shown for simplicity in calculations
+--
+
+- ## Current can flow through the siwtch or anti-parallel diodes.
+---
+
+# PWM Techniques
+--
+
+### There are many different PWM techniques that will be covered:
+--
+
+- ## Square-wave (Six-step) PWM
+--
+
+- ## Sinusoidal PWM (SPWM)
+--
+
+- ## Hysteresis (Bang-Bang) Control
+--
+
+- ## Space-Vector PWM (SVPWM)
+--
+
+- ## Third harmonic injection
+---
+
+# Six-Step Inverter
+--
+
+### Commonly used in BLDC motor Drives
+
+<img src="https://hackadaycom.files.wordpress.com/2015/09/open-source-esc-featured.jpg" alt="Drawing" style="width: 800px;">
+
+---
+
+# Six-Step Inverter
+--
+
+### Commonly used in BLDC motor Drives
+
+<img src="http://www.mpoweruk.com/images/BLDCControl.gif" alt="Drawing" style="width: 800px;">
+
+---
+# Six-Step Inverter
+--
+
+- ### Each switch has 50% duty ratio.
+--
+
+- ### Each leg has a phase difference of 120 degrees
+--
+
+- ### One switching action takes place at every 60 degrees
+
+---
+# Six-Step Inverter
+--
+
+<img src="./images/ee464/six_step.png" alt="Drawing" style="width: 800px;">
+---
+# Six-Step Inverter
+--
+
+<img src="./images/ee464/six_step_switches.png" alt="Drawing" style="width: 750px;">
+---
+
+# Six-Step Inverter
+
+## Line-to-line voltage: \\(V\_{AB}=V\_{A0}-V\_{B0}\\)
+--
+
+
+<img src="./images/ee464/six_step_vab.png" alt="Drawing" style="width: 750px;">
+---
+
+## Line-to-line voltages:
+--
+
+
+<img src="./images/ee464/six_step_line_voltages.png" alt="Drawing" style="width: 600px;">
+---
+
+## Line-to-Line Harmonics
+
+--
+
+## Fourier Coefficients
+
+### \\(\hat{V}\_{n,l-l} = \dfrac{1}{n}\dfrac{4}{\pi}V\_{dc}cos(n \dfrac{\pi}{6})\\)
+--
+
+### For: \\(n = 6n \pm 1\\)
+--
+
+- ### No even harmonics
+
+- ### No third order harmonics
+---
+
+## Line-to-Line Harmonics
+
+--
+
+## RMS of the fundamental component?
+
+### \\({V}\_{1,l-l,rms} = \dfrac{1}{\sqrt{2}}\dfrac{4}{\pi}V\_{dc} \dfrac{\sqrt{3}}{2}\\)
+--
+\\(=0.78 V\_{dc}\\)
+--
+
+### Harmonics RMS:
+--
+
+### \\({V}\_{n,l-l,rms} = \dfrac{1}{n} 0.78 V\_{dc}\\)
+
+--
+
+### For: \\(n = 6n \pm 1\\)
+
+---
+## Line-to-Line Harmonics
+
+<img src="./images/ee464/six_step_harmonics_l_l.png" alt="Drawing" style="width: 750px;">
+
+
+
+---
+## Line-to-Neutral voltages:
+
+### Neutral point is floating
+--
+
+<img src="./images/ee464/six_step_phase_voltages.png" alt="Drawing" style="width: 550px;">
+
+### Voltage level changes every 60 degrees (that's why it's a six-step inverter!)
+
+---
+
+## Line-to-Neutral Harmonics
+
+--
+
+## Fourier Coefficients
+
+### \\(\hat{V}\_{n,l-N} = \dfrac{1}{n}\dfrac{2}{3\pi}V\_{dc}(2 +cos(\dfrac{\pi n}{3}) - cos(\dfrac{2\pi n}{3}))\\)
+--
+
+### For: \\(n = 6n \pm 1\\)
+--
+
+
+### Simpler Form
+
+--
+
+### \\(\hat{V}\_{n,l-N} = \dfrac{1}{n}\dfrac{2}{\pi}V\_{dc}\\)
+
+
+---
+
+## Line-to-Neutral Harmonics
+
+### \\(\hat{V}\_{n,l-N} = \dfrac{1}{n}\dfrac{2}{\pi}V\_{dc}\\)
+
+### For: \\(n = 6n \pm 1\\)
+
+- ### No even harmonics
+
+- ### No third order harmonics
+
+---
+# Example:
+
+### D. Dart . Ex 8-12:
+--
+
+### Calculate the voltage and current harmonics and THD.
+--
+
+<img src="./images/ee464/six_step_ex.png" alt="Drawing" style="width: 700px;">
+
+### [Voltage Plot](https://www.google.com.tr/search?ei=1E_DWtwJhZLoBITenLgK&q=sin%28x%29%2Bsin%285x%29%2F5%2Bsin%287x%29%2F7%2Bsin%2811x%29%2F11%2Bsin%2813x%29%2F13&oq=sin%28x%29%2Bsin%285x%29%2F5%2Bsin%287x%29%2F7%2Bsin%2811x%29%2F11%2Bsin%2813x%29%2F13&gs_l=psy-ab.3...3238.6702.0.9540.3.3.0.0.0.0.154.392.0j3.3.0....0...1c.1.64.psy-ab..0.0.0....0.ut757zYR-Lg), [Current Plot](https://www.google.com.tr/search?ei=R1DDWuOjKqng6ATKoqigBQ&q=5.08*sin(x)%2B0.33*sin(5x)%2B0.17*sin(7x)%2B0.07*sin(11x)%2B0.05*sin(13x)&oq=5.08*sin(x)%2B0.33*sin(5x)%2B0.17*sin(7x)%2B0.07*sin(11x)%2B0.05*sin(13x)&gs_l=psy-ab.3...7156.7156.0.9584.1.1.0.0.0.0.118.118.0j1.1.0....0...1c..64.psy-ab..0.0.0....0.KAeOzFkBgOM)
+---
+# Voltage Vectors
+
+
 
 ---
 ## You can download this presentation from: [keysan.me/ee464](http://keysan.me/ee464)
