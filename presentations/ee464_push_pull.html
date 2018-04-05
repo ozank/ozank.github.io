@@ -458,6 +458,19 @@ twice of the half bridge
 
 <img src="./images/ee464/3ph_vll_harmonics.png" alt="Drawing" style="width: 800px;">
 
+### Harmonics at he side bands,
+### Like the unipolar but starts at mf.
+---
+
+# Sinusoidal PWM (SPWM)
+
+## Harmonics in the line voltage
+--
+
+<img src="./images/ee464/3ph_vll_harmonics.png" alt="Drawing" style="width: 800px;">
+
+### If mf is small, it is better to use synchronized PWM, and mf should be an odd interger, preferably multiple of 3 to reduce harmonics.
+
 ---
 # Sinusoidal PWM (SPWM)
 
@@ -465,11 +478,52 @@ twice of the half bridge
 --
 
 <img src="./images/ee464/3ph_vll_harmonics2.png" alt="Drawing" style="width: 700px;">
+
+
+
 ---
-# Sinusoidal PWM (SPWM)
+# Voltage Levels?
+--
 
-## Voltage Levels?
+## Linear Region (\\(m_a \lt 1\\))
+--
 
+
+### \\(\hat{V}\_{AN1}=m\_a\dfrac{V\_d}{2}\\)
+--
+
+### \\(V\_{l-l, rms}= \dfrac{\sqrt{3}}{\sqrt{2}}m\_a\dfrac{V\_d}{2}\\)
+--
+
+### \\(V\_{l-l, rms}= 0.612 V\_d\\)
+
+
+---
+# Voltage Levels?
+--
+
+## Overmodulation (\\(m_a \gt 1\\))
+--
+
+## Square-Wave Operation?
+--
+
+
+### \\(V\_{l-l, rms}= \dfrac{\sqrt{3}}{\sqrt{2}}\dfrac{4}{\pi}m\_a\dfrac{V\_d}{2}\\)
+--
+
+### \\(V\_{l-l, rms}= 0.78 V\_d\\)
+--
+
+
+### \\(V\_{l-l, rms,h}= \dfrac{0.78}{h} V\_d\\)  for  \\(h=6n \pm 1\\)
+
+---
+
+# Voltage Levels?
+--
+
+<img src="./images/ee464/3ph_voltage_levels.png" alt="Drawing" style="width: 400px;">
 
 ---
 
