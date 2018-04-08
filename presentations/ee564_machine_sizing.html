@@ -123,6 +123,15 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 or
 
 ## \\(\sigma_F = \dfrac{1}{2\mu_0} B^2\\)
+---
+
+# Where is the torque generated?
+
+## Which direction does it rotate?
+--
+
+<img src="./images/ee564/maxwell_tensor.png" alt="Drawing" style="width: 750px;">
+
 
 ---
 # Shear Stress
@@ -130,11 +139,19 @@ or
 [More info](http://www.eleceng.adelaide.edu.au/research/power/pebn/pebn009%20sizing%20of%20electrical%20machines.pdf)
 
 --
-## Shear Stress Values
-### Industrial Motor (<1 kW): 0.7 to 2 kPa 
-### Industrial Motor (>1 kW): 0.7 to 2 kPa
-### High Performance Industrial Servo: 10 to 20 kPa
-### Liquid Coolde Machines: 20 to 100 kPa
+## Average Shear Stress Values
+--
+
+- ### Industrial Motor (<1 kW): 0.7 to 2 kPa 
+--
+
+- ### Industrial Motor (>1 kW): 4 to 15 kPa
+--
+
+- ### High Performance Industrial Servo: 10 to 20 kPa
+--
+
+- ### Liquid Cooled Machines: 20 to 100 kPa
 
 ---
 # Electric- Magnetic Loading
@@ -142,19 +159,35 @@ or
 [More info](http://www.eleceng.adelaide.edu.au/research/power/pebn/pebn009%20sizing%20of%20electrical%20machines.pdf)
 --
 
-## Specific Magnetic Loading
+## Specific Magnetic Loading (T)
+
 --
 
-## \\(B = \dfrac{p \Phi_p}{\pi D_i L}\\)
+### i.e. average airgap flux density over a pole
+--
+
+## \\(\bar{B} = \dfrac{p \Phi_p}{\pi D_i L}\\)
 ---
-# Typical Magnetic Loading Values
+# Typical Flux Density Values
 
 
 <img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/magnetic_loading.png" alt="Drawing" style="width: 750px;"/>
 
 ---
-# Electric Loading
+# Specific Electric Loading (kA/m)
+--
 
+## RMS ampere turns per unit lenght of the airgap
+--
+
+## \\(\bar{A} = \dfrac{ N\_{turn,slot} I Q}{\pi D\_i}\\)
+--
+
+### \\(N\_{turn,slot}\\): Number of turns per slot
+
+### \\(Q\\): Number of slots
+
+### \\(I\\): RMS current for wire
 
 ---
 # Typical Electric Loading Values
@@ -167,6 +200,17 @@ or
 
 
 <img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/tangential_stress.png" alt="Drawing" style="width: 750px;"/>
+
+---
+#Exercise:
+
+### The diameter of a rotor of a 4 kW, 50 Hz, two-pole induction motor is 98 mm and the length is 82 mm. 
+--
+
+### Assume 1% rated slip and calculate the machine constant and the average tangential stress.
+
+
+Textbook: Example 6.1
 ---
 ## You can download this presentation from: [keysan.me/ee564](http://keysan.me/ee564)
 
