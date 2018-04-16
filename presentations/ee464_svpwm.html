@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE464-Static Power Conversion-II</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-464 STATIC POWER CONVERSION-II
+
+# Other PWM Techniques
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+
+# 3-Phase Two-Level Inverter
+
+<img src="./images/ee464/two_level_vsi.png" alt="Drawing" style="width: 800px;">
+
+#### Anti-parallel diodes are not shown.
+
+---
+
+# 3-Phase Two-Level Inverter
+
+<img src="./images/ee464/two_level_vsi_simple.png" alt="Drawing" style="width: 800px;">
+
+## Each leg has two positions: 
+--
+top switch closed (1)
+
+---
+
+# 3-Phase Two-Level Inverter
+
+<img src="./images/ee464/two_level_vsi_simple.png" alt="Drawing" style="width: 800px;">
+
+## Each leg has two positions: 
+--
+bottom switch closed (0)
+
+---
+
+# [Voltage Vectors](https://www.switchcraft.org/learning/2017/3/15/space-vector-pwm-intro)
+--
+
+<img src="./images/ee464/voltage_vectors.png" alt="Drawing" style="width: 600px;">
+
+
+---
+
+### 000 - \\(v_0\\) (zero vector)
+### 001 - \\(v_1\\) (Phase +U)
+### 010 - \\(v_2\\) (Phase +V)
+### 011 - \\(v_3\\) (Phase -W)
+### 100 - \\(v_4\\) (Phase +W)
+### 101 - \\(v_5\\) (Phase -V)
+### 110 - \\(v_6\\) (Phase -U)
+### 111 - \\(v_7\\) (zero vector)
+
+---
+# Voltage Vectors: V0
+
+<img src="./images/ee464/v0.png" alt="Drawing" style="width: 750px;">
+
+---
+# Voltage Vectors: V1
+
+<img src="./images/ee464/v1.png" alt="Drawing" style="width: 750px;">
+
+---
+# Voltage Vectors: V2
+
+<img src="./images/ee464/v2.png" alt="Drawing" style="width: 750px;">
+
+---
+# Voltage Vectors: V3
+
+<img src="./images/ee464/v3.png" alt="Drawing" style="width: 750px;">
+
+---
+# Voltage Vectors: V4
+
+<img src="./images/ee464/v4.png" alt="Drawing" style="width: 750px;">
+
+---
+# Voltage Vectors: V5
+
+<img src="./images/ee464/v5.png" alt="Drawing" style="width: 750px;">
+
+---
+# Voltage Vectors: V6
+
+<img src="./images/ee464/v6.png" alt="Drawing" style="width: 750px;">
+
+---
+# Voltage Vectors: V7
+
+<img src="./images/ee464/v7.png" alt="Drawing" style="width: 750px;">
+
+---
+
+
+---
+Push-Pull Inverter
+--
+
+## Similar to Push-Pull Converter
+
+<img src="./images/ee464/push_pull.png" alt="Drawing" style="width: 600px;">
+--
+
+## But without the rectifying diodes
+
+---
+# Push-Pull Inverter
+--
+
+<img src="./images/ee464/push_pull_inverter.png" alt="Drawing" style="width: 600px;">
+--
+
+## T1, T2 operates in sequence
+---
+# Push-Pull Inverter
+--
+
+## Voltage output can be adjusted by the turns-ratio
+--
+
+## \\(\hat{V}\_{o1} = m\_a \dfrac{V\_d}{n}\\)
+---
+# Push-Pull Inverter
+
+## Advantages?
+--
+
+- ### Only single transistor conduct at a time,
+--
+small voltage drop
+
+--
+- ### Especially important for low voltage applications (e.g. fed from a battery)
+--
+
+- ### There are a few PV applications as well
+--
+
+- ### Transistors have common ground (no isolation required for gate drives)
+
+---
+# Push-Pull Inverter
+
+## Disadvantages?
+--
+
+- ### What is the required voltage rating of the transistors?
+--
+
+### \\(V_T = 2 V_d\\)
+
+### Therefore may not be practical for higher input voltages
+--
+
+- ### A good transformer, with high coupling is required (to reduce energy in the leakage inductance)
+
+---
+# Switch Utilization in Single Phase Inverters
+--
+
+## Ratio of the output power to max. power capacity of the switches
+--
+
+## Assume highly inductive load, no current harmonics (just the fundamental)
+--
+
+### \\(= \dfrac{V\_{o1}I\_{o,max}}{q V\_T I\_T}\\)
+
+--
+## Maximum utilization occurs at square wave
+
+---
+# Switch Utilization in Single Phase Inverters
+--
+
+## Half Bridge Inverter
+--
+
+### Voltage rating?
+--
+
+### \\(V\_T = V\_{d,max}\\)
+--
+
+
+### Current rating?
+--
+
+### \\(I\_T = \sqrt{2} I\_{o,max}\\)
+---
+# Switch Utilization in Single Phase Inverters
+--
+
+## Half Bridge Inverter
+### Output Voltage: \\(  V\_{o1,max} = \dfrac{4}{\pi \sqrt{2}} \dfrac{V\_{d,max}}{2}\\)
+--
+
+### Max. Switch Utilization
+--
+
+### q=2
+
+### \\(= \dfrac{1}{2\pi} \approx 0.16\\) 
+---
+
+# Switch Utilization in Full Bridge Inverter
+--
+
+## Voltage, Current Ratings?
+--
+: Same with Half Bridge
+--
+
+## q=
+--
+4
+--
+
+## Voltage output =
+--
+twice of the half bridge
+--
+
+## Switch utilization=?
+--
+
+### \\(= \dfrac{1}{2\pi} \approx 0.16\\) 
+
+---
+# Switch Utilization in Push-Pull Inverter
+--
+
+## Voltage, Current Ratings?
+--
+
+
+### \\(V\_T = 2 V\_{d,max}\\)
+--
+
+### \\(I\_T = \sqrt{2} \dfrac{I\_{o,max}}{n}\\)
+--
+
+### Output Voltage: \\(  V\_{o1,max} = \dfrac{4}{\pi \sqrt{2}} \dfrac{V\_{d,max}}{n}\\)
+
+
+---
+# Switch Utilization in Push-Pull Inverter
+--
+
+## q =2
+--
+
+## Switch Utilization
+--
+
+### \\(= \dfrac{1}{2\pi} \approx 0.16\\) 
+
+---
+# Switch Utilization in Linear Region
+--
+
+### \\(= \dfrac{1}{2\pi}\dfrac{\pi}{4} m\_a = \dfrac{1}{8} m\_a\\)
+--
+
+## Linear Region
+
+### \\(= 0.125 \\) when  \\(m\_a=1\\)
+---
+
+# Three Phase Inverters
+--
+
+<img src="http://www.amicavfd.com.img.800cdn.com/UploadFiles/20150925_15204855.jpg" alt="Drawing" style="width: 500px;">
+---
+
+# Three Phase Inverters
+--
+
+<img src="http://in.element14.com/productimages/large/en_GB/42270890.jpg" alt="Drawing" style="width:800px;">
+---
+
+# Three Phase Voltage-Source Inverter
+--
+
+<img src="./images/ee464/three_phase_inverter.png" alt="Drawing" style="width: 750px;">
+
+### Three inverter legs are connected in parallel
+
+---
+# Three Phase Voltage-Source Inverters
+--
+
+- ## Do not open top and bottom switches at the same time
+--
+
+- ## Point (o) is not needed put shown for simplicity in calculations
+--
+
+- ## Current can flow through the siwtch or anti-parallel diodes.
+---
+
+# PWM Techniques
+--
+
+### There are many different PWM techniques that will be covered:
+--
+
+- ## Square-wave (Six-step) PWM
+--
+
+- ## Sinusoidal PWM (SPWM)
+--
+
+- ## Hysteresis (Bang-Bang) Control
+--
+
+- ## Space-Vector PWM (SVPWM)
+--
+
+- ## Third harmonic injection
+---
+
+# Six-Step Inverter
+--
+
+### Commonly used in BLDC motor Drives
+
+<img src="https://hackadaycom.files.wordpress.com/2015/09/open-source-esc-featured.jpg" alt="Drawing" style="width: 800px;">
+
+---
+
+# Six-Step Inverter
+--
+
+### Commonly used in BLDC motor Drives
+
+<img src="http://www.mpoweruk.com/images/BLDCControl.gif" alt="Drawing" style="width: 800px;">
+
+---
+# Six-Step Inverter
+--
+
+- ### Each switch has 50% duty ratio.
+--
+
+- ### Each leg has a phase difference of 120 degrees
+--
+
+- ### One switching action takes place at every 60 degrees
+
+---
+# Six-Step Inverter
+--
+
+<img src="./images/ee464/six_step.png" alt="Drawing" style="width: 800px;">
+---
+# Six-Step Inverter
+--
+
+<img src="./images/ee464/six_step_switches.png" alt="Drawing" style="width: 750px;">
+---
+
+# Six-Step Inverter
+
+## Line-to-line voltage: \\(V\_{AB}=V\_{A0}-V\_{B0}\\)
+--
+
+
+<img src="./images/ee464/six_step_vab.png" alt="Drawing" style="width: 750px;">
+---
+
+## Line-to-line voltages:
+--
+
+
+<img src="./images/ee464/six_step_line_voltages.png" alt="Drawing" style="width: 600px;">
+---
+
+## Line-to-Line Harmonics
+
+--
+
+## Fourier Coefficients
+
+### \\(\hat{V}\_{n,l-l} = \dfrac{1}{n}\dfrac{4}{\pi}V\_{dc}cos(n \dfrac{\pi}{6})\\)
+--
+
+### For: \\(n = 6n \pm 1\\)
+--
+
+- ### No even harmonics
+
+- ### No third order harmonics
+---
+
+## Line-to-Line Harmonics
+
+--
+
+## RMS of the fundamental component?
+
+### \\({V}\_{1,l-l,rms} = \dfrac{1}{\sqrt{2}}\dfrac{4}{\pi}V\_{dc} \dfrac{\sqrt{3}}{2}\\)
+--
+\\(=0.78 V\_{dc}\\)
+--
+
+### Harmonics RMS:
+--
+
+### \\({V}\_{n,l-l,rms} = \dfrac{1}{n} 0.78 V\_{dc}\\)
+
+--
+
+### For: \\(n = 6n \pm 1\\)
+
+---
+## Line-to-Line Harmonics
+
+<img src="./images/ee464/six_step_harmonics_l_l.png" alt="Drawing" style="width: 750px;">
+
+
+
+---
+## Line-to-Neutral voltages:
+
+### Neutral point is floating
+--
+
+<img src="./images/ee464/six_step_phase_voltages.png" alt="Drawing" style="width: 550px;">
+
+### Voltage level changes every 60 degrees (that's why it's a six-step inverter!)
+
+---
+
+## Line-to-Neutral Harmonics
+
+--
+
+## Fourier Coefficients
+
+### \\(\hat{V}\_{n,l-N} = \dfrac{1}{n}\dfrac{2}{3\pi}V\_{dc}(2 +cos(\dfrac{\pi n}{3}) - cos(\dfrac{2\pi n}{3}))\\)
+--
+
+### For: \\(n = 6n \pm 1\\)
+--
+
+
+### Simpler Form
+
+--
+
+### \\(\hat{V}\_{n,l-N} = \dfrac{1}{n}\dfrac{2}{\pi}V\_{dc}\\)
+
+
+---
+
+## Line-to-Neutral Harmonics
+
+### \\(\hat{V}\_{n,l-N} = \dfrac{1}{n}\dfrac{2}{\pi}V\_{dc}\\)
+
+### For: \\(n = 6n \pm 1\\)
+
+- ### No even harmonics
+
+- ### No third order harmonics
+
+---
+# Example:
+
+### D. Dart . Ex 8-12:
+--
+
+### Calculate the voltage and current harmonics and THD.
+--
+
+<img src="./images/ee464/six_step_ex.png" alt="Drawing" style="width: 700px;">
+
+### [Voltage Plot](https://www.google.com.tr/search?ei=1E_DWtwJhZLoBITenLgK&q=sin%28x%29%2Bsin%285x%29%2F5%2Bsin%287x%29%2F7%2Bsin%2811x%29%2F11%2Bsin%2813x%29%2F13&oq=sin%28x%29%2Bsin%285x%29%2F5%2Bsin%287x%29%2F7%2Bsin%2811x%29%2F11%2Bsin%2813x%29%2F13&gs_l=psy-ab.3...3238.6702.0.9540.3.3.0.0.0.0.154.392.0j3.3.0....0...1c.1.64.psy-ab..0.0.0....0.ut757zYR-Lg), [Current Plot](https://www.google.com.tr/search?ei=_tjEWrz2McHv6QSByb3IBQ&q=plot+5.08*sin%28x%29%2B0.33*sin%285x%29%2B0.17*sin%287x%29%2B0.07*sin%2811x%29%2B0.05*sin%2813x%29&oq=plot+5.08*sin%28x%29%2B0.33*sin%285x%29%2B0.17*sin%287x%29%2B0.07*sin%2811x%29%2B0.05*sin%2813x%29&gs_l=psy-ab.3...6798.8060.0.8402.5.5.0.0.0.0.298.740.0j1j2.3.0....0...1c.1.64.psy-ab..2.0.0....0.ijL6lnnGqOQ)
+
+---
+
+# Three Phase Voltage-Source Inverter
+--
+
+<img src="./images/ee464/three_phase_inverter.png" alt="Drawing" style="width: 750px;">
+
+
+---
+# Sinusoidal PWM (SPWM)
+--
+
+### A triangular carrier wave is generated and compared with each phase.
+--
+
+<img src="./images/ee464/3ph_carrier.png" alt="Drawing" style="width: 750px;">
+---
+# Sinusoidal PWM (SPWM)
+--
+
+### Vd or 0 voltage is generated at \\(V\_{AN}\\) depending on the comparison.
+--
+
+<img src="./images/ee464/3ph_van.png" alt="Drawing" style="width: 750px;">
+
+---
+# Sinusoidal PWM (SPWM)
+--
+
+### Line to line voltage (\\(V\_{AB}=V\_{AN}-V\_{BN}\\))
+--
+
+<img src="./images/ee464/3ph_vll.png" alt="Drawing" style="width: 750px;">
+
+---
+# Sinusoidal PWM (SPWM)
+
+## Harmonics in the line voltage
+--
+
+<img src="./images/ee464/3ph_vll_harmonics.png" alt="Drawing" style="width: 800px;">
+
+### Harmonics at he side bands,
+### Like the unipolar but starts at mf.
+---
+
+# Sinusoidal PWM (SPWM)
+
+## Harmonics in the line voltage
+--
+
+<img src="./images/ee464/3ph_vll_harmonics.png" alt="Drawing" style="width: 800px;">
+
+### If mf is small, it is better to use synchronized PWM, and mf should be an odd interger, preferably multiple of 3 to reduce harmonics.
+
+---
+# Sinusoidal PWM (SPWM)
+
+## Harmonics in the line voltage
+--
+
+<img src="./images/ee464/3ph_vll_harmonics2.png" alt="Drawing" style="width: 700px;">
+
+
+
+---
+# Voltage Levels?
+--
+
+## Linear Region (\\(m_a \lt 1\\))
+--
+
+
+### \\(\hat{V}\_{AN1}=m\_a\dfrac{V\_d}{2}\\)
+--
+
+### \\(V\_{l-l, rms}= \dfrac{\sqrt{3}}{\sqrt{2}}m\_a\dfrac{V\_d}{2}\\)
+--
+
+### \\(V\_{l-l, rms}= 0.612 V\_d\\)
+
+
+---
+# Voltage Levels?
+--
+
+## Overmodulation (\\(m_a \gt 1\\))
+--
+
+## Square-Wave Operation?
+--
+
+
+### \\(V\_{l-l, rms}= \dfrac{\sqrt{3}}{\sqrt{2}}\dfrac{4}{\pi}m\_a\dfrac{V\_d}{2}\\)
+--
+
+### \\(V\_{l-l, rms}= 0.78 V\_d\\)
+--
+
+
+### \\(V\_{l-l, rms,h}= \dfrac{0.78}{h} V\_d\\)  for  \\(h=6n \pm 1\\)
+
+---
+
+# Voltage Levels?
+--
+
+<img src="./images/ee464/3ph_voltage_levels.png" alt="Drawing" style="width: 400px;">
+
+---
+
+# Voltage Vectors
+
+
+
+---
+## You can download this presentation from: [keysan.me/ee464](http://keysan.me/ee464)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
