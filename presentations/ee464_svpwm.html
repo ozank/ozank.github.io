@@ -33,11 +33,54 @@ class: center, middle
 
 ---
 
+# Hysteresis (Bang-Bang) PWM
+--
+
+## You already implemented in the first semester
+
+<img src="./images/ee464/hysteresis_pwm.png" alt="Drawing" style="width: 600px;">
+
+---
+
+# Hysteresis (Bang-Bang) PWM
+--
+
+## If your current is higher than your reference, reduce the current (switch off), if not increase the current (Switch ON)
+
+<img src="./images/ee464/hysteresis_pwm.png" alt="Drawing" style="width: 500px;">
+
+---
+
+# Hysteresis (Bang-Bang) PWM
+--
+
+## Change your refeence current to a sinusoidal waveform
+
+<img src="./images/ee464/hysteresis_pwm2.png" alt="Drawing" style="width: 500px;">
+
+---
+
+# Hysteresis (Bang-Bang) PWM
+--
+
+- ## The switching frequency is varying
+--
+
+- ## Difficult to design filter (because of varying fs)
+--
+
+- ## Can induce side-band harmonics
+--
+
+- ## Simple control and implementation
+
+---
+
 # 3-Phase Two-Level Inverter
 
 <img src="./images/ee464/two_level_vsi.png" alt="Drawing" style="width: 800px;">
 
-#### Anti-parallel diodes are not shown.
+### Anti-parallel diodes are not shown.
 
 ---
 
@@ -120,506 +163,286 @@ bottom switch closed (0)
 
 ---
 
+# Square Wave Operation
+
+
+
+<img src="https://media.giphy.com/media/aFdKsSmSHbLtC/giphy.gif" alt="Drawing" style="width: 800px;">
+
+
+### [BLDC Drive with square wave](https://www.youtube.com/watch?v=IiY01xIKg28)
 
 ---
-Push-Pull Inverter
+
+## What about the vectors in between?
 --
 
-## Similar to Push-Pull Converter
-
-<img src="./images/ee464/push_pull.png" alt="Drawing" style="width: 600px;">
---
-
-## But without the rectifying diodes
-
----
-# Push-Pull Inverter
---
-
-<img src="./images/ee464/push_pull_inverter.png" alt="Drawing" style="width: 600px;">
---
-
-## T1, T2 operates in sequence
----
-# Push-Pull Inverter
---
-
-## Voltage output can be adjusted by the turns-ratio
---
-
-## \\(\hat{V}\_{o1} = m\_a \dfrac{V\_d}{n}\\)
----
-# Push-Pull Inverter
-
-## Advantages?
---
-
-- ### Only single transistor conduct at a time,
---
-small voltage drop
-
---
-- ### Especially important for low voltage applications (e.g. fed from a battery)
---
-
-- ### There are a few PV applications as well
---
-
-- ### Transistors have common ground (no isolation required for gate drives)
-
----
-# Push-Pull Inverter
-
-## Disadvantages?
---
-
-- ### What is the required voltage rating of the transistors?
---
-
-### \\(V_T = 2 V_d\\)
-
-### Therefore may not be practical for higher input voltages
---
-
-- ### A good transformer, with high coupling is required (to reduce energy in the leakage inductance)
-
----
-# Switch Utilization in Single Phase Inverters
---
-
-## Ratio of the output power to max. power capacity of the switches
---
-
-## Assume highly inductive load, no current harmonics (just the fundamental)
---
-
-### \\(= \dfrac{V\_{o1}I\_{o,max}}{q V\_T I\_T}\\)
-
---
-## Maximum utilization occurs at square wave
-
----
-# Switch Utilization in Single Phase Inverters
---
-
-## Half Bridge Inverter
---
-
-### Voltage rating?
---
-
-### \\(V\_T = V\_{d,max}\\)
---
-
-
-### Current rating?
---
-
-### \\(I\_T = \sqrt{2} I\_{o,max}\\)
----
-# Switch Utilization in Single Phase Inverters
---
-
-## Half Bridge Inverter
-### Output Voltage: \\(  V\_{o1,max} = \dfrac{4}{\pi \sqrt{2}} \dfrac{V\_{d,max}}{2}\\)
---
-
-### Max. Switch Utilization
---
-
-### q=2
-
-### \\(= \dfrac{1}{2\pi} \approx 0.16\\) 
----
-
-# Switch Utilization in Full Bridge Inverter
---
-
-## Voltage, Current Ratings?
---
-: Same with Half Bridge
---
-
-## q=
---
-4
---
-
-## Voltage output =
---
-twice of the half bridge
---
-
-## Switch utilization=?
---
-
-### \\(= \dfrac{1}{2\pi} \approx 0.16\\) 
-
----
-# Switch Utilization in Push-Pull Inverter
---
-
-## Voltage, Current Ratings?
---
-
-
-### \\(V\_T = 2 V\_{d,max}\\)
---
-
-### \\(I\_T = \sqrt{2} \dfrac{I\_{o,max}}{n}\\)
---
-
-### Output Voltage: \\(  V\_{o1,max} = \dfrac{4}{\pi \sqrt{2}} \dfrac{V\_{d,max}}{n}\\)
-
-
----
-# Switch Utilization in Push-Pull Inverter
---
-
-## q =2
---
-
-## Switch Utilization
---
-
-### \\(= \dfrac{1}{2\pi} \approx 0.16\\) 
-
----
-# Switch Utilization in Linear Region
---
-
-### \\(= \dfrac{1}{2\pi}\dfrac{\pi}{4} m\_a = \dfrac{1}{8} m\_a\\)
---
-
-## Linear Region
-
-### \\(= 0.125 \\) when  \\(m\_a=1\\)
----
-
-# Three Phase Inverters
---
-
-<img src="http://www.amicavfd.com.img.800cdn.com/UploadFiles/20150925_15204855.jpg" alt="Drawing" style="width: 500px;">
----
-
-# Three Phase Inverters
---
-
-<img src="http://in.element14.com/productimages/large/en_GB/42270890.jpg" alt="Drawing" style="width:800px;">
----
-
-# Three Phase Voltage-Source Inverter
---
-
-<img src="./images/ee464/three_phase_inverter.png" alt="Drawing" style="width: 750px;">
-
-### Three inverter legs are connected in parallel
-
----
-# Three Phase Voltage-Source Inverters
---
-
-- ## Do not open top and bottom switches at the same time
---
-
-- ## Point (o) is not needed put shown for simplicity in calculations
---
-
-- ## Current can flow through the siwtch or anti-parallel diodes.
----
-
-# PWM Techniques
---
-
-### There are many different PWM techniques that will be covered:
---
-
-- ## Square-wave (Six-step) PWM
---
-
-- ## Sinusoidal PWM (SPWM)
---
-
-- ## Hysteresis (Bang-Bang) Control
---
-
-- ## Space-Vector PWM (SVPWM)
---
-
-- ## Third harmonic injection
----
-
-# Six-Step Inverter
---
-
-### Commonly used in BLDC motor Drives
-
-<img src="https://hackadaycom.files.wordpress.com/2015/09/open-source-esc-featured.jpg" alt="Drawing" style="width: 800px;">
+<img src="./images/rotating_mmf_sine.gif" alt="Drawing" style="width: 750px;">
 
 ---
 
-# Six-Step Inverter
---
+## What about the vectors in between?
 
-### Commonly used in BLDC motor Drives
-
-<img src="http://www.mpoweruk.com/images/BLDCControl.gif" alt="Drawing" style="width: 800px;">
-
----
-# Six-Step Inverter
---
-
-- ### Each switch has 50% duty ratio.
---
-
-- ### Each leg has a phase difference of 120 degrees
---
-
-- ### One switching action takes place at every 60 degrees
-
----
-# Six-Step Inverter
---
-
-<img src="./images/ee464/six_step.png" alt="Drawing" style="width: 800px;">
----
-# Six-Step Inverter
---
-
-<img src="./images/ee464/six_step_switches.png" alt="Drawing" style="width: 750px;">
----
-
-# Six-Step Inverter
-
-## Line-to-line voltage: \\(V\_{AB}=V\_{A0}-V\_{B0}\\)
---
-
-
-<img src="./images/ee464/six_step_vab.png" alt="Drawing" style="width: 750px;">
----
-
-## Line-to-line voltages:
---
-
-
-<img src="./images/ee464/six_step_line_voltages.png" alt="Drawing" style="width: 600px;">
----
-
-## Line-to-Line Harmonics
-
---
-
-## Fourier Coefficients
-
-### \\(\hat{V}\_{n,l-l} = \dfrac{1}{n}\dfrac{4}{\pi}V\_{dc}cos(n \dfrac{\pi}{6})\\)
---
-
-### For: \\(n = 6n \pm 1\\)
---
-
-- ### No even harmonics
-
-- ### No third order harmonics
----
-
-## Line-to-Line Harmonics
-
---
-
-## RMS of the fundamental component?
-
-### \\({V}\_{1,l-l,rms} = \dfrac{1}{\sqrt{2}}\dfrac{4}{\pi}V\_{dc} \dfrac{\sqrt{3}}{2}\\)
---
-\\(=0.78 V\_{dc}\\)
---
-
-### Harmonics RMS:
---
-
-### \\({V}\_{n,l-l,rms} = \dfrac{1}{n} 0.78 V\_{dc}\\)
-
---
-
-### For: \\(n = 6n \pm 1\\)
-
----
-## Line-to-Line Harmonics
-
-<img src="./images/ee464/six_step_harmonics_l_l.png" alt="Drawing" style="width: 750px;">
-
-
-
----
-## Line-to-Neutral voltages:
-
-### Neutral point is floating
---
-
-<img src="./images/ee464/six_step_phase_voltages.png" alt="Drawing" style="width: 550px;">
-
-### Voltage level changes every 60 degrees (that's why it's a six-step inverter!)
-
----
-
-## Line-to-Neutral Harmonics
-
---
-
-## Fourier Coefficients
-
-### \\(\hat{V}\_{n,l-N} = \dfrac{1}{n}\dfrac{2}{3\pi}V\_{dc}(2 +cos(\dfrac{\pi n}{3}) - cos(\dfrac{2\pi n}{3}))\\)
---
-
-### For: \\(n = 6n \pm 1\\)
---
-
-
-### Simpler Form
-
---
-
-### \\(\hat{V}\_{n,l-N} = \dfrac{1}{n}\dfrac{2}{\pi}V\_{dc}\\)
+<img src="./images/rotating_mmf_phasor.gif" alt="Drawing" style="width: 600px;">
 
 
 ---
 
-## Line-to-Neutral Harmonics
+## What about the vectors in between?
 
-### \\(\hat{V}\_{n,l-N} = \dfrac{1}{n}\dfrac{2}{\pi}V\_{dc}\\)
 
-### For: \\(n = 6n \pm 1\\)
-
-- ### No even harmonics
-
-- ### No third order harmonics
+<img src="./images/rotating_mmf_phasor2.gif" alt="Drawing" style="width: 800px;">
 
 ---
-# Example:
+# Voltage Synthesizing
 
-### D. Dart . Ex 8-12:
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/58fea6c8ebbd1a25ce89c905/1494287982183/Basic-Vectors-with-reference.png?format=500w" alt="Drawing" style="width: 500px;"/>
+---
+# Voltage Synthesizing
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/58fea923197aea4f7f28f61a/58fea9286a49632401d63e94/1493084598485/SVPWM-1.png?format=1000w" alt="Drawing" style="width: 700px;"/>
+---
+# PWM Generation
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/59110ff0ebbd1a1c7143886d/1494290426838/?format=1000w" alt="Drawing" style="width: 700px;"/>
+---
+# PWM Generation
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/59111028c534a5947d523098/1494290481944/?format=1000w" alt="Drawing" style="width: 550px;"/>
+
+### Switching Sequence: 000-001-011-111
+---
+# PWM Generation
+
+## Switching Sequence:
+
+- ## Zero Vector (000)
 --
 
-### Calculate the voltage and current harmonics and THD.
+- ## Basic Vector (i.e. 001)
 --
 
-<img src="./images/ee464/six_step_ex.png" alt="Drawing" style="width: 700px;">
+- ## Basic Vector (i.e. 011)
+--
 
-### [Voltage Plot](https://www.google.com.tr/search?ei=1E_DWtwJhZLoBITenLgK&q=sin%28x%29%2Bsin%285x%29%2F5%2Bsin%287x%29%2F7%2Bsin%2811x%29%2F11%2Bsin%2813x%29%2F13&oq=sin%28x%29%2Bsin%285x%29%2F5%2Bsin%287x%29%2F7%2Bsin%2811x%29%2F11%2Bsin%2813x%29%2F13&gs_l=psy-ab.3...3238.6702.0.9540.3.3.0.0.0.0.154.392.0j3.3.0....0...1c.1.64.psy-ab..0.0.0....0.ut757zYR-Lg), [Current Plot](https://www.google.com.tr/search?ei=_tjEWrz2McHv6QSByb3IBQ&q=plot+5.08*sin%28x%29%2B0.33*sin%285x%29%2B0.17*sin%287x%29%2B0.07*sin%2811x%29%2B0.05*sin%2813x%29&oq=plot+5.08*sin%28x%29%2B0.33*sin%285x%29%2B0.17*sin%287x%29%2B0.07*sin%2811x%29%2B0.05*sin%2813x%29&gs_l=psy-ab.3...6798.8060.0.8402.5.5.0.0.0.0.298.740.0j1j2.3.0....0...1c.1.64.psy-ab..2.0.0....0.ijL6lnnGqOQ)
+- ## Zero Vector (i.e. 111)
+--
+
+## Only one switch position is changed at each step!
 
 ---
+# PWM Generation
 
-# Three Phase Voltage-Source Inverter
---
-
-<img src="./images/ee464/three_phase_inverter.png" alt="Drawing" style="width: 750px;">
-
-
----
-# Sinusoidal PWM (SPWM)
---
-
-### A triangular carrier wave is generated and compared with each phase.
---
-
-<img src="./images/ee464/3ph_carrier.png" alt="Drawing" style="width: 750px;">
----
-# Sinusoidal PWM (SPWM)
---
-
-### Vd or 0 voltage is generated at \\(V\_{AN}\\) depending on the comparison.
---
-
-<img src="./images/ee464/3ph_van.png" alt="Drawing" style="width: 750px;">
-
----
-# Sinusoidal PWM (SPWM)
---
-
-### Line to line voltage (\\(V\_{AB}=V\_{AN}-V\_{BN}\\))
---
-
-<img src="./images/ee464/3ph_vll.png" alt="Drawing" style="width: 750px;">
-
----
-# Sinusoidal PWM (SPWM)
-
-## Harmonics in the line voltage
---
-
-<img src="./images/ee464/3ph_vll_harmonics.png" alt="Drawing" style="width: 800px;">
-
-### Harmonics at he side bands,
-### Like the unipolar but starts at mf.
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/58feacf5d482e9da38497463/1493085606567/?format=1000w" alt="Drawing" style="width: 700px;"/>
 ---
 
-# Sinusoidal PWM (SPWM)
-
-## Harmonics in the line voltage
+## SPWM vs SVPWM
 --
 
-<img src="./images/ee464/3ph_vll_harmonics.png" alt="Drawing" style="width: 800px;">
+<img src="./images/ee464/spwm_svpwm.png" alt="Drawing" style="width: 450px;">
 
-### If mf is small, it is better to use synchronized PWM, and mf should be an odd interger, preferably multiple of 3 to reduce harmonics.
-
+#### Phase Voltages
 ---
-# Sinusoidal PWM (SPWM)
 
-## Harmonics in the line voltage
+
+## SPWM vs SVPWM
 --
 
-<img src="./images/ee464/3ph_vll_harmonics2.png" alt="Drawing" style="width: 700px;">
-
-
-
----
-# Voltage Levels?
+- ## Space Vector PWM generates less harmonic distortion
 --
 
-## Linear Region (\\(m_a \lt 1\\))
---
-
-
-### \\(\hat{V}\_{AN1}=m\_a\dfrac{V\_d}{2}\\)
---
-
-### \\(V\_{l-l, rms}= \dfrac{\sqrt{3}}{\sqrt{2}}m\_a\dfrac{V\_d}{2}\\)
---
-
-### \\(V\_{l-l, rms}= 0.612 V\_d\\)
-
-
----
-# Voltage Levels?
---
-
-## Overmodulation (\\(m_a \gt 1\\))
---
-
-## Square-Wave Operation?
---
-
-
-### \\(V\_{l-l, rms}= \dfrac{\sqrt{3}}{\sqrt{2}}\dfrac{4}{\pi}m\_a\dfrac{V\_d}{2}\\)
---
-
-### \\(V\_{l-l, rms}= 0.78 V\_d\\)
---
-
-
-### \\(V\_{l-l, rms,h}= \dfrac{0.78}{h} V\_d\\)  for  \\(h=6n \pm 1\\)
+- ##  Space Vector PWM utilizes input voltage more \\(1/2\\) vs \\(1/\sqrt{3}\\)
 
 ---
 
-# Voltage Levels?
+## How to aim to a moving target?
 --
 
-<img src="./images/ee464/3ph_voltage_levels.png" alt="Drawing" style="width: 400px;">
+<img src="https://i0.wp.com/familywings.org/wp-content/uploads/2012/01/donkey-and-carrot.jpg?resize=300%2C224" alt="Drawing" style="width: 600px;">
+
+
+---
+# Some Useful Mathematical Tools
+--
+
+- ## Clarke Transformation
+- ## Park Transformation
+
+
+---
+# [Clarke](https://en.wikipedia.org/wiki/Edith_Clarke) Transformation
+## (a-b-c) to \\(\alpha \beta \\) Transformation
+
+## From three-phase to two orthogonal phase transformation
+--
+
+### Main Idea: In a balanced three-phase system, \\(I_a + I_b + I_c =0\\)  so there is redundant information and system can be reduced to two variables.
+
+---
+##How do you define the resultant (black) phasor?
+
+
+<img src="./images/rotating_mmf_phasor2.gif" alt="Drawing" style="width: 800px;">
+
+---
+# Clarke Transformation
+
+<img src="https://www.keil.com/pack/doc/CMSIS/DSP/html/clarke.gif" alt="Drawing" style="width: 600px;"/>
+
+---
+# Clarke Transformation
+
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/36e05ba56ec15de753eb9f3c60983bc874e31370" alt="Drawing" style="width: 750px;"/>
+
+---
+# Park Transformation
+--
+
+## From stationary frame to rotationary frame
+--
+
+## Instead of dealing with sinusoidal signals, just  use the magnitudes.
+--
+
+## When reconstructing signals use the rotor position information
+
+---
+# Park Transformation
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/58664f0f2994ca78b5145f29/1483099927549/?format=750w" alt="Drawing" style="width: 750px;"/>
+
+---
+# Park Transformation
+--
+
+<img src="./images/ee462/park_transform.png" alt="Drawing" style="width: 400px;"/>
+--
+
+## \\(I\_d = I\_\alpha  cos(\theta) + I\_\beta sin (\theta)\\)
+--
+
+## \\(I\_q = I\_\beta  cos(\theta) - I\_\alpha sin (\theta)\\)
+--
+
+
+---
+## Reference Frames
+
+<img src="./images/ee462/reference_frames.png" alt="Drawing" style="width: 750px;"/>
+---
+## Clarke and Park Transformations
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/5866535e414fb5c4d35ed4cb/1483101083243/ClarkePark_Animation?format=500w" alt="Drawing" style="width: 500px;"/>
+---
+# Torque and Flux Control
+--
+
+# Id: Proportional to flux in the airgap
+--
+
+# Iq: Proportional to torque generated
+
+
+---
+# Inverse Transforms
+--
+
+## Required to apply reference voltage and current waveforms (sinusoidals)
+--
+
+- ## Inverse Park Transform
+- ## Inverse Clarke Transform
+
+
+---
+# Inverse Park Transform
+--
+
+## From rotation frame to stationary frame
+--
+
+
+## \\(I\_\alpha = I\_d  cos(\theta) - I\_q sin (\theta)\\)
+--
+
+## \\(I\_\beta = I\_q  cos(\theta) + I\_d sin (\theta)\\)
 
 ---
 
-# Voltage Vectors
+## Inverse Clarke Transform
+
+### From two-axis orthogonal plane to 3-phase stationary frame.
+
+<img src="http://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/171/3750._F764D653_.JPG" alt="Drawing" style="width: 500px;"/>
+
+---
+## Whole Workflow
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/58c88acd579fb3efb64797c9/1489537751460/?format=1000w" alt="Drawing" style="width: 750px;"/>
+
+---
+# Classical Vector Control Diagram
+
+<img src="http://3l4sbp4ao2771ln0f54chhvm.wpengine.netdna-cdn.com/wp-content/uploads/2016/07/Vector-Block-Diagram.gif" alt="Drawing" style="width: 600px;"/>
+
+---
+# Vector Control in PMSM
+
+<img src="http://www.mdpi.com/sensors/sensors-17-00973/article_deploy/html/images/sensors-17-00973-g007.png" alt="Drawing" style="width: 750px;"/>
+
+---
+# Vector Control in Induction Motors
 
 
+<img src="https://www.mathworks.com/help/physmod/sps/powersys/ug/electric_drives223.gif" alt="Drawing" style="width: 600px;"/>
+---
+
+# Further Reading
+
+### [Vector Control for Dummies](https://www.switchcraft.org/learning/2016/12/16/vector-control-for-dummies)
+
+### [What is Field Oriented Control?](https://www.eetimes.com/document.asp?doc_id=1279321)
+
+### [Field Oriented Control](https://mycourses.aalto.fi/pluginfile.php/155905/mod_resource/content/4/Lecture10.pdf)
+
+### [Field Oriented Control of AC Motors](http://www.ti.com/lit/an/bpra073/bpra073.pdf)
+
+### [Sensorless PMSM Field Oriented Control](http://cache.nxp.com/assets/documents/data/en/reference-manuals/DRM148.pdf)
+
+### [Space Vector PWM](https://www.switchcraft.org/learning/2017/3/15/space-vector-pwm-intro)
+
+---
+# Third Harmonic Injection
+# a.k.a THIPWM
+
+--
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/590687ddff7c50866d9f4f1d/1493600229378/?format=1000w" alt="Drawing" style="width: 800px;"/>
+
+---
+# Third Harmonic Injection
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/59068b67725e256add1f37f5/1493601135313/?format=1000w" alt="Drawing" style="width: 800px;"/>
+---
+# Third Harmonic Injection
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/59068e15e6f2e142b4adbe4f/1493601820281/?format=1000w" alt="Drawing" style="width: 800px;"/>
+---
+# Third Harmonic Injection
+
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/590691aed1758ec4d7664141/1493602742473/ThirdHarmonics.png?format=500w" alt="Drawing" style="width: 600px;"/>
+
+---
+# Third Harmonic Injection
+
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/590691aed1758ec4d7664141/1493602742473/ThirdHarmonics.png?format=500w" alt="Drawing" style="width: 600px;"/>
+
+---
+# Third Harmonic Injection
+
+<img src="./images/ee462/thipwm.gif" alt="Drawing" style="width: 800px;"/>
 
 ---
 ## You can download this presentation from: [keysan.me/ee464](http://keysan.me/ee464)
