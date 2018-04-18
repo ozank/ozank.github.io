@@ -8,20 +8,22 @@ permalink: /testimonials/index.html
 
 Here you can find all the comments from student's evaluation forms without any censor. I respect your comments and I believe your comments makes me a better educator. Here are a few ways to give your feedback:
 
-- Email me, or come to my office to discuss
+- Email me, or come to my office to discuss any problems you have
 - If you would like to give anonymous comments, you can use [this link](http://bit.do/ee361)
-- or you can throw anonymous letters under my door.
+- or you can write an anonymous letter and  throw it under my door.
 
 Links to each year's evaluation forms:
 
+- [2017-2018](#2017-2018)
 - [2016-2017](#2016-2017)
 - [2015-2016](#2015-2016)
 - [2014-2015](#2014-2015)
 
-Here's a short summart of my evaluation scores:
+Here's a short summary of my evaluation scores:
 
 |                  | Department Rank | Faculty Rank | Percentile |
 |------------------|-----------------|--------------|------------|
+| 2017-2018 Fall   | 1               | 24           | 12         |
 | 2016-2017 Spring | 6               | 41           | 14         |
 | 2016-2017 Fall   | 3               | 36           | 16         |
 | 2015-2016 Spring | 22              | 175          | 17         |
@@ -29,6 +31,42 @@ Here's a short summart of my evaluation scores:
 | 2014-2015 Spring | 6               | 74           | 8          |
 | 2014-2015 Fall   | 14              | 107          | 10         |
 
+# 2017-2018
+
+## EE361-2017
+
+#### [Go to the beginning](#testimonials)
+
+<div class="image">
+<img src="../images/evaluation/ee361_2017/file-0.png"><br>
+</div>
+
+{% for i in (1..11) %}
+
+<div class="image">
+<img src="../images/evaluation/ee361_2017/file-{{ i }}.jpg" ><br>
+</div>
+
+{% endfor %}
+
+
+## EE463-2017
+
+
+#### [Go to the beginning](#testimonials)
+
+<div class="image">
+<img src="../images/evaluation/ee463_2017/file-0.png"><br>
+</div>
+
+
+{% for i in (1..5) %}
+
+<div class="image">
+<img src="../images/evaluation/ee463_2017/file-{{ i }}.jpg" ><br>
+</div>
+
+{% endfor %}
 
 # 2016-2017
 
