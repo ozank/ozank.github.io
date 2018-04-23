@@ -150,7 +150,7 @@ class: center, middle
 # Multi-Level Inverter Wveform
 --
 
-<img src="./images/ee464/multi_level_inverter.jpg" alt="Drawing" style="width: 600px;">
+<img src="./images/ee464/multi_level_inverter.jpg" alt="Drawing" style="width: 850px;">
 
 ### Three level, Five Level and Seven Level Inverter Waveforms
 
@@ -164,503 +164,165 @@ class: center, middle
 
 <img src="./images/ee464/h_bridge.png" alt="Drawing" style="width: 600px;">
 
-
-Push-Pull Inverter
+---
+# Cascaded H-Bridge Inverters
 --
 
-## Similar to Push-Pull Converter
-
-<img src="./images/ee464/push_pull.png" alt="Drawing" style="width: 600px;">
+### Three Level (unipolar) PWM Output
 --
 
-## But without the rectifying diodes
+<img src="./images/ee464/h_bridge_3level2.png" alt="Drawing" style="width: 800px;">
 
 ---
-# Push-Pull Inverter
+# Cascaded H-Bridge Inverters
 --
 
-<img src="./images/ee464/push_pull_inverter.png" alt="Drawing" style="width: 600px;">
+### Three Level (unipolar) PWM Carrier Signals
 --
 
-## T1, T2 operates in sequence
----
-# Push-Pull Inverter
---
-
-## Voltage output can be adjusted by the turns-ratio
---
-
-## \\(\hat{V}\_{o1} = m\_a \dfrac{V\_d}{n}\\)
----
-# Push-Pull Inverter
-
-## Advantages?
---
-
-- ### Only single transistor conduct at a time,
---
-small voltage drop
-
---
-- ### Especially important for low voltage applications (e.g. fed from a battery)
---
-
-- ### There are a few PV applications as well
---
-
-- ### Transistors have common ground (no isolation required for gate drives)
+<img src="./images/ee464/h_bridge_3level.png" alt="Drawing" style="width: 800px;">
 
 ---
-# Push-Pull Inverter
-
-## Disadvantages?
+# N-Level Cascaded H-Bridge Inverters
 --
 
-- ### What is the required voltage rating of the transistors?
---
-
-### \\(V_T = 2 V_d\\)
-
-### Therefore may not be practical for higher input voltages
---
-
-- ### A good transformer, with high coupling is required (to reduce energy in the leakage inductance)
+<img src="./images/ee464/h_bridge_nlevel.png" alt="Drawing" style="width: 400px;">
 
 ---
-# Switch Utilization in Single Phase Inverters
+# N-Level Cascaded H-Bridge Inverters
 --
 
-## Ratio of the output power to max. power capacity of the switches
---
+## Carrier Signals
 
-## Assume highly inductive load, no current harmonics (just the fundamental)
---
-
-### \\(= \dfrac{V\_{o1}I\_{o,max}}{q V\_T I\_T}\\)
-
---
-## Maximum utilization occurs at square wave
-
----
-# Switch Utilization in Single Phase Inverters
---
-
-## Half Bridge Inverter
---
-
-### Voltage rating?
---
-
-### \\(V\_T = V\_{d,max}\\)
---
-
-
-### Current rating?
---
-
-### \\(I\_T = \sqrt{2} I\_{o,max}\\)
----
-# Switch Utilization in Single Phase Inverters
---
-
-## Half Bridge Inverter
-### Output Voltage: \\(  V\_{o1,max} = \dfrac{4}{\pi \sqrt{2}} \dfrac{V\_{d,max}}{2}\\)
---
-
-### Max. Switch Utilization
---
-
-### q=2
-
-### \\(= \dfrac{1}{2\pi} \approx 0.16\\) 
----
-
-# Switch Utilization in Full Bridge Inverter
---
-
-## Voltage, Current Ratings?
---
-: Same with Half Bridge
---
-
-## q=
---
-4
---
-
-## Voltage output =
---
-twice of the half bridge
---
-
-## Switch utilization=?
---
-
-### \\(= \dfrac{1}{2\pi} \approx 0.16\\) 
-
----
-# Switch Utilization in Push-Pull Inverter
---
-
-## Voltage, Current Ratings?
---
-
-
-### \\(V\_T = 2 V\_{d,max}\\)
---
-
-### \\(I\_T = \sqrt{2} \dfrac{I\_{o,max}}{n}\\)
---
-
-### Output Voltage: \\(  V\_{o1,max} = \dfrac{4}{\pi \sqrt{2}} \dfrac{V\_{d,max}}{n}\\)
+<img src="./images/ee464/h_bridge_nlevel2.png" alt="Drawing" style="width: 800px;">
 
 
 ---
-# Switch Utilization in Push-Pull Inverter
+# N-Level Cascaded H-Bridge Inverters
 --
 
-## q =2
---
+## Five-level Output Voltage Waveform (fc=3kHz)
 
-## Switch Utilization
---
-
-### \\(= \dfrac{1}{2\pi} \approx 0.16\\) 
-
----
-# Switch Utilization in Linear Region
---
-
-### \\(= \dfrac{1}{2\pi}\dfrac{\pi}{4} m\_a = \dfrac{1}{8} m\_a\\)
---
-
-## Linear Region
-
-### \\(= 0.125 \\) when  \\(m\_a=1\\)
+<img src="./images/ee464/5level_pwm.png" alt="Drawing" style="width: 800px;">
 ---
 
-# Three Phase Inverters
---
-
-<img src="http://www.amicavfd.com.img.800cdn.com/UploadFiles/20150925_15204855.jpg" alt="Drawing" style="width: 500px;">
 ---
-
-# Three Phase Inverters
+# N-Level Cascaded H-Bridge Inverters
 --
 
-<img src="http://in.element14.com/productimages/large/en_GB/42270890.jpg" alt="Drawing" style="width:800px;">
----
+## Voltage Waveform Components
 
-# Three Phase Voltage-Source Inverter
---
-
-<img src="./images/ee464/three_phase_inverter.png" alt="Drawing" style="width: 750px;">
-
-### Three inverter legs are connected in parallel
+<img src="http://engineering.electrical-equipment.org/wp-content/uploads/2013/12/Cascaded-H-bridge-multilevel-inverters-2.jpg" alt="Drawing" style="width: 600px;">
 
 ---
-# Three Phase Voltage-Source Inverters
+## 11-Level Cascaded with Five Separate Sources
 --
 
-- ## Do not open top and bottom switches at the same time
---
+<img src="./images/ee464/11_level_cascaded.png" alt="Drawing" style="width: 600px;">
 
-- ## Point (o) is not needed put shown for simplicity in calculations
---
-
-- ## Current can flow through the siwtch or anti-parallel diodes.
 ---
-
-# PWM Techniques
+# Multilevel SVPWM
 --
 
-### There are many different PWM techniques that will be covered:
---
-
-- ## Square-wave (Six-step) PWM
---
-
-- ## Sinusoidal PWM (SPWM)
---
-
-- ## Hysteresis (Bang-Bang) Control
---
-
-- ## Space-Vector PWM (SVPWM)
---
-
-- ## Third harmonic injection
----
-
-# Six-Step Inverter
---
-
-### Commonly used in BLDC motor Drives
-
-<img src="https://hackadaycom.files.wordpress.com/2015/09/open-source-esc-featured.jpg" alt="Drawing" style="width: 800px;">
+<img src="./images/ee464/multilevel_svpwm.png" alt="Drawing" style="width:750px;">
 
 ---
 
-# Six-Step Inverter
---
+# Multilevel SVPWM
 
-### Commonly used in BLDC motor Drives
+## 3-Level
 
-<img src="http://www.mpoweruk.com/images/BLDCControl.gif" alt="Drawing" style="width: 800px;">
-
----
-# Six-Step Inverter
---
-
-- ### Each switch has 50% duty ratio.
---
-
-- ### Each leg has a phase difference of 120 degrees
---
-
-- ### One switching action takes place at every 60 degrees
-
----
-# Six-Step Inverter
---
-
-<img src="./images/ee464/six_step.png" alt="Drawing" style="width: 800px;">
----
-# Six-Step Inverter
---
-
-<img src="./images/ee464/six_step_switches.png" alt="Drawing" style="width: 750px;">
----
-
-# Six-Step Inverter
-
-## Line-to-line voltage: \\(V\_{AB}=V\_{A0}-V\_{B0}\\)
---
-
-
-<img src="./images/ee464/six_step_vab.png" alt="Drawing" style="width: 750px;">
----
-
-## Line-to-line voltages:
---
-
-
-<img src="./images/ee464/six_step_line_voltages.png" alt="Drawing" style="width: 600px;">
----
-
-## Line-to-Line Harmonics
-
---
-
-## Fourier Coefficients
-
-### \\(\hat{V}\_{n,l-l} = \dfrac{1}{n}\dfrac{4}{\pi}V\_{dc}cos(n \dfrac{\pi}{6})\\)
---
-
-### For: \\(n = 6n \pm 1\\)
---
-
-- ### No even harmonics
-
-- ### No third order harmonics
----
-
-## Line-to-Line Harmonics
-
---
-
-## RMS of the fundamental component?
-
-### \\({V}\_{1,l-l,rms} = \dfrac{1}{\sqrt{2}}\dfrac{4}{\pi}V\_{dc} \dfrac{\sqrt{3}}{2}\\)
---
-\\(=0.78 V\_{dc}\\)
---
-
-### Harmonics RMS:
---
-
-### \\({V}\_{n,l-l,rms} = \dfrac{1}{n} 0.78 V\_{dc}\\)
-
---
-
-### For: \\(n = 6n \pm 1\\)
-
----
-## Line-to-Line Harmonics
-
-<img src="./images/ee464/six_step_harmonics_l_l.png" alt="Drawing" style="width: 750px;">
-
-
-
----
-## Line-to-Neutral voltages:
-
-### Neutral point is floating
---
-
-<img src="./images/ee464/six_step_phase_voltages.png" alt="Drawing" style="width: 550px;">
-
-### Voltage level changes every 60 degrees (that's why it's a six-step inverter!)
+<img src="./images/ee464/3level_svpwm.png" alt="Drawing" style="width:500px;">
 
 ---
 
-## Line-to-Neutral Harmonics
+# Multilevel SVPWM
 
---
+## 5-Level
 
-## Fourier Coefficients
+<img src="./images/ee464/5level_svpwm.png" alt="Drawing" style="width:500px;">
 
-### \\(\hat{V}\_{n,l-N} = \dfrac{1}{n}\dfrac{2}{3\pi}V\_{dc}(2 +cos(\dfrac{\pi n}{3}) - cos(\dfrac{2\pi n}{3}))\\)
---
+---
 
-### For: \\(n = 6n \pm 1\\)
---
+# Multilevel SVPWM
 
+## Voltage Vectors of a 6-Level Inverter
 
-### Simpler Form
-
---
-
-### \\(\hat{V}\_{n,l-N} = \dfrac{1}{n}\dfrac{2}{\pi}V\_{dc}\\)
+<img src="./images/ee464/6level_svpwm.png" alt="Drawing" style="width:500px;">
 
 
 ---
 
-## Line-to-Neutral Harmonics
-
-### \\(\hat{V}\_{n,l-N} = \dfrac{1}{n}\dfrac{2}{\pi}V\_{dc}\\)
-
-### For: \\(n = 6n \pm 1\\)
-
-- ### No even harmonics
-
-- ### No third order harmonics
-
----
-# Example:
-
-### D. Dart . Ex 8-12:
---
-
-### Calculate the voltage and current harmonics and THD.
---
-
-<img src="./images/ee464/six_step_ex.png" alt="Drawing" style="width: 700px;">
-
-### [Voltage Plot](https://www.google.com.tr/search?ei=1E_DWtwJhZLoBITenLgK&q=sin%28x%29%2Bsin%285x%29%2F5%2Bsin%287x%29%2F7%2Bsin%2811x%29%2F11%2Bsin%2813x%29%2F13&oq=sin%28x%29%2Bsin%285x%29%2F5%2Bsin%287x%29%2F7%2Bsin%2811x%29%2F11%2Bsin%2813x%29%2F13&gs_l=psy-ab.3...3238.6702.0.9540.3.3.0.0.0.0.154.392.0j3.3.0....0...1c.1.64.psy-ab..0.0.0....0.ut757zYR-Lg), [Current Plot](https://www.google.com.tr/search?ei=_tjEWrz2McHv6QSByb3IBQ&q=plot+5.08*sin%28x%29%2B0.33*sin%285x%29%2B0.17*sin%287x%29%2B0.07*sin%2811x%29%2B0.05*sin%2813x%29&oq=plot+5.08*sin%28x%29%2B0.33*sin%285x%29%2B0.17*sin%287x%29%2B0.07*sin%2811x%29%2B0.05*sin%2813x%29&gs_l=psy-ab.3...6798.8060.0.8402.5.5.0.0.0.0.298.740.0j1j2.3.0....0...1c.1.64.psy-ab..2.0.0....0.ijL6lnnGqOQ)
-
 ---
 
-# Three Phase Voltage-Source Inverter
+# Diode Clamped Multilevel Inverters
+
+### a.k.a Neutral Point Clamped (NPC) Inverter
 --
 
-<img src="./images/ee464/three_phase_inverter.png" alt="Drawing" style="width: 750px;">
+<img src="./images/ee464/diode_clamped_multilevel.png" alt="Drawing" style="width:650px;">
 
-
----
-# Sinusoidal PWM (SPWM)
---
-
-### A triangular carrier wave is generated and compared with each phase.
---
-
-<img src="./images/ee464/3ph_carrier.png" alt="Drawing" style="width: 750px;">
----
-# Sinusoidal PWM (SPWM)
---
-
-### Vd or 0 voltage is generated at \\(V\_{AN}\\) depending on the comparison.
---
-
-<img src="./images/ee464/3ph_van.png" alt="Drawing" style="width: 750px;">
-
----
-# Sinusoidal PWM (SPWM)
---
-
-### Line to line voltage (\\(V\_{AB}=V\_{AN}-V\_{BN}\\))
---
-
-<img src="./images/ee464/3ph_vll.png" alt="Drawing" style="width: 750px;">
-
----
-# Sinusoidal PWM (SPWM)
-
-## Harmonics in the line voltage
---
-
-<img src="./images/ee464/3ph_vll_harmonics.png" alt="Drawing" style="width: 800px;">
-
-### Harmonics at he side bands,
-### Like the unipolar but starts at mf.
+### Five-level diode clamped inverter
 ---
 
-# Sinusoidal PWM (SPWM)
+## Five-level diode clamped inverter
 
-## Harmonics in the line voltage
+## Switch States
 --
 
-<img src="./images/ee464/3ph_vll_harmonics.png" alt="Drawing" style="width: 800px;">
-
-### If mf is small, it is better to use synchronized PWM, and mf should be an odd interger, preferably multiple of 3 to reduce harmonics.
+<img src="./images/ee464/diode_clamped_states.png" alt="Drawing" style="width:600px;">
 
 ---
-# Sinusoidal PWM (SPWM)
-
-## Harmonics in the line voltage
+## Three-Phase Six-Level Diode-Clamped Inverter
 --
 
-<img src="./images/ee464/3ph_vll_harmonics2.png" alt="Drawing" style="width: 700px;">
+<img src="http://www.keepcalmstudio.com/_gallery/1500/LFHuCw.png" alt="Drawing" style="width:500px;">
 
+---
+## Three-Phase Six-Level Diode-Clamped Inverter
+--
+
+<img src="./images/ee464/6level_diode_clamped.png" alt="Drawing" style="width:600px;">
 
 
 ---
-# Voltage Levels?
+
+## Three-Phase Six-Level Diode-Clamped Inverter
+
+## Switching States: Can you find the pattern?
 --
 
-## Linear Region (\\(m_a \lt 1\\))
---
+<img src="./images/ee464/6level_diode_clamped2.png" alt="Drawing" style="width:840px;">
 
-
-### \\(\hat{V}\_{AN1}=m\_a\dfrac{V\_d}{2}\\)
---
-
-### \\(V\_{l-l, rms}= \dfrac{\sqrt{3}}{\sqrt{2}}m\_a\dfrac{V\_d}{2}\\)
---
-
-### \\(V\_{l-l, rms}= 0.612 V\_d\\)
+### For a six-level inverter, a set of five switches is on at any time
 
 
 ---
-# Voltage Levels?
+
+## Three-Phase Six-Level Diode-Clamped Inverter
+
+## Line-to-line voltage
 --
 
-## Overmodulation (\\(m_a \gt 1\\))
---
-
-## Square-Wave Operation?
---
-
-
-### \\(V\_{l-l, rms}= \dfrac{\sqrt{3}}{\sqrt{2}}\dfrac{4}{\pi}m\_a\dfrac{V\_d}{2}\\)
---
-
-### \\(V\_{l-l, rms}= 0.78 V\_d\\)
---
-
-
-### \\(V\_{l-l, rms,h}= \dfrac{0.78}{h} V\_d\\)  for  \\(h=6n \pm 1\\)
+<img src="./images/ee464/6level_diode_clamped3.png" alt="Drawing" style="width:750px;">
 
 ---
 
-# Voltage Levels?
+# Floating Capacitor Multilevel Inverter
 --
 
-<img src="./images/ee464/3ph_voltage_levels.png" alt="Drawing" style="width: 400px;">
+<img src="./images/ee464/floating_cap_multilevel.png" alt="Drawing" style="width:750px;">
+
 
 ---
 
-# Voltage Vectors
+# Further Reading
+
+- ### [Multilevel Inverter – Types & Advantages](https://www.elprocus.com/multilevel-inverter-types-advantages/)
+- ### [Introduction to MultiLevel Inverters](http://www.nitc.ac.in/electrical/ipg/pegcres/presentations/3%20Dr.%20Rijil%20Ramachand/01_Introduction%20to%20Multilevel%20Inverters.pdf)
+- ### [Multilevel Inverters](http://shodhganga.inflibnet.ac.in/bitstream/10603/16448/7/07_chapter%202.pdf)
+- ### [Multilevel Inverters: A Survey of Topologies, Controls, and Applications](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1021296)
+- ### [Multilevel Power Converters ](https://pdfs.semanticscholar.org/049a/a38514290aa78070abe1cd03a8b4a66edd73.pdf)
 
 
 
