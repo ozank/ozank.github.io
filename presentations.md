@@ -9,6 +9,7 @@ permalink: /presentations/index.html
 
 ### 2018
 
+* [Dunya Gunu Etkinlikleri, ODTU](https://docs.google.com/presentation/d/1EA9kA4gN3Q6NAsXjgWhuamjllHjF0HLe3WADTTGk0Lw/edit?usp=sharing)
 * [EEE Induction Course](https://docs.google.com/presentation/d/1R1ZmGRX_92i5elfx05uXmj9EHNj2sKrFu8xxosCMkmk/edit?usp=sharing)
 * ODTÜ Güç ve Enerji Kongresi [Current Trends and Challenges in Wind Energy](https://docs.google.com/presentation/d/1kdIjzmVdQaqsxEBxTar-SW3NS-t2UEYVPczvxvVp5Io/edit?usp=sharing)
 * [iCoMET 2018](http://icomet.iba-suk.edu.pk/), [Renewable Energy Technologies and Transition to Smart Grid](https://docs.google.com/presentation/d/173P3EJUwLTsmLwbekUMyTDU2O0J2OXnD1kOhxAE8kM4/edit?usp=sharing)
