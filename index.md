@@ -36,6 +36,6 @@ You can find a few [software tips](/tips). Also, I collect [these links](/explai
 
 - Renewable Energy (Wind, Wave, Solar)
 - Design and Optimisation of Electrical Machines
-- Smart Grids
+- Smart Grids, Energy Storage
 - Superconducting Machines
 - Permanent-Magnet Machines
