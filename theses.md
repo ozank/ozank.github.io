@@ -18,6 +18,7 @@ Magnet Generator For Wind Turbines*, 2018
 
 ## Ongoing PhD Theses
 
+- Mehmet Özcan, *Optimum Bidding Strategy for Renewable Energy Generation With Storage in Turkey’s Day Ahead Market*
 - Mesut Uğur, *Design of an Integrated Modular Motor Drive (IMMD) for Traction Applications*
 - Hüseyin Yürük, *Design of Fault Tolerant Servo Motor Drives*
 - İlker Şahin, *Model Predictive Control Strategies for Power Electronic Converters and AC Drives*
@@ -26,10 +27,10 @@ Magnet Generator For Wind Turbines*, 2018
 
 - Doğa Ceylan, *Electromagnetic Simulation and Optimization of an Electromagnetic Launcher*
 - Erencan Duymaz, *Contributing Grid Frequency by Using Synthetic Inertia Implementation in Wind Turbines Coupled to Grid via Power Electronics*
+- Aysel Akgemci, *Hybrid Excited Synchrnous Generator Design and Comparison of Direct Drive Wind Turbines*
+- Hakan Temiz, *Grid Impedance Estimation Based Adaptive Controller Design for Back-to-Back Wind Turbine Power Converters for Stable Operation in Distorted and Weak Grid*
+- Furkan Karakaya, *Characterization of Enhancement Mode Gallium Nitride(GaN) Power Transistors and Implementation of Gan Power Transistors on Integrated Modular Motor Drive System*
+- Gökhan Çakal, *Design and Implementation of Coreless Axial Flux Permanent Magnet Motor With Printed Circuit Board Windings*
+- Mehmet Kaan Mutlu, *Limited-jerk Sinusoidal Trajectory Design for Field Oriented Control of Permanent Magnet Synchronous Motor With H-infinity Optimal Controller*
+- Aykut Demirel, *Condition Monitoring and Fault Diagnosis of Electrical Motor Drive Systems*
 - Lütfi Boyacı, TBA
-- Onur Tek, TBA
-- Aysel Akgemci, TBA
-- Aykut Demirel, TBA
-- Hakan Temiz, TBA
-- Latif Çandır, TBA
-- Mehmet Kaan Mutlu, TBA
