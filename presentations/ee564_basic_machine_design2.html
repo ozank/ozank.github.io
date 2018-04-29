@@ -256,14 +256,37 @@ Source: Traditional Design of Electrical Machines, Slide-12
 --
 
 - ## DC Machines:  10-30 mm
+--
+
+### Tooth thickness can be initially assumed as the half of the slot pitch
+--
+
+### Slot pitch gets bigger as the power rating of the machine increases
 
 ---
 # Example:
 
-### Select suitable stator windings for the 30 kW, 4-pole machine
+## Define the rough dimensions, and a select suitable stator windings for the 30 kW, 4-pole induction machine.
+
+---
+# Reading Assignment
+--
+
+## Ch-7 Introduction summarizes the first steps in machine design
+
+## Ch-7-1 For rotor current calculations
+
+---
+# Where are we? Rough Design Steps
+--
+
+<img src="./images/ee564/design_process.png" alt="Drawing" style="width: 800px;"/>
 
 ---
 # Stator Slot Types:
+--
+<img src="./images/ee564/slot_types.png" alt="Drawing" style="width: 800px;"/>
+--
 
 - ### Open Slots: Constant width, easy repair and assembly
 --
@@ -323,21 +346,67 @@ Source: Traditional Design of Electrical Machines, Slide-12
 - ### Difficult manufacturing
 
 ---
+## Motor Harmonics
+
+<img src="./images/ee462/torque_pulsations.png" alt="Drawing" style="width:750px;"/>
+### Torque Pulsations
+---
+
+## Crawling Speed
+
+<img src="http://www.eeeguide.com/wp-content/uploads/2016/10/Cogging-and-Crawling-1.jpg" alt="Drawing" style="width:650px;"/>
+---
+### Cogging Torque
+--
+
+### Why does the rotor is skewed?
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Wirnik_by_Zureks.jpg/1200px-Wirnik_by_Zureks.jpg" alt="Drawing" style="width:550px;"/>
+
+---
+# Acoustic Noise
+--
+: Fan Blades
+
+<img src="https://www.turbines-rc.com/4612-thickbox_default/changesun-12-blade-64mm-edf-ducted-fan-2600kv-motor-4s.jpg" alt="Drawing" style="width:300px;"/>
+
+## Can you guess the frequency of the noise?
+--
+
+## \\(f= N\_{blades}*f\_{rotor}\\)
+
+---
 # Number of Slots vs Winding Factor
 <img src="./images/fundamental_winding_factors_for_different_slot_numbers.png" alt="Drawing" style="width: 850px;"/>
 
 ---
 # Selection of Number of Slots
 
-<img src="./images/slot_combinations.png" alt="Drawing" style="width: 700px;"/>
+## for induction machines
+--
+
+## \\(Q_s \\) : Stator Slot Number
+
+## \\(Q_r \\) : Rotor Slot Number
+
+
+## \\(p \\) : Number of pole pairs
+
 ---
 # Selection of Number of Slots
+--
 
-<img src="./images/slot_combinations2.png" alt="Drawing" style="width: 600px;"/>
----
-# Selection of Number of Slots
+## It is preferred to have 
+--
 
-<img src="./images/slot_combinations3.png" alt="Drawing" style="width: 620px;"/>
+## \\(Q_r \approx 0.8 Q_s \\) for 2,4 poles
+--
+
+## \\(Q_r \approx 1.2 Q_s \\) for higher poles
+--
+
+## A minimum of 5-7 rotor bars per pole is preferred.
+
 
 ---
 # Selection of Number of Slots
@@ -345,13 +414,52 @@ Source: Traditional Design of Electrical Machines, Slide-12
 ## Combinations to avoid
 --
 
-## Causes noise and vibrations
+## Cogging Problem created by slot harmonics
+--
 
-## \\(Q_s - Q_r = \pm 2\\)
-## \\(Q_s - Q_r = \pm (P \pm 1)\\)
-## \\(Q_s - Q_r = \pm (P \pm 1)\\)
+## \\(Q_s = Q_r \\)
+--
 
-### \\(Q_s\\) Stator slot number, \\(Q_s\\) Rotor slot number, P pole number
+## \\(Q_s = 2 Q_r \\)
+--
+
+## \\(Q_s = 0.5 Q_r \\)
+
+
+### [Ref](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5253054)
+---
+
+## Combinations to avoid
+--
+
+## Causes slot harmonics 
+--
+
+## \\(Q_r = Q_s \pm 2 p\\)
+--
+
+## \\(Q_r = 2 Q_s \pm 2 p\\)
+--
+
+## \\(Q_r = Q_s \pm p\\)
+--
+
+## \\(Q_r = 0.5 Q_s \pm p\\)
+
+---
+## Combinations to avoid
+--
+
+## Causes mechanical noise and vibrations
+--
+
+## \\(Q_r =   6 p g  \pm 1\\)
+
+## \\(Q_r =   6 p g  \pm 2p \pm 1\\)
+
+## g: Integer
+---
+
 ---
 # Selection of Number of Slots
 
@@ -360,25 +468,20 @@ Source: Traditional Design of Electrical Machines, Slide-12
 ## Cusps in torque speed curve
 --
 
-## \\(Q_s - Q_r = \pm P\\)
-## \\(Q_s - Q_r = - 2 P\\)
-## \\(Q_s - Q_r = - 5 P\\)
+## \\(Q_r =  Q_s  \pm p\\)
+## \\(Q_r =  Q_s + 5 p\\)
 
-### \\(Q_s\\) Stator slot number, \\(Q_s\\) Rotor slot number, P pole number
+
 ---
-# Selection of Number of Slots
-
-## Combinations to avoid
-
-## Cogging Problem
+## Preferred Combinations 
 --
 
-## \\(Q_s - Q_r = 0 \\)
-## \\(Q_s - Q_r = \pm m P\\)
+## In smaller sizes:
 
-### Preferred combinations in smaller sizes have \\(Q_s - Q_r = \pm 2P \\) with 1 rotor slot skew to reduce cusps and cogging.
+## \\(Q_r = Q_s + 4 p \\) with 1 rotor slot skew to reduce cusps and cogging.
+
 ---
-## Common Combinations \\(Q_s, Q_r\\)
+## Common Combinations: \\(Q_s / Q_r\\)
 
 ## 2 Pole: 36/28, 48/38, 54/46, 60/52
 --
@@ -398,10 +501,24 @@ Source: Traditional Design of Electrical Machines, Slide-12
 ## 12 Pole: 72/92
 
 ---
+# Selection of Number of Slots
+
+<img src="./images/slot_combinations.png" alt="Drawing" style="width: 700px;"/>
+---
+# Selection of Number of Slots
+
+<img src="./images/slot_combinations2.png" alt="Drawing" style="width: 600px;"/>
+---
+# Selection of Number of Slots
+
+<img src="./images/slot_combinations3.png" alt="Drawing" style="width: 620px;"/>
+
+---
+# Further Reading
+
 # Selection of Phases - Poles
 
-Source: T.Miller Electric Machine Design Cource, Lecture 10-12
-
+## T.Miller Electric Machine Design Cource, Lecture 10-12
 
 ---
 ## You can download this presentation from: [keysan.me/ee564](http://keysan.me/ee564)

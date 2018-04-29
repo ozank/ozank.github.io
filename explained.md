@@ -51,6 +51,7 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 * [An Intuitive Guide to Linear Algebra](http://betterexplained.com/articles/linear-algebra-guide/)
 * [Eigenvectors and Eigenvalues](http://setosa.io/ev/eigenvectors-and-eigenvalues/)
 * [A Beginner’s Guide to Eigenvectors, Covariance and Entropy](http://deeplearning4j.org/eigenvector)
+* [Intuitive Math](https://intuitive-math.club/)
 
 ### Probability
 

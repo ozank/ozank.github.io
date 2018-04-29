@@ -30,9 +30,164 @@ class: center, middle
 Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
+# Estimation of Machine Parameters
+--
+
+## Some definitions:
+--
+
+- ## Effective Core length
+
+- ## Carter's Coefficient
+
+
+---
+# Equivalent Core Length
+
+### Section 3.2 of the textbook
+<img src="./images/L_eq.png" alt="Drawing" style="width: 600px;"/>
+
+
+---
+
+# Carter's Coefficient
+--
+
+## Way to estimate the flux density by converting slotted rotor/stator to a perfect cylinder.
+
+### Ref: Section 3.1.1 of the textbook
+
+---
+
+# Carter's Coefficient
+
+<img src="./images/flux_distribution.png" alt="Drawing" style="width: 600px;"/>
+
+---
+
+# Carter's Coefficient
+--
+
+- ## First assume the rotor is smooth to find \\(k\_{cs}\\):
+
+## \\( \delta\_e = k\_{cs} \delta \\)
+
+--
+- ## Then assume the stator is smooth to find \\(k\_{cr}\\):
+
+--
+
+- ## Total Carter coefficient is the product of two 
+## \\( k\_{c} = k\_{cs} \times k\_{cr} \\):
+
+---
+# Carter's Coefficient
+
+## \\(k\_c = \dfrac{\tau\_u}{\tau\_u - K b\_1}\\)
+
+## where:
+
+## \\(K = \dfrac{b\_1 / \delta }{5 + b\_1 / \delta }\\)
+
+
+
+---
+# Example 3-1: 
+--
+
+### Calculate the Carter's coefficient for an air gap (\\(\delta = 0.8 \\)) mm. The slot opening \\(b_1\\) is 3 mm. Rotor slots are closed and the stator slot pitch is 10 mm.
+
+--
+
+### How much current is required to magnetize the airgap to 0.9 T (fundamental), if Ns=100, pole number=4, q=3, full-pitched winding.
+
+
+---
+## Back to Equivalent Core Length
+--
+
+## Equivalent Core Length with Cooling
+
+### Larger machines requires ducts for cooling
+--
+
+
+<img src="./images/L_eq_cooling.png" alt="Drawing" style="width: 750px;"/>
+
+---
+
+<img src="./images/L_eq_cooling.png" alt="Drawing" style="width: 800px;"/>
+
+
+## Need to calculate the effective length of the opening
+--
+
+## Use the same technique
+---
+
+## Example:
+--
+
+### In a machine, stator core is 990 mm. There are 25 stacks of 30 mm long, with 10 mm cooling ducts (24 ducts). Airgap is 3 mm.
+
+### Calculate the effective core length if the rotor surface is smooth.
+ 
+---
+# Flux Density in a Slot
+--
+
+<img src="./images/tooth_flux.png" alt="Drawing" style="width: 800px;"/>
+
+
+## \\(\tau_u = \dfrac{\pi D}{Q_s}\\)
+
+---
+
+# Flux Density in a Slot
+--
+
+<img src="./images/tooth_flux_with_slot.png" alt="Drawing" style="width: 600px;"/>
+
+
+---
+# Example
+
+<img src="./images/BH_curve.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Back Core Flux
+---
+# D-Q Axis
+
+<img src="./images/dq_axis.png" alt="Drawing" style="width: 550px;"/>
+
+---
+# D-Q Axis
+
+<img src="https://www.pantechsolutions.net/media/wysiwyg/article-images/synchronous-machine-and-the-main-principle-of-the-vector-control.jpg" alt="Drawing" style="width: 800px;"/>
+
+---
+
+# D-Q Axis
+
+<img src="./images/ee564/dq_axis.png" alt="Drawing" style="width: 550px;"/>
+---
+
+
+# Back Core Flux
+
+<img src="./images/ee564/back_core_flux.png" alt="Drawing" style="width: 650px;"/>
+
+### For magnetic voltage calculations refer to pg. 178
+
+---
+# Example
+
+
+---
 # Magnetizing Current
 
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/no_load_magnetizing_curve.png" alt="Drawing" style="width: 600px;"/>
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/no_load_magnetizing_curve.png" alt="Drawing" style="width: 500px;"/>
 
 
 ## Can be linearized by Carter's coefficient (use \\(\delta_e\\))
