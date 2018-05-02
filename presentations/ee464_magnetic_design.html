@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE464-Static Power Conversion-II</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-464 STATIC POWER CONVERSION-II
+
+# Magnetic Design for Power Electronics
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Review of Magnetic Circuits
+--
+
+- ### [EE361-Inductors](http://keysan.me/presentations/ee361_magnetic_energy.html)
+
+- ### [EE361-Practical Transformers](http://keysan.me/presentations/ee361_practical_transformers.html)
+
+- ### [EE564-Transformer Design](http://keysan.me/presentations/ee564_transformer_design.html)
+
+- ### [EE564-Magnetic Materials](http://keysan.me/presentations/ee564_intro2.html)
+
+---
+
+# Transformer Design
+
+- ### [Mohan, Design of Magnetic Components]()
+
+- ### [Erickson, Inductor Design](http://ecee.colorado.edu/~ecen5797/course_material/Ch14slides.pdf)
+
+- ### [Erickson, Transformer Design](http://ecee.colorado.edu/~ecen5797/course_material/Ch15slides.pdf)
+
+---
+# How to use an RLC Meter?
+--
+
+- ### [Hioki, IM3533](https://www.hioki.com/file/cmw/hdCatalog/4549/pdf/?action=browser&log=1&lang=en)
+
+---
+# How to use an RLC Meter?
+--
+
+## [Equivalent Circuit Models](https://www.hioki.com/en/products/listUse/?category=10 )
+--
+
+<img src="./images/ee464/rlc_series_parallel.png" alt="Drawing" style="width: 600px;">
+---
+# How to use an RLC Meter?
+--
+
+## [Equivalent Circuit Models](https://www.hioki.com/en/products/listUse/?category=10 )
+
+
+<img src="./images/ee464/rlc_series_parallel2.png" alt="Drawing" style="width: 600px;">
+
+---
+# How to use an RLC Meter?
+--
+
+## Primary and Secondary Inductance Measurement
+
+### [Measure Primary Inductance with Osciloscope](https://www.youtube.com/watch?v=WiboSO5cJW4)
+
+<img src="./images/ee464/primary_secondary_L.jpeg" alt="Drawing" style="width: 600px;">
+
+---
+# How to use an RLC Meter?
+--
+
+## Leakage Inductance Measurement
+
+<img src="./images/ee464/leakage_inductance.jpeg" alt="Drawing" style="width: 600px;">
+
+---
+# How to use an RLC Meter?
+--
+
+## [Mutual Inductance Measurement](https://www.youtube.com/watch?v=P0-iGnAW7FM): \\(L_m = (L_a - L_o)/4\\)
+
+<img src="./images/ee464/mutual_inductance.jpeg" alt="Drawing" style="width: 600px;">
+
+
+---
+# How to use an RLC Meter?
+--
+
+## [Turns Ratio Measurment](https://www.youtube.com/watch?v=3giTLF-e_HA) 
+
+
+
+---
+
+# Application Notes:
+
+- ## [Coil Craft Application Notes](https://www.coilcraft.com/appnotes.cfm)
+
+- ## [Selecting the Best Inductor](https://www.coilcraft.com/pdfs/Doc469_selecting_inductors.pdf)
+
+- ## [Structured Design off Switching Power Transformers](https://www.coilcraft.com/pdfs/doc627_Power_transformer_design.pdf)
+
+---
+
+# Application Notes:
+
+- ### [Fairchild-Transformer Design Consideration for Flyback](https://www.fairchildsemi.com/application-notes/AN/AN-4140.pdf)
+
+- ### [Transformers and Inductors for Power Electronics: Theory, Design and Applications](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118544648)
+
+- ### [Power Transformer Design](https://www.ti.com/lit/ml/slup126/slup126.pdf)
+
+- ### [Flyback Transformer Design](https://www.ti.com/lit/ml/slup127/slup127.pdf )
+
+- ### [Fuji, Flyback Transformer Design](https://www.fujielectric.com/products/semiconductor/model/power_supply/technical/box/pdf/Fly-Back_transformer_Design_Rev_1_0_E.pdf)
+
+
+---
+# More Detailed References
+
+- ## [Inductors and Transformers for Power Electronics](http://s1.downloadmienphi.net/file/downloadfile5/192/1388772.pdf)
+
+
+
+
+---
+## You can download this presentation from: [keysan.me/ee464](http://keysan.me/ee464)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
