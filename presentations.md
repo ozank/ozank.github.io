@@ -9,6 +9,7 @@ permalink: /presentations/index.html
 
 ### 2018
 
+* [IEEE, CEM-METU, Applications of Superconductivity](https://docs.google.com/presentation/d/1sLWdmQFYXn9fIjOCCvmAzJHY-pbbRFST3aDzhJjggcU/edit?usp=sharing)
 * [Dunya Gunu Etkinlikleri, ODTU](https://docs.google.com/presentation/d/1EA9kA4gN3Q6NAsXjgWhuamjllHjF0HLe3WADTTGk0Lw/edit?usp=sharing)
 * [EEE Induction Course](https://docs.google.com/presentation/d/1R1ZmGRX_92i5elfx05uXmj9EHNj2sKrFu8xxosCMkmk/edit?usp=sharing)
 * ODTÜ Güç ve Enerji Kongresi [Current Trends and Challenges in Wind Energy](https://docs.google.com/presentation/d/1kdIjzmVdQaqsxEBxTar-SW3NS-t2UEYVPczvxvVp5Io/edit?usp=sharing)
@@ -19,7 +20,6 @@ permalink: /presentations/index.html
 ### 2017
 
 * GÜNAM, [Power Electronics for PV Systems](/presentations/power_electronics_for_PV.html)
-* METU, [Applications of Superconductivity](http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8069354)
 * [TMMOB, Enerjinin Geleceği Sempozyumu](http://tmmobenerjisempozyumu.org/), [Rüzgar Türbinleri için Yenilikçi Generatör Teknolojileri](https://docs.google.com/presentation/d/1vP-5_YQuELD0dK9h2Nfeuh6tkN_-2SlyAMf_LF2xkxE/edit?usp=sharing)
 * [French-Turkish Innovation Day, METU Technopark](https://www.ftinnovationdays2017.com/), [Smart Campus Projects in METU](https://docs.google.com/presentation/d/1x1pxn8TNPNpuZutw_qd3Hcdr5t0hew08CulHOooWGZs/edit?usp=sharing)
 * METU, [Practical Aspects of DC Motor and Drives](https://docs.google.com/presentation/d/1XveRzNLUcjYO3Micyx0Hd8ln29yodHI5m_z4AlIQQmo/edit?usp=sharing)
@@ -58,8 +58,8 @@ permalink: /presentations/index.html
 
 * [IOP](http://www.iop.org/events/scientific/conferences/) Large Scale Applications of Superconductivity, [Presentation](https://www.dropbox.com/s/n04kh5bwx0t8zyh/Ozan_Keysan_10MW_HTS_11_2013.pdf)
 * [Version Control for Academics](http://dl.dropbox.com/u/2490601/Presentations/version-control/svn.html)
-* [An Introduction to Superconductivity](http://www.see.ed.ac.uk/~okeysan/idcore/idcore2.html)
-* [Superconducting Electrical Machines](https://dl.dropbox.com/u/2490601/Presentations/IDCORE/IDCORE_HTSG_June_2012.ppt)
+* [An Introduction to Superconductivity](https://www.dropbox.com/s/xsewffq20o80bqa/idcore2.html?dl=0)
+* [Superconducting Electrical Machines](https://www.dropbox.com/s/1uxbupvpaavsz9j/IDCORE_HTSG_June_2012.ppt?dl=1)
 
 ### 2012
 
