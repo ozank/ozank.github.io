@@ -185,12 +185,12 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 
 ---
-# Magnetizing Current
+## Magnetizing Current
 
 <img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/no_load_magnetizing_curve.png" alt="Drawing" style="width: 500px;"/>
 
 
-## Can be linearized by Carter's coefficient (use \\(\delta_e\\))
+### Can be linearized by Carter's coefficient (use \\(\delta_e\\))  (see section 3.5 for details)
 ---
 
 # Magnetizing Inductance
@@ -208,6 +208,53 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ### if B is sinusoidal
 
 ---
+# Magnetizing Inductance (Per-phase)
+--
+
+### \\(L\_{m (ph)} = \dfrac{2}{\pi} \mu\_0 \dfrac{1}{2p}\dfrac{4}{\pi} \dfrac{\tau\_p}{\delta\_{ef}} l' (k\_{ws}N\_s)^2\\)
+--
+
+### Writing pole pitch in terms of diameter
+--
+
+### \\(L\_{m (ph)} = \dfrac{2 \mu\_0 D}{\pi p^2 \delta\_{ef}} l' (k\_{ws}N\_s)^2  \\)
+
+---
+# Magnetizing Inductance (Total)
+--
+
+### For 3-phase machines
+
+### \\(L\_{m} = \dfrac{3}{2} L\_{m (ph)} \\)
+
+--
+
+### \\(L\_{m} = \dfrac{3 \mu\_0 D}{\pi p^2 \delta\_{ef}} l' (k\_{ws}N\_s)^2  \\)
+
+---
+# Magnetizing Inductance
+--
+
+- ## Increases with number of turns
+--
+
+- ## Reduces with large airgap
+--
+
+- ## Reduces with the number of poles (power factor is worse at machines with higher number of poles)
+---
+
+# Magnetizing Inductance
+--
+
+- ## Reduces with increasing voltage:
+--
+Saturation
+
+--
+- ## Reduces with torque: Why?
+
+---
 # Flux Lines vs Torque
 
 <img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/flux_vs_torque.png" alt="Drawing" style="width: 750px;"/>
@@ -222,6 +269,170 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 <img src="./images/magnetizing_inductance.png" alt="Drawing" style="width: 550px;"/>
 
 #### Magnetizing inductance variation of a 4-pole machine 
+---
+
+# Leakage Flux (Ch4)
+--
+
+## Flux that does not cross the airgap
+--
+
+## Flux crosses the airgap but does not link the winding
+
+---
+# Leakage Flux
+
+## Flux that does not cross the airgap
+--
+
+- ### Pole Leakage Flux
+--
+
+- ### Slot Leakage Flux
+--
+
+- ### Tooth Tip Leakage Flux
+--
+
+- ### End Winding (Overhang) Leakage Flux
+
+---
+# Pole Leakage Flux
+
+### In salient pole machines (i.e. synchronous machine)
+
+<img src="./images/pole_leakage.png" alt="Drawing" style="width: 700px;"/>
+---
+# Slot-Tooth Tip Leakage Flux
+
+<img src="./images/slot_leakage.png" alt="Drawing" style="width: 700px;"/>
+---
+# End Winding Leakage Flux
+
+<img src="./images/end_winding_leakage.png" alt="Drawing" style="width: 600px;"/>
+---
+# End Winding Leakage Flux
+
+<img src="./images/end_winding_leakage2.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Air-Gap Leakage Inductance (\\(L\_{\delta}\\))
+
+### Models the higher order harmonics in the induced voltage 
+--
+
+### \\(E\_v = \dfrac{\mu\_0}{\pi} \omega \dfrac{m}{\delta} D l' (\dfrac{N}{p})^2 I\_m (\dfrac{k\_{wv}}{v})^2\\)
+
+--
+
+### \\(E = \sum E_v \\)
+--
+
+### \\(E = \omega I\_m (L\_m + L\_\delta)\\)
+
+---
+# Air-Gap Leakage Inductance (\\(L\_{\delta}\\))
+
+### Models the higher order harmonics in the induced voltage 
+--
+
+### \\(L\_\delta = \dfrac{\mu\_0}{\pi}\dfrac{m}{\delta} D l' (\dfrac{N}{p})^2 \sum\_{v \neq 1 }(\dfrac{k\_{wv}}{v})^2\\)
+
+--
+
+### \\(L\_\delta = \sigma\_\delta L\_m \\)
+--
+
+### \\(\sigma\_\delta \\): leakage factorof the airap inductance
+
+---
+# Air-Gap Leakage Inductance (\\(L\_{\delta}\\))
+
+<img src="./images/ee564/airgap_leakage.png" alt="Drawing" style="width: 300px;"/>
+
+---
+# Slot Leakage Inductance
+--
+
+<img src="./images/ee564/slot_leakage.png" alt="Drawing" style="width: 700px;"/>
+---
+
+# Slot Leakage Inductance
+--
+
+### for the bottom part (\\(L\_{u1}\\))
+
+### \\(B(h) = \mu\_0 H (h) = \mu\_0 \dfrac{z\_Q I \dfrac{h}{h\_4}}{b\_4} \\)
+--
+
+### \\(L\_{u1} = \dfrac{l' b\_4}{\mu\_0 I^2} \int_0^{h\_4} B^2(h) dh\\)
+
+---
+
+# Slot Leakage Inductance
+--
+
+### repeat for the upper part (\\(L\_{u2}\\))
+
+### \\(B(h) = \mu\_0 \dfrac{z\_Q I}{b\_1} \\)   (Constant B)
+---
+
+# Slot Leakage Inductance
+--
+
+### Inductance for one slot:
+### \\(W\_u = 1/2 L\_{u1} I^2 = 1/2 \mu_0 l' z\_Q^2 I^2 (\lambda_1 + \lambda_4)\\)
+
+---
+
+# Total Slot Leakage Inductance
+--
+
+<img src="./images/ee564/total_slot_leakage.png" alt="Drawing" style="width: 750px;"/>
+
+---
+
+# Total Slot Leakage Inductance
+--
+
+### \\(L\_u = \dfrac{Q}{am}\dfrac{1}{a} L\_{u1}\\)
+--
+
+### \\(L\_u = \mu\_0 l' \dfrac{Q}{m} (\dfrac{z\_Q}{a})^2 \lambda\_{u}\\)
+--
+
+### \\(N= \dfrac{Q}{2am} z\_Q\\)
+--
+
+### \\(L\_u = \mu\_0 l' \dfrac{4m}{Q} N^2 \lambda\_{u}\\)
+---
+
+# Ex. 4.2:
+
+
+---
+# Slot Shapes
+
+<img src="./images/slot_leakage_shapes.png" alt="Drawing" style="width: 700px;"/>
+
+
+---
+# Tooth Tip Leakage Flux
+--
+
+<img src="./images/ee564/tooth_leakage.png" alt="Drawing" style="width: 650px;"/>
+
+---
+# Leakage Inductance
+
+<img src="./images/leakage_inductance.png" alt="Drawing" style="width: 550px;"/>
+
+#### Leakage inductance variation of a 4-pole machine 
+
+---
+# Reading Assignment: Chapter 4 
+
+
 ---
 # Losses in Magnetic Circuits
 --
@@ -259,69 +470,6 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ### With Inverter
 <img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/loss_inverter.png" alt="Drawing" style="width: 400px;"/>
----
-# Leakage Flux
---
-
-## Flux that does not cross the airgap
---
-
-## Flux crosses the airgap but does not link the winding
-
----
-# Leakage Flux
-
-## Flux that does not cross the airgap
---
-
-- ### Pole Leakage Flux
---
-
-- ### Slot Leakage Flux
---
-
-- ### Tooth Tip Leakage Flux
---
-
-- ### End Winding (Overhang) Leakage Flux
-
----
-# Pole Leakage Flux
-
-<img src="./images/pole_leakage.png" alt="Drawing" style="width: 700px;"/>
----
-# Slot-Tooth Tip Leakage Flux
-
-<img src="./images/slot_leakage.png" alt="Drawing" style="width: 700px;"/>
----
-# End Winding Leakage Flux
-
-<img src="./images/end_winding_leakage.png" alt="Drawing" style="width: 600px;"/>
----
-# End Winding Leakage Flux
-
-<img src="./images/end_winding_leakage2.png" alt="Drawing" style="width: 600px;"/>
-
----
-# Slot Shapes
-
-<img src="./images/slot_leakage_shapes.png" alt="Drawing" style="width: 700px;"/>
-
----
-# Leakage Flux
-## Flux crosses the airgap but does not link the winding
---
-
-- ### Zig-Zag Leakage
---
-
-- ### Skewing Leakage
----
-# Leakage Inductance
-
-<img src="./images/leakage_inductance.png" alt="Drawing" style="width: 550px;"/>
-
-#### Leakage inductance variation of a 4-pole machine 
 ---
 
 # Resistances
