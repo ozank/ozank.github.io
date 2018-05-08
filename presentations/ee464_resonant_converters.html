@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE464-Static Power Conversion-II</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-464 STATIC POWER CONVERSION-II
+
+# Resonant Converters
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+
+## Advantages of High Switching Frequency?
+--
+
+- ### Reduces filter element sizes
+--
+
+- ### Reduces transformer size
+--
+
+- ### Reduced ripple
+
+--
+
+## Disadvantages of High Switching Frequency?
+--
+
+- ### Increased switching losses
+
+---
+
+# Switching Loss
+
+
+<img src="./images/ee464/switching_loss.gif" alt="Drawing" style="width: 800px;">
+
+### You have more turn-on, turn-off energy dissipation as the frequency increases
+---
+
+# Hard Switching vs. Soft Switching
+--
+
+<img src="./images/ee464/hard_soft_switching.png" alt="Drawing" style="width: 800px;">
+
+---
+
+# Hard Switching vs. Soft Switching
+--
+
+<img src="./images/ee464/hard_soft_switching2.png" alt="Drawing" style="width: 800px;">
+
+---
+# Resonant Converters
+--
+
+## Two main types of switching:
+--
+
+- ## when voltage is zero (ZVS)
+--
+
+- ## when current is zero (ZCS)
+
+---
+ 
+# Resonant Converters
+--
+
+### There are many resonant converter topologies.
+
+### Most common types:
+--
+
+- ## Resonant Switch Converters
+--
+
+- ## Load Resonant Converter
+--
+
+- ## Resonant DC-link Converter
+---
+
+# Review: RLC Resonant Circuits
+--
+
+<img src="./images/ee464/rlc.png" alt="Drawing" style="width: 800px;">
+
+---
+
+# Review: RLC Resonant Circuits
+
+<img src="./images/ee464/rlc2.png" alt="Drawing" style="width: 430px;">
+
+---
+
+# Review: RLC Resonant Circuits
+
+- ### [Series RLC Circuit Animation](http://mathlets.org/mathlets/series-rlc-circuit/)
+
+- ### [Series RLC Circuit Animation](https://www.edumedia-sciences.com/en/media/545-rlc-series-circuit)
+
+- ### [Signal Transmission and Reflection](https://www.youtube.com/watch?v=ozeYaikI11g)
+
+---
+# Resonant Switch Converter: Zero Current Switching
+
+#### W. Hart., Power Electronics, Ch.9
+--
+
+<img src="./images/ee464/resonant_zcs.png" alt="Drawing" style="width: 800px;">
+
+
+#### Assumption: \\(L_o\\) is large enough, \\(I_o\\) is constant
+---
+
+## Operating Mode: \\(t < 0\\)
+--
+
+<img src="./images/ee464/zcs_mode1.png" alt="Drawing" style="width: 600px;">
+
+### Switch open, Diode ON (frewheeling), \\(v_C = 0\\)
+
+---
+
+## Operating Mode: \\( 0 < t < t\_1\\)
+--
+
+<img src="./images/ee464/zcs_mode2.png" alt="Drawing" style="width: 600px;">
+
+### Switch closed, \\(L_r\\) start charging
+
+### \\(i_{L} < I_o \\) so the diode is still ON 
+
+
+---
+
+## Operating Mode: \\( t\_1 < t < t\_2\\)
+--
+
+<img src="./images/ee464/zcs_mode3.png" alt="Drawing" style="width: 600px;">
+
+### When \\(i_{L} = I_o \\), the diode turns OFF 
+
+### Excess inductor current charges the capacitor  \\(v_C > 0\\)
+
+---
+
+## Operating Mode: \\( t\_1 < t < t\_2\\)
+--
+
+<img src="./images/ee464/zcs_mode3.png" alt="Drawing" style="width: 600px;">
+
+## If no action is taken, oscillation starts in the  LC circuit!
+
+---
+
+## Operating Mode: \\( t\_2 < t < t\_3\\)
+--
+
+## Turn the switch off, when \\(i_{L} =0 \\)
+--
+
+## =Zero current switching!
+--
+
+## Alternatively a unidirectional switch (SCR) can be used.
+
+---
+
+## Operating Mode: \\( t\_2 < t < t\_3\\)
+--
+
+<img src="./images/ee464/zcs_mode4.png" alt="Drawing" style="width: 600px;">
+
+### Very small switching loss (due to capacitances in the switch)
+
+### Output current is supplied by C (discharges linearly)
+
+---
+
+## Initial Mode:  \\( t\_3 < t < T\\)
+--
+
+<img src="./images/ee464/zcs_mode1.png" alt="Drawing" style="width: 600px;">
+
+###  \\(v_C = 0\\), diode starts freewheeling,
+### Switch ready to to turn ON (zero current)
+
+---
+
+## Analysis of the Operating Modes
+
+#### W. Hart., Power Electronics, Ch.9-2
+
+<img src="./images/ee464/zcs_waveforms.png" alt="Drawing" style="width: 750px;">
+
+---
+# Derivation of the Output Voltage
+--
+
+## Use energy balance (L-C are lossless)
+--
+
+### \\(V_o = V_s f_s [\dfrac{t\_1}{2}+ (t\_2 - t\_1)+ (t\_3-t\_2)]\\)
+--
+
+## \\(V_o < V_s \\) operates as a buck converter
+
+---
+
+## Analysis of the Operating Modes
+--
+
+## Time internals are a function of output current
+--
+
+## Load changes switching frequency must be changed
+
+<img src="./images/ee464/zcs_fsw.png" alt="Drawing" style="width: 400px;">
+
+---
+
+# Example ( Hart 9-1)
+---
+
+
+
+
+---
+# Alternative ZCS Converter
+
+## Mohan Section 9.5
+
+<img src="./images/ee464/zcs_mohan.png" alt="Drawing" style="width: 700px;">
+
+
+---
+
+# Resonant Switch Converter: Zero Voltage Switching
+
+#### W. Hart., Power Electronics, Ch.9
+--
+
+<img src="./images/ee464/zvs.png" alt="Drawing" style="width: 800px;">
+---
+
+## Operating Mode: \\(t < 0\\)
+--
+
+<img src="./images/ee464/zvs_mode4.png" alt="Drawing" style="width: 600px;">
+
+### D1 off, switch ON, \\(i_{L} = I_o \\)
+
+---
+
+## Operating Mode: \\( 0 < t < t\_1\\)
+--
+
+<img src="./images/ee464/zvs_mode1.png" alt="Drawing" style="width: 600px;">
+
+### Switch opened, \\(v_C\\) start charging linearly
+
+---
+
+## Operating Mode: \\( t\_1 < t < t\_2\\)
+--
+
+<img src="./images/ee464/zvs_mode2.png" alt="Drawing" style="width: 600px;">
+
+### When \\(v_C = V_s \\), the diode (D1) is forward biased 
+
+### LC resonant circuit start oscillating,
+
+### When \\(v_C = 0 \\), the diode (Ds) turns on to carry iL. (which is negative)
+
+---
+
+## Operating Mode: \\( t\_2 < t < t\_3\\)
+--
+
+<img src="./images/ee464/zvs_mode3.png" alt="Drawing" style="width: 600px;">
+
+
+### Ds is ON, \\(V_{L} = V_s \\), inductor current increases linearly
+
+### Switch should be closed just after Ds turns on (zero voltage switching)
+
+### When \\(i_{L} = I_o \\), D1 is off, and back to the initial position
+
+
+---
+
+## Initial Mode:  \\( t\_3 < t < T\\)
+--
+
+<img src="./images/ee464/zvs_mode1.png" alt="Drawing" style="width: 600px;">
+
+
+---
+## Applications
+
+- ## [Resonant Induction Heaters](https://www.rmcybernetics.com/science/diy-devices/diy-induction-heater)
+
+
+---
+## You can download this presentation from: [keysan.me/ee464](http://keysan.me/ee464)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
