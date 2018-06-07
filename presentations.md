@@ -9,6 +9,7 @@ permalink: /presentations/index.html
 
 ### 2018
 
+* [METU Smart Campus (iEAST) Project](https://docs.google.com/presentation/d/1m2uZ8JVW2mQ6oB0Dg4Z3r-LA2mpsIztQQ7jMVhkYgjs/edit?usp=sharing)
 * [IEEE, CEM-METU, Applications of Superconductivity](https://docs.google.com/presentation/d/1sLWdmQFYXn9fIjOCCvmAzJHY-pbbRFST3aDzhJjggcU/edit?usp=sharing)
 * [Dunya Gunu Etkinlikleri, ODTU](https://docs.google.com/presentation/d/1EA9kA4gN3Q6NAsXjgWhuamjllHjF0HLe3WADTTGk0Lw/edit?usp=sharing)
 * [EEE Induction Course](https://docs.google.com/presentation/d/1R1ZmGRX_92i5elfx05uXmj9EHNj2sKrFu8xxosCMkmk/edit?usp=sharing)
