@@ -8,6 +8,7 @@ For more information about current project and theses, please visit [PowerLab](h
 
 ## Completed MSc Theses
 
+- Doğa Ceylan, *Electromagnetic Simulation and Optimization of an Electromagnetic Launcher*, 2018
 - Mert Bildirici, *Reducing the Cost of Electric Transmission and Distribution Systems with Wind Generation by Means of Energy Storage and Demand Side Management*, 2018
 - Aydın Başkaya, *Design of a Modular, Axial-flux Direct Drive Permanent
 Magnet Generator For Wind Turbines*, 2018
@@ -25,7 +26,6 @@ Magnet Generator For Wind Turbines*, 2018
 
 ## Ongoing MSc Theses
 
-- Doğa Ceylan, *Electromagnetic Simulation and Optimization of an Electromagnetic Launcher*
 - Erencan Duymaz, *Contributing Grid Frequency by Using Synthetic Inertia Implementation in Wind Turbines Coupled to Grid via Power Electronics*
 - Aysel Akgemci, *Hybrid Excited Synchrnous Generator Design and Comparison of Direct Drive Wind Turbines*
 - Hakan Temiz, *Grid Impedance Estimation Based Adaptive Controller Design for Back-to-Back Wind Turbine Power Converters for Stable Operation in Distorted and Weak Grid*
