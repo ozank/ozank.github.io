@@ -48,7 +48,7 @@ permalink: /cv/index.html
 
 ## Experience
 
-|2014–  | Assistant Professor| Electrical-Electronics Engineering, METU|
+|2014–  | Assistant Professor| Dept. of Electrical-Electronics Engineering, [METU](http://www.metu.edu.tr)|
 |2011–2014 | Research Associate | Institute for Energy Systems, University of Edinburgh|
 |2010–2012 | Electrical Machine Design Consultant | NGenTec, Edinburgh|
 |2009–2010 | Research Associate | Institute for Energy Systems, University of Edinburgh|
@@ -58,7 +58,7 @@ permalink: /cv/index.html
 
 ## Academic-Administrative Work
 
-- [Advisor to Dean](https://muhfd.metu.edu.tr/), (2014-Present)
+- [Advisor to Dean](https://muhfd.metu.edu.tr/), (2016-2018)
 
 - [METU-Wind Center](http://ruzgem.metu.edu.tr/), Member of the Executive Board
 
@@ -68,14 +68,6 @@ permalink: /cv/index.html
 
 - Rapporteur, EU [Cost Action](http://www.cost.eu/)
 
-|Reviews for   | IET Renewable Power Generation Journal|
-|              | IEEE Transactions on Industrial Informatics|
-|              | IEEE Transactions on Applied Superconductivity|
-|              | IEEE Transactions on Industrial Electronics|
-|              | IEEE International Conference on Electrical Machines and Drives|
-|              | IET Power Electronics, Machines and Drives Conference|
-|              | IEEE International Conference on Electrical Machines|
-
 ----
 
 ## Research Interests
@@ -84,7 +76,7 @@ My main area of interests are renewable energy, design of electric machines, and
 
 ## Research Experience & Projects
 
-For more details please visit the [my projects](/projects) page.
+For more details please visit the [My Projects](/projects) page.
 
 |2017| ASELSAN MW Wind Turbine| Feasibility analysis and design of a MW sized direct-drive wind turbine generator.|
 |2016-2017| ASELSAN Rail-Gun Project| Electromagnetic Design and Optimization of a 200kJ-2MJ Electromagnetic Launcher.|
@@ -93,7 +85,7 @@ For more details please visit the [my projects](/projects) page.
 |2016| Andar Servo| Design and Manufacturing of a Brushless PM Servo Motor.|
 |2015 | Newton Fund Mobility Grant | Design of a superconducting wind turbine prototype.|
 |2014–2016 | TUBITAK 2232 Project | Design of modular and fault-tolerant generators for direct-drive wind turbines.|
-|2011–2014 | EU FP7 Project | [Marina Platform](http://www.marina-platform.info/) Project is an EU FP7 project with 17 industrial and academic partners. I am working as a full-time researcher in the project, which aims to design combined wave and wind energy platforms. My duty is to compare different generator topologies and power take-off systems in terms of efficiency and reliability.|
+|2011–2014 | EU FP7 Project | Marina Platform Project is an EU FP7 project with 17 industrial and academic partners. I am working as a full-time researcher in the project, which aims to design combined wave and wind energy platforms. My duty is to compare different generator topologies and power take-off systems in terms of efficiency and reliability.|
 |2013 | United Arab Emirates Uni. | Design of a 5 kW permanent-magnet linear generator test rig.|
 |2013 | [GE Power Conversion](http://www.gepowerconversion.com/) | A project to validate the superconducting generator topology that I developed during my PhD. General Electric supplied the superconducting coil and test facilities for the cryogenic tests.|
 |2011 | [NGenTec](http://www.ngentec.com/) | Design consultant for a medium-speed generator design. Electromagnetic optimization a 5 MW, 300 rpm permanent-magnet generator has been completed.|
@@ -101,13 +93,12 @@ For more details please visit the [my projects](/projects) page.
 |2010 | SMART R&D Grant | Design and testing of a 25 kW axial flux permanent-magnet generator. The experimental results have been used to evaluate the thermal performance of the generator and the cooling system.|
 |2010 | [Hayward Tyler](http://www.haywardtyler.com/) | Feasibility analysis of a submerged and flooded permanent-magnet generator. Thermal performance of the flooded generator has been investigated as well as the corrosion mechanisms and fluid drag losses.|
 |2009–2010 | NPower Project | The feasibility analysis of direct-drive PM generators for two wave energy converters ([Aquamarine Power](http://www.aquamarinepower.com/),[AWS Ocean Power](http://www.awsocean.com)) and two tidal energy converters ([Marine Current Turbines](http://www.marineturbines.com/), [Scotrenewables](http://www.scotrenewables.com/)) have been investigated. An analytical and optimization tool is developed, and licensed by University of Edinburgh for further use.|
-|2005–2008 | [METU](http://www.metu.edu.tr) | A novel method to estimate the rotor speed and position of an induction motor using the fringing flux out of the rotor cage is developed. An international patent has been awarded to this work.|
 
 ## Teaching Experience
 
 ### Middle East Technical University
 
-For a full list of courses that I thought please visit my [Courses](/courses) webpage.
+For a full list of courses that I taught please visit my [Courses](/courses) webpage.
 
 - EE281: Electric Circuits
 - EE361: Electromechanical Energy Conversion-I
@@ -146,7 +137,9 @@ For a full list of courses that I thought please visit my [Courses](/courses) we
 
 
 ## Honours & Awards
-
+|2018 | Best Lecturer, 2017-2018 Spring semester (based on student evaluations), *METU*. |
+|2017 | Best Lecturer, 2017-2018 Fall semester (based on student evaluations), *METU*. |
+2017 & Best Poster Award, Renewable Energy and Energy Efficiency Conference, *DAAD*. |
 |2013 | Staff Scholarship, *University of Edinburgh*.|
 |2012 | Young Researcher Support, *International Conference on Superconductivity and Magnetism, ICSM*.|
 |2012-2013 | Ph.D. Overseas fee waiver and stipend, *University of Edinburgh*.|
@@ -162,7 +155,7 @@ For a full list of courses that I thought please visit my [Courses](/courses) we
 
 ## Courses & Seminars
 
-- [HPI], Design Thinking Workshop, 3 days, 2016.
+- [HPI](https://hpi.de/school-of-design-thinking.html), Design Thinking Workshop, 3 days, 2016.
 - [Aalto Design Factory](https://designfactory.aalto.fi/), Design factory crash course, 2 days, 2015.
 -   Future Reliable Renewable Energy Conversion Systems, 4th Flagship Seminar, Chongqing, China, 2012.
 -   Supervising Postgraduate Research, Iain Davidson, 2013.
@@ -199,10 +192,14 @@ For a full list of courses that I thought please visit my [Courses](/courses) we
 
 <script src="http://bibbase.org/show?bib=http://bibbase.org/mendeley2/363361&groupby=type&jsonp=1&folding=1&authorFirst=1"></script> 
 
-## Completed Theses
+## Theses Supervised
 
 For on going theses, please visit [theses](/theses) page.
 
+- Doğa Ceylan, *Electromagnetic Simulation and Optimization of an Electromagnetic Launcher*, 2018
+- Mert Bildirici, *Reducing the Cost of Electric Transmission and Distribution Systems with Wind Generation by Means of Energy Storage and Demand Side Management*, 2018
+- Aydın Başkaya, *Design of a Modular, Axial-flux Direct Drive Permanent
+Magnet Generator For Wind Turbines*, 2018
 - Melih Var, *Improvement of the Electric Field Distribution in the Medium Voltage Gas Insulated Inductive Voltage Transformer*, 2017
 - Öztürk Şahin Alemdar, *Design and Implementation of an Unregulated DC/DC Transformer Module Using LLC Resonant Converter*, MSc Thesis, [pdf version](http://etd.lib.metu.edu.tr/upload/12620665/index.pdf), 2016. 
 - Mario Recio Lara, *Development of a mobile phone application to detect speed and faults of electrical machines*, MSc Thesis, University of Edinburgh, 2013.
