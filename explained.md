@@ -21,7 +21,6 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 
 ### Fourier Transform
 
-* [Fourier Toy](http://toxicdump.org/stuff/FourierToy.swf)
 * [An interactive Guide to the Fourier Transform](http://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/)
 * [Fourier Transform for Dummies](https://math.stackexchange.com/questions/1002/fourier-transform-for-dummies)
 * [The Math Trick Behind MP3s, JPEGs](http://nautil.us/blog/the-math-trick-behind-mp3s-jpegs-and-homer-simpsons-face)
@@ -35,7 +34,7 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 
 * [Maxwell’s Unification Revolution](https://medium.com/starts-with-a-bang/maxwell-s-unification-revolution-849d47da7fe)
 * [Maxwell's Equations](http://www.maxwells-equations.com/)
-* [Who's afraid of Maxwell Equations?](http://majr.com/docs/Whos_Afraid_of_Maxwells_Equations_By_Elya_Joffe.pdf)
+* [Who's afraid of Maxwell Equations?](https://www.majr.com/wp-content/uploads/2018/04/Elya-Joffe-Whos-Afraid-of-Maxwells-Equations-Pittsburgh-EMC-Chapter.compressed.pdf)
 * [Feynman Lectures of Maxwell Equations](http://feynmanlectures.caltech.edu/II_18.html)
 
 ### Control
@@ -50,7 +49,6 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 * [What matrices actually are](https://nolaymanleftbehind.wordpress.com/2011/07/10/linear-algebra-what-matrices-actually-are/)
 * [An Intuitive Guide to Linear Algebra](http://betterexplained.com/articles/linear-algebra-guide/)
 * [Eigenvectors and Eigenvalues](http://setosa.io/ev/eigenvectors-and-eigenvalues/)
-* [A Beginner’s Guide to Eigenvectors, Covariance and Entropy](http://deeplearning4j.org/eigenvector)
 * [Intuitive Math](https://intuitive-math.club/)
 
 ### Probability
@@ -65,7 +63,6 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 * [Kalman and Bayesien Filters](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
 * [Visual Explanation of Markov Chains](http://setosa.io/blog/2014/07/26/markov-chains/index.html)
 * [Markov Chains](http://jeremykun.com/2015/04/06/markov-chain-monte-carlo-without-all-the-bullshit/)
-* [Understanding the Basis of the Kalman Filter ](https://www.cl.cam.ac.uk/~rmf25/papers/Understanding%20the%20Basis%20of%20the%20Kalman%20Filter.pdf)
 
 ### The Feynman Lectures on Physics
 
