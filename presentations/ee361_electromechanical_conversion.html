@@ -112,18 +112,33 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ![](https://raw.githubusercontent.com/ozank/ee361/master/images/emec_horizontal.png)
 ---
+
 # Energy Balance
 
-### \\(W\_{electrical} = W\_{magnetic} + W\_{mechanical}\\)
+### Ignore resistive and friction losses
 --
 
-##  \\(i\dfrac{d\lambda}{dt} = \dfrac{W\_{magnetic}}{dt} + f \dfrac{dx}{dt}\\)
+### \\(\Delta W\_{electrical} = \Delta W\_{magnetic} + \Delta W\_{mechanical}\\)
 --
 
-## \\(W\_{magnetic} = i d\lambda - f dx\\)
+
+### \\( Vi\, \mathrm{d}t = i \, \mathrm{d}\lambda = \Delta W\_{magnetic} +  f_{mech} \, \mathrm{d}x\\)
+
+### or
 --
 
-###  \\(e i \, \mathrm{d}t = \dfrac{W\_{magnetic}}{dt} + f \dfrac{dx}{dt}\\)
+## \\( \Delta W\_{magnetic} =  i \, \mathrm{d}\lambda -  f_{mech} \, \mathrm{d}x\\)
+
+---
+# Energy Balance
+## Same can be obtained from the power relations
+
+
+## \\( \dfrac{\partial W\_{magnetic}}{\partial t}  =  V.i - f_{mech} \dfrac{\partial x}{\partial t} \\)
+--
+
+## \\( \dfrac{\partial W\_{magnetic}}{\partial t}  =  i \dfrac{\partial \lambda}{\partial t} - f_{mech} \dfrac{\partial x}{\partial t} \\)
+
 ---
 
 # Review: Magnetic Energy
@@ -146,7 +161,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## Magnetic Energy = Magnetic Co-Energy
 --
 
-## Magnetic Energy + Co-Energy = \\(\lambda i\\)
+## Magnetic Energy + Magnetic Co-Energy = \\(\lambda i\\)
 --
 
 ### Thus (only in linear systems)
