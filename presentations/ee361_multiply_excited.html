@@ -56,7 +56,12 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 
 ---
-# What is the torque with a cylindrical rotor?
+# What is the torque in the following systems?
+
+## a) If Coil#1 is excited only,
+
+## b) If Coil#2 is excited only,
+
 
 ---
 # What is the torque?
@@ -75,12 +80,15 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 <img src="https://raw.githubusercontent.com/ozank/ee361/master/images/salient_rotor.jpg" alt="Drawing" style="width: 300px;"/>
 ---
 # Multiply-Excited Systems
+
+## What happens if both of the coils are excited?
+
 <img src="https://raw.githubusercontent.com/ozank/ee361/master/images/multiply_excited.png" alt="Drawing" style="width: 700px;"/>
 
 ---
 # Multiply-Excited Systems
 <img src="https://raw.githubusercontent.com/ozank/ee361/master/images/multiply_excited_block.jpg" alt="Drawing" style="width: 700px;"/>
-### Electrical Energy = Magnetic Energy + Mechanical Energy
+## Electrical Energy = Magnetic Energy + Mechanical Energy
 --
 
 ### \\(dW\_{mag} (\lambda\_1,\lambda\_2,\theta) = i\_1 d\lambda\_1 + i\_2d\lambda\_2 - T d\theta\\)
@@ -90,11 +98,16 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 <img src="https://www.electrical4u.com/images/february16/1456131982.gif" alt="Drawing" style="width: 600px;"/>
 
 ### Write down the voltage equation of Inductor 2.
+
 ---
 # What is the stored energy in coil1?
-### \\(W\_{mag1}= \dfrac{1}{2}i^2 L\\) ??
+
+### \\(W\_{mag1}= \dfrac{1}{2}i^2 L\\) 
 --
-Not Correct!
+ \\(\quad \rightarrow\\) Not Correct!
+
+--
+
 ### \\(dW\_{mag1}= i\_1 d\lambda\_1 \\)
 --
 
@@ -102,17 +115,17 @@ Not Correct!
 
 ---
 # Total stored energy (coil1+coil2)?
-### \\(dW\_{mag}= i\_1 d\lambda\_1 + i\_2d\lambda\_2 \\)
+## \\(dW\_{mag}= i\_1 d\lambda\_1 + i\_2d\lambda\_2 \\)
 --
 
-### \\(dW\_{mag}= i\_1 (L\_{11}di\_1  + L\_{12}di\_2)\\)
-###\\(\quad\quad\quad+ i\_2 (L\_{22}di\_2  + L\_{21}di\_1) \\)
+## Or it can be written as:
 --
 
-### \\(W\_{mag}=\int dW\_{mag} \\)
-### \\(= \dfrac{1}{2} L\_{11}i\_1^2 + \dfrac{1}{2} L\_{22}i\_2^2 +  M i\_1 i\_2\\)
+## \\(W\_{mag}=\int dW\_{mag} \\)
+## \\(= \dfrac{1}{2} L\_{11}i\_1^2 + \dfrac{1}{2} L\_{22}i\_2^2 +  M i\_1 i\_2\\)
 ---
 # Stored Energy in Matrix Form
+--
 
 ### \\(W\_{mag}=\dfrac{1}{2}  \begin{bmatrix}  i\_1 & i\_2  \end{bmatrix} \begin{bmatrix}  L\_{11} & M \\\ M & L\_{22} \end{bmatrix} \begin{bmatrix}  i\_1 \\\ i\_2  \end{bmatrix}\\)
 --
@@ -127,7 +140,8 @@ Not Correct!
 
 ---
 # Torque in Multiply Excited Sytems
-## Inductance is a function of position
+## still depends on the derivative of \\(W\_{mag}\\)
+--
 
 ### \\(T\_{mech}= \dfrac{1}{2} \dfrac{dL\_{11}}{d\theta}i\_1^2 + \dfrac{1}{2} \dfrac{dL\_{22}}{d\theta}i\_2^2\\)
 ### \\(\quad\quad\quad + \dfrac{dM}{d\theta} i\_1 i\_2\\)
@@ -156,7 +170,9 @@ Not Correct!
 
 ### \\(T=\dfrac{1}{2}i\_1^2 \dfrac{\partial L\_{11}}{\partial \theta} + i\_1 i\_2 \dfrac{\partial M}{\partial \theta}\\) : (\\(L\_{22}\\) constant)
 ---
-# Some Mechanics:
+# Combination with Mechanical Systems:
+--
+
 ## Linear and Rotational Motion
 
 
@@ -175,9 +191,9 @@ Not Correct!
     <th class="tg-031e"></th>
   </tr>
   <tr>
-    <td class="tg-vn4c">X: Displacement (m)<br></td>
+    <td class="tg-vn4c">X: (m)<br></td>
     <td class="tg-vn4c"></td>
-    <td class="tg-vn4c">(θ): Angular Displacement (radians)</td>
+    <td class="tg-vn4c">(θ): (radians)</td>
     <td class="tg-vn4c"></td>
   </tr>
   <tr>
@@ -212,10 +228,14 @@ Not Correct!
 ![](http://upload.wikimedia.org/wikipedia/commons/9/9d/Simple_harmonic_oscillator.gif)
 ---
 # Dynamic Equations: Ideal Spring
-## \\(F = k (x - x_0)\\): No energy dissipation (~Ideal Inductor)
+
 ![](http://upload.wikimedia.org/wikipedia/commons/9/9d/Simple_harmonic_oscillator.gif)
+## \\(F = k (x - x_0)\\): No energy dissipation (~Ideal Inductor)
+
 ---
 # Dynamic Equations: Damping
+--
+
 <img src="http://www.maplesoft.com/view.aspx?SI=3926/forced_oscillations125.gif" alt="Drawing" style="width: 400px;"/>
 --
 
@@ -237,6 +257,23 @@ Not Correct!
 
 ## \\(f\_{mech} = M \dfrac{d^2 x}{d^2  t} + B \dfrac{dx}{dt} \\)
 ## \\(\quad \quad \quad + k (x-x\_0) + f\_{external} \\)
+
+---
+# Bose's Active Suspension System
+
+<img src="https://www.extremetech.com/wp-content/uploads/2011/09/Bose-suspension-system-6_edited.jpg" alt="Drawing" style="width: 600px;"/>
+
+### [Bose suspension system](https://www.youtube.com/watch?v=3KPYIaks1UY), [Bose suspension will be mass produced](https://www.digitaltrends.com/cars/boses-revolutionary-adaptive-suspension-gets-a-reboot-for-2019/)
+
+
+---
+# Bose Ride
+
+<img src="https://www.extremetech.com/wp-content/uploads/2017/11/Bose-truck-seat-15C466_008-Edit2-640x354.jpg" alt="Drawing" style="width: 600px;"/>
+
+### [Bose Ride](https://youtu.be/fFiBoIlHLKA?t=95), [Bose ride presentation](https://www.youtube.com/watch?v=wQSNlJEdOZE), [Truck Driver comments-1](https://youtu.be/L1RyhBzS3PU?t=70), [Truck Driver comments-2](https://youtu.be/iFzdHUJOv1g?t=40)
+
+
 ---
 # How do satellites align themselves?
 
