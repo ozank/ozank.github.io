@@ -45,7 +45,7 @@ class: center, middle
 # Requirements
 --
 
-- ## Supply enough current/voltage for switching (device specific, can be unipolar or bi polar)
+- ## Supply enough current/voltage for switching (device specific, can be unipolar or bipolar)
 --
 
 - ## Minimize turn-on, turn-off times
@@ -54,7 +54,7 @@ class: center, middle
 - ## Isolate the low voltage logic from high voltage side
 --
 
-- ## In some cases protection is embedded (death-time, over-current, temp etc)
+- ## In some cases protection is embedded (dead-time, over-current, over-temp etc)
 
 ---
 ## (Galvanic) Isolation: 
@@ -67,10 +67,6 @@ No direct electric contact between two sides
 <img src="https://www.allaboutcircuits.com/uploads/articles/TransformerSMDVariety.jpg" alt="Drawing" style="width: 450px;"/>
 
 ### Isolation Transformers
----
-
-<img src="http://www.powerguru.org/wordpress/wp-content/uploads/2012/11/IGBT-half-bridge-driver.jpg" alt="Drawing" style="width: 750px;"/>
-
 
 ---
 ## (Galvanic) Isolation: 
@@ -100,7 +96,7 @@ No direct electric contact between two sides
 ---
 # (Galvanic) Isolation
 
-- ## Capacitors (Less Common)
+- ## Isolation with Capacitor (Less Common)
 
 <img src="https://www.allaboutcircuits.com/uploads/articles/CapacitorIsolatedSchMax256.gif" alt="Drawing" style="width: 550px;"/>
 
@@ -111,7 +107,7 @@ No direct electric contact between two sides
 ## Optic Isolation
 --
 
-<img src="http://www.wikizero.net/index.php?q=aHR0cHM6Ly91cGxvYWQud2lraW1lZGlhLm9yZy93aWtpcGVkaWEvY29tbW9ucy85LzljL09wdG9rb3BwbGVyLmdpZg" alt="Drawing" style="width: 550px;"/>
+<img src="https://www.digikey.com/-/media/Images/Article%20Library/TechZone%20Articles/2017/December/How%20to%20Select%20the%20Right%20Galvanic%20Isolation%20Technology%20for%20IoT%20Sensors/article- 2017december-how-to-select-fig6.jpg" alt="Drawing" style="width: 500px;"/>
 
 ---
 # (Galvanic) Isolation
@@ -132,9 +128,11 @@ No direct electric contact between two sides
 
 - ### [Semikron, IGBT Driver Calculation](https://www.semikron.com/dl/service-support/downloads/download/semikron-application-note-igbt-driver-calculation-en-2007-10-31-rev-00/)
 - ### [Gate Drive Optocouplers](https://www.vishay.com/docs/81227/81227.pdf)
-- ### [Fundamentals of MOSFET and IGBT Gate Driver Circuits](http://www.ti.com/lit/ml/slua618/slua618.pdf)
+- ### [Fundamentals of MOSFET and IGBT Gate Driver Circuits](http://www.ti.com/lit/ml/slua618a/slua618a.pdf)
 - ### [IGBT and MOSFET Drivers Correctly Calculated](https://gate-driver.power.com/sites/default/files/product_document/application_note/AN-1001_IGBT_and_MOSFET_Drivers_Correctly_Calculated.pdf)
 - ### [MOSFET/IGBT Drivers Theory and Applications](http://www.ixysic.com/home/pdfs.nsf/www/AN-401.pdf/$file/AN-401.pdf)
+- ### [Noise Reduction and Isolation](https://www.mccdaq.com/PDFs/specs/Noise-Reduction.pdf)
+- ### [The Importance of Isolation](https://www.acromag.com/sites/default/files/The%20Importance%20of%20Isolation_1.pdf)
 ---
 
 ## Considerations/Problems
@@ -142,7 +140,10 @@ No direct electric contact between two sides
 
 - ### Minimize Stray Inductance
 
-<img src="http://www.powerguru.org/wordpress/wp-content/uploads/2012/06/Gate-driver-connection-and-stray-inductances.jpg" alt="Drawing" style="width: 600px;"/>
+<img src="./images/ee463/stray_inductance.png" alt="Drawing" style="width: 600px;"/>
+
+
+### [Connection of Gate Drivers to IGBT and Controller](https://www.semikron.com/dl/service-support/downloads/download/semikron-application-note-connection-of-gate-drivers-to-igbt-and-controller-en-2006-09-05-rev-00.pdf)
 
 ---
 ## Considerations/Problems
@@ -150,7 +151,6 @@ No direct electric contact between two sides
 - ### Minimize Cable Inductance/Coupling
 
 <img src="https://blog.tripplite.com/wp-content/uploads/2016/09/utp-and-stp.jpg" alt="Drawing" style="width: 400px;"/>
-
 
 ---
 
@@ -161,6 +161,11 @@ No direct electric contact between two sides
 
 <img src="http://www.powerguru.org/wordpress/wp-content/uploads/2012/06/Gate-driver-connection-and-stray-inductances.jpg" alt="Drawing" style="width: 600px;"/>
 
+- ### [PCB Layout for EMC](https://www.powerelectronicsnews.com/problems-solutions/pcb-layout-for-emc-power-supply-design-tutorial-section-3-1)
+
+- ### [High Speed PCB Layout Techniques](http://www.ti.com/lit/ml/slyp173/slyp173.pdf)
+
+- ### [PCB Design Issues](https://www.analog.com/media/en/training-seminars/design-handbooks/Basic-Linear-Design/Chapter12.pdf)
 ---
 
 ## Considerations/Problems
