@@ -8,6 +8,8 @@ For more information about current project and theses, please visit [PowerLab](h
 
 ## Completed MSc Theses
 
+- Erencan Duymaz, *Investigation of Inertial Support Limits in Wind Turbines and the Effects in the Power System Stability*, 2019
+- Aysel Akgemci, *Hybrid Excited Synchrnous Generator Design and Comparison of Direct Drive Wind Turbines*, 2019
 - Doğa Ceylan, *Electromagnetic Simulation and Optimization of an Electromagnetic Launcher*, 2018
 - Mert Bildirici, *Reducing the Cost of Electric Transmission and Distribution Systems with Wind Generation by Means of Energy Storage and Demand Side Management*, 2018
 - Aydın Başkaya, *Design of a Modular, Axial-flux Direct Drive Permanent
@@ -26,11 +28,11 @@ Magnet Generator For Wind Turbines*, 2018
 
 ## Ongoing MSc Theses
 
-- Erencan Duymaz, *Contributing Grid Frequency by Using Synthetic Inertia Implementation in Wind Turbines Coupled to Grid via Power Electronics*
-- Aysel Akgemci, *Hybrid Excited Synchrnous Generator Design and Comparison of Direct Drive Wind Turbines*
 - Hakan Temiz, *Grid Impedance Estimation Based Adaptive Controller Design for Back-to-Back Wind Turbine Power Converters for Stable Operation in Distorted and Weak Grid*
 - Furkan Karakaya, *Characterization of Enhancement Mode Gallium Nitride(GaN) Power Transistors and Implementation of Gan Power Transistors on Integrated Modular Motor Drive System*
 - Gökhan Çakal, *Design and Implementation of Coreless Axial Flux Permanent Magnet Motor With Printed Circuit Board Windings*
 - Mehmet Kaan Mutlu, *Limited-jerk Sinusoidal Trajectory Design for Field Oriented Control of Permanent Magnet Synchronous Motor With H-infinity Optimal Controller*
 - Aykut Demirel, *Condition Monitoring and Fault Diagnosis of Electrical Motor Drive Systems*
 - Lütfi Boyacı, TBA
+- Göksenin Hande Bayazıt, TBA
+- Hakan Polat, TBA
