@@ -309,7 +309,7 @@ Minimum EMI Problems
 
 <img src="./images/ee464/forward_converter.png" alt="Drawing" style="width: 700px;">
 
-## What happens at the instant switch is off, it the transformer is not ideal?
+## What happens at the instant switch is off, if the transformer is not ideal?
 
 ---
 # Forward Converter
@@ -379,12 +379,6 @@ Minimum EMI Problems
 \\(=\dfrac{1}{1+ (N\_3 / N\_1)}\\)
 
 ---
-### Same with the ideal case:
-
-### D1 On
-### D2 Off
-### D3 Off 
----
 ### What happens if D is large, and transformer does not reset completely?
 --
 
@@ -393,6 +387,37 @@ Minimum EMI Problems
 #### In the figure Dmax=0.5
 
 ### Saturation, increased core losses, reduced Lm
+
+---
+# Advantages over Flyback
+--
+
+- ## Better utilization of transformer (direct power transfer)
+--
+
+- ## A gapless core can be used (higher Lm, less ripple)
+--
+
+- ## Output inductor and diode ensures continious output current
+
+---
+# Drawbacks compared to Flyback
+--
+
+- ## Increased cost (extra diode and inductor)
+--
+
+- ## Gain changes a lot in DCM
+--
+
+- ## Higher voltage requirement for MOSFET
+
+---
+# Example:
+
+## Hart - Power Electronics 
+## Ex. 7-4
+
 ---
 # Forward Converter Alternatives
 --
