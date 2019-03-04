@@ -319,6 +319,30 @@ Minimum EMI Problems
 ## A discharging path for Lm should be added.
 
 ---
+# Simple Solution: RCD Reset Circuit
+
+<img src="./images/ee464/forward_rcd.png" alt="Drawing" style="width: 750px;">
+
+## Magnetizing current dissipates through RCD circuit
+
+---
+# Simple Solution: RCD Reset Circuit
+
+<img src="./images/ee464/forward_rcd.png" alt="Drawing" style="width: 750px;">
+
+## Cheap but inefficient
+
+---
+# Flyback Snubber
+
+### Note a similar circuit can be applied for Flyback converter (to reduce inductance leakage ringing)
+--
+
+<img src="./images/ee464/flyback_rcd.png" alt="Drawing" style="width: 450px;">
+
+### Suggested Reading: [Flyback Converter Snubber Design](http://ridleyengineering.com/images/phocadownload/12%20flyback%20snubber%20design.pdf)
+
+---
 # Pratical Forward Converter
 
 <img src="./images/ee464/practical_forward.png" alt="Drawing" style="width: 800px;">
@@ -392,7 +416,7 @@ Minimum EMI Problems
 # Advantages over Flyback
 --
 
-- ## Better utilization of transformer (direct power transfer)
+- ## Better utilization of transformer (direct power transfer, higher)
 --
 
 - ## A gapless core can be used (higher Lm, less ripple)
@@ -466,6 +490,14 @@ Minimum EMI Problems
 ##  Interleaved forward converter
 
 <img src="./images/ee464/interleaved_forward.png" alt="Drawing" style="width: 750px;">
+
+---
+# Forward Converter Reading Materials
+
+- ## [Infineon, Forward Converter Design Note](http://www.digikey.com/web%20export/supplier%20content/Infineon_448/mkt/coolMOS/SingleXTRForward.pdf?redirected=1)
+
+- ## [Fairchild Forward Converter Application Note](https://www.onsemi.com/pub/Collateral/AN-4134.PDF)
+
 ---
 # Push-Pull Converter
 --
