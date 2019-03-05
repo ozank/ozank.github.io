@@ -8,6 +8,7 @@ permalink: /presentations/index.html
 
 ### 2019
 
+* [ENDAM- Challenges for a Fully Renewable Energy Future](https://docs.google.com/presentation/d/1_RuHiM3fBTx6oXBOEbdC7_YDyQ2r3Wt_9Hp45ol16bQ/edit?usp=sharing)
 * [GUNAM TFTP](https://docs.google.com/presentation/d/1Z4aawwq5_q1mbri9NWmNpKga5N6wM8xCRvLj-cYBEus/edit?usp=sharing)
 
 
