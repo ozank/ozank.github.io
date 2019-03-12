@@ -4,10 +4,10 @@ title: Courses
 permalink: /courses/index.html
 ---
 
-## This Semester (Fall 2018)
+## This Semester (Spring 2018)
 
-- [EE361](/ee361): Electromechanical Energy Conversion-II
-- [EE463](/ee463): Static Power Conversion-I
+- [EE362](/ee362): Electromechanical Energy Conversion-II
+- [EE464](/ee464): Static Power Conversion-II
 
 ## Past Courses
 
