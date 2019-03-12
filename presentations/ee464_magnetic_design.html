@@ -35,9 +35,9 @@ class: center, middle
 # Review of Magnetic Circuits
 --
 
-- ### [EE361-Inductors](http://keysan.me/presentations/ee361_magnetic_energy.html)
 
-- ### [EE361-Practical Transformers](http://keysan.me/presentations/ee361_practical_transformers.html)
+
+
 
 - ### [EE564-Transformer Design](http://keysan.me/presentations/ee564_transformer_design.html)
 
@@ -47,13 +47,186 @@ class: center, middle
 
 # Transformer Design
 
+## References:
+
 - ### [Mohan, Design of Magnetic Components](https://www.dropbox.com/s/f8v8gi9q6kf51cd/Ch30.pdf?dl=1)
 
 - ### [Erickson, Inductor Design](http://ecee.colorado.edu/~ecen5797/course_material/Ch14slides.pdf)
 
 - ### [Erickson, Transformer Design](http://ecee.colorado.edu/~ecen5797/course_material/Ch15slides.pdf)
+---
+
+# Inductor Design
+--
+
+- ## Magnetic Design: Calculating B, H, magnetic energy
+--
+
+- ## Electrical Design: Choosing number of turns, copper size, wire type, current density
+--
+
+- ## Parameter Estimation: Inductance, Leakage, Resistance
+--
+
+- ## Thermal: Losses, Efficiency
+---
+
+# Typical Core
+
+<img src="./images/ee464/typical_core.png" alt="Drawing" style="width: 300px;">
 
 ---
+# Core Types
+
+- ## U, I Core
+
+- ## E Core
+
+- ## Toroid Core
+
+- ## Pot Core
+
+---
+# Core Materials
+
+- ## Ferrites
+
+- ## Laminated Electrical Sheets
+
+- ## Kool Mu Powder
+
+- ## Metglass
+
+- ## Powdered Iron
+
+---
+
+## Core Bobbin
+
+<img src="./images/ee464/core_bobbin.jpg" alt="Drawing" style="width: 350px;">
+
+### [Karkas Çeşitleri](http://www.kaptanplastik.com/igneliferit2.php)
+
+### [Coil Winding](https://www.youtube.com/watch?v=2ttzm1itctA), [toroidal winding](https://www.youtube.com/watch?v=82PpCzM2CUg)
+---
+
+## E-Core
+
+<img src="./images/ee464/e_core.jpg" alt="Drawing" style="width: 500px;">
+
+### [Nüve Çeşitleri](http://www.ferritnuve.com/eferritnuve.html)
+
+---
+
+## Pot Core
+
+<img src="./images/ee464/pot_core.jpg" alt="Drawing" style="width: 500px;">
+
+
+
+
+---
+# Inductor Fundamentals
+
+## Review of Magnetic Circuits
+
+- ### [EE361-Inductors](http://keysan.me/presentations/ee361_magnetic_energy.html)
+
+- ### [EE564 Design Exercise](http://keysan.me/presentations/ee564_intro2.html#103)
+
+- ### [EE361-Practical Transformers](http://keysan.me/presentations/ee361_practical_transformers.html)
+
+---
+# Winding Design
+--
+
+- ## Winding area, copper area
+--
+
+- ## Fill Factor (\\(k_{cu}\\))
+--
+
+- ### \\(k_{cu} = 0.3\\) for Litz wire
+
+- ### \\(k_{cu} = 0.6\\) for round wire
+
+- ### \\(k_{cu} = 0.7-0.8\\)  for rectangular wire
+---
+
+# Core Loss
+
+<img src="./images/ee464/core_loss.png" alt="Drawing" style="width: 360px;">
+
+### Typical core loss for a power ferrite
+
+---
+
+# Core Loss
+
+### Steinmetz's Equation
+--
+
+# \\(P\_{fe} = K\_{fe} f^{\alpha} (\Delta B)^{\beta} A\_c l\_c\\)
+
+### Usually the constants are given in the datasheet
+
+### Alternatively core loss graphs can be available
+
+---
+# Skin Effect
+
+### For 100 C copper resistivity:
+--
+
+## \\(\delta = \dfrac{7.5}{\sqrt{f}}\\) cm
+
+---
+
+# Skin Depth
+
+<img src="./images/ee464/skin_depth.png" alt="Drawing" style="width: 800px;">
+
+---
+# Proximity Effect
+
+### Current loss induced by adjacent coils
+--
+
+<img src="./images/ee464/proximity1.png" alt="Drawing" style="width: 300px;">
+
+### Coil-1 carries a high frequency current, Coil-2 open circuited.
+
+---
+
+<img src="./images/ee464/proximity2.png" alt="Drawing" style="width: 420px;">
+
+### Increased copper loss
+
+---
+# Leakage Flux
+--
+
+<img src="./images/ee464/leakage_flux.png" alt="Drawing" style="width: 750px;">
+
+---
+# Leakage Flux
+
+## MMF Distribution
+
+<img src="./images/ee464/mmf_distribution.png" alt="Drawing" style="width: 420px;">
+
+---
+
+# Interleaving Windings
+--
+
+## Can help to reduce proximity effect and leakage
+
+<img src="./images/ee464/interleaved_winding.png" alt="Drawing" style="width: 600px;">
+
+
+---
+
 # How to use an RLC Meter?
 --
 
