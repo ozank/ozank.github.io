@@ -8,6 +8,7 @@ permalink: /presentations/index.html
 
 ### 2019
 
+* ODTÜ Mezunlar Derneği, [Enerji Depolama Yöntemleri](https://docs.google.com/presentation/d/1_vyIHpHjM90DZ1R0_RNg_VKtxRctPFPoKOO38YvkvMQ/edit?usp=sharing)
 * [Rüzgar Enerjisi ve Rüzgar Türbin Teknolojileri Eğitimi - Elektrik Sistemleri](https://docs.google.com/presentation/d/13bMPwupbUET2rmQQ0zSDaDFp-7CJlpCfeYGVjoyTKdA/edit?usp=sharing)
 * [EEE Induction Course](https://docs.google.com/presentation/d/1JCqtuRon5vijhvEgf8jFXxTzkMPWUpWm69IyYhGnP-o/edit?usp=sharing)
 * [ENDAM- Challenges for a Fully Renewable Energy Future](https://docs.google.com/presentation/d/1_RuHiM3fBTx6oXBOEbdC7_YDyQ2r3Wt_9Hp45ol16bQ/edit?usp=sharing)
