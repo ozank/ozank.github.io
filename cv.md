@@ -202,12 +202,16 @@ For a full list of courses that I taught please visit my [Courses](/courses) web
 
 ## Publications
 
-<script src="http://bibbase.org/show?bib=http://bibbase.org/mendeley2/363361&groupby=type&jsonp=1&folding=1&authorFirst=1"></script> 
+<script src="https://bibbase.org/show?bib=https%3A%2F%2Fraw.githubusercontent.com%2Fozank%2Fcv%2Fmaster%2FTR-CV%2Fozan_publications.bib&groupby=year&jsonp=1&folding=0&authorFirst=1"></script> 
 
 ## Theses Supervised
 
 For on going theses, please visit [theses](/theses) page.
 
+- Lütfi Boyacı, *Proton Irradiation and Gamma Ray Irradiation Testing Studies on the Commercial Grade GaNFETs to Investigate their Characteristics under the Space Radiation Environment*, 2019
+- Aykut Demirel, *Condition Monitoring and Fault Diagnosis of Electrical Motor Drive Systems*, 2019
+- Mehmet Kaan Mutlu, *Limited-jerk Sinusoidal Trajectory Design for Field Oriented Control of Permanent Magnet Synchronous Motor With H-infinity Optimal Controller*, 2019
+- Hakan Temiz, *Grid Impedance Estimation Based Adaptive Controller Design for Back-to-Back Wind Turbine Power Converters for Stable Operation in Distorted and Weak Grid*, 2019
 - Erencan Duymaz, *Investigation of Inertial Support Limits in Wind Turbines and the Effects in the Power System Stability*, 2019
 - Aysel Akgemci, *Hybrid Excited Synchrnous Generator Design and Comparison of Direct Drive Wind Turbines*, 2019
 - Doğa Ceylan, *Electromagnetic Simulation and Optimization of an Electromagnetic Launcher*, 2018

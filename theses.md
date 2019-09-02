@@ -8,6 +8,10 @@ For more information about current project and theses, please visit [PowerLab](h
 
 ## Completed MSc Theses
 
+- Lütfi Boyacı, *Proton Irradiation and Gamma Ray Irradiation Testing Studies on the Commercial Grade GaNFETs to Investigate their Characteristics under the Space Radiation Environment*, 2019
+- Aykut Demirel, *Condition Monitoring and Fault Diagnosis of Electrical Motor Drive Systems*, 2019
+- Mehmet Kaan Mutlu, *Limited-jerk Sinusoidal Trajectory Design for Field Oriented Control of Permanent Magnet Synchronous Motor With H-infinity Optimal Controller*, 2019
+- Hakan Temiz, *Grid Impedance Estimation Based Adaptive Controller Design for Back-to-Back Wind Turbine Power Converters for Stable Operation in Distorted and Weak Grid*, 2019
 - Erencan Duymaz, *Investigation of Inertial Support Limits in Wind Turbines and the Effects in the Power System Stability*, 2019
 - Aysel Akgemci, *Hybrid Excited Synchrnous Generator Design and Comparison of Direct Drive Wind Turbines*, 2019
 - Doğa Ceylan, *Electromagnetic Simulation and Optimization of an Electromagnetic Launcher*, 2018
@@ -28,11 +32,11 @@ Magnet Generator For Wind Turbines*, 2018
 
 ## Ongoing MSc Theses
 
-- Hakan Temiz, *Grid Impedance Estimation Based Adaptive Controller Design for Back-to-Back Wind Turbine Power Converters for Stable Operation in Distorted and Weak Grid*
 - Furkan Karakaya, *Characterization of Enhancement Mode Gallium Nitride(GaN) Power Transistors and Implementation of Gan Power Transistors on Integrated Modular Motor Drive System*
 - Gökhan Çakal, *Design and Implementation of Coreless Axial Flux Permanent Magnet Motor With Printed Circuit Board Windings*
-- Mehmet Kaan Mutlu, *Limited-jerk Sinusoidal Trajectory Design for Field Oriented Control of Permanent Magnet Synchronous Motor With H-infinity Optimal Controller*
-- Aykut Demirel, *Condition Monitoring and Fault Diagnosis of Electrical Motor Drive Systems*
-- Lütfi Boyacı, TBA
-- Göksenin Hande Bayazıt, TBA
-- Hakan Polat, TBA
+- Göksenin Hande Bayazıt, *Design and Optimization of a Multiphase Fault Tolerant Permanent Magnet Synchronous Machine*
+- Hakan Polat, *Wireless Charger for Electrical Vehichles Using LLC Resonant Converter*
+- Hakan Saraç, *Control of Fault Tolerant Electrical Machines for Traction Applications*
+- Furkan Tokgöz, TBD
+- Enes Ayaz, TBD
+- Nail Tosun, TBD
