@@ -58,6 +58,8 @@ permalink: /cv/index.html
 
 ## Academic-Administrative Work
 
+- [Vice Chair, METU Electrical & Electronics Eng. Dept.](https://eee.metu.edu.tr), (2018-2019)
+
 - [Advisor to Dean](https://muhfd.metu.edu.tr/), (2016-2018)
 
 - [METU-Wind Center](http://ruzgem.metu.edu.tr/), Member of the Executive Board
@@ -65,6 +67,8 @@ permalink: /cv/index.html
 - [Design Factory](http://tdi.metu.edu.tr), Member of the Executive Board
 
 - Associate Editor, [IET Renewable Power Generation](http://digital-library.theiet.org/content/journals/iet-rpg)
+
+- Associate Editor, [Turkish Journal of Electrical Engineering & Computer Sciences](https://journals.tubitak.gov.tr/elektrik/index.htm)
 
 - Rapporteur, EU [Cost Action](http://www.cost.eu/)
 
@@ -78,8 +82,12 @@ My main area of interests are renewable energy, design of electric machines, and
 
 For more details please visit the [My Projects](/projects) page.
 
+|2016-2019| ASELSAN Rail-Gun Project| Electromagnetic Design and Optimization of a 200kJ-2MJ Electromagnetic Launcher.|
+|2018-2019| USTDA | USA Trade and Development Agency, METU Smart Campus Project.|
+|2017-2019| TUBITAK 3501 | Development of a 7,5 kW Permanent Magnet Integrated Modular Motor Drive System.|
+|2017-2018| ASELSAN MGEO | Design of a high performance linear servo actuator and PCB Motor.|
+|2017-2018| EnerjiSa-H2020 Project | Pattern Recognition in Power Systems.|
 |2017| ASELSAN MW Wind Turbine| Feasibility analysis and design of a MW sized direct-drive wind turbine generator.|
-|2016-2017| ASELSAN Rail-Gun Project| Electromagnetic Design and Optimization of a 200kJ-2MJ Electromagnetic Launcher.|
 |2016| BAP| Design of a Modular Data Acqusition Board.|
 |2016| Andar Servo| Design and Manufacturing of a Eddy Current Damper for Aeorospace Application|
 |2016| Andar Servo| Design and Manufacturing of a Brushless PM Servo Motor.|
@@ -102,8 +110,10 @@ For a full list of courses that I taught please visit my [Courses](/courses) web
 
 - EE281: Electric Circuits
 - EE361: Electromechanical Energy Conversion-I
-- EE362: Electromechanical Energy Conversion-2
+- EE362: Electromechanical Energy Conversion-II
 - EE462: Utilization of Electrical Energy
+- EE463: Static Power Conversion-I
+- EE464: Static Power Conversion-II
 - EE564: Design of Electrical Machines
 - ID403: Collaborative Design Studio
 
@@ -137,6 +147,8 @@ For a full list of courses that I taught please visit my [Courses](/courses) web
 
 
 ## Honours & Awards
+
+|2018 | Educator of the Year, METU, *Parlar Foundation*. |
 |2018 | Best Lecturer, 2017-2018 Spring semester (based on student evaluations), *METU*. |
 |2017 | Best Lecturer, 2017-2018 Fall semester (based on student evaluations), *METU*. |
 2017 & Best Poster Award, Renewable Energy and Energy Efficiency Conference, *DAAD*. |
@@ -175,7 +187,7 @@ For a full list of courses that I taught please visit my [Courses](/courses) web
 
 - **Analysis:** R, Matlab, C++, Python.
 - **FEA:** ANSYS Maxwell,  Comsol, Opera, FEMM.
-- **CAD:** SolidWorks, AutoCad.
+- **CAD:** SolidWorks, KiCAD.
 - **Other:** LaTeX, [Github](http://github.com/ozank).
 
 ## Activities & Hobbies
@@ -196,6 +208,8 @@ For a full list of courses that I taught please visit my [Courses](/courses) web
 
 For on going theses, please visit [theses](/theses) page.
 
+- Erencan Duymaz, *Investigation of Inertial Support Limits in Wind Turbines and the Effects in the Power System Stability*, 2019
+- Aysel Akgemci, *Hybrid Excited Synchrnous Generator Design and Comparison of Direct Drive Wind Turbines*, 2019
 - Doğa Ceylan, *Electromagnetic Simulation and Optimization of an Electromagnetic Launcher*, 2018
 - Mert Bildirici, *Reducing the Cost of Electric Transmission and Distribution Systems with Wind Generation by Means of Energy Storage and Demand Side Management*, 2018
 - Aydın Başkaya, *Design of a Modular, Axial-flux Direct Drive Permanent
