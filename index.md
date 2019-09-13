@@ -3,7 +3,7 @@ layout: home
 title: Ozan Keysan
 ---
 
-**Current Courses: [EE362](/ee362) <span class="meta">&#8226;</span> [EE464](/ee464)**
+**Current Courses: [EE361](/ee361) <span class="meta">&#8226;</span> [EE463](/ee463)**
 
 **Research Group: [METU PowerLab](http://power.eee.metu.edu.tr/)**
 
@@ -30,7 +30,7 @@ You can find a few [software tips](/tips). Also, I collect [these links](/explai
 </script>
 
 <span class="meta">&#8226;</span>
-(+90 312) 210 7586 (or 2303) <span class="meta">&#8226;</span>  <a href="https://goo.gl/maps/R5v5jXpoozx">C-113</a> (or D-104) </p>
+(+90 312) 210 7586 <span class="meta">&#8226;</span>  <a href="https://goo.gl/maps/R5v5jXpoozx">C-113</a> </p>
 
 #### Research Interests
 
