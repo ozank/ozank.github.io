@@ -22,6 +22,7 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 ### Fourier Transform
 
 * [An interactive Guide to the Fourier Transform](http://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/)
+* [An interactive tutorial on Fourier Series](http://www.jezzamon.com/fourier/)
 * [Fourier Transform for Dummies](https://math.stackexchange.com/questions/1002/fourier-transform-for-dummies)
 * [The Math Trick Behind MP3s, JPEGs](http://nautil.us/blog/the-math-trick-behind-mp3s-jpegs-and-homer-simpsons-face)
 * [Discrete Cosine Transformations](http://www.datagenetics.com/blog/november32012/index.html)

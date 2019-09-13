@@ -9,10 +9,10 @@ permalink: /tips/index.html
 Here are some software that I use (and recommend):
 
 * [Mendeley](http://www.mendeley.com/) to organize my research papers and references,
-* [GitHub](https://github.com/ozank) for developing and publishing my work, [Dropbox](https://db.tt/eUKTasZ) to synchronize my files,
+* [GitHub](https://github.com/ozank) for developing and publishing my work, [Dropbox](https://db.tt/eUKTasZ) and [Syncthing](https://syncthing.net/)to synchronize my files,
 * [Vim](http://www.makeuseof.com/tag/top-7-reasons-to-give-the-vim-text-editor-a-chance/) for programming and editing text,
-* [LaTeX](http://www.latex-project.org/) to write my papers, reports, dissertation etc.,
-* [R](http://www.r-project.org/), [RStudio](http://www.rstudio.com/) to plot pretty graphs, [Octave](http://www.gnu.org/software/octave/) as a replacement for Matlab, [Python](http://www.python.org/) and [Julia](http://julialang.org/) for serious work,
+* [LaTeX](http://www.latex-project.org/) and [Overleaf](https://www.overleaf.com/signup?ref=3b0bbc32e797) to write papers, thesis etc.,
+* [R](http://www.r-project.org/), [RStudio](http://www.rstudio.com/) to plot pretty graphs, [Octave](http://www.gnu.org/software/octave/) as a replacement for Matlab,
 * [FEMM](http://www.femm.info/wiki/HomePage) and [Opera](http://operafea.com/), [ANSYS Maxwell](http://www.ansys.com/products/electronics/ansys-maxwell), [Comsol](https://www.comsol.com/) for electromagnetic FEA.
 * If you are not sure what to use, check [Digital Research Tools](http://dirtdirectory.org/)
 
@@ -23,10 +23,10 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 
 ## Useful Links
 
-#### Collaborative Writing
+#### LaTeX / Collaborative Writing
 
 * [Overleaf](https://www.overleaf.com/signup?ref=3b0bbc32e797) (LaTeX)
-* [Authorea (LaTeX)](https://authorea.com/)
+* [Mathpix](https://mathpix.com/) (to extract LaTeX equations from PDFs) 
 * [Online Markdown Editor](http://dillinger.io/)
 * [StackEdit](https://stackedit.io/)
 * [Scholarly Markdown](http://scholarlymarkdown.com/)
