@@ -31,7 +31,7 @@ permalink: /presentations/index.html
 
 * GÜNAM, [Power Electronics for PV Systems](/presentations/power_electronics_for_PV.html)
 * [TMMOB, Enerjinin Geleceği Sempozyumu](http://tmmobenerjisempozyumu.org/), [Rüzgar Türbinleri için Yenilikçi Generatör Teknolojileri](https://docs.google.com/presentation/d/1vP-5_YQuELD0dK9h2Nfeuh6tkN_-2SlyAMf_LF2xkxE/edit?usp=sharing)
-* [French-Turkish Innovation Day, METU Technopark](https://www.ftinnovationdays2017.com/), [Smart Campus Projects in METU](https://docs.google.com/presentation/d/1x1pxn8TNPNpuZutw_qd3Hcdr5t0hew08CulHOooWGZs/edit?usp=sharing)
+* French-Turkish Innovation Day, METU Technopark, [Smart Campus Projects in METU](https://docs.google.com/presentation/d/1x1pxn8TNPNpuZutw_qd3Hcdr5t0hew08CulHOooWGZs/edit?usp=sharing)
 * METU, [Practical Aspects of DC Motor and Drives](https://docs.google.com/presentation/d/1XveRzNLUcjYO3Micyx0Hd8ln29yodHI5m_z4AlIQQmo/edit?usp=sharing)
 * METU, [PowerLab Introduction](https://docs.google.com/presentation/d/1BPYdgpPDQjWYKpd2VYRGdAKeLVnbxjC2oZ_ZtTDjsyA/edit?usp=sharing)
 * METU, Newton Fund Offshore Wind Workshop, [Future Generator Technologies for Offshore Wind Turbines](https://docs.google.com/presentation/d/1Z-OeGlsTIpST3BkvIrYIyqnbJWVgmD0mm25EXoVOUmY/edit?usp=sharing)
@@ -54,7 +54,6 @@ permalink: /presentations/index.html
 * Aselsan, [Rüzgar Türbinleri Jeneratör Sistemleri](https://docs.google.com/presentation/d/1GuMfGU77NcYJu3rGbK5eWvilPFw5URcZUiLjTVJkE-Y/edit?usp=sharing)
 * UK MagSoc Event, Edinburgh, Alasdair McDonald [How can electrical machine and drivetrain design influence Offshore Wind Cost of Energy?](https://docs.google.com/presentation/d/1hHpeSlyrqR6OqKgF4uOt2bNV5zqS3j4IMCx7Huad4e0/edit?usp=sharing)
 * UK MagSoc Event, Edinburgh, [Superconducting Technology for Large Offshore Wind Turbines](https://docs.google.com/presentation/d/1uYJwFvBlhV6UWXFh-XtOV2KOcER2-t5Sj5dnYJbyHXU/edit?usp=sharing)
-* AGEP, ODTÜ Kuzey Kıbrıs Sunumu [Milli Sondaj Kulesi Sunumu](http://keysan.me/presentations/kamag.html)
 * ODTÜ Elektrik Müh, [Elektrik Makineleri ve Güç Elektroniği Opsiyon Tanıtımı](https://docs.google.com/presentation/d/128lohMTBVDAOZl9q8SzXT4HCoFsondeH2lE10goHrto/edit?usp=sharing)
 * Ankara Universitesi-CESUR, [Superiletkenliğin eneji alanındaki uygulamaları](https://docs.google.com/presentation/d/1faw8dVxYoz_jsJRa6igICBzAtsH83xKLbax7HoxeY3M/edit?usp=sharing)
 
@@ -70,8 +69,4 @@ permalink: /presentations/index.html
 * [An Introduction to Superconductivity](https://www.dropbox.com/s/xsewffq20o80bqa/idcore2.html?dl=0)
 * [Superconducting Electrical Machines](https://www.dropbox.com/s/1uxbupvpaavsz9j/IDCORE_HTSG_June_2012.ppt?dl=1)
 
-### 2012
-
-* ICSM 2012 my [Poster](https://www.dropbox.com/s/ge572nh3zrmsx88/keysan_ICSM_2012_poster.pdf)
-* [PEMD 2012](http://conferences.theiet.org/pemd/)  my oral [Presentation](https://www.dropbox.com/s/tmrd84gycxktamm/Ozan_Keysan_HTSG_presentation_March_2012_PEMD.ppt)
 

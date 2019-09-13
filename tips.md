@@ -26,8 +26,7 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 #### LaTeX / Collaborative Writing
 
 * [Overleaf](https://www.overleaf.com/signup?ref=3b0bbc32e797) (LaTeX)
-* [Mathpix](https://mathpix.com/) (to extract LaTeX equations from PDFs) 
-* [Online Markdown Editor](http://dillinger.io/)
+* [Mathpix](https://mathpix.com/) (to extract LaTeX equations from PDFs)
 * [StackEdit](https://stackedit.io/)
 * [Scholarly Markdown](http://scholarlymarkdown.com/)
 
