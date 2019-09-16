@@ -39,7 +39,7 @@ This page is intended for my existing graduate students, especially for the new 
 - Although you are free to use any reference management software, I encourage you to use [Mendeley](https://www.mendeley.com/?interaction_required=true). 
 - Join to the [Mendeley PowerLab Group](https://www.mendeley.com/community/power-lab/). It gives you access to a large storage space and you can read the papers added by your friends.
 
-## c) To Do Lists
+### c) To Do Lists
 
 - It is your responsibility to have an efficient method for tracking your to do items. You can have a notebook, a cork-board or use Github Issues.
 - My preferred method is to use [Trello](https://trello.com/).
@@ -47,7 +47,7 @@ This page is intended for my existing graduate students, especially for the new 
 - Although digital methods is convenient, I still advise you to have a regular notebook for capturing your ideas and keeping your experimental results.
 
 
-## d) Efficient Writing Tools
+### d) Efficient Writing Tools
 
 - Learn how to use [LaTeX](https://www.latex-project.org).
 - The quickest way to start using LaTeX is online editors. I advise [OverLeaf](https://www.overleaf.com)
