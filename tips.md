@@ -61,6 +61,7 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 * [Writing Advice for Students](http://web.science.mq.edu.au/~rdale/resources/writingnotes/index.html)
 * [Reading for graduate students](http://matt.might.net/articles/books-papers-materials-for-graduate-students/)
 * [How to write good abstacts?](http://blogs.lse.ac.uk/impactofsocialsciences/2011/06/20/essential-guide-writing-good-abstracts/)
+* [Your essential ‘how-to’ guide to writing good abstracts](https://blogs.lse.ac.uk/impactofsocialsciences/2011/06/20/essential-guide-writing-good-abstracts/)
 
 #### Other
 
