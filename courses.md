@@ -4,7 +4,7 @@ title: Courses
 permalink: /courses/index.html
 ---
 
-## This Semester (Spring 2018)
+## Current Semester
 
 - [EE361](/ee361): Electromechanical Energy Conversion-I
 - [EE463](/ee463): Static Power Conversion-I
