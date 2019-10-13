@@ -6,8 +6,7 @@ permalink: /blog/index.html
 
 ## Articles on Random Stuff
 
-(Mostly Turkish)
-
+* [How to join to METU PowerLab?](/blog/pre-powerlab)
 * [PowerLab 101-How to start your postgraduate study?](/blog/powerlab101)
 * [TÜBİTAK ARDEB İstatistikleri](/blog/ardeb)
 * [Önce Küfür Sonra Teşekkür](/okst)
