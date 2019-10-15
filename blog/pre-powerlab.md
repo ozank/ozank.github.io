@@ -49,7 +49,11 @@ Unfortunately, I don't supervise any part-time students (i.e. students working f
 
 I evaluate your applications by the following items, so please make sure I have enough information about you before the interview process. You can email me your CVs and your statement of purposes separately.
 
-- Research Priorities: This is the  
-- Past Experience
-- CGPA: 
+- Research Priorities & Motivation: This is the most important aspect of your application. You should have parallel research interests with my current research area, and should have the motivation to pursue a graduate degree. 
+
+- Past Experience: I prioritize students with experience in the field, but especially hands-on project experience, which can be internship, your capstone project, personal project or a project for a competiion. If you are an undergraduate student, I advise you to contact before you graduate so I can assign you to a project that you can build the right skills.
+
+- CGPA: Your grades can be least important of the evaluation criteria, but a high CGPA usually shows you have the motivation and dedication. If you have a lower CGPA then you have to convince me that you spent your time to improve yourself in something else.
+
+
 
