@@ -53,7 +53,7 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 * [Coursera](https://www.coursera.org/)
 * [edX](https://www.edx.org/)
 
-#### Writing English
+#### Writing Papers
 
 * [Purdue Online Writing Lab](https://owl.english.purdue.edu/owl/resource/607/02/)
 * [How to write a great science paper?](https://www.nature.com/articles/d41586-019-02918-5)
@@ -62,8 +62,9 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 * [How NOT to write a paper?](http://web.cs.iastate.edu/~honavar/write-not.pdf)
 * [Writing Advice for Students](http://web.science.mq.edu.au/~rdale/resources/writingnotes/index.html)
 * [Reading for graduate students](http://matt.might.net/articles/books-papers-materials-for-graduate-students/)
-* [How to write good abstacts?](http://blogs.lse.ac.uk/impactofsocialsciences/2011/06/20/essential-guide-writing-good-abstracts/)
+* [How to write good abstracts?](http://blogs.lse.ac.uk/impactofsocialsciences/2011/06/20/essential-guide-writing-good-abstracts/)
 * [Your essential ‘how-to’ guide to writing good abstracts](https://blogs.lse.ac.uk/impactofsocialsciences/2011/06/20/essential-guide-writing-good-abstracts/)
+* [İyi bir bilimsel makale için öneriler](http://www.canmustafa.com/iyi-bir-bilimsel-makale-icin-oneriler/)
 
 #### Other
 
