@@ -41,6 +41,7 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 * [Making Pretty Graphs(Matlab)](http://blogs.mathworks.com/loren/2007/12/11/making-pretty-graphs/)
 * [Notes for producing clean plots in Matlab for LaTeX](http://jack-kelly.com/notes_for_producing_clean_plots_in_matlab_for_latex)
 * [Python ToyPlots](http://toyplot.readthedocs.org/en/latest/tutorial.html)
+* [D3.js](https://wattenberger.com/blog/d3)
 
 #### Open Source
 
@@ -55,6 +56,7 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 #### Writing English
 
 * [Purdue Online Writing Lab](https://owl.english.purdue.edu/owl/resource/607/02/)
+* [How to write a great science paper?](https://www.nature.com/articles/d41586-019-02918-5)
 * [How to read a paper?](http://blizzard.cs.uwaterloo.ca/keshav/home/Papers/data/07/paper-reading.pdf)
 * [How to write a paper](http://www.wisdom.weizmann.ac.il/~oded/PS/re-writing.pdf)
 * [How NOT to write a paper?](http://web.cs.iastate.edu/~honavar/write-not.pdf)
@@ -74,8 +76,10 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 
 * [The days are long but the decades are short](http://blog.samaltman.com/the-days-are-long-but-the-decades-are-short)
 * [The Most Important Thing I Learned in My 20's](https://medium.com/@adambraun/the-most-important-thing-i-learned-in-my-20s-677e2ed1a70f)
+* [How to pick a career that actually fits you?](https://waitbutwhy.com/2018/04/picking-career.html)
 * [But Will It Make You Happy?](http://www.nytimes.com/2010/08/08/business/08consume.html?_r=1)
 * [Why Procrastinators Procrastinate](https://waitbutwhy.com/2013/10/why-procrastinators-procrastinate.html)
+* [Every productivity thought I've ever had](https://guzey.com/productivity/)
 * [You are not behind](http://zackkanter.com/2016/01/13/you-are-not-behind/)
 * [A Protocol for Dying](http://hintjens.com/blog:115)
 * [Life is Short](http://paulgraham.com/vb.html)
