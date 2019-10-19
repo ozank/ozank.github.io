@@ -72,14 +72,20 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 * [Pocket Organizer](http://pocketmod.com/v2/)
 * [OpenResearch](https://openresearch.wordpress.com/)
 
+#### Academic Productivity
+
+* [How to study?](https://cse.buffalo.edu/~rapaport/howtostudy.html)
+* [Why Procrastinators Procrastinate](https://waitbutwhy.com/2013/10/why-procrastinators-procrastinate.html)
+* [Every productivity thought I've ever had](https://guzey.com/productivity/)
+* [Academic Assholes](https://thesiswhisperer.com/2013/02/13/academic-assholes/)
+* [9 Useless PhD Transferable Skills In An Industry Job](http://www.nextscientist.com/useless-phd-transferable-skills/)
+
 ### A Few Nice Reads
 
 * [The days are long but the decades are short](http://blog.samaltman.com/the-days-are-long-but-the-decades-are-short)
 * [The Most Important Thing I Learned in My 20's](https://medium.com/@adambraun/the-most-important-thing-i-learned-in-my-20s-677e2ed1a70f)
 * [How to pick a career that actually fits you?](https://waitbutwhy.com/2018/04/picking-career.html)
 * [But Will It Make You Happy?](http://www.nytimes.com/2010/08/08/business/08consume.html?_r=1)
-* [Why Procrastinators Procrastinate](https://waitbutwhy.com/2013/10/why-procrastinators-procrastinate.html)
-* [Every productivity thought I've ever had](https://guzey.com/productivity/)
 * [You are not behind](http://zackkanter.com/2016/01/13/you-are-not-behind/)
 * [A Protocol for Dying](http://hintjens.com/blog:115)
 * [Life is Short](http://paulgraham.com/vb.html)
@@ -90,5 +96,3 @@ Right](http://scholar.harvard.edu/files/danielgilbert/files/if-money-doesnt-make
 * [Why aren’t we getting richer? The scarring tissue theory](https://lemire.me/blog/2011/10/10/why-arent-we-getting-richer-the-scarring-tissue-theory/)
 * [Pricing Experiments You Might Not Know, But Can Learn From](https://conversionxl.com/blog/pricing-experiments-you-might-not-know-but-can-learn-from/)
 * [A day at the park](http://kiriakakis.net/comics/mused/a-day-at-the-park)
-* [Academic Assholes](https://thesiswhisperer.com/2013/02/13/academic-assholes/)
-* [9 Useless PhD Transferable Skills In An Industry Job](http://www.nextscientist.com/useless-phd-transferable-skills/)
