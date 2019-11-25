@@ -199,6 +199,20 @@ CCM: Continuous Conduction Mode
 
 ---
 
+# Transition to DCM
+
+### Minimum Inductance for Continuous Current
+
+### \\(L\_{min}= \dfrac{(1-D) }{2 f\_s} R\\)
+--
+
+### Current Ripple for a given inductance
+
+### \\(\Delta i\_{L}= (\dfrac{V\_s - V\_o}{L}) DT = \dfrac{V\_o (1  - D)}{L f\_s} \\)
+
+
+---
+
 # Discontinuous Conduction Mode
 --
 
@@ -243,7 +257,7 @@ CCM: Continuous Conduction Mode
 ### \\(\Delta V\_o = \dfrac{\Delta Q}{C}\\)
 --
 
-### \\(\Delta V\_o = \dfrac{\Delta I\_L T\_s}{8C}\\)
+### \\(\Delta V\_o = \dfrac{\Delta i\_L T\_s}{8C}\\)
 
 --
 
@@ -259,6 +273,51 @@ CCM: Continuous Conduction Mode
 --
 
 ### \\( \dfrac{\Delta V\_o}{V\_0}= \dfrac{\pi^2 (1-D) }{2} {\bigg(\dfrac{f\_c}{f\_s}\bigg)}^2 \\)
+
+---
+# Effect of Capacitor ESR
+--
+
+<img src="./images/ee463/ESR.png" alt="Drawing" style="width:600px;"/>
+
+--
+
+## \\( \Delta V\_{o, ESR} = \Delta i\_{c} r\_{c} = \Delta i\_{L} r\_{c} \\)
+
+---
+# Synchronous Buck Converter
+--
+
+<img src="./images/ee463/sync_buck3.png" alt="Drawing" style="width:600px;"/>
+
+### What is the purpose of the extra MOSFET?
+--
+
+### Increased efficiency due to reduced diode loss.
+### ( \\(R\_{ds-on}\\) instead of \\(V\_{forward}\\)
+
+---
+# Design Decisions 
+--
+
+## Small Volume is desired:
+--
+
+- ## Increase \\(f_s\\), LC filter gets smaller.
+- ## Switching loss is increased (also increases heatsink volume)
+
+
+---
+# Design Decisions 
+
+## High Efficiency is desired:
+--
+ 
+- ## Limit  \\(f_s\\), switching loss is reduced.
+- ## LC filter gets bigger
+
+- ## Use Synchronous Buck (Can achieve higher \\(f_s\\) for same efficiency)
+- ## Cost of the converter is increased
 
 ---
 
@@ -355,7 +414,7 @@ CCM: Continuous Conduction Mode
 <img src="./images/ee463/boost_ripple.png" alt="Drawing" style="width: 600px;"/>
 ---
 
-## Can you obtain the operating modes?
+## Can you obtain the operating modes of this converter?
 --
 
 <img src="./images/ee463/buck_boost.png" alt="Drawing" style="width: 450px;"/>
