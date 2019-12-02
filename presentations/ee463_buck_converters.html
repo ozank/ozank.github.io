@@ -456,12 +456,50 @@ CCM: Continuous Conduction Mode
 
 ---
 
-## Positive Output Buck-Boost Converter
+## Non-Inverting Buck-Boost Converter
 --
 
 <img src="https://www.allaboutcircuits.com/uploads/articles/4B-Converter-in-Equilibrium-2_(7).png" alt="Drawing" style="width: 750px;"/>
 
 ## Uses two synchronized switches
+## Both switches turn on and off simultaneously
+
+### [Design tips for an efficient non-inverting buck-boost convertee](http://www.ti.com/lit/an/slyt584/slyt584.pdf)
+---
+
+## Non-Inverting Buck-Boost Converter
+
+<img src="https://www.allaboutcircuits.com/uploads/articles/4B-Converter-in-Equilibrium-2_(7).png" alt="Drawing" style="width: 750px;"/>
+
+## It is also possible to use as a buck converter
+
+## Q2 always off, Q1 is controlled
+
+---
+
+## Non-Inverting Buck-Boost Converter
+
+<img src="https://www.allaboutcircuits.com/uploads/articles/4B-Converter-in-Equilibrium-2_(7).png" alt="Drawing" style="width: 750px;"/>
+
+## It is also possible to use as a boost converter
+
+## Q1 always on, Q2 is controlled
+
+---
+
+## Generalized Version: 4-switch buck-boost
+
+<img src="./images/ee463/4_switch.png" alt="Drawing" style="width: 800px;"/>
+--
+
+- ### Buck Mode: Q1, Q2 are controlled, Q3 is OFF, Q4 is ON
+--
+
+- ### Boost Mode: Q3,Q4 are controlled, Q1 is ON, Q2 is OFF
+--
+
+- ### Buck-Boost Mode: Q1 & Q3 are simultaneously ON, when Q2 & Q4 are simultaneously OFF, and vice versa.
+
 ---
 ## Can you [compare](https://www.eetimes.com/document.asp?doc_id=1273276&page_number=1) the input/output noise level?
 
@@ -480,6 +518,8 @@ CCM: Continuous Conduction Mode
 - ## SEPIC Converter
 - ## Resonant Converters
 
+---
+# Exercises
 
 ---
 ## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
