@@ -57,6 +57,113 @@ class: center, middle
 - ## In some cases protection is embedded (dead-time, over-current, over-temp etc)
 
 ---
+
+# Basic Drive Circuits
+--
+
+### Simple MOSFET Drive Circuit
+
+<img src="./images/ee463/drive1.png" alt="Drawing" style="width: 250px;"/>
+
+
+---
+# Basic Drive Circuits
+
+
+### Double emitter-follower drive circuit
+
+<img src="./images/ee463/drive2.png" alt="Drawing" style="width: 450px;"/>
+
+
+---
+# Basic Drive Circuits
+
+
+### IC drive with double emitter-follower buffer
+
+<img src="./images/ee463/drive3.png" alt="Drawing" style="width: 550px;"/>
+
+
+---
+# Low Side vs. High Side Switches
+
+
+<img src="./images/ee463/high_low_side.png" alt="Drawing" style="width: 750px;"/>
+
+### Buck converter: high-side switch, boost converter: low-side switch	
+
+---
+# High Side Switch
+
+## How can you generate a gate voltage higher than Vs?
+--
+
+- ## Bootstrap Circuits
+- ## Galvanic Isolation (Pulse transformers)
+- ## Optocoupler and Floating Power Supply
+
+---
+# Bootstrap Circuits (Charge Pumps)
+--
+
+<img src="./images/ee463/bootstrap1.png" alt="Drawing" style="width: 550px;"/>
+
+### S1 and S2 are used for driving the main switch
+
+---
+# Bootstrap Circuits (Charge Pumps)
+--
+
+<img src="./images/ee463/bootstrap1.png" alt="Drawing" style="width: 550px;"/>
+
+### S1, S2 and S3 are used for driving the main switch
+
+---
+
+## S1, S2, S3 are ON, Main Switch OFF
+
+<img src="./images/ee463/bootstrap2.png" alt="Drawing" style="width: 500px;"/>
+
+---
+
+## S1, S2, S3 are OFF, Main Switch ON
+
+<img src="./images/ee463/bootstrap3.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# A Few Commercial Products:
+
+### [IR2117](https://www.infineon.com/dgdl/Infineon-ir2117-DS-v01_00-EN.pdf?fileId=5546d462533600a4015355c84331168d)
+
+### [MIC5018](http://ww1.microchip.com/downloads/en/DeviceDoc/mic5018.pdf)
+
+### [Infineon Drivers](https://www.infineon.com/cms/en/product/power/gate-driver-ics/high-and-low-side-drivers/#!overview)
+
+### [Analog Devices, MOSFET Drives](https://www.analog.com/en/parametricsearch/11395)
+
+### [Texas Instruments, Half Bridge Drivers](http://www.ti.com/power-management/gate-drivers/half-bridge-drivers/products.html)
+
+---
+# Useful Readings
+
+
+### [High Side Low Side Switches](https://engineering.purdue.edu/Courses/ECE433/exp5_5th~6thweek_.pdf)
+
+### [TI Training Videos](https://training.ti.com/gate-driver-training-series-low-side-and-h-bridge-gate-driver-fundamentals)
+
+### [Infineon Gate Driver ICs](https://www.infineon.com/dgdl/Infineon-Selection_Guide_Gate_Driver_ICs-SG-v01_00-EN.pdf?fileId=5546d46250cc1fdf015110069cb90f49 )
+
+### [MOSFET Gate Drive Circuit](https://toshiba.semicon-storage.com/info/docget.jsp?did=59460)
+
+### [Firat Deveci, Gate Drivers](http://www.firatdeveci.com/dikkat-high-side-gate-driver/)
+
+---
+# Isolation
+--
+
+## Electric Isolation between HV and LV sider is usually required for proper operation and electric safety. 
+
+---
 ## (Galvanic) Isolation: 
 --
 No direct electric contact between two sides
@@ -101,22 +208,27 @@ No direct electric contact between two sides
 <img src="https://www.allaboutcircuits.com/uploads/articles/CapacitorIsolatedSchMax256.gif" alt="Drawing" style="width: 550px;"/>
 
 ---
-# (Galvanic) Isolation
---
-
 ## Optic Isolation
 --
 
-<img src="https://www.digikey.com/-/media/Images/Article%20Library/TechZone%20Articles/2017/December/How%20to%20Select%20the%20Right%20Galvanic%20Isolation%20Technology%20for%20IoT%20Sensors/article- 2017december-how-to-select-fig6.jpg" alt="Drawing" style="width: 500px;"/>
+## Signal is transmitted by light
+
+<img src="./images/ee463/optocoupler.png" alt="Drawing" style="width: 500px;"/>
+
 
 ---
-# (Galvanic) Isolation
-
-
 ## Optic Isolation
 
 
 <img src="http://www.analog.com/-/media/images/analog-dialogue/en/volume-46/number-4/articles/implementing-an-isolated-half-bridge-gate-driver/gate_driver-fig-01.jpg" alt="Drawing" style="width: 550px;"/>
+
+---
+# Isolated Driver Examples
+
+## [IGBT Gate Driver](https://pdf.direnc.net/upload/vla542-01r-datasheet.pdf)
+## [IGBT Gate Driver + DC/DC Converter](https://pdf.direnc.net/upload/vla500k-01r-datasheet.pdf)
+## [Infineon 2EDF7175F](https://www.infineon.com/cms/en/product/power/gate-driver-ics/2edf7175f/#!overview)
+## [Infineon EiceDrivers](https://www.infineon.com/dgdl/Infineon-2EDF7175F-DS-v02_04-EN.pdf?fileId=5546d462636cc8fb0163b09026be3060)
 
 ---
 # Comparison of Isolation Types
@@ -132,7 +244,7 @@ No direct electric contact between two sides
 - ### [IGBT and MOSFET Drivers Correctly Calculated](https://gate-driver.power.com/sites/default/files/product_document/application_note/AN-1001_IGBT_and_MOSFET_Drivers_Correctly_Calculated.pdf)
 - ### [MOSFET/IGBT Drivers Theory and Applications](http://www.ixysic.com/home/pdfs.nsf/www/AN-401.pdf/$file/AN-401.pdf)
 - ### [Noise Reduction and Isolation](https://www.mccdaq.com/PDFs/specs/Noise-Reduction.pdf)
-- ### [The Importance of Isolation](https://www.acromag.com/sites/default/files/The%20Importance%20of%20Isolation_1.pdf)
+- ### [How to Select Right Galvanic Isolation](https://www.digikey.com/en/articles/techzone/2017/dec/how-select-galvanic-isolation-technology-for-iot-sensors)
 ---
 
 ## Considerations/Problems
@@ -150,8 +262,11 @@ No direct electric contact between two sides
 
 - ### Minimize Cable Inductance/Coupling
 
-<img src="https://blog.tripplite.com/wp-content/uploads/2016/09/utp-and-stp.jpg" alt="Drawing" style="width: 400px;"/>
+<img src="https://www.agkablosu.com/image/catalog/agkablosu_com/BLOG/UTP-STP.jpg" alt="Drawing" style="width: 800px;"/>
 
+#### UTP: Unshielded twisted pair
+#### STP: Shielded twisted pair
+#### FTP: Foiled twisted pair
 ---
 
 ## Considerations/Problems
@@ -159,13 +274,19 @@ No direct electric contact between two sides
 
 - ### Shielding and  Minimize Stray Inductance
 
-<img src="http://www.powerguru.org/wordpress/wp-content/uploads/2012/06/Gate-driver-connection-and-stray-inductances.jpg" alt="Drawing" style="width: 600px;"/>
+<img src="./images/ee463/stray_inductance2.jpg" alt="Drawing" style="width: 600px;"/>
+
+---
+## Considerations/Problems
+
+- ### Shielding and  Minimize Stray Inductance
 
 - ### [PCB Layout for EMC](https://www.powerelectronicsnews.com/problems-solutions/pcb-layout-for-emc-power-supply-design-tutorial-section-3-1)
 
 - ### [High Speed PCB Layout Techniques](http://www.ti.com/lit/ml/slyp173/slyp173.pdf)
 
 - ### [PCB Design Issues](https://www.analog.com/media/en/training-seminars/design-handbooks/Basic-Linear-Design/Chapter12.pdf)
+
 ---
 
 ## Considerations/Problems
