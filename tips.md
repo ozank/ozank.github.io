@@ -58,6 +58,7 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 * [Purdue Online Writing Lab](https://owl.english.purdue.edu/owl/resource/607/02/)
 * [How to write a great science paper?](https://www.nature.com/articles/d41586-019-02918-5)
 * [How to read a paper?](http://blizzard.cs.uwaterloo.ca/keshav/home/Papers/data/07/paper-reading.pdf)
+* [Write a good paper](https://lemire.me/blog/rules-to-write-a-good-research-paper/)
 * [How to write a paper](http://www.wisdom.weizmann.ac.il/~oded/PS/re-writing.pdf)
 * [How NOT to write a paper?](http://web.cs.iastate.edu/~honavar/write-not.pdf)
 * [Writing Advice for Students](http://web.science.mq.edu.au/~rdale/resources/writingnotes/index.html)

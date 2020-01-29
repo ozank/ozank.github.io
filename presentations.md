@@ -6,6 +6,10 @@ permalink: /presentations/index.html
 
 ## Recent Presentations
 
+### 2020
+
+* [How to write and read a paper?](https://docs.google.com/presentation/d/1Xdw3ewDz-6DaV12rxBO_V1naajerFuirar90jOm1pMw/edit?usp=sharing)
+
 ### 2019
 
 * ODTÜ Mezunlar Derneği, [Enerji Depolama Yöntemleri](https://docs.google.com/presentation/d/1_vyIHpHjM90DZ1R0_RNg_VKtxRctPFPoKOO38YvkvMQ/edit?usp=sharing)
