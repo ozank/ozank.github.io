@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EE564-Selected Topics in Electrical Machines</title>
+    <title>EE568-Selected Topics in Electrical Machines</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <style type="text/css">
       @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -570,12 +570,11 @@ Ferromagnets
 ## Residual Magnetism
 <img src="http://www.edmsauce.com/wp-content/uploads/2014/05/Sonys-New-Cassette-Tape-Holds-64750000-Songs.jpg" alt="Drawing" style="width: 320px;"/>
 --
-<img src="http://www.rayhaber.com/wp-content/uploads/ego_karti.jpg" alt="Drawing" style="width: 350px;"/>
+<img src="http://keysan.me/presentations/images/ee361/ego_karti.jpg" alt="Drawing" style="width: 350px;"/>
 ---
 # Hysteresis Loss
-<img src="http://www.electronics-tutorials.ws/electromagnetism/mag19.gif" alt="Drawing" style="width: 400px;"/>
---
-<img src="http://www.stanelcorftechnologies.com/img/hysteresis-loss.jpg" alt="Drawing" style="width: 320px;"/>
+
+<img src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/electromagnetism-mag19.gif" alt="Drawing" style="width: 500px;"/>
 
 --
 ## Hysteresis Loss \\(\propto\\) Frequency
@@ -583,7 +582,7 @@ Ferromagnets
 # Hysteresis Loss
 
 ## Variable Hmax
-<img src="http://www.insulcoresolutions.com/images/Hysteresis-L-web.jpg" alt="Drawing" style="width: 600px;"/>
+<img src="./images/ee361/B-H_loop.png" alt="Drawing" style="width: 700px;"/>
 
 ---
 # Lenz's Law
@@ -599,12 +598,86 @@ Ferromagnets
 # Eddy Current Losses
 ### Created by Induced Voltage in a Conductor
 
-<img src="https://qph.ec.quoracdn.net/main-qimg-2281a0706817db86c3543886405ab1d5" alt="Drawing" style="width: 400px;"/>
+<img src="./images/ee361/eddy_current.png" alt="Drawing" style="width: 500px;"/>
 
 #### [Magnet in a Copper Tube](http://www.youtube.com/watch?v=keMpUaoA3Tg)
 --
 
 ### Power Dissipated: \\(P= \frac{ V \pi^2 B_{peak}^2 d^2 f^2}{k \rho}\\)
+
+---
+# AC Resistance vs DC Resistance
+## Which one is higher?
+
+--
+- ## AC Resistance > DC Resistance
+- ## Why?
+
+---
+# Skin Depth
+# Distribution of Current in a Wire
+![](http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Skin_depth.svg/450px-Skin_depth.svg.png)
+---
+# Skin Depth
+
+### Due to circulating eddy currents
+![](http://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Skineffect_reason.svg/293px-Skineffect_reason.svg.png)
+
+---
+# Skin Depth
+
+## Current Distribution: \\( J = J_S e ^{-d/\sigma}\\)
+
+## Skin depth: \\(\sigma = \sqrt{\frac{2 \rho}{\omega \mu_r \mu_0}}\\)
+
+---
+# Skin Depth for Copper:
+- ## 50 Hz --> 9.3 mm
+
+--
+- ## 1 kHz --> 2.1 mm
+
+--
+- ## 10 kHz --> 0.66 mm
+
+--
+- ## 100 kHz --> 0.21 mm
+
+--
+- ## 1 MHz --> 66 um
+
+---
+## How to increase conductor area without increasing thickness?
+
+## Bundled Conductors
+
+<img src="http://i.stack.imgur.com/ZiMjy.png" alt="Drawing" style="width: 300px;"/>
+
+
+### Also helps to reduce [Corona discharge](http://www.electricaleasy.com/2016/07/corona-discharge.html)
+---
+## How to increase conductor area without increasing thickness?
+
+## Foil Conductors
+<img src="https://hollandshielding.com/content/3201/3201-Mu-copper-tape.png" alt="Drawing" style="width: 600px;"/>
+
+---
+## Hollow Conductors
+<img src="http://sub.allaboutcircuits.com/images/52013.jpg" alt="Drawing" style="width: 400px;"/>
+---
+# AC Resistance
+
+## AC Resistance [Calculator](http://www.clemson.edu/ces/cvel/emc/calculators/Resistance_Calculator/round.html)
+
+--
+## Rule of Thumb: For 50 Hz power systems
+## $$Rac \simeq 1.1 Rdc$$
+---
+## Power Dissipated due to Eddy Currents
+
+# \\(P= \frac{ V \pi^2 B_{peak}^2 d^2 f^2}{k \rho}\\)
+
+## Notice the \\(f^2\\) element
 
 ---
 
@@ -767,6 +840,280 @@ Ferromagnets
 ## \\(W = \dfrac{1}{2}R \Phi^2 =\dfrac{1}{2}\dfrac{\mathcal{F}^2}{R}\\)
 or
 ## \\(W = \dfrac{1}{2}\dfrac{Volume}{\mu} B^2 \\)
+
+
+---
+# Magnetic Materials
+---
+
+# Electrical Steel Laminations
+
+<img src="http://is2.ecplaza.com/ecplaza2/products/6/6b/6b9/96679658/high-quality-silicon.jpg" alt="Drawing" style="width: 300px;"/>
+
+--
+
+- ## Used for Low Frequency (50-500 Hz)
+--
+
+- ## Easy to [manufacture](https://www.youtube.com/watch?v=qmg_W_pcYhY) & [Cheap](https://www.alibaba.com/product-detail/electrical-silicon-steel-laminates_1891355946.html)
+---
+## Electrical Steel Lamination Types
+--
+
+
+## - Silicon Steel (Electrical Steel)
+![](http://newimg.globalmarket.com/PicLib/81/2514081/prod/48_1353116886810_l.jpg)
+--
+
+- ### Added silicon increases the resistance  (reduces eddy losses)
+
+---
+## Electrical Steel Lamination Types
+
+### - Cold Rolled Lamination Steel
+
+<img src="http://retrorenovation.com/wp-content/uploads/2012/02/stainless-steel-countertop.jpg" alt="Drawing" style="width: 400px;"/>
+--
+
+- ### Lowest Cost
+--
+
+- ### Higher Core Losses
+
+---
+## Electrical Steel Lamination Types
+
+### - Nickel Alloys
+
+<img src="http://i01.i.aliimg.com/photo/v2/1084596293/Nickel_Iron_alloy_1J79.jpg" alt="Drawing" style="width: 400px;"/>
+--
+
+- ### Higher cost than silicon steel
+--
+
+- ### High permeability, low core losses
+---
+## Electrical Steel Lamination Types
+
+## - Cobalt Alloys
+
+<img src="https://staging.vacpim.com/Assets-Web/image-thumb__711__16-to-9/RET_WMM32487-V2.webp" alt="Drawing" style="width: 400px;"/>
+--
+
+- ### Highest cost
+--
+
+- ### High saturation (up to 2.2 T)
+--
+
+- ### Suitable for mass critic applications (aerospace, military)
+---
+# Ferromagnets
+
+## Motor Core Lamination Manufacturing
+
+- [Lamination Stamping-1](https://www.youtube.com/watch?v=RgWh2G-2XuU)
+- [Lamination Stamping-2](https://www.youtube.com/watch?v=dZ9FySos1t0)
+- [Lamination Stamping-3](https://www.youtube.com/watch?v=7kKjxHOdC1A)
+- [Continuous Stamping](https://www.youtube.com/watch?v=dcjlH8eq0hM)
+
+---
+# Ferromagnets
+
+## Reading List-Catalogue
+- [Proto Laminations](http://www.protolam.com/page3.html)
+- [JFE Steel](http://www.jfe-steel.co.jp/en/products/electrical/catalog/f1e-001.pdf)
+- [Cogent Catalogue](http://perso.uclouvain.be/ernest.matagne/ELEC2311/T2006/NOFP.pdf) (page 5-6)
+- [Grain Oriented Steel Catalogue](https://www.atimetals.com/Documents/goes_technical_data2_v1.pdf)
+- [Enpay Transformer Core](http://www.travek.elektrozavod.ru/sites/default/files/images/production/enpay/Amorphous%20Core%20Catalogue.pdf)
+- [Sura Catalogue](http://www.sura.se/Sura/hp_main.nsf/startupFrameset?ReadForm)
+- [Cogent Elecrical Steel](https://cogent-power.com/products/non-oriented-electrical-steel/technical-specifications)
+- [VacuumSchemlze](http://www.vacuumschmelze.com/en/products/materials-parts/soft-magnetic.html)
+- [Motor Laminations](http://laminationspecialties.com/products.htm)
+
+
+
+---
+# (Soft) Ferrite Cores
+
+<img src="http://www.infantron.net/images/soft_ferrite_02.png" alt="Drawing" style="width: 700px;"/>
+--
+
+- ### Sintered Iron Oxide + Manganese/Zinc
+---
+
+# (Soft) Ferrite Cores
+
+<img src="http://www.infantron.net/images/soft_ferrite_02.png" alt="Drawing" style="width: 400px;"/>
+
+- ### Sintered Iron Oxide + Manganese/Zinc
+--
+
+- ### Low Saturation Point (0.4-0.5 T)
+--
+
+- ### Brittle
+--
+
+- ### High Permeability (\\(\mu_r\\): 1500-3000)
+
+---
+# (Soft) Ferrite Cores
+
+## Used as [Chokes](https://www.youtube.com/watch?v=LuMlM8zWQFk) and Filters
+--
+
+<img src="https://hottconsultants.files.wordpress.com/2014/03/ch05fg322.jpg" alt="Drawing" style="width: 500px;"/>
+--
+
+
+<img src="https://images-na.ssl-images-amazon.com/images/I/51n5lh70xEL._SY355_.jpg" alt="Drawing" style="width: 200px;"/>
+
+---
+#Quick Question
+--
+
+## Is it easier to store energy with high or low permeable material for the same flux density?
+--
+
+## \\(W = \dfrac{1}{2}\dfrac{Volume}{\mu} B^2 \\)
+
+## Sometimes, air-gaps are added deliberately to increase energy storing capacity of a core.
+
+---
+## E-core without gap
+--
+
+<img src="https://ae01.alicdn.com/kf/HTB1c2EbMVXXXXbDXVXXq6xXFXXXa/EE65B-font-b-E-b-font-shape-large-power-font-b-transformer-b-font-ferrite-font.jpg" alt="Drawing" style="width: 500px;"/>
+
+---
+## E-core with gap
+--
+
+<img src="http://www.encyclopedia-magnetica.com/lib/exe/fetch.php/etd_core_gapped_magnetica.jpg" alt="Drawing" style="width: 500px;"/>
+
+---
+##Gapped Toroids
+
+<img src="http://www.hitachimetals.com/materials-products/amorphous-nanocrystalline/microlite-inductor-cores/images/gapped_toroids.jpg" alt="Drawing" style="width: 600px;"/>
+
+---
+# A Better Solution?
+--
+
+## Distributed Gap Cores
+
+<img src="https://www.bestmadeinkorea.com/product-photo/Minerals%20&%20Metallurgy/Other%20Metals%20&%20Metal%20Products/Powder%20Core/Powder-Core.gif" alt="Drawing" style="width: 600px;"/>
+
+---
+# Distributed Gap Cores
+--
+
+- ## Low Permeability (\\(\mu_r\\): 20-200)
+--
+
+- ## Has different types:
+--
+
+- ## KOOL Mu Powder
+- ## MPP
+- ## Iron Powder
+
+---
+## KOOL Mu Powder Core
+
+<img src="https://www.mag-inc.com/Media/Magnetics/Image-Library/Product%20Images/Powder%20Core%20Images/Kool%20Mu/Kool-Mu-Shapes.png" alt="Drawing" style="width: 600px;"/>
+
+---
+## KOOL Mu Powder Core
+
+### Lower Core Loss wrt Steel
+
+<img src="https://www.mag-inc.com/getattachment/Products/Powder-Cores/Kool-Mu-Cores/Large-Kool-Mu-Core-Shapes/Kool-Mu-and-Silicon-Steel-Comparison/KoolMuvsSiliconSteelLoss.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Distributed Gap Cores
+
+<img src="https://www.mag-inc.com/getattachment/Products/Powder-Cores/Learn-More-about-Powder-Cores/PowderCoreOverviewMatrix.png" alt="Drawing" style="width: 400px;"/>
+
+---
+# Distributed Gap vs. Gapped Ferrite
+--
+
+<img src="https://www.mag-inc.com/getattachment/Products/Powder-Cores/Kool-Mu-Cores/Large-Kool-Mu-Core-Shapes/Kool-Mu-and-Gapped-Ferrite-Comparison/KoolMuvsFerrite.png" alt="Drawing" style="width: 700px;"/>
+
+### [Comparison](https://www.mag-inc.com/Products/Powder-Cores/Learn-More-about-Powder-Cores/Gapped-Ferrite-Comparison)
+
+---
+## Distributed Gap vs. Gapped Ferrite
+--
+
+- ## Fringing flux increases copper losses in gapped cores
+--
+
+- ## Ferrite has sharp saturation, whereas powder cores has [soft saturation](https://www.mag-inc.com/getattachment/Products/Powder-Cores/Kool-Mu-Cores/Large-Kool-Mu-Core-Shapes/Kool-Mu-and-Gapped-Ferrite-Comparison/KoolMuvsFerriteDCBIAS.png)
+--
+
+- ## Powder cores are usually smaller
+--
+
+- ## Powder cores magnetic properties does not change much with temperature
+--
+
+- ## But powder cores have higher inductance tolerances.
+
+---
+# Design Exercise
+--
+
+- ## Let's choose a [powder core toroid](https://www.mag-inc.com/Products/Powder-Cores/Kool-Mu-Cores)
+
+--
+
+- ## [Toroid Core Example](https://www.mag-inc.com/Media/Magnetics/Datasheets/0077354A7.pdf)
+
+### Useful Links
+
+- ### [Design Guides](https://www.mag-inc.com/Design/Design-Guides)
+
+- ### [Powder Core Loss Calculation](https://www.mag-inc.com/Design/Design-Guides/Powder-Core-Loss-Calculation)
+
+- ### [Powder Core Calculations](https://www.mag-inc.com/Design/Design-Guides/Powder-Core-Calculations)
+
+
+
+---
+## Amorphous and Nanocrystalline Laminations
+
+<img src="https://image.ec21.com/image/cnzhaojing/oimg_GC10207450_CA10207463/Amorphous-Metal-Core---Magnetic-Core.jpg" alt="Drawing" style="width: 300px;"/>
+
+- ## Very High Permeability (\\(\mu_r\\): up to 10.000)
+- ## High Efficiency transformers (for medium frequency)
+- ## Expensive
+
+---
+# Comparison of Materials
+
+<img src="http://nanoc.imr.tohoku.ac.jp/eng/image/research/roadmap2.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Comparison of Materials
+
+<img src="http://www.nikkindenjikogyo.co.jp/images/merit02-english.png" alt="Drawing" style="width: 900px;"/>
+
+---
+# More Reading Materials
+
+- ### [Soft Magnetic Core Application Notes](http://www.allegromicro.com/~/media/Files/Technical-Documents/Arnold/Soft-Magnetics-Applications-Guide.ashx?la=en)
+
+- ### [TI Magnetic Core Characteristics](http://www.ti.com/lit/ml/slup124/slup124.pdf)
+
+- ### [Practical and Potential Applications of Soft Magnetic Powder Cores](http://global-sei.com/technology/tr/bn82/pdf/82-02.pdf)
+
+- ### [Choice of the Magnetic Core](http://www.sirio-ic.com/index.php/en/i-magneticore-en.html)
+
+
+
 
 
 ---
