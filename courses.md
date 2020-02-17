@@ -7,6 +7,7 @@ permalink: /courses/index.html
 ## Current Semester
 
 - [EE464](/ee464): Static Power Conversion-II
+- [EE568](/ee568): Selected Topics on Electrical Machines
 
 ## Past Courses
 
@@ -18,4 +19,3 @@ permalink: /courses/index.html
 - [EE464](/ee464): Static Power Conversion-II
 - [ID403](http://tf.metu.edu.tr): Collaborative Design Studio
 - [EE564](/ee564): Design of Electrical Machines
-- [EE568](/ee568): Selected Topics on Electrical Machines
