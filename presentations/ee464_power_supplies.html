@@ -343,7 +343,7 @@ Minimum EMI Problems
 ### Suggested Reading: [Flyback Converter Snubber Design](http://ridleyengineering.com/images/phocadownload/12%20flyback%20snubber%20design.pdf)
 
 ---
-# Pratical Forward Converter
+# Practical Forward Converter
 
 <img src="./images/ee464/practical_forward.png" alt="Drawing" style="width: 800px;">
 
@@ -351,14 +351,14 @@ Minimum EMI Problems
 
 ---
 
-# Pratical Forward Converter
+# Practical Forward Converter
 
 <img src="./images/ee464/practical_forward_Lm.png" alt="Drawing" style="width: 800px;">
 
 ## A transformer with two-primary windings
 ---
 
-# Pratical Forward Converter
+# Practical Forward Converter
 
 ## Switch is ON
 
@@ -371,7 +371,7 @@ Minimum EMI Problems
 - ### D3 Off 
 ---
 
-# Pratical Forward Converter
+# Practical Forward Converter
 
 ## Switch is OFF
 
@@ -387,12 +387,12 @@ Minimum EMI Problems
 
 ### For proper operation the transformer should be "reset" before next ON period
 ---
-# Pratical Forward Converter
+# Practical Forward Converter
 
 <img src="./images/ee464/forward_waveform.png" alt="Drawing" style="width: 600px;">
 
 ---
-# Pratical Forward Converter
+# Practical Forward Converter
 ### For proper operation the transformer should be "reset" before next ON period
 
 ## \\(t\_m < (1-D) T\_s\\)
@@ -422,7 +422,7 @@ Minimum EMI Problems
 - ## A gapless core can be used (higher Lm, less ripple)
 --
 
-- ## Output inductor and diode ensures continious output current
+- ## Output inductor and diode ensures continuous output current
 
 ---
 # Drawbacks compared to Flyback
@@ -509,42 +509,27 @@ Minimum EMI Problems
 ---
 # Push-Pull Converter
 
+
+<img src="./images/ee464/push_pull_operation_modes.png" alt="Drawing" style="width: 750px;">
+
+### Three operating sections
+
+
+---
+# Push-Pull Converter
+
 ## Switch(T1) ON, Switch(T2) OFF
 
 ### D1 conducts, D2 reverse-biased
 --
 
-### \\(v\_{oi}= \dfrac{N\_2}{N\_1} V\_d \\)
+### \\(v\_{x}= \dfrac{N\_2}{N\_1} V\_s \\)
 --
 
-### \\(v\_{L}= v\_{oi} - V\_o = \dfrac{N\_2}{N\_1} V\_d - V\_o  \\)
+### \\(v\_{L}= v\_{x} - V\_o = \dfrac{N\_2}{N\_1} V\_s - V\_o  \\)
 
 
 ### \\(i\_L\\) increases linearly
----
-# Push-Pull Converter
-
-<img src="./images/ee464/push_pull_operation.png" alt="Drawing" style="width: 750px;">
-
----
-
-# Push-Pull Converter
-
-## Switches(T1 and T2) OFF
-### For a period of \\(\Delta\\)
---
-
-### Both D1 and D2 conducts
-
-### \\(I\_{D1} = I\_{D2} = 0.5 I\_{L} \\)
-
-### \\(v\_{oi}= 0 \\)
---
-
-### Therefore \\(v\_{L}= -V\_o  \\)
-
-### Inductor discharges and feeds the load
-
 ---
 
 # Push-Pull Converter
@@ -552,18 +537,46 @@ Minimum EMI Problems
 ## Switch(T2) ON, Switch(T1) OFF
 ### Symmetrical operation with the previous
 
-### \\(v\_{oi}= \dfrac{N\_2}{N\_1} V\_d \\)
+### \\(v\_{x}= \dfrac{N\_2}{N\_1} V\_s \\)
 --
 
-### \\(v\_{L}= v\_{oi} - V\_o = \dfrac{N\_2}{N\_1} V\_d - V\_o  \\)
+### \\(v\_{L}= v\_{x} - V\_o = \dfrac{N\_2}{N\_1} V\_s - V\_o  \\)
 
 
 ### \\(i\_L\\) increases linearly
+
 ---
 
 # Push-Pull Converter
 
-## Repeating waveforms for Ts/2
+## Both Switches are OFF
+### for a period of \\(\Delta\\)
+--
+
+### Both D1 and D2 conducts
+
+### \\(I\_{D1} = I\_{D2} = 0.5 I\_{L} \\)
+
+### \\(v\_{x}= 0 \\)
+--
+
+### Therefore \\(v\_{L}= -V\_o  \\)
+
+### Inductor discharges and feeds the load
+---
+
+
+### Repeating waveforms for every Ts/2
+
+
+<img src="./images/ee464/push_pull_operation2.png" alt="Drawing" style="width: 600px;">
+
+
+---
+
+# Push-Pull Converter
+
+## Repeating waveforms for every Ts/2
 
 ## \\(D T\_s + \Delta = \dfrac{T\_s}{2}  \\)
 
