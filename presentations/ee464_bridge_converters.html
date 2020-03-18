@@ -236,18 +236,55 @@ class: center, middle
 
 <img src="./images/ee464/switch_utilization.png" alt="Drawing" style="width: 500px;">
 
+---
+# Full Bridge Isolating Converter
+--
+
+
+<img src="./images/ee464/full_bridge.png" alt="Drawing" style="width: 600px;">
+
+### Compact solution for high power levels (>500W)
+
+### Similar to push-pull converter
+
+---
+
+## Full Bridge Converter: Operating Modes
+--
+
+<img src="./images/ee464/full_bridge_operating.png" alt="Drawing" style="width: 800px;">
+
+### S1 & S2, S3 & S4 operate alternatively
+
+---
+
+## Full Bridge Converter: Operating Modes
+
+<img src="./images/ee464/full_bridge2.png" alt="Drawing" style="width: 700px;">
+
+
+
+---
+## Full Bridge Converter
+
+# \\(V_o = 2 V_s  (\dfrac{N_s}{N_p})D\\)
+
+## \\(D < 0.5\\)
+
+## Same with the push-pull converter
+
 
 ---
 # Half Bridge Isolating Converter
 --
 
 
-<img src="./images/ee464/half_bridge.png" alt="Drawing" style="width: 800px;">
+<img src="./images/ee464/half_bridge.png" alt="Drawing" style="width: 600px;">
 
 
 ### Derived from the Buck Converter
  
-### T1, T2 turned on alternatively each for \\(t\_{on}\\), then both off for \\(\Delta\\)
+### S1, S2 turned on alternatively each for \\(t\_{on}\\), then both off for \\(\Delta\\)
 
 ---
 
@@ -259,47 +296,31 @@ class: center, middle
 
 ## Half Bridge Converter: Operating Modes
 
-<img src="./images/ee464/half_bridge2.png" alt="Drawing" style="width: 400px;">
+
+<img src="./images/ee464/half_bridge_operating2.png" alt="Drawing" style="width: 700px;">
 
 ---
 ## Half Bridge Converter
 
-# \\(V_o = V_d  (\dfrac{N_2}{N_1})D\\)
+# \\(V_o = V_s  (\dfrac{N_s}{N_p})D\\)
 ## \\(D < 0.5\\)
 
 ## Half of the push-pull converter
 
 ---
-# Full Bridge Isolating Converter
+# Current Source Converter
 --
 
+- ## Voltage Source Inverter (VSI):
+--
+ Fed by a voltage source (i.e. a capacitor large enough)
 
-<img src="./images/ee464/full_bridge.png" alt="Drawing" style="width: 800px;">
-
-### Compact solution for high power levels (>500W)
-
-
----
-
-## Full Bridge Converter: Operating Modes
 --
 
-<img src="./images/ee464/full_bridge_operating.png" alt="Drawing" style="width: 800px;">
----
+- ## Current Source Inverter (VCI):
+--
+ Fed by a current source (i.e. an inductor large enough)
 
-## Full Bridge Converter: Operating Modes
-
-<img src="./images/ee464/full_bridge2.png" alt="Drawing" style="width: 400px;">
----
-## Full Bridge Converter
-
-# \\(V_o = 2 V_d  (\dfrac{N_2}{N_1})D\\)
-
-## \\(D < 0.5\\)
-
-## Twice of the half-bridge converter
-
-## Same with the push-pull converter
 
 ---
 # Current Source Converter
@@ -307,7 +328,7 @@ class: center, middle
 
 <img src="./images/ee464/current_source_converter.png" alt="Drawing" style="width: 800px;">
 
-## Fed with constant source current
+## Fed with constant source current (due to large source inductance)
 
 ---
 # Current Source Converter
@@ -333,11 +354,24 @@ class: center, middle
 # Current Source Converter: Operating Modes
 
 
-<img src="./images/ee464/current_source2.png" alt="Drawing" style="width: 400px;">
+<img src="./images/ee464/current_source2.png" alt="Drawing" style="width: 800px;">
+
+## Notice the overlapping periods between switches
+
+---
+# Current Source Converter: Operating Modes
+
+
+<img src="./images/ee464/current_source3.png" alt="Drawing" style="width: 700px;">
+
+## Diode currents are added at the output
+
+
+
 ---
 # Current Source Converter
 
-# \\(V_o = V_d  (\dfrac{N_2}{N_1})(\dfrac{1}{2(1-D)})\\)
+# \\(V_o = V_s  (\dfrac{N_s}{N_p})(\dfrac{1}{2(1-D)})\\)
 --
 
 ## \\(D > 0.5\\)
@@ -345,6 +379,89 @@ class: center, middle
 # Operates as a: 
 --
 Boost Converter
+
+---
+# PFC?
+--
+
+## Power Factor Correction
+
+--
+## Power Factor of a 1Ph Diode Rectifier?
+--
+
+<img src="./images/ee464/pfc_diode_rectifier.png" alt="Drawing" style="width: 600px;">
+
+---
+## Diode Rectifier
+
+### Source current
+
+<img src="./images/ee464/pfc_diode_waveform.png" alt="Drawing" style="width: 700px;">
+---
+# PFC required for many applications
+--
+
+- ### Computer Power Supplies, LED Drives
+--
+
+- ### Arc Furnaces
+--
+
+- ### Welding
+
+<img src="http://www.gedikwelding.com/wp-content/uploads/2016/10/PoWerPlus-TIG-200-DC-PFC-Product.jpg" alt="Drawing" style="width: 300px;">
+---
+
+# PFC Circuit
+--
+
+<img src="./images/ee464/pfc.png" alt="Drawing" style="width: 700px;">
+
+---
+
+# PFC Current
+--
+
+<img src="./images/ee464/pfc_current.png" alt="Drawing" style="width: 500px;">
+
+
+
+---
+
+# PFC Current
+
+## Critical Current Mode (Discontinuous Current Mode)
+--
+
+<img src="./images/ee464/pfc_crm.png" alt="Drawing" style="width: 600px;">
+
+
+---
+# PFC Effect
+--
+
+<img src="https://toshiba.semicon-storage.com/content/dam/toshiba-ss/std/product/linear/powersupply/pfc/__icsFiles/artimage/2013/01/15/cprmafd0000/a3.gif" alt="Drawing" style="width: 800px;">
+
+---
+
+## Commercial PFC Controllers
+--
+
+- ### [Toshiba-TB6819AFG](https://toshiba.semicon-storage.com/tr/product/linear/power-supply/pfc-ic/pfc-crm-ic.html)
+
+- ### [OnSemi PFC Controllers](http://www.onsemi.com/PowerSolutions/parametrics.do?id=981)
+
+- ### [TI PFC Controllers](http://www.ti.com/power-management/offline-isolated-dcdc-controllers-converters/factor-correction/products.html#p1694=Single-phase%20PFC&p1131=CCM)
+
+- ### [TI UCC28180](http://www.ti.com/product/UCC28180/datasheet/abstract#SLUSBQ56054)
+
+---
+## PFC Application Study: Welding Circuit
+--
+
+<img src="./images/ee464/pfc_welding.png" alt="Drawing" style="width: 800px;">
+
 
 ---
 ## You can download this presentation from: [keysan.me/ee464](http://keysan.me/ee464)
