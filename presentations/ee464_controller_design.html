@@ -34,9 +34,18 @@ class: center, middle
 ---
 # Control in Power Electronics
 
-<img src="http://www.smu.ca/faculty/adelmerabet/images/WECS_000.JPG" alt="Drawing" style="width: 800px;">
-
 ## Control of a Wind Turbine
+--
+
+<img src="./images/ee464/wind_turbine_control_1.png" alt="Drawing" style="width: 700px;">
+
+
+---
+
+## Detailed Control of a Wind Turbine
+
+<img src="./images/ee464/wind_turbine_control_2.png" alt="Drawing" style="width: 750px;">
+
 ---
 
 # Control in Power Electronics
@@ -45,25 +54,26 @@ class: center, middle
 ## Most DC/DC converters controlled by analog controllers:
 --
 
-- ### Micro-controllers not fast enough at high switching frequencies
+- ### Micro-controllers are not fast enough (both for computing and sampling) at high switching frequencies
 --
 
 - ### Cheap (just an IC and a few passive elements)
 --
 
 - ### Could be integrated to with drive circuit ([LM1771](http://www.ti.com/product/LM1771/datasheet/abstract#snvs44619))
+
 ---
 # Control in Power Electronics
 
 <img src="http://ecee.colorado.edu/ecen4517/exp/exp3/BuckMPPT.gif" alt="Drawing" style="width: 700px;">
 
-### Control with microcontroller
+## Control with a microcontroller
 ---
 # Control in Power Electronics
 
 <img src="https://m.eet.com/media/1120288/c0799-figure1.gif" alt="Drawing" style="width: 500px;">
 
-### Control with error amplifier
+## Control with an error amplifier
 ---
 ## Buck Converter Controller
 --
@@ -81,13 +91,13 @@ class: center, middle
 
 - ## Small steady-state error
 --
-(gain at low frequencies should be large)
+ (i.e. gain at low frequencies should be large)
 
 --
 
 - ## No resonance
 --
-(gain at switching frequency should be small)
+ (i.e. gain at switching frequency should be small)
 
 --
 
@@ -114,7 +124,12 @@ class: center, middle
 
 ### Small Signal Model of a Transistor (EE311)
 
-<img src="https://qphl.fs.quoracdn.net/main-qimg-2cccbfdf48fa4f0e27cb8b108e5a756f" alt="Drawing" style="width: 650px;">
+<img src="https://www.allaboutcircuits.com/uploads/articles/BJTs_after_Biasing_hybrid-pi_model.jpg" alt="Drawing" style="width: 500px;">
+
+---
+# Small Signal Analysis for the Buck Converter
+
+<img src="./images/ee464/buck_feedback.png" alt="Drawing" style="width: 600px;">
 
 ---
 # Small Signal Analysis
@@ -156,19 +171,28 @@ class: center, middle
 
 <img src="./images/ee464/buck_average.png" alt="Drawing" style="width: 700px;">
 ---
-# Small Signal Analysis
+# Small Signal Analysis for the Buck Converter
 
-## For the buck converter
-
-## Let's derive the small signal model
+## Let's derive the small signal model for voltage
 --
 
-### \\(v_x = V_s D + \tilde{v}_s D + V_s \tilde{d}\\)
+### \\(v_x = V_s d \\)
 --
-\\(\approx v_sD + V_s\tilde{d}\\)
+ \\( = (V_s + \tilde{v}_s ) (D + \tilde{d} ) \\)
 --
 
-### For current
+### \\(v_x = V_s D + \tilde{v}_s D + V_s \tilde{d} + \tilde{v}_s \tilde{d} \\) 
+--
+
+## ignoring the last term
+--
+
+### \\(v_x \approx V_s D + \tilde{v}_s D + V_s \tilde{d}\\)
+
+---
+# Small Signal Analysis for the Buck Converter
+
+## Let's repeat for current
 
 ### \\(i_s = i_L d = (I_L + \tilde{i}_L)(D +\tilde{d})\\)
 
@@ -313,8 +337,268 @@ class: center, middle
 --
 
 - ## Use a linear controller with required characteristics
+--
+
+## Details in the textbook (Mohan)
+
+---
+# Case Study (Mohan 10-1)
+
+## Find the transfer function of forward converter
+--
+
+<img src="./images/ee464/forward_controller.png" alt="Drawing" style="width: 700px;">
+
+## Note the state variables
+
+---
+# Case Study (Mohan 10-1)
+
+## Switch ON
+
+
+<img src="./images/ee464/forward_controller_on.png" alt="Drawing" style="width: 700px;">
+
+---
+# Case Study (Mohan 10-1)
+
+## Switch OFF
+
+
+<img src="./images/ee464/forward_controller_off.png" alt="Drawing" style="width: 700px;">
+---
+# Case Study (Mohan 10-1)
+
+## Steady State Transfer Function
+--
+
+### \\(\dfrac{V_o}{V_d} = -C A^{-1}B\\)
+--
+
+### \\(\dfrac{V_o}{V_d} = D \dfrac{R+ r_C}{R+(r_C + r_L)}\\)
+--
+
+### If parasitic resistances are small
+--
+
+### \\(\dfrac{V_o}{V_d} \approx D \\)
+
+---
+# Case Study (Mohan 10-1)
+
+## AC Transfer Function
+--
+
+### \\(T_p(s)=\dfrac{\tilde{v}_o(s)}{\tilde{d}(s)}\\)
+--
+
+### \\(=V_d \dfrac{1 + s r_C C}{LC [s^2 + s (1/RC + (r_C + r_L)/L)+ 1/LC]}\\)
+--
+
+## Remember this equation?
+--
+
+### \\(s^2 + 2 \xi \omega_0 s + \omega_0^2\\)
+
+---
+# Case Study (Mohan 10-1)
+
+## AC Transfer Function
+
+
+### \\( s^2 + 2 \xi \omega_0 s + \omega_0^2\\)
+--
+
+### \\(\omega_0 = \dfrac{1}{\sqrt{LC}}\\)
+--
+
+### \\(\xi = \dfrac{1/RC + (r_C + r_L)/L}{2\omega_0}\\)
+
+---
+# Case Study (Mohan 10-1)
+
+## AC Transfer Function Becomes
+
+### \\(T_p(s)=V_d \dfrac{\omega_0^2}{\omega_z} \dfrac{s + \omega_z}{s^2 + 2 \xi \omega_0 s + \omega_0^2}\\)
+
+### where \\(\omega_z = \dfrac{1}{r_C C}\\)
+---
+# Example (Mohan 10-1)
+
+### Put the parameters into the equation
+
+#### \\(V_d = 8 V\\)
+#### \\(V_o = 5 V\\)
+#### \\(r_L = 20 m\Omega\\)
+#### \\(L = 5 \mu H\\)
+#### \\(r_C = 10 m\Omega\\)
+#### \\(C = 2 mF\\)
+#### \\(R = 200 m\Omega\\)
+#### \\(f_s = 200 kHz\\)
+
+---
+# Example (Mohan 10-1)
+
+## Bode Plot (Gain)
+
+<img src="./images/ee464/forward_bode_gain.png" alt="Drawing" style="width: 650px;">
+
+---
+# Example (Mohan 10-1)
+
+## Bode Plot (Phase)
+
+<img src="./images/ee464/forward_bode_phase.png" alt="Drawing" style="width: 650px;">
+---
+# Flyback Converter
+--
+
+#### Equation 10-86
+
+### \\(T_p(s)=\dfrac{\tilde{v}_o(s)}{\tilde{d}(s)}\\)
+--
+
+### \\(T\_p(s)=V\_d f(D)  \dfrac{(1 + s/\omega\_{z1})(1 - s/\omega\_{z2})}{as^2 + bs + c}\\)
+
+
+---
+# Flyback Converter
+--
+
+## Bode Plot (Gain)
+
+<img src="./images/ee464/flyback_bode_gain.png" alt="Drawing" style="width: 650px;">
+
+---
+# Flyback Converter
+--
+
+## Bode Plot (Phase)
+
+<img src="./images/ee464/flyback_bode_phase.png" alt="Drawing" style="width: 650px;">
+---
+## A few readings for controller design
+--
+
+- ### [Control Design of a Boost Converter Using Frequency Response Data](https://www.mathworks.com/help/slcontrol/examples/control-design-of-a-boost-converter-using-frequency-response-data.html)
+- ### [PID Control Tuning for Buck Converter](https://www.mathworks.com/videos/pid-controller-tuning-for-a-buck-converter-1504291092156.html)
+- ### [Design digital controllers for power electronics using simulation](https://www.mathworks.com/discovery/power-electronics-simulation.html)
+- ### [Bode Response of Simulink Model](https://www.mathworks.com/help/slcontrol/gs/bode-response-of-simulink-model.html)
+- ### [How to Run an AC Sweep with PSIM?](https://www.youtube.com/watch?v=nbFo-NMeY_w)
+- ### [Peak Current Control with PSIM](https://powersimtech.com/drive/uploads/2016/03/Tutorial-Peak-current-mode-control.pdf)
+- ### [Plexim-Frequency Analysis of Buck Converter ](https://www.plexim.com/support/application-examples/187) 
+---
+# Controller Design
+--
+
+## Generalized Compensated Error Amplifier
+--
+
+
+<img src="./images/ee464/error_amplifier.png" alt="Drawing" style="width: 800px;">
+
+---
+## Types of Error Amplifier
+--
+
+### Common Ones:
+
+- ### Type-1
+
+- ### Type-2
+
+- ### Type-3
+
+
+---
+# Type-1 Error Amplifier
+
+<img src="https://venable.biz/wp-content/uploads/2017/09/type-1-amplifier.png" alt="Drawing" style="width: 600px;">
+
+## Simple Integrator
+
+## Has one pole at the origin
+
+---
+# Type-1 Error Amplifier
+
+<img src="https://venable.biz/wp-content/uploads/2017/09/type-1-amplifier-1.png" alt="Drawing" style="width: 600px;">
+
+
+---
+## Type-2 Error Amplifier (Most Common Type)
+--
+
+<img src="https://venable.biz/wp-content/uploads/2017/09/type-2-amplifier.png" alt="Drawing" style="width: 600px;">
+
+### Has two poles: at origin and one at zero-pole pair
+### 90 degrees phase boost can be obtained due to single zero
 ---
 
+## Type-2 Error Amplifier (Most Common Type)
+--
+
+<img src="https://venable.biz/wp-content/uploads/2017/09/transfer-function-type-2-amp.png" alt="Drawing" style="width: 600px;">
+
+### Note the phase boost
+
+---
+
+## Type-3 Error Amplifier
+--
+
+<img src="https://venable.biz/wp-content/uploads/2017/09/type-3-amp.png" alt="Drawing" style="width: 350px;">
+
+### has two zeros can can boost up to 180 degrees
+---
+
+## Putting all Together
+--
+
+## A controller just increases the gain (Proportional)
+--
+
+<img src="./images/ee464/gain_vs_phase_margin.png" alt="Drawing" style="width: 800px;">
+
+### Increasing gain usually reduces phase margin (and reduces stability)
+
+---
+
+## Putting all Together
+--
+
+## A proper controller  (adjust gain and phase margin)
+--
+
+<img src="./images/ee464/bode_plot_with_controller.png" alt="Drawing" style="width: 800px;">
+
+---
+
+## More Information
+
+<img src="http://sattalks.org/wp-content/uploads/icebergfloat-640x410.jpg" alt="Drawing" style="width: 600px;">
+
+---
+## More Information
+
+- ### Fundamentals of Power Electronics, Erickson
+
+- ### [Phase Margin, Crossover Frequency, and Stability](https://www.eeweb.com/profile/cody-miller/articles/bode-plot-phase-margin-crossover-frequency-and-stability)
+
+- ### [Loop Stability Analysis of Voltage Mode Buck Regulator](http://www.ti.com/lit/an/slva301/slva301.pdf)
+
+- ### [DC-DC Converters Feedback and Control](http://www.onsemi.com/pub/Collateral/TND352-D.PDF)
+
+- ### [Modeling and Loop Compensation Design](http://cds.linear.com/docs/en/application-note/AN149fa.pdf)
+
+- ### [Compensator Design Procedure](https://www.infineon.com/dgdl/an-1162.pdf?fileId=5546d462533600a40153559a8e17111a)
+
+---
+## You can download this presentation from: [keysan.me/ee464](http://keysan.me/ee464)
+
+
+---
+## Saved for further reference
 ## Ready?
 --
 
@@ -558,126 +842,6 @@ Use derivations from eq.10.53-10.59
 ## Bode Plot (Phase)
 
 <img src="./images/ee464/flyback_bode_phase.png" alt="Drawing" style="width: 650px;">
----
-## How to obtain bode plots with software?
---
-
-- ### [Control Design of a Boost Converter Using Frequency Response Data](https://www.mathworks.com/help/slcontrol/examples/control-design-of-a-boost-converter-using-frequency-response-data.html)
-- ### [https://www.mathworks.com/videos/pid-controller-tuning-for-a-buck-converter-1504291092156.html](https://www.mathworks.com/videos/pid-controller-tuning-for-a-buck-converter-1504291092156.html)
-- ### [Design digital controllers for power electronics using simulation](https://www.mathworks.com/discovery/power-electronics-simulation.html)
-- ### [Bode Response of Simulink Model](https://www.mathworks.com/help/slcontrol/gs/bode-response-of-simulink-model.html)
-- ### [How to Run an AC Sweep with PSIM?](https://www.youtube.com/watch?v=nbFo-NMeY_w)
-- ### [Peak Current Control with PSIM](https://powersimtech.com/drive/uploads/2016/03/Tutorial-Peak-current-mode-control.pdf)
-- ### [Plexim-Frequency Analysis of Buck Converter ](https://www.plexim.com/support/application-examples/187) 
----
-# Controller Design
---
-
-## Generalized Compensated Error Amplifier
---
-
-
-<img src="./images/ee464/error_amplifier.png" alt="Drawing" style="width: 800px;">
-
----
-## Types of Error Amplifier
---
-
-### Common Ones:
-
-- ### Type-1
-
-- ### Type-2
-
-- ### Type-3
-
-
----
-# Type-1 Error Amplifier
-
-<img src="https://venable.biz/wp-content/uploads/2017/09/type-1-amplifier.png" alt="Drawing" style="width: 600px;">
-
-## Simple Integrator
-
-## Has one pole at the origin
-
----
-# Type-1 Error Amplifier
-
-<img src="https://venable.biz/wp-content/uploads/2017/09/type-1-amplifier-1.png" alt="Drawing" style="width: 600px;">
-
-
----
-## Type-2 Error Amplifier (Most Common Type)
---
-
-<img src="https://venable.biz/wp-content/uploads/2017/09/type-2-amplifier.png" alt="Drawing" style="width: 600px;">
-
-### Has two poles: at origin and one at zero-pole pair
-### 90 degrees pahase boost can be obtained due to single zero
----
-
-## Type-2 Error Amplifier (Most Common Type)
---
-
-<img src="https://venable.biz/wp-content/uploads/2017/09/transfer-function-type-2-amp.png" alt="Drawing" style="width: 600px;">
-
-### Note the phase boost
-
----
-
-## Type-3 Error Amplifier
---
-
-<img src="https://venable.biz/wp-content/uploads/2017/09/type-3-amp.png" alt="Drawing" style="width: 350px;">
-
-### has two zeros can can boost up to 180 degrees
----
-
-## Putting all Together
---
-
-## A controller just increases the gain (Proportional)
---
-
-<img src="./images/ee464/gain_vs_phase_margin.png" alt="Drawing" style="width: 800px;">
-
-### Increasing gain usually reduces phase margin (and reduces stability)
-
----
-
-## Putting all Together
---
-
-## A proper controller  (adjust gain and phase margin)
---
-
-<img src="./images/ee464/bode_plot_with_controller.png" alt="Drawing" style="width: 800px;">
-
----
-
-## More Information
-
-<img src="http://sattalks.org/wp-content/uploads/icebergfloat-640x410.jpg" alt="Drawing" style="width: 600px;">
-
----
-## More Information
-
-- ### Fundamentals of Power Electronics, Erickson
-
-- ### [Phase Margin, Crossover Frequency, and Stability](https://www.eeweb.com/profile/cody-miller/articles/bode-plot-phase-margin-crossover-frequency-and-stability)
-
-- ### [Loop Stability Analysis of Voltage Mode Buck Regulator](http://www.ti.com/lit/an/slva301/slva301.pdf)
-
-- ### [DC-DC Converters Feedback and Control](http://www.onsemi.com/pub/Collateral/TND352-D.PDF)
-
-- ### [Modeling and Loop Compensation Design](http://cds.linear.com/docs/en/application-note/AN149fa.pdf)
-
-- ### [Compensator Design Procedure](https://www.infineon.com/dgdl/an-1162.pdf?fileId=5546d462533600a40153559a8e17111a)
-
----
-## You can download this presentation from: [keysan.me/ee464](http://keysan.me/ee464)
-
 
     </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
