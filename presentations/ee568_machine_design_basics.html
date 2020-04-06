@@ -330,12 +330,19 @@ or
 
 
 <img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/magnetic_loading.png" alt="Drawing" style="width: 750px;"/>
+---
+
+# Typical Flux Density Values
+
+<img src="./images/typical_magnetic_loading.png" alt="Drawing" style="width: 750px;"/>
+
+Source: Traditional Design of Electrical Machines, Slide-12
 
 ---
 # Specific Electric Loading (kA/m)
 --
 
-## RMS ampere turns per unit lenght of the airgap
+## RMS ampere turns per unit length of the airgap
 --
 
 ## \\(\bar{A} = \dfrac{ N\_{turn,slot} I Q}{\pi D\_i}\\)
@@ -375,6 +382,8 @@ or
 --
 \\(= \dfrac{A\_{rms} \hat{B} cos (\phi)}{\sqrt{2}} \\)
 
+
+#### Details and derivations are available in Design of Rotating Electrical Machines, Juha Pyrhonen.
 ---
 
 ## Torque vs Stress
@@ -382,6 +391,17 @@ or
 
 ## Torque = \\( \sigma\_{tan} r\_r S\_r\\)
 --
+
+## \\(r\_r\\): Rotor Radius (m)
+
+## \\(S\_r\\): Rotor Surface Area (m2)
+
+## \\(S\_r = (2 \pi r\_r l') \\)
+
+
+---
+
+## Torque vs Stress
 
 ##  \\( T = \sigma\_{tan} r\_r (2 \pi r\_r l')\\)
 --
@@ -391,18 +411,332 @@ or
 
 ##  \\( T = 2 \sigma\_{tan} V\_r \\)
 
-##  \\( V\_r \\) : Rotor Volume
+##  \\( V\_r = \pi r\_r^2 l' \\) : Rotor Volume
+
+## Torque of a motor is proportional to rotor volume and tangential stress (i.e. electric loading x magnetic loading)
 
 ---
-#Exercise:
+# Specific Machine Constant (C)
+
+#### Full derivations available in in Design of Rotating Electrical Machines, Juha Pyrhonen.
+
+--
+
+### \\(S\_i = m E\_m I\_s\\)
+
+### \\(S\_i\\): Apparent Power (kVA)
+
+### \\(m\\): Number of Phases
+
+### \\(E\_m\\): Induced Phase Voltage 
+
+### \\(I\_s\\): Stator Phase Current
+
+---
+# Specific Machine Constant (C)
+
+#### Full derivations available in in Design of Rotating Electrical Machines, Juha Pyrhonen.
+
+### \\(S\_i = m \dfrac{1}{\sqrt{2}} \omega N\_s k\_{w1} \hat{\Phi}\_m I\_s\\)
+--
+
+### \\(S\_i = m \dfrac{1}{\sqrt{2}} \omega N\_s k\_{w1} \hat{\Phi}\_m \dfrac{A \pi D}{2}\\)
+--
+
+### \\(\omega = 2 \pi p n\_{syn}\\)
+
+---
+# Specific Machine Constant (C)
+
+--
+
+### \\(S\_i =  \dfrac{1}{\sqrt{2}} 2 \pi p n\_{syn} k\_{w1} \dfrac{\pi D }{2p}\dfrac{2}{\pi} \hat{B} l'\dfrac{A \pi D}{2}\\)
+--
+
+### \\(S\_i =  \dfrac{\pi^2}{\sqrt{2}} n\_{syn} k\_{w1} A \hat{B} D^2 l'\\)
+--
+
+### \\(S\_i =  C  D^2 l' n\_{syn}\\)
+
+### \\(C =  \dfrac{\pi^2}{2}  k\_{w1} \hat{A} \hat{B} \\)
+
+---
+# Specific Machine Constant (C)
+
+### \\(S\_i =  C  D^2 l' n\_{syn}\\)
+
+### \\(D^2 l'\\): Rotor Volume (m3)
+
+### C: Specific Machine Constant
+
+### \\(C =  \dfrac{\pi^2}{2}  k\_{w1} \hat{A} \hat{B} \\)
+
+### A factor to evaluate a machine's performance that combines winding design, electric loading, magnetic loading
+
+---
+# \\(C\_{mech}\\)
+
+<img src="./images/Cmech.png" alt="Drawing" style="width: 600px;"/>
+
+---
+## Exercise (Pyrhonen Ex 6.1)
+--
 
 ### The diameter of a rotor of a 4 kW, 50 Hz, two-pole induction motor is 98 mm and the length is 82 mm. 
 --
 
 ### Assume 1% rated slip and calculate the machine constant and the average tangential stress.
+--
+
+### \\(P= T \omega \\)
+--
+
+### 50 Hz, 2 pole, 0.01 slip
+--
+
+### \\(\omega = 2 \pi f (1-s) = 2 \pi (1-0.01) = 99 \pi\\)
+
+---
+## Exercise (Pyrhonen Ex 6.1)
+ 
+### \\( T = \dfrac{4 kW}{ 99 \pi} = 12.86\\) Nm
+--
+
+### Rotor Area: \\(S_r\\)
+--
+\\(= \pi D_r l = \pi \, 0.098 \, 0.082 = 0.0252 m²\\)
+--
+
+### \\(F\_{tan}=\dfrac{Torque}{Radius} = \dfrac{12.86}{0.049} = 262 N\\)
+--
 
 
-Textbook: Example 6.1
+### Stress \\( \sigma = \dfrac{F\_{tan}}{S\_r} = \dfrac{262}{0.0252} = 10.400 N/m² \\)
+---
+## Machine Constant
+
+### \\(P\_{mech} = C\_{mech} D² l f\_{syn}\\)
+
+### \\(C\_{mech} = \dfrac{4000}{0.098² \, 0.082 50 }\\)
+--
+
+### \\(C\_{mech} = 102 \, kWs/m³ \\)
+
+---
+
+# Aspect Ratio
+--
+
+## Ratio of axial length to diameter in an electric machine
+
+## \\(\chi = \dfrac{L'}{D}\\)
+
+---
+
+# Aspect Ratio
+--
+
+<img src="./images/ee564/aspect_ratio.png" alt="Drawing" style="width: 600px;"/>
+
+---
+
+# Typical Aspect Ratios
+--
+
+### Asynchronous Machines:
+
+### \\(\chi \approx \dfrac{\pi}{2p} \sqrt[3]{p}\\\)
+
+### \\(p\\): pole pairs
+--
+
+### Synchronous Machines:
+
+### \\(\chi \approx \dfrac{\pi}{4p} \sqrt{p}\\\)
+--
+
+
+---
+# Define \\(D_i\\) and \\(L\\)
+--
+
+## Usually \\(0.5 < D_i/L < 2.5\\)
+--
+
+## Small diameter for high-speed or servo-type motors, why?
+--
+
+### Small inertia,
+--
+
+### Low tip speed!
+--
+
+### Bending Modes
+
+---
+
+---
+# How to define Outer Diameter \\(D_o\\)?
+--
+
+<img src="./images/varying_number_of_poles.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# How to define \\(D_o\\)?
+--
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#bbb;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:32px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#bbb;color:#594F4F;background-color:#E0FFEB;}
+.tg th{font-family:Arial, sans-serif;font-size:32px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#bbb;color:#493F3F;background-color:#9DE0AD;}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-031e">N Poles</th>
+    <th class="tg-031e">2</th>
+    <th class="tg-031e">4</th>
+    <th class="tg-031e">6</th>
+    <th class="tg-031e">8</th>
+    <th class="tg-031e">10</th>
+    <th class="tg-szh5">12</th>
+  </tr>
+  <tr>
+    <td class="tg-031e">Do/Di</td>
+    <td class="tg-031e">2 <br></td>
+    <td class="tg-031e">1.88</td>
+    <td class="tg-031e">1.78</td>
+    <td class="tg-031e">1.66</td>
+    <td class="tg-031e">1.54</td>
+    <td class="tg-031e">1.43</td>
+  </tr>
+</table>
+
+
+Source: T.Miller - Electric Machine Design Course, Lecture-5, Slide4
+
+---
+
+## Example:
+--
+
+### Determine the main dimensions for a 30 kW, 690 V, 50 Hz four-pole, three-phase SCIG.
+
+--
+
+### Choose Cmech = 150 kW s/m3
+--
+
+### \\(\chi \approx \dfrac{\pi}{2p} \sqrt[3]{p}\\\)
+--
+
+### \\(\chi \approx \dfrac{\pi}{4} \sqrt[3]{2} = 0.9895 \approx 1\\\)
+
+---
+
+### \\(P\_{mech} = C\_{mech} D² l n\_{syn}\\)
+
+### \\( D = \sqrt[3]{\dfrac{P\_{mech}}{\chi C\_{mech} n\_{syn}}} = \sqrt[3]{\dfrac{30}{ 1 \, 150 \, 25}} \approx 200 mm \\)
+
+--
+### Tangential Stress if the speed is 1474 rpm
+--
+
+### \\(T=\dfrac{30k}{2\pi 1454/60}= 194.4 \\) Nm
+--
+
+### \\(\sigma = \dfrac{T}{r \, S\_r} = \dfrac{2 \, 194.4}{\pi 0.2² 0.2} = 15.5 \\) kPa
+
+---
+---
+# Stator Slot Pitch:
+--
+
+- ## Induction Machines and small PMSMs:  7-45 mm
+--
+
+- ## Synchronous Machines and large PMSMs:  14-75 mm
+--
+
+- ## DC Machines:  10-30 mm
+--
+
+### Tooth thickness can be initially assumed as the half of the slot pitch
+--
+
+### Slot pitch gets bigger as the power rating of the machine increases
+
+---
+## Example:
+
+### Define the rough dimensions, and a select suitable stator windings for the 30 kW, 4-pole induction machine.
+--
+
+### D= 200 mm, L= 200 mm, Stator circumference = 628 mm
+--
+
+### Assume q= 2, \\(N\_{slot} = 4 x 3 x 2 =24 \\)
+
+### Tooth thickness: \\(\tau\_{teeth} = 0.5 \dfrac{628}{24} =13 \\)mm
+
+---
+## Example:
+
+### Define the rough dimensions, and a select suitable stator windings for the 30 kW, 4-pole induction machine.
+
+
+### D= 200 mm, L= 200 mm, Stator circumference = 628 mm
+
+
+### Assume q= 3, \\(N\_{slot} = 4 x 3 x 3 =36 \\)
+
+### Tooth thickness: \\(\tau\_{teeth} = 0.5 \dfrac{628}{36} =8 \\)mm
+
+---
+## Example:
+
+### Define the rough dimensions, and a select suitable stator windings for the 30 kW, 4-pole induction machine.
+
+### D= 200 mm, L= 200 mm, Stator circumference = 628 mm
+
+### Assume q= 4, \\(N\_{slot} = 4 x 3 x 4 =48 \\)
+
+### Tooth thickness: \\(\tau\_{teeth} = 0.5 \dfrac{628}{48} =6.5 \\)mm
+
+---
+## Example:
+
+### Define the rough dimensions, and a select suitable stator windings for the 30 kW, 4-pole induction machine.
+
+### D= 200 mm, L= 200 mm, Stator circumference = 628 mm
+
+### q= 3 seems the best option
+
+### Coil span: 9 slots
+
+### A 8/9 or 7/9 short-pitched winding can be used.
+
+
+
+---
+# Reading Assignment (Pyrhonen)
+--
+
+## Ch-7 Introduction summarizes the first steps in machine design
+
+
+---
+# Where are we? Rough Design Steps
+--
+
+<img src="./images/ee564/design_process.png" alt="Drawing" style="width: 800px;"/>
+
+
+
+
+---
+
+
 ---
 ## You can download this presentation from: [keysan.me/ee564](http://keysan.me/ee564)
 
