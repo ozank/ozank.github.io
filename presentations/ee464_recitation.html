@@ -53,6 +53,29 @@ class: center, middle
 
 <img src="./images/ee464/recitation1.png" alt="Drawing" style="width: 600px;">
 
+---
+# Solution
+--
+
+####1:1 turns ratio, then it is same as a buck converter
+--
+
+#### Smallest \\(I\_{OB}\\) occurs when \\(V_d\\) is min (Read Mohan Sect. 7.5.2)
+--
+
+#### \\(D= \dfrac{V_o}{V_o + V_d} = \dfrac{12}{12+12} = 0.5\\)
+--
+
+#### \\(I_O\\) should be calculated for the highest power (60 W) 
+
+#### \\(I_O = \dfrac{60}{12}= 5A \\)
+--
+
+ \\(I_{OB} = \dfrac{T\_s V\_o (1-D)^2}{2L} = 5A\\)
+
+--
+
+#### \\(L\_m = \dfrac{12 (1-0.5)^2}{200 10^3 2 \, 5} = 1.5 \mu H\\)
 
 ---
 
@@ -80,16 +103,63 @@ class: center, middle
 ## b) Calculate the minimum value of filter inductance.
 ---
 
+# Solution
+--
+
+#### \\(N\_3 = N\_2 \rightarrow D\_{max}=0.5 \quad 43.2 V \lt V\_d \lt 52.8 V \\) 
+--
+
+#### \\( \dfrac{V\_o}{V\_d} = \dfrac{N_2}{N_1} D \\)
+--
+
+#### \\( \dfrac{V\_o}{V\_{dmin}} = \dfrac{5}{43.2} = \dfrac{N\_2}{N\_1} 0.5 \rightarrow \dfrac{N\_2}{N\_1} = 0.232 \\)
+--
+
+#### Let's check for maximum Vd
+
+#### \\(\dfrac{V\_o}{V\_{dmax}} = \dfrac{N\_2}{N\_1} D\_{min} \rightarrow \dfrac{5}{52.8} =\dfrac{N\_2}{N\_1}D  \\)
+--
+
+#### \\(D = 0.408 \\) Condition satisfied
+
+---
+### b) Minimum value of the filter inductance
+--
+
+#### \\( \dfrac{N\_2}{N\_1} = 0.232 \\)
+
+#### \\(P\_{min} = 15 W \rightarrow I\_{omin} = 3A = I\_{Lmin}\\)
+--
+
+#### At the boundary:
+
+
+#### \\(\dfrac{(V\_d \dfrac{N\_2}{N\_1} - V\_o ) D}{2 L\_{min}} t\_{on}= I\_{omin}\\)
+--
+
+#### \\( V\_{dmin} = 43.2 \rightarrow D=0.5 \rightarrow L\_{min}=4.18 \mu H\\)
+--
+
+#### \\( V\_{dmax} = 52.8 \rightarrow D=0.408 \rightarrow L\_{min}=4.93 \mu H\\)
+
+#### Therefore \\( L\_{min}=4.93 \mu H \approx 5 \mu H \\) should be used
+
+---
 # Ex. W.Hart 7.2
 --
 
-## Design a converter to produce and output voltage of 36V from a 3.3V supply. The output current is 0.1 A.
+### Design a converter to produce and output voltage of 36V from a 3.3V supply. The output current is 0.1 A.
 --
 
-## Design for an output ripple voltage of 2%. Include ESR when choosing a capacitor.
+### Design for an output ripple voltage of 2%. Include ESR when choosing a capacitor.
 --
 
-## Assume for this problem that the ESR is related to the capacitor value by \\(r\_c = 10^{-5}/C\\).
+### Assume for this problem that the ESR is related to the capacitor value by \\(r\_c = 10^{-5}/C\\).
+--
+
+### Solution available in the textbook
+
+
 ---
 
 # Ex. W.Hart 7.4
@@ -115,6 +185,7 @@ class: center, middle
 ## b) Determine the peak curren in the transformer primary winding. Verify that the magnetizinf current is reset to zero during each switching period.
 
 
+### Solution available in the textbook
 ---
 # Ex. W.Hart 7.4
 --
@@ -168,6 +239,7 @@ class: center, middle
 
 
 
+### Solution available in the textbook and also in the YouTube Channel
 
 ---
 ## You can download this presentation from: [keysan.me/ee464](http://keysan.me/ee464)
