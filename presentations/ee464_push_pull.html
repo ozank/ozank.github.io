@@ -247,16 +247,79 @@ class: center, middle
 - ### No third order harmonics
 
 ---
-# Example:
-
-### D. Hart . Ex 8-12:
+##Example: (D. Hart . 8-12)
 --
 
-### Calculate the voltage and current harmonics and THD.
+### For the six-step three phase inverter shown below, Vin=100V, \\(f\_{out}=60Hz\\). The load is Y-connected to load with a phase load of \\(R=10 \Omega\\), \\(L=20 mH\\).
+
+<img src="./images/ee464/six_step.png" alt="Drawing" style="width: 500px;">
+
+--
+### Calculate the total harmonic distortion (THD) of the load current and voltage.
+
+---
+##Example: (D. Hart . 8-12)
+
+---
+
+## Switching Sequence
+
+<img src="./images/ee464/six_step_switches.png" alt="Drawing" style="width: 700px;">
+
+---
+
+## Line-to-Line Voltages
+
+<img src="./images/ee464/six_step_line_voltages.png" alt="Drawing" style="width: 500px;">
+
+---
+## Equivalent Phase Voltages
+
+<img src="./images/ee464/six_step_phase_voltages.png" alt="Drawing" style="width: 700px;">
+
+---
+##Example: (D. Hart . 8-12)
+
+### Amplitude for load current at each frequency:
+
+
+### \\(I\_n=\dfrac{V\_{n,L-N}}{Z\_n}\\)
+--
+\\(=\dfrac{V\_{n,L-N}}{\sqrt{R²+(n \omega L)²}}\\)
+
+---
+##Example: (D. Hart . 8-12)
+
+### Amplitude for load current at each frequency:
+
+### \\(I\_n=\dfrac{V\_{n,L-N}}{Z\_n} = \dfrac{V\_{n,L-N}}{\sqrt{10²+(n 2 \pi 60 \, 0.02)²}}\\)
 --
 
-<img src="./images/ee464/six_step_ex.png" alt="Drawing" style="width: 700px;">
+### Line-to-Neutral Harmonics
 
+### \\(\hat{V}\_{n,l-N} = \dfrac{1}{n}\dfrac{2}{\pi}V\_{dc}\\)
+
+### For: \\(n = 6k \pm 1 = 1,5,7,11,13...\\)
+
+---
+
+<img src="./images/ee464/six_step_ex.png" alt="Drawing" style="width: 600px;">
+
+### Voltage THD=
+--
+
+#### \\(\dfrac{\sqrt{ \sum\_{n=2}^{\infty} V\_n²}}{V\_{1,rms}} \approx \dfrac{\sqrt{12.73²+9.09²+5.79²+4.90²}}{63.6}=0.31=31\%\\)
+
+---
+
+<img src="./images/ee464/six_step_ex.png" alt="Drawing" style="width: 600px;">
+
+### Current THD=
+--
+
+#### \\(\dfrac{\sqrt{ \sum\_{n=2}^{\infty} I\_n²}}{I\_{1,rms}} \approx \dfrac{\sqrt{0.23²+0.12²+0.05²+0.04²}}{3.59}=0.07=7\%\\)
+
+--
 ### [Voltage Plot](https://www.google.com.tr/search?ei=1E_DWtwJhZLoBITenLgK&q=sin%28x%29%2Bsin%285x%29%2F5%2Bsin%287x%29%2F7%2Bsin%2811x%29%2F11%2Bsin%2813x%29%2F13&oq=sin%28x%29%2Bsin%285x%29%2F5%2Bsin%287x%29%2F7%2Bsin%2811x%29%2F11%2Bsin%2813x%29%2F13&gs_l=psy-ab.3...3238.6702.0.9540.3.3.0.0.0.0.154.392.0j3.3.0....0...1c.1.64.psy-ab..0.0.0....0.ut757zYR-Lg), [Current Plot](https://www.google.com.tr/search?ei=_tjEWrz2McHv6QSByb3IBQ&q=plot+5.08*sin%28x%29%2B0.33*sin%285x%29%2B0.17*sin%287x%29%2B0.07*sin%2811x%29%2B0.05*sin%2813x%29&oq=plot+5.08*sin%28x%29%2B0.33*sin%285x%29%2B0.17*sin%287x%29%2B0.07*sin%2811x%29%2B0.05*sin%2813x%29&gs_l=psy-ab.3...6798.8060.0.8402.5.5.0.0.0.0.298.740.0j1j2.3.0....0...1c.1.64.psy-ab..2.0.0....0.ijL6lnnGqOQ)
 
 ---
