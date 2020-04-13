@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
   <head>
-    <title>EE564-Design of Electrical Machines</title>
+    <title>EE568-Selected Topics in Electrical Machines</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <style type="text/css">
       @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -21,7 +21,10 @@
 
 class: center, middle
 
-# EE-564 Design of Electrical Machines
+# EE-568 Selected Topics in Electrical Machines
+
+
+## Airgap & Mechanical Constraints
 
 ## Ozan Keysan
 
@@ -49,7 +52,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ---
 # Suitable Airgap
 
-### For heavy duty motors increase the gap by 60 %.
+### For heavy duty motors the gap may be increased by 60 %.
 --
 
 ### For converter driven motors airgap can be increased by 60 % to reduce rotor surface losses.
@@ -60,7 +63,14 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ### For very large diameter machines airgap is equal to D/1000.
 
+---
+##Ex:
 
+## What should be the suitable airgap if the motor in the previous example (30 kW) is a heavy-duty motor?
+--
+
+
+### \\( \delta= 1.6 \; 0.8 \; 0.006  (30k)^{0.4}=0.88 \approx 0.9mm \\)
 ---
 # Mechanical Constraints
 
@@ -112,6 +122,7 @@ Reading: Section 6.1 of textbook
 ---
 # Ex. 6.3:
 
+### Calculate the maximum diameter for a smooth steel sylinder having a small bore. The speed is 15.000 rpm. Yield strength is  300 MPa. The density of the material is 7860 kg/m³.
 
 ---
 # Other Mechanical Constraints
@@ -159,8 +170,10 @@ Reading: Section 6.1 of textbook
 # Ex 6.5
 
 
+### Calculate the max. length with a safety factor k=1.5 for a smooth solid rotor when the rotor diameter is 0.15 m and the rotor speed is 20.000 rpm.
+
 ---
-# Aspect Ratio
+# Review: Aspect Ratio
 --
 
 ## \\(\chi = \dfrac{L'}{D}\\)
@@ -238,49 +251,112 @@ Reading: Section 6.1 of textbook
 
 
 Source: T.Miller - Electric Machine Design Course, Lecture-5, Slide4
+---
+
+## How to choose height of the slots?
+--
+
+### Slot Ratio (d): Ratio of the inner stator slot diameter to outer stator slot diameter
+--
+
+<img src="./images/ee564/slot_ratio.png" alt="Drawing" style="width: 800px;"/>
+
+
+#### Reading Assignment: [The Rediscovery of Synchronous Reluctance and Ferrite Permanent Magnet Motors](https://link.springer.com/book/10.1007%2F978-3-319-32202-5)
 
 ---
-# Typical Flux Density Values
+## How to choose height of the slots?
 
-<img src="./images/typical_magnetic_loading.png" alt="Drawing" style="width: 750px;"/>
-
-Source: Traditional Design of Electrical Machines, Slide-12
----
-# Stator Slot Pitch:
+### For the same outer diameter:
 --
 
-- ## Induction Machines and small PMSMs:  7-45 mm
+### As the slot ratio increases (i.e. higher slots):
 --
 
-- ## Synchronous Machines and large PMSMs:  14-75 mm
+- ### Electric loading increases (more copper can be fit)
 --
 
-- ## DC Machines:  10-30 mm
---
-
-### Tooth thickness can be initially assumed as the half of the slot pitch
---
-
-### Slot pitch gets bigger as the power rating of the machine increases
+- ### Diameter for the rotor gets smaller (less surface area & less torque)
 
 ---
-# Example:
+## How to choose height of the slots?
 
-## Define the rough dimensions, and a select suitable stator windings for the 30 kW, 4-pole induction machine.
+### For the same outer diameter:
 
----
-# Reading Assignment
+### As the slot ratio decreases (i.e. shorter slots):
 --
 
-## Ch-7 Introduction summarizes the first steps in machine design
-
-## Ch-7-1 For rotor current calculations
-
----
-# Where are we? Rough Design Steps
+- ### Electric loading decreases (less area for copper)
 --
 
-<img src="./images/ee564/design_process.png" alt="Drawing" style="width: 800px;"/>
+- ### Diameter (&rotor volume) gets larger
+
+## There should be an optimum point!
+
+---
+
+## How to choose height of the slots?
+
+### Assume parallel (rectangular) slots: copper area is proportional to slot height:
+--
+
+### \\( I \propto (1-d) \\)
+--
+
+### Electrical Loading is current per circumference
+--
+
+### \\(K_s \propto (1-d)/d \\)
+--
+
+### Torque can be expressed as:
+
+### \\( T \propto \sigma . Vol_R\\)
+--
+\\(\propto [(1-d)/d].d² \propto (1-d).d \\)
+---
+
+## How to choose height of the slots?
+
+### Assume parallel (rectangular) slots: copper area is proportional to slot height:
+
+### Torque can be expressed as:
+
+### \\( T \propto \sigma . Vol_R\\)
+--
+\\(\propto [(1-d)/d].d² \propto (1-d).d \\)
+
+## Optimum point=?
+--
+
+## d=0.5
+
+---
+
+## How to choose height of the slots?
+
+### But parallel teeth are more common: Slots gets wider with diameter
+
+### \\( I \propto (1-d²) \\)
+--
+
+### Electrical Loading is current per circumference
+--
+
+### \\(K_s \propto (1-d²)/d \\)
+
+
+### Torque can be expressed as:
+
+### \\( T \propto \sigma . Vol_R \; \propto [(1-d²)/d].d² \propto (1-d²).d \\)
+
+### Optimum point= \\(d= 1/\sqrt{3} = 0.58\\)
+
+---
+
+## How to choose height of the slots?
+
+<img src="./images/ee564/d_optimum.png" alt="Drawing" style="width: 600px;"/>
 
 ---
 # Stator Slot Types:
