@@ -438,37 +438,126 @@ bottom switch closed (0)
 ### [Space Vector PWM](https://www.switchcraft.org/learning/2017/3/15/space-vector-pwm-intro)
 
 ---
-# Third Harmonic Injection
-# a.k.a THIPWM
+### What is the max. possible phase voltage with SPWM (Sinusoidal PWM)?
+--
+
+<img src="./images/ee464/spwm.jpg" alt="Drawing" style="width: 400px;"/>
+--
+
+### \\(\hat{V}\_{p-n}=\dfrac{V\_{DC}}{2}\\)
+
+---
+### What is the max. possible phase voltage with SPWM (Sinusoidal PWM)?
+--
+
+### The inverter is connected to 400 \\(V\_{l-l}\\) grid with a 3-ph diode rectifier:
+
+<img src="./images/ee464/vfd.jpg" alt="Drawing" style="width: 500px;"/>
+--
+
+### \\(V\_{DC}=\\)
+--
+\\(\dfrac{3\sqrt{2}}{\pi} V\_{l-l} \\)
+--
+\\(= 1.35 V\_{l-l} = 540 V\\)
+
+---
+### What is the max. possible phase voltage with SPWM (Sinusoidal PWM)?
+--
+
+<img src="./images/ee464/vfd.jpg" alt="Drawing" style="width: 500px;"/>
+--
+
+### Maximum motor phase voltage:
+--
+
+### \\( V\_{phase-rms} = \dfrac{V\_{DC}}{2 \sqrt{2}}= 190 V\\)
+
+### which is quite low for standard motors!
+
+---
+## How can you increase the output voltage beyond the DC-link voltage limit?
+--
+
+<img src="https://images3.memedroid.com/images/UPLOADED950/5bbcb4de55956.jpeg" alt="Drawing" style="width: 400px;"/>
+
+---
+# Third Harmonic Injection (THIPWM)
 
 --
 
+### A sinusoidal reference voltage output: 
+
 <img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/590687ddff7c50866d9f4f1d/1493600229378/?format=1000w" alt="Drawing" style="width: 800px;"/>
 
+
 ---
-# Third Harmonic Injection
+# Third Harmonic Injection (THIPWM)
+
+### Assume you apply a waveform like that:
 
 <img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/59068b67725e256add1f37f5/1493601135313/?format=1000w" alt="Drawing" style="width: 800px;"/>
----
-# Third Harmonic Injection
 
+### which composes of the fundamental and a third-harmonic component
+
+---
+# Third Harmonic Injection (THIPWM)
+
+### Such that \\(V = \dfrac{V\_{DC}}{2}\\) at \\(\pi/3\\)
 <img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/59068e15e6f2e142b4adbe4f/1493601820281/?format=1000w" alt="Drawing" style="width: 800px;"/>
 ---
-# Third Harmonic Injection
 
+# Third Harmonic Injection (THIPWM)
 
-<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/590691aed1758ec4d7664141/1493602742473/ThirdHarmonics.png?format=500w" alt="Drawing" style="width: 600px;"/>
+### What is the phase voltage?
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/590691aed1758ec4d7664141/1493602742473/ThirdHarmonics.png?format=500w" alt="Drawing" style="width: 500px;"/>
+
+#### Third harmonic cancels itself (common-mode voltage), the potential of the neutral votlage is oscillating, but the winding doesn't see this change and observe a pure sinusoidal.
+
 
 ---
-# Third Harmonic Injection
+# Third Harmonic Injection (THIPWM)
+
+### What is the phase voltage?
 
 
-<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/590691aed1758ec4d7664141/1493602742473/ThirdHarmonics.png?format=500w" alt="Drawing" style="width: 600px;"/>
+### THIPWM: \\( V\_{phase-rms} = \dfrac{V\_{DC}}{ \sqrt{6}}= 220 V\\)
+
+--
+### %15 higher than SPWM
+###  ( \\( V\_{phase-rms} = \dfrac{V\_{DC}}{2 \sqrt{2}}= 190 V\\)) 
 
 ---
-# Third Harmonic Injection
+# Third Harmonic Injection (THIPWM)
 
 <img src="./images/ee462/thipwm.gif" alt="Drawing" style="width: 800px;"/>
+
+---
+## How about SVPWM?
+--
+
+### What is the phase voltage for one of the SVPWM vectors?
+--
+
+### \\(\hat{V\_n} = \dfrac{2}{3}V\_{DC}\\)
+--
+
+### What if two adjacent vectors are applied  for %50, %50?
+--
+
+### \\(= \dfrac{2}{3}V\_{DC} \dfrac{\sqrt{3}}{2} = \dfrac{1}{\sqrt{3}}V\_{DC}\\) 
+
+### Same with THIPWM: \\(V\_{ph,rms}=  \dfrac{1}{\sqrt{6}}V\_{DC} = 220 V\\)
+
+---
+## How about SVPWM?
+
+
+### Magnitude comparison of SPWM and SVPWM
+
+<img src="./images/ee464/svpwm_locus.png" alt="Drawing" style="width: 500px;"/>
+
 
 ---
 ## You can download this presentation from: [keysan.me/ee464](http://keysan.me/ee464)
