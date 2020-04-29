@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
   <head>
-    <title>EE564-Design of Electrical Machines</title>
+    <title>EE568-Selected Topics in Electrical Machines</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <style type="text/css">
       @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -21,17 +21,315 @@
 
 class: center, middle
 
-# EE-564 Design of Electrical Machines
+# EE-568 Selected Topics in Electrical Machines
 
-# Thermal Design
+
+## Losses & Thermal Design
 
 ## Ozan Keysan
 
 [ozan.keysan.me](http://ozan.keysan.me)
 
 Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+---
+
+
+# Resistances
+--
+
+## DC Resistance
+
+### \\(R\_{dc}= \dfrac{l}{\sigma A}\\)
 
 ---
+# AC Resistance
+
+### Resistance factor: \\(k\_{Ru}=\dfrac{R\_{ac}}{R\_{dc}}\\)
+
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/coil.png" alt="Drawing" style="width: 300px;"/>
+
+---
+# Skin Effect
+--
+
+### AC current tends to flow close to surface (valid for a conductor surrounded by air).
+--
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Skin_depth.svg" alt="Drawing" style="width: 360px;"/>
+
+### [Skin Effect](https://en.wikipedia.org/wiki/Skin_effect), [AC Resistance](https://www.youtube.com/watch?v=Cf80ZybFgoE)
+---
+# Skin Effect
+
+### Current Density distribution in [solid copper in a slot](http://www.anttilehikoinen.fi/technology/electrical-engineering/what-are-circulating-eddy-currents/)
+--
+
+<img src="http://www.anttilehikoinen.fi/wp-content/uploads/2017/03/2017-3-2_skin_effect_slot-139x300.png" alt="Drawing" style="width: 200px;"/>
+
+
+
+---
+# Proximity Effect
+--
+
+### Close conductors effect each other's current distribution
+--
+
+### Conductors with the same current direction
+
+<img src="./images/ee564/proximity1.jpg" alt="Drawing" style="width: 600px;"/>
+
+### [Proximity Effect](https://circuitglobe.com/proximity-effect.html), [Skin and Proximity Effect](http://www.anttilehikoinen.fi/technology/electrical-engineering/what-are-circulating-eddy-currents/)
+---
+# Proximity Effect
+
+
+### Close conductors effect each other's current distribution
+
+
+### Conductors with the opposite current direction
+
+<img src="./images/ee564/proximity2.jpg" alt="Drawing" style="width: 600px;"/>
+
+### [Proximity Effect](https://circuitglobe.com/proximity-effect.html), [Skin and Proximity Effect](http://www.anttilehikoinen.fi/technology/electrical-engineering/what-are-circulating-eddy-currents/)
+
+---
+# Proximity Effect
+
+### Distribution in a slot (same winding)
+
+<img src="./images/ee564/proximity_slot.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Proximity Effect
+
+### Distribution in a slot (same winding)
+
+### Current Density distribution in [a copper winding in a slot](http://www.anttilehikoinen.fi/technology/electrical-engineering/what-are-circulating-eddy-currents/)
+--
+
+<img src="http://www.anttilehikoinen.fi/wp-content/uploads/2017/03/2017-3-2_proximity_effect-1-138x300.png" alt="Drawing" style="width: 200px;"/>
+
+
+---
+# Proximity Effect
+
+### Distribution in a transformer winding
+
+<img src="./images/ee564/proximity_transformer.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Ways to Reduce AC Resistances
+--
+
+- ### Divide conductors into subconductors
+--
+
+- ### Instead of dividing large conductors and transposing them, use parallel paths
+--
+
+- ### Use multi-thread twisted conductors (litz wire, roebel cable)
+
+---
+# Circulating Currents
+
+### Different leakage inductance, length, phase difference in induced voltage causes circulating current
+
+<img src="http://www.anttilehikoinen.fi/wp-content/uploads/2017/03/2017-3-2_circulating_current.png" alt="Drawing" style="width: 800px;"/>
+
+---
+
+# Ways to Reduce AC Resistances
+
+# Transponding
+--
+
+<img src="https://www.deangeliprodotti.com/sites/default/files/styles/portfolio_4_cols/public/patented_ctc_etp_plus_0.jpg" alt="Drawing" style="width: 400px;"/>
+
+### [Continuously Transposed Conductor](http://www.powertransformerdesign.net/2012/01/power-transformers-load-losses-basics.html)
+
+---
+# Roebel Cable
+
+### For very high frequencies, superconductors
+
+<img src="http://cds.cern.ch/record/1744900/files/_B1A8948.jpg?subformat=icon-1440&version=1" alt="Drawing" style="width: 800px;"/>
+
+[More info](http://www.itep.kit.edu/hts4fusion2011/downloads/1C3.pdf), [Transpositiion of conductors](http://www.electrotechnik.net/2011/10/transposition-of-conductors.html), [Transposition](http://en.wikipedia.org/wiki/Transposition_%28telecommunications%29), [Continuously Transposed Conductors](http://www.samdongamerica.com/products/ctc-continuously-transposed-conductor)
+
+---
+
+# Ways to Reduce AC Resistances
+
+# Litz Wire
+
+<img src="http://www.coonerwire.com/wp-content/gallery/litz-wire/litz-wire_003.jpg" alt="Drawing" style="width: 500px;"/>
+
+
+[Types](http://www.newenglandwire.com/products/litz-wire-and-formed-cables/types-and-constructions), [Litz Wire Applications](http://www.litz-wire.com/applications.php), [Litz Wire theory](http://www.newenglandwire.com/products/litz-wire-and-formed-cables/theory)
+---
+# Ways to Reduce AC Resistances
+
+# Litz Wire
+
+<img src="http://www.eis-asia.com/litz%20wire/Image3.jpg" alt="Drawing" style="width: 750px;"/>
+
+[Types](http://www.newenglandwire.com/products/litz-wire-and-formed-cables/types-and-constructions), [Litz Wire Applications](http://www.litz-wire.com/applications.php), [Litz Wire theory](http://www.newenglandwire.com/products/litz-wire-and-formed-cables/theory)
+
+---
+# Insulation
+--
+
+## Average dielectric strength: 1 kV/mil (~ 40 kV/mm)
+
+#### (*)1000 mil = 1 inch
+--
+
+## Stator should be insulated for:
+
+- ### In-turn shorts
+- ### Phase-Ground shorts
+- ### Phase-Phase shorts
+
+
+---
+# Insulation
+
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/insulation.png" alt="Drawing" style="width: 700px;"/>
+---
+# Insulation
+
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/slot_insulation.png" alt="Drawing" style="width:600px;"/>
+---
+# Slot Insulation Types
+
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/slot_insulation_types.png" alt="Drawing" style="width:750px;"/>
+---
+# Insulation Temperature Class
+
+- ## Class A: 105 C
+--
+
+- ## Class B: 130 C
+--
+
+- ## Class F: 155 C
+--
+
+- ## Class H: 180 C
+
+
+### Insulation life time halves for each 10 C rise in operating
+
+---
+# Insulation
+
+- ## PWM inverters cause voltage spikes or standing voltage waves
+
+- ## PWM inverters can cause corona insulation faults
+
+- ## Under 250 VAC, phase-to-phase insulation is not required
+
+- ## For higher voltages end turns should be insulated
+
+---
+# Slot Design
+
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/slot_design.png" alt="Drawing" style="width:800px;"/>
+
+
+Ref: Tim Miller - Lecture 14
+---
+# Slot Design
+
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/slot_fill.png" alt="Drawing" style="width:800px;"/>
+
+
+Ref: Tim Miller - Lecture 14
+
+---
+# Common Faults in Windings
+--
+: Good Winding
+
+<img src="./images/ee564/goodwinding.jpg" alt="Drawing" style="width: 500px;">
+
+### [Reference](https://www.easa.com/resources/booklet/typical-failures-three-phase-stator-windings)
+
+---
+# Common Faults in Windings
+
+## One Phase Open Circuited (Y-connected)
+--
+
+<img src="./images/ee564/phase_open_wye.jpeg" alt="Drawing" style="width: 450px;">
+
+### [Reference](https://www.easa.com/resources/booklet/typical-failures-three-phase-stator-windings)
+
+---
+# Common Faults in Windings
+
+## One Phase Open Circuited (Delta-connected)
+--
+
+<img src="./images/ee564/phase_open_delta.jpeg" alt="Drawing" style="width: 450px;">
+
+### [Reference](https://www.easa.com/resources/booklet/typical-failures-three-phase-stator-windings)
+---
+# Common Faults in Windings
+
+## Phase to Phase Short Circuit
+--
+
+<img src="./images/ee564/phase_to_phase.jpeg" alt="Drawing" style="width: 450px;">
+
+### [Reference](https://www.easa.com/resources/booklet/typical-failures-three-phase-stator-windings)
+
+---
+# Common Faults in Windings
+
+## Phase to Phase Short Circuit
+--
+
+<img src="./images/ee564/turn_to_turn.jpeg" alt="Drawing" style="width: 450px;">
+
+### [Reference](https://www.easa.com/resources/booklet/typical-failures-three-phase-stator-windings)
+---
+
+# Common Faults in Windings
+
+## Phase to Ground Short Circuit
+--
+
+<img src="./images/ee564/phase_to_ground.jpeg" alt="Drawing" style="width: 450px;">
+
+### [Reference](https://www.easa.com/resources/booklet/typical-failures-three-phase-stator-windings)
+
+---
+
+# Common Faults in Windings
+
+## Damage due to Overload
+--
+
+<img src="./images/ee564/overload.jpeg" alt="Drawing" style="width: 450px;">
+
+### [Reference](https://www.easa.com/resources/booklet/typical-failures-three-phase-stator-windings)
+
+---
+
+# Common Faults in Windings
+
+## Damage due to Locked Rotor
+--
+
+<img src="./images/ee564/locked_rotor.jpeg" alt="Drawing" style="width: 450px;">
+
+### [Reference](https://www.easa.com/resources/booklet/typical-failures-three-phase-stator-windings)
+
+---
+
+
 
 # Thermal Design of Electric Machines
 
@@ -245,47 +543,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 - ## Forced Convection
 
----
-# Types of Flow
---
 
-- ## Laminar FLow
---
-
-- ## Turbulent Flow
-
-### Enhanced heat transfer
-
----
-# Turbulance
-
-<img src="https://nanosync.files.wordpress.com/2011/03/offshore_hdt_019op.jpg" alt="Drawing" style="width: 700px;"/>
-
-<!---
-
-# Heisenberg:
---
-
-<img src="https://pbs.twimg.com/profile_images/421396899036295168/jRjL34RS.jpeg" alt="Drawing" style="width: 400px;"/>
-## Not Walter White
-
-
-# Heisenberg
-
-<img src="http://www.nature.com/polopoly_fs/7.11207.1372177498!/image/1.13270_Heisenberg-ALAMY-B3YK1N.jpg_gen/derivatives/landscape_630/1.13270_Heisenberg-ALAMY-B3YK1N.jpg" alt="Drawing" style="width: 500px;"/>
-
-### Werner Heisenberg: Key creator of quantum mechanics, uncertainity principle
-
-
-
-# I would ask God two questions:
---
-
-#'Why quantum mechanics, and why turbulence.'
---
-
-#I think he will have answer for the first one. 
---->
 ---
 ## Convection Thermal Resistance
 --
@@ -316,37 +574,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 
 #### [Dave Staton, Thermal Design](https://www.dropbox.com/s/bo3rva9q3d9dwmn/Dave_Staton_Thermal_Design.pdf?dl=1), [Dave Staton, Thermal Training](https://www.dropbox.com/s/bo3rva9q3d9dwmn/Dave_Staton_Thermal_Design.pdf?dl=1)
----
-# Why do elephants have big ears?
 
-<img src="http://rateeveryanimal.com/wp-content/uploads/2014/11/elephant.jpg" alt="Drawing" style="width: 700px;"/>
-
----
-#Square-Cube Law
-## (Heat \\(\propto\\) Mass, Heat Dissipation \\(\propto\\) Surface Area)
-<img src="http://rateeveryanimal.com/wp-content/uploads/2014/11/elephant.jpg" alt="Drawing" style="width: 650px;"/>
-
-[Square-Cube Law](http://www.youtube.com/watch?v=qoM17ikreio)
----
-
-# Losses and Cooling
-<img src="http://www.amesimpex.com/images/oil_cooled_002.jpg" alt="Drawing" style="width: 400px;"/>
-
----
-# Losses and Cooling: Small Transformers
-<img src="http://www.globalspec.com/ImageRepository/LearnMore/201210/EI-Transformer-for-Electric-Tool484de69d1e254262a778c635653aa340.png" alt="Drawing" style="width: 400px;"/>
-
----
-# Losses and Cooling: Large Transformers
-<img src="http://ogrforum.ogaugerr.com/fileSendAction/fcType/0/fcOid/23252098522776349/filePointer/23252098522776380/fodoid/23252098522776373/imageType/LARGE/inlineImage/true/Power-Transformer%2004.jpg" alt="Drawing" style="width: 500px;"/>
-
-<!---
-# Losses and Cooling: Large Transformers
-<img src="http://upload.wikimedia.org/wikipedia/commons/8/80/Drehstromtransformater_im_Schnitt_Hochspannung.jpg" alt="Drawing" style="width: 300px;"/>
-
-# Losses and Cooling: Large Transformers
-<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Trafostation_Alter_Hellweg_IMGP4722.jpg/1280px-Trafostation_Alter_Hellweg_IMGP4722.jpg" alt="Drawing" style="width: 750px;"/>
---->
 ---
 # Radiation
 
@@ -487,7 +715,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 #### [Dave Staton, Thermal Design](https://www.dropbox.com/s/bo3rva9q3d9dwmn/Dave_Staton_Thermal_Design.pdf?dl=1), [Dave Staton, Thermal Training](https://www.dropbox.com/s/0k818nzt7k2pex1/David_Staton_Thermal_Training_Handouts_May_2007.pdf?dl=1)
 
---
+---
 ## You can download this presentation from: [keysan.me/ee564](http://keysan.me/ee564)
 
     </textarea>

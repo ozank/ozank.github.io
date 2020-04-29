@@ -157,26 +157,66 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ---
 # Magnetizing Inductance
 
-## \\(\Phi\_{pole} = \int B dS\\)
+### If B is sinusoidal
+
+## \\(\hat{\Phi}\_{pole} = \int B dS\\)
 --
 \\(=\dfrac{2}{\pi}\hat{B}\tau\_{pole}l'\\)
 
-### if B is sinusoidal
+--
+
+### Flux Linkage
+
+### \\( \lambda = N \Phi  = k\_{w1} N\_s  \hat{\Phi}\_{pole} \\)
+--
+\\(= k\_{w1} N\_s \dfrac{2}{\pi}\hat{B}\tau\_{pole}l' \\)
+
+---
+# Magnetizing Inductance
+--
+
+### \\(\hat{H}\_m \delta\_e = MMF = \dfrac{\hat{B}}{\mu_0} \delta\_e \\)
+--
+
+### \\(MMF = \dfrac{4}{\pi} \dfrac{k\_{w1} N\_s}{2p} \sqrt{2} I\_{s,rms}\\)
+
+--
+
+### \\( \hat{B} = \dfrac{4}{\pi} \dfrac{k\_{w1} N\_s}{2p} \sqrt{2} I\_{s,rms} \dfrac{\mu_0}{\delta\_e}\\)
+
+---
+# Magnetizing Inductance
+
+### \\(\lambda = \dfrac{2}{\pi} \dfrac{\mu\_0}{\delta\_e}  \dfrac{4}{\pi} \dfrac{(k\_{w1} N\_s)²}{2p} \tau\_{p}l' \sqrt{2} I\_{s,rms}  \\)
+
+--
+
+### \\(L = \dfrac{\lambda}{I}\\)
+--
+
+### \\(L\_{m (ph)} = \dfrac{2}{\pi} \mu\_0 \dfrac{1}{2p}\dfrac{4}{\pi} \dfrac{\tau\_p}{\delta\_{ef}} l' (k\_{ws}N\_s)^2\\)
 
 ---
 # Magnetizing Inductance (Per-phase)
 --
 
 ### \\(L\_{m (ph)} = \dfrac{2}{\pi} \mu\_0 \dfrac{1}{2p}\dfrac{4}{\pi} \dfrac{\tau\_p}{\delta\_{ef}} l' (k\_{ws}N\_s)^2\\)
---
 
 ### Writing pole pitch in terms of diameter
 --
 
 ### \\(L\_{m (ph)} = \dfrac{2 \mu\_0 D}{\pi p^2 \delta\_{ef}} l' (k\_{ws}N\_s)^2  \\)
 
-
 ### Derivation in Pyrhonen Section 3.1.2
+---
+
+# Total Magnetizing Inductance
+
+
+### \\(L\_m = \dfrac{3}{2} L\_{m (ph)} \\)
+--
+\\( = \dfrac{3}{2} \dfrac{2 \mu\_0 D}{\pi p^2 \delta\_{ef}} l' (k\_{ws}N\_s)^2 \\)
+
 
 ---
 # Magnetizing Inductance
@@ -196,7 +236,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 - ## Reduces with increasing voltage:
 --
-Saturation
+ Saturation
 
 --
 - ## Reduces with torque: Why?
