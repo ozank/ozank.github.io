@@ -44,6 +44,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 - ### Axial Flux
 - ### Transverse Flux
 
+
 ---
 ### There are many PM topology classifications:
 
@@ -52,6 +53,15 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 - ### Iron-cored Machines
 - ### Air-cored (Coreless) Machines
+--
+
+
+### With respect to Rotor-Stator Position
+--
+
+- ### Inner Rotor Machines
+- ### Outer (External) Rotor Machines
+- ### Dual Rotor Machines
 
 ---
 ### There are many PM topology classifications:
@@ -64,10 +74,105 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 - ### Interior PM
 - ### Concentrated Flux PM
 
+---
+### There are many PM topology classifications:
+--
+
+### With respect to Back-EMF
+--
+
+- ### Brushless DC (BLDC)
+- ### Permanent Magnet Synchronous Machines (PMSM)
 
 ---
 
-## PM Rotor Types
+---
+
+## Rotor-Stator Configuration
+--
+
+### Inner Rotor PM Machines
+
+
+<img src="./images/ee564/inner.png" alt="Drawing" style="width: 500px;"/>
+
+---
+## Rotor-Stator Configuration
+
+### Outer (External) Rotor PM Machines
+
+
+<img src="https://i.stack.imgur.com/2Sh8s.jpg" alt="Drawing" style="width: 300px;"/>
+<img src="https://i.stack.imgur.com/tlpMV.jpg" alt="Drawing" style="width: 300px;"/>
+---
+## Rotor-Stator Configuration
+
+### Outer (External) Rotor  PM Machines
+
+
+<img src="./images/ee564/outer_rotor.png" alt="Drawing" style="width: 600px;"/>
+
+## What are the challenges & advantages?
+
+---
+
+### Outer (External) Rotor PM Machines
+
+
+<img src="./images/ee564/outer_inner.jpg" alt="Drawing" style="width: 600px;"/>
+
+#### Have higher radius (more surface area and torque) ([Dana TM4 Sumo Motors](https://www.danatm4.com/technology/electric-motors/external-rotor-motor-technology/))
+
+#### Can be easy to couple mechanically (i.e. [direct drive wind turbines](http://www.pengky.cn/zz-direct-drive-turbine/external-rotor-generator/external-rotor-generator.html),  [reading](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7538361))
+
+#### Difficult to cool (especially with air cooling)
+
+---
+## Rotor-Stator Configuration
+
+### Dual Rotor PM Machines
+--
+
+
+<img src="./images/ee564/dual_rotor.png" alt="Drawing" style="width: 600px;"/>
+
+---
+## Rotor-Stator Configuration
+
+### Dual Rotor PM Machines
+
+<img src="./images/ee564/dual_rotor2.png" alt="Drawing" style="width: 400px;"/>
+
+---
+# Flux Direction
+--
+
+
+<img src="./images/ee564/radial_axial_flux.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Flux Direction
+--
+
+
+<img src="./images/ee564/radial_axial_flux2.jpg" alt="Drawing" style="width: 700px;"/>
+
+## What are the key differences?
+---
+
+## Axial Flux Machines
+--
+
+- ### Have shorter axial length
+--
+
+- ### Usually have higher radius (usually results in higher torque density)
+--
+
+- ### Non-cancelling attraction forces between rotor and stator (for iron-cored machines) make the mechanical design difficult
+
+---
+## PM Rotor Types (Radial Flux)
 
 ## Surface Mount PM Machine
 --
@@ -75,6 +180,25 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 <img src="./images/ee564/smpm.png" alt="Drawing" style="width: 800px;"/>
 
+---
+## PM Rotor Types (Radial Flux)
+
+## Surface Mount PM Machine
+--
+
+- ### Easy to manufacture
+
+--
+- ### \\(L\_d = L\_q \\) No reluctance torque
+--
+
+- ### Not suitable for very high speeds (centrifugal forces)
+--
+
+- ### PM are not well protected against corrosion, mechanical damage etc.
+--
+
+- ### Eddy currents on PM surface can be problematic for high frequencies
 
 ---
 
@@ -89,10 +213,42 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ## PM Rotor Types
 
+## Inset PM
+--
+
+- ### \\(L\_q > L\_d \\), has reluctance torque (higher torque density can be achieved)
+--
+
+- ### Magnets are easier to mount in place
+
+--
+
+- ### Leakage flux can be tricky
+
+
+---
+
+## PM Rotor Types
+
 ## Interior PM
 --
 
 <img src="./images/ee564/interior_PM.png" alt="Drawing" style="width: 800px;"/>
+
+---
+
+## PM Rotor Types
+
+## Interior PM
+--
+
+- ### Suitable for high speed operation
+--
+
+- ### Magnets are well protected for corrosion and mechanical impacts
+--
+
+- ### Flux barriers should be used to minimize leakage flux
 
 ---
 
@@ -103,378 +259,41 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 <img src="./images/ee564/flux_concentration.png" alt="Drawing" style="width: 800px;"/>
 
-
-
-
-
-
-
-
-
-
-
 ---
-# Main Flux Paths & Machine Parameters
+
+## PM Rotor Types
+
+## Flux Concentrating PM
 --
 
-## Some definitions:
+- ### Many different combinations are available
 --
 
+- ### A flux density higher than the remanence flux density can be obtained
+--
 
-- ## Carter's Coefficient
+- ### Can have significant reluctance torque assist, depending on geometry
+--
 
-- ## Effective Core length
+- ### Suitable for high-speed operation
 
 ---
 
-# Carter's Coefficient
+## PM assisted Synchronous Reluctance Machines
 --
 
-## Way to estimate the flux density by converting slotted rotor/stator to a perfect cylinder.
+<img src="./images/ee564/pm_assisted2.png" alt="Drawing" style="width: 800px;"/>
 
-### Ref: Section 3.1.1 of the textbook (Pyrhonen)
+---
+
+
+## PM assisted Synchronous Reluctance Machines
+
+<img src="./images/ee564/pm_assisted.png" alt="Drawing" style="width: 750px;"/>
 
 
 ---
 
-# Carter's Coefficient
-
-<img src="./images/flux_distribution.png" alt="Drawing" style="width: 600px;"/>
-
----
-
-# Carter's Coefficient
---
-
-- ### First assume the rotor is smooth to find \\(k\_{cs}\\):
-
-### \\( \delta\_e = k\_{cs} \delta \\)
-
---
-- ### Then assume the stator is smooth to find \\(k\_{cr}\\):
-
-
---
-
-- ### Total Carter coefficient is the product of two 
-### \\( k\_{c} = k\_{cs} \times k\_{cr} \\):
-
-### Effective airgap is slightly larger than the actual gap (\\(k_c \gtrapprox 1 \\) )
-
----
-# Carter's Coefficient
-
-## \\(k\_c = \dfrac{\tau\_u}{\tau\_u - K b\_1}\\)
-
-## where:
-
-## \\(K = \dfrac{b\_1 / \delta }{5 + b\_1 / \delta }\\)
-
-
----
-# Equivalent Core Length
-
-
-<img src="./images/L_eq.png" alt="Drawing" style="width: 450px;"/>
-
-### \\(l' \approx l + 2 \delta \\)
-
-#### Section 3.2 of the textbook (Pyrhonen)
-
-
----
-## Equivalent Core Length with Cooling
---
-
-### Larger machines requires ducts for cooling
---
-
-
-<img src="./images/L_eq_cooling.png" alt="Drawing" style="width: 750px;"/>
-
----
-
-<img src="./images/L_eq_cooling.png" alt="Drawing" style="width: 800px;"/>
-
-### Use the Carter's coefficient to calculate effective length
-
-
-### \\(l' \approx l - n\_{v} b\_{ve} + 2 \delta \\)
-### \\(b_{ve} \lessapprox b_v \\)
-
----
-# Back Core Flux
----
-# D-Q Axis
-
-<img src="./images/dq_axis.png" alt="Drawing" style="width: 550px;"/>
-
----
-# D-Q Axis
-
-<img src="https://www.pantechsolutions.net/media/wysiwyg/article-images/synchronous-machine-and-the-main-principle-of-the-vector-control.jpg" alt="Drawing" style="width: 800px;"/>
-
----
-
-# D-Q Axis
-
-<img src="./images/ee564/dq_axis.png" alt="Drawing" style="width: 550px;"/>
----
-
-
-# Back Core Flux
-
-<img src="./images/ee564/back_core_flux.png" alt="Drawing" style="width: 500px;"/>
-
-### \\(\hat{B}\_{back-core} = \dfrac{\hat{\Phi}\_{pole}}{2 A\_{back-core}} = \dfrac{\hat{\Phi}\_{pole}}{2  k\_{stacking} l' h\_{ys}}\\)
-
----
-
-# Magnetizing Inductance
-
---
-
-## What is inductance?
----
-# Magnetizing Inductance
-
-### If B is sinusoidal
-
-## \\(\hat{\Phi}\_{pole} = \int B dS\\)
---
-\\(=\dfrac{2}{\pi}\hat{B}\tau\_{pole}l'\\)
-
---
-
-### Flux Linkage
-
-### \\( \lambda = N \Phi  = k\_{w1} N\_s  \hat{\Phi}\_{pole} \\)
---
-\\(= k\_{w1} N\_s \dfrac{2}{\pi}\hat{B}\tau\_{pole}l' \\)
-
----
-# Magnetizing Inductance
---
-
-### \\(\hat{H}\_m \delta\_e = MMF = \dfrac{\hat{B}}{\mu_0} \delta\_e \\)
---
-
-### \\(MMF = \dfrac{4}{\pi} \dfrac{k\_{w1} N\_s}{2p} \sqrt{2} I\_{s,rms}\\)
-
---
-
-### \\( \hat{B} = \dfrac{4}{\pi} \dfrac{k\_{w1} N\_s}{2p} \sqrt{2} I\_{s,rms} \dfrac{\mu_0}{\delta\_e}\\)
-
----
-# Magnetizing Inductance
-
-### \\(\lambda = \dfrac{2}{\pi} \dfrac{\mu\_0}{\delta\_e}  \dfrac{4}{\pi} \dfrac{(k\_{w1} N\_s)²}{2p} \tau\_{p}l' \sqrt{2} I\_{s,rms}  \\)
-
---
-
-### \\(L = \dfrac{\lambda}{I}\\)
---
-
-### \\(L\_{m (ph)} = \dfrac{2}{\pi} \mu\_0 \dfrac{1}{2p}\dfrac{4}{\pi} \dfrac{\tau\_p}{\delta\_{ef}} l' (k\_{ws}N\_s)^2\\)
-
----
-# Magnetizing Inductance (Per-phase)
---
-
-### \\(L\_{m (ph)} = \dfrac{2}{\pi} \mu\_0 \dfrac{1}{2p}\dfrac{4}{\pi} \dfrac{\tau\_p}{\delta\_{ef}} l' (k\_{ws}N\_s)^2\\)
-
-### Writing pole pitch in terms of diameter
---
-
-### \\(L\_{m (ph)} = \dfrac{2 \mu\_0 D}{\pi p^2 \delta\_{ef}} l' (k\_{ws}N\_s)^2  \\)
-
-### Derivation in Pyrhonen Section 3.1.2
----
-
-# Total Magnetizing Inductance
-
-
-### \\(L\_m = \dfrac{3}{2} L\_{m (ph)} \\)
---
-\\( = \dfrac{3}{2} \dfrac{2 \mu\_0 D}{\pi p^2 \delta\_{ef}} l' (k\_{ws}N\_s)^2 \\)
-
-
----
-# Magnetizing Inductance
---
-
-- ## Increases with number of turns
---
-
-- ## Reduces with large airgap
---
-
-- ## Reduces with the number of poles (power factor gets worse with higher number of poles)
----
-
-# Magnetizing Inductance
---
-
-- ## Reduces with increasing voltage:
---
- Saturation
-
---
-- ## Reduces with torque: Why?
-
----
-# Flux Lines vs Torque
-
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/flux_vs_torque.png" alt="Drawing" style="width: 750px;"/>
-
----
-# Magnetizing Inductance vs Torque
-<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/inductance_vs_torque.png" alt="Drawing" style="width: 750px;"/>
-
----
-
-# Leakage Flux (Ch4)
---
-
-## Flux that does not cross the airgap
---
-
-## Flux crosses the airgap but does not link the winding
-
----
-# Leakage Flux
-
-## Flux that does not cross the airgap
---
-
-- ### Pole Leakage Flux
---
-
-- ### Slot Leakage Flux
---
-
-- ### Tooth Tip Leakage Flux
---
-
-- ### End Winding (Overhang) Leakage Flux
-
----
-# Pole Leakage Flux
-
-### In salient pole machines (i.e. synchronous machine)
-
-<img src="./images/ee564/pole_leakage.png" alt="Drawing" style="width: 700px;"/>
-
----
-# Pole Leakage Flux
-
-### In PM machines (between adjacent magnets)
-
-<img src="./images/ee564/pm_leakage_1.jpg" alt="Drawing" style="width: 700px;"/>
-
----
-# Pole Leakage Flux
-
-### In PM machines (between magnet and rotor core)
-
-<img src="./images/ee564/pm_leakage_2.png" alt="Drawing" style="width: 600px;"/>
-
-
-
----
-# Slot Leakage Flux & Tooth Tip Leakage Flux
-
-<img src="./images/slot_leakage.png" alt="Drawing" style="width: 700px;"/>
-
----
-# Slot Leakage Inductance
---
-
-<img src="./images/ee564/slot_leakage_2.png" alt="Drawing" style="width: 500px;"/>
-
-### H increases as you go higher in the slot, as there is more coils are enclosed in \\(\int H dl \\)
-
----
-# Slot Leakage Inductance
---
-
-<img src="./images/ee564/slot_leakage.png" alt="Drawing" style="width: 700px;"/>
----
-
-
-
-
-# Slot Leakage Inductance
---
-
-### for the bottom part (\\(L\_{u1}\\))
-
-### \\(B(h) = \mu\_0 H (h) = \mu\_0 \dfrac{z\_Q I \dfrac{h}{h\_4}}{b\_4} \\)
---
-
-### \\(L\_{u1} = \dfrac{l' b\_4}{\mu\_0 I^2} \int_0^{h\_4} B^2(h) dh\\)
-
----
-
-# Slot Leakage Inductance
---
-
-### repeat for the upper part (\\(L\_{u2}\\))
-
-### \\(B(h) = \mu\_0 \dfrac{z\_Q I}{b\_1} \\)   (Constant B)
----
-
-# Slot Leakage Inductance
---
-
-### Inductance for one slot:
-### \\(W\_u = 1/2 L\_{u1} I^2 = 1/2 \mu_0 l' z\_Q^2 I^2 (\lambda_1 + \lambda_4)\\)
-
----
-
-# Total Slot Leakage Inductance
---
-
-<img src="./images/ee564/total_slot_leakage.png" alt="Drawing" style="width: 750px;"/>
-
----
-
-# Total Slot Leakage Inductance
---
-
-### \\(L\_u = \dfrac{Q}{am}\dfrac{1}{a} L\_{u1}\\)
---
-
-### \\(L\_u = \mu\_0 l' \dfrac{Q}{m} (\dfrac{z\_Q}{a})^2 \lambda\_{u}\\)
---
-
-### \\(N= \dfrac{Q}{2am} z\_Q\\)
---
-
-### \\(L\_u = \mu\_0 l' \dfrac{4m}{Q} N^2 \lambda\_{u}\\)
-
----
-# End Winding Leakage Flux
-
-<img src="./images/end_winding_leakage.png" alt="Drawing" style="width: 600px;"/>
----
-# End Winding Leakage Flux
-
-<img src="./images/end_winding_leakage2.png" alt="Drawing" style="width: 600px;"/>
-
-
----
-# Slot Shapes
-
-<img src="./images/slot_leakage_shapes.png" alt="Drawing" style="width: 700px;"/>
-
-
----
-# Tooth Tip Leakage Flux
---
-
-<img src="./images/ee564/tooth_leakage.png" alt="Drawing" style="width: 650px;"/>
----
 
 ## You can download this presentation from: [keysan.me/ee564](http://keysan.me/ee564)
 
