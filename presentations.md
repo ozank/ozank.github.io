@@ -9,6 +9,7 @@ permalink: /presentations/index.html
 ### 2020
 
 * [How to write and read a paper?](https://docs.google.com/presentation/d/1Xdw3ewDz-6DaV12rxBO_V1naajerFuirar90jOm1pMw/edit?usp=sharing)
+* ODTÜ Havacılık ve Uzay Müh,Wind Energy and Turbine Technology, [Wind Turbine Power Take-off Systems](https://docs.google.com/presentation/d/1FBeDQyFbqNFark9hx3TK84q6fuArKpnjdshA_EazHNk/edit?usp=sharing)
 
 ### 2019
 
