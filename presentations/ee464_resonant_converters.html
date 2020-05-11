@@ -219,6 +219,79 @@ class: center, middle
 <img src="./images/ee464/zcs_waveforms.png" alt="Drawing" style="width: 750px;">
 
 ---
+## Operating Mode: \\( 0 < t < t\_1\\)
+
+### Inductor Lr sees constant Vs voltage and the current increases linearly
+--
+
+
+### \\(i\_L(t)=\dfrac{V\_s}{L\_r} t \\)
+--
+
+### The moment that the current reaches to Io is:
+--
+
+### \\(t\_1 = \dfrac{I\_o L\_r}{V\_s}\\)
+
+---
+## Operating Mode: \\( t\_1 < t < t\_2\\)
+
+### Diode is off, capacitor voltage starts building up:
+--
+
+### \\(v\_c(t) = V\_s - L\_r \dfrac{di\_L(t)}{dt}\\)
+---
+
+## Operating Mode: \\( t\_1 < t < t\_2\\)
+
+### Differentiating and solving second order LC circuit (as in Ch9.2)
+--
+
+### \\( i\_L(t)=I\_o +\frac{V\_s}{Z\_o} sin \omega\_0 (t-t\_1) \\)
+
+### \\( Z\_0 = \sqrt{\frac{L\_r}{C\_r}} \\)
+
+### \\( \omega\_0 = \frac{1}{\sqrt{L\_r C\_r}} \\)
+--
+
+### \\( t\_2 - t\_1 = \frac{1}{\omega\_0} [sin^{-1}(\frac{-I\_0 Z\_0}{V\_s}) ]\\)
+
+---
+
+## Operating Mode: \\( t\_1 < t < t\_2\\)
+
+### Capacitor voltage can be expressed as:
+
+### \\( V\_c (t) = V\_s [1- cos (\omega\_0 (t-t\_1))]\\)
+
+### which implies capacitor voltage can reach up to 2 Vs (a disadvantage of resonant converters)
+
+---
+## Operating Mode: \\( t\_2 < t < t\_3\\)
+
+### As the inductor current reaches to zero at t2, the switch can be openced with no current (ZCS)
+--
+
+### Capacitor discharges with constant load current.
+
+### \\( V\_c(t) =\frac{I\_0}{C\_r} (t\_2 -t) + V\_c(t\_2) \\)
+--
+
+### If Vc=0 at t3:
+
+### \\(t\_3 - t\_2 = \frac{C\_r v\_c(t\_2)}{I\_o} = \frac{C\_r V\_s [1-cos(\omega\_o (t\_2 - t\_1))]}{I\_o}\\)
+
+---
+## Operating Mode: \\( t\_3 < t < T\\)
+
+### In this interval switch is off (diode freewheeling)
+
+
+### The length of this invertal directly controls the output voltage.
+
+### The switching frequency should be adjusted so that t3 is less than period (T).
+
+---
 # Derivation of the Output Voltage
 --
 
@@ -229,6 +302,9 @@ class: center, middle
 --
 
 ## \\(V_o < V_s \\) operates as a buck converter
+
+
+## Output voltage is controlled by the switching frequency!
 
 ---
 
