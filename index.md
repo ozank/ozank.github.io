@@ -3,17 +3,14 @@ layout: home
 title: Ozan Keysan
 ---
 
-**Current Courses: [EE464](/ee464) <span class="meta">&#8226;</span> [EE568](/ee568)**
+**Current Courses: [EE361](/ee361) <span class="meta">&#8226;</span> [EE463](/ee463)**
 
 **Research Group: [METU PowerLab](http://power.eee.metu.edu.tr/)**
 
-<!--
 
-**[STAR Projects-2016](/star)**
+I'm an assistant professor in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr). Our research group is  [METU PowerLab](http://power.eee.metu.edu.tr/). 
 
--->
-
-I'm an assistant professor in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr). My research group is  [METU PowerLab](http://power.eee.metu.edu.tr/). For more information about me, you can download my [CV](/cv) or have look at my [Publications](/papers), [Theses](/theses), [Projects](/projects) and [Presentations](/presentations). 
+For more information about me, you can download my [CV](/cv) or have look at my [Publications](/papers), [Theses](/theses), [Projects](/projects) and [Presentations](/presentations). 
 
 You can find a few [software tips](/tips). Also, I collect [these links](/explained) that can help you to understand some difficult concepts, and write random stuff in my [blog](/blog).
 
@@ -32,10 +29,4 @@ You can find a few [software tips](/tips). Also, I collect [these links](/explai
 <span class="meta">&#8226;</span>
 (+90 312) 210 7586 <span class="meta">&#8226;</span>  <a href="https://goo.gl/maps/R5v5jXpoozx">C-113</a> </p>
 
-#### Research Interests
 
-- Renewable Energy (Wind, Wave, Solar)
-- Design and Optimisation of Electrical Machines
-- Smart Grids, Energy Storage
-- Superconducting Machines
-- Permanent-Magnet Machines
