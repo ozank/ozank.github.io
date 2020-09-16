@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Why 3-phase?</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./css/nord-dark.css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: nord-dark
+layout: true
+
+---
+
+class: center, middle
+
+# WHY DO WE USE 3-PHASE POWER?
+
+## Ozan Keysan
+
+[keysan.me](http://keysan.me)
+
+---
+## 3-Phase Power is Everywhere
+
+<img src="https://cdn-images-1.medium.com/max/2000/1*6lCTsj6fN1y2nP_Y44Icqw.jpeg" alt="Drawing" style="width: 850px;"/>
+
+---
+# WHY 3 PHASE? (but not 2 or 5?)
+--
+
+<img src="./images/3_phase.png" alt="Drawing" style="width: 700px;"/>
+
+
+
+---
+
+# WHY 3 PHASE? (but not 2 or 5?)
+
+<img src="./images/3phase_flow.gif" alt="Drawing" style="width: 700px;"/>
+
+---
+## How much wire is required to transmit same power?
+
+---
+# WHY 3-PHASE?
+--
+
+- ## 3, 4, 5... phase systems use less wire than 2-phase systems
+--
+
+- ## 3 is the smallest number to have this property (less installation cost compared to 4, 5... phase systems)
+
+--
+
+- ## It is possible to generate a rotating field
+
+---
+# Rotating MMF with a 3-phase system
+
+
+<img src="./images/rotating_mmf.gif" alt="Drawing" style="width: 750px;"/>
+
+---
+# Rotating MMF (Phasor Representation)
+
+
+<img src="./images/rotating_phasor.gif" alt="Drawing" style="width: 550px;"/>
+
+---
+# Rotating MMF (Phasor Representation)
+
+
+<img src="./images/rotating_combined.gif" alt="Drawing" style="width: 800px;"/>
+
+
+---
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
