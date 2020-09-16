@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buck Converter Basics</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./css/nord-dark.css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: nord-dark
+layout: true
+
+---
+
+class: center, middle
+
+# Buck Converter Basics 
+
+## Ozan Keysan
+
+## [keysan.me](http://keysan.me)
+
+
+---
+# DC/DC Converters
+--
+
+## Can be used to:
+--
+
+# Step down the input voltage
+--
+
+# Step up the input voltage
+
+--
+
+# or Both
+
+---
+# Step-Down (Buck) Converter:
+
+## Simplest Case
+
+<img src="./images/switch_mode_dc_dc.png" alt="Drawing" style="width: 450px;"/>
+
+---
+# Step-Down (Buck) Converter:
+
+## Simplest Case
+
+<img src="./images/switch_mode_dc_dc2.png" alt="Drawing" style="width: 700px;"/>
+
+---
+# Let's make the output voltage smoother
+--
+
+## Add a Low Pass Filter (eg LC Filter)
+
+<img src="./images/step_down_low_pass.png" alt="Drawing" style="width: 700px;"/>
+
+---
+# Let's make the output voltage smoother
+--
+
+## LC Filter Characteristics (More in the following weeks)
+
+<img src="./images/LC_filter.gif" alt="Drawing" style="width: 500px;"/>
+
+---
+## Why do we have the diode for?
+
+<img src="./images/step_down_low_pass.png" alt="Drawing" style="width: 700px;"/>
+
+--
+
+## Freewheeling Diode: Conducts when switch is off
+
+---
+## Operating Modes (in CCM)
+
+<img src="./images/buck_converter_voltages.png" alt="Drawing" style="width: 600px;"/>
+
+
+
+CCM: Continuous Conduction Mode
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
