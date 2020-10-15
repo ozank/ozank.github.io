@@ -63,7 +63,7 @@ class: center, middle
 
 <img src="./images/ee463/spdt_lc.png" alt="Drawing" style="width: 800px;"/>
 
-## Notice the low power loss
+## Notice high efficiency
 
 ---
 
@@ -96,10 +96,16 @@ class: center, middle
 # Ideal Switch
 --
 
-## No voltage drop in the on-state
-## Zero switching time
-## No leakage current in the off-state
-## Infinite breakdown voltage and current capacity
+- ## No voltage drop in the on-state
+--
+
+- ## Zero switching time
+--
+
+- ## No leakage current in the off-state
+--
+
+- ## Infinite breakdown voltage and current capacity
 
 ---
 # What happens if you turn off a inductive load?
@@ -113,19 +119,20 @@ class: center, middle
 # Practical Switch
 --
 
-## Conduction losses (voltage drop, leakage current)
-## Finite swicthing time
-## Switching losses
-## Limited current and voltage capacity
-## Limited dv/dt and di/dt rating
----
-# Generalized Matrix Converter
+- ## Conduction losses (voltage drop, leakage current)
 --
 
-<img src="./images/ee463/matrix_converter.png" alt="Drawing" style="width: 500px;"/>
+- ## Finite switching time
 --
 
-## Remember there are no ideal sources as well...	
+- ## Switching losses
+--
+
+- ## Limited current and voltage capacity
+--
+
+- ## Limited dv/dt and di/dt rating
+
 ---
 # General Rules in Power Electronics
 --
@@ -152,9 +159,6 @@ class: center, middle
 
 <img src="./images/ee463/inductor_volt_seconds.jpeg" alt="Drawing" style="width: 400px;"/>
 
-
-
-
 ---
 
 # Capacitors in Steady-State Operation
@@ -169,32 +173,38 @@ class: center, middle
 --
 
 ## i.e. How do you decide an output is better than another?
---
+---
 
 ## For example, can you tell which one of the DC supply voltage is better?
 
 - ### [5 + 0.5sin(x)](https://www.google.com.tr/search?client=ubuntu&hs=a00&channel=fs&dcr=0&q=plot+%285+%2B+0.5*sin%28x%29%29&oq=plot+%285+%2B+0.5*sin%28x%29%29&gs_l=psy-ab.3...8005.8005.0.8351.1.1.0.0.0.0.111.111.0j1.1.0....0...1.1.64.psy-ab..0.0.0....0.14FW91dDBMU)
 
-### or
-
-- ### [5+​0.2*​sin(​x)+​0.2*​sin(​10*x)](https://www.google.com.tr/search?client=ubuntu&channel=fs&dcr=0&q=plot+%285+%2B+0.2*sin%28x%29%2B+0.2*sin%2810x%29%29&oq=plot+%285+%2B+0.2*sin%28x%29%2B+0.2*sin%2810x%29%29&gs_l=psy-ab.3...22746.22746.0.23464.1.1.0.0.0.0.380.380.3-1.1.0....0...1.1.64.psy-ab..0.0.0....0.DmF0L99uZyc)
+<img src="./images/ee463/sin1.png" alt="Drawing" style="width: 700px;"/>
 
 ---
+### or
 
-# Performance Parameters for Waveforms
+- ### [5+​0.25*​sin(​x)+​0.25*​sin(​10*x)](https://www.google.com.tr/search?client=ubuntu&hs=nKs&channel=fs&dcr=0&sxsrf=ALeKk01hPIMt3M_xlJsWnnme8lTzW-kinA%3A1602792352635&ei=oKuIX8aDJuXyqwGb0KuACQ&q=plot+%285+%2B+0.25*sin%28x%29%2B+0.25*sin%2810x%29%29&oq=plot+%285+%2B+0.25*sin%28x%29%2B+0.25*sin%2810x%29%29&gs_lcp=CgZwc3ktYWIQAzoHCAAQRxCwA1CbsRFY-8ERYPLPEWgBcAB4AIABiQOIAewLkgEFMi0zLjKYAQCgAQGqAQdnd3Mtd2l6yAEIwAEB&sclient=psy-ab&ved=0ahUKEwjG087msrfsAhVl-SoKHRvoCpAQ4dUDCAw&uact=5)
 
-
-## i.e. How do you decide an output is better than another?
-
+<img src="./images/ee463/sin2.png" alt="Drawing" style="width: 700px;"/>
+---
 
 ## Or can you tell which "more sinusoidal"?
+--
 
 - ### [sin(x) + 0.3sin(3x)](https://www.google.com.tr/search?client=ubuntu&channel=fs&dcr=0&q=plot+%28sin%28x%29%2B0.3sin%283x%29%29&oq=plot+%28sin%28x%29%2B0.3sin%283x%29%29&gs_l=psy-ab.3...399088.399088.0.399490.1.1.0.0.0.0.283.283.2-1.1.0....0...1.1.64.psy-ab..0.0.0....0.zn-Ff1RFWRY)
 
+--
+
+<img src="./images/ee463/sin4.png" alt="Drawing" style="width: 700px;"/>
+
+---
 ### or
 
 - ### [sin(x) - 0.3sin(3x)](https://www.google.com.tr/search?client=ubuntu&channel=fs&dcr=0&q=plot+%28sin%28x%29-0.3sin%283x%29%29&oq=plot+%28sin%28x%29-0.3sin%283x%29%29&gs_l=psy-ab.3...4386.5198.0.5884.3.3.0.0.0.0.420.683.2-1j0j1.2.0....0...1.1.64.psy-ab..1.0.0....0.DUWQhKX7g00)
+--
 
+<img src="./images/ee463/sin3.png" alt="Drawing" style="width: 700px;"/>
 ---
 # RMS
 --
@@ -207,7 +217,7 @@ class: center, middle
 ## What is the physical meaning?
 --
 
-## Average power dissipated if connected to 1 Ohm resistor
+## Average power dissipated if connected to \\(1 \: \Omega\\) resistor
 
 ---
 # RMS (Root Mean Square)
@@ -258,15 +268,16 @@ class: center, middle
 
 ## \\(DF=\dfrac{I\_{1\_{RMS}}}{I\_{s\_{RMS}}}\\)
 
-## Example: What is the DF for a square wave?
+## Quick Question: What is the DF for a square wave?
 ---
 # Displacement Power Factor
 --
 
 ## Power factor for the fundamental component
+
 ## i.e. DPF=\\(cos(\phi)\\) , where \\(\phi\\) is the phase difference between the FUNDAMENTAL components of V and I.
 
-<img src="http://www.ecmweb.com/sites/ecmweb.com/files/styles/article_featured_standard/public/Power-Factor-Displacement-Power-Factor-0.jpg?itok=EHQrsyDZ" alt="Drawing" style="width: 400px;"/>
+<img src="https://www.allaboutcircuits.com/uploads/articles/williams_thd_3_.jpg" alt="drawing" style="width: 700px;"/>
 
 ---
 # (True) Power Factor
@@ -276,26 +287,35 @@ class: center, middle
 
 # \\(PF = \dfrac{P}{S}\\)
 
-## True Power Factor includes all harmonics, whereas DPF includes only fundamental component.
+## True Power Factor includes all harmonics, whereas DPF includes only the fundamental component.
 
 ---
 # (True) Power Factor
 
-# For sine wave
+# For perfect sine wave
 --
 
-# DF=1 and DPF=PF
+# DF = 1 and DPF = PF
 --
 
 # For distorted waves
 --
 
 # DF<1 and PF<DPF
+
+---
+
+## For this waveform:
+
+<img src="https://www.powermag.com/wp-content/uploads/2018/10/fig-4_non-linear-loads.jpg" alt="drawing" style="width: 600px;"/>
+
+## displacement power factor (DPF) = 1
+## but true power factor is < 1
 ---
 
 # THD
 --
-(Total Harmonic Distortion)
+ (Total Harmonic Distortion)
 --
 
 ## Ratio of the RMS of the harmonics (excluding the fundamental) to RMS of the fundamental component
@@ -304,7 +324,7 @@ class: center, middle
 ## \\( THD= \dfrac{\sqrt{\sum\limits_{h=2}^{\infty}I_h^2}}{I_1}\\)
 
 --
-## i.e. ratio of power in harmonics to power in fundamental
+## i.e. ratio of power in harmonics to power in the fundamental component
 
 ---
 # THD (Total Harmonic Distortion)
@@ -329,8 +349,12 @@ class: center, middle
 ### Distortion factor can be expressed in terms of THD
 
 ## \\(DF=\dfrac{1}{\sqrt{1+THD^2}}\\)
+
 ---
-#Quiz
+
+## Quick Question: Derive the THD of a square waveform
+
+<img src="https://www.researchgate.net/publication/312928999/figure/fig1/AS:669069531430915@1536530015313/Square-wave-with-fifty-percent-duty-cycle-and-zero-volt-DC-offset.png" alt="drawing" style="width: 600px;"/>
 
 ---
 ## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
