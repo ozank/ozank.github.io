@@ -148,34 +148,45 @@ class: center, middle
 ---
 # Comparison of Rectifiers
 
+| Type                | Vout | \\(\Delta\\)Vout | \\(f\_{ripple}\\) |
+|:---------------------:|:------:|:---------:|:---------:|:---------:|
+| **Single Phase**        | \\(\;\dfrac{2\sqrt{2}}{\pi}V\_{ph}\\) = 207 V    |  \\(\;\sqrt{2} V\_{ph} = 325 V\\)       |      100 Hz           |
+| **3-phase Half Bridge** |  \\(\;\dfrac{3\sqrt{2}}{2\pi}V\_{l-l}\\) = 270 V |   \\(\;\dfrac{\sqrt{2}}{2} V\_{ph} = 162.5 V\\)              |  150 Hz  |
+| **3-phase Full Bridge** |  \\(\;\dfrac{3\sqrt{2}}{\pi}V\_{l-l}\\) = 540 V  |    \\(\;( 1-\frac{\sqrt{3}}{2}) \sqrt{2}V\_{l-l} = 75.8 V\\)             |  300 Hz  |
 ---
 
-# Commutation
+# Commutation in 3-Phase Rectifiers
+
+<img src="./images/ee463/3ph_full_bridge.png" alt="Drawing" style="width: 700px;"/>
+
+---
+
+# Commutation in 3-Phase Rectifiers
 --
 
 <img src="./images/ee463/3ph_commutation1.png" alt="Drawing" style="width: 700px;"/>
 
 ---
-# Commutation
+# Commutation in 3-Phase Rectifiers
 --
 
 <img src="./images/ee463/3ph_commutation2.png" alt="Drawing" style="width: 800px;"/>
 
 ---
-# Average Voltage
+### Average Voltage
 
 ## Without Commutation
 
-## \\(V\_{dc}= \dfrac{3\sqrt{2}}{ \pi} V\_{l-l} = 1.35 V\_{l-l}\\)
+### \\(V\_{dc}= \dfrac{3\sqrt{2}}{ \pi} V\_{l-l} = 1.35 V\_{l-l}\\)
 --
 
 ## With Commutation
 
-## \\(V\_{dc}= \dfrac{3\sqrt{2}}{ \pi} V\_{l-l} - \dfrac{3}{\pi}\omega L_s I_d\\)
+### \\(V\_{dc}= \dfrac{3\sqrt{2}}{ \pi} V\_{l-l} - \dfrac{3}{\pi}\omega L_s I_d\\)
 
-### [More info](http://fpec.ucf.edu/docs/pec_ebook/Chapter%207.pdf)
+### [More info](http://www.ehu.eus/electronica-industrial/ElectronicaIndustrial_Automatica/apuntes/overlap1.pdf)
 
-### [MultiSim Simulation](https://www.multisim.com/discover/)
+### [Commutation Simulation](https://www.multisim.com/content/xMSLkaeX6EGfqoLtHJ8xjn/3phase_commutation/), [MultiSim Simulation Examples](https://www.multisim.com/discover/)
 ---
 ## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
 
