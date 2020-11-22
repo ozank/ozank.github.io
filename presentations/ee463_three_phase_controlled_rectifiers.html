@@ -67,11 +67,6 @@ class: center, middle
 ---
 # Half-bridge Thyristor Rectifier
 
-<img src="http://4.bp.blogspot.com/-RadaC6s7kzY/Tg_l-Qy5GxI/AAAAAAAAAj0/1QXrn66OiWc/s1600/3+fasa+setengah+gelombang.JPG" alt="Drawing" style="width: 750px;"/>
-
----
-# Half-bridge Thyristor Rectifier
-
 ## Average Voltage?
 --
 
@@ -81,13 +76,6 @@ class: center, middle
 
 ## \\(V\_{dc(\alpha)}= \dfrac{3\sqrt{2}}{2 \pi} V\_{ll,rms} cos (\alpha)\\)
 
----
-# Half-bridge Thyristor Rectifier
-
-## Disadvantages?
---
-
-## Can you plot the current waveforms?
 
 ---
 # Full-bridge Thyristor Rectifier
@@ -100,16 +88,6 @@ class: center, middle
 <img src="./images/ee462/3ph_thyristor_rectifier_simplified.png" alt="Drawing" style="width: 500px;"/>
 
 ---
-# Full-bridge Thyristor Rectifier
-
-## Can you plot the voltage output?
---
-
-
-<img src="./images/ee463/3ph_thyristor_0.png" alt="Drawing" style="width: 800px;"/>
-
-### Diode Rectifier (or \\(\alpha=0\\))
----
 
 ## Diode Rectifier (or \\(\alpha=0\\))
 
@@ -118,15 +96,7 @@ class: center, middle
 
 # Full-bridge Thyristor Rectifier
 
-### What kind of waveform is it?
-
-<img src="https://sub.allaboutcircuits.com/images/03269.png" alt="Drawing" style="width: 800px;"/>
-
----
-
-# Full-bridge Thyristor Rectifier
-
-### Output voltage follows line to line voltages!
+### Remember output voltage follows line to line voltages!
 
 <img src="http://people.ucalgary.ca/~aknigh/vsd/ssim/images/figs/three_phase_diode_line_line.gif" alt="Drawing" style="width: 800px;"/>
 
@@ -135,7 +105,7 @@ class: center, middle
 
 # Full-bridge Thyristor Rectifier
 
-### Output voltage follows line to line voltages!
+### Remember output voltage follows line to line voltages!
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Bridge_rectifier_at_alpha%3D0_u%3D0.png" alt="Drawing" style="width: 650px;"/>
 
@@ -146,7 +116,7 @@ class: center, middle
 ## Non-zero firing angle
 --
 
-<img src="./images/ee463/3ph_thyristor_nonzero.png" alt="Drawing" style="width: 800px;"/>
+<img src="./images/ee463/3phase_full.png" alt="Drawing" style="width: 700px;"/>
 ---
 
 # Full-bridge Thyristor Rectifier
@@ -155,27 +125,6 @@ class: center, middle
 --
 
 <img src="./images/ee463/3ph_thyristor_nonzero2.png" alt="Drawing" style="width: 800px;"/>
-
----
-# Full-bridge Thyristor Rectifier
-
-## What about the current?
---
-
-<img src="./images/ee463/3ph_thyristor_current.png" alt="Drawing" style="width: 800px;"/>
-
----
-# Full-bridge Thyristor Rectifier
-
-## What about the average output voltage?
-
-<img src="./images/ee463/3ph_thyristor_nonzero2.png" alt="Drawing" style="width: 800px;"/>
---
-
-### \\(V\_{d(\alpha)}= \dfrac{3\sqrt{2}}{\pi} V\_{ll,rms} cos (\alpha)\\)
-
-
-### Twice of the half-bridge case
 
 ---
 # Output Voltage vs. Firing Angle
@@ -208,12 +157,41 @@ class: center, middle
 <img src="./images/ee462/3phase_thyristor_180.png" alt="Drawing" style="width: 800px;"/>
 
 ---
+# Full-bridge Thyristor Rectifier
+
+## Average output voltage?
+
+<img src="./images/ee463/3ph_thyristor_nonzero2.png" alt="Drawing" style="width: 800px;"/>
+--
+
+### \\(V\_{d(\alpha)}= \dfrac{3\sqrt{2}}{\pi} V\_{ll,rms} cos (\alpha)\\)
+
+
+
+
+---
+# Full-bridge Thyristor Rectifier
+
+## What about the current?
+--
+
+<img src="./images/ee463/3ph_thyristor_current.png" alt="Drawing" style="width: 800px;"/>
+
+
+---
 
 ## Current Waveform: No triple harmonics
 #### Comparison: <a href="https://www.google.com.tr/?gfe_rd=cr&ei=XqrmWLLjEc-z8weYuJvgDA&gws_rd=ssl#q=sin(x)%2Bsin(3x)/3%2Bsin(5x)/5%2Bsin(7x)/7%2Bsin(9x)/9%2Bsin(11x)/11%2Bsin(13x)/13%2Bsin(15x)/15%2Bsin(17x)/17">Single Phase</a>, <a href="https://www.google.com.tr/?gfe_rd=cr&ei=warmWK-gCM-z8weYuJvgDA&gws_rd=ssl#q=sin(x)-sin(5x)/5-sin(7x)/7%2Bsin(11x)/11%2Bsin(13x)/13-sin(17x)/17-sin(19x)/19">Three Phase</a>
 --
 
 <img src="./images/ee463/3ph_tyhristor_current.png" alt="Drawing" style="width: 600px;"/>
+
+---
+
+## Current Waveform: 
+
+<img src="./images/ee463/thyristor_power_factor.png" alt="Drawing" style="width: 600px;"/>
+
 
 ---
 # Full-bridge Thyristor Rectifier
@@ -230,40 +208,6 @@ class: center, middle
 
 ## THD= 31.08 %
 
----
-# Full-bridge Thyristor Rectifier
-
-## Current Waveform: 
---
-
-## DPF=??
-
----
-# Full-bridge Thyristor Rectifier
-
-## Current Waveform: 
-
-
-## DPF= \\(cos (\phi_1)\\) = \\(cos (\alpha)\\)
---
-
-## PF = ?
-
----
-# Full-bridge Thyristor Rectifier
-
-## Current Waveform: 
-
-
-## DPF= \\(cos (\phi_1)\\) = \\(cos (\alpha)\\)
-
-## PF = \\(\dfrac{I\_{s1}}{I\_{s}}cos (\alpha) \\)
-
----
-
-## Current Waveform: 
-
-<img src="./images/ee463/thyristor_power_factor.png" alt="Drawing" style="width: 600px;"/>
 
 ---
 # Effect of Ls (Commutation)
@@ -322,23 +266,6 @@ class: center, middle
 ### \\(V\_{d\alpha}= \dfrac{3\sqrt{2}}{\pi}V\_{l-l} cos (\alpha) - \dfrac{3\omega L_s}{\pi}I_a \\)
 
 
----
-# Practical Converter
-
-<img src="./images/ee463/3ph_practical_thyristor.png" alt="Drawing" style="width: 550px;"/>
----
-# Practical Converter
-
-## Continuous Conduction
-
-<img src="./images/ee463/3ph_continious_conduction.png" alt="Drawing" style="width: 800px;"/>
-
----
-# Practical Converter
-
-## Discontinuous Conduction
-
-<img src="./images/ee463/3ph_discontinuous_mode.png" alt="Drawing" style="width: 800px;"/>
 
 ---
 # Inverter Mode of Operation
@@ -355,7 +282,7 @@ class: center, middle
 ## How can you obtain four-quadrant operation?
 --
 
-## Use two seperate converters
+## Use two separate converters
 
 <img src="http://keysan.me/presentations/images/ee462/3ph_thyristor_motor_drive_regenerative.png" alt="Drawing" style="width: 500px;"/>
 
@@ -364,21 +291,12 @@ class: center, middle
 
 ## How can you obtain four-quadrant operation?
 
-## Use two seperate converters
+## Use two separate converters
 
 <img src="./images/ee463/dc_motor_thyristor.png" alt="Drawing" style="width: 750px;"/>
 
 ### Ref: Mohan Chapter 13 DC Motor Drives
----
 
-## Voltage Waveform Distortion
-
-<img src="./images/ee463/3ph_thyristor_notching1.png" alt="Drawing" style="width: 750px;"/>
----
-
-## Voltage Waveform Distortion
-
-<img src="./images/ee463/3ph_thyristor_notching2.png" alt="Drawing" style="width: 750px;"/>
 
 ---
 ## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
