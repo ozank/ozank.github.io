@@ -10,10 +10,10 @@ For more information about current project and theses, please visit [PowerLab](h
 
 - Furkan Karakaya, *Characterization of Gan Transistors and Development of Bi-directional DC/DC Converter With Half-Bridge Having Short Circuit Protection for Parallel Switches*, 2020
 - Gökhan Çakal, *Design and Implementation of Coreless Axial Flux Permanent Magnet Motor With Printed Circuit Board Windings*
-- Lütfi Boyacı, *Proton Irradiation and Gamma Ray Irradiation Testing Studies on the Commercial Grade GaNFETs to Investigate their Characteristics under the Space Radiation Environment*, [pdf version](http://etd.lib.metu.edu.tr/upload/12624501/index.pdf), 2020
+- Lütfi Boyacı, *Proton Irradiation and Gamma Ray Irradiation Testing Studies on the Commercial Grade GaNFETs to Investigate their Characteristics under the Space Radiation Environment*, [pdf version](http://etd.lib.metu.edu.tr/upload/12624501/index.pdf), 2019
 - Aykut Demirel, *Condition Monitoring and Fault Diagnosis of Electrical Motor Drive Systems*, [pdf version](http://etd.lib.metu.edu.tr/upload/12624287/index.pdf), 2019
 - Mehmet Kaan Mutlu, *Limited-jerk Sinusoidal Trajectory Design for Field Oriented Control of Permanent Magnet Synchronous Motor With H-infinity Optimal Controller*, [pdf version](http://etd.lib.metu.edu.tr/upload/12624523/index.pdf), 2019
-- Hakan Temiz, *Grid Impedance Estimation Based Adaptive Controller Design for Back-to-Back Wind Turbine Power Converters for Stable Operation in Distorted and Weak Grid*, [pdf version](http://etd.lib.metu.edu.tr/upload/12624035/index.pdf , 2019
+- Hakan Temiz, *Grid Impedance Estimation Based Adaptive Controller Design for Back-to-Back Wind Turbine Power Converters for Stable Operation in Distorted and Weak Grid*, [pdf version](http://etd.lib.metu.edu.tr/upload/12624035/index.pdf) , 2019
 - Erencan Duymaz, *Investigation of Inertial Support Limits in Wind Turbines and the Effects in the Power System Stability*, [pdf version](http://etd.lib.metu.edu.tr/upload/12623038/index.pdf), 2019
 - Aysel Akgemci, *Hybrid Excited Synchrnous Generator Design and Comparison of Direct Drive Wind Turbines*, [pdf version](http://etd.lib.metu.edu.tr/upload/12623039/index.pdf), 2019
 - Doğa Ceylan, *Electromagnetic Simulation and Optimization of an Electromagnetic Launcher*, [pdf version](http://etd.lib.metu.edu.tr/upload/12622547/index.pdf), 2018
