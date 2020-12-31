@@ -36,9 +36,11 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## No difference between a [DC motor and generator](http://www.youtube.com/watch?v=6kgzrXFSDwA)
 
 ## Richard Feynman in [Electric Motors](https://youtu.be/qhh32JYkQPk?t=23s)
+
 ---
 # DC Machine Types
-## Different ways to connect field winding
+## Different ways to supply and control the field winding
+
 ### - Separately Excited
 ### - Shunt Excited
 ### - Series Excited
@@ -74,17 +76,19 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 - ### If \\(E_a > V_t \\) it's generating mode.
 --
 
-- ### The speed changes depending on the net torque (\\(T\_{net}=T\_{elec}-T\_{mech}\\))
+- ### The speed changes depending on the net torque and inertia
 
-## \\(T= J \dfrac{d \omega}{dt}\\)
----
+## \\(T\_{elec} - T\_{mech} = J \dfrac{d \omega}{dt}\\)
+
+<!--
+
 # Steady State Operating Point
 ### Intersection of motor characteristics and load curve (\\(T\_{elec}=T\_{mech}\\))
 
 <img src="http://www.electrical4u.com/electrical-motor/images/dc-motor-characteristics1.gif" alt="Drawing" style="width: 600px;"/>
 
 
----
+
 # Separately Excited Motor
 --
 
@@ -93,6 +97,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ## What happens if we swap the field winding terminals?
 
+-->
 ---
 # Four Quadrant Operation
 
@@ -102,17 +107,21 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 [Riding a robot hand](http://www.youtube.com/watch?v=bxbjZiKAZP4)
 ---
-# Electric Braking
+# Generating (or Braking) Mode
+
 --
 
-## 1-Regenerative Braking (Generating)
-### \\(I_f\\) is increased to control \\(E_a\\)
-### Most efficient braking
+## 1-Regenerative Braking
+
+### Generated energy is sent to the source 
+### Energy is not dissipated, so it is quite efficient way of braking
 ### Voltage source has to be bi-directional
+### \\(I_f\\) can be controlled to adjust \\(E_a\\)
 
 ---
-## 1-Regenerative Braking (Generating)
-### Case Study: Formula-1 [KERS](https://en.wikipedia.org/wiki/Kinetic_energy_recovery_system)
+## 1-Regenerative Braking Case study
+
+## Formula-1 [KERS](https://en.wikipedia.org/wiki/Kinetic_energy_recovery_system)
 <img src="http://i3.mirror.co.uk/incoming/article7423073.ece/ALTERNATES/s1227b/Day-two-of-F1-winter-testing-at-Circuit-de-Catalunya.jpg" alt="Drawing" style="width: 500px;"/>
 
 [Renault KERS](https://www.youtube.com/watch?v=1RlZF9j3NoE), [F1 Energy Recovery System](https://www.youtube.com/watch?v=vgBdlOgCmJU), [BBC KERS](https://www.youtube.com/watch?v=n9fAnjgR8lA),
@@ -121,14 +130,18 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 [KERS specs](https://www.quora.com/What-is-KERS-and-how-it-is-used-in-Formula-One), [specs2](http://jalopnik.com/how-formula-ones-amazing-new-hybrid-turbo-engine-works-1506450399)
 
 ---
-# Electric Braking
---
 
 ## 2-Dynamic Braking
+
 ### Kinetic energy is dissipated using a braking resistor
+### It is not very efficient
+### Easy to implement (no need for bidirectional voltage source)
 
 
-<img src="https://www.megaresistors.com/wp-content/uploads/2014/06/MR-DBR-Labelled.jpg?x60444" alt="Drawing" style="width: 450px;"/>
+<img src="https://www.megaresistors.com/wp-content/uploads/2014/06/MR-DBR-Labelled.jpg?x60444" alt="Drawing" style="width: 250px;"/>
+
+#### A braking resistor for elevators
+
 
 ---
 ## 2-Dynamic Braking
