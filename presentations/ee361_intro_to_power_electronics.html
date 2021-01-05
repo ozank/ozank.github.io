@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE361-Electromechanical Energy Conversion</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-361
+# Introduction to Power Electronics
+
+## Ozan Keysan
+
+[ozan.keysan.me](http://ozan.keysan.me)
+
+Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# How to Transmit Electricity?
+
+
+<img src="https://static01.nyt.com/images/2017/01/08/nyregion/ny101-power-slide-272G/ny101-power-slide-272G-jumbo-v3.gif" alt="Drawing" style="width: 800px;"/>
+
+Reading: [How New York City Gets Its Electricity](https://www.nytimes.com/interactive/2017/02/10/nyregion/how-new-york-city-gets-its-electricity-power-grid.html)
+
+---
+# How to Transmit Electricity?
+
+## Simple Electric System
+
+<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/electric_grid.png" alt="Drawing" style="width: 600px;"/>
+
+---
+<img src="http://img.memecdn.com/thunderstruck_o_2855333.jpg" alt="Drawing" style="width: 700px;"/>
+
+
+####For curious students:
+
+#### [War of Currents](http://en.wikipedia.org/wiki/War_of_Currents), [Edison's Revenge: Will Direct Current Make a Comeback?](http://www.scientificamerican.com/article/edisons-revenge-will-direct-current-make-a-comeback-in-us/), [60 years of HVDC](https://library.e.abb.com/public/aff841e25d8986b5c1257d380045703f/140818%20ABB%20SR%2060%20years%20of%20HVDC_72dpi.pdf)
+
+#### [AC/DC Music Band](https://youtu.be/44XYEeD1A1U?t=111)
+
+---
+
+### We now have the power semiconductors:
+
+https://www.mitsubishielectric.com/sites/GWS/en/about/businesses/power_devices/images/bg_pagetitle.jpg
+
+https://www.researchgate.net/publication/333119779/figure/fig1/AS:759010919710722@1557973713546/Possible-applications-of-GaN-power-devices-as-a-function-of-the-voltage-The-range-of.jpg
+
+https://www.appliedmaterials.com/sites/all/themes/appliedmaterials_bootstrap/images/journals/internet-era/advanced-power-switching.jpg
+
+https://upload.wikimedia.org/wikipedia/commons/b/b5/IGBT_3300V_1200A_Mitsubishi.jpg
+
+
+---
+# Introduction to Power Processing
+--
+
+## Fundamental Block Diagram
+
+<img src="./images/ee463/power_processing.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Different Source Voltage Characteristics
+--
+
+## - DC (At various voltages)
+--
+
+## - Single Phase AC (Commonly 110-240V 50/60 Hz)
+--
+
+## - Three Phase AC  
+
+## ...
+---
+# Different Requirements at the Output
+--
+
+## - DC (Regulated, constant magnitude)
+--
+
+## - Adjustable DC
+--
+
+## - AC (Constant frequency, variable magnitude)
+--
+
+## - AC (Variable frequency and magnitude)
+
+---
+# Control is almost always needed
+--
+
+## - Output Voltage Regulation
+--
+
+## - Overload Protection
+--
+
+## - Power Quality
+--
+
+## - Frequency Fixing (i.e. grid connected inverters)
+
+## ...
+---
+# Control is almost always needed
+--
+
+<img src="./images/ee463/power_processing_control.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Classification wrt Switching Characteristics
+--
+
+## - Line frequency (naturally commutated) converters
+--
+
+## (e.g. diode rectifiers)
+--
+
+## - Switching (forced-commutated) converters
+--
+
+## (e.g. switched mode power supplies)
+
+--
+
+##  -Resonant converters (zero voltage or zero current switching)
+
+---
+# Basic Building Blocks
+--
+
+## - AC/DC Converters (aka Rectifiers)
+--
+
+## - DC/AC Converters (aka Inverters)
+--
+
+## - DC/DC Converters (e.g. SMPS)
+--
+
+## - AC/AC Converter (e.g. Cycloconverter)
+
+
+
+
+---
+# What are the desired factors?
+
+
+## - High Efficiency
+
+<img src="https://www.rohm.com/image/image_gallery?uuid=2a92392c-e9db-441e-b646-6b2563248ca7&groupId=11308&t=1435281819648" alt="Drawing" style="width: 550px;"/>
+
+---
+# What are the desired factors?
+
+## - High Power Density (i.e. small size)
+
+<img src="https://www.pntpower.com/wp-content/uploads/2017/12/Rohm-Formula-E-705x334.jpg" alt="Drawing" style="width: 700px;"/>
+
+
+[Toyota Hybrid Car Inverters](https://www.youtube.com/watch?v=9FGSOK5l6s0)
+
+---
+# What are the desired factors?
+
+## - [Reliability](https://www.acopian.com/keep-machines-up.html), high quality output (and input) power
+
+
+<img src="https://www.acopian.com/images/Acopian-Redundant-Photo.png" alt="Drawing" style="width: 700px;"/>
+---
+# What are the desired factors?
+
+## Of Course Low Cost
+
+<img src="http://static.righto.com/images/magsafe/top_comparison.jpg" alt="Drawing" style="width: 700px;"/>
+
+
+[Original vs. Cheap Macbook Charger](http://www.righto.com/2015/11/macbook-charger-teardown-surprising.html)
+
+
+---
+# Applications of Power Electronics
+--
+
+## - <1W in portable equipments ([Tiny Power](https://www.ipu.dk/cases/micro-fabrication-with-mems-technology-and-electroplating-for-future-intelligent-electronics/))
+
+<img src="https://www.ipu.dk/wp-content/uploads/2018/10/tinypower2-520x360.png" alt="Drawing" style="width: 400px;"/>
+
+---
+# Applications of Power Electronics
+
+## - ~100Ws for power supplies, house hold applications ([Power Supply](http://www.xppower.com/))
+
+<img src="https://www.xppower.com/products/images/gcu500_prod_lrg.jpg" alt="Drawing" style="width: 400px;"/>
+---
+# Applications of Power Electronics
+
+## - Several kWs for industrial motor drives ([ABB Drives](https://search-ext.abb.com/library/Download.aspx?DocumentID=3AFE68401771&LanguageCode=en&DocumentPartId=1&Action=Launch))
+
+<img src="https://www.halcyondrives.com/images/services/hire-drives/abb-hiredrives.png" alt="Drawing" style="width: 600px;"/>
+---
+# Applications of Power Electronics
+
+## - >1 MW for grid applications (HVDC transmission, renewable energy) ([ABB 3000 MW, 1100kV HVDC](https://www.windpowerengineering.com/abb-writes-another-chapter-high-voltage-direct-current-textbook/))
+
+<img src="https://resources.news.e.abb.com/images/2018/12/19/0/15bc51c1f25ed103c1257f7700312f94_d06bdf13-eb90-4139-9849-65d55b4ee773_2016_03_10_press_release_image_HVDC_light_valve_hall.jpg" alt="Drawing" style="width: 600px;"/>
+---
+
+## You need to consider many aspects
+---
+
+<img src="https://image.slidesharecdn.com/l1-introduction-150627103854-lva1-app6891/95/l1-introduction-4-638.jpg?cb=1447700690" alt="Drawing" style="width: 850px;"/>
+---
+# Examples
+
+---
+
+# Phone Charger
+<img src="https://smsoptimizedimages.azureedge.net/0017262_samsung-ta20-c-type-hizli-seyahat-sarj-aleti-beyaz-ep-ta20ewecgww_550.jpeg" alt="Drawing" style="width: 400px;"/>
+
+
+### Can you plot the main block diagrams?
+
+
+---
+
+# Power Electronics in a Laptop
+
+### Can you plot the main block diagrams?
+
+<img src="https://www.howtogeek.com/wp-content/uploads/2019/02/img_5c7776adcbc5a.png" alt="Drawing" style="width: 700px;"/>
+
+---
+# Main Blocks (and other PE components)
+
+<img src="./images/ee463/laptop_charger.png" alt="Drawing" style="width: 750px;"/>
+
+---
+# Inside a Laptop Charger 
+
+<img src="http://static.righto.com/images/magsafe/components1-w750.png" alt="Drawing" style="width: 550px;"/>
+---
+#Power Electronics in an Electric Car
+
+<img src="https://inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Tesla-Model-S.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+#Power Electronics in an Electric Car
+
+<img src="./images/ee463/electric_car.png" alt="Drawing" style="width: 750px;"/>
+
+---
+#Grid Connected PV System
+
+<img src="http://www.sunwindenergy.com/sites/default/files/field/image/pv_1_mw_india.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+#Grid Connected PV System
+
+<img src="https://www.researchgate.net/profile/Abd_Mansour/publication/279189144/figure/fig1/AS:397530228641794@1471790000377/Block-diagram-of-the-PV-system-connected-to-the-grid.png" alt="Drawing" style="width: 800px;"/>
+
+---
+
+#Wind Turbine
+
+<img src="https://www.nrel.gov/news/features/images/20110429_wind_pix18890_large.jpg" alt="Drawing" style="width: 800px;"/>
+
+---
+
+#Wind Turbine
+
+## Back-to-back Converter
+
+<img src="https://www.researchgate.net/profile/Zhe_Chen23/publication/224115715/figure/fig1/AS:302780859338754@1449199990091/Block-diagram-of-a-grid-connected-wind-turbine-with-a-PMSG-and-a-full-scale-converter.png" alt="Drawing" style="width: 800px;"/>
+---
+
+## Back-to-back Converter
+
+<img src="https://www.researchgate.net/profile/Junbum_Kwon/publication/292150734/figure/fig1/AS:613877314232320@1523371165349/Block-diagram-for-Full-scale-back-to-back-BtB-converter-a-Structure-of-wind-turbine.png" alt="Drawing" style="width: 600px;"/>
+
+
+---
+## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
