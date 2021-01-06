@@ -57,22 +57,35 @@ Reading: [How New York City Gets Its Electricity](https://www.nytimes.com/intera
 
 ---
 
-### We now have the power semiconductors:
+### But now we have the power semiconductors:
 
-https://www.mitsubishielectric.com/sites/GWS/en/about/businesses/power_devices/images/bg_pagetitle.jpg
+<img src="https://www.mitsubishielectric.com/sites/GWS/en/about/businesses/power_devices/images/bg_pagetitle.jpg" alt="Drawing" style="width: 700px;"/>
 
-https://www.researchgate.net/publication/333119779/figure/fig1/AS:759010919710722@1557973713546/Possible-applications-of-GaN-power-devices-as-a-function-of-the-voltage-The-range-of.jpg
+- #### Diodes
+- #### MOSFETs
+- #### IGBTs
+- #### Thyristors
+- #### SiC, GaN Transistors etc.
 
-https://www.appliedmaterials.com/sites/all/themes/appliedmaterials_bootstrap/images/journals/internet-era/advanced-power-switching.jpg
+---
 
-https://upload.wikimedia.org/wikipedia/commons/b/b5/IGBT_3300V_1200A_Mitsubishi.jpg
+### Frequency vs Power Ratings of Power Semiconductors
+
+<img src="https://www.appliedmaterials.com/sites/all/themes/appliedmaterials_bootstrap/images/journals/internet-era/advanced-power-switching.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+### Typical Power Transistors
+
+
+<img src="https://www.mouser.com.tr/images/marketingid/2017/img/197493898_IXYS_PowerMOSFETs.png" alt="Drawing" style="width: 380px;"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/IGBT_3300V_1200A_Mitsubishi.jpg" alt="Drawing" style="width: 350px;"/>
+
+#### From tiny MOSFET packages to several kA IGBT Modules
 
 
 ---
-# Introduction to Power Processing
---
 
-## Fundamental Block Diagram
+## Fundamental Block Diagram of Power Converters
 
 <img src="./images/ee463/power_processing.png" alt="Drawing" style="width: 600px;"/>
 
@@ -108,51 +121,18 @@ https://upload.wikimedia.org/wikipedia/commons/b/b5/IGBT_3300V_1200A_Mitsubishi.
 # Control is almost always needed
 --
 
-## - Output Voltage Regulation
---
-
-## - Overload Protection
---
-
-## - Power Quality
---
-
-## - Frequency Fixing (i.e. grid connected inverters)
-
-## ...
----
-# Control is almost always needed
---
-
 <img src="./images/ee463/power_processing_control.png" alt="Drawing" style="width: 600px;"/>
 
----
-# Classification wrt Switching Characteristics
---
-
-## - Line frequency (naturally commutated) converters
---
-
-## (e.g. diode rectifiers)
---
-
-## - Switching (forced-commutated) converters
---
-
-## (e.g. switched mode power supplies)
-
---
-
-##  -Resonant converters (zero voltage or zero current switching)
+#### For voltage regulation, overload protection, power quality, grid synchronization etc. 
 
 ---
 # Basic Building Blocks
 --
 
-## - AC/DC Converters (aka Rectifiers)
+## - AC/DC Converters (Rectifiers)
 --
 
-## - DC/AC Converters (aka Inverters)
+## - DC/AC Converters (Inverters)
 --
 
 ## - DC/DC Converters (e.g. SMPS)
@@ -161,6 +141,98 @@ https://upload.wikimedia.org/wikipedia/commons/b/b5/IGBT_3300V_1200A_Mitsubishi.
 ## - AC/AC Converter (e.g. Cycloconverter)
 
 
+---
+#Grid Connected PV System
+
+<img src="http://www.sunwindenergy.com/sites/default/files/field/image/pv_1_mw_india.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+# V-I Characteristics of a Photo-voltaic Cell
+
+<img src="https://www.powersystemsdesign.com/images/articles/1384947035figure3.jpg" alt="Drawing" style="width: 700px;"/>
+
+### PV cell should be continuously operated at the maximum power point (MPP) for highest energy output.
+---
+#Grid Connected PV System
+
+<img src="https://media.digikey.com/photos/rdl/STEVAL_ISV003V1_Block_Diagram_Schematic_Full.jpg" alt="Drawing" style="width: 800px;"/>
+
+---
+
+#Wind Turbine
+
+<img src="https://www.nrel.gov/news/features/images/20110429_wind_pix18890_large.jpg" alt="Drawing" style="width: 600px;"/>
+
+### AC output of the wind turbine generator cannot be directly connected to the grid, as its voltage and frequency changes with wind speed.
+
+---
+
+#Wind Turbine
+
+## Back-to-back Converter ( AC/DC + DC/AC)
+
+<img src="./images/ee361/wind_turbine_power.png" alt="Drawing" style="width: 600px;"/>
+
+---
+
+#Wind Turbine
+
+## Back-to-back Converter ( AC/DC + DC/AC)
+
+<img src="https://www.researchgate.net/profile/Junbum_Kwon/publication/292150734/figure/fig1/AS:613877314232320@1523371165349/Block-diagram-for-Full-scale-back-to-back-BtB-converter-a-Structure-of-wind-turbine.png" alt="Drawing" style="width: 600px;"/>
+
+---
+
+# Power Electronics in a Laptop
+
+### Can you plot the main power blocks?
+
+<img src="https://www.howtogeek.com/wp-content/uploads/2019/02/img_5c7776adcbc5a.png" alt="Drawing" style="width: 700px;"/>
+
+---
+# Main Blocks (and other PE components)
+
+<img src="./images/ee463/laptop_charger.png" alt="Drawing" style="width: 750px;"/>
+
+---
+# Inside a Laptop Charger 
+
+<img src="http://static.righto.com/images/magsafe/components1-w750.png" alt="Drawing" style="width: 550px;"/>
+
+---
+# Inside a Laptop Charger 
+
+#### Think twice when you are buying the cheapest product
+
+<img src="http://static.righto.com/images/magsafe/top_comparison.jpg" alt="Drawing" style="width: 700px;"/>
+
+
+[Original vs. Cheap Laptop Charger](http://www.righto.com/2015/11/macbook-charger-teardown-surprising.html)
+[Original vs. Cheap Phone Charger](http://www.righto.com/2012/05/apple-iphone-charger-teardown-quality.html)
+
+
+---
+#Power Electronics in an Electric Car
+
+<img src="https://inhabitat.com/wp-content/blogs.dir/1/files/2016/10/Tesla-Model-S.jpg" alt="Drawing" style="width: 700px;"/>
+
+---
+#Power Electronics in an Electric Car
+
+<img src="https://i0.wp.com/semiengineering.com/wp-content/uploads/2019/04/BEV2.png" alt="Drawing" style="width: 700px;"/>
+
+- #### Battery Charge Controllers (DC/DC)
+- #### Motor Inverter (DC/AC, variable voltage and frequency)
+- #### AC Chargers (AC/DC Rectifier)
+
+---
+#Power Electronics in an Electric Car
+
+<img src="https://www.allegromicro.com/-/media/images/design/hall-effect-current-sensing-in-hybrid-electric-vehicle-hev-applications/fig1.ashx" alt="Drawing" style="width: 600px;"/>
+
+- #### Battery Charge Controllers (DC/DC)
+- #### Motor Inverter (DC/AC, variable voltage and frequency)
+- #### AC Chargers (AC/DC Rectifier)
 
 
 ---
@@ -269,35 +341,6 @@ https://upload.wikimedia.org/wikipedia/commons/b/b5/IGBT_3300V_1200A_Mitsubishi.
 #Power Electronics in an Electric Car
 
 <img src="./images/ee463/electric_car.png" alt="Drawing" style="width: 750px;"/>
-
----
-#Grid Connected PV System
-
-<img src="http://www.sunwindenergy.com/sites/default/files/field/image/pv_1_mw_india.jpg" alt="Drawing" style="width: 700px;"/>
-
----
-#Grid Connected PV System
-
-<img src="https://www.researchgate.net/profile/Abd_Mansour/publication/279189144/figure/fig1/AS:397530228641794@1471790000377/Block-diagram-of-the-PV-system-connected-to-the-grid.png" alt="Drawing" style="width: 800px;"/>
-
----
-
-#Wind Turbine
-
-<img src="https://www.nrel.gov/news/features/images/20110429_wind_pix18890_large.jpg" alt="Drawing" style="width: 800px;"/>
-
----
-
-#Wind Turbine
-
-## Back-to-back Converter
-
-<img src="https://www.researchgate.net/profile/Zhe_Chen23/publication/224115715/figure/fig1/AS:302780859338754@1449199990091/Block-diagram-of-a-grid-connected-wind-turbine-with-a-PMSG-and-a-full-scale-converter.png" alt="Drawing" style="width: 800px;"/>
----
-
-## Back-to-back Converter
-
-<img src="https://www.researchgate.net/profile/Junbum_Kwon/publication/292150734/figure/fig1/AS:613877314232320@1523371165349/Block-diagram-for-Full-scale-back-to-back-BtB-converter-a-Structure-of-wind-turbine.png" alt="Drawing" style="width: 600px;"/>
 
 
 ---
