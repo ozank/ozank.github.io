@@ -27,7 +27,6 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 * [The Math Trick Behind MP3s, JPEGs](http://nautil.us/blog/the-math-trick-behind-mp3s-jpegs-and-homer-simpsons-face)
 * [Discrete Cosine Transformations](http://www.datagenetics.com/blog/november32012/index.html)
 * [Fourier Image Filtering](http://david.li/filtering/)
-* [An Intuitive Explanation of Fourier Theory](http://cns-alumni.bu.edu/~slehar/fourier/fourier.html)
 * [Graphical Algebra and Fourier Analysis](https://acko.net/files/gltalks/toolsforthought)
 * [But what is the Fourier Transform? A visual introduction.](https://www.youtube.com/watch?v=spUNpyF58BY)
 
