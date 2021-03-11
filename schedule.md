@@ -4,12 +4,19 @@ title: My Weekly Schedule
 permalink: /schedule/index.html
 ---
 
+It makes things easier, if you can check my availability for a meeting. You can also use [this calendar file](https://www.google.com/calendar/ical/ozan%40keysan.me/public/basic.ics) to embed my programme into your calendar app.
 
-Before contacting me for an appointment, please check my schedule. You can use [this ical](https://www.google.com/calendar/ical/ozan%40keysan.me/public/basic.ics) file to embed my schedule in your calendar app.
+
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FIstanbul&amp;src=b3phbkBrZXlzYW4ubWU&amp;color=%230083c6&amp;showTitle=0&amp;showDate=1&amp;showPrint=0&amp;mode=WEEK&amp;hl=en_GB&amp;showTabs=1&amp;showCalendars=0" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+
+##Deneme
+
+
 
 <div class="responsive-iframe-container">
 
-<iframe src="https://www.google.com/calendar/embed?src=ozan%40keysan.me&showTitle=0&showPrint=0&mode=WEEK&wkst=2&hl=en_GB&bgcolor=%23FFFFFF&ctz=Asia/Baghdad" style=" border-width:0 " width="800" height="400" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FIstanbul&amp;src=b3phbkBrZXlzYW4ubWU&amp;color=%230083c6&amp;showTitle=0&amp;showDate=1&amp;showPrint=0&amp;mode=WEEK&amp;hl=en_GB&amp;showTabs=1&amp;showCalendars=0" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
 </div>
 

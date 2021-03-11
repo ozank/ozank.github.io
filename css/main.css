@@ -368,7 +368,7 @@ http://brightcoconut.com/how-to-embed-a-google-calendar-in-week-view/
 */
 .responsive-iframe-container {
 position: relative;
-padding-bottom: 120%;
+padding-bottom: 100%;
 padding-top: 30px;
 height: 0;
 overflow: auto;
