@@ -111,7 +111,7 @@ Minimum EMI Problems
 ---
 # Flyback Converter
 
-<img src="http://www.ti.com/diagrams/pmp7279_pmp7279_reva_photo.JPG" alt="Drawing" style="width:600px;">
+<img src="./images/ee464/flyback_photo.png" alt="Drawing" style="width: 700px;">
 
 ---
 # Flyback Converter Evolution
@@ -151,7 +151,17 @@ Minimum EMI Problems
 ## Ideal Transformer
 --
 
-<img src="https://raw.githubusercontent.com/ozank/ee361/master/images/Transformer_symbol.png" alt="Drawing" style="width: 400px;">
+
+<img src="./images/ee464/transformer_symbol.png" alt="Drawing" style="width: 500px;">
+
+
+---
+# Back to EE361
+
+## Ideal Transformer
+
+<img src="./images/ee464/transformer_core.png" alt="Drawing" style="width: 800px;">
+
 ---
 # Back to EE361
 --
@@ -159,58 +169,71 @@ Minimum EMI Problems
 ## Realistic Transformer Equivalent Circuit
 --
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Transformer_equivalent_circuit-2.svg/786px-Transformer_equivalent_circuit-2.svg.png" alt="Drawing" style="width: 800px;">
+<img src="./images/ee464/transformer_full.png" alt="Drawing" style="width: 800px;">
 
 ---
 # Flyback Converter
 
-## Let's ignore resistive elements for now
+## Let's ignore resistive parts and leakage flux for now
 
-<img src="./images/ee464/transformer.png" alt="Drawing" style="width: 800px;">
---
-
-### And also leakage flux components
+<img src="./images/ee464/transformer_simple.png" alt="Drawing" style="width: 500px;">
 
 
 ---
-# Flyback Converter with Isolation
+# Flyback Converter with Transformer
+
+<img src="./images/ee464/flyback_schematic.png" alt="Drawing" style="width: 600px;">
+
+---
+# Flyback Converter with Transformer
+
+<img src="./images/ee464/flyback_schematic2.png" alt="Drawing" style="width: 600px;">
+
+
 
 ## Can you plot the operating modes?
 ---
 
-# Flyback Converter with Isolation
+# Flyback Converter
 
 ## Switch ON
---
+
 
 <img src="./images/ee464/flyback_on.png" alt="Drawing" style="width: 600px;">
 
 ---
 
-# Flyback Converter with Isolation
+# Flyback Converter
 
 ## Switch OFF
---
+
 
 <img src="./images/ee464/flyback_off.png" alt="Drawing" style="width: 600px;">
 
 ---
 
-# [Flyback Converter](https://www.plexim.com/academy/power-electronics/flyback-conv) with Isolation
+# [Flyback Converter](https://www.plexim.com/academy/power-electronics/flyback-conv)
 
-<img src="./images/ee464/flyback_waveform.png" alt="Drawing" style="width: 700px;">
+<img src="./images/ee464/flyback_waveform1.png" alt="Drawing" style="width: 450px;">
+
 ---
-# Flyback Converter with Isolation
---
 
-## Conversion ratio can be calculated in three diffrent ways:
---
+# [Flyback Converter](https://www.plexim.com/academy/power-electronics/flyback-conv)
+
+<img src="./images/ee464/flyback_waveform2.png" alt="Drawing" style="width: 500px;">
+
+
+---
+# Flyback Converter
+
+### Conversion ratio can be calculated in three different ways:
+
 
 - ### Magnetic Circuit: Transformer Flux
---
+
 
 - ### Steady state current
---
+
 
 - ### Graphically: Voltage-seconds area of the inductor
 --
@@ -235,37 +258,33 @@ Minimum EMI Problems
 \\(=\dfrac{V\_d}{(1-D)}\\)
 
 ---
-# Example
+# Flyback Converter: DCM
 
-## Hart 7.1
-
----
-# Flyback Converter
+<img src="./images/ee464/flyback_dcm.png" alt="Drawing" style="width: 600px;">
 
 
-<img src="./images/ee464/flyback.png" alt="Drawing" style="width: 600px;">
-
-## Derived from buck-boost converter
 
 ---
-# Flyback Converter with Isolation
-
-<img src="./images/ee464/flyback_isolated.png" alt="Drawing" style="width: 600px;">
-
----
-# Reading List
+# Reading Materials
 
 - ## [The Flyback Converter](http://ecee.colorado.edu/ecen4517/materials/flyback.pdf)
 
 - ## [Flyback transformer tutorial: function and design](https://www.eetimes.com/document.asp?doc_id=1273089)
 
 - ## [Flyback Converter Video](https://training.ti.com/understanding-basics-flyback-converter)
+
+- ## [Designing a DCM flyback converter](https://www.edn.com/power-tips-98-designing-a-dcm-flyback-converter/)
+
+- ## [Flyback DCM vs CCM](https://www.icbanq.com/icbank_data/online_seminar_image/Flyback_CCMVsDCM_Rev1p2.pdf)
 ---
 # Flyback Variations: Two Transistor Flyback
 --
 
-<img src="./images/ee464/two_transistor_flyback.png" alt="Drawing" style="width: 500px;">
+<img src="./images/ee464/two_transistor_flyback.png" alt="Drawing" style="width: 400px;">
 
+- #### [Improving the Performance of Traditional Flyback with Two Switch Approach](https://www.ti.com/lit/an/snva716/snva716.pdf)
+
+- #### [Operation & Benefits of Two-Switch Forward/Flyback Power Converter Topologies](https://www.embedded.com/operation-benefits-of-two-switch-forward-flyback-power-converter-topologies/)
 ---
 # Flyback Variations: Paralled Flyback
 --
