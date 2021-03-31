@@ -6,6 +6,10 @@ permalink: /presentations/index.html
 
 ## Recent Presentations
 
+### 2021
+
+*  METU MD, [METU Smart Campus Project](https://docs.google.com/presentation/d/1OEkNbn1mxMzou9HlbH5p4qnob2lQao2o_FOfb_MO7Us/edit?usp=sharing)
+
 ### 2020
 
 *  METU, [Practical Aspects of DC Motor and Drives](https://docs.google.com/presentation/d/1EzyPd8Qh5vBEE6jV1-jwYlAD8uHuZzgEV-4U1exYHqI/edit?usp=sharing)
