@@ -295,30 +295,27 @@ Minimum EMI Problems
 --
 
 ## Derived from the Buck Converter
---
 
 <img src="./images/ee464/forward_converter.png" alt="Drawing" style="width: 700px;">
 ---
 # Forward Converter
---
+## Let's obtain the output voltage characteristics
 
+<!--
 ## Can you obtain the output voltage characteristics?
---
 
 # Quiz -Q1
---
-
 # Quiz -Q2
 
 ## Choose a duty cycle and turns ratio, to get 12V DC from a 200V DC input.
 
-
+-->
 
 ---
 
 # Forward Converter
 
---
+
 ## A buck converter with added turns ratio
 
 # \\(\dfrac{V_o}{V_d} =\dfrac{N_2}{N_1} D \\)
@@ -328,7 +325,7 @@ Minimum EMI Problems
 
 <img src="./images/ee464/forward_converter.png" alt="Drawing" style="width: 700px;">
 
-## What happens at the instant switch is off, if the transformer is not ideal?
+## What happens at the instant when the switch is turned-off, if the transformer is not ideal?
 
 ---
 # Forward Converter
@@ -352,9 +349,9 @@ Minimum EMI Problems
 ## Cheap but inefficient
 
 ---
-# Flyback Snubber
+# RCD Snubber
 
-### Note a similar circuit can be applied for Flyback converter (to reduce inductance leakage ringing)
+### Note a similar circuit can be used for the Flyback converter (to reduce inductance leakage ringing)
 --
 
 <img src="./images/ee464/flyback_rcd.png" alt="Drawing" style="width: 450px;">
@@ -367,7 +364,7 @@ Minimum EMI Problems
 <img src="./images/ee464/practical_forward.png" alt="Drawing" style="width: 800px;">
 
 ## A transformer with two-primary windings
-
+### Third winding is added to discharge the energy stored in Lm
 ---
 
 # Practical Forward Converter
@@ -375,40 +372,49 @@ Minimum EMI Problems
 <img src="./images/ee464/practical_forward_Lm.png" alt="Drawing" style="width: 800px;">
 
 ## A transformer with two-primary windings
+### Third winding is added to discharge the energy store
+
 ---
 
-# Practical Forward Converter
+# Forward Converter
 
-## Switch is ON
+<img src="./images/ee464/forward1.png" alt="Drawing" style="width: 800px;">
 
-### L is charged by input current
-
-### Same with the ideal case:
-
-- ### D1 On 
-- ### D2 Off
-- ### D3 Off 
 ---
 
-# Practical Forward Converter
+## Forward Converter: Switch is ON
 
-## Switch is OFF
+<img src="./images/ee464/forward2.png" alt="Drawing" style="width: 700px;">
 
-### L discharges (feeds the load)
---
+### Lm is charged by input voltage, Lx is also charging
+### D1 On, D2 Off, D3 Off 
 
-### Lm is discharged to the source
+---
 
-### \\(i_1 = - i_m \\)
---
+## Forward Converter: Switch is OFF
+
+<img src="./images/ee464/forward3.png" alt="Drawing" style="width: 600px;">
+
+### Lx feeds the load, Lm is discharged to the source: \\(i\_{1} = - i\_{Lm} \\)
 
 ### KCL: \\(N_1 i_1 = N_2 i_2 - N_3 i_3\\)
 
 ### For proper operation the transformer should be "reset" before next ON period
 ---
-# Practical Forward Converter
+## Forward Converter: Switch is OFF
 
-<img src="./images/ee464/forward_waveform.png" alt="Drawing" style="width: 600px;">
+---
+
+## Forward Converter
+
+<img src="./images/ee464/forward_current.png" alt="Drawing" style="width: 500px;">
+
+---
+
+## Forward Converter
+
+<img src="./images/ee464/forward_current2.png" alt="Drawing" style="width: 500px;">
+
 
 ---
 # Practical Forward Converter
@@ -429,37 +435,31 @@ Minimum EMI Problems
 
 #### In the figure Dmax=0.5
 
-### Saturation, increased core losses, reduced Lm
+### Saturation, increased core losses, reduced Lm, problem in power transfer
 
 ---
 # Advantages over Flyback
---
+
 
 - ## Better utilization of transformer (direct power transfer, higher)
---
+
 
 - ## A gapless core can be used (higher Lm, less ripple)
---
+
 
 - ## Output inductor and diode ensures continuous output current
 
 ---
 # Drawbacks compared to Flyback
---
+
 
 - ## Increased cost (extra diode and inductor)
---
+
 
 - ## Gain changes a lot in DCM
---
+
 
 - ## Higher voltage requirement for MOSFET
-
----
-# Example:
-
-## Hart - Power Electronics 
-## Ex. 7-4
 
 ---
 # Forward Converter Alternatives
@@ -473,37 +473,32 @@ Minimum EMI Problems
 # Forward Converter Alternatives
 
 ## Two-switch forward converter
---
+
 
 <img src="./images/ee464/forward_two_switch2.jpg" alt="Drawing" style="width: 800px;">
 
 ---
-## Two-switch forward converter
+# Two-switch forward converter
 
 ## Advantages:
---
 
- ## Does not require a snubber circuit
---
 
-## Less voltage stress on MOSFETs
---
+- ### Does not require a snubber circuit
 
-## Can supply multiple isolated outputs
---
+- ### Less voltage stress on MOSFETs
 
-## Low power losses and noise
+- ### Can supply multiple isolated outputs
+
+- ### Low power losses and noise
 ---
 
 ## Two-switch forward converter
 
 ## Disadvantages:
---
 
-## Slightly more expensive
---
+- ### Slightly more expensive
 
-## Larger component count
+- ### Larger component count
 ---
 
 ##  Interleaved forward converter
@@ -516,6 +511,13 @@ Minimum EMI Problems
 - ## [Infineon, Forward Converter Design Note](http://www.digikey.com/web%20export/supplier%20content/Infineon_448/mkt/coolMOS/SingleXTRForward.pdf?redirected=1)
 
 - ## [Fairchild Forward Converter Application Note](https://www.onsemi.com/pub/Collateral/AN-4134.PDF)
+
+---
+# Example:
+
+## Hart - Power Electronics 
+## Ex. 7-4
+
 
 ---
 # Push-Pull Converter
