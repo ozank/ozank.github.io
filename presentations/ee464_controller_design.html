@@ -35,7 +35,7 @@ class: center, middle
 # Control in Power Electronics
 
 ## Control of a Wind Turbine
---
+
 
 <img src="./images/ee464/wind_turbine_control_1.png" alt="Drawing" style="width: 700px;">
 
@@ -49,16 +49,13 @@ class: center, middle
 ---
 
 # Control in Power Electronics
---
+
 
 ## Most DC/DC converters controlled by analog controllers:
---
 
 - ### Micro-controllers are not fast enough (both for computing and sampling) at high switching frequencies
---
 
 - ### Cheap (just an IC and a few passive elements)
---
 
 - ### Could be integrated to with drive circuit ([LM1771](http://www.ti.com/product/LM1771/datasheet/abstract#snvs44619))
 
@@ -76,34 +73,24 @@ class: center, middle
 ## Control with an error amplifier
 ---
 ## Buck Converter Controller
---
+
 
 <img src="./images/ee464/buck_controller.png" alt="Drawing" style="width: 800px;">
 ---
 ## Buck Converter Controller
---
+
 
 <img src="./images/ee464/buck_control_blocks.png" alt="Drawing" style="width: 800px;">
 ---
 # Control Loop Stability
-## Don't worry, will be revisited!
---
 
-- ## Small steady-state error
---
- (i.e. gain at low frequencies should be large)
 
---
+- ## Small steady-state error (i.e. gain at low frequencies should be large)
 
-- ## No resonance
---
- (i.e. gain at switching frequency should be small)
+- ## No resonance: (i.e. gain at switching frequency should be small)
 
---
+- ## Enough [phase-margin](https://www.youtube.com/watch?v=ThoA4amCAX4): ( usually at least 45 degree phase margin is aimed for stability)
 
-- ## Enough [phase-margin](https://www.youtube.com/watch?v=ThoA4amCAX4)
---
-( usually at least 45 degree phase margin is aimed for stability)
 ---
 
 # Phase Margin
@@ -176,7 +163,7 @@ class: center, middle
 ## Let's derive the small signal model for voltage
 --
 
-### \\(v_x = V_s d \\)
+### \\(v_x = v_s d \\)
 --
  \\( = (V_s + \tilde{v}_s ) (D + \tilde{d} ) \\)
 --
@@ -187,7 +174,7 @@ class: center, middle
 ## ignoring the last term
 --
 
-### \\(v_x \approx V_s D + \tilde{v}_s D + V_s \tilde{d}\\)
+### \\(v_x \approx V_s D + \tilde{v}_s D + V_s \tilde{d} = v_s D + V_s \tilde{d} \\)
 
 ---
 # Small Signal Analysis for the Buck Converter
@@ -199,26 +186,31 @@ class: center, middle
 ### \\(\approx i_L D + I_L \tilde{d}\\)
 ---
 
-# Buck Converter Small Signal Model
---
+## Exercise Assignment:
+
+### Power Electronics, Hart, Section 7.13
+###  Buck Converter Small Signal Model
+
+<!--
 
 <img src="./images/ee464/buck_small_signal.png" alt="Drawing" style="width: 700px;">
+-->
 
 ---
 # Transfer Functions
---
+
 
 ## RC Filter
---
+
 
 <img src="https://www.mathworks.com/help/examples/analogdevicesadalm1000_product/win64/RCCircuit.png" alt="Drawing" style="width: 800px;">
 
 ---
 # Transfer Functions
---
+
 
 ## RC Filter [Bode Plot](http://www.onmyphd.com/?p=bode.plot)
---
+
 
 <img src="https://i.stack.imgur.com/ukOfZ.png" alt="Drawing" style="width: 600px;">
 
@@ -227,7 +219,7 @@ class: center, middle
 ## Transfer Functions
 
 ## Let's do for the LCR part of the converter
---
+
 
 <img src="./images/ee464/buck_filter_s_domain.png" alt="Drawing" style="width: 450px;">
 
@@ -237,53 +229,49 @@ class: center, middle
 ## Transfer Functions
 
 ## Let's do for the LCR part of the converter
---
+
 
 
 ### \\(\dfrac{v_o(s)}{v_x(s)}=\dfrac{1}{LC(s^2 +(1/RC)s+1/LC)}\\)
---
+
 
 
 ### \\(v_x(s)= V_s d(s)\\)
---
+
 
 ### Transfer function in terms of d(s)
 
 ### \\(\dfrac{v_o(s)}{d(s)}=\dfrac{V_s}{LC(s^2 +(1/RC)s+1/LC)}\\)
+
 ---
 # Realistic RLC
---
+
 
 ## Non-ideal elements can effect stability
---
+
 
 - ## Resistance of the inductor
---
+
 
 - ## ESR of capacitor (series resistance)
 
 ---
 ## Let's repeat the case with non-ideal capacitor
---
 
 <img src="./images/ee464/nonideal_RLC.png" alt="Drawing" style="width: 500px;">
 
 ## Capacitor with series resistance
 ---
 ## Let's repeat the case with non-ideal capacitor
---
 
-### \\(\dfrac{v_o(s)}{d(s)}=\\)
---
 
-#### \\(\dfrac{V_s}{LC}\dfrac{1 + s r_C R}{s^2(1+r_C/R) +s(1/RC+r_C/L)+1/LC)}\\)
+#### \\(\dfrac{v_o(s)}{d(s)} = \dfrac{V_s}{LC}\dfrac{1 + s r_C R}{s^2(1+r_C/R) +s(1/RC+r_C/L)+1/LC)}\\)
 --
 
 ### Can be simplified by assuming \\(r_C << R\\)
---
+
 
 ### \\(\dfrac{V_s}{LC}\dfrac{1 + s r_C R}{s^2 +s(1/RC+r_C/L)+1/LC)}\\)
---
 
 ### Notice the extra zero introduced by ESR!
 ---
