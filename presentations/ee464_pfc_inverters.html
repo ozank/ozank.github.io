@@ -56,24 +56,18 @@ class: center, middle
 <img src="./images/ee464/inverter_bidirectional.png" alt="Drawing" style="width: 800px;">
 
 ### Back-to-Back Converter, Active Front-End Converter, Variable Frequency Drive (VFD)
----
+<!--
 # Operating Quadrants
 
 <img src="./images/ee464/inverter_mode.png" alt="Drawing" style="width: 500px;">
 
-	
 
----
 # Operating Quadrants
 
 <img src="./images/ee464/inverter_mode2.png" alt="Drawing" style="width: 600px;">
 
 
-???
-### sunum notlari
-
-\\(x^2\\)
----
+-->
 
 # One Leg Inverter
 --
@@ -87,26 +81,22 @@ class: center, middle
 --
 
 ## Sinusoidal PWM (SPWM)
---
 
 - ## The most common type
---
 
-- ## Many other PWM Techniques (wait 2 weeks)
+- ## There are many different PWM techniques (wait 2 weeks)
 
 ---
 
-# Sinusiodal PWM
---
+# Sinusoidal PWM (SPWM)
 
 ### Compare a sinusoidal wave with a carrier triangular wave
---
 
 <img src="./images/ee464/svpwm1.png" alt="Drawing" style="width: 600px;">
 ---
 
 
-# Sinusiodal PWM
+# Sinusoidal PWM
 --
 
 
@@ -116,17 +106,17 @@ class: center, middle
 ---
 
 
-# Sinusiodal PWM
+# Sinusoidal PWM
 --
 
 
 
 <img src="./images/ee464/analog_svpwm.png" alt="Drawing" style="width: 700px;">
-### Analog generation of svpwm
+### Analog generation of SPWM
 
 ---
 # PWM in one leg inverter
---
+
 
 <img src="./images/ee464/svpwm_one_leg.png" alt="Drawing" style="width: 650px;">
 
@@ -238,23 +228,19 @@ class: center, middle
 ---
 # PWM Harmonics
 
-## Advantageous to choose \\(m_f\\) as odd integer:
+## Advantages of choosing \\(m_f\\) as odd integer:
 
---
 
 - ### Results in odd symmetry (\\(f(-t)=-f(t)\\))
---
 
 - ### Results in half-wave symmetry (\\(f(t)=-f(t+T/2)\\))
---
 
 - ### No even harmonics are present
---
 
 - ### Only sine components exist (no cosine harmonics component)
 
 ---
-## Overmodulation in SPWM
+## Over-modulation in SPWM
 --
 
 ### Control signals gets bigger than the triangle waveform
@@ -262,7 +248,7 @@ class: center, middle
 <img src="./images/ee464/overmodulation.png" alt="Drawing" style="width: 400px;">
 
 ---
-## Overmodulation in SPWM
+## Over-modulation in SPWM
 
 ### Possible to create higher magnitude, but induce harmonics of \\(f_1\\)
 --
@@ -333,7 +319,7 @@ Square Wave
 ### \\(T\_{A+}\\) and \\(T\_{B-}\\) are turn on and off together
 --
 
-### \\(T\_{A-}\\) and \\(T\_{B+}\\) are complimetary of \\(T\_{A+}\\) and \\(T\_{B-}\\)
+### \\(T\_{A-}\\) and \\(T\_{B+}\\) are complimentary of \\(T\_{A+}\\) and \\(T\_{B-}\\)
 --
 
 ## Can give \\(V\_d\\) or \\(-V\_d\\)
@@ -363,34 +349,30 @@ Square Wave
 ### \\(\hat{V}\_{o1}= m\_a V\_d\\)
 --
 
-## Overmodulation
+## Over-modulation
 
 ### \\(V\_d < \hat{V}\_{o1} <   \dfrac{4}{\pi}  V\_d\\)
 ---
 # Bi-polar PWM
 
-## Harmonics
---
-
-## Same harmonics (as there is just offset in the waveform)
+## Same harmonics
 
 
 <img src="./images/ee464/pwm_linear_harmonics.png" alt="Drawing" style="width: 800px;">
 
----
+<!--
 # Source Side Current
---
 
 <img src="./images/ee464/inverter_filter.png" alt="Drawing" style="width: 800px;">
----
+
 
 # Source Side Current
 
 ## Has DC and AC (with \\(2f_1\\)) component.
---
+
 
 <img src="./images/ee464/bipolar_source_current.png" alt="Drawing" style="width: 600px;">
-
+-->
 
 ---
 # Unipolar PWM
@@ -442,21 +424,21 @@ Square Wave
  <img src="./images/ee464/unipolar_pwm_harmonics.png" alt="Drawing" style="width: 800px;">
 ---
 ## Harmonics Comparison
---
+
 
 ### Bipolar PWM
 
  <img src="./images/ee464/bipolar_harmonics2.png" alt="Drawing" style="width: 800px;">
---
+
 
 ### Unipolar PWM
  <img src="./images/ee464/unipolar_harmonics2.png" alt="Drawing" style="width: 800px;">
 
----
+<!--
 # Unipolar PWM DC Side Current
 
  <img src="./images/ee464/unipolar_dc_current.png" alt="Drawing" style="width: 800px;">
-
+-->
 ---
 # Inverter Connected to R-L Load
 --
@@ -465,26 +447,20 @@ Square Wave
 
 ---
 # Inverter Connected to R-L Load
---
 
  <img src="./images/ee464/inverter_RL_bipolar.png" alt="Drawing" style="width: 750px;">
 
-
 ---
 # Inverter Connected to R-L Load
---
+
 
  <img src="./images/ee464/inverter_RL_bipolar2.png" alt="Drawing" style="width: 750px;">
 
-
 ---
 # Inverter Connected to R-L Load
---
+
 
  <img src="./images/ee464/inverter_RL_unipolar.png" alt="Drawing" style="width: 750px;">
-
----
-
 
 ---
 ## Sinusoidal Generation by Voltage Shift
@@ -519,11 +495,9 @@ Square Wave
 --
 
 <img src="./images/ee464/square_off_harmonics.png" alt="Drawing" style="width: 650px;">
---
 
-### For curious students: SHE:
---
- [Selective Harmonic Elimination](https://pdfs.semanticscholar.org/7f9a/8313ba8b0988e9e6657cf1e4d21878e0abe2.pdf)
+
+### For curious students: SHE: [Selective Harmonic Elimination](https://pdfs.semanticscholar.org/7f9a/8313ba8b0988e9e6657cf1e4d21878e0abe2.pdf)
 
 ---
 # Example:
