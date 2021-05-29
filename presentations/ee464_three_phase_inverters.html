@@ -23,7 +23,7 @@ class: center, middle
 
 # EE-464 STATIC POWER CONVERSION-II
 
-# Inverters Cont.
+# Three Phase Inverters
 
 ## Ozan Keysan
 
@@ -35,7 +35,7 @@ class: center, middle
 ---
 
 # Three Phase Inverters
---
+
 
 <img src="https://megaresistors.com/wp-content/uploads/2018/10/abb_vfd_family.png" alt="Drawing" style="width: 600px;">
 
@@ -44,12 +44,12 @@ class: center, middle
 ---
 
 # Three Phase Inverters
---
+
 
 <img src="http://in.element14.com/productimages/large/en_GB/42270890.jpg" alt="Drawing" style="width:800px;">
 ---
 
-# Three Phase Voltage-Source Inverter
+# Three Phase Voltage-Source Inverters
 --
 
 <img src="./images/ee464/three_phase_inverter.png" alt="Drawing" style="width: 750px;">
@@ -73,25 +73,25 @@ class: center, middle
 --
 
 ### There are many different PWM techniques that will be covered:
---
+
 
 - ## Square-wave (Six-step) PWM
---
+
 
 - ## Sinusoidal PWM (SPWM)
---
+
 
 - ## Hysteresis (Bang-Bang) Control
---
+
 
 - ## Space-Vector PWM (SVPWM)
---
+
 
 - ## Third harmonic injection
 ---
 
 # Six-Step Inverter
---
+
 
 ### Commonly used in BLDC motor Drives
 
@@ -100,7 +100,7 @@ class: center, middle
 ---
 
 # Six-Step Inverter
---
+
 
 ### Commonly used in BLDC motor Drives
 
@@ -108,24 +108,24 @@ class: center, middle
 
 ---
 # Six-Step Inverter
---
+
 
 - ### Each switch has 50% duty ratio.
---
+
 
 - ### Each leg has a phase difference of 120 degrees
---
+
 
 - ### One switching action takes place at every 60 degrees
 
 ---
 # Six-Step Inverter
---
+
 
 <img src="./images/ee464/six_step.png" alt="Drawing" style="width: 800px;">
 ---
 # Six-Step Inverter
---
+
 
 <img src="./images/ee464/six_step_switches.png" alt="Drawing" style="width: 750px;">
 ---
@@ -133,14 +133,14 @@ class: center, middle
 # Six-Step Inverter
 
 ## Line-to-line voltage: \\(V\_{AB}=V\_{A0}-V\_{B0}\\)
---
+
 
 
 <img src="./images/ee464/six_step_vab.png" alt="Drawing" style="width: 750px;">
 ---
 
 ## Line-to-line voltages:
---
+
 
 
 <img src="./images/ee464/six_step_line_voltages.png" alt="Drawing" style="width: 600px;">
@@ -155,20 +155,36 @@ class: center, middle
 
 
 ### [BLDC Drive with square wave](https://www.youtube.com/watch?v=IiY01xIKg28)
+---
+
+## Switching Sequence
+
+<img src="./images/ee464/six_step_switches.png" alt="Drawing" style="width: 700px;">
+
+---
+
+## Line-to-Line Voltages
+
+<img src="./images/ee464/six_step_line_voltages.png" alt="Drawing" style="width: 500px;">
+
+---
+## Equivalent Phase Voltages
+
+<img src="./images/ee464/six_step_phase_voltages.png" alt="Drawing" style="width: 700px;">
+
 
 ---
 
 ## Line-to-Line Harmonics
 
---
 
 ## Fourier Coefficients
 
 ### \\(\hat{V}\_{n,l-l} = \dfrac{1}{n}\dfrac{4}{\pi}V\_{dc}cos(n \dfrac{\pi}{6})\\)
---
+
 
 ### For: \\(n = 6k \pm 1 = 1,5,7,11,13...\\)
---
+
 
 - ### No even harmonics
 
@@ -177,21 +193,18 @@ class: center, middle
 
 ## Line-to-Line Harmonics
 
---
 
 ## RMS of the fundamental component?
 
-### \\({V}\_{1,l-l,rms} = \dfrac{1}{\sqrt{2}}\dfrac{4}{\pi}V\_{dc} \dfrac{\sqrt{3}}{2}\\)
---
-\\(=0.78 V\_{dc}\\)
---
+### \\({V}\_{1,l-l,rms} = \dfrac{1}{\sqrt{2}}\dfrac{4}{\pi}V\_{dc} \dfrac{\sqrt{3}}{2}=0.78 V\_{dc}\\)
 
-### Harmonics RMS:
 --
+### Harmonics RMS:
+
 
 ### \\({V}\_{n,l-l,rms} = \dfrac{1}{n} 0.78 V\_{dc}\\)
 
---
+
 
 ### For: \\(n = 6k \pm 1 = 1,5,7,11,13...\\)
 
@@ -206,7 +219,7 @@ class: center, middle
 ## Line-to-Neutral voltages:
 
 ### Neutral point is floating
---
+
 
 <img src="./images/ee464/six_step_phase_voltages.png" alt="Drawing" style="width: 550px;">
 
@@ -216,24 +229,20 @@ class: center, middle
 
 ## Line-to-Neutral Harmonics
 
---
+
 
 ## Fourier Coefficients
 
 ### \\(\hat{V}\_{n,l-N} = \dfrac{1}{n}\dfrac{2}{3\pi}V\_{dc}(2 +cos(\dfrac{\pi n}{3}) - cos(\dfrac{2\pi n}{3}))\\)
---
+
 
 ### For: \\(n = 6k \pm 1 = 1,5,7,11,13...\\)
---
 
 
 ### Simpler Form
 
---
 
 ### \\(\hat{V}\_{n,l-N} = \dfrac{1}{n}\dfrac{2}{\pi}V\_{dc}\\)
-
-
 ---
 
 ## Line-to-Neutral Harmonics
@@ -254,28 +263,8 @@ class: center, middle
 
 <img src="./images/ee464/six_step.png" alt="Drawing" style="width: 500px;">
 
---
+
 ### Calculate the total harmonic distortion (THD) of the load current and voltage.
-
----
-##Example: (D. Hart . 8-12)
-
----
-
-## Switching Sequence
-
-<img src="./images/ee464/six_step_switches.png" alt="Drawing" style="width: 700px;">
-
----
-
-## Line-to-Line Voltages
-
-<img src="./images/ee464/six_step_line_voltages.png" alt="Drawing" style="width: 500px;">
-
----
-## Equivalent Phase Voltages
-
-<img src="./images/ee464/six_step_phase_voltages.png" alt="Drawing" style="width: 700px;">
 
 ---
 ##Example: (D. Hart . 8-12)
