@@ -23,37 +23,35 @@ class: center, middle
 
 # EE-362 ELECTROMECHANICAL ENERGY CONVERSION-II
 
-# Induction Motors
+# Equivalent Circuit of Induction Machines
 
 ## Ozan Keysan
 
-[ozan.keysan.me](http://ozan.keysan.me)
+[keysan.me](http://keysan.me)
 
 Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
----
+<!--
 # Speed of Rotor MMF
 
 ## wrt stationary frame
---
+
 
 ### Speed of rotor currents + Speed of Rotor
---
+
 
 ### \\(s n_s\\)
---
+
 \\(+ n_r\\)
---
+
 \\(= s n_s + (1-s) n_s\\)
---
+
 \\(= n_s\\)
 
 ### Rotor MMF rotates at synchronous speed as seen from the stationary frame.
+-->
 
 ---
-# Equivalent Circuit of Induction Motors
---
-
 ## Assume the rotor is stationary (s=1):
 
 ## Then the frequency of rotor currents: \\(f_r =\\)
@@ -63,15 +61,15 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ## Machine just behaves just like a transformer (secondary short-circuited)
 
-- ### Stator: Primary
-- ### Rotor: Secondary
+- ### Stator winding: Primary winding of the transformer 
+- ### Rotor bars: Secondary winding of the transformer
 
 ---
 # Equivalent Circuit, Rotor Stationary (s=1)
 
 ### Same as a transformer with secondary side short-circuited
 
-<img src="http://www.eng.uwi.tt/depts/elec/staff/alvin/ee20a/AC_IND7.gif" alt="Drawing" style="width: 700px;"/>
+<img src="./images/ee362/induction_locked.png" alt="Drawing" style="width: 500px;"/>
 ---
 
 ## Assume now the rotor starts rotating (with  \\(N_r\\))
@@ -83,23 +81,26 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 - ## Therefore current reduces, 
 --
 
-- ## but not that much as the rotor side impedance (jwL) reduces as well
- 
+- ## but not that much, because the rotor side impedance reduces with reduced rotor current frequency (jwL)
 ---
-<img src="http://www.eng.uwi.tt/depts/elec/staff/alvin/ee20a/AC_IND9.gif" alt="Drawing" style="width: 600px;"/>
+## Stator Side Equivalent Circuit
+
+<img src="./images/ee362/induction_stator_circuit.png" alt="Drawing" style="width: 700px;"/>
 
 ---
-# Equivalent Circuit with Rotating Rotor
---
+## Rotor Side Equivalent Circuit
 
-<img src="http://www.eng.uwi.tt/depts/elec/staff/alvin/ee20a/AC_IND10.gif" alt="Drawing" style="width: 800px;"/>
---
+<img src="./images/ee362/induction_rotor_circuit.png" alt="Drawing" style="width: 700px;"/>
 
-## The rotor can be referred to the stator side
+### Rotor side impedances can be modified to transfer these to the stator side
+
+
+For curious students: P.C.Sen, Principles of Electrical Machines and Power Electronics, Section 5.7, Derivation of the equivalent circuit of induction machines
+
 ---
 # Equivalent Circuit with Referred Rotor
 
-<img src="http://www.eng.uwi.tt/depts/elec/staff/alvin/ee20a/AC_IND11.gif" alt="Drawing" style="width: 900px;"/>
+<img src="./images/ee362/induction_equivalent.png" alt="Drawing" style="width: 700px;"/>
 ---
 ## Determination of Equivalent Circuit Parameters
 
@@ -117,32 +118,33 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## Equivalent tests for induction machines:
 
 
-- # Open-circuit Test == No-Load Test
+- # Open-circuit Test = No-Load Test
 
-- # Short-circuit test == Locked Rotor Test
+- # Short-circuit test = Locked Rotor Test
 ---
 # Locked-Rotor Test
 
-## Rotor kept stationary with a mechanical brake
-## \\(n_r = 0 \rightarrow s =\\)
---
-\\(1\\)
+### Rotor kept stationary with a mechanical locking system
+
+## \\(n_r = 0 \rightarrow s = 1\\)
 --
 
 ### Apply a small voltage (10-15% of the rated) to obtain rated current and measure:
---
+
 
 - ### Input Power
 - ### Input Voltage
 - ### Current
+
 ---
 # Locked-Rotor Test
 
-### Neglect the parallel branch and s = 1
+### Neglect the parallel branch and s = 1, the circuit becomes:
 
-<img src="http://myelectrical.com/Portals/0/SunBlogNuke/2/WindowsLiveWriter/InductionMotorEquivalentCircuit_D7EF/Induction%20Motor%20Equivalent%20Circuit%20-%20Simplified_thumb.png" alt="Drawing" style="width: 700px;"/>
 
-### The circuit becomes:
+<img src="./images/ee362/locked_rotor_equivalent.png" alt="Drawing" style="width: 700px;"/>
+
+
 ---
 # Locked-Rotor Test
 
@@ -167,20 +169,20 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ---
 # No-Load Test
 
-### Rotor-side open-circuited (s=0) and neglect the series branch
+### Rotor-side is open-circuited (s=0),  the series branch (R1,X1) can also be neglected:
 
-<img src="http://myelectrical.com/Portals/0/SunBlogNuke/2/WindowsLiveWriter/InductionMotorEquivalentCircuit_D7EF/Induction%20Motor%20Equivalent%20Circuit%20-%20Simplified_thumb.png" alt="Drawing" style="width: 700px;"/>
+<img src="./images/ee362/induction_equivalent.png" alt="Drawing" style="width: 700px;"/>
 ---
-# Locked-Rotor Test
+# No-Load Test
 
 - ### \\(P\_{phase} = \dfrac{P\_{total}}{3} = \dfrac{V_1^2}{R_c} \\), find \\(R_c \\)
 - ### \\(\dfrac{V\_1}{I\_1} = Z\_{eq}= R_c // X_m \\), find \\(X_m \\)
 --
 
-## But, how about mechanical ([friction](https://www.youtube.com/watch?v=1VMyyFrIfg8) and windage) losses?
+## But, how about mechanical friction and windage losses?
 --
 
-### Get a few measurements at different voltages to estimate friction.
+### Get a few measurements at different voltages and speeds to estimate the friction.
 
 ---
 # Example:
