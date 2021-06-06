@@ -23,11 +23,11 @@ class: center, middle
 
 # EE-362 ELECTROMECHANICAL ENERGY CONVERSION-II
 
-# Induction Motor Power Flow
+# Power and Torque in Induction Machines
 
 ## Ozan Keysan
 
-[ozan.keysan.me](http://ozan.keysan.me)
+[keysan.me](http://keysan.me)
 
 Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
@@ -35,42 +35,24 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 # Equivalent Circuit of Induction Motors
 
 <img src="http://myelectrical.com/Portals/0/SunBlogNuke/2/WindowsLiveWriter/InductionMotorEquivalentCircuit_D7EF/Induction%20Motor%20Equivalent%20Circuit%20-%20Form%202_thumb.png" alt="Drawing" style="width: 800px;"/>
---
 
 ## The rotor can be referred to the stator side
 ---
 # Equivalent Circuit with Referred Rotor
 
-<img src="http://myelectrical.com/Portals/0/SunBlogNuke/2/WindowsLiveWriter/InductionMotorEquivalentCircuit_D7EF/Induction%20Motor%20Equivalent%20Circuit%20-%20Simplified_thumb.png" alt="Drawing" style="width: 800px;"/>
----
-## Determination of Equivalent Circuit Parameters
-
-## Equivalent tests for induction machines:
-
-- # Open-circuit Test == No-Load Test
-
-- # Short-circuit test == Locked Rotor Test
----
-## Determination of Equivalent Circuit Parameters
-
 <img src="http://myelectrical.com/Portals/0/SunBlogNuke/2/WindowsLiveWriter/InductionMotorEquivalentCircuit_D7EF/Induction%20Motor%20Equivalent%20Circuit%20-%20Simplified_thumb.png" alt="Drawing" style="width: 700px;"/>
+
 ---
 # Power Flow in Induction Motors
 --
 
-- ## Total Power:
---
-\\(\quad P\_{in}=3V\_{1} I\_{1} cos(\theta)\\)
+- ## Total Power: \\(\quad P\_{in}=3V\_{1} I\_{1} cos(\theta)\\)
 --
 
-- ## Stator Copper Loss:
---
-\\(\quad P\_{cu1}=3 I\_{1}^2 r\_1\\)
+- ## Stator Copper Loss: \\(\quad P\_{cu1}=3 I\_{1}^2 r\_1\\)
 --
 
-- ## Core Loss:
---
-\\(\quad P\_{c}=3 \dfrac{E\_1^2}{R\_c} \approxeq 3 \dfrac{V\_1^2}{R\_c}\\)
+- ## Core Loss: \\(\quad P\_{c}=3 \dfrac{E\_1^2}{R\_c} \approxeq 3 \dfrac{V\_1^2}{R\_c}\\)
 
 ---
 # Power Flow in Induction Motors
@@ -78,9 +60,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## Electrical Power Transferred to Rotor?
 --
 
-- ## Airgap Power:
---
-\\( P\_{ag} = P\_{in}-P\_{cu1}-P\_{c} \\)
+- ## Air-gap Power: \\( P\_{ag} = P\_{in}-P\_{cu1}-P\_{c} \\)
 
 ## or 
 --
@@ -90,17 +70,20 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ---
 # Power Flow in Induction Motors
 
-### What about the power converted to the mechanical power?
+### Not all the air-gap power dissipates as heat, most of it is converted to mechanical power
 --
 
-### The equivalent circuit (\\(\dfrac{r'\_2}{s} \\)) has to be modified!
---
-
-### Seperate it to two components:
+### The equivalent circuit (\\(\dfrac{r'\_2}{s} \\)) can be separated into two components:
 
 ### \\(\dfrac{r'\_2}{s} = r'\_2  + \dfrac{1-s}{s}r'\_2 \\)
 
 ###\\( P\_{ag} = P\_{cu2}+P\_{mech} \\)
+---
+## Rotor Side Equivalent Circuit
+
+<img src="./images/ee362/rotor_side_equivalent.png" alt="Drawing" style="width: 500px;"/>
+
+### (\\(\dfrac{r'\_2}{s}\\)) is separated into two components
 
 ---
 # Equivalent Circuit of Induction Motors
@@ -108,33 +91,22 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 <img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/induction_motor_power_flow.png" alt="Drawing" style="width: 700px;"/>
 
 ---
-# Power Flow in Induction Motors
-
-<img src="http://electrical4u.com/electrical/wp-content/uploads/2013/08/power-flow-diagram-of-motor1.gif" alt="Drawing" style="width: 600px;"/>
-
-
----
 # Mechanical Power
 
 ## Gap Power: \\(\quad P\_{ag} = 3 I\_{2}'^2 \dfrac{r'\_2}{s} \\)
 ## Rotor Copper Loss: \\(\quad P\_{cu2}=3 I\_1^2 r'\_2\\)
---
 
 ## \\( P\_{cu2}\\) can also be expressed in terms of \\( P\_{ag}\\) 
----
-# Mechanical Power
-
-## Gap Power: \\(\quad P\_{ag} = 3 I\_{2}'^2 \dfrac{r'\_2}{s} \\)
-## Rotor Copper Loss: \\(\quad P\_{cu2}=3 I\_1^2 r'\_2\\)
 
 ## \\( P\_{cu2} = s  P\_{ag} \quad  \\) 
 
 ---
 # Mechanical Power
 
-## Gap Power: \\(\quad P\_{ag} = 3 I\_{2}'^2 \dfrac{r'\_2}{s} \\)
-
 ## Gross Mech. Power = Gap Power - Rotor Copper Loss
+--
+
+## Gap Power: \\(\quad P\_{ag} = 3 I\_{2}'^2 \dfrac{r'\_2}{s} \\)
 
 ## \\(P\_{mech} = 3 I\_{2}'^2 \dfrac{(1-s)}{s}r'\_2 \\)
 
@@ -144,23 +116,26 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 # Mechanical Power
 
-## Gross Mechanical Power is the Generated Power
+## Gross mechanical power is the power converted into mechanical form
 
-## Net Power = 
+## Net power is the useful mechanical energy to drive the mechanical load
 --
-Gross Power - Rotational Losses
---
+
+## Net Power = Gross Power - Rotational Losses
 
 ## \\(\quad P\_{net} = P\_{mech} - P\_{rot}\\)
 
 ---
 # Power Flow in Induction Motors
 
-<img src="http://image.slidesharecdn.com/inductionmachines-121207220052-phpapp01/95/induction-machines-33-638.jpg?cb=1354940117" alt="Drawing" style="width: 800px;"/>
+<img src="./images/ee362/induction_motor_power_flow.png" alt="Drawing" style="width: 800px;"/>
 
+
+<!--
+<img src="http://image.slidesharecdn.com/inductionmachines-121207220052-phpapp01/95/induction-machines-33-638.jpg?cb=1354940117" alt="Drawing" style="width: 800px;"/>
+-->
 ---
 # Efficiency
---
 
 # Output Power / Input Power
 --
@@ -179,20 +154,6 @@ Gross Power - Rotational Losses
 
 ---
 ## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
----
-# Tesla Model S
-
-[Tesla Induction Motor Video](https://youtu.be/NaV7V07tEMQ?t=18s)
-
-[Tesla Induction Motor Info](http://my.teslamotors.com/roadster/technology/motor)
-
-
-[Tesla vs BMW M4](https://youtu.be/uki71gN7ahc?t=28s)
-[Tesla vs Lamborghini Super Trofeo](https://youtu.be/r4CnSS4OG4A?t=1m22s)
-
-
-[Tesla Insane Mode](https://youtu.be/LpaLgF1uLB8?t=30s)
-[Tesla Insane Mode- Slow Motion](https://youtu.be/Y8-S7FghyEA?t=27s)
 
     </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
