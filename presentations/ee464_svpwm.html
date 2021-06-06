@@ -43,18 +43,16 @@ class: center, middle
 ---
 
 # Hysteresis (Bang-Bang) PWM
---
 
-## If your current is higher than your reference, reduce the current (switch off), if not increase the current (Switch ON)
+### If your current is higher than your reference, reduce the current (switch off), if not increase the current (Switch ON)
 
-<img src="./images/ee464/hysteresis_pwm.png" alt="Drawing" style="width: 500px;">
+<img src="./images/ee464/hysteresis_pwm.png" alt="Drawing" style="width: 600px;">
 
 ---
 
 # Hysteresis (Bang-Bang) PWM
---
 
-## Change your refeence current to a sinusoidal waveform
+### For an inverter, just change your reference current to a sinusoidal waveform instead of a constant reference.
 
 <img src="./images/ee464/hysteresis_pwm2.png" alt="Drawing" style="width: 500px;">
 
@@ -81,6 +79,178 @@ class: center, middle
 
 <img src="https://www.researchgate.net/profile/Michal_Knapczyk/publication/228659032/figure/fig3/AS:393882949963776@1470920421181/The-idea-and-control-signals-of-Hysteresis-Band-PWM.png" alt="Drawing" style="width: 550px;">
 
+---
+## Field Oriented Control (FOC) in Electrical Machines
+
+<img src="https://www.roboteq.com/images/article-images/how-to/image014.png" alt="Drawing" style="width: 500px;">
+
+- #### [What is FOC?](https://www.youtube.com/watch?v=Nhy6g9wGHow)
+- #### [Field oriented Control of PM Motors](https://www.youtube.com/watch?v=cdiZUszYLiA)
+---
+
+## How to aim to a moving target?
+--
+
+<img src="https://cdn.shopify.com/s/files/1/0264/5540/8674/files/carrot_and_donkey_large.jpg" alt="Drawing" style="width: 600px;">
+
+
+---
+# Some Useful Mathematical Tools
+--
+
+- ## Clarke Transformation
+- ## Park Transformation
+
+
+---
+# [Clarke](https://en.wikipedia.org/wiki/Edith_Clarke) Transformation
+## (a-b-c) to \\(\alpha \beta \\) Transformation
+
+## From three-phase to two orthogonal phase transformation
+--
+
+### Main Idea: In a balanced three-phase system, \\(I_a + I_b + I_c =0\\)  so there is redundant information and system can be reduced to two variables.
+
+---
+##How do you define the resultant (black) phasor?
+
+
+<img src="./images/rotating_mmf_phasor2.gif" alt="Drawing" style="width: 800px;">
+
+---
+# Clarke Transformation
+
+<img src="https://www.keil.com/pack/doc/CMSIS/DSP/html/clarke.gif" alt="Drawing" style="width: 600px;"/>
+
+---
+# Clarke Transformation
+
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/36e05ba56ec15de753eb9f3c60983bc874e31370" alt="Drawing" style="width: 750px;"/>
+
+---
+# Park Transformation
+--
+
+## From stationary frame to rotationary frame
+--
+
+## Instead of dealing with sinusoidal signals, just  use the magnitudes.
+--
+
+## When reconstructing signals use the rotor position information
+
+
+### i.e. [Interstellar - Docking Scene](https://www.youtube.com/watch?v=c4tPQYNpW9k)
+---
+# Park Transformation
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/58664f0f2994ca78b5145f29/1483099927549/?format=750w" alt="Drawing" style="width: 750px;"/>
+
+---
+# Park Transformation
+--
+
+<img src="./images/ee462/park_transform.png" alt="Drawing" style="width: 400px;"/>
+--
+
+## \\(I\_d = I\_\alpha  cos(\theta) + I\_\beta sin (\theta)\\)
+--
+
+## \\(I\_q = I\_\beta  cos(\theta) - I\_\alpha sin (\theta)\\)
+--
+
+
+---
+## Reference Frames
+
+<img src="./images/ee462/reference_frames.png" alt="Drawing" style="width: 750px;"/>
+---
+## Clarke and Park Transformations
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/5866535e414fb5c4d35ed4cb/1483101083243/ClarkePark_Animation?format=500w" alt="Drawing" style="width: 500px;"/>
+---
+# Torque and Flux Control
+
+# Id: Proportional to flux in the air-gap
+
+
+# Iq: Proportional to torque generated
+
+
+---
+# Inverse Transforms
+--
+
+## Required to apply reference voltage and current waveforms (sinusoidals)
+--
+
+- ## Inverse Park Transform
+- ## Inverse Clarke Transform
+
+
+---
+# Inverse Park Transform
+--
+
+## From rotation frame to stationary frame
+--
+
+
+## \\(I\_\alpha = I\_d  cos(\theta) - I\_q sin (\theta)\\)
+--
+
+## \\(I\_\beta = I\_q  cos(\theta) + I\_d sin (\theta)\\)
+
+---
+
+## Inverse Clarke Transform
+
+### From two-axis orthogonal plane to 3-phase stationary frame.
+
+<img src="http://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/171/3750._F764D653_.JPG" alt="Drawing" style="width: 500px;"/>
+
+---
+## Whole Workflow
+
+<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/58c88acd579fb3efb64797c9/1489537751460/?format=1000w" alt="Drawing" style="width: 750px;"/>
+
+<img src="./images/ee464/foc_workflow.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Classical Vector Control Diagram
+
+<img src="http://3l4sbp4ao2771ln0f54chhvm.wpengine.netdna-cdn.com/wp-content/uploads/2016/07/Vector-Block-Diagram.gif" alt="Drawing" style="width: 600px;"/>
+
+---
+# Vector Control in PMSM
+
+<img src="http://www.mdpi.com/sensors/sensors-17-00973/article_deploy/html/images/sensors-17-00973-g007.png" alt="Drawing" style="width: 750px;"/>
+
+---
+# Vector Control in Induction Motors
+
+
+<img src="https://www.mathworks.com/help/physmod/sps/powersys/ug/electric_drives223.gif" alt="Drawing" style="width: 700px;"/>
+---
+# Summary
+
+<img src="./images/ee464/donkey.png" alt="Drawing" style="width: 600px;"/>
+
+---
+
+# Further Reading
+
+### [Vector Control for Dummies](https://www.switchcraft.org/learning/2016/12/16/vector-control-for-dummies)
+
+### [What is Field Oriented Control?](https://www.eetimes.com/document.asp?doc_id=1279321)
+
+### [Field Oriented Control](https://mycourses.aalto.fi/pluginfile.php/155905/mod_resource/content/4/Lecture10.pdf)
+
+### [Field Oriented Control of AC Motors](http://www.ti.com/lit/an/bpra073/bpra073.pdf)
+
+### [Sensorless PMSM Field Oriented Control](http://cache.nxp.com/assets/documents/data/en/reference-manuals/DRM148.pdf)
+
+### [Space Vector PWM](https://www.switchcraft.org/learning/2017/3/15/space-vector-pwm-intro)
 ---
 
 # 3-Phase Two-Level Inverter
@@ -261,181 +431,7 @@ bottom switch closed (0)
 
 - ##  Space Vector PWM utilizes input voltage more \\(1/2\\) vs \\(1/\sqrt{3}\\) (15% more)
 
----
-# A Big Paranthesis:
 
-## Field Oriented Control (FOC)
-
-<img src="https://www.roboteq.com/images/article-images/how-to/image014.png" alt="Drawing" style="width: 500px;">
-
-- #### [What is FOC?](https://www.youtube.com/watch?v=Nhy6g9wGHow)
-- #### [Field oriented Control of PM Motors](https://www.youtube.com/watch?v=cdiZUszYLiA)
----
-
-## How to aim to a moving target?
---
-
-<img src="https://cdn.shopify.com/s/files/1/0264/5540/8674/files/carrot_and_donkey_large.jpg" alt="Drawing" style="width: 600px;">
-
-
----
-# Some Useful Mathematical Tools
---
-
-- ## Clarke Transformation
-- ## Park Transformation
-
-
----
-# [Clarke](https://en.wikipedia.org/wiki/Edith_Clarke) Transformation
-## (a-b-c) to \\(\alpha \beta \\) Transformation
-
-## From three-phase to two orthogonal phase transformation
---
-
-### Main Idea: In a balanced three-phase system, \\(I_a + I_b + I_c =0\\)  so there is redundant information and system can be reduced to two variables.
-
----
-##How do you define the resultant (black) phasor?
-
-
-<img src="./images/rotating_mmf_phasor2.gif" alt="Drawing" style="width: 800px;">
-
----
-# Clarke Transformation
-
-<img src="https://www.keil.com/pack/doc/CMSIS/DSP/html/clarke.gif" alt="Drawing" style="width: 600px;"/>
-
----
-# Clarke Transformation
-
-<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/36e05ba56ec15de753eb9f3c60983bc874e31370" alt="Drawing" style="width: 750px;"/>
-
----
-# Park Transformation
---
-
-## From stationary frame to rotationary frame
---
-
-## Instead of dealing with sinusoidal signals, just  use the magnitudes.
---
-
-## When reconstructing signals use the rotor position information
-
-
-### i.e. [Interstellar - Docking Scene](https://www.youtube.com/watch?v=c4tPQYNpW9k)
----
-# Park Transformation
-
-<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/58664f0f2994ca78b5145f29/1483099927549/?format=750w" alt="Drawing" style="width: 750px;"/>
-
----
-# Park Transformation
---
-
-<img src="./images/ee462/park_transform.png" alt="Drawing" style="width: 400px;"/>
---
-
-## \\(I\_d = I\_\alpha  cos(\theta) + I\_\beta sin (\theta)\\)
---
-
-## \\(I\_q = I\_\beta  cos(\theta) - I\_\alpha sin (\theta)\\)
---
-
-
----
-## Reference Frames
-
-<img src="./images/ee462/reference_frames.png" alt="Drawing" style="width: 750px;"/>
----
-## Clarke and Park Transformations
-
-<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/5866535e414fb5c4d35ed4cb/1483101083243/ClarkePark_Animation?format=500w" alt="Drawing" style="width: 500px;"/>
----
-# Torque and Flux Control
---
-
-# Id: Proportional to flux in the airgap
---
-
-# Iq: Proportional to torque generated
-
-
----
-# Inverse Transforms
---
-
-## Required to apply reference voltage and current waveforms (sinusoidals)
---
-
-- ## Inverse Park Transform
-- ## Inverse Clarke Transform
-
-
----
-# Inverse Park Transform
---
-
-## From rotation frame to stationary frame
---
-
-
-## \\(I\_\alpha = I\_d  cos(\theta) - I\_q sin (\theta)\\)
---
-
-## \\(I\_\beta = I\_q  cos(\theta) + I\_d sin (\theta)\\)
-
----
-
-## Inverse Clarke Transform
-
-### From two-axis orthogonal plane to 3-phase stationary frame.
-
-<img src="http://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/171/3750._F764D653_.JPG" alt="Drawing" style="width: 500px;"/>
-
----
-## Whole Workflow
-
-<img src="https://static1.squarespace.com/static/584729023e00bebf8abd6ba0/t/58c88acd579fb3efb64797c9/1489537751460/?format=1000w" alt="Drawing" style="width: 750px;"/>
-
-<img src="./images/ee464/foc_workflow.png" alt="Drawing" style="width: 600px;"/>
-
----
-# Classical Vector Control Diagram
-
-<img src="http://3l4sbp4ao2771ln0f54chhvm.wpengine.netdna-cdn.com/wp-content/uploads/2016/07/Vector-Block-Diagram.gif" alt="Drawing" style="width: 600px;"/>
-
----
-# Vector Control in PMSM
-
-<img src="http://www.mdpi.com/sensors/sensors-17-00973/article_deploy/html/images/sensors-17-00973-g007.png" alt="Drawing" style="width: 750px;"/>
-
----
-# Vector Control in Induction Motors
-
-
-<img src="https://www.mathworks.com/help/physmod/sps/powersys/ug/electric_drives223.gif" alt="Drawing" style="width: 700px;"/>
----
-# Summary
-
-<img src="./images/ee464/donkey.png" alt="Drawing" style="width: 600px;"/>
-
----
-
-# Further Reading
-
-### [Vector Control for Dummies](https://www.switchcraft.org/learning/2016/12/16/vector-control-for-dummies)
-
-### [What is Field Oriented Control?](https://www.eetimes.com/document.asp?doc_id=1279321)
-
-### [Field Oriented Control](https://mycourses.aalto.fi/pluginfile.php/155905/mod_resource/content/4/Lecture10.pdf)
-
-### [Field Oriented Control of AC Motors](http://www.ti.com/lit/an/bpra073/bpra073.pdf)
-
-### [Sensorless PMSM Field Oriented Control](http://cache.nxp.com/assets/documents/data/en/reference-manuals/DRM148.pdf)
-
-### [Space Vector PWM](https://www.switchcraft.org/learning/2017/3/15/space-vector-pwm-intro)
 
 ---
 ### What is the max. possible phase voltage with SPWM (Sinusoidal PWM)?
