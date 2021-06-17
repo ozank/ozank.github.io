@@ -7,7 +7,7 @@ permalink: /presentations/index.html
 ## Recent Presentations
 
 ### 2021
-
+* [Rüzgar Enerjisi ve Rüzgar Türbin Teknolojileri Eğitimi - Elektrik Sistemleri](https://docs.google.com/presentation/d/1gSFwBw3JmVWM_BZ1xT61Gj4yqsRBBxGfd3793yXp21U/edit?usp=sharing)
 *  METU MD, [METU Smart Campus Project](https://docs.google.com/presentation/d/1OEkNbn1mxMzou9HlbH5p4qnob2lQao2o_FOfb_MO7Us/edit?usp=sharing)
 
 ### 2020
