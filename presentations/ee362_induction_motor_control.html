@@ -23,30 +23,29 @@ class: center, middle
 
 # EE-362 ELECTROMECHANICAL ENERGY CONVERSION-II
 
-# Starting Methods & Speed Control
+# Speed Control Techniques for Induction Machines
 
 ## Ozan Keysan
 
-[ozan.keysan.me](http://ozan.keysan.me)
+[keysan.me](http://keysan.me)
 
 Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
 ## Full Operating Range of Induction Machines
 
-<img src="http://3.bp.blogspot.com/-UgtGzlAh8Hg/TjfvfIq4RWI/AAAAAAAABB0/JgP5kaYr1V0/s1600/ABB190.jpeg" alt="Drawing" style="width: 800px;"/>
+<img src="./images/ee362/induction_torque.png" alt="Drawing" style="width: 800px;"/>
 
 ---
 
 # Operation Modes of Induction Motors
 
---
 
 # 1- Motoring
---
+
 
 # 2- Generating
---
+
 
 # 3- Braking (Plugging)
 
@@ -54,11 +53,11 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 # Motoring
 
 ## Slip: \\(0 < s < 1\\)
---
+
 
 ## Power Flow: Electrical to Mechanical
 
-<img src="http://pubs.sciepub.com/ajeee/4/2/3/bigimage/fig1.png" alt="Drawing" style="width: 800px;"/>
+<img src="./images/ee362/induction_motor_power_flow.png" alt="Drawing" style="width: 800px;"/>
 
 ---
 # Generating
@@ -68,6 +67,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## Power Flow: Mechanical to Electrical
 
 
+<img src="./images/ee362/induction_generator_power_flow.png" alt="Drawing" style="width: 800px;"/>
 
 
 
@@ -76,7 +76,6 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ### Slip: \\(s > 1\\)
 
 ## Power Flow: Mechanical+Electrical to Heat
---
 
 <img src="https://3.bp.blogspot.com/-Y_HjqnZLkig/Vs1oeZuSv0I/AAAAAAAAA64/z0xwXGgqfR4/s1600/plugging-on-induction-motor.jpeg" alt="Drawing" style="width: 600px;"/>
 
@@ -87,31 +86,96 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ## Torque Balance Equation
 
-## \\(T\_{elec} - T\_{load} - T\_{friction} = J \dfrac{d \omega}{dt} \\)
+## \\(T\_{elec} - T\_{load} = J \dfrac{d \omega}{dt} \\)
 
+<img src="./images/ee362/motor_drive.png" alt="Drawing" style="width: 600px;"/>
 
 ---
+
+### If there is no difference between the electrical torque and load torque, the machine operates at the steady-state
+
+### (i.e. the intersection point at between the motor torque line and the load torque line).
+
+<img src="./images/ee362/load_curve.png" alt="Drawing" style="width: 500px;"/>
+
+### but beware of unstable intersection points.
+
+---
+<!--
+
 # Four-Quadrant Operation
 
 <img src="http://lh4.ggpht.com/_X6JnoL0U4BY/S1hWPpFVASI/AAAAAAAAH6g/2f2K5R2I-I0/tmp2B719_thumb1_thumb.png" alt="Drawing" style="width: 800px;"/>
 
----
-# Linear Approximation of Torque
+-->
+# Speed Control Problems
 --
+
+- ## Load constant, speed reference is changed
+--
+
+- ## You want the speed constant, but load torque is varying 
+--
+
+- ## Both speed reference and load variable
+--
+
+## We need to modify machine characteristic
+
+---
+
+### Closed Loop Control of an Electrical Machine 
+
+<img src="./images/ee362/motor_drive.png" alt="Drawing" style="width: 500px;"/>
+
+<img src="./images/ee362/motor_control.png" alt="Drawing" style="width: 700px;"/>
+
+---
+## Speed Control Methods
+
+## Variable Voltage Control: \\(T\_e \propto V^2 \\)
+### Control is limited to a small range as Ns is constant
+
+
+<img src="./images/ee362/voltage_control.png" alt="Drawing" style="width: 400px;"/>
+
+---
+## Speed Control Methods
+
+## Rotor Resistance Control:
+### Not very efficient, but can create a large startup torque
+
+
+<img src="./images/ee362/rotor_resistance_control.png" alt="Drawing" style="width: 600px;"/>
+
+### Only applicable to wound rotor induction machines
+
+---
+
+## Speed Control Methods
+
+## Variable Stator Voltage Frequency
+--
+
+#### What happens if we change the synchronous speed by changing the stator voltage frequency?
+
+<img src="./images/ee362/stator_frequency.png" alt="Drawing" style="width: 600px;"/>
+
+---
+
+# Linear Approximation of Torque
 
 ## Accurate torque expression
 ### Valid for all values of slip
 
 ### \\(T\_e = \dfrac{3 V\_{th}^2}{(R\_{th}+\dfrac{r'\_2}{s})^2 + (X\_{th}+X'\_2)^2}\dfrac{r'\_2}{s \omega\_s}\\)
 
---
 
 ### However, under steady-state conditions, slip is usually very small (<5%)
 ---
 # Linear Approximation of Torque
 
 ## \\(s < 0.05\\)
---
 
 ## \\(\dfrac{r\_2'}{s} >> R\_{th}, X\_{th}, X\_{2}'\\)
 
@@ -130,115 +194,100 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## (only valid for small values of s)
 
 ---
-
-# Control of Induction Motors
----
-
-# Speed Control Problems
---
-
-- ## Load constant, Speed reference is changed
---
-
-- ## You want the speed constant, but load torque is changed 
---
-
-- ## Both speed reference and load variable
---
-
-## We need to modify machine characteristics
-
----
-# Speed Control Methods
-
-## 1- Variable Voltage
---
-: Control is limited to a small range
-
-## \\(T\_e \propto V^2 \\)
-
-<img src="http://people.ucalgary.ca/~aknigh/vsd/ssim/images/figs/vvff_trq.gif" alt="Drawing" style="width: 500px;"/>
----
-# How can you run the motor always at the maximum torque point?
-
---
-- ## Calculate \\(s\_{maxT}\\)
---
-
-- ## Vary the stator voltage frequency (\\(f\_e\\)) to match that.
-
-- ## Use power electronics to generate variable frequency
+### Variable Stator Voltage Frequency
 
 
-#### [Tesla Insane Mode](https://youtu.be/LpaLgF1uLB8?t=38s), [Tesla Insane Mode- Slow Motion](https://youtu.be/Y8-S7FghyEA?t=27s)
----
 
-# Speed Control Methods
-
-## 2- Variable Frequency
---
 
 ### What happens if we reduce f, with constant V?
 --
 
-## \\(\Phi\\) increases, core will saturate
+## \\(E = 4.44 f\_s N\_s \Phi\\)
 
-## Not desirable!
---
+
+## Motor core starts saturating which is not desirable!
+
+---
+
+## Variable Stator Voltage Frequency
+
+### Alternatively, if the frequency is increased by keeping the voltage constant, motor cannot produce enough torque.
+
+
+<img src="./images/ee362/torque_freq.png" alt="Drawing" style="width: 450px;"/>
+
+#### Reduction of torque under constant voltage with increasing frequency
+
+---
 
 ## How can we keep \\(\Phi\\) constant?
 
 
 ---
 
-## 3 - Constant V/f Operation (or Constant Flux) 
---
+## Constant V/f Operation (or Constant Flux) 
 
-### Use a Variable Voltage-Frequency Source
+### Change the voltage with stator frequency to keep the flux constant
 
-<img src="./images/ee362/vfd.gif" alt="Drawing" style="width: 700px;"/>
+<img src="./images/ee362/constant_flux.png" alt="Drawing" style="width: 500px;"/>
 
----
-## 3 - Constant V/f Operation (or Constant Flux) 
-
-### [Variable Frequency Drive](https://www.electrical4u.com/variable-frequency-drive/)
-
-### [What is VFD?](https://www.vfds.com/blog/what-is-a-vfd)
-
-### [Basics of the Inverter](https://www.youtube.com/watch?v=6bPhAHe-37U)
-
-### [How Inverters Work?](https://www.youtube.com/watch?v=ln9VZIL8rVs)
+### Stator voltage is varied with frequency to eliminate torque reduction
 
 ---
-# Constant Flux Operation
 
-<img src="http://www.scielo.br/img/revistas/jbsmse/v29n1/a04fig01.gif" alt="Drawing" style="width: 500px;"/>
+## Constant V/f Operation (or Constant Flux) 
 
-## \\(T\_{max}\\) is maintained  
+### Use a Variable Voltage-Frequency Drive (VFD)
+
+<img src="./images/ee362/vfd.png" alt="Drawing" style="width: 600px;"/>
+---
+
+## Constant V/f Operation (or Constant Flux) 
+
+### Use a Variable Voltage-Frequency Drive (VFD)
+<img src="./images/ee362/vfd.gif" alt="Drawing" style="width: 600px;"/>
+
+#### For curious students: [Variable Frequency Drive](https://www.electrical4u.com/variable-frequency-drive/), [What is VFD?](https://www.vfds.com/blog/what-is-a-vfd), [Basics of the Inverter](https://www.youtube.com/watch?v=6bPhAHe-37U), [How Inverters Work?](https://www.youtube.com/watch?v=ln9VZIL8rVs)
 
 ---
-# Constant Flux Operation
+## Constant V/f Operation (or Constant Flux) 
 
-## What should be the terminal voltage if you want to run a 50 Hz, 230 V rated motor at 75 Hz?
+### Constant torque can be achieved during acceleration
+
+
+<img src="./images/ee362/constant_torque.png" alt="Drawing" style="width: 600px;"/>
+
+#### If we set the slip to the point where max torque is produced (\\(s\_{max-T}\\)), the machine can be accelerated quickly.
+---
+
+<img src="https://i.redd.it/a3ar6o7rlzyz.jpg" alt="Drawing" style="width: 550px;"/>
+
+#### [Tesla Insane Mode](https://youtu.be/LpaLgF1uLB8?t=38s), [Tesla Insane Mode- Slow Motion](https://youtu.be/Y8-S7FghyEA?t=27s), [Tesla Model S P100D](https://www.youtube.com/watch?v=I5mZ1IK7SuU), [Tesla Model S Plaid](https://www.youtube.com/watch?v=ODxd_acxsIM)
+
 
 ---
-# Constant Flux Operation
+<img src="https://cdn.shopify.com/s/files/1/0196/5170/files/Tesla-Model-S-Plaid-vs-Porsche-Taycan-Turbo-S-vs-Lucid-Air-Grand-Touring.jpg" alt="Drawing" style="width: 550px;"/>
 
-<img src="http://www.ece.umn.edu/users/riaz/animations/vf3.gif" alt="Drawing" style="width: 400px;"/>
-
+#### [Tesla Insane Mode](https://youtu.be/LpaLgF1uLB8?t=38s), [Tesla Insane Mode- Slow Motion](https://youtu.be/Y8-S7FghyEA?t=27s), [Tesla Model S P100D](https://www.youtube.com/watch?v=I5mZ1IK7SuU), [Tesla Model S Plaid](https://www.youtube.com/watch?v=ODxd_acxsIM)
 
 ---
 # Flux Weakening Range
 
-### Voltage is not increased beyond rated
+### Voltage cannot be increased beyond the rated voltage
 ### If the torque is kept constant at high speeds, power limit will be exceeded.
 
-<img src="http://lh6.ggpht.com/_X6JnoL0U4BY/S1huqYNgsAI/AAAAAAAAINw/Fo55efK7w8s/tmp32315_thumb1_thumb.png?imgmax=800" alt="Drawing" style="width: 500px;"/>
-
-
+<img src="./images/ee362/field_weakening.png" alt="Drawing" style="width: 800px;"/>
 ---
+# Flux Weakening Range
+
+### Operation of an induction machine is determined by: phase voltage, magnetic flux, phase current, cooling capability, mechanical constraints
+
+
+<img src="./images/ee362/capability_induction.png" alt="Drawing" style="width: 360px;"/>
+
+<!---
+
 # Rotor Resistance Control
---
 
 ## For Wound Rotor Induction Motors
 
@@ -246,7 +295,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ### Rotor Currents are dissipated as heat
 
----
+
 # Slip Energy Recovery
 
 ## Use a Converter to Increase Efficiency
@@ -254,52 +303,53 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 <img src="http://www.ibiblio.org/kuphaldt/electricCircuits/AC/02513.png" alt="Drawing" style="width: 700px;"/>
 
----
+
 # Doubly-fed Induction Generators([DFIG](http://en.wikipedia.org/wiki/Doubly_fed_electric_machine))
 
 <img src="https://api.intechopen.com/media/chapter/17118/media/image3.png" alt="Drawing" style="width: 700px;"/>
 
----
+
 # Doubly-fed Induction Generators
 ### Used in most wind turbines
 
 <img src="http://www.thewindpower.net/images/image9167.jpg" alt="Drawing" style="width: 700px;"/>
 
----
+
 # Doubly-fed Induction Generators
 ### Used in most wind turbines
 
 <img src="http://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/460/offlinehbpl.hbpl.co.uk/news/OPW/96445B7D-9B5F-8A1A-10E05B9E7AFD97F7.jpg" alt="Drawing" style="width: 700px;"/>
 
----
+
 # Doubly-fed Induction Generators
 ### Used in most wind turbines
 
 <img src="http://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/460/offlinehbpl.hbpl.co.uk/news/MPW/0C9FABCC-CACF-B0B0-F1CD48C63AD088C7.jpg" alt="Drawing" style="width: 700px;"/>
 
----
+
 # Doubly-fed Induction Generators
 
 <img src="http://www.eurotrib.com/files/3/090312_nacelle_C_Power.jpg" alt="Drawing" style="width: 500px;"/>
 
 ## RePower 6 MW, [Bard Turbines](http://en.wikipedia.org/wiki/BARD_Offshore_1)
 
----
+
 # Doubly-fed Induction Generators
 
 <img src="http://notrickszone.com/wp-content/uploads/2014/09/Bard-Offshore-windpark.jpg" alt="Drawing" style="width: 600px;"/>
 
 ## [Bard Offshore Wind Farm](http://www.bard-offshore.de/en/concepts/wecs/nacelle.html)
 
----
+
 # Doubly-fed Induction Generators
 
 <img src="https://c2.staticflickr.com/4/3468/3400738277_70cde9f67c_b.jpg" alt="Drawing" style="width: 600px;"/>
 
 ## [Bard Offshore Wind Farm](http://www.bard-offshore.de/en/concepts/wecs/nacelle.html)
+-->
 
 ---
-## Exercises
+## Solved problems
 
 ### Yıldırım Üçtug Solved Problems, Feb 2004, CH2 - Q4:
 --
