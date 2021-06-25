@@ -101,13 +101,12 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ---
 # Single Phase Induction Motors
 
-## There are two phasors moving in the opposite directions: [Animation](http://people.ucalgary.ca/~aknigh/electrical_machines/other/images/flash/single_pulse.swf)
+## There are two phasors moving in the opposite directions: [Animation](http://people.ucalgary.ca/~aknigh/electrical_machines/other/spim.html)
 
 <img src="http://www.ibiblio.org/kuphaldt/electricCircuits/AC/02485.png" alt="Drawing" style="width: 700px;"/>
 
 ---
 # Torque in a 3-phase Induction Machine
---
 
 <img src="http://raise.spd.louisville.edu/ECE252/images/L19-18.gif" alt="Drawing" style="width: 600px;"/>
 ---
@@ -118,9 +117,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 <img src="http://www.electrical4u.com/images/february16/1456578543.gif" alt="Drawing" style="width: 500px;"/>
 
-### Resultant torque of single-phase induction motor is zero at stationary.
-
-### Motor cannot self-start, we need some modifications.
+### Resultant torque of single-phase induction motor is zero at zero speed: Motor cannot self-start, we need some modifications.
 
 
 ---
@@ -135,35 +132,33 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ## Will it create a rotating MMF?: YES
 
-<img src="https://c.mql5.com/2/3/phasor.gif" alt="Drawing" style="width: 700px;"/>
+<img src="./images/ee362/two_phase_rotating.gif" alt="Drawing" style="width: 500px;"/>
 
+<!---
 [Animation](http://www.ece.umn.edu/users/riaz/anim/dq_transformations.html)
----
 
 <img src="https://i.stack.imgur.com/j0Cj7.gif" alt="Drawing" style="width: 600px;"/>
-
+-->
 ---
 
-# Two-phase winding can create rotating MMF
---
-
-# but, how can you imitate two phase excitation, using a single-phase supply?
+# Ok, two-phase winding can create rotating MMF but,
+# how can you imitate two phase excitation, using a single-phase supply?
 
 ---
 # Split-Phase Motors
---
+
 
 ## Two orthogonal(\\(\pi / 2 \\) electrical) windings:
---
+
 
 ## 1- Main (running) Winding: 
 --
 
 ## 2- Auxiliary (starting)  Winding: 
---
+
 
 - ### Higher resistance-to-reactance (R/X) ratio
---
+
 
 - ### A thinner wire is used
 ---
@@ -172,7 +167,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ### Unbalanced winding creates phase difference even if the same voltage is applied
 
-<img src="http://electrical4u.com/electrical/wp-content/uploads/2013/08/split-phase-induction-motor.png" alt="Drawing" style="width: 700px;"/>
+<img src="http://people.ucalgary.ca/~aknigh/electrical_machines/other/spim.html" alt="Drawing" style="width: 700px;"/>
 
 [Split-phase machine animation](http://people.ucalgary.ca/~aknigh/electrical_machines/other/images/flash/main_aux_pulse.swf)
 ---
@@ -202,10 +197,8 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
 # Capacitor-start Type Motors
---
 
 ## Phase displacement is created by a series capacitor instead of using unbalanced windings
---
 
 <img src="http://sub.allaboutcircuits.com/images/02488.png" alt="Drawing" style="width: 500px;"/>
 
@@ -257,17 +250,14 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
 ## Equivalent Circuit of Single Phase Induction Motors
---
 
 ### Equivalent circuit of a 3-phase machine can be divided into two parts on the rotor side:
---
 
 - ### Forward rotating component
-- ### Bckward rotating component
+- ### Backward rotating component
 ---
 
 ## Equivalent Circuit of Single Phase Induction Motors
---
 
 ## At standstill
 
@@ -287,7 +277,11 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## Forward rotating component = s
 
 ## Backward rotating component = 2-s
----
+
+## Forward component works in the motoring mode, but backward component works in the plugging mode (tries to stop the motor)!
+
+<!--
+
 # Example:
 
 ## A 4-pole single-phase induction motor is rotating at 1425 rpm when connected to 230 V, 50 Hz supply.
@@ -299,55 +293,51 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 - ### \\(X\_2' = 2 \Omega\\)
 - ### \\(X\_m = 66 \Omega\\)
 
----
+
 # Example:
 
 ## A 4-pole single-phase induction motor is rotating at 1425 rpm when connected to 230 V, 50 Hz supply.
 
---
 
 ## a) Calculate the slip for forward and reverse components
---
 
 ## b) Draw the equivalent circuit
---
 
 ## c) Calculate the torque of the motor
 
----
+
 # Example: (MT-2, 2000, Q2)
 
 ### 380 V(l-l) 40 kVA, 50 Hz Y connected, 6 pole cylindrical rotor synchronous mmachine operateas as an isolated generator. The synchronous reactance(Xs) is \\(1 \Omega\\)/phase. Neglect armature resistance. The field is adjusted to get 380 V at no load.
---
 
 ### a) What is the terminal voltage and voltage regulation if the generator is loaded with
---
+
 
 ### i) rated current at unity power factor
---
 
 ### ii) rated current at 0.8 pf lagging
---
 
 ### iii) rated current at 0.8 pf leading
----
+
+
 # Example: (MT-2, 2000, Q2)
 
 ### 380 V(l-l) 40 kVA, 50 Hz Y connected, 6 pole cylindrical rotor synchronous mmachine operateas as an isolated generator. The synchronous reactance(Xs) is \\(1 \Omega\\)/phase. Neglect armature resistance. The field is adjusted to get 380 V at no load.
---
+
 
 ## b) How much shaft torque must be applied by the prime-moved at rated load with unity power factor conditions, if the friction and windage loss is assumed to be 1 kW.
----
+
 # Example: (MT-2, 2000, Q2)
 
 ### 380 V(l-l) 40 kVA, 50 Hz Y connected, 6 pole cylindrical rotor synchronous mmachine operateas as an isolated generator. The synchronous reactance(Xs) is \\(1 \Omega\\)/phase. Neglect armature resistance. The field is adjusted to get 380 V at no load.
---
+
 
 ## c) What is the load current and power factor for maximum power to be produced by the generator at rated terminal voltage
+-->
 
 ---
 ## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
----
+
 
     </textarea>
     <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
