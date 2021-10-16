@@ -8,6 +8,9 @@ For more information about current project and theses, please visit [PowerLab](h
 
 ## Completed MSc Theses
 
+- Nail Tosun, *Investigation of Velocity Skin Effect of Convex Railgun Structure With 3D Moving Mesh*, 2021
+- Göksenin Hande Bayazıt, *Design and Optimization of a Multiphase Fault Tolerant Permanent Magnet Synchronous Machine*, 2021
+- Hakan Polat, *1kW contactless slip ring design using series-series resonant converter topology*,  [PDF](https://open.metu.edu.tr/handle/11511/91475), 2021 
 - Furkan Karakaya, *Characterization of GaN Transistors and Development of Bi-directional DC/DC Converter With Half-Bridge Having Short Circuit Protection for Parallel Switches*, [PDF](http://etd.lib.metu.edu.tr/upload/12625716/index.pdf), 2020
 - Gökhan Çakal, *Design and Implementation of Coreless Axial Flux Permanent Magnet Motor With Printed Circuit Board Windings*, 2020
 - Lütfi Boyacı, *Proton Irradiation and Gamma Ray Irradiation Testing Studies on the Commercial Grade GaNFETs to Investigate their Characteristics under the Space Radiation Environment*, [PDF](http://etd.lib.metu.edu.tr/upload/12624501/index.pdf), 2019
@@ -25,22 +28,26 @@ Magnet Generator For Wind Turbines*,  [PDF](http://etd.lib.metu.edu.tr/upload/12
 - Mario Recio Lara, *Development of a mobile phone application to detect speed and faults of electrical machines*, MSc Thesis, University of Edinburgh, 2013.
 - Marzia Akbari, *Comparison and control of power take-off systems for combined wind/wave energy platforms*, MSc Thesis, University of Edinburgh, 2013.
 
+## Completed PhD Theses
+
+- İlker Şahin, *Model Predictive Control Strategies for Power Electronic Converters and AC Drives*, 2021
+- Mehmet Özcan, *Optimum Bidding Strategy for Renewable Energy Generation With Storage in Turkey’s Day Ahead Market*, 2021
+
+
 ## Ongoing PhD Theses
 
-- Mehmet Özcan, *Optimum Bidding Strategy for Renewable Energy Generation With Storage in Turkey’s Day Ahead Market*
 - Mesut Uğur, *Design of an Integrated Modular Motor Drive (IMMD) for Traction Applications*
 - Hüseyin Yürük, *Design of Fault Tolerant Servo Motor Drives*
-- İlker Şahin, *Model Predictive Control Strategies for Power Electronic Converters and AC Drives*
-- Mohammad Mokhtare, TBD
+- Mohammad Mokhtare, *Design and Control of Agricultural Microgrid Cluster*
 - Öztürk Şahin Alemdar, TBD
 - Serhat Özküçük, TBD
 
 ## Ongoing MSc Theses
 
-- Göksenin Hande Bayazıt, *Design and Optimization of a Multiphase Fault Tolerant Permanent Magnet Synchronous Machine*
-- Hakan Polat, *Wireless Charger for Electrical Vehichles Using LLC Resonant Converter*
 - Hakan Saraç, *Control of Fault Tolerant Electrical Machines for Traction Applications*
 - Furkan Tokgöz, *Design and Comparison of PCB Motor Winding Configurations"
 - Enes Ayaz, *GaN Applications of Wireless Power Transfer for Wind Turbines*
-- Nail Tosun, *Investigation of Velocity Skin Effect of Convex Railgun Structure With 3D Moving Mesh*
 - Ogün Altun, TBD
+- Görkem Gülletutan, TBD
+- Yunus Çay, TBD
+
