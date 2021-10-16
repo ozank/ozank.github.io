@@ -3,12 +3,12 @@ layout: home
 title: Ozan Keysan
 ---
 
-**Current Courses: [EE362](/ee362) <span class="meta">&#8226;</span> [EE464](/ee464)**
+**Current Courses: [EE361](/ee361) <span class="meta">&#8226;</span> [EE463](/ee463)**
 
 **Research Group: [METU PowerLab](http://power.eee.metu.edu.tr/)**
 
 
-I'm an assistant professor in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr). Our research group is  [METU PowerLab](http://power.eee.metu.edu.tr/). 
+I'm an associate professor in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr). Our research group is  [METU PowerLab](http://power.eee.metu.edu.tr/). 
 
 For more information about me, you can download my [CV](/cv) or have look at my [Publications](/papers), [Theses](/theses), [Projects](/projects) and [Presentations](/presentations). 
 
