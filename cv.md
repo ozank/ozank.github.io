@@ -36,6 +36,15 @@ permalink: /cv/index.html
 
 </div>
 
+## Experience
+
+|2021–  | Associate Professor| Dept. of Electrical-Electronics Engineering, [METU](http://www.metu.edu.tr)|
+|2014–2021  | Assistant Professor| Dept. of Electrical-Electronics Engineering, [METU](http://www.metu.edu.tr)|
+|2011–2014 | Research Associate | Institute for Energy Systems, University of Edinburgh|
+|2010–2012 | Electrical Machine Design Consultant | NGenTec, Edinburgh|
+|2009–2010 | Research Associate | Institute for Energy Systems, University of Edinburgh|
+|2005-2009 | Research Assistant | Middle East Technical University |
+
 ## Education
 
 |2013| PhD | [University of Edinburgh](http://www.ed.ac.uk), Institute for Energy Systems|
@@ -46,29 +55,23 @@ permalink: /cv/index.html
 |2005 | BSc | [Middle East Technical University](http://www.metu.edu.tr),|
 |	|	|Electrical-Electronics Engineering|
 
-## Experience
-
-|2014–  | Assistant Professor| Dept. of Electrical-Electronics Engineering, [METU](http://www.metu.edu.tr)|
-|2011–2014 | Research Associate | Institute for Energy Systems, University of Edinburgh|
-|2010–2012 | Electrical Machine Design Consultant | NGenTec, Edinburgh|
-|2009–2010 | Research Associate | Institute for Energy Systems, University of Edinburgh|
-|2005-2009 | Research Assistant | Middle East Technical University |
-
 ----
 
 ## Academic-Administrative Work
+
+- [METU-ROMER](http://romer.metu.edu.tr/), Member of the Executive Board,  (2021- Present)
 
 - [Vice Chair, METU Electrical & Electronics Eng. Dept.](https://eee.metu.edu.tr), (2018-2019)
 
 - [Advisor to Dean](https://muhfd.metu.edu.tr/), (2016-2018)
 
-- [METU-Wind Center](http://ruzgem.metu.edu.tr/), Member of the Executive Board
+- [METU-Wind Center](http://ruzgem.metu.edu.tr/), Member of the Executive Board (2016- Present)
 
-- [Design Factory](http://tdi.metu.edu.tr), Member of the Executive Board
+- [Design Factory](http://tdi.metu.edu.tr), Member of the Executive Board (2017-2019)
 
-- Associate Editor, [IET Renewable Power Generation](http://digital-library.theiet.org/content/journals/iet-rpg)
+- Associate Editor, [IET Renewable Power Generation](http://digital-library.theiet.org/content/journals/iet-rpg) (2016- Present)
 
-- Associate Editor, [Turkish Journal of Electrical Engineering & Computer Sciences](https://journals.tubitak.gov.tr/elektrik/index.htm)
+- Associate Editor, [Turkish Journal of Electrical Engineering & Computer Sciences](https://journals.tubitak.gov.tr/elektrik/index.htm) (2018-2020)
 
 - Rapporteur, EU [Cost Action](http://www.cost.eu/)
 
@@ -80,7 +83,7 @@ My main area of interests are renewable energy, design of electric machines, and
 
 ## Research Experience & Projects
 
-For more details please visit the [My Projects](/projects) page.
+For more details and for ongoing projects please visit the [My Projects](/projects) page.
 
 |2016-2019| ASELSAN Rail-Gun Project| Electromagnetic Design and Optimization of a 200kJ-2MJ Electromagnetic Launcher.|
 |2018-2019| USTDA | USA Trade and Development Agency, METU Smart Campus Project.|
@@ -115,6 +118,7 @@ For a full list of courses that I taught please visit my [Courses](/courses) web
 - EE463: Static Power Conversion-I
 - EE464: Static Power Conversion-II
 - EE564: Design of Electrical Machines
+- EE564: Special Topics in Electrical Machines
 - ID403: Collaborative Design Studio
 
 ### University of Edinburgh
@@ -208,6 +212,13 @@ For a full list of courses that I taught please visit my [Courses](/courses) web
 
 For on going theses, please visit [theses](/theses) page.
 
+- İlker Şahin, *Model Predictive Control Strategies for Power Electronic Converters and AC Drives*, 2021 (PhD)
+- Mehmet Özcan, *Optimum Bidding Strategy for Renewable Energy Generation With Storage in Turkey’s Day Ahead Market*, 2021 (PhD)
+- Nail Tosun, *Investigation of Velocity Skin Effect of Convex Railgun Structure With 3D Moving Mesh*, 2021
+- Göksenin Hande Bayazıt, *Design and Optimization of a Multiphase Fault Tolerant Permanent Magnet Synchronous Machine*, 2021
+- Hakan Polat, *1kW contactless slip ring design using series-series resonant converter topology*, 2021 
+- Furkan Karakaya, *Characterization of GaN Transistors and Development of Bi-directional DC/DC Converter With Half-Bridge Having Short Circuit Protection for Parallel Switches*, 2020
+- Gökhan Çakal, *Design and Implementation of Coreless Axial Flux Permanent Magnet Motor With Printed Circuit Board Windings*, 2020
 - Lütfi Boyacı, *Proton Irradiation and Gamma Ray Irradiation Testing Studies on the Commercial Grade GaNFETs to Investigate their Characteristics under the Space Radiation Environment*, 2019
 - Aykut Demirel, *Condition Monitoring and Fault Diagnosis of Electrical Motor Drive Systems*, 2019
 - Mehmet Kaan Mutlu, *Limited-jerk Sinusoidal Trajectory Design for Field Oriented Control of Permanent Magnet Synchronous Motor With H-infinity Optimal Controller*, 2019
