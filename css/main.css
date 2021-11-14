@@ -344,7 +344,7 @@ a:link, a:visited { color: #000; }
 a { text-decoration: none; }
 hr { color: transparent; }
 .noprint { display: none; }
-#content a[href^="/"]:after { content: " (http://jblevins.org" attr(href) ") "; }
+#content a[href^="/"]:after { content: " (http://keysan.me" attr(href) ") "; }
 #wrap { border: 0; }
 }
 
