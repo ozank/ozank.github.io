@@ -85,15 +85,21 @@ My main area of interests are renewable energy, design of electric machines, and
 
 For more details and for ongoing projects please visit the [My Projects](/projects) page.
 
+|2021-2023| TUBITAK 1004 | Development of a 200kW, 1500V DC String Grid Connected PV Inverter (TUBITAK MAM)|
+|2021-2023| TUBITAK 1004 | Development of a 10 kW Bi-directional Micro PV Inverter with Storage (TESCOM).|
+|2020-2022| DANIDA /Denmark | WindFlag, Feasibility Analysis of Offshore Wind Power Plants in Turkey.|
+|2020-2022| TUBITAK Newton Fund | COMSA, Community-based Off-grid Ultra-efficient Microgrid to Revive Water-food Security in Agriculture.|
+|2020-2022| TUBITAK 1001 | Development of a 1 kW SiC, Modular Wireless Power Transfer System for Synchronous Machines.|
+|2019-2022| ASELSAN Rail-Gun Project| Phase-II of Electromagnetic Design and Optimization of a 10MJ Electromagnetic Launcher.|
 |2016-2019| ASELSAN Rail-Gun Project| Electromagnetic Design and Optimization of a 200kJ-2MJ Electromagnetic Launcher.|
 |2018-2019| USTDA | USA Trade and Development Agency, METU Smart Campus Project.|
 |2017-2019| TUBITAK 3501 | Development of a 7,5 kW Permanent Magnet Integrated Modular Motor Drive System.|
 |2017-2018| ASELSAN MGEO | Design of a high performance linear servo actuator and PCB Motor.|
-|2017-2018| EnerjiSa-H2020 Project | Pattern Recognition in Power Systems.|
+|2017-2018| EnerjiSA-H2020 Project | Pattern Recognition in Power Systems.|
 |2017| ASELSAN MW Wind Turbine| Feasibility analysis and design of a MW sized direct-drive wind turbine generator.|
 |2016| BAP| Design of a Modular Data Acqusition Board.|
-|2016| Andar Servo| Design and Manufacturing of a Eddy Current Damper for Aeorospace Application|
-|2016| Andar Servo| Design and Manufacturing of a Brushless PM Servo Motor.|
+|2016| Andar (TTO)| Design and Manufacturing of a Eddy Current Damper for Aeorospace Application|
+|2016| Andar (TTO)| Design and Manufacturing of a Brushless PM Servo Motor.|
 |2015 | Newton Fund Mobility Grant | Design of a superconducting wind turbine prototype.|
 |2014–2016 | TUBITAK 2232 Project | Design of modular and fault-tolerant generators for direct-drive wind turbines.|
 |2011–2014 | EU FP7 Project | Marina Platform Project is an EU FP7 project with 17 industrial and academic partners. I am working as a full-time researcher in the project, which aims to design combined wave and wind energy platforms. My duty is to compare different generator topologies and power take-off systems in terms of efficiency and reliability.|
