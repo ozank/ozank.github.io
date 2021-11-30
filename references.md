@@ -9,7 +9,7 @@ permalink: /references/index.html
 This page is for my open reference letters that I write for students that I trust and recommend most. Students that I supervise can request a closed reference letter for their university and job applications, but they can NOT request to be listed in this page. I choose only one or two of the best students each year, and publish their reference letters online here, as I am proud with their work and no hesitation in recommending them.
 
 ### 2022
-* [Furkan Tokgöz]((/references/furkant)
+* [Furkan Tokgöz](/references/furkant)
 
 ### 2021
 * [Hakan Polat](/references/hakan) (now in VUB MOBI, Belgium)
