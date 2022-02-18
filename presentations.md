@@ -6,6 +6,9 @@ permalink: /presentations/index.html
 
 ## Recent Presentations
 
+### 2022
+* [EÜAŞ Hidrogeneratör Sunum](https://docs.google.com/presentation/d/1uG95txUmbpEgyYQAdbukhcBdKXU_st5jjhgAGVkCGP8/edit?usp=sharing)
+
 ### 2021
 
 * [Denizüstü Rüzgar Enerjisi Egitimi - Elektrik Sistemleri](https://docs.google.com/presentation/d/1nL0RkZyZCdqUZeA5iKW6uyulHWpHdSiZ5bH_tIxFxlE/edit?usp=sharing)
