@@ -7,7 +7,10 @@ permalink: /presentations/index.html
 ## Recent Presentations
 
 ### 2022
+
+* ODTÜ Elektrik Müh, [Elektrik Makineleri ve Güç Elektroniği Opsiyon Tanıtımı](https://docs.google.com/presentation/d/1u0vZH-z9p0DueAQ-kLkIacMOj2mWlMK9PlI30oKOKM4/edit?usp=sharing)
 * [EÜAŞ Hidrogeneratör Sunum](https://docs.google.com/presentation/d/1uG95txUmbpEgyYQAdbukhcBdKXU_st5jjhgAGVkCGP8/edit?usp=sharing)
+
 
 ### 2021
 
