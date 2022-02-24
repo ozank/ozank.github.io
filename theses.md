@@ -8,6 +8,7 @@ For more information about current project and theses, please visit [PowerLab](h
 
 ## Completed MSc Theses
 
+- Hakan Saraç, *Fault Tolerant Control of a Dual Three-Phase Electrical Machine with Predictive Current Control and Reduced Computation Burden*, 2022
 - Nail Tosun, *Investigation of Velocity Skin Effect of Convex Railgun Structure With 3D Moving Mesh*, 2021
 - Göksenin Hande Bayazıt, *Design and Optimization of a Multiphase Fault Tolerant Permanent Magnet Synchronous Machine*, 2021
 - Hakan Polat, *1kW contactless slip ring design using series-series resonant converter topology*,  [PDF](https://open.metu.edu.tr/handle/11511/91475), 2021 
@@ -30,24 +31,22 @@ Magnet Generator For Wind Turbines*,  [PDF](http://etd.lib.metu.edu.tr/upload/12
 
 ## Completed PhD Theses
 
+- Hüseyin Yürük, *Investigation of Parallel Connected GaN E-HEMT VSI-Based Servo Drives*, 2022
 - İlker Şahin, *Model Predictive Control Strategies for Power Electronic Converters and AC Drives*, 2021
 - Mehmet Özcan, *Optimum Bidding Strategy for Renewable Energy Generation With Storage in Turkey’s Day Ahead Market*, 2021
 
 
 ## Ongoing PhD Theses
 
-- Mesut Uğur, *Design of an Integrated Modular Motor Drive (IMMD) for Traction Applications*
-- Hüseyin Yürük, *Design of Fault Tolerant Servo Motor Drives*
 - Mohammad Mokhtare, *Design and Control of Agricultural Microgrid Cluster*
 - Öztürk Şahin Alemdar, TBD
-- Serhat Özküçük, TBD
+
 
 ## Ongoing MSc Theses
 
-- Hakan Saraç, *Control of Fault Tolerant Electrical Machines for Traction Applications*
 - Furkan Tokgöz, *Design and Comparison of PCB Motor Winding Configurations"
 - Enes Ayaz, *GaN Applications of Wireless Power Transfer for Wind Turbines*
-- Ogün Altun, TBD
-- Görkem Gülletutan, TBD
-- Yunus Çay, TBD
+- Ogün Altun, *Design of a 3-level SiC Boost Converter for a Grid Connected PV String Inverter*
+- Görkem Gülletutan, *Lamination Modeling for the Analysis of Electromagnetic Launchers*
+- Yunus Çay, *Partial Power Transfer Converter Design and Implementation for Solar Power System*
 
