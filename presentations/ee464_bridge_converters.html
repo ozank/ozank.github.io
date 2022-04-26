@@ -161,6 +161,126 @@ class: center, middle
 # Operates as a: Boost Converter
 
 ---
+# PFC?
+--
+
+## Power Factor Correction
+
+--
+## Power Factor of a 1Ph Diode Rectifier?
+--
+
+<img src="./images/ee464/pfc_diode_rectifier.png" alt="Drawing" style="width: 600px;">
+
+---
+## Diode Rectifier
+
+### Source current
+
+<img src="./images/ee464/pfc_diode_waveform.png" alt="Drawing" style="width: 700px;">
+---
+# PFC required for many applications
+--
+
+- ### Computer Power Supplies, LED Drives
+--
+
+- ### Arc Furnaces
+--
+
+- ### Welding
+
+<img src="https://cdn11.bigcommerce.com/s-x3ki4mm/images/stencil/1280x1280/products/879/1198/Askaynak-inverter-405-welding-inverter__42671.1477329188.jpg" alt="Drawing" style="width: 300px;">
+---
+
+# PFC Circuit
+--
+
+<img src="./images/ee464/pfc.png" alt="Drawing" style="width: 700px;">
+
+---
+
+# PFC Current
+--
+
+<img src="./images/ee464/pfc_current.png" alt="Drawing" style="width: 500px;">
+
+
+
+---
+
+# PFC Current
+
+## Critical Current Mode (Discontinuous Current Mode)
+--
+
+<img src="./images/ee464/pfc_crm.png" alt="Drawing" style="width: 600px;">
+
+
+---
+# PFC Effect
+--
+
+<img src="https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v2/master/en/semiconductor/product/power-management-ics/a3.gif" alt="Drawing" style="width: 800px;">
+
+---
+# PFC Alternatives: Bridgeless PFC
+
+#### Replaces diode bridge rectifier with 2 MOSFETS + 2 diodes
+
+
+<img src="./images/ee464/bridgeless_pfc.png" alt="Drawing" style="width: 600px;">
+
+---
+# PFC Alternatives: Bridgeless PFC
+
+#### Replaces diode bridge rectifier with 2 MOSFETS + 2 diodes
+
+
+<img src="./images/ee464/bridgeless_pfc_operation.png" alt="Drawing" style="width: 800px;">
+
+### [PFC Circuits](https://toshiba.semicon-storage.com/info/docget.jsp?did=68570)
+---
+# PFC Alternatives: Totem-Pole Bridgeless PFC
+
+#### 2 MOSFETs in series (or 4 MOSFETS configuration)
+
+
+<img src="./images/ee464/totem_pole_pfc.png" alt="Drawing" style="width: 800px;">
+
+---
+# PFC Alternatives: Totem-Pole Bridgeless PFC
+
+
+<img src="./images/ee464/totem_pole_pfc_operation.png" alt="Drawing" style="width: 800px;">
+
+### [6.6-kW Totem-Pole PFC Reference](https://www.ti.com/lit/ug/tidue54b/tidue54b.pdf)
+---
+# PFC Alternatives: Totem-Pole Bridgeless PFC
+
+
+<img src="./images/ee464/totem_pole_pfc_operation2.png" alt="Drawing" style="width: 800px;">
+
+### [6.6-kW Totem-Pole PFC Reference](https://www.ti.com/lit/ug/tidue54b/tidue54b.pdf)
+---
+
+## Commercial PFC Controllers
+--
+
+- ### [Toshiba-TB6819AFG](https://toshiba.semicon-storage.com/tr/product/linear/power-supply/pfc-ic/pfc-crm-ic.html)
+
+- ### [OnSemi PFC Controllers](http://www.onsemi.com/PowerSolutions/parametrics.do?id=981)
+
+- ### [TI PFC Controllers](http://www.ti.com/power-management/offline-isolated-dcdc-controllers-converters/factor-correction/products.html#p1694=Single-phase%20PFC&p1131=CCM)
+
+- ### [TI UCC28180](http://www.ti.com/product/UCC28180/datasheet/abstract#SLUSBQ56054)
+
+---
+## PFC Application Study: Welding Circuit
+--
+
+<img src="./images/ee464/pfc_welding.png" alt="Drawing" style="width: 800px;">
+---
 # Multi-Quadrant DC Converters
 
 <img src="https://www.kepcopower.com/hdbfig09.gif" alt="Drawing" style="width: 600px;">
@@ -350,87 +470,7 @@ class: center, middle
 <img src="./images/ee464/switch_utilization.png" alt="Drawing" style="width: 500px;">
 -->
 
----
-# PFC?
---
 
-## Power Factor Correction
-
---
-## Power Factor of a 1Ph Diode Rectifier?
---
-
-<img src="./images/ee464/pfc_diode_rectifier.png" alt="Drawing" style="width: 600px;">
-
----
-## Diode Rectifier
-
-### Source current
-
-<img src="./images/ee464/pfc_diode_waveform.png" alt="Drawing" style="width: 700px;">
----
-# PFC required for many applications
---
-
-- ### Computer Power Supplies, LED Drives
---
-
-- ### Arc Furnaces
---
-
-- ### Welding
-
-<img src="https://cdn11.bigcommerce.com/s-x3ki4mm/images/stencil/1280x1280/products/879/1198/Askaynak-inverter-405-welding-inverter__42671.1477329188.jpg" alt="Drawing" style="width: 300px;">
----
-
-# PFC Circuit
---
-
-<img src="./images/ee464/pfc.png" alt="Drawing" style="width: 700px;">
-
----
-
-# PFC Current
---
-
-<img src="./images/ee464/pfc_current.png" alt="Drawing" style="width: 500px;">
-
-
-
----
-
-# PFC Current
-
-## Critical Current Mode (Discontinuous Current Mode)
---
-
-<img src="./images/ee464/pfc_crm.png" alt="Drawing" style="width: 600px;">
-
-
----
-# PFC Effect
---
-
-<img src="https://toshiba.semicon-storage.com/content/dam/toshiba-ss-v2/master/en/semiconductor/product/power-management-ics/a3.gif" alt="Drawing" style="width: 800px;">
-
----
-
-## Commercial PFC Controllers
---
-
-- ### [Toshiba-TB6819AFG](https://toshiba.semicon-storage.com/tr/product/linear/power-supply/pfc-ic/pfc-crm-ic.html)
-
-- ### [OnSemi PFC Controllers](http://www.onsemi.com/PowerSolutions/parametrics.do?id=981)
-
-- ### [TI PFC Controllers](http://www.ti.com/power-management/offline-isolated-dcdc-controllers-converters/factor-correction/products.html#p1694=Single-phase%20PFC&p1131=CCM)
-
-- ### [TI UCC28180](http://www.ti.com/product/UCC28180/datasheet/abstract#SLUSBQ56054)
-
----
-## PFC Application Study: Welding Circuit
---
-
-<img src="./images/ee464/pfc_welding.png" alt="Drawing" style="width: 800px;">
 
 
 ---
