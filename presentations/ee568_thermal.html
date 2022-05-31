@@ -28,11 +28,138 @@ class: center, middle
 
 ## Ozan Keysan
 
-[ozan.keysan.me](http://ozan.keysan.me)
+[keysan.me](http://keysan.me)
 
 Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ---
 
+# Losses in an Electrical Machine
+--
+
+
+<img src="./images/ee564/motor_losses.png" alt="Drawing" style="width: 800px;"/>
+
+
+---
+
+# Losses in an Electrical Machine
+--
+
+- ## Stator Ohmic Losses
+--
+
+- ## Rotor Ohmic Losses (or field excitation)
+--
+
+- ## Core losses (hysteresis & eddy)
+--
+
+- ## Additional eddy losses (rotor surface, magnets, sleeves etc.)
+--
+
+- ## Mechanical losses (bearing, windage etc.)
+--
+
+- ## Stray Losses (leakage flux induced losses)
+
+---
+
+## Factors effecting core losses
+--
+
+## Material Quality and Thickness
+
+
+<img src="https://www.researchgate.net/profile/Andreas-Krings/publication/266558530/figure/fig2/AS:669259046871043@1536575199292/Crystallographic-structure-on-the-short-035-mm-side-of-the-lamination-sheets-before-the.png" alt="Drawing" style="width: 600px;"/>
+
+---
+
+## Factors effecting core losses
+
+## Lamination cutting techniques
+
+- ### Stamping,  Laser Cutting etc.
+
+
+<img src="http://www.polarislaserlaminations.com/images/laser-slide.gif" alt="Drawing" style="width: 300px;"/>
+
+
+- [High Speed Laser Cutting](https://www.youtube.com/watch?v=7-M6pgUO5XE)
+
+- [Lamination Stamping](https://www.youtube.com/watch?v=s-9PhX6vKpI)
+
+---
+
+## Factors effecting core losses
+
+## Fixing Stacking Together
+
+- ### Riveting
+- ### Welding
+
+<img src="https://deesan.in/wp-content/uploads/2021/09/rivetting-img.webp" alt="Drawing" style="width: 350px;"/>
+<img src="https://www.lasertechnologiesinc.com/upload/MotorCoreAssembly_4.jpg" alt="Drawing" style="width: 350px;"/>
+
+---
+## Losses: End Plate Losses
+
+
+<img src="./images/ee564/endplate1.png" alt="Drawing" style="width: 700px;"/>
+
+---
+## Losses: Press Plate Losses
+
+## Stepped laminations at the press plate , but why?
+
+<img src="./images/ee564/endplate2.png" alt="Drawing" style="width: 600px;"/>
+---
+## Losses: Press Plate Losses
+
+### Axial component of the fringing flux creates eddy current on large surfaces
+
+<img src="./images/ee564/endplate_flux.png" alt="Drawing" style="width: 600px;"/>
+
+---
+## Losses: Press Plate Losses
+
+### Methods to reduce press plate losses:
+
+- ### Partitioning of end plates
+- ### Slitting of press fingers 
+- ### Non-magnetic press plates (Aluminium, stainless steel) 
+- ### Stepping of end packet
+- ### Laminated glued press plates 
+- ### Copper shielding
+
+---
+## Rotor Pole Shoe Losses
+
+- ### Especially dominant in open-slots
+
+<img src="./images/ee564/openslot_flux.png" alt="Drawing" style="width:300px;"/>
+
+- ### Magnitude may be small, but the frequency is in the kHz range!
+
+- ### \\(f= f_s \times Q \\)
+
+---
+## Rotor Pole Shoe Losses
+
+### Methods for reduction:
+
+- ### Use [magnetic slot wedges](https://www.spindustries.at/product/magnetic-slot-wedges/)
+
+- ### Laminated pole shoes, sectioned poles (or magnets in a PM machine)
+
+<img src="./images/ee564/laminated_rotor.png" alt="Drawing" style="width:350px;"/>
+
+
+---
+## Stray Field Losses
+
+
+<img src="./images/ee564/stray_field.png" alt="Drawing" style="width:550px;"/>
+---
 
 # Resistances
 --
@@ -65,8 +192,39 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 --
 
 <img src="http://www.anttilehikoinen.fi/wp-content/uploads/2017/03/2017-3-2_skin_effect_slot-139x300.png" alt="Drawing" style="width: 200px;"/>
+---
+
+# Leakage Flux in Slot
 
 
+<img src="./images/ee564/eddy_slot1.png" alt="Drawing" style="width:600px;"/>
+
+### Leakage flux density increases in the direction of slot opening
+### That leakage flux is pulsating with fundamental frequency, and creates eddy currents (into the page)
+---
+
+# Eddy Current in a Slot
+
+
+<img src="./images/ee564/eddy_slot2.png" alt="Drawing" style="width:500px;"/>
+
+
+### Direction of the eddy current creates a field opposite to the original field (Lenz Law)
+
+### Eddy current increases the current density at the top of the conductor, causes non homogeneous current distribution
+
+---
+
+# Eddy Current in a Slot
+
+
+<img src="./images/ee564/eddy_slot3.png" alt="Drawing" style="width:600px;"/>
+
+
+### Current also reduces the leakage flux on the top of the winding, and hence reduces the leakage flux component
+
+### Therefore, \\(R\_{ac} \gt R\_{dc}\\) but 
+### \\(L\_{leakage-ac} \lt L\_{leakage-dc}\\) 
 
 ---
 # Proximity Effect
@@ -136,17 +294,65 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ### Different leakage inductance, length, phase difference in induced voltage causes circulating current
 
 <img src="http://www.anttilehikoinen.fi/wp-content/uploads/2017/03/2017-3-2_circulating_current.png" alt="Drawing" style="width: 800px;"/>
+---
+# Ways to Reduce AC Resistances
+
+### Just using parallel wires DO NOT cancel the circulating currents
+
+
+<img src="./images/ee564/paralel_wire.png" alt="Drawing" style="width: 800px;"/>
+
+### Twisting is also required!
+
+---
+## Twisting (or Transponding)
+
+
+<img src="./images/ee564/transponding.png" alt="Drawing" style="width: 800px;"/>
+
+### In a single layer winding all the flux can be cancelled,
+### but in double layer winding, the flux on the top and bottom portion are different, so that reduces but does not eliminate all current
+
+---
+## Twisting (or Transponding)
+
+### Overhang connections can be used for twisting
+
+<img src="./images/ee564/transponding2.png" alt="Drawing" style="width: 800px;"/>
+
 
 ---
 
-# Ways to Reduce AC Resistances
 
-# Transponding
---
+# Roebel Winding
 
-<img src="https://www.deangeliprodotti.com/sites/default/files/styles/portfolio_4_cols/public/patented_ctc_etp_plus_0.jpg" alt="Drawing" style="width: 400px;"/>
+<img src="./images/ee564/roebel.png" alt="Drawing" style="width: 800px;"/>
 
-### [Continuously Transposed Conductor](http://www.powertransformerdesign.net/2012/01/power-transformers-load-losses-basics.html)
+### [Roebel Winding Manufacturing](https://www.youtube.com/watch?v=TaM3EuTMxBs)
+---
+
+
+# Roebel Winding
+
+<img src="./images/ee564/roebel_180.png" alt="Drawing" style="width: 800px;"/>
+
+### With 180 degrees transposition
+---
+
+
+# Roebel Winding
+
+<img src="./images/ee564/roebel_360.png" alt="Drawing" style="width: 800px;"/>
+
+### With 360 degrees transposition
+
+---
+
+# Roebel Winding
+
+<img src="./images/ee564/roebel_end_winding.png" alt="Drawing" style="width: 800px;"/>
+
+### End winding connection options
 
 ---
 # Roebel Cable
@@ -328,7 +534,19 @@ Ref: Tim Miller - Lecture 14
 ### [Reference](https://www.easa.com/resources/booklet/typical-failures-three-phase-stator-windings)
 
 ---
+# Cooling Types:
 
+-- 
+
+- ## Forced air cooling (internal or external)
+- ## Liquid Cooling (frame with sleeves or the core)
+- ## Direct cooling of conductors
+- ## Oil Splash Cooling or spray cooling
+- ## Hydrogen Cooling
+
+
+
+---
 
 
 # Thermal Design of Electric Machines
