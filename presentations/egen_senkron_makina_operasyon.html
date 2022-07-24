@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EGEN - Generatör Tasarım Eğitimleri</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+### EÜAŞ - ODTÜ Elektrik EGEN Generatör Tasarımı ve İmalatı Projesi
+
+
+# Senkron Elektrik Makinaların Çalışma Modları
+
+## Ozan Keysan
+
+[keysan.me](http://keysan.me)
+
+Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Eşdeğer Devre
+
+
+<img src="./images/synch_full_circuit.png" alt="Drawing" style="width: 800px;"/>
+
+---
+## Çalışma Modları: Tek başına (stand-alone) çalışma
+
+### Tek bir dizel jeneratörün yaptığı üretim bu modda sayılabilir
+--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LqpQZd9XxJM" frameborder="0" allowfullscreen></iframe>
+
+---
+# Tek Başına Üretim
+
+# Teknik Zorluklar:
+--
+
+- ## Çıkış gerilimi sabit tutulmalıdır
+--
+
+- ## Elektrik frekansı sabit (örn. 50 Hz) tutulmalıdır
+	
+---
+# Tek Başına Üretim
+--
+
+## Senkron generatörün sadece direnç yükü beslediğini varsayalım (pf=1)
+--
+
+## İkaz akımı sabit tutulursa değişken yükle birlikte çıkış gerilimi de değişecektir.
+
+---
+# Tek Başına Üretim
+
+### \\(I_f\\)'in sabit olması  \\(E_f\\)'in sabit olması, dolayısyla Vt'nin düşmesi anlamına gelir.
+
+
+<img src="./images/sync_unity_pf.png" alt="Drawing" style="width: 600px;"/>
+
+### [Animasyon](http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/stand_alone/sa_phasors.html)
+
+
+---
+# Tek Başına Üretim
+## Lagging pf
+
+
+<img src="./images/sync_lagging_pf.png" alt="Drawing" style="width: 450px;"/>
+
+### [Animasyon](http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/stand_alone/sa_phasors.html)
+
+
+---
+# Tek Başına Üretim
+## Leading pf
+
+<img src="./images/sync_leading_pf.png" alt="Drawing" style="width: 550px;"/>
+
+### Yük arttıkça, güç faktörünün kapasitifliğine göre çıkış geriliminin artması mümkündür
+
+---
+# Tek Başına Üretim
+
+### Değişken yük durumunda
+
+- ## Hem gerilim regülasyonu
+
+- ## Hem hız ve güç kontrolü yapılmalıdır.
+---
+
+## Gerilim regülasyonu ikaz akımının kontrolü ile yapılır.
+
+<img src="http://www.chinageneratoravr.com/wp-content/uploads/2012/03/15A-AVR.jpg" alt="Drawing" style="width: 550px;"/>
+
+## AVR: Automatic Voltage Regulator
+
+---
+### Hız Regülatörü (Speed Governor)
+
+
+<img src="https://api.intechopen.com/media/chapter/44431/media/image1_w.jpg" alt="Drawing" style="width: 600px;"/>
+
+### Yakıtın ya da itici kuvvetin kontrolü ile mekanik güç ve hız kontrolü yapılır
+
+
+---
+# Senkron Makinaların Paralel Çalıştırılması
+--
+
+<img src="http://people.ucalgary.ca/~aknigh/electrical_machines/images/synch/parallel_gens.gif" alt="Drawing" style="width: 700px;"/>
+---
+
+# Senkron Makinaların Paralel Çalıştırılması
+
+
+<img src="http://ndstudies.gov/energy/level2/files/level2/img/module04/iStock_000000730824Medium_hoover_dam_turbines-optimized.jpg" alt="Drawing" style="width:700px;"/>
+
+
+---
+## Paralel Çalışmaya Başlamak için Gerekli Koşullar
+
+<img src="./images/synch_parallel.png" alt="Drawing" style="width: 600px;"/>
+
+---
+## Paralel Çalışmaya Başlamak için Gerekli Koşullar
+--
+
+- ## Eşit çıkış gerilimi
+--
+
+- ## Frekansların aynı olması
+--
+
+- ## Faz farkı olmaması (Co-Phasal)
+--
+
+- ## Aynı faz sırasının kullanılması
+---
+
+## Bunların hepsinin aynı anda kontrol edilmesi
+--
+
+## : Senkronizasyon Lambaları
+
+<img src="https://2.bp.blogspot.com/-jYu7UJqhZEs/UVsJeEb2IdI/AAAAAAAADrE/4iLAs9ubjvg/s1600/Capture.PNG" alt="Drawing" style="width: 700px;"/>
+--
+
+### Endüstriyel Çözümler: [Synchronoscope](https://youtu.be/FI_07YVS3tY?t=34s), [Sync to Grid](https://www.youtube.com/watch?v=sgBzQaH5pWY)
+### [Şebeke Senkronizasyonu](https://www.youtube.com/embed/xGQxSJmadm0)
+
+
+---
+## Sonsuz Baraya Bağlanmış Senkron Generatör
+--
+
+# Sonsuz Bara:
+
+<img src="https://www.researchgate.net/profile/Abdul_Hameed_Kalifullah/publication/236009431/figure/fig1/AS:363465500839938@1463668336782/Single-Machine-connected-to-infinite-bus-system.png" alt="Drawing" style="width: 600px;"/>
+
+## Frekansı ve gerilimi her koşulda sabit kalan ideal elektrik kaynağı (barası)
+
+---
+## Sonsuz Baraya Bağlanmış Senkron Generatör
+
+<img src="http://people.ucalgary.ca/~aknigh/electrical_machines/images/synch/inf_bus_vf.gif" alt="Drawing" style="width: 700px;"/>
+
+## Sabit terminal voltajı ve elektrik frekansı
+
+---
+## Sonsuz Baraya Bağlanmış Senkron Generatör
+
+# \\(\vec{E\_f} = \vec{V\_t} \pm (R\_a + j X\_s)\vec{I\_a}\\)
+
+## \\(+\\): Generatör Modu
+
+## \\(-\\): Motor Motu
+
+## \\(V\_t\\): Sabit bara gerilimi (Sonsuz Bara)
+
+---
+## Sonsuz Baraya Bağlanmış Senkron Generatör
+
+## Sadelik için \\(R\_a\\)'yı ihmal edelim
+
+## Sabit Çıkış Gerilimi
+
+---
+# Sabit İkaz Akımı  \\(I_f\\),  Sabit  \\(E_f\\)
+
+
+## \\(\vec{E\_f} = \vec{V\_t} + j X\_s\vec{I\_a}\\)
+--
+
+## \\(\vec{I\_a} = \dfrac{\vec{E\_f}-\vec{V\_t}}{jX\_s} \\)
+--
+
+## [Animasyon](http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/sg_p_infinite_bus.html)
+---
+# Sabit Güç, Değişken İkaz Akımı
+--
+
+# Güç = 
+--
+ \\(P = 3 V\_t I\_a cos (\theta)\\) 
+--
+ 
+## \\(P\\)  sabit, \\(V\_t\\) sabit
+--
+
+## Dolayısıyla \\(I\_a cos (\theta)\\) sabit olmalıdır!
+--
+
+## Fazör Diagramından: \\(E\_f sin (\delta) = X\_s I\_a cos (\theta)\\)  = Sabit
+--
+
+## [Animasyon](http://people.ucalgary.ca/~aknigh/electrical_machines/synchronous/sg_p_infinite_bus.html)
+
+---
+# Senkron Generatörün Çıkış Gücü
+--
+
+## \\(E\_f sin (\delta) = X\_s I\_a cos (\theta)\\)
+
+### Not: Armatür direncindeki (R\_a\\) kayıplar ihmal edilmiştir
+--
+
+### Güç denklemi \\(E\_f\\) kullanılarak yazılabilir.
+--
+
+# \\(P = 3 V\_t  I\_a cos (\theta) \\)
+---
+# Senkron Generatörün Çıkış Gücü
+
+## \\(E\_f sin (\delta) = X\_s I\_a cos (\theta)\\)
+
+### Not: Armatür direncindeki (R\_a\\) kayıplar ihmal edilmiştir
+
+### Güç denklemi \\(E\_f\\) kullanılarak yazılabilir.
+
+# \\(P = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s}\\)
+
+---
+
+# Senkron Generatörün Çıkış Gücü
+
+# \\(P = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s}\\)
+--
+
+## Tork?
+--
+
+### Generatördeki kayıplar (bakır, nüve vb.) ihmal edildiğinde
+
+# \\(P = T \omega\_s\\)
+---
+
+# Senkron Makinanın Çıkış Torku
+
+# \\(T = \dfrac{P}{\omega\_s }\\)
+
+# \\(T = \dfrac{3 V\_t E\_f sin(\delta)}{X\_s \omega\_s }\\)
+---
+
+# Senkron Makinanın Çıkış Torku
+
+## \\(T = T\_{max} sin (\delta)\\)
+--
+
+## \\(T\_{max} = \dfrac{3 V\_t E\_f}{X\_s \omega\_s }\\)
+
+### Generatörün ürettiği tork doğrudan yük açısı ile ilişkilidir.
+---
+
+# Senkron Makinanın Çıkış Torku
+
+## \\(T\_{max} = \dfrac{3 V\_t E\_f}{X\_s \omega\_s }\\)
+
+<img src="http://i.stack.imgur.com/DmWrO.png" alt="Drawing" style="width: 450px;"/>
+
+---
+# Tork vs Yük Açısı
+
+## \\(\delta > 0 \\): Generatör Modu
+--
+
+## \\(\delta < 0 \\): Motor Modu
+--
+
+## \\(\delta = \pm \dfrac{\pi}{2} \\): Maksimum tork açısı
+
+---
+# Tork vs Yük Açısı
+
+<img src="./images/synchronous_load_angle.png" alt="Drawing" style="width: 700px;"/>
+---
+
+## Bu sunumu aşağıdaki linkten indirebilirsiniz:
+
+## [keysan.me/egen](http://keysan.me/egen)
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
