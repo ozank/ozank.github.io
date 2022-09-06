@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EGEN - Generatör Tasarım Eğitimleri</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+### EÜAŞ - ODTÜ Elektrik EGEN Generatör Tasarımı ve İmalatı Projesi
+
+
+# Elektrik Makina Tasarımı Temelleri
+
+## Ozan Keysan
+
+[keysan.me](http://keysan.me)
+
+Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+### Bir elektrik makinası tasarlarken neleri bilmek gerekir?
+--
+
+- ### Motor/Generatör türü ve kullanım amacı
+--
+
+- ### Anma Gücü / Gerilim Seviyesi
+--
+
+- ### Anma Hızı
+--
+
+- ### Anma frekansı/Faz Sayısı
+--
+
+- ### Çalışma Döngüsü
+--
+
+- ### Çalışma Ortamı/Mekanik Kısıtlar
+--
+
+- ### Ekonomik Limitler/Verim/Ömür Beklentisi
+---
+# Frame Sizes
+
+<img src="./images/ee564/frame_size.jpg" alt="Drawing" style="width: 750px;">
+
+[More info](http://www.motology.co.th/download/motors/%282%29%20Standard%20Motor%20catalog.pdf)
+
+---
+
+<img src="./images/ee564/frame_size2.jpg" alt="Drawing" style="width: 500px;">
+
+
+---
+# Tasarım Prosedürü
+--
+
+
+- ## Manyetik ve Elektrik Yüklenme Değerlerinin Belirlenmesi
+--
+
+- ## Rotor Çapı ve Eksenel Uzunluğunun Belirlenmesi
+--
+
+- ## Hava aralığının belirlenmesi
+--
+
+- ## Sargı türü, bobin tur sayısı vb. belirlenmesi
+
+---
+# Tasarım Prosedürü
+
+- ## Ankuş, diş kalınlık, nüve malzeme vb. parametrelerin belirlenmesi
+--
+
+- ## Makine performans değerlerinin (verim, ağırlık, maliyet) hesaplanması
+--
+
+- ## Birçok iterasyonla optimum tasarıma ulaşılması
+
+
+---
+
+# Elektrik makinalarında tork nerde üretilir?
+--
+
+### Maxwell Stres Tensorü
+
+
+## \\(\sigma_F = \dfrac{1}{2}\mu_0 H^2\\)
+
+veya 
+
+## \\(\sigma_F = \dfrac{1}{2\mu_0} B^2\\)
+---
+
+# Elektrik makinalarında tork nerde üretilir?
+
+## Rotor hangi yöne dönüyordur?
+--
+
+<img src="./images/ee564/maxwell_tensor.png" alt="Drawing" style="width: 750px;">
+
+
+---
+# Rotorda Kayma Stresi (Shear Stress)
+
+
+--
+## Elektrik Makinaları için Ortalama Değerler
+
+- ### Endüstriyel Motorlar (<1 kW): 0.7 - 2 kPa 
+
+- ### Endüstriyel Motorlar (>1 kW): 4 - 15 kPa
+
+- ### Yüksek Performans Endüstriyel Servo Motorlar: 10 - 20 kPa
+
+- ### Sıvı Soğutmalı Motorlar: 20 - 100 kPa
+
+[Detaylı bilgi](http://www.eleceng.adelaide.edu.au/research/power/pebn/pebn009%20sizing%20of%20electrical%20machines.pdf)
+---
+# Elektriksel - Manyetik Yükleme
+
+--
+
+## Spesifik Manyetik Yükleme (T)
+
+--
+
+## Bir kutup üzerindeki ortalama manyetik akı yoğunluğu
+--
+
+## \\(\bar{B} = \dfrac{p \Phi_p}{\pi D_i L}\\)
+
+
+[Detaylı bilgi](http://www.eleceng.adelaide.edu.au/research/power/pebn/pebn009%20sizing%20of%20electrical%20machines.pdf)
+
+---
+## Ortalama Akı Yoğunluğu Değerleri
+
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/magnetic_loading.png" alt="Drawing" style="width: 800px;"/>
+---
+
+## Ortalama Akı Yoğunluğu Değerleri
+
+<img src="./images/typical_magnetic_loading.png" alt="Drawing" style="width: 800px;"/>
+
+Kaynak: "Traditional Design of Electrical Machines", Slide-12
+
+---
+# Spefisik Elektrik Yükleme (kA/m)
+--
+
+## Hava aralığında metre başına taşınan akım miktarı
+--
+
+## \\(\bar{A} = \dfrac{ N\_{turn,slot} I Q}{\pi D\_i}\\)
+--
+
+### \\(N\_{turn,slot}\\): Ankuş başına tur sayısı
+
+### \\(Q\\): Ankuş sayısı
+
+### \\(I\\): Kablo başına RMS akımı
+
+---
+## Ortalama Spesifik Elektrik Yükleme Değerleri
+
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/electric_loading.png" alt="Drawing" style="width: 800px;"/>
+
+---
+## Ortalama Kayma Stresi Değerleri
+
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/tangential_stress.png" alt="Drawing" style="width: 800px;"/>
+
+
+---
+## Tork (Devrilme Momenti) ve Kayma Stresi
+--
+
+## Tork = \\( \sigma\_{tan} r\_r S\_r\\)
+--
+
+## \\(r\_r\\): Rotor Yarıçapı (m)
+
+## \\(S\_r\\): Rotor Yüzey Alanı (m2)
+
+## \\(S\_r = (2 \pi r\_r l') \\)
+
+
+---
+
+## Tork (Devrilme Momenti) ve Kayma Stresi
+
+##  \\( T = \sigma\_{tan} r\_r (2 \pi r\_r l')\\)
+--
+
+##  \\( T = \sigma\_{tan} 2 \pi r\_r^2 l'\\)
+--
+
+##  \\( T = 2 \sigma\_{tan} V\_r \\)
+
+##  \\( V\_r = \pi r\_r^2 l' \\) : Rotor Hacmi
+
+## Elektrik makinalarının anma torku hacmi (ağırlığı) ve kayma stresiyle (dolayısıyla elektrik ve manyetik yüklenmesinin çarpımıyla) orantılıdır.
+
+---
+# Spesifik Makine Sabiti (C)
+
+
+--
+
+### \\(S\_i = m E\_m I\_s\\)
+
+### \\(S\_i\\): Anma Gücü (kVA)
+
+### \\(m\\): Faz Sayısı
+
+### \\(E\_m\\): Endüklenen Faz Gerilimi
+
+### \\(I\_s\\): Stator Faz Akımı
+
+---
+# Spesifik Makine Sabiti (C)
+
+
+### \\(S\_i = m \dfrac{1}{\sqrt{2}} \omega N\_s k\_{w1} \hat{\Phi}\_m I\_s\\)
+--
+
+### \\(S\_i = m \dfrac{1}{\sqrt{2}} \omega N\_s k\_{w1} \hat{\Phi}\_m \dfrac{A \pi D}{2 m N\_s}\\)
+--
+
+### \\(\omega = 2 \pi p n\_{syn}\\)
+
+---
+# Spesifik Makine Sabiti (C)
+
+--
+
+### \\(S\_i =  \dfrac{1}{\sqrt{2}} 2 \pi p n\_{syn} k\_{w1} \dfrac{\pi D }{2p}\dfrac{2}{\pi} \hat{B} l'\dfrac{A \pi D}{2}\\)
+--
+
+### \\(S\_i =  \dfrac{\pi^2}{\sqrt{2}} n\_{syn} k\_{w1} A \hat{B} D^2 l'\\)
+--
+
+### \\(S\_i =  C  D^2 l' n\_{syn}\\)
+
+### \\(C =  \dfrac{\pi^2}{2}  k\_{w1} \hat{A} \hat{B} \\)
+
+---
+# Spesifik Makine Sabiti (C)
+
+### \\(S\_i =  C  D^2 l' n\_{syn}\\)
+
+### \\(D^2 l'\\): Rotor Hacmi (m3)
+
+### C: Spesifik Makine Sabiti (C)
+
+### \\(C =  \dfrac{\pi^2}{2}  k\_{w1} \hat{A} \hat{B} \\)
+---
+# \\(C\_{mech}\\)
+
+<img src="./images/Cmech.png" alt="Drawing" style="width: 600px;"/>
+
+
+
+---
+
+# Çap - Eksenel Uzunluk Oranı
+--
+
+
+# \\(\chi = \dfrac{L'}{D}\\)
+
+---
+
+# Çap - Eksenel Uzunluk Oranı
+--
+
+<img src="./images/ee564/aspect_ratio.png" alt="Drawing" style="width: 600px;"/>
+
+---
+
+# Tipik Oranlar
+--
+
+### Asenkron Makineler:
+
+### \\(\chi \approx \dfrac{\pi}{2p} \sqrt[3]{p}\\\)
+
+### \\(p\\): kutup çift sayısı
+--
+
+### Senkron Makineler:
+
+### \\(\chi \approx \dfrac{\pi}{4p} \sqrt{p}\\\)
+
+---
+
+# Rotor Çapı ve Dış Çap arasındaki ilişki?
+--
+
+<img src="./images/varying_number_of_poles.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Rotor Çapı ve Dış Çap arasındaki ilişki?
+--
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#bbb;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:32px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#bbb;color:#594F4F;background-color:#E0FFEB;}
+.tg th{font-family:Arial, sans-serif;font-size:32px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#bbb;color:#493F3F;background-color:#9DE0AD;}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-031e">Kutup Sayısı</th>
+    <th class="tg-031e">2</th>
+    <th class="tg-031e">4</th>
+    <th class="tg-031e">6</th>
+    <th class="tg-031e">8</th>
+    <th class="tg-031e">10</th>
+    <th class="tg-szh5">12</th>
+  </tr>
+  <tr>
+    <td class="tg-031e">Do/Di</td>
+    <td class="tg-031e">2 <br></td>
+    <td class="tg-031e">1.88</td>
+    <td class="tg-031e">1.78</td>
+    <td class="tg-031e">1.66</td>
+    <td class="tg-031e">1.54</td>
+    <td class="tg-031e">1.43</td>
+  </tr>
+</table>
+
+
+Kaynak: T.Miller - Electric Machine Design Course, Lecture-5, Slide4
+
+
+
+
+---
+# Sonraki Adımlar?
+--
+
+<img src="./images/ee564/design_process.png" alt="Drawing" style="width: 800px;"/>
+
+
+---
+
+## Bu sunumu aşağıdaki linkten indirebilirsiniz:
+
+## [keysan.me/egen](http://keysan.me/egen)
+
+---
+
+## Example:
+--
+
+### Determine the main dimensions for a 30 kW, 690 V, 50 Hz four-pole, three-phase SCIG.
+
+--
+
+### Choose Cmech = 150 kW s/m3
+--
+
+### \\(\chi \approx \dfrac{\pi}{2p} \sqrt[3]{p}\\\)
+--
+
+### \\(\chi \approx \dfrac{\pi}{4} \sqrt[3]{2} = 0.9895 \approx 1\\\)
+
+---
+
+### \\(P\_{mech}(kW) = C\_{mech} D² l n\_{syn}(Hz)\\)
+
+### \\( D = \sqrt[3]{\dfrac{P\_{mech}(kW)}{\chi C\_{mech} n\_{syn}(Hz)}} = \sqrt[3]{\dfrac{30}{ 1 \, 150 \, 25}} \approx 200 mm \\)
+
+--
+### Tangential Stress if the speed is 1474 rpm
+--
+
+### \\(T=\dfrac{30k}{2\pi 1454/60}= 194.4 \\) Nm
+--
+
+### \\(\sigma = \dfrac{T}{r \, S\_r} = \dfrac{2 \, 194.4}{\pi 0.2² 0.2} = 15.5 \\) kPa
+
+---
+# Stator Slot Pitch:
+--
+
+- ## Induction Machines and small PMSMs:  7-45 mm
+--
+
+- ## Synchronous Machines and large PMSMs:  14-75 mm
+--
+
+- ## DC Machines:  10-30 mm
+--
+
+### Tooth thickness can be initially assumed as the half of the slot pitch
+--
+
+### Slot pitch gets bigger as the power rating of the machine increases
+
+---
+## Example:
+
+### Define the rough dimensions, and a select suitable stator windings for the 30 kW, 4-pole induction machine.
+--
+
+### D= 200 mm, L= 200 mm, Stator circumference = 628 mm
+--
+
+### Assume q= 2, \\(N\_{slot} = 4 x 3 x 2 =24 \\)
+
+### Tooth thickness: \\(\tau\_{teeth} = 0.5 \dfrac{628}{24} =13 \\)mm
+
+---
+## Example:
+
+### Define the rough dimensions, and a select suitable stator windings for the 30 kW, 4-pole induction machine.
+
+
+### D= 200 mm, L= 200 mm, Stator circumference = 628 mm
+
+
+### Assume q= 3, \\(N\_{slot} = 4 x 3 x 3 =36 \\)
+
+### Tooth thickness: \\(\tau\_{teeth} = 0.5 \dfrac{628}{36} =8 \\)mm
+
+---
+## Example:
+
+### Define the rough dimensions, and a select suitable stator windings for the 30 kW, 4-pole induction machine.
+
+### D= 200 mm, L= 200 mm, Stator circumference = 628 mm
+
+### Assume q= 4, \\(N\_{slot} = 4 x 3 x 4 =48 \\)
+
+### Tooth thickness: \\(\tau\_{teeth} = 0.5 \dfrac{628}{48} =6.5 \\)mm
+
+---
+## Example:
+
+### Define the rough dimensions, and a select suitable stator windings for the 30 kW, 4-pole induction machine.
+
+### D= 200 mm, L= 200 mm, Stator circumference = 628 mm
+
+### q= 3 seems the best option
+
+### Coil span: 9 slots
+
+### A 8/9 or 7/9 short-pitched winding can be used.
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>

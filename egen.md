@@ -12,6 +12,8 @@ permalink: /egen/index.html
 - [Senkron Makinalara Giriş](/presentations/egen_senkron_makina_giris.html)
 - [Senkron Makinalar Çalışma Modları](/presentations/egen_senkron_makina_operasyon.html)
 - [Senkron Makinalar V-Eğrileri, Çalışma Limitleri](/presentations/egen_senkron_v_curve.html)
+- [Çıkık Kutuplu Senkron Generatörler](/presentations/egen_senkron_cikik_kutup.html)
+- [Makina Tasarım Temelleri](/presentations/egen_makina_tasarimi_temelleri.html)
 
 ## Eğitim Videoları
 
