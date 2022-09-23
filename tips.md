@@ -29,6 +29,9 @@ Right](http://scholar.harvard.edu/files/danielgilbert/files/if-money-doesnt-make
 * [Pricing Experiments You Might Not Know, But Can Learn From](https://conversionxl.com/blog/pricing-experiments-you-might-not-know-but-can-learn-from/)
 * [How to be more productive without forcing yourself](https://www.deprocrastination.co/blog/how-to-be-productive-without-forcing-yourself)
 * [A day at the park](http://kiriakakis.net/comics/mused/a-day-at-the-park)
+* [Bits of Advice I Wish I Had Known](https://kk.org/thetechnium/103-bits-of-advice-i-wish-i-had-known/)
+* [What is Money, Anyway?](https://www.lynalden.com/what-is-money/)
+* []()
 
 ## Software Tips
 

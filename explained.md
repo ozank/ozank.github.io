@@ -13,6 +13,9 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 * [Circles, Sines and Signals](http://jackschaedler.github.io/circles-sines-signals/)
 * [Visual Math Concepts](http://math.stackexchange.com/questions/733754/visually-stunning-math-concepts-which-are-easy-to-explain)
 * [Why units are important](http://motherboard.vice.com/read/the-time-nasa-lost-a-mars-orbiter-because-of-a-metric-system-mixup)
+* [Euler’s Formula: A Complete Guide](https://mathvault.ca/euler-formula/)
+* [The Scientist and Engineer's Guide to
+Digital Signal Processing](https://www.dspguide.com/pdfbook.htm)
 
 ### Animations
 
@@ -50,6 +53,9 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 * [An Intuitive Guide to Linear Algebra](http://betterexplained.com/articles/linear-algebra-guide/)
 * [Eigenvectors and Eigenvalues](http://setosa.io/ev/eigenvectors-and-eigenvalues/)
 * [Intuitive Math](https://intuitive-math.club/)
+* [You need to know what right-half-plane zeros are](https://jbconsulting.substack.com/p/you-need-to-know-what-right-half?s=r)
+* [Linear Algebra Book](https://hefferon.net/linearalgebra/)
+
 
 ### Probability
 
@@ -69,6 +75,10 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 * [Electromagnetism and Matter](http://www.feynmanlectures.caltech.edu/II_toc.html)
 * [Quantum Mechanics](http://www.feynmanlectures.caltech.edu/III_toc.html)
 * [Faraday's Cage](https://sinews.siam.org/DetailsPage/TabId/900/ArtMID/2243/ArticleID/757/Surprises-of-the-Faraday-Cage.aspx)
+
+### Motor Control
+
+* [Animation of Space Vector and abc for Unbalanced Three-Phase System](https://colab.research.google.com/drive/1Mu9b2B_rRV66oPa_sWhUMhV0cPDs1QDc?usp=sharing#scrollTo=fSG6a4gITYDX)
 
 ### Mechanics
 

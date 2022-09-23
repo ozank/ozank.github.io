@@ -8,6 +8,8 @@ For more information about current project and theses, please visit [PowerLab](h
 
 ## Completed MSc Theses
 
+- Enes Ayaz, *Concurrent Operation of Wireless Power Transfer Based Contactless Slip Ring and Motor Drive System With a Single Converter*, 2022 
+- Furkan Tokgöz, *Analytical Modelling and Multi-objective Optimization of Axial-flux Permanent Magnet Machine With Various PCB Stators and Development of a GaN Switched Integrated Motor Drive PCB Motor*, 2022
 - Hakan Saraç, *Fault Tolerant Control of a Dual Three-Phase Electrical Machine with Predictive Current Control and Reduced Computation Burden*, 2022
 - Nail Tosun, *Investigation of Velocity Skin Effect of Convex Railgun Structure With 3D Moving Mesh*, 2021
 - Göksenin Hande Bayazıt, *Design and Optimization of a Multiphase Fault Tolerant Permanent Magnet Synchronous Machine*, 2021
@@ -44,9 +46,8 @@ Magnet Generator For Wind Turbines*,  [PDF](http://etd.lib.metu.edu.tr/upload/12
 
 ## Ongoing MSc Theses
 
-- Furkan Tokgöz, *Design and Comparison of PCB Motor Winding Configurations"
-- Enes Ayaz, *GaN Applications of Wireless Power Transfer for Wind Turbines*
 - Ogün Altun, *Design of a 3-level SiC Boost Converter for a Grid Connected PV String Inverter*
 - Görkem Gülletutan, *Lamination Modeling for the Analysis of Electromagnetic Launchers*
 - Yunus Çay, *Partial Power Transfer Converter Design and Implementation for Solar Power System*
-
+- M. Samet Yakut, TBD
+- A. Halis Sabırlı, TBD
