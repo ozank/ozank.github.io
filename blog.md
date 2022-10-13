@@ -6,6 +6,7 @@ permalink: /blog/index.html
 
 ## Articles on Random Stuff
 
+* [How to track your progress in our group?](blog/weekly_meetings)
 * [How to join to METU PowerLab?](/blog/pre-powerlab)
 * [PowerLab 101-How to start your postgraduate study?](/blog/powerlab101)
 * [TÜBİTAK ARDEB İstatistikleri](/blog/ardeb)
