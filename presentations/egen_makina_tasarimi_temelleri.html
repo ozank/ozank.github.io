@@ -97,8 +97,319 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
 
-# Elektrik makinalarında tork nerde üretilir?
+# Elektrik makinalarında tork nasıl üretilir?
+
+---
+# Lorenz Kuvveti
+
+
+## \\(\vec{F} = q \vec{v} \times \vec{B}\\)
 --
+
+### veya kuvvet yoğunluğu cinsinden (\\(N/m^3\\))):
+## \\(\vec{f} = \rho \vec{v} \times \vec{B} = \vec{J} \times \vec{B}\\)
+
+
+#### \\( \rho \\): Şarj yoğunluğu (C/m3) , \\( \vec{v} \\): hız
+
+---
+# Lorenz Kuvveti
+
+## \\(\vec{F} = \vec{J} \times \vec{B}\\)
+
+![](http://sharkphysics.weebly.com/uploads/8/5/9/5/8595301/265734720.png?452)
+---
+# Lorenz Kuvveti Uygulamaları
+
+- ### [Force Demo](http://www.youtube.com/watch?v=K9ks_DNPAFQ)
+- ### [Homopolar Motor](http://www.youtube.com/watch?v=kJKuNcgbW-o)
+- ### [Wolrd's Simplest Electric Train](https://www.youtube.com/watch?v=J9b0J29OzAU)
+
+- ### [Navy Railgun](https://www.youtube.com/watch?v=NmFeRYPNP88)
+- ### [Aselsan Tufan](https://www.youtube.com/watch?v=O5GtuQk3t44)
+- ### [Aselsan Tufan-2](https://www.youtube.com/watch?v=MxloiA5mSSk)
+
+---
+# Hangi yöne döner? Nasıl hareket eder?
+
+<img src="./images/emec_ex1.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Bu mekanizma nasıl hareket eder?
+
+<img src="./images/emec_double_relay.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Elektromekanik Sistemler
+
+
+<img src="./images/lossless_magnetic_system.png" alt="Drawing" style="width: 700px;"/>
+
+### Kayıpsız bir sistemde:
+### Elektrik Enerji Girdisi = Depolanan Manyetik Enerji + Mekanik İş
+---
+
+# Elektromekanik Sistemler
+
+### Elektrik Enerji Girdisi = Depolanan Manyetik Enerji + Mekanik İş
+
+### \\(\Delta W\_{elec} = \Delta W\_{mag} + \Delta W\_{mech}\\)
+--
+
+### \\( Vi\, \mathrm{d}t = i \, \mathrm{d}\lambda = \Delta W\_{magnetic} +  f_{mech} \, \mathrm{d}x\\)
+--
+
+## \\( \Delta W\_{magnetic} =  i \, \mathrm{d}\lambda -  f_{mech} \, \mathrm{d}x\\)
+
+---
+
+# Depolanan Manyetik Enerji
+
+## \\(W\_{stored} = \int_0^\lambda i(\lambda) d\lambda \\)
+--
+
+## veya B-H karakteristiğinden:
+
+## \\(W\_{stored} = \int \_{volume } (\int_0^B H dB) \\)
+
+#### Lineer Sistemlerde:
+## W(magnetic) = \\(\dfrac{1}{2} \lambda i = \dfrac{1}{2} L i^2 =\dfrac{1}{2L} \lambda^2 \\)
+
+
+---
+# Singly-Excited Electromechanical System
+
+<img src="./images/emec_relay.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Depolanan Enerjiden Kuvvet
+
+<img src="./images/DSC09854-SCottish-festival.jpg" alt="Drawing" style="width: 600px;"/>
+
+--
+
+## Enerjinin pozisyona göre türevi kuvveti verir
+
+---
+# Depolanan Enerjiden Kuvvet
+
+### \\(F = - \dfrac{\partial}{\partial x} (\dfrac{\lambda^2}{2 L(x)}) =\dfrac{ \lambda^2}{2 L(x)^2} (\dfrac{d L(x)}{dx}) \\)
+--
+
+### \\(F = \dfrac{i^2}{2} \dfrac{d L(x)}{dx} \\)
+
+
+---
+# Elektromekanik Kuvvet
+
+### Elektromekanik Sistemler:
+
+
+- ## Manyetik akı sabitken depolanan manyetik enerjiyi (\\(W\_{magnetic}\\)) azaltmaya,
+--
+
+- ## Endüktansı arttırmaya
+--
+
+- ## Relüktansı (\\(L=N^2/R\\)) azaltmaya çalışır!
+
+---
+## Mekanik Güç ve Enerji:
+
+## Lineer Sistemler:
+--
+
+##  \\(P = F v = F \dfrac{dx}{dt}\\) Watt
+##  \\(W = \int P dt = F x \\) Joule
+## \\(F = m a = m \dfrac{dv}{dt}\\)
+---
+## Mekanik Güç ve Enerji:
+
+## Dönel Sistemler:
+
+### \\(P=T \omega = T \dfrac{d\theta}{dt} \\) Watt
+### \\(W=  \int P dt = T \theta \\) Joule
+### \\(T=J \dfrac{d\omega}{dt} \\) Watt
+
+### J: Rotational Inertia (\\(kgm^2\\))
+---
+
+# Bu sistemde hareket olur mu?
+
+<img src="./images/single_phase_reluctance_motor.png" alt="Drawing" style="width: 700px;"/>
+---
+# Tork nasıl bulunur?
+
+<img src="./images/single_phase_reluctance_motor.png" alt="Drawing" style="width: 700px;"/>
+---
+# Dönel Sistemler:
+
+
+## Manyetik enerjinin türevi pozisyona göre değil, açıya göre \\( \theta \\) alınır.
+--
+
+### \\(T = - \dfrac{1}{2}\Phi^2\dfrac{d R(\theta)}{d \theta} |\_{\Phi = constant}\\) 
+
+
+### \\(T = \dfrac{1}{2}I^2\dfrac{d L(\theta)}{d \theta} |\_{i = constant}\\) 
+
+---
+# Sürekli dönüş nasıl elde edilir?
+
+<img src="./images/single_phase_reluctance_motor.png" alt="Drawing" style="width: 700px;"/>
+---
+
+## Tek faz relüktans motorlar
+
+<img src="./images/ee564/reluctance_motor.gif" alt="Drawing" style="width: 500px;"/>
+
+### [Magnetorquer](https://blog.satsearch.co/2019-08-21-magnetorquers-an-overview-of-magnetic-torquer-products-available-on-the-global-marketplace-for-space.html)
+---
+## Tek faz relüktans motor
+
+<img src="./images/ee361/step_motor.gif" alt="Drawing" style="width: 400px;"/>
+
+### [Magnetic Flux](https://www.youtube.com/watch?v=hDJnLt7cBTY),  [Micro-stepping for higher accuracy](https://www.youtube.com/watch?v=eyqwLiowZiU)
+
+---
+## Tek faz relüktans motor
+
+<img src="http://www.motioncontroltips.com/wp-content/uploads/2016/12/switched-reluctance-motor-with-iron-only-rotor-copy.jpg" alt="Drawing" style="width: 600px;"/>
+
+### [Detaylı Bilgi](http://electrical-engineering-portal.com/characteristics-and-work-principles-of-switched-reluctance-sr-motor)
+---
+# Relüktans Motorlar
+
+<img src="http://www.abb-conversations.com/wp-content/uploads/2012/11/ABB-IE4-Synchronous-Reluctance-Motor-SynRM.jpg" alt="Drawing" style="width: 700px;"/>
+
+--
+
+- ### To maximize the inductance, to minimize the reluctance (\\(L=N^2/R\\))
+
+- ### To decrease the magnetic energy (increase co-energy)
+
+## Rotational systems are similar to linear systems, but take the derivative of magnetic energy in terms of \\(\theta\\) instead of \\(x\\).
+
+
+
+---
+### Bu sistemdeki tork nedir?
+## Silindirik Rotor, Silindirik Stator
+
+<img src="./images/round_rotor_stator.jpg" alt="Drawing" style="width: 300px;"/>
+---
+### Bu sistemdeki tork nedir?
+## Silindirik Rotor, Asimetrik Stator
+
+<img src="./images/salient_stator.jpg" alt="Drawing" style="width: 300px;"/>
+---
+### Bu sistemdeki tork nedir?
+## Çıkık kutup rotor, Silindirik Stator
+
+<img src="./images/salient_rotor.jpg" alt="Drawing" style="width: 300px;"/>
+---
+# Çoklu Uyartılı Sistemler
+
+## Eğer iki bobin de uyarılırsa ne olur?
+
+<img src="./images/multiply_excited.png" alt="Drawing" style="width: 700px;"/>
+
+---
+# Çoklu Uyartılı Sistemler
+
+<img src="./images/multiply_excited_block.jpg" alt="Drawing" style="width: 700px;"/>
+--
+
+---
+# Karşılıklı Endüktans
+
+<img src="https://www.electrical4u.com/images/february16/1456131982.gif" alt="Drawing" style="width: 600px;"/>
+
+
+---
+# Karşılıklı Endüktans
+
+<img src="https://www.electrical4u.com/images/february16/1456131982.gif" alt="Drawing" style="width: 300px;"/>
+
+## Toplam depolanan enerji:
+
+## \\( W = \dfrac{1}{2} L\_{11}i\_1^2 + \dfrac{1}{2} L\_{22}i\_2^2 +  M i\_1 i\_2\\)
+---
+
+# Çoklu Sistemlerde Tork
+## Hala manyetik enerjinin türevine bağlıdır
+--
+
+### \\(T\_{mech}= \dfrac{1}{2} \dfrac{dL\_{11}}{d\theta}i\_1^2 + \dfrac{1}{2} \dfrac{dL\_{22}}{d\theta}i\_2^2\\)
+### \\(\quad\quad\quad + \dfrac{dM}{d\theta} i\_1 i\_2\\)
+
+
+### [Contactless Surgery](https://www.youtube.com/watch?v=ocE3MjF77Wk) [More information](http://robohub.org/minimally-invasive-eye-surgery-on-the-horizon-as-magnetically-guided-microbots-move-toward-clinical-trials/)
+---
+## Silindirik Rotor, Silindirik Stator
+<img src="./images/round_rotor_stator.jpg" alt="Drawing" style="width: 300px;"/>
+--
+
+### \\(T=i\_1 i\_2 \dfrac{\partial M}{\partial \theta}\\) : (\\(L\_{11}\\),\\(L\_{22}\\) sabit)
+---
+## Silindirik Rotor, Asimetrik Stator
+
+<img src="./images/salient_stator.jpg" alt="Drawing" style="width: 300px;"/>
+--
+
+### \\(T=\dfrac{1}{2}i\_2^2 \dfrac{\partial L\_{22}}{\partial \theta} + i\_1 i\_2 \dfrac{\partial M}{\partial \theta}\\) : (\\(L\_{11}\\) sabit)
+---
+## Çıkık Kutup Rotor, Silindirik Stator
+
+<img src="./images/salient_rotor.jpg" alt="Drawing" style="width: 300px;"/>
+--
+
+### \\(T=\dfrac{1}{2}i\_1^2 \dfrac{\partial L\_{11}}{\partial \theta} + i\_1 i\_2 \dfrac{\partial M}{\partial \theta}\\) : (\\(L\_{22}\\) sabit)
+
+---
+## Çıkık Kutup Rotor, Silindirik Stator
+
+<img src="./images/salient_rotor.jpg" alt="Drawing" style="width: 300px;"/>
+--
+
+### \\(T=\dfrac{1}{2}i\_1^2 \dfrac{\partial L\_{11}}{\partial \theta} + i\_1 i\_2 \dfrac{\partial M}{\partial \theta}\\) : (\\(L\_{22}\\) sabit)
+
+---
+# Silindirik Rotor & Çıkık Kutup Rotor
+--
+
+<img src="http://1.bp.blogspot.com/-abfAw-qVR6g/T9il-2u0-wI/AAAAAAAABo0/gg53eqWmfyg/s1600/stator.png" alt="Drawing" style="width: 600px;"/>
+
+### Çıkık Kutup: Hava aralığı dolayısıyla relüktans pozisyona bağlıdır.
+
+---
+
+# Çıkık Kutup Senktron Makineler
+
+<img src="https://www.linquip.com/blog/wp-content/uploads/2020/06/salient-pole-rotor.jpg" alt="Drawing" style="width: 600px;"/>
+
+### Hava aralığı sabit değildir.
+
+### Dolayısıyla hem senkron hem relüktans tork bileşenleri bulunur.
+
+---
+## Çıkık Kutup Makinelerde Tork
+
+<img src="./images/power_salient.png" alt="Drawing" style="width: 550px;"/>
+
+
+### \\(T=\dfrac{1}{2}i\_1^2 \dfrac{\partial L\_{11}}{\partial \theta} + i\_1 i\_2 \dfrac{\partial M}{\partial \theta}\\) : (\\(L\_{22}\\) constant)
+
+---
+
+# Elektrik makinalarında tork nerde üretilir?
+
+## Rotor hangi yöne döner?
+--
+
+<img src="./images/ee564/maxwell_tensor.png" alt="Drawing" style="width: 750px;">
+
+---
 
 ### Maxwell Stres Tensorü
 
@@ -108,16 +419,6 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 veya 
 
 ## \\(\sigma_F = \dfrac{1}{2\mu_0} B^2\\)
----
-
-# Elektrik makinalarında tork nerde üretilir?
-
-## Rotor hangi yöne dönüyordur?
---
-
-<img src="./images/ee564/maxwell_tensor.png" alt="Drawing" style="width: 750px;">
-
-
 ---
 # Rotorda Kayma Stresi (Shear Stress)
 
