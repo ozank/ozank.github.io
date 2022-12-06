@@ -22,29 +22,33 @@ Tüm ders videolarına topluca [EGEN - YouTube Çalma Listesinden](https://www.y
 
 Eğitimlerde kullanılan sunum dosyalarına aşağıdaki linklerden ulaşılabilir.
 
+### Elektrik Makinaları Teorisi ve Tasarımı (Aralık 2022)
 
-### Elektromanyetik ve Elektriksel Tasarım
+- [Elektrik Makina Tasarımı Temelleri](http://keysan.me/presentations/egen_makina_tasarimi_temelleri.html)
 
-- [Senkron Makinalara Giriş](/presentations/egen_senkron_makina_giris.html)
-- [Senkron Makinalar Çalışma Modları](/presentations/egen_senkron_makina_operasyon.html)
-- [Senkron Makinalar V-Eğrileri, Çalışma Limitleri](/presentations/egen_senkron_v_curve.html)
-- [Çıkık Kutuplu Senkron Generatörler](/presentations/egen_senkron_cikik_kutup.html)
-- [Makina Tasarım Temelleri](/presentations/egen_makina_tasarimi_temelleri.html)
-- [Generatörlerde Nüve Seçimi](/presentations/files/egen/egen_nuve_secimi.pdf)
-- [Generatörlerde Bobin Tasarımı](/presentations/files/egen/egen_bobin_tasarimi.pdf)
 
-## Yüksek Gerilim Tesleri ve Malzemeler
+### Elektromanyetik ve Elektriksel Tasarım (Eylül 2022)
 
-- [Elektrik İzolasyon Malzemeleri](/presentations/files/egen/egen_elektrik_izolasyon.pdf)
-- [Yüksek Gerilim Tesleri](/presentations/files/egen/egen_izolasyon_testleri.pdf)
+- [Senkron Makinalara Giriş](http://keysan.me/presentations/egen_senkron_makina_giris.html)
+- [Senkron Makinalar Çalışma Modları](http://keysan.me/presentations/egen_senkron_makina_operasyon.html)
+- [Senkron Makinalar V-Eğrileri, Çalışma Limitleri](http://keysan.me/presentations/egen_senkron_v_curve.html)
+- [Çıkık Kutuplu Senkron Generatörler](http://keysan.me/presentations/egen_senkron_cikik_kutup.html)
+- [Makina Tasarım Temelleri](http://keysan.me/presentations/egen_makina_tasarimi_temelleri.html)
+- [Generatörlerde Nüve Seçimi](http://keysan.me/presentations/files/egen/egen_nuve_secimi.pdf)
+- [Generatörlerde Bobin Tasarımı](http://keysan.me/presentations/files/egen/egen_bobin_tasarimi.pdf)
 
-### Isıl Tasarım
+## Yüksek Gerilim Tesleri ve Malzemeler (Eylül 2022)
 
-- [Isıl Sistem Modellemenin Temelleri](/presentations/files/egen/egen_isil_tasarim_1.pdf)
-- [Elektrik Makinalarında Soğutma Sistemleri](/presentations/files/egen/egen_isil_tasarim_2.pdf)
+- [Elektrik İzolasyon Malzemeleri](http://keysan.me/presentations/files/egen/egen_elektrik_izolasyon.pdf)
+- [Yüksek Gerilim Tesleri](http://keysan.me/presentations/files/egen/egen_izolasyon_testleri.pdf)
 
-## Yapısal Tasarım
+### Isıl Tasarım (Eylül 2022)
 
-- [Yapısal Sisteme Girişi](/presentations/files/egen/egen_yapisal_giris.pdf)
-- [Isıl Sistem Modellemenin Temelleri](/presentations/files/egen/egen_yapisal_baglanti?elemanlari.pdf)
-- [Isıl Sistem Modellemenin Temelleri](/presentations/files/egen/egen_yapisal_analiz.pdf)
+- [Isıl Sistem Modellemenin Temelleri](http://keysan.me/presentations/files/egen/egen_isil_tasarim_1.pdf)
+- [Elektrik Makinalarında Soğutma Sistemleri](http://keysan.me/presentations/files/egen/egen_isil_tasarim_2.pdf)
+
+## Yapısal Tasarım (Eylül 2022)
+
+- [Yapısal Sisteme Girişi](http://keysan.me/presentations/files/egen/egen_yapisal_giris.pdf)
+- [Isıl Sistem Modellemenin Temelleri](http://keysan.me/presentations/files/egen/egen_yapisal_baglanti?elemanlari.pdf)
+- [Isıl Sistem Modellemenin Temelleri](http://keysan.me/presentations/files/egen/egen_yapisal_analiz.pdf)
