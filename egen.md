@@ -24,6 +24,7 @@ Eğitimlerde kullanılan sunum dosyalarına aşağıdaki linklerden ulaşılabil
 
 ### Elektrik Makinaları Teorisi ve Tasarımı (Aralık 2022)
 
+- [Elektromanyetik Sistemlere Giriş](http://keysan.me/presentations/egen_elektrik_makinalari_giris.html)
 - [Elektrik Makina Tasarımı Temelleri](http://keysan.me/presentations/egen_makina_tasarimi_temelleri.html)
 
 
