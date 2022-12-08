@@ -26,6 +26,7 @@ Eğitimlerde kullanılan sunum dosyalarına aşağıdaki linklerden ulaşılabil
 
 - [Elektromanyetik Sistemlere Giriş](http://keysan.me/presentations/egen_elektrik_makinalari_giris.html)
 - [Elektrik Makina Tasarımı Temelleri](http://keysan.me/presentations/egen_makina_tasarimi_temelleri.html)
+- [Elektrik Makinalarında Sargı Tasarımı](http://keysan.me/presentations/egen_sargi_tasarimi.html)
 
 
 ### Elektromanyetik ve Elektriksel Tasarım (Eylül 2022)
