@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EGEN - Generatör Tasarım Eğitimleri</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+### EÜAŞ - ODTÜ Elektrik EGEN Generatör Tasarımı ve İmalatı Projesi
+
+
+# Elektrik Makinalarında 3D Tasarım
+
+## Ozan Keysan
+
+[keysan.me](http://keysan.me)
+
+Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Senkron Generatörlerde Kayıplar
+
+## Yükten Bağımsız Kayıplar:
+
+- ### Nüve Kayıpları (Histerisiz ve Eddy Kayıpları)
+- ### Sürtünme kayıpları (Yağlama sistemi, fırçalar vs)
+- ### Soğutma kayıpları (fan gücü, yüzey hava sürtünmesi)
+---
+# Senkron Generatörlerde Kayıplar
+
+## Yüke Bağlı Kayıplar:
+
+- ### Stator sargılarındaki kayıplar (I2R)
+- ### Akımların yarattığı eddy kayıplar
+- ### İkaz sargısı (ve sistemi) kayıpları
+
+---
+## Sargı Sonu Eddy Kayıpları
+
+<img src="./images/egen/eddy_end_winding.png" alt="Drawing" style="width: 400px;">
+
+### Sargı sonundan taşan manyetik akı finger ve baskı plakalarına dik olarak girer.
+---
+## Sargı Sonu Eddy Kayıpları
+
+### Azaltma Yöntemleri
+
+- ### Baskı levhalarını küçük parçalara bölmek
+
+- ### Baskı levhalarına kesikler koymak
+
+- ### Manyetik olmayan metal (çelik, alüminyum) kullanmak
+
+- ### Son paketleri basamaklı yapmak
+
+- ### Bakır ekranlama ile eddy kayıplarını düşürmek
+
+---
+
+## Sargı Sonu Eddy Kayıpları
+
+### Basamaklı laminasyonlar
+
+<img src="./images/egen/stepped_core.png" alt="Drawing" style="width: 700px;">
+
+---
+## Oluk Akı Harmonikleri
+
+<img src="./images/egen/slot_harmonics.png" alt="Drawing" style="width: 350px;">
+
+### Oluk ve rotor yüzeyi arasında yüksek frekanslı B harmonikleri oluşur (frekansı oluk sayısı  ve hız ile orantılıdır)
+
+---
+## Oluk Akı Harmonikleri
+
+<img src="https://www.spindustries.at/wp-content/uploads/2016/06/non_magnetic_slot_wedges.jpg" alt="Drawing" style="width: 600px;">
+
+#### Ankuş bobin bağlantılarında manyetik takozlar kullanmak B'yi yumuşaratarak kayıpları azaltır.
+
+---
+## Sargılardaki Eddy Kayıpları
+
+### Oluk içinde taşınan akımdan dolayı oluşan manyetik alan
+
+<img src="./images/egen/slot_H.png" alt="Drawing" style="width: 800px;">
+---
+## Sargılardaki Eddy Kayıpları
+
+### Manyetik alan değişiminden dolayı eksenel yönde eddy akımları oluşur.
+
+<img src="./images/egen/slot_H2.png" alt="Drawing" style="width: 600px;">
+
+---
+## Sargılardaki Eddy Kayıpları
+
+### Bobinlerde sadece paralel iletkenlerin kullanılması sorunu çözmez, eddy akımları hala dolaşır.
+
+<img src="./images/egen/eddy_conductor.png" alt="Drawing" style="width: 800px;">
+
+---
+## Sargılardaki Eddy Kayıpları
+
+### İletkenı ufak parçalara ayırmak ve sargı sonlarında bobin sıralamasını ters-yüz etmek eddy akımlarını azaltmaya yardımcı olur
+
+<img src="./images/egen/transposition1.png" alt="Drawing" style="width: 800px;">
+
+---
+## Sargılardaki Eddy Kayıpları
+
+### Sargı sonu bağlantılarında toplu kaynak yerine tek tek bobinlerin birleştirilmesi eddy akımları oldukça azaltır. Ancak üretimi zahmetli ve zaman alıcıdır.
+
+
+<img src="./images/egen/transposition2.png" alt="Drawing" style="width: 800px;">
+
+---
+## Sargılardaki Eddy Kayıpları
+
+### Roebel Sargılar
+
+<img src="./images/egen/roebel1.png" alt="Drawing" style="width: 800px;">
+---
+## Sargılardaki Eddy Kayıpları
+
+### Roebel Sargılar
+
+<img src="./images/egen/roebel2.png" alt="Drawing" style="width: 400px;">
+---
+## Sargı Boyutlandırma
+
+<img src="./images/egen/coil_sizes.png" alt="Drawing" style="width: 750px;">
+
+---
+## Sargı Boyutlandırma
+
+### Boyuta göre kayıplar
+
+<img src="./images/egen/coil_losses.png" alt="Drawing" style="width: 800px;">
+---
+## Sargı Sonlarındaki Kuvvetler
+
+#### Sargı sonlarındaki kuvvetler akımın karesiyle orantılıdır
+#### \\(\dfrac{1}{2} I^2 \dfrac{L(\theta)}{d \theta}\\)
+
+<img src="./images/egen/end_winding_force.png" alt="Drawing" style="width: 400px;">
+
+---
+
+# Sargı Üretimi
+
+
+### [61MVA Stator & Rotor Sargı Değişimi](https://www.youtube.com/watch?v=ov8KAjxMxlU), [sargı üretimi](https://www.youtube.com/watch?v=Y7T6I1wg7tQ)
+
+
+### Chevy Spark EV [Motor Manufacturing](https://www.caranddriver.com/news/a18744950/we-build-the-chevy-spark-evs-ac-permanent-magnet-motor/)
+
+### [Disributed winding schematic](https://www.researchgate.net/profile/Jakob_Igelspacher/publication/241174581/figure/fig3/AS:340780838342662@1458259891354/Fig-4-Schematic-example-of-a-distributed-winding-of-an-axial-flux-induction-machine.jpg)
+
+### [Preformed coils](https://www.heinrich-schuemann.de/ankerformspulen-200.html), [Preformed coils-2](https://www.heinrich-schuemann.de/files/uploads/Produkte/Elektromaschinenbau/ankerformspulen/anker-w1p.jpg)
+
+### [Coils in the stator](https://empoweringpumps.com/sulzer-hydro-generator-refurbishment-increases-output-by-15/), [Coils in the stator-2](https://4.imimg.com/data4/YY/YY/GLADMIN-/wp-content-uploads-2015-11-diamond_coils_03-500x500.jpg)
+
+---
+
+## Bu sunumu aşağıdaki linkten indirebilirsiniz:
+
+## [keysan.me/egen](http://keysan.me/egen)
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
