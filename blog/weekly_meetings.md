@@ -39,25 +39,25 @@ In every 8-10 weeks, one of the students will make a detailed research presentat
 
 This is tentative schedule according to week number of the year. If you would like to mutually replace with someone, please edit this file (in GitHub).
 
-- Week 42: Enes
-- Week 43: Şahin
-- Week 44: Ogün
-- Week 45: Mohammad
-- Week 46: Yunus
-- Week 47: Görkem
-- Week 48: Samet
-- Week 49: Halis
-- Week 50: Undergrads
-- Week 51: Reserved
-- Week 52: Enes
-- Week 01: Şahin
-- Week 02: Ogün
-- Week 03: Mohammad
-- Week 04: Yunus
-- Week 05: Görkem
-- Week 06: Samet
-- Week 07: Halis
-- Week 08: Reserved
+- Week 2: Enes
+- Week 3: Şahin
+- Week 4: Ogün
+- Week 5: Mohammad
+- Week 6: Yunus
+- Week 7: Görkem
+- Week 8: Samet
+- Week 9: Halis
+- Week 10: Undergrads
+- Week 11: Reserved
+- Week 12: Enes
+- Week 13: Şahin
+- Week 14: Ogün
+- Week 15: Mohammad
+- Week 16: Yunus
+- Week 17: Görkem
+- Week 18: Samet
+- Week 19: Halis
+- Week 08: Undergrads
 ...
 
 ## 1:1 Meetings
