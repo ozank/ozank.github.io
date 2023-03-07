@@ -44,20 +44,21 @@ This is tentative schedule according to week number of the year. If you would li
 - Week 4: Ogün
 - Week 5: Mohammad
 - Week 6: Yunus
-- Week 7: Görkem
-- Week 8: Samet
-- Week 9: Halis
-- Week 10: Undergrads
-- Week 11: Reserved
-- Week 12: Enes
-- Week 13: Şahin
-- Week 14: Ogün
-- Week 15: Mohammad
-- Week 16: Yunus
-- Week 17: Görkem
-- Week 18: Samet
-- Week 19: Halis
-- Week 08: Undergrads
+- Week 10: Görkem
+- Week 11: Samet
+- Week 12: Halis
+- Week 13: Undergrads
+- Week 14: Mohammad D.
+- Week 15: Enes
+- Week 16: Şahin
+- Week 17: Ogün
+- Week 18: Mohammad
+- Week 19: Yunus
+- Week 20: Görkem
+- Week 21: Samet
+- Week 22: Halis
+- Week 23: Undergrads
+- Week 24: Mohammad D.
 ...
 
 ## 1:1 Meetings
