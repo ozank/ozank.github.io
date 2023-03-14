@@ -6,8 +6,8 @@ permalink: /courses/index.html
 
 ## Current Semester
 
+- [EE362](/ee362): Electromechanical Energy Conversion-II
 - [EE464](/ee464): Static Power Conversion-II
-- [EE568](/ee568): Special Topics on Electrical Machines 
 
 ## Past Courses
 
