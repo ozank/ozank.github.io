@@ -6,8 +6,11 @@ permalink: /presentations/index.html
 
 ## Recent Presentations
 
-### 2022
+### 2023
 
+* [iCoMET, Pakistan](https://docs.google.com/presentation/d/1qWmyprz0Ruas9mDAwL7C4FP8Bffqc0sn06dBRtLArTk/edit?usp=sharing)
+
+### 2022
 * [How to write and read a paper?](https://docs.google.com/presentation/d/1Xdw3ewDz-6DaV12rxBO_V1naajerFuirar90jOm1pMw/edit?usp=sharing)
 * ODTÜ Elektrik Müh, [Elektrik Makineleri ve Güç Elektroniği Opsiyon Tanıtımı](https://docs.google.com/presentation/d/1u0vZH-z9p0DueAQ-kLkIacMOj2mWlMK9PlI30oKOKM4/edit?usp=sharing)
 * [EÜAŞ Hidrogeneratör Sunum](https://docs.google.com/presentation/d/1uG95txUmbpEgyYQAdbukhcBdKXU_st5jjhgAGVkCGP8/edit?usp=sharing)
