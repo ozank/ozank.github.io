@@ -7,7 +7,7 @@ permalink: /presentations/index.html
 ## Recent Presentations
 
 ### 2023
-
+* [Solarex, Current State and the Future of PV Inverters in Turkey](https://docs.google.com/presentation/d/1mlX2PuX7YGhEWY0PQIl7dr62lahTiNvLWP4nVQSsAiM/edit?usp=sharing)
 * [iCoMET, Pakistan](https://docs.google.com/presentation/d/1qWmyprz0Ruas9mDAwL7C4FP8Bffqc0sn06dBRtLArTk/edit?usp=sharing)
 
 ### 2022
