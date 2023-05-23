@@ -228,11 +228,16 @@ For curious students: [Rotor design](http://www.mhhe.com/engcs/electrical/chapma
 
 <img src="./images/ee362/induction_torque.png" alt="Drawing" style="width: 650px;"/>
 
+
+---
+### Full Operating Range of Induction Machines
+
+<img src="./images/ee362/induction_torque.png" alt="Drawing" style="width: 800px;"/>
+
 ---
 
 # Operation Modes of Induction Motors
 
---
 
 # 1- Motoring
 
@@ -240,43 +245,65 @@ For curious students: [Rotor design](http://www.mhhe.com/engcs/electrical/chapma
 # 2- Generating
 
 
-# 3- Braking
+# 3- Braking (Plugging)
 
 ---
 # Motoring
 
+## Slip: \\(0 < s < 1\\)
+
+
 ## Power Flow: Electrical to Mechanical
 
-## Slip: \\(0 < s < 1\\)
+<img src="./images/ee362/induction_motor_power_flow.png" alt="Drawing" style="width: 800px;"/>
 
 ---
 # Generating
 
+## Slip: \\(s < 0\\)
+
 ## Power Flow: Mechanical to Electrical
 
-## Slip: \\(s < 0\\)
+
+<img src="./images/ee362/induction_generator_power_flow.png" alt="Drawing" style="width: 800px;"/>
+
 
 
 ---
 # Braking (Plugging)
+### Slip: \\(s > 1\\)
 
 ## Power Flow: Mechanical+Electrical to Heat
 
-## Slip: \\(s > 1\\)
+<img src="https://3.bp.blogspot.com/-Y_HjqnZLkig/Vs1oeZuSv0I/AAAAAAAAA64/z0xwXGgqfR4/s1600/plugging-on-induction-motor.jpeg" alt="Drawing" style="width: 600px;"/>
 
+### Plugging obtained by interchanging two stator phases
 
 ---
 # Machine Dynamics
 
 ## Torque Balance Equation
 
-## \\(T\_{elec} - T\_{load} - T\_{friction} = J \dfrac{d \omega}{dt} \\)
+## \\(T\_{elec} - T\_{load} = J \dfrac{d \omega}{dt} \\)
 
+<img src="./images/ee362/motor_drive.png" alt="Drawing" style="width: 600px;"/>
 
 ---
+
+### If there is no difference between the electrical torque and load torque, the machine operates at the steady-state
+
+### (i.e. the intersection point at between the motor torque line and the load torque line).
+
+<img src="./images/ee362/load_curve.png" alt="Drawing" style="width: 500px;"/>
+
+### but beware of unstable intersection points.
+
+---
+
+
 # Four-Quadrant Operation
 
-<img src="http://lh4.ggpht.com/_X6JnoL0U4BY/S1hWPpFVASI/AAAAAAAAH6g/2f2K5R2I-I0/tmp2B719_thumb1_thumb.png" alt="Drawing" style="width: 600px;"/>
+<img src="http://lh4.ggpht.com/_X6JnoL0U4BY/S1hWPpFVASI/AAAAAAAAH6g/2f2K5R2I-I0/tmp2B719_thumb1_thumb.png" alt="Drawing" style="width: 800px;"/>
 
 ---
 ## You can download this presentation from: [keysan.me/ee362](http://keysan.me/ee362)
