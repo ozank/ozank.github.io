@@ -8,11 +8,11 @@ For more information about current project and theses, please visit [PowerLab](h
 
 ## Completed MSc Theses
 
-- Enes Ayaz, *Concurrent Operation of Wireless Power Transfer Based Contactless Slip Ring and Motor Drive System With a Single Converter*, 2022 
-- Furkan Tokgöz, *Analytical Modelling and Multi-objective Optimization of Axial-flux Permanent Magnet Machine With Various PCB Stators and Development of a GaN Switched Integrated Motor Drive PCB Motor*, 2022
-- Hakan Saraç, *Fault Tolerant Control of a Dual Three-Phase Electrical Machine with Predictive Current Control and Reduced Computation Burden*, 2022
-- Nail Tosun, *Investigation of Velocity Skin Effect of Convex Railgun Structure With 3D Moving Mesh*, 2021
-- Göksenin Hande Bayazıt, *Design and Optimization of a Multiphase Fault Tolerant Permanent Magnet Synchronous Machine*, 2021
+- Enes Ayaz, *Concurrent Operation of Wireless Power Transfer Based Contactless Slip Ring and Motor Drive System With a Single Converter*, [PDF](https://open.metu.edu.tr/handle/11511/98783) 2022 
+- Furkan Tokgöz, *Analytical Modelling and Multi-objective Optimization of Axial-flux Permanent Magnet Machine With Various PCB Stators and Development of a GaN Switched Integrated Motor Drive PCB Motor*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/97372/furkanTokgozMscThesis.pdf), 2022
+- Hakan Saraç, *Fault Tolerant Control of a Dual Three-Phase Electrical Machine with Predictive Current Control and Reduced Computation Burden*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/96722/index.pdf), 2022
+- Nail Tosun, *Investigation of Velocity Skin Effect of Convex Railgun Structure With 3D Moving Mesh*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/93126/Tez_NailTosun.pdf), 2021
+- Göksenin Hande Bayazıt, *Design and Optimization of a Multiphase Fault Tolerant Permanent Magnet Synchronous Machine*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/92181/GHB_MScThesis_AckAdded(1).pdf), 2021
 - Hakan Polat, *1kW contactless slip ring design using series-series resonant converter topology*,  [PDF](https://open.metu.edu.tr/handle/11511/91475), 2021 
 - Furkan Karakaya, *Characterization of GaN Transistors and Development of Bi-directional DC/DC Converter With Half-Bridge Having Short Circuit Protection for Parallel Switches*, [PDF](http://etd.lib.metu.edu.tr/upload/12625716/index.pdf), 2020
 - Gökhan Çakal, *Design and Implementation of Coreless Axial Flux Permanent Magnet Motor With Printed Circuit Board Windings*, 2020
@@ -33,15 +33,15 @@ Magnet Generator For Wind Turbines*,  [PDF](http://etd.lib.metu.edu.tr/upload/12
 
 ## Completed PhD Theses
 
-- Hüseyin Yürük, *Investigation of Parallel Connected GaN E-HEMT VSI-Based Servo Drives*, 2022
-- İlker Şahin, *Model Predictive Control Strategies for Power Electronic Converters and AC Drives*, 2021
-- Mehmet Özcan, *Optimum Bidding Strategy for Renewable Energy Generation With Storage in Turkey’s Day Ahead Market*, 2021
+- Hüseyin Yürük, *Investigation of Parallel Connected GaN E-HEMT VSI-Based Servo Drives*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/96074/METU_Thesis_Hyuruk_Jan2022_v3.pdf), 2022
+- İlker Şahin, *Model Predictive Control Strategies for Power Electronic Converters and AC Drives*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/93273/ilkersahinPhD.pdf), 2021
+- Mehmet Özcan, *Optimum Bidding Strategy for Renewable Energy Generation With Storage in Turkey’s Day Ahead Market*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/94261/MOZCAN_Phd_Thesis-Library.pdf), 2021
 
 
 ## Ongoing PhD Theses
 
 - Mohammad Mokhtare, *Design and Control of Agricultural Microgrid Cluster*
-- Öztürk Şahin Alemdar, TBD
+- Öztürk Şahin Alemdar, *Power Converters for Vehicle Integrated Photovoltaics (VIPV) Applications*
 
 
 ## Ongoing MSc Theses
