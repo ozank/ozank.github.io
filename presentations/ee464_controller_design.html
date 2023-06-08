@@ -158,6 +158,28 @@ class: center, middle
 
 <img src="./images/ee464/buck_average.png" alt="Drawing" style="width: 700px;">
 ---
+## Average Model of the buck converter
+
+<img src="./images/ee464/buck_average2.png" alt="Drawing" style="width: 450px;">
+
+---
+## Average Model of the buck converter
+
+<img src="./images/ee464/buck_average3.png" alt="Drawing" style="width: 700px;">
+
+---
+## Average Model of the buck converter
+
+<img src="./images/ee464/buck_average_results.png" alt="Drawing" style="width: 700px;">
+
+### Averaged model is useful for the controller design
+---
+
+<img src="./images/ee464/average_models.png" alt="Drawing" style="width: 450px;">
+--
+
+#### (a) Averaged model for switch and diode; (b) Buck equivalent; (c) Boost equivalent; (d) Buck-boost equivalent; (e) Ćuk equivalent
+---
 # Small Signal Analysis for the Buck Converter
 
 ## Let's derive the small signal model for voltage
@@ -296,50 +318,49 @@ class: center, middle
 
 <img src="./images/ee464/pwm_variation.png" alt="Drawing" style="width: 700px;">
 
----
+
+<--
+
 ## What about in switching components?
---
+
 
 ## Problem:
---
+
 
 - ## Multi-mode systems (topology changes with switching)
---
+
 
 - ## Different transfer function for on-off states
---
+
 
 - ## Can use non-linear controller, or multiple linear controllers (but difficult to implement)
 
----
+
 ## What about in switching components?
---
+
 
 ## Solution:
---
 
 - ## Convert multi-mode to single-mode system
---
+
 
 - ## Linearizing the system with averaging wrt duty cycle
---
+
 
 - ## Use a linear controller with required characteristics
---
+
 
 ## Details in the textbook (Mohan)
 
----
+
 # Case Study (Mohan 10-1)
 
 ## Find the transfer function of forward converter
---
 
 <img src="./images/ee464/forward_controller.png" alt="Drawing" style="width: 700px;">
 
 ## Note the state variables
 
----
 # Case Study (Mohan 10-1)
 
 ## Switch ON
@@ -347,14 +368,12 @@ class: center, middle
 
 <img src="./images/ee464/forward_controller_on.png" alt="Drawing" style="width: 700px;">
 
----
 # Case Study (Mohan 10-1)
 
 ## Switch OFF
 
 
 <img src="./images/ee464/forward_controller_off.png" alt="Drawing" style="width: 700px;">
----
 # Case Study (Mohan 10-1)
 
 ## Steady State Transfer Function
@@ -371,7 +390,6 @@ class: center, middle
 
 ### \\(\dfrac{V_o}{V_d} \approx D \\)
 
----
 # Case Study (Mohan 10-1)
 
 ## AC Transfer Function
@@ -388,7 +406,6 @@ class: center, middle
 
 ### \\(s^2 + 2 \xi \omega_0 s + \omega_0^2\\)
 
----
 # Case Study (Mohan 10-1)
 
 ## AC Transfer Function
@@ -401,11 +418,11 @@ class: center, middle
 --
 
 ### \\(\xi = \dfrac{1/RC + (r_C + r_L)/L}{2\omega_0}\\)
-
+-->
 ---
 # Case Study (Mohan 10-1)
 
-## AC Transfer Function Becomes
+## AC Transfer Function for forward converter
 
 ### \\(T_p(s)=V_d \dfrac{\omega_0^2}{\omega_z} \dfrac{s + \omega_z}{s^2 + 2 \xi \omega_0 s + \omega_0^2}\\)
 
