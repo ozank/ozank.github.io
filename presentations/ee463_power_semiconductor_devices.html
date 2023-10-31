@@ -366,14 +366,21 @@ class: center, middle
 
 ---
 
-## Equivalent Circuit
-
-<img src="./images/ee463/mosfet_equivalent.png" alt="Drawing" style="width: 300px;"/>
+<img src="./images/ee463/MOSFET_equiv.jpg" alt="Drawing" style="width: 400px;"/>
 
 ### Cgs: large, constant
-### Cgd: small, highly nonlinear
+### Cgd: small, highly nonlinear (aka Miller Capacitance)
 ### Cds: intermediate, nonlinear
+---
+<img src="./images/ee463/MOSFET_switching.jpg" alt="Drawing" style="width: 400px;"/>
+--
 
+- #### 1: Vgs is charging input capacitance
+- #### 2: At Vth, drain current starts to flow (Vds is still at source voltage)
+- #### 3: Miller plateu reached. ON resistance reduces but current has increased, thus dissipating power
+- #### 4: MOSFET is ON. ON resistance is minimum (there is still conduction losses)
+
+[More info](https://www.nutsvolts.com/questions-and-answers/mosfet-basics), [Power MOSFET Basics](https://www.infineon.com/dgdl/mosfet.pdf?fileId=5546d462533600a4015357444e913f4f)
 ---
 
 ## MOSFET Comparison
@@ -408,7 +415,7 @@ class: center, middle
 ## Insulated-Gate Bipolar Transistor
 --
 
-<img src="https://www.fujielectric-europe.com/documents/igbt_modules_industrial.jpg" alt="Drawing" style="width: 700px;"/>
+<img src="https://media.distrelec.com/Web/WebShopImages/landscape_large/_t/if/semitop-igbt-brucken-1.jpg" alt="Drawing" style="width: 700px;"/>
 
 ---
 # IGBT
