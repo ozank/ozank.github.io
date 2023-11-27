@@ -24,42 +24,21 @@ Please make the following guideline for this part:
 - If you are not assigned a task for that week, it is your responsibility to open a trello card for that week ( a card should have a deadline and a responsible person).
 - If you realize the details are taking too much time, or the discussions is not relevant to everyone then it may be better to continue these discussions in one-to-one meetings, or in monthly presentations.
 - Playing with your phone, talking with another one is not cool, please stay engaged in the meetings.
-- Be on time to the meetings
+- Be on time to the meetings.
 
 ### 30-min Presentations:
 
-In every 8-10 weeks, one of the students will make a detailed research presentation. You can find the schedule in the below. The guidelines for this part are as follows:
+In most of the weeks, one of the team members will make a detailed research presentation. You can find the schedule in [this link](https://docs.google.com/spreadsheets/d/17PFHmKULEDseG9h5bpBYOUQFCMrPcH8TPUxfvVPaC9g/edit?usp=sharing) below. The expexted frequency 1 presentation per semester for  undergraduate students and 2 presentations per semester for graduate students.
+
+The guidelines for the weekly presentations are as follows:
 
 - The format is like a conference presentation: 15-min presentation + 15 min Q&A parts
 - The idea is to discuss a research idea (e.g. a paper that you are planning to write, or a chapter of your thesis) and present details, theory, simulation/experimental results.
-- The slides ( less than 15) should contain a research idea, current state-of-the-art, novelty of the current work, simulation results and plans until next presentation.
+- The slides (less than 15) should contain a research idea, current state-of-the-art, novelty of the current work, simulation results and plans until next presentation.
 - After the presentation and Q&A session, the tasks (and trello cards) should be assigned to be completed until next presentation (2-month milestones)
 
-#### Weekly Presentation Schedule
+- #### [Weekly Presentation Schedule](https://docs.google.com/spreadsheets/d/17PFHmKULEDseG9h5bpBYOUQFCMrPcH8TPUxfvVPaC9g/edit?usp=sharing)
 
-This is tentative schedule according to week number of the year. If you would like to mutually replace with someone, please edit this file (in GitHub).
-
-- Week 2: Enes
-- Week 3: Şahin
-- Week 4: Ogün
-- Week 5: Mohammad
-- Week 6: Yunus
-- Week 10: Görkem
-- Week 11: Samet
-- Week 12: Halis
-- Week 13: Undergrads
-- Week 14: Mohammad D.
-- Week 15: Enes
-- Week 16: Şahin
-- Week 17: Ogün
-- Week 18: Mohammad
-- Week 19: Yunus
-- Week 20: Görkem
-- Week 21: Samet
-- Week 22: Halis
-- Week 23: Undergrads
-- Week 24: Mohammad D.
-...
 
 ## 1:1 Meetings
 
