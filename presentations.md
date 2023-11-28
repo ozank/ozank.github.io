@@ -7,6 +7,7 @@ permalink: /presentations/index.html
 ## Recent Presentations
 
 ### 2023
+*  METU, [Practical Aspects of DC Motor and Drives](https://docs.google.com/presentation/d/1EzyPd8Qh5vBEE6jV1-jwYlAD8uHuZzgEV-4U1exYHqI/edit?usp=sharing)
 * [PCB Motor](https://docs.google.com/presentation/d/1_AfCs-KDHgd8x4tfQgDWhuPCcpHs_CrU2FItc2D9FX4/edit?usp=sharing)
 * [Solarex, Current State and the Future of PV Inverters in Turkey](https://docs.google.com/presentation/d/1mlX2PuX7YGhEWY0PQIl7dr62lahTiNvLWP4nVQSsAiM/edit?usp=sharing)
 * [iCoMET, Pakistan](https://docs.google.com/presentation/d/1qWmyprz0Ruas9mDAwL7C4FP8Bffqc0sn06dBRtLArTk/edit?usp=sharing)
