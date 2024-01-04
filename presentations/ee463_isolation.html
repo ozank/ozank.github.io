@@ -264,15 +264,114 @@ No direct electric contact between two sides
 ---
 
 ## Considerations/Problems
+
+### From Simulations to Hardware Impementation
+
+
+<img src="./images/ee463/sim_pcb.png" alt="Drawing" style="width: 750px;"/>
+
+
+---
+## Not all grounds are same!
 --
 
-- ### Minimize Stray Inductance
+## Be careful when connecting these:
+
+- ### Analog Ground (AGND)
+- ### Digital Ground (DGND)
+- ### Power Ground (PGND)
+
+---
+
+## Use Ground or Power Planes
+
+
+<img src="https://kicad-info.s3.dualstack.us-west-2.amazonaws.com/original/3X/8/c/8ca7807736f3e06e86c61fb9248471a6574b6c1f.png" alt="Drawing" style="width: 600px;"/>
+---
+
+
+## Use Ground or Power Planes
+
+
+<img src="https://www.onelectrontech.com/wp-content/uploads/2018/12/Vias-to-ground-plane.png" alt="Drawing" style="width: 600px;"/>
+
+
+---
+## Avoid Ground Loops
+
+
+<img src="https://www.eevblog.com/forum/beginners/need-help-understanding-ground-loops-in-digital-design-am-i-over-thinking/?action=dlattach;attach=1310651;image" alt="Drawing" style="width: 600px;"/>
+
+### Ground loops create a potential difference at difference parts of the ground
+
+---
+## Avoid Ground Loops
+
+
+<img src="https://resources.altium.com/sites/default/files/inline-images/agnd-dgnd.png" alt="Drawing" style="width: 800px;"/>
+
+---
+## Connection of Different Grounds
+
+
+<img src="https://blogupvertercom.files.wordpress.com/2019/10/mixed_signal.jpg" alt="Drawing" style="width: 600px;"/>
+---
+
+## Identify High dI/dt paths
+
+
+<img src="./images/ee463/didt_path.png" alt="Drawing" style="width: 600px;"/>
+
+### Minimize the length and mutual inductance of these!
+---
+
+### Be extremely careful with gate signals
+
+- ### Minimize Stray/Parasitic Inductances
+- ### Minimize loop inductance
+- ### Minimize stray capacitance
 
 <img src="./images/ee463/stray_inductance.png" alt="Drawing" style="width: 600px;"/>
 
+---
+
+### Be extremely careful with gate signals
+
+<img src="./images/ee463/gate_loop.png" alt="Drawing" style="width: 600px;"/>
 
 ### [Connection of Gate Drivers to IGBT and Controller](https://www.semikron-shop.com/out/pictures/wysiwigpro/AN-7002_Connection_of_Gate_Drivers_to_IGBT_and_Controller_rev00.pdf)
 
+---
+
+### Place decoupling/filtering capacitors properly
+
+
+<img src="https://www.signalintegrityjournal.com/ext/resources/Blogs/Seven-Habits-of-Successful-2-layer-Board-Designers/Fig-5.jpg" alt="Drawing" style="width: 600px;"/>
+
+---
+
+### Place decoupling/filtering capacitors properly
+
+
+<img src="https://www.powerelectronicsnews.com/wp-content/uploads/sites/3/2018/03/PIDWebinar3-2-17_Routing-Bypass-Caps-On-One-Layer.jpg" alt="Drawing" style="width: 600px;"/>
+
+---
+### Be careful when placing inductors
+
+- ### Ground plane below can induce eddy currents
+- ### Fringing flux can interfere with analog signals
+
+
+<img src="https://www.powerelectronicsnews.com/wp-content/uploads/sites/3/2018/03/PIDWebinar3-1-12_Near-Field-Coupling-Magnetic.jpg" alt="Drawing" style="width: 600px;"/>
+
+---
+### Sometimes noise just exist due to measurement
+
+<img src="https://www.powerelectronicsnews.com/wp-content/uploads/sites/3/2018/03/PIDWebinar3-2-12_Good-and-Bad-Measurement-1.jpg" alt="Drawing" style="width: 800px;"/>
+---
+### Sometimes noise just exist due to measurement
+
+<img src="https://www.powerelectronicsnews.com/wp-content/uploads/sites/3/2018/03/PIDWebinar3-2-13_Good-and-Bad-Measurement-2.jpg" alt="Drawing" style="width: 800px;"/>
 ---
 ## Considerations/Problems
 
@@ -284,13 +383,18 @@ No direct electric contact between two sides
 #### STP: Shielded twisted pair
 #### FTP: Foiled twisted pair
 ---
-
 ## Considerations/Problems
---
 
 - ### Shielding and  Minimize Stray Inductance
 
 <img src="./images/ee463/stray_inductance2.jpg" alt="Drawing" style="width: 600px;"/>
+---
+
+## Considerations/Problems
+
+- ### Reduction of Stray Inductance in Bus Bars
+
+<img src="https://www.mersen.com/sites/default/files/publications-media/2017-06-spm-power-electronics-assembly-matrix-converter-mersen.png" alt="Drawing" style="width: 800px;"/>
 
 ---
 ## Considerations/Problems
@@ -303,15 +407,7 @@ No direct electric contact between two sides
 
 - ### [PCB Design Issues](https://www.analog.com/media/en/training-seminars/design-handbooks/Basic-Linear-Design/Chapter12.pdf)
 
----
-
-## Considerations/Problems
---
-
-- ### Reduction of Stray Inductance in Bus Bars
-
-<img src="https://www.mersen.com/sites/default/files/publications-media/2017-06-spm-power-electronics-assembly-matrix-converter-mersen.png" alt="Drawing" style="width: 800px;"/>
-
+- ### [PCB Layout Guidelines](https://www.ti.com/lit/ml/slyp762/slyp762.pdf?ts=1704351235039)
 ---
 ## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
 
