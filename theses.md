@@ -40,16 +40,18 @@ Magnet Generator For Wind Turbines*,  [PDF](http://etd.lib.metu.edu.tr/upload/12
 
 ## Ongoing PhD Theses
 
-- Mohammad Mokhtare, *Design and Control of Agricultural Microgrid Cluster*
+- Mohammad Mokhtare, *Planning, Scheduling, and Control of an Agricultural Microgrid for Off-Grid Applications*
 - Öztürk Şahin Alemdar, *Power Converters for Vehicle Integrated Photovoltaics (VIPV) Applications*
 
 ## Ongoing MSc Theses
 
 - Görkem Gülletutan, *Lamination Modeling for the Analysis of Electromagnetic Launchers*
 - Yunus Çay, *Partial Power Transfer Converter Design and Implementation for Solar Power System*
-- M. Samet Yakut, TBD
+- M. Samet Yakut, *Alternating the Winding Type of a 44 MVA Hydro Generator by Minimizing the Electromagnetic Losses*
 - A. Halis Sabırlı, TBD
-- Özgür Gülsuna, TBD
-- İsmail Macit, TBD
-- Göktuğ Tonay, TBD
-- Mohammad Derogarian, TBD
+- Özgür Gülsuna, *Design of a Quasi-direct Drive Cycloidal Actuator for Dynamic Robotic Systems*
+- İsmail Macit, *On Board Charger (OBC) Design for 800V Electric Vehicle Architecture*
+- Göktuğ Tonay, *Design and Implementation of Bidirectional Onboard Charger for Electric Vehicles*
+- Mohammad Derogarian, *Design and Implementation of a Grid-forming Converter in Order to Improve the Performance of an AC Microgrid*
+- Işık Emir Altunkol, TBD
+- Arda Kasım, TBD
