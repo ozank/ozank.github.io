@@ -3,13 +3,13 @@ layout: home
 title: Ozan Keysan
 ---
 
-**Current Courses: [EE361](/ee361) <span class="meta">&#8226;</span> [EE463](/ee463)**
+**Current Courses: [EE362](/ee362) <span class="meta">&#8226;</span> [EE464](/ee464)**
 
-**Research Group: [METU PowerLab](http://power.eee.metu.edu.tr/)**
+**Research Group: [METU PowerLab](https://power.eee.metu.edu.tr/)**
 
-**Research Centers that I participate: [RÜZGEM](http://ruzgem.metu.edu.tr/), [ODTU-GÜNAM](https://odtugunam.org/), [ROMER](https://romer.metu.edu.tr)**
+**Research Centers that I participate in:  [RÜZGEM](https://ruzgem.metu.edu.tr/), [ODTU-GÜNAM](https://odtugunam.org/), [ROMER](https://romer.metu.edu.tr)**
 
-I'm an associate professor in  [Electrical-Electronics Engineering Department](http://www.eee.metu.edu.tr), [METU](http://www.metu.edu.tr). Our research group is  [METU PowerLab](http://power.eee.metu.edu.tr/). 
+I'm an associate professor in  [Electrical-Electronics Engineering Department](https://www.eee.metu.edu.tr), [METU](https://www.metu.edu.tr). Our research group is  [METU PowerLab](https://power.eee.metu.edu.tr/). 
 
 For more information, you can download [my CV](/cv) or have a look at my [Publications](/papers), [Theses](/theses), [Projects](/projects) and [Presentations](/presentations). 
 
