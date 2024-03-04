@@ -4,9 +4,9 @@
     <title>EE464-Static Power Conversion-II</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <style type="text/css">
-      @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-      @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
       body { font-family: 'Droid Serif'; }
       h1, h2, h3 {
@@ -270,6 +270,45 @@ Minimum EMI Problems
 # Flyback Converter: DCM
 
 <img src="./images/ee464/flyback_dcm.png" alt="Drawing" style="width: 600px;">
+
+---
+# Flyback Converter: DCM
+
+<img src="https://media.monolithicpower.com/wysiwyg/3_45.png" alt="Drawing" style="width: 600px;">
+
+#### Voltage and currents in CCM, (VD: Diode voltage, VDS:transistor drain-source voltage)
+
+---
+# Flyback Converter: DCM
+
+<img src="https://media.monolithicpower.com/wysiwyg/4_39.png" alt="Drawing" style="width: 600px;">
+
+#### Voltage and currents in CCM, (VD: Diode voltage, VDS:transistor drain-source voltage)
+
+---
+### Flyback DCM vs CCM
+
+### Efficiency is usually higher:
+--
+ 
+- ### Soft turn-on for transistor (reduced switching loss)
+- ### no reverse recovery loss in the diode
+
+--
+
+### Smaller core (better flux density utilization)
+
+--
+
+### Current peaks get higher
+--
+
+- ### Higher current rating for diode and transistor
+- ### Can cause increase in conduction losses
+
+--
+
+### DCM has a better stability in transient control
 
 ---
 # Flyback Example
@@ -699,7 +738,7 @@ Minimum EMI Problems
 
 
     </textarea>
-    <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
     <script type="text/javascript">
       var slideshow = remark.create({countIncrementalSlides: false});
