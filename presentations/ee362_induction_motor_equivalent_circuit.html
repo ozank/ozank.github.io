@@ -59,7 +59,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 \\(f_s\\)
 --
 
-## Machine just behaves just like a transformer (secondary short-circuited)
+## Machine behaves just like a transformer (secondary side short-circuited)
 
 - ### Stator winding: Primary winding of the transformer 
 - ### Rotor bars: Secondary winding of the transformer
@@ -124,7 +124,7 @@ For curious students: P.C.Sen, Principles of Electrical Machines and Power Elect
 ---
 # Locked-Rotor Test
 
-### Rotor kept stationary with a mechanical locking system
+### Rotor is kept stationary with a mechanical locking system
 
 ## \\(n_r = 0 \rightarrow s = 1\\)
 --
@@ -139,7 +139,8 @@ For curious students: P.C.Sen, Principles of Electrical Machines and Power Elect
 ---
 # Locked-Rotor Test
 
-### Neglect the parallel branch and s = 1, the circuit becomes:
+### Neglect the parallel branch (due to small applied voltage)
+### Slip, s = 1 so the circuit becomes:
 
 
 <img src="./images/ee362/locked_rotor_equivalent.png" alt="Drawing" style="width: 700px;"/>
@@ -151,7 +152,8 @@ For curious students: P.C.Sen, Principles of Electrical Machines and Power Elect
 - ### \\(P\_{phase} = \dfrac{P\_{total}}{3} = I_1^2 (r_1 +r'_2) \\)
 - ### Measure \\(r\_{1(dc)}\\) using an ohm-meter, assume \\(r\_{1(ac)}=1.1r\_{1(dc)}\\) 
 - ### \\(\dfrac{V\_1}{I\_1} = Z\_{eq}= \sqrt{(r_1 +r'_2)^2+(X_1 +X'_2)^2}\\)
-- ### Assume \\( X\_{1} = X'\_{2}\\)
+- ### Assume \\( X\_{1} = X'\_{2}\\) (they are connected in series, makes no difference)
+
 ---
 # No-Load Test
 
