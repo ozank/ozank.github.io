@@ -8,8 +8,10 @@ For more information about current project and theses, please visit [PowerLab](h
 
 ## Completed MSc Theses
 
-- Ogün Altun, *Design and Implementation of Three-level SiC Interleaved Boost Converters For A Grid Connected Multi-String PV Inverter*, 2023
-- Enes Ayaz, *Concurrent Operation of Wireless Power Transfer Based Contactless Slip Ring and Motor Drive System With a Single Converter*, [PDF](https://open.metu.edu.tr/handle/11511/98783) 2022 
+- Görkem Gülletutan, *Armature Shape Optimization and Scaling Studies in Electromagnetic Launchers Using Finite Element Method*, 2024
+- Yunus Çay, *Nonlinear Characterization, Circuit-Based Modeling and Analysis of Single-Core Fluxgate Current Sensors*
+- Ogün Altun, *Design and Implementation of Three-level SiC Interleaved Boost Converters For A Grid Connected Multi-String PV Inverter*,[PDF](https://open.metu.edu.tr/bitstream/handle/11511/105327/Thesis_OgunAltun.pdf), 2023
+- Enes Ayaz, *Concurrent Operation of Wireless Power Transfer Based Contactless Slip Ring and Motor Drive System With a Single Converter*, [PDF](https://open.metu.edu.tr/handle/11511/98783), 2022 
 - Furkan Tokgöz, *Analytical Modelling and Multi-objective Optimization of Axial-flux Permanent Magnet Machine With Various PCB Stators and Development of a GaN Switched Integrated Motor Drive PCB Motor*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/97372/furkanTokgozMscThesis.pdf), 2022
 - Hakan Saraç, *Fault Tolerant Control of a Dual Three-Phase Electrical Machine with Predictive Current Control and Reduced Computation Burden*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/96722/index.pdf), 2022
 - Nail Tosun, *Investigation of Velocity Skin Effect of Convex Railgun Structure With 3D Moving Mesh*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/93126/Tez_NailTosun.pdf), 2021
@@ -45,13 +47,10 @@ Magnet Generator For Wind Turbines*,  [PDF](http://etd.lib.metu.edu.tr/upload/12
 
 ## Ongoing MSc Theses
 
-- Görkem Gülletutan, *Lamination Modeling for the Analysis of Electromagnetic Launchers*
-- Yunus Çay, *Partial Power Transfer Converter Design and Implementation for Solar Power System*
 - M. Samet Yakut, *Alternating the Winding Type of a 44 MVA Hydro Generator by Minimizing the Electromagnetic Losses*
-- A. Halis Sabırlı, TBD
 - Özgür Gülsuna, *Design of a Quasi-direct Drive Cycloidal Actuator for Dynamic Robotic Systems*
 - İsmail Macit, *On Board Charger (OBC) Design for 800V Electric Vehicle Architecture*
 - Göktuğ Tonay, *Design and Implementation of Bidirectional Onboard Charger for Electric Vehicles*
 - Mohammad Derogarian, *Design and Implementation of a Grid-forming Converter in Order to Improve the Performance of an AC Microgrid*
-- Işık Emir Altunkol, TBD
-- Arda Kasım, TBD
+- Işık Emir Altunkol, *Analysis of Dynamic Rotor Eccentricity in Axial-flux Machines and Design of an Optimized Cycloidal-Disk Stator *
+- Arda Kasım, *Efficiency Optimization of 800V Power Factor Correction Rectifiers for Electric Vehicle Charger Applications*
