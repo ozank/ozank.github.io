@@ -26,7 +26,7 @@ permalink: /projects/index.html
 
 |2020-2022| Newton Fund | **COMSA, Community-based Off-grid Ultra-efficient Microgrid to Revive Water-food Security in Agriculture:** The project is funded by the Newton Fund programme. The project partners are UCL (University College London), KCL (King's College London), METU and Ankara University. The aim of this project is to develop micro grid and irrigation systems for the rural area using PV, wind and hybrid energy storage systems. *Project budget: £ 100.000*.|
 
-|2020-2022| TUBITAK 1001 | **Development of a 1 kW SiC, Modular Wireless Power Transfer System for Synchronous Machines: ** This project aims to develop a modular wireless power transfer system for synchronous machines. The project aims to increase the reliability of synchronous generators for wind turbines and make them a viable alternative to high-cost permanent magnet generators. *Project budget: 420.000 TL*.|
+|2020-2022| TUBITAK 1001 | **Development of a 1 kW SiC, Modular Wireless Power Transfer System for Synchronous Machines:** This project aims to develop a modular wireless power transfer system for synchronous machines. The project aims to increase the reliability of synchronous generators for wind turbines and make them a viable alternative to high-cost permanent magnet generators. *Project budget: 420.000 TL*.|
 
 |2017-2022| ASELSAN SST | **Electromagnetic Design and Optimization of a 10 MJ Electromagnetic Launcher - Phase III:** Second phase of the [TUFAN](http://www.millisavunma.com/aselsan-tufan-elektromanyetik-top-sistemi/) railgun project in which a 10 MJ prototype will be tested. Detailed 3D FEA models are developed to obtain electrical, mechanical force, and thermal characteristics of the railgun. *Project budget: 392.000 TL*.|
 
