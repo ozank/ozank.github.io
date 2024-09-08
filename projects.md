@@ -6,14 +6,13 @@ permalink: /projects/index.html
 
 ## Ongoing Projects
 
-|2023-2024| Koc Savunma | ** Printed Circuit Board (PCB) motors for autonomous steering applications: ** Development of a 50W PCB motor, which is small enough to fit inside of a steering wheel. The motor is position controlled for autonomous driving of agricultural vehicles.|
+|2023-2024| Koc Savunma | **Printed Circuit Board (PCB) motors for autonomous steering applications:** Development of a 50W PCB motor, which is small enough to fit inside of a steering wheel. The motor is position controlled for autonomous driving of agricultural vehicles.|
 
-|2024-2025| Roketsan | ** FEA Analysis and Optimization of an Air-cored Spherical Actuator for Gimbal Applications:** Development of a 50W PCB motor, which is small enough to fit inside of a driving wheel. The motor is position controlled for autonomous driving of agricultural vehicles.|
+|2024-2025| Roketsan | **FEA Analysis and Optimization of an Air-cored Spherical Actuator for Gimbal Applications:** Development of a 50W PCB motor, which is small enough to fit inside of a driving wheel. The motor is position controlled for autonomous driving of agricultural vehicles.|
 
+|2021-2024| TUBITAK MAM, ODTÜ-GÜNAM | **Development of a 125 kW, 1500 V Photovoltaic String Inverter:** A national project funded by TUBITAK 1004 programme. Our team is responsible for development of 3-level MPPT boost converters, with SiC transistors. 8-MMPT converters are connected to a 125 kW NPC inverter. The boost-converter achieved 99.5\% efficiency and the inverter to be commercialized by TUBITAK-MAM.|
 
-|2021-2024| TUBITAK MAM, ODTÜ-GÜNAM | ** Development of a 125 kW, 1500 V Photovoltaic String Inverter: ** A national project funded by TUBITAK 1004 programme. Our team is responsible for development of 3-level MPPT boost converters, with SiC transistors. 8-MMPT converters are connected to a 125 kW NPC inverter. The boost-converter achieved 99.5\% efficiency and the inverter to be commercialized by TUBITAK-MAM.|
-
-|2021-2024| Tescom, ODTÜ-GÜNAM | ** Development of a 5 kW Hybrid PV Inverter with Battery Storage: ** A national project funded by TUBITAK 1004 programme. A PV Inverter with storage option is developed for domestic users. The charge optimization and generation forecast algorithms are developed for best performance. The prototypes are to be commercialized by Tescom.|
+|2021-2024| Tescom, ODTÜ-GÜNAM | **Development of a 5 kW Hybrid PV Inverter with Battery Storage:** A national project funded by TUBITAK 1004 programme. A PV Inverter with storage option is developed for domestic users. The charge optimization and generation forecast algorithms are developed for best performance. The prototypes are to be commercialized by Tescom.|
 
 ## Completed Projects
 
