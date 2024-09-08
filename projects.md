@@ -41,9 +41,9 @@ permalink: /projects/index.html
 
 |2016-2017| ASELSAN SST | **Electromagnetic Design and Optimization of a 200kJ-2MJ Electromagnetic Launcher:** In this project electromagnetic and thermal analyses are performed on the [TUFAN](http://www.millisavunma.com/aselsan-tufan-elektromanyetik-top-sistemi/) railgun project. Detailed 3D FEA models are developed to obtain electrical, mechanical force, and thermal characteristics of the railgun. *Project budget: 397.000 TL*.|
 
-|2016| BAP| Design of a Modular Data Acquisition Board.|
+|2016| BAP | Design of a Modular Data Acquisition Board.|
 
-|2016| Andar Servo| Design and Manufacturing of a Eddy Current Damper for Aerospace Application|
+|2016| Andar Servo| Design and Manufacturing of a Eddy Current Damper for Aerospace Application.|
 
 |2016| Andar Servo| Design and Manufacturing of a Brushless PM Servo Motor.|
 
