@@ -52,5 +52,5 @@ Magnet Generator For Wind Turbines*,  [PDF](http://etd.lib.metu.edu.tr/upload/12
 - İsmail Macit, *On Board Charger (OBC) Design for 800V Electric Vehicle Architecture*
 - Göktuğ Tonay, *Design and Implementation of Bidirectional Onboard Charger for Electric Vehicles*
 - Mohammad Derogarian, *Design and Implementation of a Grid-forming Converter in Order to Improve the Performance of an AC Microgrid*
-- Işık Emir Altunkol, *Analysis of Dynamic Rotor Eccentricity in Axial-flux Machines and Design of an Optimized Cycloidal-Disk Stator *
+- Işık Emir Altunkol, *Analysis of Dynamic Rotor Eccentricity in Axial-flux Machines and Design of an Optimized Cycloidal-Disk Stator*
 - Arda Kasım, *Efficiency Optimization of 800V Power Factor Correction Rectifiers for Electric Vehicle Charger Applications*
