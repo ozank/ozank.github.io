@@ -14,6 +14,7 @@ Here you can find all the comments from student's evaluation forms without any c
 
 Links to each year's evaluation forms:
 
+- [2019-2020](#2019-2020)
 - [2018-2019](#2018-2019)
 - [2017-2018](#2017-2018)
 - [2016-2017](#2016-2017)
@@ -24,6 +25,8 @@ Here's a short summary of my evaluation scores:
 
 |                  | Department Rank | Faculty Rank | Percentile |
 |------------------|-----------------|--------------|------------|
+| 2019-2020 Fall   | 12              | 45           | 8          |
+| 2018-2019 Spring | 4               | 39           | 7          |
 | 2018-2019 Fall   | 3               | 45           | 9          |
 | 2017-2018 Spring | 1               | 21           | 12         |
 | 2017-2018 Fall   | 1               | 24           | 12         |
@@ -34,7 +37,45 @@ Here's a short summary of my evaluation scores:
 | 2014-2015 Spring | 6               | 74           | 8          |
 | 2014-2015 Fall   | 14              | 107          | 10         |
 
+# 2019-2020
+
+## EE361-2019
+
+#### [Go to the beginning](#testimonials)
+
+{% for i in (1..7) %}
+
+<div class="image">
+<img src="../images/evaluation/ee361_2019/file-{{ i }}.jpeg" ><br>
+</div>
+
+{% endfor %}
+
+## EE463-2019
+
+#### [Go to the beginning](#testimonials)
+
+{% for i in (1..3) %}
+
+<div class="image">
+<img src="../images/evaluation/ee463_2019/file-{{ i }}.jpeg" ><br>
+</div>
+
+{% endfor %}
+
 # 2018-2019
+
+## EE362-2019
+
+#### [Go to the beginning](#testimonials)
+
+{% for i in (1..7) %}
+
+<div class="image">
+<img src="../images/evaluation/ee362_2019/file-{{ i }}.jpeg" ><br>
+</div>
+
+{% endfor %}
 
 ## EE463-2018
 
@@ -43,7 +84,7 @@ Here's a short summary of my evaluation scores:
 {% for i in (1..3) %}
 
 <div class="image">
-<img src="../images/evaluation/ee463_2018/file-{{ i }}.jpg" ><br>
+<img src="../images/evaluation/ee463_2018/file-{{ i }}.jpeg" ><br>
 </div>
 
 {% endfor %}
@@ -55,7 +96,7 @@ Here's a short summary of my evaluation scores:
 {% for i in (1..7) %}
 
 <div class="image">
-<img src="../images/evaluation/ee361_2018/file-{{ i }}.jpg" ><br>
+<img src="../images/evaluation/ee361_2018/file-{{ i }}.jpeg" ><br>
 </div>
 
 {% endfor %}
