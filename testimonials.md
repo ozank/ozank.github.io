@@ -23,6 +23,7 @@ Here's a short summary of my evaluation scores:
 
 |                  | Department Rank | Faculty Rank | Percentile |
 |------------------|-----------------|--------------|------------|
+| 2017-2018 Fall   | 1               | 21           | 12         |
 | 2017-2018 Fall   | 1               | 24           | 12         |
 | 2016-2017 Spring | 6               | 41           | 14         |
 | 2016-2017 Fall   | 3               | 36           | 16         |
@@ -32,6 +33,30 @@ Here's a short summary of my evaluation scores:
 | 2014-2015 Fall   | 14              | 107          | 10         |
 
 # 2017-2018
+
+## EE564-2018
+
+#### [Go to the beginning](#testimonials)
+
+{% for i in (1..11) %}
+
+<div class="image">
+<img src="../images/evaluation/ee564_2018/file-{{ i }}.jpg" ><br>
+</div>
+
+{% endfor %}
+
+## EE464-2018
+
+#### [Go to the beginning](#testimonials)
+
+{% for i in (1..11) %}
+
+<div class="image">
+<img src="../images/evaluation/ee464_2018/file-{{ i }}.jpg" ><br>
+</div>
+
+{% endfor %}
 
 ## EE361-2017
 
