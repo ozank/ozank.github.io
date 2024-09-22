@@ -212,7 +212,11 @@ For a full list of courses that I taught please visit my [Courses](/courses) web
 
 ## Publications
 
-<script src="https://bibbase.org/show?bib=https%3A%2F%2Fraw.githubusercontent.com%2Fozank%2Fcv%2Fmaster%2FTR-CV%2Fozan_publications.bib&groupby=year&jsonp=1&folding=0&authorFirst=1"></script> 
+<script src="https://raw.githubusercontent.com/ozank/cv/refs/heads/master/ENG-CV/citations_keysan_2024_09.bib&groupby=year&jsonp=1&folding=0&authorFirst=1"></script> 
+
+ <script src="https://bibbase.org/show?bib=https%3A%2F%2Fbibbase.org%2Fnetwork%2Ffiles%2FCDTjRjPesLf7pYTtc&noBootstrap=1&jsonp=1"></script> 
+
+
 
 ## Theses Supervised
 
