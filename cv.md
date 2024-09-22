@@ -161,19 +161,19 @@ For a full list of courses that I taught please visit my [Courses](/courses) web
 |2018 | Educator of the Year, METU, *Parlar Foundation*. |
 |2018 | Best Lecturer, 2017-2018 Spring semester (based on student evaluations), *METU*. |
 |2017 | Best Lecturer, 2017-2018 Fall semester (based on student evaluations), *METU*. |
-2017 & Best Poster Award, Renewable Energy and Energy Efficiency Conference, *DAAD*. |
+|2017 | Best Poster Award, Renewable Energy and Energy Efficiency Conference, *DAAD*. |
 |2013 | Staff Scholarship, *University of Edinburgh*.|
 |2012 | Young Researcher Support, *International Conference on Superconductivity and Magnetism, ICSM*.|
-|2012-2013 | Ph.D. Overseas fee waiver and stipend, *University of Edinburgh*.|
+|2012 | Ph.D. Overseas fee waiver and stipend, *University of Edinburgh*.|
 |2011 | Young Researcher Award and Travel Grant, *European Conference on Applied Superconductivity, EUCAS*.|
 |2011 | IEEE Membership and Travel Grant, *IEEE Power Electronics Society*.|
 |2011 | Best Poster Award, *IEEE International Electric Machines and Drives Conference, IEMDC*.|
 |2010 | Best Paper Award, *IEEE International Conference on Electrical Machines, ICEM*.|
-|2010-2012 | Ph.D. Scholarship on Renewable Energy, *Hopewell Holdings, Hong Kong*.|
-|2005–2007 | Graduate Fellowship, *TUBITAK*.|
+|2010 | Ph.D. Scholarship on Renewable Energy, *Hopewell Holdings, Hong Kong*.|
+|2005 | Graduate Fellowship, *TUBITAK*.|
 |2005 | Ranked 2nd in the *Academic Personnel and Graduate Education Exam (ALES)*.|
 |2005 | Finalist in the *METU Entrepreneurship Competition (Yeni İşler Yeni Fikirler)*.|
-|2001–2005 | Dean’s high honour list (3 times), Dean’s honour list (3 times).|
+|2005 | Dean’s high honour list (3 times), Dean’s honour list (3 times).|
 
 ## Courses & Seminars
 
@@ -218,6 +218,12 @@ For a full list of courses that I taught please visit my [Courses](/courses) web
 
 For on going theses, please visit [theses](/theses) page.
 
+- Görkem Gülletutan, *Armature Shape Optimization and Scaling Studies in Electromagnetic Launchers Using Finite Element Method*, 2024
+- Yunus Çay, *Nonlinear Characterization, Circuit-Based Modeling and Analysis of Single-Core Fluxgate Current Sensors*
+- Ogün Altun, *Design and Implementation of Three-level SiC Interleaved Boost Converters For A Grid Connected Multi-String PV Inverter*,[PDF](https://open.metu.edu.tr/bitstream/handle/11511/105327/Thesis_OgunAltun.pdf), 2023
+- Enes Ayaz, *Concurrent Operation of Wireless Power Transfer Based Contactless Slip Ring and Motor Drive System With a Single Converter*, [PDF](https://open.metu.edu.tr/handle/11511/98783), 2022 
+- Furkan Tokgöz, *Analytical Modelling and Multi-objective Optimization of Axial-flux Permanent Magnet Machine With Various PCB Stators and Development of a GaN Switched Integrated Motor Drive PCB Motor*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/97372/furkanTokgozMscThesis.pdf), 2022
+- Hakan Saraç, *Fault Tolerant Control of a Dual Three-Phase Electrical Machine with Predictive Current Control and Reduced Computation Burden*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/96722/index.pdf), 2022
 - İlker Şahin, *Model Predictive Control Strategies for Power Electronic Converters and AC Drives*, 2021 (PhD)
 - Mehmet Özcan, *Optimum Bidding Strategy for Renewable Energy Generation With Storage in Turkey’s Day Ahead Market*, 2021 (PhD)
 - Nail Tosun, *Investigation of Velocity Skin Effect of Convex Railgun Structure With 3D Moving Mesh*, 2021
