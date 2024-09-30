@@ -28,7 +28,7 @@ Değişik versiyon kontrol sistemleri olsa da (SVN gibi), benim önereceğim  ya
 
 - [What is version control?](http://ozan.keysan.me/presentations/version_control/version_control_academics.html)
 - [Versiyon Kontrolü nedir?](http://aliozgur.gitbooks.io/git101/content/bolum_1_-_baslangic/versiyon__kontrolu_nedir.html)
-- [Sürüm kontrolü hakkında](http://git-scm.com/book/tr/v1/Ba%C5%9Flang%C4%B1%C3%A7-S%C3%BCr%C3%BCm-Kontrol%C3%BC-Hakk%C4%B1nda)
+- [Sürüm kontrolü hakkında](https://www.natro.com/blog/github-surum-kontrolu-nedir-nasil-kullanilir/)
 - [Versiyon Kontrol Sistemi Nedir?](http://koddit.com/yazilim/versiyon-kontrol-sistemi-nedir/)
 
 Eğer ikna olduysanız önereceğim site [GitHub](https://github.com/). Hesap açarken öğrenci mailinizi kullanırsanız [şu siteden](https://education.github.com/), öğrenci paketine dahil olup bir sürü siteden ücretsiz üyelik alabilirsiniz.
@@ -48,9 +48,9 @@ Aşağıdaki linkler de oldukça eğitici:
 
 Evet malesef, Microsoft Word ya da NotePad metin editörü yerine geçmiyor. Önereceğim metin editörleri (kolaydan zora):
 
+- [Vim](http://www.vim.org/)
 - [Atom](https://atom.io/)
 - [Sublime Text](http://www.sublimetext.com/)
-- [Vim](http://www.vim.org/)
 
 Daha başka programlar için şu [linke](http://lifehacker.com/five-best-text-editors-1564907215) de bakabilirsiniz
 
