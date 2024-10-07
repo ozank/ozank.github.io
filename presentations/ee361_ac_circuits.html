@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE361-Electromechanical Energy Conversion</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-361 ELECTROMECHANICAL ENERGY CONVERSION
+
+## Ozan Keysan
+
+[http://keysan.me](http://ozan.keysan.me)
+
+Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Why do we need AC?
+<img src="https://www.thetechoutlook.com/wp-content/uploads/2021/03/Elon-Musk-tweets-about-it-would-be-better-if-Nikola-tesla-and-Thomas-Edison-were-together.jpg" alt="Drawing" style="width: 700px;"/>
+
+## [War of Currents](http://en.wikipedia.org/wiki/War_of_Currents)
+
+---
+
+# Alternating-Current Grid
+
+## - Transformers can be used to step-up voltage
+
+## - Thinner/Cheaper transmission cables
+
+## - Energy can be transferred to long distances
+
+## - More Efficient (Including the extra power loss of the transformer)
+
+---
+
+# Why do we need AC?
+
+<img src="https://www.azquotes.com/picture-quotes/quote-if-you-want-to-find-the-secrets-of-the-universe-think-in-terms-of-energy-frequency-and-nikola-tesla-43-76-81.jpg" alt="Drawing" style="width: 800px;"/>
+
+---
+
+# Not only in Power Engineering
+
+## Sinusoids exists in:
+
+### - Nature: Waves, Motion...
+
+
+### - Mechanical Engineering: Vibration, [Natural frequency](http://www.youtube.com/watch?v=j-zczJXSxnw)
+
+
+### - Computer Science: File Compression, Image Processing, [Fourier Transform](http://jackschaedler.github.io/circles-sines-signals/dft_introduction.html) ([mp3](http://nautil.us/blog/the-math-trick-behind-mp3s-jpegs-and-homer-simpsons-face), [jpeg](http://david.li/filtering/))
+
+
+---
+# Sinusoid
+
+## Sinusoid: Signal that has the form of the sine or cosine function.
+
+## \\( V(t) = V\_{max} sin (\omega t) \\)
+
+#### or
+
+## \\( V(t) = V\_{max} cos (\omega t) \\)
+---
+# \\( V(t) = V\_{max} sin (\omega t) \\)
+
+ ## \\( V\_{max}\\) : Amplitude
+ ## \\( \omega\\) : Angular velocity (radians/second)
+ ## \\( t \\) : Time (seconds)
+--
+
+## \\(f\\): Frequency in Hertz (Hz)
+## \\(\omega = 2 \pi f\\): Frequency radians/s
+
+---
+# Phase Difference: \\( V(t) = V\_{max} sin (\omega t + \phi) \\)
+--
+
+## \\(\phi\\): Phase (radians)
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/phase_difference.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# Can you answer the following?
+--
+
+## \\( cos (\omega t - \pi)\\) = 
+--
+\\( - cos (\omega t) \\)
+--
+
+## \\( cos (\omega t - \pi /2)\\) = 
+--
+\\( sin (\omega t) \\)
+--
+
+
+## \\( sin (\omega t + \pi /2)\\) = 
+--
+\\( cos (\omega t) \\)
+
+
+---
+# Phase Difference
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/phase_rotate_a.png" alt="Drawing" style="width: 350px;"/><img src="https://raw.githubusercontent.com/ozank/ee281/master/images/phase_rotate_b.png" alt="Drawing" style="width: 350px;"/>
+---
+# What about sinusoid operations?
+
+## \\(3 cos (\omega t) + 4 sin (\omega t) = ?\\)
+--
+
+## \\(A cos (\omega t) + B sin (\omega t + \phi) = ?\\)
+
+
+### [Graphical representation](https://www.desmos.com/calculator/yjdj9jyqpc)
+
+---
+#Phasors
+## Phasor: a complex number that represents the amplitude and phase of a sinusoid
+--
+
+## \\(z = x + j y\\)
+###where \\(j = \sqrt{-1}\\)
+---
+# Complex Numbers
+## \\(j = \sqrt{-1}\\) or better expressed as:  \\(j \times j = -1\\)
+
+<img src="http://betterexplained.com/wp-content/uploads/complex/negative_imaginary_table.png" alt="Drawing" style="width: 600px;"/>
+
+[Better explained: complex numbers](http://betterexplained.com/articles/a-visual-intuitive-guide-to-imaginary-numbers/)
+---
+#Phasors
+## In polar form
+
+##\\(z = x + j y = r \angle \phi\\)
+--
+
+##where
+##\\(r = \sqrt{x^2 + y^2}\\)
+## \\(\phi = tan^{-1}(\dfrac{y}{x})\\)
+---
+#Phasors
+## In polar form
+
+##\\(z = x + j y = r \angle \phi\\)
+
+###or
+
+##\\(z = r ( cos (\phi) + j sin (\phi)) \\)
+---
+# Phasors
+
+## Remember phasors are there to make your life EASIER!
+--
+
+## Derivation in phasor domain?
+--
+
+## \\(i(t)= cos (wt + \phi)\\)
+--
+
+## \\(\dfrac{d i(t)}{dt}=?\\)
+--
+
+## In Phasor domain: \\(j \omega \\) ( i.e rotation by 90 degrees!)
+---
+#Phasor Circuit Analysis: Inductor
+
+# Time Domain: \\(v = L \dfrac{di}{dt}\\)
+--
+
+# Phasor Domain: \\(\mathrm{V} = j \omega L \mathrm{I}\\)
+---
+
+#Phasor Circuit Analysis: Inductor
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/phasor_inductor.png" alt="Drawing" style="width: 600px;"/>
+
+
+---
+#Phasor Circuit Analysis: Inductor
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/phasor_inductor_VI.png" alt="Drawing" style="width: 600px;"/>
+
+## Inductor current lags inductor voltage 90 degrees
+---
+
+## Phasor Circuit Analysis: Capacitor
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/phasor_capacitor.png" alt="Drawing" style="width: 340px;"/>
+
+### Time Domain: \\(i = C \dfrac{dv}{dt}\\)
+--
+
+### Phasor Domain:  \\( \quad \mathrm{V} = \dfrac{1}{j\omega C} \mathrm{I}\\)
+---
+## Phasor Circuit Analysis: Capacitor
+
+<img src="https://raw.githubusercontent.com/ozank/ee281/master/images/phasor_capacitor_VI.png" alt="Drawing" style="width: 400px;"/>
+
+## Capacitor current leads capacitor voltage 90 degrees
+
+---
+#Impedance
+#### Impedance is the equivalent of resistance in phasor domain
+--
+
+### \\(Z = \dfrac{V}{I} \quad\quad V = ZI\\)
+--
+
+## Resistor: \\(R\\)
+--
+
+## Inductor: \\(j \omega L\\)
+--
+
+## Capacitor: \\(\dfrac{1}{j \omega C}\\)
+---
+# Impedance
+## How do you combine a resistor and inductor?
+--
+
+## \\(Z\_{eq}=Z\_1 + Z\_2 \\)
+--
+
+## \\(Z\_{eq}= R + j \omega L \\)
+--
+
+## \\(Z\_{eq}= R + j X = |Z| \angle \theta \\)
+
+---
+# What is the magnitude of grid voltage?
+
+<img src="https://imgb.ifunny.co/images/532139b7a214edc96cd1947026e6b8dbaee181d1d0f795e621b22121759c7aec_1.webp" alt="Drawing" style="width: 600px;"/>
+
+---
+# Low-Voltage Grid = 230 Vrms
+--
+
+
+## \\( V(t) = V\_{rms} \,\sqrt{2} \,cos ( 2 \pi \,f \,t) \\)
+## \\( V(t) = 230 \,\sqrt{2} \,cos ( 2 \pi \,50 \,t) \\)
+
+<iframe src="https://www.desmos.com/calculator/isy7vz2cu7?embed" width="600" height="300" style="border: 1px solid #ccc" frameborder=0></iframe>
+---
+# What is RMS?
+--
+
+
+<img src="https://www.shutterstock.com/image-illustration/rms-meaning-root-mean-square-260nw-2479570071.jpg" alt="Drawing" style="width: 800px;"/>
+
+---
+# What is RMS?
+
+# RMS = \\( \sqrt{\dfrac{1}{T}\int_0^T (f(t))^2 dt}\\)
+
+--
+## In Plain English:
+
+## The RMS value of an AC signal is equal to the value of direct current (DC) which would have the same effect or energy change as the AC.
+---
+# What is RMS?
+
+## What is the average power (in Watts) dissipated in a resistor of 1 \\(\Omega\\) while carrying a 1 A(rms) current?
+--
+
+<iframe src="https://www.desmos.com/calculator/in0czoq74w?embed" width="750" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+---
+
+# What is RMS?
+
+
+# In Power Engineering RMS values are almost always used instead of peak values !
+
+# We also use RMS values in phasor diagrams !
+
+
+---
+# Active and Reactive Power
+--
+
+### What is the average power (in Watts) dissipated in an inductor with an impedance of   \\(j 1 \, \Omega\\) while carrying a 1 A(rms) current?
+
+<iframe src="https://www.desmos.com/calculator/wr3iw7kdiv?embed" width="750" height="350" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+[Edit Graph](https://www.desmos.com/calculator/in0czoq74w)
+
+---
+# Active and Reactive Power
+
+### What is the average power (in Watts) dissipated in an inductor with an impedance of   \\(j 1 \, \Omega\\) while carrying a 1 A(rms) current?
+
+## Remember: Real power only dissipates in resistive components. Ideal inductors or capacitors don't dissipate real power, but uses reactive power.
+
+
+---
+# Active and Reactive Power
+
+## What is \\(V\_{rms} \times I\_{rms} \,\\)?
+--
+
+## \\(V\_{rms} \times I\_{rms} \neq P \\)
+--
+
+## \\(S = V\_{rms} \times I\_{rms} \\) (in VA), Apparent Power
+--
+
+## Active Power (P) in Watts equal to
+
+
+## \\(P= V\_{rms}  I\_{rms} cos(\theta) \\) (in W)
+--
+
+## \\(cos(\theta)\\): Power factor
+
+---
+# Unity Power Factor
+
+## In resistive circuits (or in compensated circuits)
+## Usually the desired case for electric grid.
+
+
+<img src="https://cdn1.byjus.com/wp-content/uploads/2021/02/unity-power-factor.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# Lagging Power Factor
+
+## In inductive (RL) circuits
+
+
+<img src="https://cdn1.byjus.com/wp-content/uploads/2021/02/lagging-power-factor.png" alt="Drawing" style="width: 800px;"/>
+---
+
+# Leading Power Factor
+
+## In Capacitive (RC) circuits
+
+
+<img src="https://cdn1.byjus.com/wp-content/uploads/2021/02/leading-power-factor.png" alt="Drawing" style="width: 800px;"/>
+
+---
+# \\(S = \sqrt{P^2 + Q^2}\\)
+
+
+<img src="https://www.electricaltechnology.org/wp-content/uploads/2013/07/Power-Triangle-Active-Reactive-Apparent-and-Complex-power.png" alt="Drawing" style="width: 500px;"/>
+
+---
+# \\(S = \sqrt{P^2 + Q^2}\\)
+
+<img src="https://www.electricaltechnology.org/wp-content/uploads/2013/07/Active-Reactive-Apparent-and-Complex-Power.png" alt="Drawing" style="width: 600px;"/>
+
+---
+
+## Important AC Power Equations
+
+<img src="https://electrical-engineering-portal.com/wp-content/uploads/2017/03/active-reactive-apparent-complext-power.png" alt="Drawing" style="width: 700px;"/>
+
+#### [EE Portal](https://electrical-engineering-portal.com/complex-power-analysis)
+
+---
+# Any questions?
+
+## You can download this presentation from: [keysan.me/ee361](http://keysan.me/ee361)
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
