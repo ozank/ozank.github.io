@@ -9,7 +9,7 @@ permalink: /blog/weekly_meetings_sabbatical/index.html
 
 As you know, we’ll need to coordinate our work remotely for most of 2025 due to my upcoming sabbatical. To prepare for this, we’ll need to refine our communication practices and ensure a structured way to track your progress. GitHub used to be the most useful tool in our research group, and I want to make it active again. These changes will be in effect immediately, and I would like everyone to actively use their GitHub account and set up the necessary repositories as soon as possible.
 
-<img src="../images/git_fire.png" alt="Drawing" style="width: 300px;"/>
+<img src="../images/git_fire.png" alt="Drawing" style="width: 400px;"/>
 
 
 ## Create Separate Repositories for Each Project/Thesis
@@ -21,20 +21,20 @@ I’d like each major project, thesis, and paper to have its own repository. Thi
 If you have a thesis title assigned (prior to the second semester in MSc), please create a dedicated repository for your thesis work. This repository should contain everything related to your thesis, including the manuscript (in LaTeX, for instance), experimental data, simulations, and any other relevant materials. For some structural ideas, refer to the links provided.
 Remember to set up a well-defined directory structure, such as /text, /figures, and /data. This approach will keep your files organized and accessible.
 
--[Furkan Karakaya MSc Thesis](https://github.com/furkankarakaya/GaN-Studies)
--[Gökhan Çakal MSc Thesis](https://github.com/gkhnckl/Axial-Flux-Permanent-Magnet-Machine-with-Novel-Flat-Winding-Made-of-Conductor-Sheet)
--[Enes Ayaz PhD Thesis](https://github.com/EnesAyaz/KTH)
+- [Furkan Karakaya MSc Thesis](https://github.com/furkankarakaya/GaN-Studies)
+- [Gökhan Çakal MSc Thesis](https://github.com/gkhnckl/Axial-Flux-Permanent-Magnet-Machine-with-Novel-Flat-Winding-Made-of-Conductor-Sheet)
+- [Enes Ayaz PhD Thesis](https://github.com/EnesAyaz/KTH)
 
 
 ### Project Repositories
 
 Every project within our research group should have its own repository. Team members assigned to a project should have read/write access to the project’s repository. Each repository will need a designated admin who will manage the file and folder structure, coordinate issues, and oversee tasks. Project repositories should be created under the ODTU GitHub account. If you need access, please reach out to the repository admin. Refer to the following repositories for examples.
 
--[IMMD Project](https://github.com/odtu/IMMD/)
--[WPT Motor](https://github.com/EnesAyaz/WPTMotor)
--[1001 WPT Project](https://github.com/hakanpolat/1kW-SiC-Series-Series-Compansated-Contactless-Slip-Ring-Design)
--[Fault Tolerant Drives](https://github.com/hakansrc/fault_tolerant_drives/)
--[Teaching Materials](https://github.com/mesutto/Teaching-Materials)
+- [IMMD Project](https://github.com/odtu/IMMD/)
+- [WPT Motor](https://github.com/EnesAyaz/WPTMotor)
+- [1001 WPT Project](https://github.com/hakanpolat/1kW-SiC-Series-Series-Compansated-Contactless-Slip-Ring-Design)
+- [Fault Tolerant Drives](https://github.com/hakansrc/fault_tolerant_drives/)
+- [Teaching Materials](https://github.com/mesutto/Teaching-Materials)
 
 
 ## Commit Small, Frequent Changes
