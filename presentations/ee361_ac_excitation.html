@@ -87,17 +87,24 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ## If the inductance of an inductor with N turns is L. 
 ## What happens to inductance if number of turns is doubled?
+---
+
+### In linear systems (e.g. air-cored inductor):
+
+## \\( L =   \dfrac{d \lambda}{d I} =N \dfrac{\Phi}{I}\\)
 --
 
-###In linear system (air-cored inductor):
+## \\( \Phi =   \dfrac{ N I}{R} \\)
+--
 
-## \\( L =  N \dfrac{\Phi}{I}= \dfrac{d \lambda}{d I}\\)
+## \\( L =  N \dfrac{\Phi}{I} = N \dfrac{N I }{I R} =  \dfrac{N^2 }{R}\\)
 ---
 # Inductance
 
+
 ## \\( L =   \dfrac{N^2}{R} = \dfrac{N^2 \mu A }{l}\\)
 
-## Inductance increases with \\(N^2\\)
+## Inductance increases with the square of number of turns \\(N^2\\)!
 
 ---
 #Example
@@ -136,8 +143,15 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ---
 
 ## Why we use twisted pair cables?
+<img src="https://stl.tech/wp-content/uploads/2022/05/Picture5-3.jpg" alt="Drawing" style="width: 800px;"/>
 
-<img src="https://media.licdn.com/dms/image/C5612AQH9hvh1Vwfwkg/article-inline_image-shrink_1500_2232/0/1631754039970?e=1704326400&v=beta&t=hELT3Fqt1MFTf1F169eXlQUHQe5etXheF5MX5Y7AUDY" alt="Drawing" style="width: 800px;"/>
+---
+
+## Why we use twisted pair cables?
+
+<img src="https://www.smar.com.br/public/img/2012_01_03-05.jpg" alt="Drawing" style="width: 800px;"/>
+
+### Twisted pair cables minimized the Mutual inductance from noise generating coils by minimizing net flux linkage.
 
 ---
 # Mutual Inductance:
@@ -165,12 +179,6 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 #AC Excitation Non-linear B-H material
 
 <img src="http://upload.wikimedia.org/wikipedia/commons/8/81/Power_Transformer_Over-Excitation.gif" alt="Drawing" style="width: 500px;"/>
-
----
-# AC Excitation
-### Non-linear B-H material
-<img src="http://www.ibiblio.org/kuphaldt/electricCircuits/AC/02336.png" alt="Drawing" style="width: 800px;"/>
-
 ---
 ## Variation of inductance with current
 
@@ -178,12 +186,17 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 <img src="https://industrial.panasonic.com/content/data/common/ss-files/tech19-07_ww.png" alt="Drawing" style="width: 380px;"/>
 
 ### If the core saturates with current, inductance get lower
-
 ---
+# AC Excitation
+### Non-linear B-H material
+<img src="http://www.ibiblio.org/kuphaldt/electricCircuits/AC/02336.png" alt="Drawing" style="width: 800px;"/>
+
+<!--
 # Non-linear B-H with Hysteresis
 
 <img src="https://www.industrial-electronics.com/images/elec-mach_1-11.jpg" alt="Drawing" style="width: 800px;"/>
----
+
+
 #Phasors in Inductors
 
 ### In ideal inductor current lags voltage by 90 degrees
@@ -192,7 +205,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 [Need a Reminder?](http://keysan.me/presentations/ee281_phasor_circuit_analysis.html)
 
-<!--
+
 #Excitation Current
 
 ## $$I_e(t) = I_c(t) + I_m(t)$$
