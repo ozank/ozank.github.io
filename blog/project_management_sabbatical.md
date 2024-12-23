@@ -1,13 +1,93 @@
 ---
 layout: page
-title: GitHub Repos (Sabbatical Edition)
-permalink: /blog/weekly_meetings_sabbatical/index.html
+title: Project Management (Sabbatical Edition)
+permalink: /blog/project_management_sabbatical/index.html
 ---
 
 
-# Commit or It Didn’t Happen!
+# A Guideline for Project Management
 
-As you know, we’ll need to coordinate our work remotely for most of 2025 due to my upcoming sabbatical. To prepare for this, we’ll need to refine our communication practices and ensure a structured way to track your progress. GitHub used to be the most useful tool in our research group, and I want to make it active again. These changes will be in effect immediately, and I would like everyone to actively use their GitHub account and set up the necessary repositories as soon as possible.
+
+Over the recent years, the number of research projects in the team has increased consistently, which is good news. As of today there are 12 funded research projects, and 6 projects in the pipeline. Up to now, I struggled to manage all these projects, but I'll be away for sabbatical leave in 2025, so I need your help in running the research work smoothly. I believe you can do a better work than I do, since you are the people doing the actual work.
+
+Our team was reluctant to use MS Teams, so we decided to organize our work in [GitHub ODTU Team](https://github.com/odtu), and you can find the relevant project and people account links from [Powerlab/Project repo](https://github.com/odtu/Powerlab/tree/master/Projects).
+
+Since the Trello days, I try to divide your work in to weekly tasks, which is one of the main ideas in Kanban project management (details below). Although, I am not an expert in project management, there are a few rule of thumbs:
+
+- Visualize the workflow (which we do during the weekly meetings)
+- Limit the work in Progress (by dividing the research projects into smaller chunks)
+- Measure and Manage Flow (by tracking the completed tasks)
+- Continuous Improvement (by coming up new ideas and creating new tasks, unfortunately up to now, it was mainly assigned by me)
+
+
+
+
+
+
+
+## Kanban vs Scrum
+
+<img src="https://i0.wp.com/matthiasorgler.com/wp-content/uploads/2023/10/1695626298793.jpeg" alt="Drawing" style="width: 200px;"/>
+
+
+## Scrum Master
+
+<img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*fDA5ePbmJAApDTMLmQN2Dg.jpeg" alt="Drawing" style="width: 200px;"/>
+
+
+### Deadlines
+
+<img src="https://www.visor.us/wp-content/uploads/missed_deadline.jpg" alt="Drawing" style="width: 200px;"/>
+
+
+## Documentation
+
+<img src="https://itchronicles.com/wp-content/uploads/2024/02/darth-meme.jpg" alt="Drawing" style="width: 200px;"/>
+
+
+### Kanban vs Scrum
+
+- [Kanban vs. scrum: which agile are you? ](https://www.atlassian.com/agile/kanban/kanban-vs-scrum)
+- [Kanban ve Scrum Nedir?](https://odsdanismanlik.com/tr/makaleler/kanban-ve-scrum-nedir/)
+- [You don't need Scrum. You just need to do Kanban right.](https://lucasfcosta.com/2022/10/02/scrum-versus-kanban.html)
+- [What is a Product Owner: Key Roles and Responsibilities Explained](https://www.simplilearn.com/what-is-a-product-owner-article)
+
+### Scrum Links
+- [What is Scrum in Project Management?](https://www.wrike.com/project-management-guide/faq/what-is-scrum-in-project-management/)
+- [Professionalize your Team Work Using Scrum](https://tilburgsciencehub.com/topics/collaborate-share/project-management/big-team-science/use-scrum-in-your-team/)
+
+
+- [What is Scrum?](https://www.youtube.com/watch?v=SWDhGSZNF9M)
+- [Scrum 101](https://www.parabol.co/resources/scrum-101-guide/)
+- [Scrum master vs. Product Owner](https://www.atlassian.com/agile/scrum/scrum-master)
+
+### Kanban Links
+
+- [Kanban Guide](https://www.wrike.com/kanban-guide/) (herkesin okumasını tavsiye ederim)
+- [Kanban Methodology](https://www.projectmanager.com/guides/kanban)
+- [Kanban Management](https://todoist.com/tr/productivity-methods/kanban)
+- [How to Implement Kanban in Research Management](https://teamhub.com/blog/how-to-implement-kanban-in-research-management/#:~:text=Kanban%20is%20a%20practical%20and,collaboration%2C%20and%20overall%20project%20outcomes)
+
+- [Kanban Roles: Everything you need to know](https://leadershiptribe.com/kanban-roles/)
+- [What are the Key Responsibilities of a Kanban System's Roles?](https://www.geeksforgeeks.org/what-are-the-key-responsibilities-of-a-kanban-systems-roles/)
+- [5 Kanban Team Roles and Their Responsibilities](https://fibery.io/blog/product-management/kanban-team-roles-and-responsibilities/)
+- [Kanban Roles and Responsibilities Explained in Full ](https://businessmap.io/blog/kanban-roles)
+- 
+
+
+### GitHub Projects
+- [Best Practices for Projects](https://docs.github.com/en/enterprise-cloud@latest/issues/planning-and-tracking-with-projects/learning-about-projects/best-practices-for-projects)
+- [Iteration Fields](https://docs.github.com/en/issues/planning-and-tracking-with-projects/understanding-fields/about-iteration-fields)
+- [Rules to Better Scrum using GitHub: Issues and Projects](https://www.ssw.com.au/rules/rules-to-better-scrum-using-github/)
+
+
+- [Effectively Integrating Interns into Research Teams](https://bssw.io/blog_posts/effectively-integrating-interns-into-research-teams)
+
+
+
+
+ As you know, we’ll need to coordinate our work remotely for most of 2025 due to my upcoming sabbatical. To prepare for this, we’ll need to refine our communication practices and ensure a structured way to track your progress. GitHub used to be the most useful tool in our research group, and I want to make it active again. These changes will be in effect immediately, and I would like everyone to actively use their GitHub account and set up the necessary repositories as soon as possible.
+
 
 
 <img src="../images/git_fire.png" alt="Drawing" style="width: 400px;"/>
