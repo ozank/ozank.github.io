@@ -34,12 +34,24 @@ I personally like the Kanban style more but Scrum is also a very popular agile p
 - [Professionalize your Team Work Using Scrum](https://tilburgsciencehub.com/topics/collaborate-share/project-management/big-team-science/use-scrum-in-your-team/)
 - [Kanban Management](https://todoist.com/tr/productivity-methods/kanban)
 
+\
+\
 
 <img src="https://i0.wp.com/matthiasorgler.com/wp-content/uploads/2023/10/1695626298793.jpeg" alt="Drawing" style="width: 200px;"/>
 
+
 ## Product Owner
 
+There are different names for this role such as Service Request Manager (SRM) but this person is the one that coordinates the workflow and assign tasks. He/she will prioritize the workflow, and set limits on current work in progress task by assigning tasks to each team member. Monitoring progress and completion of the tasks are also within his/her responsibility.
 
+You can have a look at the following for more details:
+
+- [What are the Key Responsibilities of a Kanban System's Roles?](https://www.geeksforgeeks.org/what-are-the-key-responsibilities-of-a-kanban-systems-roles/)
+- [Kanban Roles: Everything you need to know](https://leadershiptribe.com/kanban-roles/)
+- [Kanban Roles and Responsibilities Explained in Full ](https://businessmap.io/blog/kanban-roles)
+
+
+## Scrum Master
 
 
 
@@ -52,7 +64,6 @@ I personally like the Kanban style more but Scrum is also a very popular agile p
 
 
 
-## Scrum Master
 
 
 
@@ -90,10 +101,7 @@ I personally like the Kanban style more but Scrum is also a very popular agile p
 
 - [How to Implement Kanban in Research Management](https://teamhub.com/blog/how-to-implement-kanban-in-research-management/#:~:text=Kanban%20is%20a%20practical%20and,collaboration%2C%20and%20overall%20project%20outcomes)
 
-- [Kanban Roles: Everything you need to know](https://leadershiptribe.com/kanban-roles/)
-- [What are the Key Responsibilities of a Kanban System's Roles?](https://www.geeksforgeeks.org/what-are-the-key-responsibilities-of-a-kanban-systems-roles/)
-- [5 Kanban Team Roles and Their Responsibilities](https://fibery.io/blog/product-management/kanban-team-roles-and-responsibilities/)
-- [Kanban Roles and Responsibilities Explained in Full ](https://businessmap.io/blog/kanban-roles)
+
 - 
 
 
