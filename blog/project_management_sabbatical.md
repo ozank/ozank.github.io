@@ -8,16 +8,21 @@ permalink: /blog/project_management_sabbatical/index.html
 # A Guideline for Project Management
 
 
-Over the recent years, the number of research projects in the team has increased consistently, which is good news. As of today there are 12 funded research projects, and 6 projects in the pipeline. Up to now, I struggled to manage all these projects, but I'll be away for sabbatical leave in 2025, so I need your help in running the research work smoothly. I believe you can do a better work than I do, since you are the people doing the actual work.
+In the recent years, the number of research projects within our team has grown consistently, which is good news. Currently, we have 12 funded research projects, and 6 more in the pipeline. Up to now, I struggled to manage all these projects, but I'll be on sabbatical leave in 2025, and I'll need your support to run the projects smoothly in my absence. I believe you can do a better job than I have, since you are the ones doing the actual work in the projects.
 
-Our team was reluctant to use MS Teams, so we decided to organize our work in [GitHub ODTU Team](https://github.com/odtu), and you can find the relevant project and people account links from [Powerlab/Project repo](https://github.com/odtu/Powerlab/tree/master/Projects).
+As you know, our team was reluctant to use MS Teams, so we decided to organize our work in [GitHub ODTU Team](https://github.com/odtu), and you can find the relevant project and people account links from [Powerlab/Project repo](https://github.com/odtu/Powerlab/tree/master/Projects).
 
-Since the Trello days, I try to divide your work in to weekly tasks, which is one of the main ideas in Kanban project management (details below). Although, I am not an expert in project management, there are a few rule of thumbs:
+Since the days of using Trello, I aimed to organize your work into weekly tasks, which is one of the main principler of  Kanban project management (details below). While I am not an expert in project management, I try to follow these few principles of Kanban project management:
 
-- Visualize the workflow (which we do during the weekly meetings)
+- Visualize the Workflow (which we do during the weekly meetings and project boards)
 - Limit the work in Progress (by dividing the research projects into smaller chunks)
-- Measure and Manage Flow (by tracking the completed tasks)
-- Continuous Improvement (by coming up new ideas and creating new tasks, unfortunately up to now, it was mainly assigned by me)
+- Measure and Manage Flow (by keeping a track of the completed tasks)
+- Continuous Improvement (by coming up new ideas and creating new tasks, unfortunately up to now, new tasks were mainly assigned only by me)
+
+
+I would like to define the project teams and leaders for each research project. You can find the draft plan from [this link](https://docs.google.com/spreadsheets/d/1qkYq6zdjBHbpaoSGwbdyPhIfrH_-CfYhJKlSbAswA88/edit?usp=sharing). If you are confused about your roles, you can find more explanation below.
+
+
 
 
 
@@ -27,11 +32,12 @@ Since the Trello days, I try to divide your work in to weekly tasks, which is on
 
 ## Kanban vs Scrum
 
+
 <img src="https://i0.wp.com/matthiasorgler.com/wp-content/uploads/2023/10/1695626298793.jpeg" alt="Drawing" style="width: 200px;"/>
 
 
 ## Scrum Master
-
+<br/><br/>
 <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*fDA5ePbmJAApDTMLmQN2Dg.jpeg" alt="Drawing" style="width: 200px;"/>
 
 
