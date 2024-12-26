@@ -53,6 +53,8 @@ You can have a look at the following for more details:
 
 ## Scrum Master
 
+Not exactly equivalent but scrum master is also called agile coach or service delivery manager (SDM). It is usually the person who facilitates the flow, communication and ensures the team stick to Kanban principles. Although, they may not do the actual work, they help the team by removing obstacles and adjusting team capacity accordingly by analyzing project progress and main metrics.
+
 
 
 
