@@ -65,17 +65,46 @@ Not exactly equivalent but scrum master is also called agile coach or service de
 
 
 
+<br/><br/>
+<img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*fDA5ePbmJAApDTMLmQN2Dg.jpeg" alt="Drawing" style="width: 200px;"/>
+<br/><br/>
 
-### Deadlines
+### Team Members
 
-<img src="https://www.visor.us/wp-content/uploads/missed_deadline.jpg" alt="Drawing" style="width: 200px;"/>
+Of course there is a big responsibility for team members as well. We don't have a strict authority and ranks in our research team, and therefore you should do your best to share the responsibility do your best to help your project teams.  There are a few management issues that I believe we can improve.
+
 
 
 ## Documentation
 
+Documentation is critical aspect in our research projects so that everyone can be on the same page. These are the main issues I see in our team members:
+
+- Not backing up your files, keeping everything in ransom folders in your local PC
+- Choosing arbitrary file names, not using proper version control tools, and keeping every unnecessary file just in case
+- Insufficient comments/explanations in your codes, or not using a proper naming convention in variables/functions etc.
+- Not using README.md files in your GitHub repos or in your main folders
+
+
 <img src="https://itchronicles.com/wp-content/uploads/2024/02/darth-meme.jpg" alt="Drawing" style="width: 200px;"/>
 
 
+Please follow the basic rules below, and have a look at all the links below.
+
+- Keep all your files in your GitHub repositories, and make [at least 3 commits per week]() to keep your repo up-to-date
+- If a file is redundant or have a newer version delete it. Renaming files and keeping multiple copies in the same folder is not a file versioning method
+- Have backups of all your files. Although GitHub repos should be your primary directory, we have a NAS (network-attached-storage) in ARC-301, and you can use synchronization tools such as [Syncthing](https://syncthing.net/) for large files etc. You can also access documents of all past project from this NAS. Please contact me or Özgür for access.
+
+
+- [Good enough practices in scientific computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)
+- [How to organize files and folders](https://zapier.com/blog/organize-files-folders/)
+- [Best Practices for Folder Structure in Project Management](https://www.linkedin.com/pulse/best-practices-folder-structure-project-management-gdcpmsolutions-hjvwf/)
+- [Research Data Management](https://www.rvc.ac.uk/research/about/research-data-management)
+	
+### Deadlines
+
+
+
+<img src="https://www.visor.us/wp-content/uploads/missed_deadline.jpg" alt="Drawing" style="width: 200px;"/>
 
 
 ### Scrum Links
