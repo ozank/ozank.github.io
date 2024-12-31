@@ -28,19 +28,16 @@ I would like to define the project teams and leaders for each research project. 
 
 I personally like the Kanban style more but Scrum is also a very popular agile project management method. I'll leave it to project leaders to choose the best suitable method for themselves, but please have start with the following links (more resources below):
 
+<img src="https://i0.wp.com/matthiasorgler.com/wp-content/uploads/2023/10/1695626298793.jpeg" alt="Drawing" style="width: 200px;"/>
+
 - [Kanban Guide](https://www.wrike.com/kanban-guide/)
 - [What is Scrum in Project Management?](https://www.wrike.com/project-management-guide/faq/what-is-scrum-in-project-management/)
 - [Kanban vs. scrum: which agile are you? ](https://www.atlassian.com/agile/kanban/kanban-vs-scrum)
 - [Professionalize your Team Work Using Scrum](https://tilburgsciencehub.com/topics/collaborate-share/project-management/big-team-science/use-scrum-in-your-team/)
 - [Kanban Management](https://todoist.com/tr/productivity-methods/kanban)
 
-\
-\
 
-<img src="https://i0.wp.com/matthiasorgler.com/wp-content/uploads/2023/10/1695626298793.jpeg" alt="Drawing" style="width: 200px;"/>
-
-
-## Product Owner
+### Product Owner
 
 There are different names for this role such as Service Request Manager (SRM) but this person is the one that coordinates the workflow and assign tasks. He/she will prioritize the workflow, and set limits on current work in progress task by assigning tasks to each team member. Monitoring progress and completion of the tasks are also within his/her responsibility.
 
@@ -51,13 +48,11 @@ You can have a look at the following for more details:
 - [Kanban Roles and Responsibilities Explained in Full ](https://businessmap.io/blog/kanban-roles)
 
 
-## Scrum Master
+### Scrum Master
 
 Not exactly equivalent but scrum master is also called agile coach or service delivery manager (SDM). It is usually the person who facilitates the flow, communication and ensures the team stick to Kanban principles. Although, they may not do the actual work, they help the team by removing obstacles and adjusting team capacity accordingly by analyzing project progress and main metrics.
 
-
-
-
+<img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*fDA5ePbmJAApDTMLmQN2Dg.jpeg" alt="Drawing" style="width: 200px;"/>
 
 - [You don't need Scrum. You just need to do Kanban right.](https://lucasfcosta.com/2022/10/02/scrum-versus-kanban.html)
 - [What is a Product Owner: Key Roles and Responsibilities Explained](https://www.simplilearn.com/what-is-a-product-owner-article)
@@ -68,10 +63,6 @@ Not exactly equivalent but scrum master is also called agile coach or service de
 
 
 
-
-<br/><br/>
-<img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*fDA5ePbmJAApDTMLmQN2Dg.jpeg" alt="Drawing" style="width: 200px;"/>
-<br/><br/>
 
 
 
