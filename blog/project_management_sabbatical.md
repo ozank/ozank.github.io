@@ -26,7 +26,7 @@ I would like to define the project teams and leaders for each research project. 
 
 ## Kanban vs. Scrum
 
-I personally like the Kanban style more but Scrum is also a very popular agile project management method. I'll leave it to project leaders to choose the best suitable method for themselves, but please have start with the following links (more resources below):
+I personally like the Kanban style more but Scrum is also a very popular agile project management method. I'll leave it to project teams to choose the best suitable method for themselves, but please have a look at the following links before you start (more resources available below):
 
 <img src="https://i0.wp.com/matthiasorgler.com/wp-content/uploads/2023/10/1695626298793.jpeg" alt="Drawing" style="width: 200px;"/>
 
@@ -59,41 +59,31 @@ Not exactly equivalent but scrum master is also called agile coach or service de
 
 
 
-
-
-
-
-
-
 <br/><br/>
 <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*fDA5ePbmJAApDTMLmQN2Dg.jpeg" alt="Drawing" style="width: 200px;"/>
 <br/><br/>
 
 ### Team Members
 
-Of course there is a big responsibility for team members as well. We don't have a strict authority and ranks in our research team, and therefore you should do your best to share the responsibility do your best to help your project teams.  There are a few management issues that I believe we can improve.
-
-
+Of course there is a big responsibility for team members as well. We don't have a strict authority and ranks in our research team, and therefore you should do your best to share the responsibility and contribute to the project.  There are a few management issues that I observed in the past years, and I believe we can improve these:
 
 ## Documentation
 
 Documentation is critical aspect in our research projects so that everyone can be on the same page. These are the main issues I see in our team members:
 
-- Not backing up your files, keeping everything in ransom folders in your local PC
-- Choosing arbitrary file names, not using proper version control tools, and keeping every unnecessary file just in case
+- Not backing up your files, keeping everything in random folders in different local PCs
+- Choosing arbitrary file names, not using proper version control tools, and keeping several unnecessary files just in case
 - Insufficient comments/explanations in your codes, or not using a proper naming convention in variables/functions etc.
-- Not using README.md files in your GitHub repos or in your main folders
-
+- Not using README.md files in your GitHub repos or in your main folders that will help external people to understand your work
 
 <img src="https://itchronicles.com/wp-content/uploads/2024/02/darth-meme.jpg" alt="Drawing" style="width: 200px;"/>
 
 
-Please follow the basic rules below, and have a look at all the links below.
+Please follow the basic rules below, and have a look at all the links below for a systematic approach.
 
-- Keep all your files in your GitHub repositories, and make [at least 3 commits per week]() to keep your repo up-to-date
-- If a file is redundant or have a newer version delete it. Renaming files and keeping multiple copies in the same folder is not a file versioning method
-- Have backups of all your files. Although GitHub repos should be your primary directory, we have a NAS (network-attached-storage) in ARC-301, and you can use synchronization tools such as [Syncthing](https://syncthing.net/) for large files etc. You can also access documents of all past project from this NAS. Please contact me or Özgür for access.
-
+- Keep all your files in your GitHub repositories, and make [at least 3 commits per week](https://keysan.me/blog/weekly_meetings_sabbatical/) to keep your repo up-to-date
+- If a file is redundant or have a newer version delete the unnecessary versions. Renaming files and keeping multiple copies in the same folder is not a proper file versioning method
+- Have backups of all your files. Although GitHub repos should be your primary directory, we have a NAS (network-attached-storage) in ARC-301, and you can use synchronization tools such as [Syncthing](https://syncthing.net/) for large files, or backing up your PC etc. You can also access all of the previous projects from this NAS. Please contact me or Özgür if you don't have an account.
 
 - [Good enough practices in scientific computing](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)
 - [How to organize files and folders](https://zapier.com/blog/organize-files-folders/)
@@ -102,43 +92,49 @@ Please follow the basic rules below, and have a look at all the links below.
 	
 ### Deadlines
 
-
+One of the issues in our research group is the frequent missing of deadlines. I understand, the research work is inherently unpredictable and often takes longer than anticipated. However, the primary purpose of breaking a large project into smaller, manageable weekly tasks is to reduce uncertainty and provide motivation by achieving progress in these smaller, incremental steps.
 
 <img src="https://www.visor.us/wp-content/uploads/missed_deadline.jpg" alt="Drawing" style="width: 200px;"/>
 
+In my experience, missed deadlines are mostly due to procrastination and time management issues. One of the main reasons for procrastination is the lack of motivation. Although, I try my best to increase your motivation, it is essential for each of you to identify your personal reasons and goals in your life.  The links below can help you to understand and strengthen your motivation.
 
-### Scrum Links
+- [Start with Why](https://www.youtube.com/watch?v=u4ZoJKF_VuA)
+- [Inside the Mind of a Master Procrastinator](https://www.youtube.com/watch?v=arj7oStGLkU)
+- [A few nice reads](https://keysan.me/tips/)
+- [Procrastination is the thief of time](https://academiclifehistories.weebly.com/blog/procrastination-is-the-thief-of-time)
+- [The Procrastination Monster: Taming the Beast and Unleashing Productivity](https://web.hr/blog/the-procrastination-monster)
+
+
+Another reason for missed deadlines is the lack of time management. There are specifically two methods that I wound useful GTD (Getting Things Done) and Pomodoro technique. These may not be the most useful method for you, but I think it is a good starting point:
+
+
+- [GTD for Academics](https://rtalbert.org/gtd/)
+- [This Simple Method Just Doubled Down My Productivity](https://medium.com/planetsaturn/this-simple-method-just-doubled-down-my-productivity-535aeb346d18)
+- [The Pomodoro Technique and other methods to get more done ](https://dev.to/thegeoffstevens/the-pomodoro-technique-and-other-methods-to-get-more-done-with-tools-to-help-p96)
+- [Time Management & Productivity Tools For PhD Students](https://easemyphd.com/2023/02/time-management-productivity-tools-for-phd-students-what-works-for-you.html?cn-reloaded=1)
+- [Dealing with distraction in academic work](https://rtalbert.org/dealing-with-distraction/)
 
 
 
+### Extra Links
+
+#### Scrum
 
 - [What is Scrum?](https://www.youtube.com/watch?v=SWDhGSZNF9M)
 - [Scrum 101](https://www.parabol.co/resources/scrum-101-guide/)
 - [Scrum master vs. Product Owner](https://www.atlassian.com/agile/scrum/scrum-master)
 
-### Kanban Links
+#### Kanban
 
 - [Kanban Methodology](https://www.projectmanager.com/guides/kanban)
-
-
 - [How to Implement Kanban in Research Management](https://teamhub.com/blog/how-to-implement-kanban-in-research-management/#:~:text=Kanban%20is%20a%20practical%20and,collaboration%2C%20and%20overall%20project%20outcomes)
 
-
-- 
-
-
-### GitHub Projects
+#### GitHub Projects
 - [Best Practices for Projects](https://docs.github.com/en/enterprise-cloud@latest/issues/planning-and-tracking-with-projects/learning-about-projects/best-practices-for-projects)
 - [Iteration Fields](https://docs.github.com/en/issues/planning-and-tracking-with-projects/understanding-fields/about-iteration-fields)
 - [Rules to Better Scrum using GitHub: Issues and Projects](https://www.ssw.com.au/rules/rules-to-better-scrum-using-github/)
-
-
 - [Effectively Integrating Interns into Research Teams](https://bssw.io/blog_posts/effectively-integrating-interns-into-research-teams)
 
-
-
-
- 
 
 If you have any suggestions, please feel free to make a [push request](https://github.com/ozank/ozank.github.io/tree/master/blog).
 
