@@ -50,18 +50,13 @@ You can have a look at the following for more details:
 
 ### Scrum Master
 
+<img src="https://images.squarespace-cdn.com/content/v1/53252e4ce4b026a30a70a340/1542331533398-P9HTRAIFF84E8XRAX4EJ/IMG_4196.JPG" alt="Drawing" style="width: 200px;"/>
+
 Not exactly equivalent but scrum master is also called agile coach or service delivery manager (SDM). It is usually the person who facilitates the flow, communication and ensures the team stick to Kanban principles. Although, they may not do the actual work, they help the team by removing obstacles and adjusting team capacity accordingly by analyzing project progress and main metrics.
 
-<img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*fDA5ePbmJAApDTMLmQN2Dg.jpeg" alt="Drawing" style="width: 200px;"/>
 
 - [You don't need Scrum. You just need to do Kanban right.](https://lucasfcosta.com/2022/10/02/scrum-versus-kanban.html)
 - [What is a Product Owner: Key Roles and Responsibilities Explained](https://www.simplilearn.com/what-is-a-product-owner-article)
-
-
-
-<br/><br/>
-<img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*fDA5ePbmJAApDTMLmQN2Dg.jpeg" alt="Drawing" style="width: 200px;"/>
-<br/><br/>
 
 ### Team Members
 
@@ -71,12 +66,12 @@ Of course there is a big responsibility for team members as well. We don't have 
 
 Documentation is critical aspect in our research projects so that everyone can be on the same page. These are the main issues I see in our team members:
 
+<img src="https://itchronicles.com/wp-content/uploads/2024/02/darth-meme.jpg" alt="Drawing" style="width: 300px;"/>
+
 - Not backing up your files, keeping everything in random folders in different local PCs
 - Choosing arbitrary file names, not using proper version control tools, and keeping several unnecessary files just in case
 - Insufficient comments/explanations in your codes, or not using a proper naming convention in variables/functions etc.
 - Not using README.md files in your GitHub repos or in your main folders that will help external people to understand your work
-
-<img src="https://itchronicles.com/wp-content/uploads/2024/02/darth-meme.jpg" alt="Drawing" style="width: 200px;"/>
 
 
 Please follow the basic rules below, and have a look at all the links below for a systematic approach.
