@@ -8,9 +8,10 @@ For more information about current project and theses, please visit [PowerLab](h
 
 ## Completed MSc Theses
 
-- Görkem Gülletutan, *Armature Shape Optimization and Scaling Studies in Electromagnetic Launchers Using Finite Element Method*, 2024
+- M. Samet Yakut, *Optimizing the Refurbishment Process of Old 44 MVA Hydro Generator: a Study on Alternating Winding Type and Vibrational Behavior*, 2024
+- Görkem Gülletutan, *Armature Shape Optimization and Scaling Studies in Electromagnetic Launchers Using Finite Element Method*, [PDF](https://open.metu.edu.tr/handle/11511/111554), 2024
 - Yunus Çay, *Nonlinear Characterization, Circuit-Based Modeling and Analysis of Single-Core Fluxgate Current Sensors*
-- Ogün Altun, *Design and Implementation of Three-level SiC Interleaved Boost Converters For A Grid Connected Multi-String PV Inverter*,[PDF](https://open.metu.edu.tr/bitstream/handle/11511/105327/Thesis_OgunAltun.pdf), 2023
+- Ogün Altun, *Design and Implementation of Three-level SiC Interleaved Boost Converters For A Grid Connected Multi-String PV Inverter*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/105327/Thesis_OgunAltun.pdf), 2023
 - Enes Ayaz, *Concurrent Operation of Wireless Power Transfer Based Contactless Slip Ring and Motor Drive System With a Single Converter*, [PDF](https://open.metu.edu.tr/handle/11511/98783), 2022 
 - Furkan Tokgöz, *Analytical Modelling and Multi-objective Optimization of Axial-flux Permanent Magnet Machine With Various PCB Stators and Development of a GaN Switched Integrated Motor Drive PCB Motor*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/97372/furkanTokgozMscThesis.pdf), 2022
 - Hakan Saraç, *Fault Tolerant Control of a Dual Three-Phase Electrical Machine with Predictive Current Control and Reduced Computation Burden*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/96722/index.pdf), 2022
@@ -36,6 +37,7 @@ Magnet Generator For Wind Turbines*,  [PDF](http://etd.lib.metu.edu.tr/upload/12
 
 ## Completed PhD Theses
 
+- Öztürk Şahin Alemdar, *Reliability-Oriented Ripple Minimization Using Artificial Neural Networks in Power Converter Systems*, 2024
 - Hüseyin Yürük, *Investigation of Parallel Connected GaN E-HEMT VSI-Based Servo Drives*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/96074/METU_Thesis_Hyuruk_Jan2022_v3.pdf), 2022
 - İlker Şahin, *Model Predictive Control Strategies for Power Electronic Converters and AC Drives*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/93273/ilkersahinPhD.pdf), 2021
 - Mehmet Özcan, *Optimum Bidding Strategy for Renewable Energy Generation With Storage in Turkey’s Day Ahead Market*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/94261/MOZCAN_Phd_Thesis-Library.pdf), 2021
@@ -43,14 +45,14 @@ Magnet Generator For Wind Turbines*,  [PDF](http://etd.lib.metu.edu.tr/upload/12
 ## Ongoing PhD Theses
 
 - Mohammad Mokhtare, *Planning, Scheduling, and Control of an Agricultural Microgrid for Off-Grid Applications*
-- Öztürk Şahin Alemdar, *Power Converters for Vehicle Integrated Photovoltaics (VIPV) Applications*
+- Yusuf Basri Yılmaz, *Design and Analysis of Dual-speed Synchronous Reluctance Motors for Industrial and Traction Applications*
 
 ## Ongoing MSc Theses
 
-- M. Samet Yakut, *Alternating the Winding Type of a 44 MVA Hydro Generator by Minimizing the Electromagnetic Losses*
 - Özgür Gülsuna, *Design of a Quasi-direct Drive Cycloidal Actuator for Dynamic Robotic Systems*
 - İsmail Macit, *On Board Charger (OBC) Design for 800V Electric Vehicle Architecture*
 - Göktuğ Tonay, *Design and Implementation of Bidirectional Onboard Charger for Electric Vehicles*
 - Mohammad Derogarian, *Design and Implementation of a Grid-forming Converter in Order to Improve the Performance of an AC Microgrid*
 - Işık Emir Altunkol, *Analysis of Dynamic Rotor Eccentricity in Axial-flux Machines and Design of an Optimized Cycloidal-Disk Stator*
 - Arda Kasım, *Efficiency Optimization of 800V Power Factor Correction Rectifiers for Electric Vehicle Charger Applications*
+- Elif Topaloğlu, *TBD*
