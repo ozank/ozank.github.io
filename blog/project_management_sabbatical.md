@@ -22,8 +22,6 @@ Since the days of using Trello, I aimed to organize your work into weekly tasks,
 
 I would like to define the project teams and leaders for each research project. You can find the draft plan from [this link](https://docs.google.com/spreadsheets/d/1qkYq6zdjBHbpaoSGwbdyPhIfrH_-CfYhJKlSbAswA88/edit?usp=sharing). If you are confused about your roles, you can find more explanation below.
 
-
-
 ## Kanban vs. Scrum
 
 I personally like the Kanban style more but Scrum is also a very popular agile project management method. I'll leave it to project teams to choose the best suitable method for themselves, but please have a look at the following links before you start (more resources available below):
@@ -44,6 +42,9 @@ There are different names for this role such as Service Request Manager (SRM) bu
 You can have a look at the following for more details:
 
 - [What are the Key Responsibilities of a Kanban System's Roles?](https://www.geeksforgeeks.org/what-are-the-key-responsibilities-of-a-kanban-systems-roles/)
+- [The 18 Characteristics of a Great Product Owner](https://www.scrum.org/resources/blog/18-characteristics-great-product-owner)
+- [Become a Better Product Owner with Kanban](https://travisbirch.medium.com/become-a-better-product-owner-with-kanban-e0317f22ff5e)
+- [Does Kanban have a product owner?](https://insightspotter.com/does-kanban-have-a-product-owner/)
 - [Kanban Roles: Everything you need to know](https://leadershiptribe.com/kanban-roles/)
 - [Kanban Roles and Responsibilities Explained in Full ](https://businessmap.io/blog/kanban-roles)
 
@@ -57,6 +58,7 @@ Not exactly equivalent but scrum master is also called agile coach or service de
 
 - [You don't need Scrum. You just need to do Kanban right.](https://lucasfcosta.com/2022/10/02/scrum-versus-kanban.html)
 - [What is a Product Owner: Key Roles and Responsibilities Explained](https://www.simplilearn.com/what-is-a-product-owner-article)
+- [Characteristics of a Great Scrum Master](https://www.scrum.org/resources/blog/28-characteristics-great-scrum-master)
 
 ### Team Members
 
@@ -108,7 +110,6 @@ Another reason for missed deadlines is the lack of time management. There are sp
 - [The Pomodoro Technique and other methods to get more done ](https://dev.to/thegeoffstevens/the-pomodoro-technique-and-other-methods-to-get-more-done-with-tools-to-help-p96)
 - [Time Management & Productivity Tools For PhD Students](https://easemyphd.com/2023/02/time-management-productivity-tools-for-phd-students-what-works-for-you.html?cn-reloaded=1)
 - [Dealing with distraction in academic work](https://rtalbert.org/dealing-with-distraction/)
-
 
 
 ### Extra Links
