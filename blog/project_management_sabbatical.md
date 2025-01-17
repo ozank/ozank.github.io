@@ -48,6 +48,15 @@ You can have a look at the following for more details:
 - [Kanban Roles: Everything you need to know](https://leadershiptribe.com/kanban-roles/)
 - [Kanban Roles and Responsibilities Explained in Full ](https://businessmap.io/blog/kanban-roles)
 
+One of the primary responsibilities of the product owner is to assign issues and monitor their progress to ensure milestones are completed on schedule. GitHub's "Milestones" feature is an excellent tool for linking issues to specific milestones, enabling you to track progress and assess whether the project is on track.
+
+As the product owner, please regularly review the project to confirm it is progressing as planned. If there are any deviations or potential delays, do not hesitate to reach out to me or the Scrum Master so that we can implement necessary adjustments as early as possible.
+
+The following links may be helpful:
+
+- [How to organize with GitHub Milestones](https://docs.gearset.com/en/articles/8879414-how-to-organize-your-releases-with-github-milestones)
+- [GitHub Crash Course: Projects and Milestones](https://www.youtube.com/watch?v=6G9LzEyFrhE)
+- [How to use Project Roadmaps](https://www.youtube.com/watch?v=D80u__nYYWw)
 
 ### Scrum Master
 
