@@ -57,6 +57,7 @@ The following links may be helpful:
 - [How to organize with GitHub Milestones](https://docs.gearset.com/en/articles/8879414-how-to-organize-your-releases-with-github-milestones)
 - [GitHub Crash Course: Projects and Milestones](https://www.youtube.com/watch?v=6G9LzEyFrhE)
 - [How to use Project Roadmaps](https://www.youtube.com/watch?v=D80u__nYYWw)
+- [Using labels and milestones to track work](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work)
 
 ### Scrum Master
 
