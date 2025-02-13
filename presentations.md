@@ -6,6 +6,9 @@ permalink: /presentations/index.html
 
 ## Recent Presentations
 
+### 2025
+* [About me, Edinburgh Intro](https://docs.google.com/presentation/d/12zG5ISqpX3DF6wSCgStz6Ql9s6ZCLgAf45eILa4G4XU/edit?usp=sharing)
+
 ### 2024
 * [PCB Motor](https://docs.google.com/presentation/d/1UCpZpq-GZ3MGEPPKB0-FhHJnGERNeCGxbJ--qRE00Zs/edit?usp=sharing)
 
