@@ -32,7 +32,6 @@ Remember to set up a well-defined directory structure, such as /text, /figures, 
 Every project within our research group should have its own repository. Team members assigned to a project should have read/write access to the project’s repository. Each repository will need a designated admin who will manage the file and folder structure, coordinate issues, and oversee tasks. Project repositories should be created under the ODTU GitHub account. If you need access, please reach out to the repository admin. Refer to the following repositories for examples.
 
 - [IMMD Project](https://github.com/odtu/IMMD/)
-- [WPT Motor](https://github.com/EnesAyaz/WPTMotor)
 - [1001 WPT Project](https://github.com/hakanpolat/1kW-SiC-Series-Series-Compansated-Contactless-Slip-Ring-Design)
 - [Fault Tolerant Drives](https://github.com/hakansrc/fault_tolerant_drives/)
 - [Teaching Materials](https://github.com/mesutto/Teaching-Materials)
@@ -66,7 +65,6 @@ Unfortunately, Microsoft Word files are not very useful in git versioning. It is
 
 - [Markdown Basic Syntax](https://www.markdownguide.org/basic-syntax/)
 - [Pandoc Document Converter](https://pandoc.org/)
-- [Doc Templates](https://github.com/beevomit/docTemplates/tree/master)
 - [README for Your GitHub Project](https://medium.com/@sumudithalanz/the-art-of-crafting-an-effective-readme-for-your-github-project-cf425a8b1580)
 - [Readme Best Practices](https://tilburgsciencehub.com/topics/collaborate-share/share-your-work/content-creation/readme-best-practices/)
 
