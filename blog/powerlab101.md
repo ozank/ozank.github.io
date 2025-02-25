@@ -25,14 +25,14 @@ This page is intended for my existing undergraduate/graduate students, especiall
 - Get an account from [GitHub](https://github.com/), and follow [me](https://github.com/ozank), make sure I follow you as well.
 - Join to the [GitHub ODTU](https://github.com/odtu) teams and have a look at the existing repos
 - Open a repo for your thesis and use it as your scratch pad. Keep all your important files, documents and codes there (only exception is large files such as FEA files).
-- I expect you to keep your repo updated (for a few examples: [Hakansrc](https://github.com/hakansrc), [Gknckl](https://github.com/gkhnckl), [Ghandeb](https://github.com/ghandeb/thesis_work), [Furkankarakaya](https://github.com/furkankarakaya/GaN-Studies) 
+- I expect you to keep your repo updated (for a few examples: [Eliftplgl](https://github.com/eliftplgl), [Gknckl](https://github.com/gkhnckl), [Ozgurgulsuna](https://github.com/ozgurgulsuna)
 - It is good to have a weekly to do list, so I can follow your progress.
 - Use meaningful commit messages so I can understand what you are working on.
 
 ### b) Following Recent Publications
 
 - It is your responsibility to follow latest papers in your research area.
-- Get familiar with [Google Scholar](https://scholar.google.com/) and [IEEExplore](https://ieeexplore.ieee.org/Xplore/home.jsp).
+- Get familiar with [Google Scholar](https://scholar.google.com/) and [IEEExplore](https://ieeexplore.ieee.org).
 - Scan new journal issues and conference proceedings for your research interests.
 - Set up [Google Scholar Alerts](https://scholar.google.com/intl/en/scholar/help.html#alerts) to discover latest publications.
 - Scan relevant papers [using the cited by feature](https://scholar.google.com/intl/en/scholar/help.html).
@@ -65,7 +65,7 @@ Don't just take my word (in fact don't just take my word for anything), and talk
 - [Modest Advice for New Graduate Students](https://medium.com/@dorsaamir/modest-advice-for-new-graduate-students-b0be6b8dbc22)
 - [Advice for Incoming Graduate Students](https://culturologies.wordpress.com/2018/08/13/advice-for-incoming-graduate-students/)
 - [How to Be a Successful Grad Student: Insider Advice](https://www.collegexpress.com/articles-and-advice/grad-school/articles/life-grad-student/how-be-successful-grad-student-insider-tips/)
-- [Tips for Thriving in Graduate School](https://graduateschool.vt.edu/about/deanscorner/tips-for-thriving.html)
+- [Tips for Thriving in Graduate School](https://graduateschool.vt.edu/content/dam/graduateschool_vt_edu/tips-for-grad-ed/31-tips-for-thriving.pdf)
 - [Publishing in Graduate School: Tips for New Graduate Students](https://www.psychologicalscience.org/observer/publishing-in-graduate-school-tips-for-new-graduate-students-2)
 
 
@@ -76,8 +76,7 @@ Here are a few useful links, that you can use later on:
 - [Software Tips](http://keysan.me/tips/)
 - [Önce Küfür Sonra Teşekkür](http://keysan.me/okst/)
 - [IS500](http://keysan.me/is500/)
-- [Digital Research Tools](http://dirtdirectory.org)
-- [Software Carpentry](https://software-carpentry.org/)
+- [Digital Research Tools](https://researcher.life/blog/article/top-digital-tools-for-researchers/)
 
 
 *Note:* Remember this page is kept in a [GitHub repo](https://github.com/ozank/ozank.github.io/blob/master/blog/powerlab101.md). If there are any dead-links or any extra links that you think should be in this page, just send me a [pull request](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork).
