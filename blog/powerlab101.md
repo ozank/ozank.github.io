@@ -6,11 +6,11 @@ permalink: /blog/powerlab101/index.html
 
 ## PowerLab-101: How to start your postgraduate study?
 
-This page is intended for my existing graduate students, especially for the new ones. Please don't hesitate to ask any problems you encountered to me or to your colleagues. You can find useful links at the bottom of this page.
+This page is intended for my existing undergraduate/graduate students, especially for the new ones. Please don't hesitate to ask any problems you encountered to me or to your colleagues. You can find useful links at the bottom of this page.
 
-## 1-Get Familiar with the Research Group
+## 1-Get Familiar with the Research Group Members
 
-- Meet with the research group members and ask them about their research topics
+- Meet with the [research group members](https://power.eee.metu.edu.tr/team/) and talk to them about their research topics
 - Join to the PowerLab mail-list, and relevant WhatsApp groups (ask your friends how to join them).
 - Visit PowerLab offices and labs: C-114, ARC-300, E-101, Machinery Lab, Power Electronics Lab, Ground Lab etc.
 - Get familiar with the laboratory equipments we have, and meet with the technicians.
@@ -23,6 +23,7 @@ This page is intended for my existing graduate students, especially for the new 
 - It is your responsibility to back-up your data, I don't want to hear any excuses on that.
 - Learn about version controlling and learn how to use [Git](https://git-scm.com/).
 - Get an account from [GitHub](https://github.com/), and follow [me](https://github.com/ozank), make sure I follow you as well.
+- Join to the [GitHub ODTU](https://github.com/odtu) teams and have a look at the existing repos
 - Open a repo for your thesis and use it as your scratch pad. Keep all your important files, documents and codes there (only exception is large files such as FEA files).
 - I expect you to keep your repo updated (for a few examples: [Hakansrc](https://github.com/hakansrc), [Gknckl](https://github.com/gkhnckl), [Ghandeb](https://github.com/ghandeb/thesis_work), [Furkankarakaya](https://github.com/furkankarakaya/GaN-Studies) 
 - It is good to have a weekly to do list, so I can follow your progress.
@@ -31,7 +32,7 @@ This page is intended for my existing graduate students, especially for the new 
 ### b) Following Recent Publications
 
 - It is your responsibility to follow latest papers in your research area.
-- Get familiar with [Google Sccholar](https://scholar.google.com/) and [IEEExplore](https://ieeexplore.ieee.org/Xplore/home.jsp).
+- Get familiar with [Google Scholar](https://scholar.google.com/) and [IEEExplore](https://ieeexplore.ieee.org/Xplore/home.jsp).
 - Scan new journal issues and conference proceedings for your research interests.
 - Set up [Google Scholar Alerts](https://scholar.google.com/intl/en/scholar/help.html#alerts) to discover latest publications.
 - Scan relevant papers [using the cited by feature](https://scholar.google.com/intl/en/scholar/help.html).
@@ -41,9 +42,9 @@ This page is intended for my existing graduate students, especially for the new 
 
 ### c) To Do Lists
 
-- It is your responsibility to have an efficient method for tracking your to do items. You can have a notebook, a cork-board or use Github Issues.
-- My preferred method is to use [Trello](https://trello.com/).
-- Join to the PowerLab group in Trello and relevant boards.
+- It is your responsibility to have an efficient method for tracking your to do items. 
+- In the research group, we use [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) and use GitHub issues to track and manage projects.
+- We use  (at least try to use) Kanban project management method. Please have a look at [ my blog on project management](https://keysan.me/blog/project_management_sabbatical/) for more information.
 - Although digital methods is convenient, I still advise you to have a regular notebook for capturing your ideas and keeping your experimental results.
 
 
@@ -52,7 +53,7 @@ This page is intended for my existing graduate students, especially for the new 
 - Learn how to use [LaTeX](https://www.latex-project.org).
 - The quickest way to start using LaTeX is online editors. I advise [OverLeaf](https://www.overleaf.com)
 - Once you have a grasp of it, it is always better to have a local LaTeX installed in your computer.
-- Use a good text editor. I personally use [Vim](https://www.vim.org/), but you can use [Atom](https://atom.io/), [Notepad++](https://notepad-plus-plus.org/) etc.
+- Use a good text editor. I personally use [Vim](https://www.vim.org/), but you can use [Sublime Text](https://www.sublimetext.com/), [Notepad++](https://notepad-plus-plus.org/) etc.
 - Start writing your thesis in LaTeX and keep it in a GitHub repo.
 - Spend some time to have standard figures, have legible axis labels and numbers.
 - Learn the difference between vector and bitmap images. Don't use "print screen" in your documents.
