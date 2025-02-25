@@ -42,9 +42,8 @@ Digital Signal Processing](https://www.dspguide.com/pdfbook.htm)
 
 ### Control
 
-* [PID without a PhD](http://m.eet.com/media/1112634/f-wescot.pdf)
-* [PID without a PhD-Short Version](http://www.wescottdesign.com/articles/pid/pidWithoutAPhd.pdf)
-* [Feedback Systems: An Introduction for Scientists and Engineers](http://www.cds.caltech.edu/~murray/amwiki/index.php/Main_Page)
+* [PID without a PhD](https://web2.qatar.cmu.edu/~gdicaro/16311-Fall17/slides/PID-without-PhD.pdf)
+* [PID without a PhD-Short Version](http://fabacademy.org/2014/students/shooshtari.ali/week16/images/PID-Without-a-PhD.pdf)
 * [Improving the Beginner’s PID – Introduction](http://brettbeauregard.com/blog/2011/04/improving-the-beginners-pid-introduction/)
 
 ### Linear Algebra
@@ -74,7 +73,7 @@ Digital Signal Processing](https://www.dspguide.com/pdfbook.htm)
 * [Mechanics, Radiation and Heat](http://www.feynmanlectures.caltech.edu/I_toc.html)
 * [Electromagnetism and Matter](http://www.feynmanlectures.caltech.edu/II_toc.html)
 * [Quantum Mechanics](http://www.feynmanlectures.caltech.edu/III_toc.html)
-* [Faraday's Cage](https://sinews.siam.org/DetailsPage/TabId/900/ArtMID/2243/ArticleID/757/Surprises-of-the-Faraday-Cage.aspx)
+* [Faraday's Cage](https://www.siam.org/publications/siam-news/articles/surprises-of-the-faraday-cage/)
 
 ### Motor Control
 
