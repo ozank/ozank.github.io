@@ -7,7 +7,8 @@ permalink: /presentations/index.html
 ## Recent Presentations
 
 ### 2025
-* [About me, Edinburgh Intro](https://docs.google.com/presentation/d/12zG5ISqpX3DF6wSCgStz6Ql9s6ZCLgAf45eILa4G4XU/edit?usp=sharing)
+* [Introduction to Design of Hydro Generators](https://docs.google.com/presentation/d/12zG5ISqpX3DF6wSCgStz6Ql9s6ZCLgAf45eILa4G4XU/edit?usp=sharing)
+* [About me, Edinburgh Intro](https://docs.google.com/presentation/d/1RwAGDoe7lovN0Mi24P4WEiOThbbEN42yWt0nNbnvJi8/edit?usp=sharing)
 
 ### 2024
 * [PCB Motor](https://docs.google.com/presentation/d/1UCpZpq-GZ3MGEPPKB0-FhHJnGERNeCGxbJ--qRE00Zs/edit?usp=sharing)
