@@ -7,6 +7,9 @@ permalink: /presentations/index.html
 ## Recent Presentations
 
 ### 2025
+
+* [Magnetics Training - I: Magnetic Materials and Circuits]((/roketsan1_magnetic_circuits.html))
+
 * [Introduction to Design of Hydro Generators](https://docs.google.com/presentation/d/12zG5ISqpX3DF6wSCgStz6Ql9s6ZCLgAf45eILa4G4XU/edit?usp=sharing)
 * [About me, Edinburgh Intro](https://docs.google.com/presentation/d/1RwAGDoe7lovN0Mi24P4WEiOThbbEN42yWt0nNbnvJi8/edit?usp=sharing)
 
