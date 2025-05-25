@@ -9,11 +9,13 @@ permalink: /tips/index.html
 
 * [The days are long but the decades are short](http://blog.samaltman.com/the-days-are-long-but-the-decades-are-short)
 * [The Most Important Thing I Learned in My 20's](https://medium.com/@adambraun/the-most-important-thing-i-learned-in-my-20s-677e2ed1a70f)
+* [Life Lessons from the First Half-Century of My Career](https://cacm.acm.org/opinion/life-lessons-from-the-first-half-century-of-my-career/)
 * [How to pick a career that actually fits you?](https://waitbutwhy.com/2018/04/picking-career.html)
 * [But Will It Make You Happy?](https://web.archive.org/web/20230530000437/http://www.nytimes.com/2010/08/08/business/08consume.html)
 * [You are not behind](http://zackkanter.com/2016/01/13/you-are-not-behind/)
 * [A Protocol for Dying](http://hintjens.com/blog:115)
 * [Life is Short](http://paulgraham.com/vb.html)
+* [Your Life in Weeks](https://waitbutwhy.com/2014/05/life-weeks.html)
 * [There's Plenty of Room at the Bottom](http://www.zyvex.com/nanotech/feynman.html)
 * [Cargo Cult Science, Richard Feynman](http://calteches.library.caltech.edu/51/2/CargoCult.htm)
 * [If Money Doesn't Make You Happy Then You Probably Aren't Spending It 
@@ -92,6 +94,7 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 * [How to write good abstracts?](http://blogs.lse.ac.uk/impactofsocialsciences/2011/06/20/essential-guide-writing-good-abstracts/)
 * [Your essential ‘how-to’ guide to writing good abstracts](https://blogs.lse.ac.uk/impactofsocialsciences/2011/06/20/essential-guide-writing-good-abstracts/)
 * [İyi bir bilimsel makale için öneriler](http://www.canmustafa.com/iyi-bir-bilimsel-makale-icin-oneriler/)
+* [3 shell scripts to improve your writing](https://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/)
 
 #### Other
 

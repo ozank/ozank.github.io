@@ -12,7 +12,7 @@ Here I collect some useful links to explain difficult concepts in electrical eng
 
 * [Circles, Sines and Signals](http://jackschaedler.github.io/circles-sines-signals/)
 * [Visual Math Concepts](http://math.stackexchange.com/questions/733754/visually-stunning-math-concepts-which-are-easy-to-explain)
-* [Why units are important](http://motherboard.vice.com/read/the-time-nasa-lost-a-mars-orbiter-because-of-a-metric-system-mixup)
+* [Why units are important](https://www.simscale.com/blog/nasa-mars-climate-orbiter-metric/)
 * [Euler’s Formula: A Complete Guide](https://mathvault.ca/euler-formula/)
 * [The Scientist and Engineer's Guide to
 Digital Signal Processing](https://www.dspguide.com/pdfbook.htm)
@@ -24,6 +24,7 @@ Digital Signal Processing](https://www.dspguide.com/pdfbook.htm)
 
 ### Fourier Transform
 
+* [An animated introduction to Fourier Series](https://www.andreinc.net/2024/04/24/from-the-circle-to-epicycles)
 * [An interactive Guide to the Fourier Transform](http://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/)
 * [An interactive tutorial on Fourier Series](http://www.jezzamon.com/fourier/)
 * [Fourier Transform for Dummies](https://math.stackexchange.com/questions/1002/fourier-transform-for-dummies)
@@ -82,3 +83,7 @@ Digital Signal Processing](https://www.dspguide.com/pdfbook.htm)
 ### Mechanics
 
 * [507 Movements](http://507movements.com/)
+
+### Power Engineering
+
+* [Which Power Plant Does My Electricity Come From?](https://practical.engineering/blog/2024/11/14/which-power-plant-does-my-electricity-come-from)
