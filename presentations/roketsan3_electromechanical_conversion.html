@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Roketsan Training - III</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Roketsan Training - Session III
+
+# Electromechanical Energy Conversion
+
+## Ozan Keysan
+
+[keysan.me](http://keysan.me)
+
+Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Lorenz Force
+
+## \\(\vec{F} = q (\vec{E} + \vec{v} \times \vec{B})\\)
+--
+
+### In a purely magnetic system (no electric field) :
+## \\(\vec{F} = q \vec{v} \times \vec{B}\\)
+--
+
+### or alternatively force density (\\(N/m^3\\))):
+## \\(\vec{f} = \rho \vec{v} \times \vec{B} = \vec{J} \times \vec{B}\\)
+
+
+#### \\( \rho \\): Charge density (C/m3) , \\( \vec{v} \\): velocity
+
+---
+#Lorenz Force
+
+## \\(\vec{F} = \vec{J} \times \vec{B}\\)
+
+<img src="http://sharkphysics.weebly.com/uploads/8/5/9/5/8595301/265734720.png" alt="Drawing" style="width:400px;"/>
+
+###  \\( \vec{J}\\): Current Density (A/m2), \\( \vec{B}\\): Magnetic Field Density (T)
+
+---
+### Let's integrate force density  \\(\vec{F}\\) over the current carrying wire volume
+--
+
+<img src="https://cdn.savemyexams.com/uploads/2021/04/20.1-Force-on-conductor-2.png" alt="Drawing" style="width:600px;"/>
+
+## \\( F = B I L \\)
+
+### B: Magnetic Field Density, I: Current, L: Length of the wire
+--
+
+#### but don't forget the cross operator between B and I
+
+---
+### Let's integrate force density  \\(\vec{F}\\) over the current carrying wire volume
+
+<img src="https://cdn.savemyexams.com/uploads/2021/04/20.1-Force-on-conductor-1.png" alt="Drawing" style="width:600px;"/>
+
+## \\( F = B \times I L \\)
+
+### Force is maximum when B and I are perpendicular to each other
+
+---
+# Lorenz Force Applications
+
+- ### [Force Demo](http://www.youtube.com/watch?v=K9ks_DNPAFQ)
+- ### [Homopolar Motor](http://www.youtube.com/watch?v=kJKuNcgbW-o)
+- ### [World's Simplest Electric Train](https://www.youtube.com/watch?v=J9b0J29OzAU)
+
+- ### [Electromagnetic Aircraft Launcher](https://www.youtube.com/watch?v=T1Icd3MFmWc)
+- ### [Navy Railgun](https://www.youtube.com/watch?v=NmFeRYPNP88), [Railgun-2](https://www.youtube.com/watch?v=_VvXXtT3HoU)
+- ### [Aselsan Tufan](https://www.youtube.com/watch?v=O5GtuQk3t44)
+- ### [Aselsan Tufan-2](https://www.youtube.com/watch?v=MxloiA5mSSk)
+
+
+---
+# Electromagnetic Launcher (Railgun)
+
+<img src="https://www.digikey.com/maker-media/5f091812-8045-4318-9a23-d6865608bd52" alt="Drawing" style="width:800px;"/>
+
+---
+## ASELSAN TUFAN
+
+<img src="https://www.savunmatr.com/wp-content/uploads/2023/12/aselsan_8da1f-1.png" alt="Drawing" style="width:750px;"/>
+
+## 8 MJ, 2000 m/s exit velocity, 2 Million Amps peak current
+
+---
+# Electromagnetic Launcher (Railgun)
+
+<img src="https://www.researchgate.net/publication/360607369/figure/fig1/AS:11431281209618083@1701812666159/Working-principle-diagram-of-an-electromagnetic-railgun-16.jpg" alt="Drawing" style="width:750px;"/>
+
+
+---
+#Lorenz Force
+
+## \\( F = B \times I L \\)
+
+### Exercise:
+
+- ### How can we increase the force in a electromagnetic system?
+--
+
+- ### Increase Magnetic Field (more magnet, more field current)
+--
+
+- ### Increase Current
+--
+
+- ### Increase the volume of conductor (longer, larger area, more number of turns)
+---
+
+## Limitations in a Practical System
+
+## Increasing B (Magnetic Field Density)
+
+--
+
+## Limits of the permanent magnets ( Brem less than 1.4 T, B airgap around 0.7 T)
+--
+
+## Magnetic Saturation (steel laminations: 1.5 T, cobalt SMC: 1.8-2 T)
+--
+
+## Efficiency and volume issues with field windings (electromagnets)
+
+---
+
+## Limitations in a Practical System
+
+## Increasing Current (Electrical Loading)
+--
+
+- ## Heating (Copper losses proportional with \\( I^2\\)
+--
+
+- ## Resistance also increases with temperature (feed forward mechanism)
+--
+
+- ## Short overload is possible due to thermal mass
+
+---
+
+## Limitations in a Practical System
+
+## Increasing Copper Length:
+--
+
+- ## Increases resistance, and losses
+--
+
+
+## Increasing cross section area of the wire
+--
+
+- ## Increases eddy current losses, increases mass
+--
+
+
+## Using more number of turns
+
+- ## Increases volume, but usually more preferable to increasing cross section area
+																							 
+---
+### How can we calculate non-current carrying electromagnetic systems?
+
+## A Solenoid
+<img src="https://www.intercyprus.com/cdn/shop/files/61AmVqjLRZL._SL1447_55e31f4b-c0d1-43c8-b4e2-a6bc8801dc31.jpg" alt="Drawing" style="width:400px;"/>
+
+
+---
+# Simplified Representation of a Solenoid
+
+<img src="./images/emec_double_relay.png" alt="Drawing" style="width: 600px;"/>
+
+## How can you calculate the generated force?
+
+---
+# A very Important Rule:
+
+# There is no direct connection between electrical systems and mechanical force!
+
+--
+
+## Electrical energy is converted to magnetic energy, then magnetic energy is converted to mechanical energy
+
+--
+## Electric Energy Input =
+--
+
+## Losses (Heat) + Stored Magnetic Energy + Mechanical Work
+
+---
+# Equivalent Circuit of a Solenoid
+
+<img src="./images/emec_relay.png" alt="Drawing" style="width: 800px;"/>
+
+---
+### Let's ignore the losses for now
+--
+
+
+### Electric Energy Input =  Stored Magnetic Energy + Mechanical Work
+
+<img src="./images/lossless_magnetic_system.png" alt="Drawing" style="width: 700px;"/>
+
+---
+# Review: Stored Magnetic Energy
+
+## \\(W\_{stored} = \int_0^\lambda i(\lambda) d\lambda \\)
+--
+
+## or from B-H curve
+
+## \\(W\_{stored} = \int \_{volume } (\int_0^B H dB) \\)
+---
+
+# Review: Stored Magnetic Energy
+
+### In linear magnetic systems (no saturation)
+
+## W(magnetic) = \\(\dfrac{1}{2} \lambda i = \dfrac{1}{2} L i^2 =\dfrac{1}{2L} \lambda^2 \\)
+
+
+---
+# Singly-Excited Electromechanical System
+
+<img src="./images/emec_relay.png" alt="Drawing" style="width: 800px;"/>
+---
+# Example:
+
+---
+# Example:
+
+### Find magnetic stored energy as a function of x. (I=10 A)
+
+<img src="./images/emec_ex2.png" alt="Drawing" style="width: 800px;"/>
+---
+# Example Cont:
+
+### Find magnetic stored energy if N=1000, g=2mm, d=15cm, l=10cm
+
+<img src="./images/emec_ex2.png" alt="Drawing" style="width: 800px;"/>
+---
+# Force from the Stored Energy
+
+<img src="./images/DSC09854-SCottish-festival.jpg" alt="Drawing" style="width: 600px;"/>
+
+--
+
+## Derivative of Energy w.r.t. position gives the force!
+---
+# Force from Stored Energy
+## \\(W\_{magnetic} = i d\lambda - f dx\\)
+### Take derivative
+--
+
+### Some useful reading:
+
+- #### [MIT From Lasers to Motors](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-007-electromagnetic-energy-from-motors-to-lasers-spring-2011/readings/MIT6_007S11_forces.pdf)
+
+- #### [Fitzgerald-Electromechanical Energy Conversion](https://feevuted.edu.vn/wp-content/uploads/2018/02/Fitzgerald-2002-Electric-Machinery_Cambrige.pdf)
+
+---
+# Force from Stored Energy
+### \\(Force = - \dfrac{\partial W\_{mag}(\lambda, x)}{\partial x} |\_{\lambda = constant}\\)
+
+--
+## For Linear Systems
+### \\(Force = - \dfrac{\partial}{\partial x} (\dfrac{\lambda^2}{2 L(x)}) =\dfrac{ \lambda^2}{2 L(x)^2} (\dfrac{d L(x)}{dx}) \\)
+--
+
+### \\(Force = \dfrac{i^2}{2} \dfrac{d L(x)}{dx} \\)
+---
+# Example: Previous Example
+
+### Derive the force as a function of position
+
+<img src="./images/emec_ex2.png" alt="Drawing" style="width: 800px;"/>
+
+
+---
+# Rail Gun Example:
+
+<img src="http://pop.h-cdn.co/assets/16/22/768x496/gallery-1465165715-3mpujgm.jpg" alt="Drawing" style="width: 500px;"/>
+
+
+###[Mini Coil Gun](http://www.youtube.com/watch?v=lIEgg7d8ZsU), [Large Rail Gun](http://www.youtube.com/watch?v=wa_vuX5_oAk), [Part-2](http://www.youtube.com/watch?v=rAwvnXYH488), [How it works](http://www.youtube.com/watch?v=PQNHsS-BNs4)
+
+### [Reading assignment](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-007-electromagnetic-energy-from-motors-to-lasers-spring-2011/lecture-notes/MIT6_007S11_lec14.pdf)
+
+---
+
+# Summary
+
+## Magnetic Circuit Tries
+--
+
+- ## To reduce \\(W\_{magnetic}\\) if \\(\Phi\\) is constant
+--
+
+- ## To maximize the inductance
+--
+
+- ## To minimize the reluctance (\\(L=N^2/R\\))
+
+---
+### How about rotational systems?
+
+<img src="https://www.mdpi.com/energies/energies-14-03109/article_deploy/html/images/energies-14-03109-g001.png" alt="Drawing" style="width: 500px;"/>
+
+---
+
+# What would happen in this circuit?
+
+<img src="https://raw.githubusercontent.com/ozank/ozank.github.io/master/presentations/images/single_phase_reluctance_motor.png" alt="Drawing" style="width: 700px;"/>
+
+---
+
+## Mechanical Power & Energy:
+--
+
+## Linear Motion: 
+--
+\\(P = F v = F \dfrac{dx}{dt}\\) Watt
+--
+
+## Rotational:
+--
+\\(P=T \omega = T \dfrac{d\theta}{dt} \\) Watt
+--
+
+## Linear Motion: \\(W = \int P dt = F x \\) Joule
+--
+
+## Rotational: \\(W=  \int P dt = T \theta \\) Joule
+---
+
+## Linear Acceleration: 
+--
+
+## \\(F = m a = m \dfrac{dv}{dt}\\)
+--
+
+## Rotational Acceleration:
+--
+
+## \\(T=J \dfrac{d\omega}{dt} \\) Watt
+
+## J: Rotational Inertia (\\(kgm^2\\))
+---
+
+---
+# Rotational Sytems:
+--
+
+## Remember in linear systems:
+
+### \\(f = - \dfrac{\partial W\_{mag}(\Phi, x)}{\partial x} |\_{\Phi = constant}\\) 
+
+---
+# Rotational Sytems:
+
+
+## Take the derivative wrt \\( \theta \\) not \\( x \\):
+--
+
+### \\(T = - \dfrac{\partial W\_{mag}(\Phi, \theta)}{\partial \theta} |\_{\Phi = constant}\\) 
+
+
+#### [More information](http://engineering.nyu.edu/mechatronics/Control_Lab/Criag/Craig_RPI/SenActinMecha/EM_Motion_Fundamentals_2.pdf)
+---
+# Rotational Sytems:
+
+## Take the derivative wrt \\( \theta \\) not \\( x \\):
+--
+
+
+## \\(T = - \dfrac{1}{2}\Phi^2\dfrac{d R(\theta)}{d \theta} |\_{\Phi = constant}\\) 
+
+### or  alternatively 
+
+## \\(T = \dfrac{1}{2}I^2\dfrac{d L(\theta)}{d \theta} |\_{i = constant}\\) 
+
+---
+# How can we achieve a constant rotation?
+--
+
+## Single Phase Reluctance Motor
+--
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Motore_a_riluttanza_magnetica_variabile.gif" alt="Drawing" style="width: 400px;"/>
+
+[Magnetorquer](https://blog.satsearch.co/2019-08-21-magnetorquers-an-overview-of-magnetic-torquer-products-available-on-the-global-marketplace-for-space.html)
+---
+# Single Phase Reluctance Motor
+--
+
+<img src="./images/ee361/step_motor.gif" alt="Drawing" style="width: 400px;"/>
+
+### [Magnetic Flux](https://www.youtube.com/watch?v=hDJnLt7cBTY),  [Micro-stepping for higher accuracy](https://www.youtube.com/watch?v=eyqwLiowZiU)
+
+---
+# Summary
+
+## Magnetic Circuit Tries
+--
+
+- ### To maximize the inductance, to minimize the reluctance (\\(L=N^2/R\\))
+
+- ### To decrease the magnetic energy (increase co-energy)
+
+## Rotational systems are similar to linear systems, but take the derivative of magnetic energy in terms of \\(\theta\\) instead of \\(x\\).
+---
+
+# Multiply-Excited Systems
+
+## What happens if there are more than one coils?
+
+<img src="./images/multiply_excited.png" alt="Drawing" style="width: 700px;"/>
+
+---
+# Multiply-Excited Systems
+<img src="./images/multiply_excited_block.jpg" alt="Drawing" style="width: 700px;"/>
+## Electrical Energy = Magnetic Energy + Mechanical Energy
+--
+
+### \\(dW\_{mag} (\lambda\_1,\lambda\_2,\theta) = i\_1 d\lambda\_1 + i\_2d\lambda\_2 - T d\theta\\)
+---
+# Mutual Inductance
+
+<img src="https://www.electrical4u.com/images/february16/1456131982.gif" alt="Drawing" style="width: 600px;"/>
+
+### Write down the voltage equation of Inductor 2.
+
+---
+# What is the stored energy in coil1?
+
+### \\(W\_{mag1}= \dfrac{1}{2}i^2 L\\) 
+--
+ \\(\quad \rightarrow\\) Not Correct!
+
+--
+
+### \\(dW\_{mag1}= i\_1 d\lambda\_1 \\)
+--
+
+### \\(dW\_{mag1}= i\_1 (L\_{11}di\_1  + L\_{12}di\_2) \\)
+
+---
+# Total stored energy (coil1+coil2)?
+## \\(dW\_{mag}= i\_1 d\lambda\_1 + i\_2d\lambda\_2 \\)
+--
+
+## Or it can be written as:
+--
+
+## \\(W\_{mag}=\int dW\_{mag} \\)
+## \\(= \dfrac{1}{2} L\_{11}i\_1^2 + \dfrac{1}{2} L\_{22}i\_2^2 +  M i\_1 i\_2\\)
+---
+# Stored Energy in Matrix Form
+--
+
+### \\(W\_{mag}=\dfrac{1}{2}  \begin{bmatrix}  i\_1 & i\_2  \end{bmatrix} \begin{bmatrix}  L\_{11} & M \\\ M & L\_{22} \end{bmatrix} \begin{bmatrix}  i\_1 \\\ i\_2  \end{bmatrix}\\)
+--
+
+### Generalized case
+### \\(W\_{mag} = \dfrac{1}{2} \mathbf{I}_t \mathbf{L} \mathbf{I}\\)
+
+
+### An application of multiply excited systems: [Contactless Surgery](https://www.youtube.com/watch?v=ocE3MjF77Wk) [More information](http://robohub.org/minimally-invasive-eye-surgery-on-the-horizon-as-magnetically-guided-microbots-move-toward-clinical-trials/)
+
+
+
+---
+# Torque in Multiply Excited Systems
+## still depends on the derivative of \\(W\_{mag}\\)
+--
+
+### \\(T\_{mech}= \dfrac{1}{2} \dfrac{dL\_{11}}{d\theta}i\_1^2 + \dfrac{1}{2} \dfrac{dL\_{22}}{d\theta}i\_2^2\\)
+### \\(\quad\quad\quad + \dfrac{dM}{d\theta} i\_1 i\_2\\)
+--
+
+### \\(T\_{mech} = \dfrac{1}{2} \mathbf{I}_t \dfrac{d\mathbf{L}}{d\theta} \mathbf{I}\\)
+---
+# Combination with Mechanical Systems:
+--
+
+## Linear and Rotational Motion
+
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
+.tg td{border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;}
+.tg th{border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;}
+.tg .tg-vn4c{background-color:#D2E4FC}
+</style>
+<h2>
+<table class="tg">
+  <tr>
+    <th class="tg-031e">Linear</th>
+    <th class="tg-031e"></th>
+    <th class="tg-031e">Rotational</th>
+    <th class="tg-031e"></th>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">X: (m)<br></td>
+    <td class="tg-vn4c"></td>
+    <td class="tg-vn4c">(θ): (radians)</td>
+    <td class="tg-vn4c"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">v: Velocity (m/s)<br></td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e">ω: Angular Velocity (θ/s)</td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">F: Force (N)<br></td>
+    <td class="tg-vn4c"></td>
+    <td class="tg-vn4c">T: Torque (Nm)<br></td>
+    <td class="tg-vn4c"></td>
+  </tr>
+  <tr>
+    <td class="tg-031e">m: Mass (kg)<br></td>
+    <td class="tg-031e"></td>
+    <td class="tg-031e">J: Inertia (kgm^2)<br></td>
+    <td class="tg-031e"></td>
+  </tr>
+  <tr>
+    <td class="tg-vn4c">F=m dv/dt<br></td>
+    <td class="tg-vn4c"></td>
+    <td class="tg-vn4c">T=J dω/dt</td>
+    <td class="tg-vn4c"></td>
+  </tr>
+</table>
+</h2>
+
+---
+# Dynamic Equations: Ideal Spring
+![](http://upload.wikimedia.org/wikipedia/commons/9/9d/Simple_harmonic_oscillator.gif)
+---
+# Dynamic Equations: Ideal Spring
+
+![](http://upload.wikimedia.org/wikipedia/commons/9/9d/Simple_harmonic_oscillator.gif)
+## \\(F = k (x - x_0)\\): No energy dissipation (~Ideal Inductor)
+
+---
+# Dynamic Equations: Damping
+--
+
+<img src="http://www.maplesoft.com/view.aspx?SI=3926/forced_oscillations125.gif" alt="Drawing" style="width: 400px;"/>
+--
+
+### \\(F = B v = B \dfrac{dx}{dt}\\) : Dissipates energy (~Resistance)
+### Overdamped, [underdamped](http://www.youtube.com/watch?v=j-zczJXSxnw) (similar to RLC circuits)
+
+---
+# Dynamic Equations: Inertia
+
+## \\(F=ma\\)
+--
+
+## or
+
+## \\(F = m \dfrac{dv}{dt} = m \dfrac{d^2 x}{d^2  t} \\)
+
+---
+# Dynamic Equations: Mechanical Side
+
+## \\(f\_{mech} = M \dfrac{d^2 x}{d^2  t} + B \dfrac{dx}{dt} \\)
+## \\(\quad \quad \quad + k (x-x\_0) + f\_{external} \\)
+
+---
+# Bose's Active Suspension System
+
+<img src="http://1.bp.blogspot.com/-10DbBXU-8e4/UTM09ZgHcpI/AAAAAAAAHyo/0RW2wBMNDMg/s1600/Bose-suspension-system-6_edited.jpg" alt="Drawing" style="width: 600px;"/>
+
+### [Bose suspension system](https://www.youtube.com/watch?v=3KPYIaks1UY), [Bose suspension will be mass produced](https://www.digitaltrends.com/cars/boses-revolutionary-adaptive-suspension-gets-a-reboot-for-2019/)
+
+
+---
+# Bose Ride
+
+<img src="https://www.extremetech.com/wp-content/uploads/2017/11/Bose-truck-seat-15C466_008-Edit2-640x354.jpg" alt="Drawing" style="width: 600px;"/>
+
+### [Bose Ride](https://www.youtube.com/watch?v=D5hSwaMxNIA), [Bose ride presentation](https://www.youtube.com/watch?v=wQSNlJEdOZE), [Truck Driver comments-1](https://youtu.be/L1RyhBzS3PU?t=70), [Truck Driver comments-2](https://youtu.be/iFzdHUJOv1g?t=40)
+
+---
+# Summary
+
+- ## Multiply excited systems still tries to minimize total stored magnetic energy
+
+- ## Derivative of self inductances and mutual inductance can work together or oppose each other.
+
+- ## Magnetic forces interact with the mechanical systems and generate a system response
+
+---
+## You can download this presentation from: [keysan.me/ee361](http://keysan.me/ee361)
+
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
