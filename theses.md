@@ -8,6 +8,7 @@ For more information about current project and theses, please visit [PowerLab](h
 
 ## Completed MSc Theses
 
+- Mohammad Derogarian, *Enhancing Fault-ride-through Performance of a Virtual-synchronous-machine-based Grid-forming Inverter*, 2026
 - M. Samet Yakut, *Optimizing the Refurbishment Process of Old 44 MVA Hydro Generator: a Study on Alternating Winding Type and Vibrational Behavior*, 2024
 - Görkem Gülletutan, *Armature Shape Optimization and Scaling Studies in Electromagnetic Launchers Using Finite Element Method*, [PDF](https://open.metu.edu.tr/handle/11511/111554), 2024
 - Yunus Çay, *Nonlinear Characterization, Circuit-Based Modeling and Analysis of Single-Core Fluxgate Current Sensors*
@@ -37,6 +38,7 @@ Magnet Generator For Wind Turbines*,  [PDF](http://etd.lib.metu.edu.tr/upload/12
 
 ## Completed PhD Theses
 
+- Mohammad Mokhtare, *Design and Control of an Agricultural Microgrid for Grid-connected and Off-grid Application*, 2026
 - Öztürk Şahin Alemdar, *Reliability-Oriented Ripple Minimization Using Artificial Neural Networks in Power Converter Systems*, 2024
 - Hüseyin Yürük, *Investigation of Parallel Connected GaN E-HEMT VSI-Based Servo Drives*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/96074/METU_Thesis_Hyuruk_Jan2022_v3.pdf), 2022
 - İlker Şahin, *Model Predictive Control Strategies for Power Electronic Converters and AC Drives*, [PDF](https://open.metu.edu.tr/bitstream/handle/11511/93273/ilkersahinPhD.pdf), 2021
@@ -44,7 +46,6 @@ Magnet Generator For Wind Turbines*,  [PDF](http://etd.lib.metu.edu.tr/upload/12
 
 ## Ongoing PhD Theses
 
-- Mohammad Mokhtare, *Planning, Scheduling, and Control of an Agricultural Microgrid for Off-Grid Applications*
 - Yusuf Basri Yılmaz, *Design and Analysis of Dual-speed Synchronous Reluctance Motors for Industrial and Traction Applications*
 
 ## Ongoing MSc Theses
@@ -52,7 +53,8 @@ Magnet Generator For Wind Turbines*,  [PDF](http://etd.lib.metu.edu.tr/upload/12
 - Özgür Gülsuna, *Design of a Quasi-direct Drive Cycloidal Actuator for Dynamic Robotic Systems*
 - İsmail Macit, *On Board Charger (OBC) Design for 800V Electric Vehicle Architecture*
 - Göktuğ Tonay, *Design and Implementation of Bidirectional Onboard Charger for Electric Vehicles*
-- Mohammad Derogarian, *Design and Implementation of a Grid-forming Converter in Order to Improve the Performance of an AC Microgrid*
 - Işık Emir Altunkol, *Analysis of Dynamic Rotor Eccentricity in Axial-flux Machines and Design of an Optimized Cycloidal-Disk Stator*
 - Arda Kasım, *Efficiency Optimization of 800V Power Factor Correction Rectifiers for Electric Vehicle Charger Applications*
-- Elif Topaloğlu, *TBD*
+- Elif Topaloğlu, *Design and Optimization of Cycloidal Axial-Flux Permanent Magnet (AFPM) Machines with PCB Stators*
+- Sefer İdacı, TBD
+- Aytunç Evlice, TBD
