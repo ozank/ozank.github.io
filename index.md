@@ -3,7 +3,7 @@ layout: home
 title: Ozan Keysan
 ---
 
-**Current Courses: [EE361](/ee361) <span class="meta">&#8226;</span> [EE463](/ee463)**
+**Current Courses: [EE362](/ee362) <span class="meta">&#8226;</span> [EE564](/ee564)**
 
 **Research Group: [METU PowerLab](https://power.eee.metu.edu.tr/)**
 
