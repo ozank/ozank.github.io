@@ -126,12 +126,14 @@ class: center, middle
 
 --
 
-<img src="http://www.vias.org/matsch_capmag/img/matsch_caps_magnetics-142.png" alt="Drawing" style="width:700px;"/>
+<img src="https://transmissionlinespeakers.com/wp-content/uploads/2020/04/analogies-table.jpg" alt="Drawing" style="width:700px;"/>
 ---
 # Analogy between mechanical & electrical systems
 
 
-<img src="http://www.vias.org/matsch_capmag/img/matsch_caps_magnetics-141.png" alt="Drawing" style="width:700px;"/>
+<img src="https://www.rfwireless-world.com/.netlify/images?url=_astro%2FAnalogy-between-Mechanical-System-and-Electrical-System.xf3Cm3uu.jpg" alt="Drawing" style="width:600px;"/>
+
+### [Mechanical-Electrical Analogy Explained](https://www.youtube.com/watch?v=AIrJlHu-XL8)
 ---
 ## Motor with Load Inertia
 
@@ -188,13 +190,21 @@ class: center, middle
 
 
 ---
-# Frictional Forces 
---
+# Frictional Forces:  Damping
 
-## Damping
---
+<img src="http://www.maplesoft.com/view.aspx?SI=3926/forced_oscillations125.gif" alt="Drawing" style="width: 300px;"/>
 
-<img src="http://www.maplesoft.com/view.aspx?SI=3926/forced_oscillations125.gif" alt="Drawing" style="width:600px;"/>
+### \\(F = B v = B \dfrac{dx}{dt}\\) : Dissipates energy (~Resistance)
+### Overdamped, [underdamped](http://www.youtube.com/watch?v=j-zczJXSxnw) (similar to RLC circuits)
+
+### [Bad vs. good shock absorbers](https://www.youtube.com/watch?v=j0vhTg82Pz0), [Seismic dampers](https://www.youtube.com/watch?v=9KMoJY20WFc), [Tuned mass dampers](https://www.youtube.com/watch?v=RSGwzSp_hAc), [Understanding vibration and resonance](https://www.youtube.com/watch?v=vLaFAKnaRJU)
+---
+
+# Dynamic Equations: Ideal Spring
+
+![](http://upload.wikimedia.org/wikipedia/commons/9/9d/Simple_harmonic_oscillator.gif)
+## \\(F = k (x - x_0)\\): No energy dissipation (~Ideal Inductor)
+
 
 ---
 # Frictional Forces: Coulomb friction
@@ -227,6 +237,13 @@ class: center, middle
 ### [How to model in Simulink?](https://www.mathworks.com/help/simulink/slref/coulombandviscousfriction.html)
 
 ---
+# Dynamic Equations: Mechanical Side
+
+## \\(f\_{mech} = M \dfrac{d^2 x}{d^2  t} + B \dfrac{dx}{dt} \\)
+## \\(\quad \quad \quad + k (x-x\_0) + f\_{external} \\)
+
+
+---
 # Windage Torque
 --
 
@@ -237,25 +254,20 @@ class: center, middle
 
 ## \\(P \propto \omega^3\\)
 
---
-
-### Can be represented as damping if the speed is varying in a narrow range:
-
-## \\(T_B + T_W = B' \omega \\)
 ---
 ## Example: Drag Force in a Car
 
-<img src="https://images.cdn.circlesix.co/image/1/700/0/uploads/posts/2016/12/d278e6ad9147d08e4bf5c0bd4e8156a9.jpg" alt="Drawing" style="width:500px;"/>
+<img src="https://engineeringcheatsheet.com/wp-content/uploads/2024/03/image-95.png" alt="Drawing" style="width:600px;"/>
 
 ## \\(F = \dfrac{1}{2} \rho A C_D v^2 \\)
 ---
 # Drag Coefficient
 
-<img src="http://www.aquaphoenix.com/lecture/matlab5/images-large/drag_coefficients.jpg" alt="Drawing" style="width:700px;"/>
+<img src="./images/ee462/drag_force.jpg" alt="Drawing" style="width:700px;"/>
 ---
 # Drag Coefficient Comparison
 
-<img src="http://insideevs.com/wp-content/uploads/2014/06/ev-CdAs.jpg" alt="Drawing" style="width:800px;"/>
+<img src="https://ozaner.github.io/assets/images/physics/drag_coefficients.png" alt="Drawing" style="width:600px;"/>
 ---
 ## Coupling Mechanisms: Direct Coupling
 
@@ -273,11 +285,9 @@ class: center, middle
 
 
 ---
-## Coupling Mechanisms
+## Coupling Mechanisms: Direct Coupling
 
-### Direct Coupling
-
-<img src="http://i1270.photobucket.com/albums/jj620/dykb1982/5x8mm-3.jpg~original" alt="Drawing" style="width:500px;"/>
+<img src="https://i0.wp.com/luminaire-eg.com/wp-content/uploads/2019/02/LR-SERIES-SPIRAL-BEAM-COUPLING-CLAMP-THREAD-TYPE-1.jpg" alt="Drawing" style="width:400px;"/>
 
 ### Spiral Type Coupling
 
@@ -286,7 +296,7 @@ class: center, middle
 
 ## Gearbox
 
-<img src="http://www.wattdrive.com/images/news/product-news/2013-02/watt-drive-explosion-proof-gearbox-72.png" alt="Drawing" style="width:500px;"/>
+<img src="https://www.atareduktor.com.tr/wp-content/uploads/reduktorlu-motor-nedir-.png" alt="Drawing" style="width:500px;"/>
 
 ### Gear Ratio = \\( \omega\_{in}:\omega\_{out}\\)
 
@@ -296,7 +306,7 @@ class: center, middle
 
 ## Rack and Pinion
 
-<img src="http://coewww.rutgers.edu/classes/mae/mae488/hw/lectures/1116_files/gear2.gif" alt="Drawing" style="width:500px;"/>
+<img src="https://www.stober.com/wp-content/uploads/ZRPHEZ_G3.png" alt="Drawing" style="width:500px;"/>
 
 ### From rotational to linear motion
 ---
@@ -317,12 +327,9 @@ class: center, middle
 ## [Rotor Critical Speed](https://www.youtube.com/watch?v=dO51IjGKrTM)
 ---
 
-# Load Types
---
+# Load Types: Centrifugal Loads (Pump, Fan...)
 
-## Centrifugal Loads (Pump, Fan, etc)
-
-<img src="http://www.gouldspumps.com/getattachment/Products/VCW/VCW.jpg.aspx" alt="Drawing" style="width:500px;"/>
+<img src="https://5.imimg.com/data5/SELLER/Default/2023/5/312072100/NV/UL/QQ/5148171/electric-motor-water-pump-1000x1000.png" alt="Drawing" style="width:300px;"/>
 
 ## \\(T\_{load} = k \omega^2\\)
 ## \\(P\_{load} = k \omega^3\\)
@@ -330,7 +337,7 @@ class: center, middle
 ## Constant Power Loads 
 ### Paper rolling machine
 
-<img src="http://i01.i.aliimg.com/img/pb/771/552/230/1259236602019_hz_myalibaba_web9_537.jpg" alt="Drawing" style="width:400px;"/>
+<img src="https://www.ayyildizmakine.com/en/assets/images/product/kagit-bobin-dilimleme-makineleri/1.webp" alt="Drawing" style="width:600px;"/>
 
 ### Constant tension should be applied at constant linear speed
 ---
@@ -349,7 +356,7 @@ class: center, middle
 ---
 ## Constant Torque Loads: Crane Hoists
 
-<img src="http://www.morrow.com/sites/default/files/images/parts/drives/feature.jpg" alt="Drawing" style="width:400px;"/>
+<img src="https://electrical-engineering-portal.com/wp-content/uploads/selection-of-crane-duty-motors-2.jpg" alt="Drawing" style="width:300px;"/>
 
 ### There exist a viscous friction force combined with load mass
 
