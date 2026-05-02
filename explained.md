@@ -34,12 +34,18 @@ Digital Signal Processing](https://www.dspguide.com/pdfbook.htm)
 * [Graphical Algebra and Fourier Analysis](https://acko.net/files/gltalks/toolsforthought)
 * [But what is the Fourier Transform? A visual introduction.](https://www.youtube.com/watch?v=spUNpyF58BY)
 
-### Mawxell's Equations
+### Mawxell's Equations:
 
 * [Maxwell’s Unification Revolution](https://medium.com/starts-with-a-bang/maxwell-s-unification-revolution-849d47da7fe)
 * [Maxwell's Equations](http://www.maxwells-equations.com/)
 * [Who's afraid of Maxwell Equations?](https://www.majr.com/wp-content/uploads/2018/04/Elya-Joffe-Whos-Afraid-of-Maxwells-Equations-Pittsburgh-EMC-Chapter.compressed.pdf)
 * [Feynman Lectures of Maxwell Equations](http://feynmanlectures.caltech.edu/II_18.html)
+
+### Electromagnetism
+
+* [Radios, how do they work?](https://lcamtuf.substack.com/p/radios-how-do-they-work)
+* [How to make a Smith chart?](https://www.johndcook.com/blog/2025/10/23/smith-chart/)
+
 
 ### Control
 

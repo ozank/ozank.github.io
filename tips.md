@@ -4,9 +4,14 @@ title: Software Tips
 permalink: /tips/index.html
 ---
 
+From most recent to oldest, by category.
 
-### A Few Nice Reads
+## Nice Reads
 
+### Advices for Young People
+
+* [Doing well in your courses](https://cs.stanford.edu/people/karpathy/advice.html)
+* [If you have multiple interests, do not waste the next 2-3 years](https://x.com/thedankoe/status/2010042119121957316)
 * [The days are long but the decades are short](http://blog.samaltman.com/the-days-are-long-but-the-decades-are-short)
 * [The Most Important Thing I Learned in My 20's](https://medium.com/@adambraun/the-most-important-thing-i-learned-in-my-20s-677e2ed1a70f)
 * [Life Lessons from the First Half-Century of My Career](https://cacm.acm.org/opinion/life-lessons-from-the-first-half-century-of-my-career/)
@@ -16,6 +21,15 @@ permalink: /tips/index.html
 * [A Protocol for Dying](http://hintjens.com/blog:115)
 * [Life is Short](http://paulgraham.com/vb.html)
 * [Your Life in Weeks](https://waitbutwhy.com/2014/05/life-weeks.html)
+
+
+### Engineering & Science
+
+* [No Good Engineer is Arrogant](https://agilitza.com/blog/no-good-engineer-is-arrogant/)
+* [How to move fast when building for the physical world](https://blog.zacka.io/p/simplify-then-add-lightness-bc4)
+* [Prototyping Tips](https://fab.cba.mit.edu/classes/863.19/CBA/people/dsculley/index.html)
+* [Hobby CNC machining and resin casting](https://lcamtuf.coredump.cx/gcnc/)
+* [Why AC is cheap, but AC repair is a luxury?](https://www.a16z.news/p/why-ac-is-cheap-but-ac-repair-is)
 * [There's Plenty of Room at the Bottom](http://www.zyvex.com/nanotech/feynman.html)
 * [Cargo Cult Science, Richard Feynman](http://calteches.library.caltech.edu/51/2/CargoCult.htm)
 * [If Money Doesn't Make You Happy Then You Probably Aren't Spending It 
@@ -32,13 +46,13 @@ Right](http://scholar.harvard.edu/files/danielgilbert/files/if-money-doesnt-make
 Here are some software that I use (and recommend):
 
 * [Mendeley](http://www.mendeley.com/) to organize my research papers and references,
-* [GitHub](https://github.com/ozank) for developing and publishing my work and [Syncthing](https://syncthing.net/)to synchronize my large files,
+* [GitHub](https://github.com/ozank) for developing my work and collaborating,
+* [Syncthing](https://syncthing.net/) to synchronize my large files,
 * [Vim](http://www.makeuseof.com/tag/top-7-reasons-to-give-the-vim-text-editor-a-chance/) for programming and editing text,
 * [LaTeX](http://www.latex-project.org/) and [Overleaf](https://www.overleaf.com/signup?ref=3b0bbc32e797) to write papers, thesis etc.,
-* [R](http://www.r-project.org/), [RStudio](http://www.rstudio.com/) to plot pretty graphs, [Octave](http://www.gnu.org/software/octave/) as a replacement for Matlab,
 * [FEMM](http://www.femm.info/wiki/HomePage), [ANSYS Maxwell](http://www.ansys.com/products/electronics/ansys-maxwell), [Comsol](https://www.comsol.com/) for electromagnetic FEA.
 
-If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'ya Tuyolar](http://www.asuyatuyolar.org)**
+If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'ya Tuyolar](https://keysan.me/asuyatuyolar/)**
 
 * [Önce Küfür Sonra Teşekkür](/okst)
 
@@ -77,6 +91,7 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 #### Academic Productivity
 
 * [How to study?](https://cse.buffalo.edu/~rapaport/howtostudy.html)
+* [A Survival Guide to a PhD](http://karpathy.github.io/2016/09/07/phd/)
 * [Why Procrastinators Procrastinate](https://waitbutwhy.com/2013/10/why-procrastinators-procrastinate.html)
 * [Every productivity thought I've ever had](https://guzey.com/productivity/)
 * [Academic Assholes](https://thesiswhisperer.com/2013/02/13/academic-assholes/)
