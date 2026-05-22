@@ -64,13 +64,13 @@ Artık bir programlama dili bilmiyorsanız da öğrenmenin vakti gelmiştir. Yen
 
 ## Proje Yönetimi
 
-Onlarca [proje yönetimi](http://asuyatuyolar.org/2013/01/akademisyenin-internet-rehberi-proje.html) yazılımı olsa da, benim önereceğim site [Trello](https://trello.com/ozank/recommend). Cep telefonu uygulamaları ve güzel arayüzü ile yapılacak işleri organize etmek baya kolay.
+Onlarca [proje yönetimi](http://keysan.me/asuyatuyolar/2013/01/akademisyenin-internet-rehberi-proje.html) yazılımı olsa da, benim önereceğim site [Trello](https://trello.com/ozank/recommend). Cep telefonu uygulamaları ve güzel arayüzü ile yapılacak işleri organize etmek baya kolay.
 
 ## Windows'dan Kurtulun
 
 Her ne kadar Windows varsayılan işletim sistemi olsa da, mühendislerin hala CV'lerine bilgisayar tecrübesi olarak Windows yazmaları artık komik oluyor. Bence vakit kaybetmeden Linux öğrenmenizi tavsiye ederim:
 
-- [Üniversite Öğrencileri için Linux Sürümleri](http://asuyatuyolar.org/2013/01/akademisyenler-ve-universite.html)
-- [Linux Live CD](http://asuyatuyolar.org/2011/07/her-eve-lazm-linux-live-cd.html)
+- [Üniversite Öğrencileri için Linux Sürümleri](http://keysan.me/asuyatuyolar//2013/01/akademisyenler-ve-universite.html)
+- [Linux Live CD](http://keysan.me/asuyatuyolar/2011/07/her-eve-lazm-linux-live-cd.html)
 
 Üstelik bilgisayarınıza kurmadan USB ya da CD üzerinden de çalıştırabilirsiniz. Linux kullanırken terminal ve Unix komutlarını kullanmayı da özellikle tavsiye ederim.
