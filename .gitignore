@@ -8,3 +8,6 @@ _asset_bundler_cache
 Gemfile.lock
 .Rhistory
 *.*~
+
+# Local design previews (not for deployment)
+site_*.html
