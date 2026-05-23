@@ -3,16 +3,16 @@ layout: home
 title: Ozan Keysan
 ---
 
-Our research group is [METU PowerLab](https://power.eee.metu.edu.tr/), working on electric machines, power electronics, and renewable‑energy systems.
+Our research group is [METU PowerLab](https://power.eee.metu.edu.tr/), working on electric machines, power electronics, and renewable‑energy systems. I am also affiliated with these research centers: [RÜZGEM](https://ruzgem.metu.edu.tr/) <span class="meta">·</span> [ODTÜ‑GÜNAM](https://odtugunam.org/) <span class="meta">·</span> [ROMER](https://romer.metu.edu.tr).
 
-I am also co‑founder of [Novator](https://novator.energy/), an early‑stage spin‑off from our group commercializing PCB‑stator axial‑flux motors and modular power converters for a smarter grid.
+I am also co‑founder of [Novator Enerji](https://novator.energy/), an early‑stage spin‑off from our group commercializing grid-connected power electronics applications, power system analysis tools and PCB‑stator axial‑flux motors.
 
 #### My research themes
 
 - **Electric machines for renewables** — wind, hydro, superconducting generators
-- **Power electronics with SiC & GaN** — PV inverters, EV chargers, wireless power transfer
-- **PCB‑stator & integrated motor drives** — axial‑flux PCB motors, cycloidal actuators
-- **Special‑purpose actuators & multi‑physics design** — bespoke electromagnetic devices
+- **PCB motors & integrated motor drives** — axial‑flux PCB motors, cycloidal actuators
+- **Power electronics with SiC & GaN** — PV inverters, motor drives, wireless power transfer
+- **Special‑purpose actuators & multi‑physics design** — bespoke electromagnetic devices including multi-physics problems
 
 See [Projects](/projects) for details.
 
