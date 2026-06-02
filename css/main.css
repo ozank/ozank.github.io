@@ -255,15 +255,18 @@ html, body {
 /* ---------- Iframe / calendar embed ---------- */
 .responsive-iframe-container {
   position: relative;
-  padding-bottom: 100%;
-  padding-top: 30px;
+  padding-bottom: 75%;
   height: 0;
-  overflow: auto;
+  overflow: hidden;
+  margin: 1.5em 0;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
 }
 .responsive-iframe-container iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60%;
+  height: 100%;
+  border: 0;
 }
