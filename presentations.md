@@ -6,6 +6,11 @@ permalink: /presentations/index.html
 
 ## Recent Presentations
 
+### 2026
+
+
+* ODTÜ Havacılık ve Uzay Müh,Wind Energy and Turbine Technology, [Wind Turbine Power Take-off Systems](https://docs.google.com/presentation/d/1hxj5jrF_57HOWqb7lvdTDNqyt-TF9-UGwJjjVaL4HaQ/edit?usp=sharing)
+
 ### 2025
 
 * [Magnetics Training - III: Electromagnetic Energy Conversion](/presentations/roketsan3_electromechanical_conversion.html)
