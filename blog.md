@@ -15,5 +15,5 @@ permalink: /blog/index.html
 * [Önce Küfür Sonra Teşekkür](/okst)
 * [FabLab, University of Edinburgh](/blog/fablabed)
 
-For other articles please visit **[Asu'ya Tuyolar](http://www.asuyatuyolar.org)**
+For other articles please visit **[Asu'ya Tuyolar](http://keysan.me/asuyatuyolar/)**
 

@@ -204,7 +204,7 @@ For a full list of courses that I taught please visit my [Courses](/courses) web
 
 - Mountaineering: Active Member of METU Mountaineering Club
 - Sailing: Dinghy and Yacht Sailing, (Certificate of Competence For Operators of Pleasure Craft).
-- Blogging: *[asuyatuyolar.org](http://www.asuyatuyolar.org)*, *[keysan.me/blog](http://keysan.me/blog)*
+- Blogging: *[asuyatuyolar](http://keysan.me/asuyatuyolar/)*, *[keysan.me/blog](http://keysan.me/blog)*
 
 ## Languages
 
