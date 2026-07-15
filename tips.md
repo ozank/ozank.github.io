@@ -45,12 +45,13 @@ Right](http://scholar.harvard.edu/files/danielgilbert/files/if-money-doesnt-make
 
 Here are some software that I use (and recommend):
 
-* [Mendeley](http://www.mendeley.com/) to organize my research papers and references,
 * [GitHub](https://github.com/ozank) for developing my work and collaborating,
 * [Syncthing](https://syncthing.net/) to synchronize my large files,
 * [Vim](http://www.makeuseof.com/tag/top-7-reasons-to-give-the-vim-text-editor-a-chance/) for programming and editing text,
+* [Claude Cowork](https://claude.com/product/cowork) as an AI agent
 * [LaTeX](http://www.latex-project.org/) and [Overleaf](https://www.overleaf.com/signup?ref=3b0bbc32e797) to write papers, thesis etc.,
 * [FEMM](http://www.femm.info/wiki/HomePage), [ANSYS Maxwell](http://www.ansys.com/products/electronics/ansys-maxwell), [Comsol](https://www.comsol.com/) for electromagnetic FEA.
+* [Mendeley](http://www.mendeley.com/) to organize my research papers and references,
 
 If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'ya Tuyolar](https://keysan.me/asuyatuyolar/)**
 
@@ -114,6 +115,5 @@ If you're looking for more tips visit my blog (sorry, only in Turkish): **[Asu'y
 #### Other
 
 * [Academic Blogging](http://matt.might.net/articles/how-to-blog-as-an-academic/)
-* [Pocket Organizer](http://pocketmod.com/v2/)
 * [Open Research](https://openresearch.wordpress.com/)
 
