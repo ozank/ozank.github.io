@@ -10,7 +10,7 @@ This page is intended for any candidate MSc and PhD students. Probably, I just s
 
 ## Research Topics
 
-Please have a look at my [recent publications](https://scholar.google.com/citations?user=dzuKyxwAAAAJ&hl=en), [and projects](http://keysan.me/projects/), and [theses that I supervised](http://keysan.me/theses/), and only ask for supervision if you are planning to work on similar topics. In the PowerLab, there are two other faculty members: [Dr. Keyvan Firuzi](https://eee.metu.edu.tr/personel/keyvan-firuzi), [Dr. Murat Göl](https://eee.metu.edu.tr/personel/murat-gol). You can also consider to contact them.
+Please have a look at my [recent publications](https://scholar.google.com/citations?user=dzuKyxwAAAAJ&hl=en), [and projects](http://keysan.me/projects/), and [theses that I supervised](http://keysan.me/theses/), and only ask for supervision if you are planning to work on similar topics. In the PowerLab, there are four other faculty members: [Dr. Keyvan Firuzi](https://eee.metu.edu.tr/personel/keyvan-firuzi), [Dr. Murat Göl](https://eee.metu.edu.tr/personel/murat-gol), [Dr. İlker Şahin](https://eee.metu.edu.tr/personel/ilker-sahin) and [Dr. Ulaş Karaağaç](https://eee.metu.edu.tr/personel/ulas-karaagac). You can also consider to contact them if you find their research areas more related.
 
 
 ## Application to METU
