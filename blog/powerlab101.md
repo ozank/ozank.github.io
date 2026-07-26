@@ -11,21 +11,22 @@ This page is intended for my existing undergraduate/graduate students, especiall
 ## 1-Get Familiar with the Research Group Members
 
 - Meet with the [research group members](https://power.eee.metu.edu.tr/team/) and talk to them about their research topics
-- Join to the PowerLab mail-list, and relevant WhatsApp groups (ask your friends how to join them).
+- Join to the PowerLab [mail-list](https://mailman.metu.edu.tr/mailman/listinfo/ee-powerlab), and relevant WhatsApp groups (ask your friends how to join them).
 - Visit PowerLab offices and labs: C-114, ARC-300, E-101, Machinery Lab, Power Electronics Lab, Ground Lab etc.
-- Get familiar with the laboratory equipments we have, and meet with the technicians.
 - Join to (or better organize) social events.
+- Get familiar with the laboratory equipments we have, software we use and meet with the technicians.
+- Be an proactive member, and don't be afraid to meet to new people.
 
 ## 2-Improve your Software Skills
 
 ### a) Version Control
 
 - It is your responsibility to back-up your data, I don't want to hear any excuses on that.
-- Learn about version controlling and learn how to use [Git](https://git-scm.com/).
+- Learn about version controlling and learn how to use [Git](https://git-scm.com/). You don't have to be an expert just learn the very basic stuff first.
 - Get an account from [GitHub](https://github.com/), and follow [me](https://github.com/ozank), make sure I follow you as well.
-- Join to the [GitHub ODTU](https://github.com/odtu) teams and have a look at the existing repos
-- Open a repo for your thesis and use it as your scratch pad. Keep all your important files, documents and codes there (only exception is large files such as FEA files).
-- I expect you to keep your repo updated (for a few examples: [Eliftplgl](https://github.com/eliftplgl), [Gknckl](https://github.com/gkhnckl), [Ozgurgulsuna](https://github.com/ozgurgulsuna)
+- Join to the [GitHub ODTU](https://github.com/odtu) teams and have a look at the existing repos, if you can't access any repos ask for permission.
+- Open a repo for your research work and use it as your scratch pad. Keep all your important files, documents and codes there (only exception is large files such as FEA files).
+- I expect you to keep your repo updated (for a few examples: [Eliftplgl](https://github.com/eliftplgl), [Ekremturanfirat](https://github.com/ekremturanfirat), [Ozgurgulsuna](https://github.com/ozgurgulsuna)
 - It is good to have a weekly to do list, so I can follow your progress.
 - Use meaningful commit messages so I can understand what you are working on.
 
@@ -38,7 +39,6 @@ This page is intended for my existing undergraduate/graduate students, especiall
 - Scan relevant papers [using the cited by feature](https://scholar.google.com/intl/en/scholar/help.html).
 - Don't store hundreds of PDFs in random folders, instead use a proper reference management software.
 - Although you are free to use any reference management software, I encourage you to use [Mendeley](https://www.mendeley.com/?interaction_required=true). 
-- Join to the [Mendeley PowerLab Group](https://www.mendeley.com/community/power-lab/). It gives you access to a large storage space and you can read the papers added by your friends.
 
 ### c) To Do Lists
 
@@ -47,17 +47,24 @@ This page is intended for my existing undergraduate/graduate students, especiall
 - We use  (at least try to use) Kanban project management method. Please have a look at [ my blog on project management](https://keysan.me/blog/project_management_sabbatical/) for more information.
 - Although digital methods is convenient, I still advise you to have a regular notebook for capturing your ideas and keeping your experimental results.
 
-
 ### d) Efficient Writing Tools
 
 - Learn how to use [LaTeX](https://www.latex-project.org).
 - The quickest way to start using LaTeX is online editors. I advise [OverLeaf](https://www.overleaf.com)
 - Once you have a grasp of it, it is always better to have a local LaTeX installed in your computer.
-- Use a good text editor. I personally use [Vim](https://www.vim.org/), but you can use [Sublime Text](https://www.sublimetext.com/), [Notepad++](https://notepad-plus-plus.org/) etc.
+- Use a good text editor. I personally use [Vim](https://www.vim.org/), but you can use [Sublime Text](https://www.sublimetext.com/), [Visual Studio](https://code.visualstudio.com/) etc.
 - Start writing your thesis in LaTeX and keep it in a GitHub repo.
 - Spend some time to have standard figures, have legible axis labels and numbers.
 - Learn the difference between vector and bitmap images. Don't use "print screen" in your documents.
 
+### e) Be a Proficient AI User
+
+- Learn how to integrate AI tools into your research work but not blindly accept what it presents.
+- In our research group we commonly use [Claude Cowork](https://claude.com/product/cowork), several people also uses [Gemini for Students](https://gemini.google/students/)
+- Do not use them just as a chat screen, learn how to use [AI agents](https://cloud.google.com/discover/what-are-ai-agents), [build AI agents](https://www.promptingguide.ai/agents/introduction)
+- It is also possible to integrate AI tools with Github, such as [Claude](https://github.com/marketplace/actions/claude-code-github-integration), or [Github Copilot](https://github.com/copilot)
+
+ 
 ## 3- Get Advice from Others
 
 Don't just take my word (in fact don't just take my word for anything), and talk to your colleagues and keep reading useful essays. Here are a few links for a start:
@@ -77,7 +84,7 @@ Here are a few useful links, that you can use later on:
 - [Önce Küfür Sonra Teşekkür](http://keysan.me/okst/)
 - [IS500](http://keysan.me/is500/)
 - [Digital Research Tools](https://researcher.life/blog/article/top-digital-tools-for-researchers/)
-
-
+- [AI Research Tools](https://guides.library.georgetown.edu/ai/tools)
+- [Top AI Tools for Research](https://zendy.io/blog/ai-tools-for-research-comprehensive-list)
 *Note:* Remember this page is kept in a [GitHub repo](https://github.com/ozank/ozank.github.io/blob/master/blog/powerlab101.md). If there are any dead-links or any extra links that you think should be in this page, just send me a [pull request](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork).
 
