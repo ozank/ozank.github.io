@@ -18,7 +18,7 @@ See [Projects](/projects) for details.
 
 #### Current courses
 
-[EE362](/ee362) <span class="meta">·</span> [EE568](/ee568) — full list on the [Courses](/courses) page.
+[EE361](/ee361) <span class="meta">·</span> [EE463](/ee463) — full list on the [Courses](/courses) page.
 
 #### Affiliated research centers
 
