@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Peak vs RMS Explorer</title>
+<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1f2937; --muted:#6b7280; --grid:#e5e7eb; --panel:#f8fafc;
+    --pk:#2563eb; --rms:#111827; --sq:#ea580c; --ok:#16a34a; --bad:#dc2626;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);
+    font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:920px;margin:0 auto;padding:6px 14px 10px}
+  header h1{font-family:'Yanone Kaffeesatz',sans-serif;font-weight:400;font-size:30px;margin:2px 0 0}
+  header p{margin:0 0 4px;color:var(--muted)}
+  body.embed header, body.embed .quiz{display:none}
+  body.embed svg{max-height:255px}
+  body.embed .card{padding:4px 10px;font-size:13px}
+  body.embed .cards{gap:6px;margin-top:6px}
+  body.embed .card h3{font-size:11px;margin:0 0 1px}
+  body.embed .wrap{padding-top:0}
+  svg{width:100%;height:auto;display:block;user-select:none;max-height:64vh}
+  svg text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .controls{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin-top:4px}
+  .slider{display:flex;align-items:center;gap:8px;flex:1 1 300px;min-width:0}
+  .slider label{white-space:nowrap;font-weight:600;min-width:118px}
+  .slider input{flex:1;min-width:0;accent-color:#374151;height:28px;touch-action:pan-y}
+  .buttons{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .buttons .lbl{font-size:12px;color:var(--muted);margin-right:2px}
+  button{font:inherit;font-size:13px;padding:4px 11px;border:1px solid #d1d5db;border-radius:6px;
+    background:#fff;color:var(--fg);cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+  button:hover{background:#f3f4f6}
+  button.on{background:#1f2937;color:#fff;border-color:#1f2937}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+  .card{background:var(--panel);border:1px solid var(--grid);border-radius:8px;padding:7px 11px}
+  .card h3{margin:0 0 3px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .card.active{border-color:#1f2937;box-shadow:inset 3px 0 0 #1f2937}
+  .card.dim{opacity:.45}
+  .ok{color:var(--ok);font-weight:700} .bad{color:var(--bad);font-weight:700}
+  .big{font-size:16px;font-weight:700}
+  .quiz{margin-top:10px}
+  .quiz .q{font-weight:600}
+  .quiz .a{margin-top:4px;color:var(--ok);display:none}
+  .quiz .row{display:flex;gap:6px;margin-top:6px}
+  @media (max-height:500px){header{display:none}}
+  @media (max-width:640px){
+    .wrap{padding:4px 8px 12px}
+    header h1{font-size:26px}
+    .controls{gap:10px;margin-top:8px}
+    .slider{flex:1 1 100%}
+    .slider label{min-width:110px;font-size:15px}
+    .slider input{height:36px}
+    input[type=range]::-webkit-slider-thumb{width:26px;height:26px}
+    input[type=range]::-moz-range-thumb{width:26px;height:26px}
+    .buttons{width:100%}
+    .buttons button{flex:1;min-height:42px;font-size:15px;padding:6px 4px}
+    .buttons .lbl{width:100%}
+    .cards{grid-template-columns:1fr;font-size:13px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Peak vs RMS Explorer</h1>
+    <p>Same waveform, two ways to describe its size</p>
+  </header>
+
+  <svg id="fig" role="img" aria-label="Phasor drawn at peak or RMS length, waveform with peak and RMS levels, and squared waveform"></svg>
+
+  <div class="controls">
+    <div class="slider">
+      <label for="vr">V<sub>rms</sub> = <span id="vrv"></span> V</label>
+      <input id="vr" type="range" min="10" max="250" step="1">
+    </div>
+    <div class="buttons" id="presets">
+      <button data-rms="230">230 V grid</button>
+      <button data-rms="120">120 V (US)</button>
+      <button data-pk="100">100 V peak</button>
+    </div>
+    <div class="buttons" id="conv">
+      <span class="lbl">Phasor length:</span>
+      <button data-c="pk">Peak (circuit theory)</button>
+      <button data-c="rms">RMS (power eng.)</button>
+    </div>
+    <div class="buttons" id="transport">
+      <button id="play">▶ Play</button>
+      <button id="stop">■ Stop</button>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="card" id="cVals"></div>
+    <div class="card" id="cHeat"></div>
+    <div class="card" id="cPk"></div>
+    <div class="card" id="cRms"></div>
+  </div>
+
+  <div class="card quiz">
+    <h3>Check yourself <span id="qn"></span></h3>
+    <div class="q" id="qq"></div>
+    <div class="a" id="qa"></div>
+    <div class="row buttons"><button id="qshow">Show answer</button><button id="qnext">Next ▶</button></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const R_LOAD = 10;                 // Ω heater used for the power comparison
+  const VMAX = 360;                  // V, top of the drawing scale
+  const $ = id => document.getElementById(id);
+  const fig = $('fig'), vr = $('vr');
+  const q = new URLSearchParams(location.search);
+  if (q.has('embed')) document.body.classList.add('embed');
+
+  const crest = {sine: Math.SQRT2, square: 1, tri: Math.sqrt(3)};
+  const shapeName = {sine: 'sine', square: 'square wave', tri: 'triangle wave'};
+  const shape = 'sine';   // other waveforms disabled for now
+  let conv = q.get('conv') === 'pk' ? 'pk' : 'rms';
+  vr.value = q.has('rms') ? +q.get('rms') : 230;
+  let playing = q.get('play') === '1', phase = 0, last = null, dirty = true;
+
+  const wave = a => {
+    const s = Math.sin(a);
+    if (shape === 'square') return s >= 0 ? 1 : -1;
+    if (shape === 'tri') return 2 / Math.PI * Math.asin(s);
+    return s;
+  };
+  const f0 = (v, d = 0) => v.toFixed(d);
+
+  let Vr, Vp;
+  function compute() {
+    Vr = +vr.value; Vp = Vr * crest[shape];
+    $('vrv').textContent = Vr;
+    cards();
+    document.querySelectorAll('#presets button').forEach(b => {
+      const on = b.dataset.rms ? +b.dataset.rms === Vr : Math.abs(+b.dataset.pk / Math.SQRT2 - Vr) < 0.6 && shape === 'sine';
+      b.classList.toggle('on', on);
+    });
+    document.querySelectorAll('#conv button').forEach(b => b.classList.toggle('on', b.dataset.c === conv));
+    document.querySelectorAll('#shape button').forEach(b => b.classList.toggle('on', b.dataset.s === shape));
+    dirty = true;
+  }
+
+  function cards() {
+    const sine = shape === 'sine';
+    $('cVals').innerHTML = `<h3>Values (${shapeName[shape]})</h3>
+      <div>V<sub>peak</sub> = <span class="big" style="color:var(--pk)">${f0(Vp)} V</span>
+       &nbsp; V<sub>rms</sub> = <span class="big">${f0(Vr)} V</span></div>
+      <div>V<sub>peak</sub> / V<sub>rms</sub> = <b>${crest[shape].toFixed(3)}</b>
+       ${sine ? '(= √2, only for sinusoids)' : shape === 'square' ? '(no √2 here!)' : '(= √3, not √2!)'}</div>`;
+    const Pok = Vr * Vr / R_LOAD, Pbad = Vp * Vp / R_LOAD;
+    $('cHeat').innerHTML = `<h3>Heating a ${R_LOAD} Ω resistor</h3>
+      <div>V<sub>rms</sub>²/R = <span class="ok">${fmtW(Pok)} ✓</span> &nbsp;(same as ${f0(Vr)} V DC)</div>
+      <div>V<sub>peak</sub>²/R = <span class="bad">${fmtW(Pbad)} ✗</span>
+       ${shape === 'square' ? '(equal only for a square wave)' : `(${(Pbad / Pok).toFixed(1)}× too high)`}</div>`;
+    const Ip = Vp / R_LOAD, Ir = Vr / R_LOAD;
+    $('cPk').className = 'card' + (sine && conv === 'pk' ? ' active' : '') + (sine ? '' : ' dim');
+    $('cRms').className = 'card' + (sine && conv === 'rms' ? ' active' : '') + (sine ? '' : ' dim');
+    $('cPk').innerHTML = `<h3>Peak phasors · circuit theory</h3>
+      <div><b>V</b> = ${f0(Vp)} ∠ 0° V, &nbsp;<b>I</b> = ${Ip.toFixed(1)} ∠ 0° A</div>
+      <div>P = <b>½</b>·V<sub>m</sub>·I<sub>m</sub>·cos θ = ${fmtW(0.5 * Vp * Ip)}</div>`;
+    $('cRms').innerHTML = `<h3>RMS phasors · power engineering</h3>
+      <div><b>V</b> = ${f0(Vr)} ∠ 0° V, &nbsp;<b>I</b> = ${Ir.toFixed(1)} ∠ 0° A</div>
+      <div>P = V·I·cos θ = ${fmtW(Vr * Ir)} &nbsp;<span style="color:var(--muted)">(no ½)</span></div>`;
+  }
+  const fmtW = w => w >= 1000 ? (w / 1000).toFixed(2) + ' kW' : w.toFixed(0) + ' W';
+
+  // ---------- layout ----------
+  function layout() {
+    const wide = fig.parentElement.clientWidth >= 640;
+    return wide
+      ? {W:880, H:380, cx:150, cy:130, r0:112, wx0:300, wx1:866, py0:272, py1:376, fs:14, sm:11.5, cyc:2, wide}
+      : {W:400, H:360, cx:84,  cy:106, r0:76,  wx0:176, wx1:394, py0:232, py1:356, fs:14, sm:11.5, cyc:1, wide};
+  }
+  let L = layout();
+
+  const T = (x, y, str, o = {}) =>
+    `<text x="${x}" y="${y}" font-size="${o.fs || L.fs}" fill="${o.c || 'var(--fg)'}" text-anchor="${o.a || 'start'}"` +
+    `${o.w ? ` font-weight="${o.w}"` : ''}${o.it ? ' font-style="italic"' : ''} dominant-baseline="${o.b || 'auto'}">${str}</text>`;
+  const line = (x1, y1, x2, y2, c, w = 1, dash = '') =>
+    `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="${w}"${dash ? ` stroke-dasharray="${dash}"` : ''}/>`;
+  function arrow(x1, y1, x2, y2, c, w = 3, op = 1) {
+    const a = Math.atan2(y2 - y1, x2 - x1), len = Math.hypot(x2 - x1, y2 - y1);
+    if (len < 2) return '';
+    const h = Math.min(12, len * 0.45), bx = x2 - h * Math.cos(a), by = y2 - h * Math.sin(a);
+    const p1 = [bx + h * .45 * Math.sin(a), by - h * .45 * Math.cos(a)], p2 = [bx - h * .45 * Math.sin(a), by + h * .45 * Math.cos(a)];
+    return `<g opacity="${op}">` + line(x1, y1, bx, by, c, w) + `<polygon points="${x2},${y2} ${p1} ${p2}" fill="${c}"/></g>`;
+  }
+  const poly = pts => pts.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
+
+  function draw() {
+    const {cx, cy, r0, wx0, wx1, py0, py1} = L;
+    const k = r0 / VMAX;                       // px per volt
+    const rp = Vp * k, rr = Vr * k, a = phase, sine = shape === 'sine';
+    let g = '';
+
+    // ---- phasor side ----
+    if (sine) {
+      g += `<circle cx="${cx}" cy="${cy}" r="${rp}" fill="none" stroke="var(--pk)" stroke-opacity=".35"/>`;
+      g += `<circle cx="${cx}" cy="${cy}" r="${rr}" fill="none" stroke="var(--rms)" stroke-opacity=".45" stroke-dasharray="4 4"/>`;
+    }
+    g += line(cx - r0 - 10, cy, cx + r0 + 10, cy, '#cbd5e1') + line(cx, cy - r0 - 10, cx, cy + r0 + 10, '#cbd5e1');
+    if (shape === 'sine') g += T(cx + r0 + 8, cy + 16, 'Re', {c: 'var(--muted)', fs: L.sm, a: 'end'});
+    g += T(cx + 6, cy - r0 - 2, 'Im', {c: 'var(--muted)', fs: L.sm});
+
+    const px = cx + rp * Math.cos(a), py = cy - rp * Math.sin(a);
+    if (sine) {
+      const len = conv === 'pk' ? rp : rr;
+      const tx = cx + len * Math.cos(a), ty = cy - len * Math.sin(a);
+      if (conv === 'rms') g += arrow(cx, cy, px, py, 'var(--pk)', 2, .3);        // ghost peak phasor
+      g += line(px, py, wx0, py, 'var(--pk)', 1, '4 4');
+      g += arrow(cx, cy, tx, ty, conv === 'pk' ? 'var(--pk)' : 'var(--rms)', 3.2);
+      const lx = cx + Math.max(len * .62, 18) * Math.cos(a) + 13 * -Math.sin(a), ly = cy - Math.max(len * .62, 18) * Math.sin(a) - 13 * Math.cos(a);
+      g += T(lx, ly, 'V', {a: 'middle', b: 'middle', w: 700, c: conv === 'pk' ? 'var(--pk)' : 'var(--rms)'});
+      const txt = conv === 'pk' ? `|V| = V<tspan font-size="${L.sm}" dy="3">peak</tspan><tspan dy="-3"> = ${f0(Vp)} V</tspan>`
+                                : `|V| = V<tspan font-size="${L.sm}" dy="3">rms</tspan><tspan dy="-3"> = ${f0(Vr)} V</tspan>`;
+      g += T(cx - r0 - 8, cy + r0 + 30, txt, {w: 700, c: conv === 'pk' ? 'var(--pk)' : 'var(--rms)'});
+      if (conv === 'rms')
+        g += T(cx - r0 - 8, cy + r0 + 48, L.wide ? 'projection of the faint peak phasor = v(t)' : 'faint arrow (peak) → v(t)', {c: 'var(--muted)', fs: L.sm});
+      else
+        g += T(cx - r0 - 8, cy + r0 + 48, L.wide ? 'its projection = v(t)' : 'projection = v(t)', {c: 'var(--muted)', fs: L.sm});
+    } else {
+      g += `<rect x="${cx - r0}" y="${cy - 28}" width="${2 * r0}" height="56" rx="8" fill="var(--panel)" stroke="var(--grid)"/>`;
+      g += T(cx, cy - 6, 'No phasor:', {a: 'middle', w: 700});
+      g += T(cx, cy + 14, 'only sinusoids have one', {a: 'middle', fs: L.sm, c: 'var(--muted)'});
+    }
+
+    // ---- v(t) panel ----
+    const N = 260, span = L.cyc * 2 * Math.PI, vPts = [], sPts = [];
+    for (let i = 0; i <= N; i++) {
+      const x = wx0 + i / N * (wx1 - wx0), v = Vp * wave(a - i / N * span);
+      vPts.push([x, cy - v * k]); sPts.push([x, v * v]);
+    }
+    g += line(wx0, cy, wx1, cy, '#cbd5e1') + line(wx0, cy - r0 - 8, wx0, cy + r0 + 8, '#cbd5e1');
+    // peak & rms levels, tied to the circles
+    const yP = cy - rp, yR = cy - rr, yN = cy + rp;
+    g += line(sine ? cx : wx0, yP, wx1, yP, 'var(--pk)', 1.3, '6 4') + line(wx0, yN, wx1, yN, 'var(--pk)', 1, '6 4');
+    g += line(sine ? cx : wx0, yR, wx1, yR, 'var(--rms)', 1.8);
+    g += `<polyline points="${poly(vPts)}" fill="none" stroke="var(--pk)" stroke-width="2.4"/>`;
+    if (sine) g += `<circle cx="${wx0}" cy="${py}" r="4.5" fill="var(--pk)"/>`;
+    const lab = (y, s, c, below) => {
+      const w = s.length * 7 + 10, yy = below ? y + 15 : y - 5;
+      return `<rect x="${wx1 - w - 2}" y="${yy - 12}" width="${w}" height="16" fill="#fff" fill-opacity=".85"/>` + T(wx1 - 6, yy, s, {a: 'end', c, w: 700, fs: L.sm + 0.5});
+    };
+    const close = (yR - yP) < 18;
+    g += lab(yP, `V peak = ${f0(Vp)} V`, 'var(--pk)', false);
+    g += lab(yR, `V rms = ${f0(Vr)} V`, 'var(--rms)', close);
+    g += T(wx0 + 6, cy + r0 + 22, '◀ now', {c: 'var(--muted)', fs: L.sm}) +
+         T(wx1, cy + r0 + 22, L.wide ? 'past (2 cycles) ▶' : 'past ▶', {c: 'var(--muted)', fs: L.sm, a: 'end'});
+
+    // ---- v² panel: mean of v² = Vrms² ----
+    const top = Vp * Vp * 1.12, ys = v2 => py1 - v2 / top * (py1 - py0 - 16);
+    g += `<rect x="${wx0}" y="${py0}" width="${wx1 - wx0}" height="${py1 - py0}" fill="var(--panel)" stroke="var(--grid)"/>`;
+    const sp = sPts.map(p => [p[0], ys(p[1])]);
+    g += `<polygon points="${poly(sp)} ${wx1},${py1} ${wx0},${py1}" fill="var(--sq)" fill-opacity=".16"/>`;
+    g += `<polyline points="${poly(sp)}" fill="none" stroke="var(--sq)" stroke-width="2"/>`;
+    const ym = ys(Vr * Vr);
+    g += line(wx0, ym, wx1, ym, 'var(--rms)', 1.6, '7 5');
+    g += T(wx0 + 6, py0 + 15, L.wide ? 'v²(t) ∝ heating power in a resistor' : 'v²(t) ∝ heating', {c: 'var(--sq)', w: 700, fs: L.sm + 0.5});
+    const ml = L.wide ? `average of v² = V rms² = (${f0(Vr)} V)²` : `avg = (${f0(Vr)} V)²`;
+    g += `<rect x="${wx1 - ml.length * 7.2 - 10}" y="${ym - 19}" width="${ml.length * 7.2 + 6}" height="17" fill="#fff" fill-opacity=".85"/>`;
+    g += T(wx1 - 6, ym - 5, L.wide ? `average of v² = V rms² = (${f0(Vr)} V)²` : `avg = (${f0(Vr)} V)²`, {a: 'end', w: 700, fs: L.sm + 0.5});
+    if (L.wide) g += T(wx0 - 10, (py0 + py1) / 2, 'RMS = √(mean of square)', {a: 'end', fs: L.sm + 1, w: 700, c: 'var(--muted)'});
+
+    fig.innerHTML = g;
+  }
+
+  // ---------- loop & events ----------
+  function tick(t) {
+    if (last !== null && playing) phase += (t - last) / 1000 * (2 * Math.PI / 4);
+    last = t;
+    if (playing || dirty) { draw(); dirty = false; }
+    requestAnimationFrame(tick);
+  }
+  function setLayout() { L = layout(); fig.setAttribute('viewBox', `0 0 ${L.W} ${L.H}`); dirty = true; }
+  function setPlaying(on) {
+    playing = on; $('play').textContent = on ? '❚❚ Pause' : '▶ Play'; $('play').classList.toggle('on', on); dirty = true;
+  }
+
+  vr.addEventListener('input', compute);
+  document.querySelectorAll('#presets button').forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.pk) { vr.value = Math.round(+b.dataset.pk / Math.SQRT2 * 10) / 10; conv = 'pk'; }
+    else vr.value = b.dataset.rms;
+    compute();
+  }));
+  document.querySelectorAll('#conv button').forEach(b => b.addEventListener('click', () => { conv = b.dataset.c; compute(); }));
+  $('play').addEventListener('click', () => setPlaying(!playing));
+  $('stop').addEventListener('click', () => { setPlaying(false); phase = 0; dirty = true; });
+  window.addEventListener('resize', setLayout);
+  window.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT') return;
+    if (e.key === ' ') { e.preventDefault(); setPlaying(!playing); return; }
+    const nav = {ArrowRight: 'gotoNextSlide', PageDown: 'gotoNextSlide', ArrowLeft: 'gotoPreviousSlide', PageUp: 'gotoPreviousSlide'}[e.key];
+    try { if (nav && window.parent !== window && window.parent.slideshow) window.parent.slideshow[nav](); } catch (_) {}
+  });
+
+  // ---------- quiz ----------
+  const QUIZ = [
+    ['A multimeter reads 230 V AC on a wall socket. What is the peak voltage?',
+     'Multimeters show RMS: V<sub>peak</sub> = 230 × √2 ≈ 325 V.'],
+    ['An oscilloscope shows a 10 V peak sine across a 5 Ω resistor. What is the average power?',
+     'V<sub>rms</sub> = 10/√2 = 7.07 V → P = 7.07²/5 = 10 W (not 10²/5 = 20 W).'],
+    ['A circuit-theory textbook gives V = 100 ∠ 0° V and I = 5 ∠ −60° A (peak phasors). Find P.',
+     'Peak phasors need the ½: P = ½ · 100 · 5 · cos 60° = 125 W.'],
+    ['The same circuit with RMS phasors (power engineering): what are V, I and P?',
+     'V = 70.7 ∠ 0° V, I = 3.54 ∠ −60° A → P = 70.7 · 3.54 · cos 60° = 125 W. Same power, no ½.'],
+    ['A 3-phase motor nameplate says 400 V, 10 A. Peak or RMS?',
+     'RMS. Ratings, nameplates and meters in power engineering are RMS unless stated otherwise.'],
+  ];
+  let qi = 0;
+  function showQ() {
+    $('qn').textContent = `(${qi + 1}/${QUIZ.length})`;
+    $('qq').innerHTML = QUIZ[qi][0]; $('qa').innerHTML = QUIZ[qi][1]; $('qa').style.display = 'none';
+    $('qshow').textContent = 'Show answer';
+  }
+  $('qshow').addEventListener('click', () => {
+    const on = $('qa').style.display !== 'block';
+    $('qa').style.display = on ? 'block' : 'none'; $('qshow').textContent = on ? 'Hide answer' : 'Show answer';
+  });
+  $('qnext').addEventListener('click', () => { qi = (qi + 1) % QUIZ.length; showQ(); });
+
+  setLayout(); setPlaying(playing); compute(); showQ(); requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

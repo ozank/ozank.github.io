@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AC Phasor &amp; Power Explorer</title>
+<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1f2937; --muted:#6b7280; --grid:#e5e7eb; --panel:#f8fafc;
+    --v:#2563eb; --i:#ea580c; --p:#16a34a; --neg:#dc2626; --q:#9333ea;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);
+    font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:920px;margin:0 auto;padding:6px 14px 10px}
+  header h1{font-family:'Yanone Kaffeesatz',sans-serif;font-weight:400;font-size:30px;margin:2px 0 0}
+  header p{margin:0 0 4px;color:var(--muted)}
+  body.embed header{display:none}
+  svg{width:100%;height:auto;display:block;user-select:none}
+  svg text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .controls{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;margin-top:4px}
+  .slider{display:flex;align-items:center;gap:8px;flex:1 1 280px;min-width:0}
+  .slider label{white-space:nowrap;font-weight:600;min-width:92px}
+  .slider input{flex:1;min-width:0;accent-color:#374151}
+  .slider .ends{font-size:12px;color:var(--muted);white-space:nowrap}
+  .buttons{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  button{font:inherit;font-size:13px;padding:4px 11px;border:1px solid #d1d5db;border-radius:6px;
+    background:#fff;color:var(--fg);cursor:pointer}
+  button:hover{background:#f3f4f6}
+  button.on{background:#1f2937;color:#fff;border-color:#1f2937}
+  .readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:3px 14px;
+    margin-top:8px;background:var(--panel);padding:7px 11px;border-radius:8px;border:1px solid var(--grid)}
+  .readout div{white-space:nowrap}
+  .readout .k{color:var(--muted)}
+  .warn{color:var(--neg);font-weight:600}
+  button{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+  input[type=range]{height:28px;touch-action:pan-y}
+  svg{max-height:72vh}
+  @media (max-height:500px){header{display:none}}
+  @media (max-width:640px){
+    .wrap{padding:4px 8px 12px}
+    header h1{font-size:26px}
+    .controls{gap:10px;margin-top:8px}
+    .slider{flex:1 1 100%}
+    .slider label{min-width:84px;font-size:15px}
+    input[type=range]{height:36px}
+    input[type=range]::-webkit-slider-thumb{width:26px;height:26px}
+    input[type=range]::-moz-range-thumb{width:26px;height:26px}
+    .buttons{width:100%}
+    .buttons button{flex:1;min-height:42px;font-size:15px;padding:6px 4px}
+    .readout{grid-template-columns:1fr 1fr;font-size:13px}
+    .readout div{white-space:normal}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>AC Phasor &amp; Power Explorer</h1>
+    <p>230 V<sub>rms</sub>, 50 Hz source feeding a series R–X load</p>
+  </header>
+
+  <svg id="fig" role="img" aria-label="Rotating phasors, waveforms, instantaneous power and power triangle"></svg>
+
+  <div class="controls">
+    <div class="slider">
+      <label for="R">R = <span id="Rv"></span> Ω</label>
+      <input id="R" type="range" min="0" max="30" step="0.5">
+    </div>
+    <div class="slider">
+      <label for="X">X = <span id="Xv"></span> Ω</label>
+      <span class="ends">C</span>
+      <input id="X" type="range" min="-30" max="30" step="0.5">
+      <span class="ends">L</span>
+    </div>
+    <div class="buttons" id="presets">
+      <button data-r="10" data-x="0">R</button>
+      <button data-r="0" data-x="10">L</button>
+      <button data-r="0" data-x="-10">C</button>
+      <button data-r="8" data-x="6">RL</button>
+      <button data-r="8" data-x="-6">RC</button>
+    </div>
+    <div class="buttons" id="transport">
+      <button id="play">▶ Play</button>
+      <button id="stop">■ Stop</button>
+      <button id="slow">Slow</button>
+    </div>
+  </div>
+
+  <div class="readout" id="out"></div>
+</div>
+
+<script>
+(() => {
+  const VRMS = 230, F = 50, W = 2 * Math.PI * F, VM = VRMS * Math.SQRT2;
+  const ZREF = 7;                     // impedance whose current fills the phasor circle
+  const IREF = VRMS / ZREF;           // A rms
+  const SREF = VRMS * IREF;           // VA, used for p(t) & triangle scaling
+  const ICAP = 1.0;                   // max drawn current length (× radius)
+
+  const $ = id => document.getElementById(id);
+  const fig = $('fig'), Rin = $('R'), Xin = $('X');
+  const q = new URLSearchParams(location.search);
+  if (q.has('embed')) document.body.classList.add('embed');
+
+  const presets = {R:[10,0], L:[0,10], C:[0,-10], RL:[8,6], RC:[8,-6]};
+  let R = 8, X = 6;
+  if (q.get('preset') && presets[q.get('preset')]) [R, X] = presets[q.get('preset')];
+  if (q.has('R')) R = +q.get('R');
+  if (q.has('X')) X = +q.get('X');
+  Rin.value = R; Xin.value = X;
+
+  let playing = q.get('play') === '1', slow = false, phase = 0, last = null, dirty = true;
+
+  // ---------- derived quantities ----------
+  let s = {};
+  function compute() {
+    R = +Rin.value; X = +Xin.value;
+    const Zraw = Math.hypot(R, X), short = Zraw < 1;
+    const Z = Math.max(Zraw, 1);
+    const th = Math.atan2(X, R);           // +: current lags (inductive)
+    const I = VRMS / Z;
+    s = { Z, th, I, short,
+      P: I * I * (short ? Z * Math.cos(th) : R),
+      Q: I * I * (short ? Z * Math.sin(th) : X),
+      S: VRMS * I };
+    $('Rv').textContent = R.toFixed(1);
+    $('Xv').textContent = (X > 0 ? '+' : '') + X.toFixed(1);
+    readout();
+    dirty = true;
+    document.querySelectorAll('#presets button[data-r]').forEach(b =>
+      b.classList.toggle('on', +b.dataset.r === R && +b.dataset.x === X));
+  }
+
+  const fmtP = (v, u) => Math.abs(v) >= 1000 ? (v / 1000).toFixed(2) + ' k' + u : v.toFixed(0) + ' ' + u;
+  const deg = r => (r * 180 / Math.PI);
+
+  function readout() {
+    const d = deg(s.th), ad = Math.abs(d).toFixed(1);
+    let eq;
+    if (X > 0) eq = `R = ${R} Ω, L = ${(X / W * 1000).toFixed(1)} mH`;
+    else if (X < 0) eq = `R = ${R} Ω, C = ${(1e6 / (W * -X)).toFixed(0)} µF`;
+    else eq = `R = ${R} Ω (pure resistive)`;
+    const pf = Math.cos(s.th);
+    const pfType = Math.abs(d) < 0.05 ? 'unity' : d > 0 ? 'lagging' : 'leading';
+    const rel = Math.abs(d) < 0.05 ? 'in phase with V' : d > 0 ? `lags V by ${ad}°` : `leads V by ${ad}°`;
+    $('out').innerHTML = `
+      <div><span class="k">Z =</span> <b>${s.Z.toFixed(2)} Ω ∠ ${d.toFixed(1)}°</b></div>
+      <div><span class="k">Load:</span> ${eq}</div>
+      <div><span class="k">I =</span> <b>${s.I.toFixed(1)} A<sub>rms</sub></b>, ${rel}</div>
+      <div><span class="k">PF = cos θ =</span> <b>${pf.toFixed(2)}</b> ${pfType}</div>
+      <div><span class="k">P =</span> <b style="color:var(--p)">${fmtP(s.P, 'W')}</b></div>
+      <div><span class="k">Q =</span> <b style="color:var(--q)">${fmtP(s.Q, 'var')}</b></div>
+      <div><span class="k">S = V·I =</span> <b>${fmtP(s.S, 'VA')}</b></div>
+      ${s.short ? '<div class="warn">|Z| &lt; 1 Ω: near short circuit</div>' : ''}`;
+  }
+
+  // ---------- layout ----------
+  function layout() {
+    const wide = fig.parentElement.clientWidth >= 640;
+    return wide
+      ? {W:880, H:405, cx:150, cy:135, r0:108, wx0:290, wx1:866, py0:283, py1:398, tx0:18, tx1:272, ty0:276, ty1:402, fs:14, sm:11, cyc:2}
+      : {W:400, H:372, cx:86,  cy:104, r0:72,  wx0:174, wx1:394, py0:216, py1:366, tx0:6,  tx1:166, ty0:212, ty1:368, fs:14, sm:11.5, cyc:1};
+  }
+
+  // ---------- svg helpers ----------
+  const T = (x, y, str, o = {}) =>
+    `<text x="${x}" y="${y}" font-size="${o.fs || L.fs}" fill="${o.c || 'var(--fg)'}" text-anchor="${o.a || 'start'}"` +
+    `${o.w ? ` font-weight="${o.w}"` : ''}${o.it ? ' font-style="italic"' : ''} dominant-baseline="${o.b || 'auto'}">${str}</text>`;
+  const line = (x1, y1, x2, y2, c, w = 1, dash = '') =>
+    `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="${w}"${dash ? ` stroke-dasharray="${dash}"` : ''}/>`;
+  function arrow(x1, y1, x2, y2, c, w = 3) {
+    const a = Math.atan2(y2 - y1, x2 - x1), len = Math.hypot(x2 - x1, y2 - y1);
+    if (len < 2) return '';
+    const h = Math.min(12, len * 0.45), bx = x2 - h * Math.cos(a), by = y2 - h * Math.sin(a);
+    const p1 = [bx + h * 0.45 * Math.sin(a), by - h * 0.45 * Math.cos(a)];
+    const p2 = [bx - h * 0.45 * Math.sin(a), by + h * 0.45 * Math.cos(a)];
+    return line(x1, y1, bx, by, c, w) +
+      `<polygon points="${x2},${y2} ${p1} ${p2}" fill="${c}"/>`;
+  }
+  const poly = pts => pts.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
+
+  let L = layout();
+
+  // ---------- frame ----------
+  function draw() {
+    const {cx, cy, r0, wx0, wx1, py0, py1} = L;
+    const th = s.th;
+    const iLen = Math.min(s.I / IREF, ICAP) * r0;   // drawn peak length of I
+    const clipped = s.I / IREF > ICAP;
+    const a = phase;
+    let g = '';
+
+    // defs: clips for p(t) area
+    const pmin = -SREF * 1.12, pmax = SREF * 2.5;
+    const py = p => py1 - (p - pmin) / (pmax - pmin) * (py1 - py0);
+    const y0 = py(0);
+    g += `<defs>
+      <clipPath id="cpPanel"><rect x="${wx0}" y="${py0}" width="${wx1 - wx0}" height="${py1 - py0}"/></clipPath>
+      <clipPath id="cpPos"><rect x="${wx0}" y="${py0}" width="${wx1 - wx0}" height="${y0 - py0}"/></clipPath>
+      <clipPath id="cpNeg"><rect x="${wx0}" y="${y0}" width="${wx1 - wx0}" height="${py1 - y0}"/></clipPath>
+    </defs>`;
+
+    // ---- phasor diagram ----
+    g += `<circle cx="${cx}" cy="${cy}" r="${r0}" fill="none" stroke="var(--grid)" stroke-dasharray="3 4"/>`;
+    g += line(cx - r0 - 12, cy, cx + r0 + 12, cy, '#cbd5e1') + line(cx, cy - r0 - 12, cx, cy + r0 + 12, '#cbd5e1');
+    g += T(cx + r0 + 8, cy + 16, 'Re', {c: 'var(--muted)', fs: L.fs - 2, a: 'end'});
+    g += T(cx + 6, cy - r0 - 2, 'Im', {c: 'var(--muted)', fs: L.fs - 2});
+
+    const vx = cx + r0 * Math.cos(a), vy = cy - r0 * Math.sin(a);
+    const ix = cx + iLen * Math.cos(a - th), iy = cy - iLen * Math.sin(a - th);
+
+    // projections to the waveform axis
+    g += line(vx, vy, wx0, vy, 'var(--v)', 1, '4 4') + line(ix, iy, wx0, iy, 'var(--i)', 1, '4 4');
+
+    // angle arc
+    if (Math.abs(th) > 0.035) {
+      const rA = Math.min(34, iLen * 0.8, r0 * 0.4), a1 = a - th, a2 = a;
+      const sx = cx + rA * Math.cos(a1), sy = cy - rA * Math.sin(a1);
+      const ex = cx + rA * Math.cos(a2), ey = cy - rA * Math.sin(a2);
+      const sweep = th > 0 ? 0 : 1;
+      g += `<path d="M${sx},${sy} A${rA},${rA} 0 0 ${sweep} ${ex},${ey}" fill="none" stroke="#374151" stroke-width="1.5"/>`;
+      const am = a - th / 2, rl = rA + 11;
+      g += T(cx + rl * Math.cos(am), cy - rl * Math.sin(am), 'θ', {a: 'middle', b: 'middle', it: true, w: 600});
+    }
+    g += arrow(cx, cy, vx, vy, 'var(--v)', 3.2) + arrow(cx, cy, ix, iy, 'var(--i)', 3.2);
+    // labels sit beside each arrow, on the side away from the other phasor
+    const lab = (len, ang, side, str, c) => {
+      const b = Math.max(0.68 * len, 18), n = 13 * side;
+      const x = cx + b * Math.cos(ang) - n * Math.sin(ang), y = cy - b * Math.sin(ang) - n * Math.cos(ang);
+      return T(x, y, str, {c, a: 'middle', b: 'middle', w: 700});
+    };
+    const sv = th >= 0 ? 1 : -1;
+    g += lab(r0, a, sv, 'V', 'var(--v)') + lab(iLen, a - th, -sv, 'I', 'var(--i)');
+    g += T(cx - r0 - 10, cy + r0 + 22, (L.W > 600 ? 'phasor length = peak value' : 'length = peak') + (clipped ? ' (I clipped)' : ''), {c: 'var(--muted)', fs: L.sm});
+
+    // ---- waveforms v(t), i(t) ----
+    const N = 220, span = L.cyc * 2 * Math.PI;      // history shown
+    const vPts = [], iPts = [], pPts = [];
+    for (let k = 0; k <= N; k++) {
+      const x = wx0 + k / N * (wx1 - wx0), d = k / N * span;
+      vPts.push([x, cy - r0 * Math.sin(a - d)]);
+      iPts.push([x, cy - iLen * Math.sin(a - th - d)]);
+      const p = VM * Math.SQRT2 * s.I * Math.sin(a - d) * Math.sin(a - th - d);
+      pPts.push([x, py(p)]);
+    }
+    g += line(wx0, cy, wx1, cy, '#cbd5e1') + line(wx0, cy - r0 - 8, wx0, cy + r0 + 8, '#cbd5e1');
+    for (let c = 1; c <= 2 * L.cyc; c++) {
+      const x = wx0 + c / (2 * L.cyc) * (wx1 - wx0);
+      g += line(x, cy - r0 - 8, x, cy + r0 + 8, 'var(--grid)', 1, '2 4');
+    }
+    g += `<polyline points="${poly(vPts)}" fill="none" stroke="var(--v)" stroke-width="2.4"/>`;
+    g += `<polyline points="${poly(iPts)}" fill="none" stroke="var(--i)" stroke-width="2.4"/>`;
+    g += `<circle cx="${wx0}" cy="${vy}" r="4.5" fill="var(--v)"/><circle cx="${wx0}" cy="${iy}" r="4.5" fill="var(--i)"/>`;
+    g += T(wx1, cy - r0 - 10, 'v(t)', {c: 'var(--v)', a: 'end', w: 700}) +
+         T(wx1 - 42, cy - r0 - 10, 'i(t)', {c: 'var(--i)', a: 'end', w: 700});
+    g += T(wx0 + 6, cy + r0 + 22, '◀ now', {c: 'var(--muted)', fs: L.sm}) +
+         T(wx1, cy + r0 + 22, (L.W > 600 ? 'past (2 cycles = 40 ms) ▶' : 'past (20 ms) ▶'), {c: 'var(--muted)', fs: L.sm, a: 'end'});
+
+    // ---- p(t) panel ----
+    g += `<rect x="${wx0}" y="${py0}" width="${wx1 - wx0}" height="${py1 - py0}" fill="var(--panel)" stroke="var(--grid)"/>`;
+    const area = poly(pPts) + ` ${wx1},${y0} ${wx0},${y0}`;
+    g += `<g clip-path="url(#cpPanel)">
+      <polygon points="${area}" fill="var(--p)" fill-opacity=".18" clip-path="url(#cpPos)"/>
+      <polygon points="${area}" fill="var(--neg)" fill-opacity=".22" clip-path="url(#cpNeg)"/>
+      <polyline points="${poly(pPts)}" fill="none" stroke="var(--p)" stroke-width="2.2"/>
+    </g>`;
+    g += line(wx0, y0, wx1, y0, '#94a3b8');
+    const yP = Math.max(py0 + 2, Math.min(py1 - 2, py(s.P)));
+    g += line(wx0, yP, wx1, yP, '#111827', 1.6, '7 5');
+    g += T(wx1 - 6, yP - 5, (L.W > 600 ? 'average = ' : '') + `P = ${fmtP(s.P, 'W')}`, {a: 'end', fs: L.fs - 1, w: 700});
+    g += T(wx0 + 6, py0 + 16, 'p(t) = v(t)·i(t)', {c: 'var(--p)', w: 700, fs: L.fs - 1});
+    const wide = L.W > 600, lx = wide ? wx0 + 150 : wx0 + 6, ly = wide ? py0 + 16 : py0 + 33;
+    const l1 = wide ? 'energy to load' : 'to load', l2 = wide ? 'returned to source' : 'returned', gap = wide ? 112 : 64;
+    g += T(lx, ly, '■', {c: 'var(--p)', fs: L.sm}) + T(lx + 13, ly, l1, {c: 'var(--muted)', fs: L.sm}) +
+         T(lx + gap, ly, '■', {c: 'var(--neg)', fs: L.sm}) + T(lx + gap + 13, ly, l2, {c: 'var(--muted)', fs: L.sm});
+    g += `<circle cx="${wx0}" cy="${pPts[0][1]}" r="4" fill="var(--p)" clip-path="url(#cpPanel)"/>`;
+
+    // ---- power triangle ----
+    g += triangle();
+
+    fig.innerHTML = g;
+  }
+
+  function triangle() {
+    const {tx0, tx1, ty0, ty1} = L;
+    const avail = ty1 - ty0 - 34;
+    const k = Math.min(avail / SREF, avail / Math.max(s.S, 1));
+    const P = s.P * k, Q = s.Q * k;
+    const ox = tx0 + 14, oy = s.Q >= 0 ? ty1 - 14 : ty0 + 26;
+    const px = ox + P, qy = oy - Q;
+    let g = T(tx1, s.Q >= 0 ? ty0 + 12 : ty1 - 4, 'Power triangle', {a: 'end', w: 700, fs: L.fs - 1, c: 'var(--muted)'});
+    if (P > 1) g += arrow(ox, oy, px, oy, 'var(--p)', 3);
+    if (Math.abs(Q) > 1) g += arrow(px, oy, px, qy, 'var(--q)', 3);
+    g += arrow(ox, oy, px, qy, '#111827', 2.4);
+    const below = s.Q >= 0 ? 16 : -8;
+    if (P > 22) g += T(ox + P / 2, oy + below, 'P', {a: 'middle', c: 'var(--p)', w: 700});
+    if (Math.abs(Q) > 14) g += T(px + 8, oy - Q / 2, 'Q', {c: 'var(--q)', w: 700, b: 'middle'});
+    const sl = Math.hypot(P, Q);
+    if (sl > 24) {
+      const sg = s.Q >= 0 ? 1 : -1, mx = ox + P / 2, my = oy - Q / 2, nx = -sg * Q / sl, ny = -sg * P / sl;
+      g += T(mx + nx * 12, my + ny * 12, 'S', {a: 'middle', b: 'middle', w: 700});
+    }
+    if (Math.abs(s.th) > 0.05 && sl > 30) {
+      const rA = 22, sweep = s.Q >= 0 ? 0 : 1;
+      const ex = ox + rA * Math.cos(s.th), ey = oy - rA * Math.sin(s.th);
+      g += `<path d="M${ox + rA},${oy} A${rA},${rA} 0 0 ${sweep} ${ex},${ey}" fill="none" stroke="#374151"/>`;
+      g += T(ox + rA + 8, oy - (s.Q >= 0 ? 7 : -12), 'θ', {it: true, fs: L.fs - 1});
+    }
+    return g;
+  }
+
+  // ---------- loop & events ----------
+  function tick(t) {
+    if (last !== null && playing) phase += (t - last) / 1000 * (2 * Math.PI / (slow ? 9 : 3.5));
+    last = t;
+    if (playing || dirty) { draw(); dirty = false; }
+    requestAnimationFrame(tick);
+  }
+
+  function setLayout() {
+    L = layout();
+    fig.setAttribute('viewBox', `0 0 ${L.W} ${L.H}`);
+    dirty = true;
+  }
+
+  Rin.addEventListener('input', compute);
+  Xin.addEventListener('input', compute);
+  document.querySelectorAll('#presets button[data-r]').forEach(b => b.addEventListener('click', () => {
+    Rin.value = b.dataset.r; Xin.value = b.dataset.x; compute();
+  }));
+  function setPlaying(on) {
+    playing = on;
+    $('play').textContent = on ? '❚❚ Pause' : '▶ Play';
+    $('play').classList.toggle('on', on);
+    dirty = true;
+  }
+  $('play').addEventListener('click', () => setPlaying(!playing));
+  // Stop: freeze at the reference frame (V phasor at 0°)
+  $('stop').addEventListener('click', () => { setPlaying(false); phase = 0; dirty = true; });
+  $('slow').addEventListener('click', e => { slow = !slow; e.currentTarget.classList.toggle('on', slow); });
+  window.addEventListener('resize', setLayout);
+
+  // When embedded in a remark.js deck, let slide keys pass through to the deck.
+  window.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT') return;
+    const nav = {ArrowRight: 'gotoNextSlide', PageDown: 'gotoNextSlide', ArrowLeft: 'gotoPreviousSlide', PageUp: 'gotoPreviousSlide'}[e.key];
+    if (e.key === ' ') { e.preventDefault(); $('play').click(); return; }
+    try { if (nav && window.parent !== window && window.parent.slideshow) window.parent.slideshow[nav](); } catch (_) {}
+  });
+
+  setPlaying(playing);
+  setLayout(); compute(); requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

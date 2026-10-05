@@ -25,7 +25,7 @@ class: center, middle
 
 ## Ozan Keysan
 
-[http://keysan.me](http://ozan.keysan.me)
+[http://keysan.me](http://keysan.me)
 
 Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
@@ -97,6 +97,8 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 <img src="https://raw.githubusercontent.com/ozank/ee281/master/images/phase_difference.png" alt="Drawing" style="width: 500px;"/>
 
+## \\(\phi > 0\\): the signal leads (reaches its peak earlier)
+
 ---
 # Can you answer the following?
 --
@@ -133,15 +135,30 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ### [Graphical representation](https://www.desmos.com/calculator/yjdj9jyqpc)
 
 ---
+# Where does a phasor come from?
+## Euler: \\(e^{j\theta} = cos\theta + j\,sin\theta\\)
+--
+
+## \\(V\_m cos(\omega t + \phi) = Re\\{ V\_m e^{j\phi} \, e^{j\omega t}\\}\\)
+--
+
+## \\(e^{j\omega t}\\): the same rotation for every signal in the circuit, so drop it
+## \\(\mathbf{V} = V\_m \angle \phi\\): only the amplitude and phase remain
+
+---
 #Phasors
 ## Phasor: a complex number that represents the amplitude and phase of a sinusoid
 --
 
 ## \\(z = x + j y\\)
 ###where \\(j = \sqrt{-1}\\)
+--
+
+### Amplitude: peak value in circuit theory, RMS value in power engineering (this course)
+
 ---
 # Complex Numbers
-## \\(j = \sqrt{-1}\\) or better expressed as:  \\(j \times j = -1\\)
+### \\(j = \sqrt{-1}\\) or better expressed as:  \\(j \times j = -1\\)
 
 <img src="http://betterexplained.com/wp-content/uploads/complex/negative_imaginary_table.png" alt="Drawing" style="width: 600px;"/>
 
@@ -150,12 +167,13 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 #Phasors
 ## In polar form
 
-##\\(z = x + j y = r \angle \phi\\)
+### \\(z = x + j y = r \angle \phi\\)
 --
 
-##where
-##\\(r = \sqrt{x^2 + y^2}\\)
+### where
+## \\(r = \sqrt{x^2 + y^2}\\)
 ## \\(\phi = tan^{-1}(\dfrac{y}{x})\\)
+
 ---
 #Phasors
 ## In polar form
@@ -171,10 +189,10 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## Remember phasors are there to make your life EASIER!
 --
 
-## Derivation in phasor domain?
+## Differentiation in phasor domain?
 --
 
-## \\(i(t)= sin (wt + \phi)\\)
+## \\(i(t)= sin (\omega t + \phi)\\)
 --
 
 ## \\(\dfrac{d i(t)}{dt}=?\\)
@@ -251,7 +269,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 <img src="https://www.canoncitydailyrecord.com/wp-content/uploads/2022/08/DRC-L-25DRBH9.jpg" alt="Drawing" style="width: 800px;"/>
 
 ---
-# Low-Voltage Grid = 230 Vrms
+# Low-Voltage Grid = 230 Vrms (325 V peak)
 --
 
 
@@ -276,6 +294,16 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ## The RMS value of an AC signal is equal to the value of direct current (DC) which would have the same power dissipation as the AC.
 ---
+# RMS of a Sinusoid
+## \\(V\_{rms} = \sqrt{\dfrac{1}{T}\int\_0^T V\_m^2 cos^2(\omega t)\, dt}\\)
+--
+
+## \\(\quad\quad = \sqrt{\dfrac{V\_m^2}{2}} = \dfrac{V\_m}{\sqrt{2}}\\)
+--
+
+## 230 V\\(\_{rms}\\) → 325 V peak
+
+---
 # What is RMS?
 
 ## What is the average power (in Watts) dissipated in a resistor of 1 \\(\Omega\\) while carrying a 1 A(rms) current?
@@ -286,13 +314,47 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 [Edit Graph](https://www.desmos.com/calculator/in0czoq74w)
 ---
 
-# What is RMS?
-
-
 # In Power Engineering RMS values are almost always used instead of peak values !
 
 # We also use RMS values in phasor diagrams !
 
+
+## \\(P = V I cos\theta\\) with RMS values: no ½ factor
+
+---
+# Peak or RMS phasors?
+<table style="width:100%; font-size:25px; border-collapse:collapse; margin-top:10px; line-height:1.35">
+<tr style="border-bottom:2px solid #333"><th style="width:24%"></th><th>Circuit theory</th><th>Power engineering (EE361)</th></tr>
+<tr style="border-bottom:1px solid #ccc"><td><b>Phasor magnitude</b></td><td>Peak: V\\(\_{m} \\) </td> <td>RMS:  V\\(\_{rms}\\) = V\\(\_{m} / \sqrt{2}\\)</td></tr>
+<tr style="border-bottom:1px solid #ccc"><td><b>Average power</b></td><td>\\(P = \dfrac{1}{2} V\_{m} I\_{m} cos\theta \quad \\)</td><td>\\(\quad P = V I cos\theta\\)</td></tr>
+</table>
+--
+
+###  
+
+### Same circuit, same angles: only the scale changes by \\(\sqrt{2}\\)
+### In this course every V, I and phasor is RMS unless stated otherwise!
+
+---
+## Peak vs RMS
+<iframe src="interactive/rms_peak_explorer.html?embed" width="800" height="600" style="border:0"></iframe>
+
+---
+# Common Peak/RMS mistakes
+--
+
+### \\(P = V\_{peak}^2 / R\\) → 2× too high
+--
+
+### Mixing a peak voltage with an RMS current → \\(\sqrt{2}\\) error
+--
+
+### Using \\(\sqrt{2}\\) for non-sinusoidal waveforms (square, triangle, PWM)
+--
+
+### Forgetting that multimeters, nameplates and the "230 V" grid are all RMS
+
+#### Practice at home (with a short quiz): [keysan.me/presentations/interactive/rms_peak_explorer.html](https://keysan.me/presentations/interactive/rms_peak_explorer.html)
 
 ---
 # Active and Reactive Power
@@ -309,7 +371,8 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ### What is the average power (in Watts) dissipated in an inductor with an impedance of   \\(j 1 \, \Omega\\) while carrying a 1 A(rms) current?
 
-## Remember: Real power only dissipates in resistive components. Ideal inductors or capacitors don't dissipate real power, but uses reactive power.
+## Real power only dissipates in resistive components.
+## Ideal L and C store energy for a quarter cycle and return it in the next: the average power is zero. Reactive power describes this back-and-forth energy exchange.
 
 
 ---
@@ -358,6 +421,11 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 <img src="https://cdn1.byjus.com/wp-content/uploads/2021/02/leading-power-factor.png" alt="Drawing" style="width: 800px;"/>
 
 ---
+## Explore: Phasors, Waveforms & Power
+<iframe src="interactive/ac_power_explorer.html?embed" width="790" height="530" style="border:0"></iframe>
+#### Try it yourself: [keysan.me/presentations/interactive/ac_power_explorer.html](https://keysan.me/presentations/interactive/ac_power_explorer.html)
+
+---
 # \\(S = \sqrt{P^2 + Q^2}\\)
 
 
@@ -367,6 +435,47 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 # \\(S = \sqrt{P^2 + Q^2}\\)
 
 <img src="https://www.electricaltechnology.org/wp-content/uploads/2013/07/Active-Reactive-Apparent-and-Complex-Power.png" alt="Drawing" style="width: 600px;"/>
+
+---
+# Complex Power
+## \\(S = V\_{rms} I\_{rms}^\* = P + jQ\\)
+--
+
+## \\(P = V I cos\theta \quad\\) (W)
+## \\(Q = V I sin\theta \quad\\) (var), positive for inductive loads
+## \\(|S| = V I = \sqrt{P^2 + Q^2} \quad\\) (VA)
+
+---
+# Example
+### A 230 V (rms), 50 Hz supply feeds a series load: R = 8 Ω, L = 19.1 mH. Find: \\(Z, I, \theta\\), PF, P, Q, S
+--
+
+### \\(X\_L = 2\pi 50 \times 0.0191 = 6\,\Omega\\)
+### \\(Z = 8 + j6 = 10 \angle 36.9° \,\Omega\\)
+--
+
+### \\(I = 230/10 = 23\\) A (rms), lagging by 36.9°
+--
+
+### PF = cos(36.9°) = 0.8 lagging
+--
+
+### P = \\(I^2R\\) = 4.23 kW, Q = \\(I^2X\\) = 3.17 kvar, S = 5.29 kVA
+#### Check it on the explorer slide: the RL preset is this load
+
+---
+# Why do we care about power factor?
+## A 10 kW load on a 230 V supply:
+## PF = 1.0 → I = 43.5 A, PF = 0.8 → I = 54.3 A
+--
+
+### 25% more current → \\(1.25^2\\) = 56% more cable loss (\\(I^2R\\)), plus larger cables and transformers
+--
+
+### That's why industrial consumers pay penalties for reactive energy
+--
+
+### Solution: a parallel capacitor supplies Q locally. For the previous example, about 191 µF brings PF to 1.
 
 ---
 
@@ -393,11 +502,6 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
           tex2jax: {
           skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
           }
-      });
-      MathJax.Hub.Queue(function() {
-          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
-              return(elem.SourceElement());
-          }).parent().addClass('has-jax');
       });
 
       MathJax.Hub.Configured();
