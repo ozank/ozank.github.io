@@ -1,13 +1,11 @@
 ---
 layout: page
-title: Animations
+title: Teaching Animations
 permalink: /animations/index.html
 ---
 
-## Teaching Animations
 
-
-### EE-361 Power Engineering
+## EE-361 Power Engineering
 
 * [RMS vs Peak?](./presentations/interactive/rms_peak_explorer.html)
 * [AC Power, Lagging, Leading, Phasors](./presentations/interactive/ac_power_explorer.html)
