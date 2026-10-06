@@ -4,7 +4,7 @@ title: Animations
 permalink: /animations/index.html
 ---
 
-## Animations for Courses
+## Teaching Animations
 
 
 ### EE-361 Power Engineering
