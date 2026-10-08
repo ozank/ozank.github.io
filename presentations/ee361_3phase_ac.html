@@ -121,17 +121,17 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 # WHY 3 PHASE? (but not 2 or 5?)
 --
 
-<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/3_phase_AC_waveform.svg/2000px-3_phase_AC_waveform.svg.png" alt="Drawing" style="width: 700px;"/>
+<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/3_phase_AC_waveform.svg/1280px-3_phase_AC_waveform.svg.png" alt="Drawing" style="width: 700px;"/>
 
 ---
 # WHY 3-PHASE?
 --
 
-- ## More power per unit wire length.
+- ## Less conductor material for the same power.
 
 --
 - ## Constant Power
-[Power Graphs](https://docs.google.com/spreadsheets/d/1RP-MsrHwybAG6J3CFTbdLOCTvGdIdkaWUkhRuAHPWd0/edit?usp=sharing)
+[Power Graphs](https://docs.google.com/spreadsheets/d/1RP-MsrHwybAG6J3CFTbdLOCTvGdIdkaWUkhRuAHPWd0/edit?usp=sharing), [3-Phase Animations](./interactive/three_phase_explorer.html)
 
 --
 - ## Rotating MMF
@@ -144,6 +144,10 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ## \\(Vb = V_{max} \mathrm{sin} (\omega t - 2 \pi /3)\\)
 ## \\(Vc = V_{max} \mathrm{sin} (\omega t - 4 \pi /3)\\)
 
+
+
+### Note that \\( V_{max}\\) is the peak value, but we still use RMS values in phasors!
+
 ---
 # Voltages & Currents
 ![](3phase_phasors.png)
@@ -152,6 +156,25 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 # 3 Phase Phasors
 
 <img src="./images/ee361/three_phase_phasor.gif" alt="Drawing" style="width: 800px;"/>
+---
+### Explore: 3-Phase Waveforms, Phasors & Power
+<iframe src="interactive/three_phase_explorer.html?embed" width="790" height="500" style="border:0"></iframe>
+
+#### Try it yourself: [keysan.me/presentations/interactive/three_phase_explorer.html](https://keysan.me/presentations/interactive/three_phase_explorer.html)
+
+---
+# Balanced 3-Phase System
+## \\(\vec{V\_{a}} + \vec{V\_{b}} + \vec{V\_{c}} = 0 \\)
+
+## \\( \vec{I\_{a}} + \vec{I\_{b}} + \vec{I\_{c}} = 0\\)
+--
+
+## So the neutral current is zero → the neutral wire can be thin or omitted
+--
+
+### Phase sequence: abc (positive) or acb (negative)
+### Swap any two wires → sequence reverses → a 3-phase motor turns the other way
+
 
 ---
 
@@ -171,6 +194,12 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 --
 ## \\(\vec{V\_{ab}}= \sqrt 3 V \angle 30^∘\\)
+---
+### Where do √3 and 30° come from?
+<iframe src="interactive/line_phase_explorer.html?embed" width="790" height="500" style="border:0"></iframe>
+
+#### Try it yourself: [keysan.me/presentations/interactive/line_phase_explorer.html](https://keysan.me/presentations/interactive/line_phase_explorer.html)
+
 
 ---
 # What is the Grid Voltage Level?
@@ -192,11 +221,15 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 # NOW  [the standard is 230 V](http://www.schneider-electric.co.uk/en/faqs/FA144717/) 
 ## ± 10% (line-to-neutral RMS)
 
-
-### Due to connection of UK to [European System](https://www.entsoe.eu/data/map/)
-
 --
+### IEC 60038 harmonised Europe's 220 V and the UK's 240 V into a single 230 V standard
+### Turkey's grid has run synchronously with the [European system (ENTSO-E)](https://www.entsoe.eu/data/map/) since 2010
 
+---
+# What is the Grid Voltage Level?
+
+# NOW  [the standard is 230 V](http://www.schneider-electric.co.uk/en/faqs/FA144717/) 
+## ± 10% (line-to-neutral RMS)
 ## Peak (line-to-neutral) \\(= 230 \sqrt{2} = 325 \\) V 
 
 --
@@ -209,11 +242,12 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
 # Wye(or Star) Connection (Y)
-<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/3_Phase_Power_Connected_to_Wye_Load.svg/2000px-3_Phase_Power_Connected_to_Wye_Load.svg.png" alt="Drawing" style="width: 500px;"/>
+<img src="./images/ee361/3_Phase_Power_Connected_to_Wye_Load.png" alt="Drawing" style="width: 500px;"/>
 
 ### \\( |V\_{line-to-line}| = \sqrt{3} \; |V\_{phase}|\\)
 ### \\( |I\_{line}| = |I\_{phase}|\\)
 
+#### \\( \vec{V\_{ab}} = \sqrt{3}\,\vec{V\_{an}} \angle 30^∘\\) (line voltage leads phase voltage by 30°)
 ---
 # Delta Connection (\\(\Delta\\))
 
@@ -228,22 +262,48 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ## Regardless of the connection type
 
-## \\( S= 3V\_{phase}I\_{phase}\\)
+## \\(  |S| = 3V\_{phase}I\_{phase}\\)
 --
 
 ## or
 
-## \\( S= \sqrt{3}V\_{line-to-line}I\_{line}\\)
+## \\( |S| = \sqrt{3}V\_{line-to-line}I\_{line}\\)
 
 
 #### [Review of three phase AC circuits](http://www.egr.unlv.edu/~eebag/EE%20340%20-%20Review%203-Phase%20Ckts.pdf)
+---
+#Power Relations
+
+## Regardless of the connection type
+
+## \\(  P = 3V\_{phase}I\_{phase} cos (\theta)\\)
+
+## or
+
+## \\( P = \sqrt{3}V\_{line-to-line}I\_{line}cos (\theta)\\)
+
+## Careful: \\(\theta\\) is always the angle between \\(V\_{phase}\\) and \\(I\_{phase}\\)
+
+#### [Review of three phase AC circuits](http://www.egr.unlv.edu/~eebag/EE%20340%20-%20Review%203-Phase%20Ckts.pdf)
+
 
 ---
 # Impedance Transformation
 
-![](http://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Wye-delta-2.svg/750px-Wye-delta-2.svg.png)
+<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Wye-delta-2.svg/960px-Wye-delta-2.svg.png" alt="Drawing" style="width: 800px;"/>
 
 ## \\(Z_{\Delta} = 3 Z\_Y \\)
+---
+# Per-Phase Analysis (balanced systems)
+
+## 1. Convert any \\(\Delta\\) to an equivalent Y (\\(Z\_Y = Z\_\Delta/3\\))
+
+## 2. Solve **phase a** only: a single-phase circuit, line-to-neutral
+
+## 3. Phases b and c: same magnitude, shifted by \\(-120^∘\\) and \\(+120^∘\\)
+
+## 4. Total power = 3 × phase power
+
 ---
 # Examples
 

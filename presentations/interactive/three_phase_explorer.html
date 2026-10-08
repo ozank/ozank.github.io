@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3-Phase Explorer</title>
+<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1f2937; --muted:#6b7280; --grid:#e5e7eb; --panel:#f8fafc;
+    --a:#b45309; --b:#1f2937; --c:#9ca3af;          /* IEC colour code: L1 brown, L2 black, L3 grey */
+    --ll:#7c3aed; --n:#2563eb; --p:#16a34a; --neg:#dc2626; --ok:#047857;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);
+    font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:920px;margin:0 auto;padding:6px 14px 10px}
+  header h1{font-family:'Yanone Kaffeesatz',sans-serif;font-weight:400;font-size:30px;margin:2px 0 0}
+  header p{margin:0 0 4px;color:var(--muted)}
+  body.embed header, body.embed .quiz{display:none}
+  svg{width:100%;height:auto;display:block;user-select:none;max-height:70vh}
+  svg text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .controls{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;margin-top:4px}
+  .slider{display:flex;align-items:center;gap:8px;flex:1 1 280px;min-width:0}
+  .slider label{white-space:nowrap;font-weight:600;min-width:150px}
+  .slider input{flex:1;min-width:0;accent-color:#374151}
+  .slider .ends{font-size:12px;color:var(--muted);white-space:nowrap}
+  .buttons{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .buttons .lbl{font-size:12px;color:var(--muted);margin-right:-2px}
+  .sep{width:1px;height:22px;background:var(--grid);margin:0 4px}
+  button{font:inherit;font-size:13px;padding:4px 11px;border:1px solid #d1d5db;border-radius:6px;
+    background:#fff;color:var(--fg);cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+  button:hover{background:#f3f4f6}
+  button.on{background:#1f2937;color:#fff;border-color:#1f2937}
+  input[type=range]{height:28px;touch-action:pan-y}
+  .readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:3px 14px;
+    margin-top:8px;background:var(--panel);padding:7px 11px;border-radius:8px;border:1px solid var(--grid)}
+  .readout div{white-space:nowrap}
+  .readout .k{color:var(--muted)}
+  .warn{color:var(--neg);font-weight:600}
+  body.embed .wrap{padding:0 6px 4px}
+  body.embed svg{max-height:none}
+  body.embed .controls{gap:3px 14px;margin-top:0}
+  body.embed .buttons{gap:4px}
+  body.embed button{font-size:12px;padding:2px 8px}
+  body.embed .slider input{height:22px}
+  body.embed .readout{font-size:12px;margin-top:4px;padding:4px 9px;grid-template-columns:repeat(4,1fr);gap:1px 10px}
+  body.embed .readout div{white-space:normal}
+  .quiz{margin-top:10px;background:var(--panel);border:1px solid var(--grid);border-radius:8px;padding:7px 11px}
+  .quiz h3{margin:0 0 3px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .quiz .q{font-weight:600}
+  .quiz .a{margin-top:4px;color:var(--ok);display:none}
+  .quiz .row{display:flex;gap:6px;margin-top:6px}
+  @media (max-height:500px){header{display:none}}
+  @media (max-width:640px){
+    .wrap{padding:4px 8px 12px}
+    header h1{font-size:26px}
+    .controls{gap:10px;margin-top:8px}
+    .slider{flex:1 1 100%}
+    .slider label{min-width:128px;font-size:15px}
+    input[type=range]{height:36px}
+    input[type=range]::-webkit-slider-thumb{width:26px;height:26px}
+    input[type=range]::-moz-range-thumb{width:26px;height:26px}
+    .buttons{width:100%}
+    .buttons button{flex:1;min-height:42px;font-size:15px;padding:6px 4px}
+    .buttons .lbl{width:100%}
+    .sep{display:none}
+    .readout{grid-template-columns:1fr 1fr;font-size:13px}
+    .readout div{white-space:normal}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>3-Phase Explorer</h1>
+    <p>400 V (line-to-line), 50 Hz supply feeding a 3-phase load, Z = 10 Ω ∠ θ per phase</p>
+  </header>
+
+  <svg id="fig" role="img" aria-label="Three-phase phasors, waveforms and instantaneous power"></svg>
+
+  <div class="controls">
+    <div class="slider">
+      <label for="th">θ = <span id="thv"></span></label>
+      <span class="ends">C</span>
+      <input id="th" type="range" min="-90" max="90" step="0.1">
+      <span class="ends">L</span>
+    </div>
+    <div class="slider">
+      <label for="ua">Phase a load: <span id="uav"></span></label>
+      <input id="ua" type="range" min="10" max="200" step="5">
+    </div>
+    <div class="buttons">
+      <span class="lbl">Load:</span>
+      <button id="cY">Y (4-wire)</button><button id="cD">Δ</button>
+      <span class="sep"></span>
+      <span class="lbl">Sequence:</span>
+      <button id="sABC">abc</button><button id="sACB">acb</button>
+    </div>
+    <div class="buttons">
+      <span class="lbl">Phasors:</span>
+      <button id="shLL">Line voltages</button><button id="shI">Currents</button>
+      <span class="sep"></span>
+      <span class="lbl">Waves:</span>
+      <button data-w="vph">V phase</button><button data-w="vll">V line</button><button data-w="i">I line</button>
+    </div>
+    <div class="buttons" id="presets">
+      <span class="lbl">Presets:</span>
+      <button data-th="0" data-ua="100">Resistive</button>
+      <button data-th="36.87" data-ua="100">Motor (PF 0.8)</button>
+      <button data-th="36.87" data-ua="40">Unbalanced</button>
+    </div>
+    <div class="buttons">
+      <button id="play">▶ Play</button><button id="stop">■ Stop</button><button id="slow">Slow</button>
+    </div>
+  </div>
+
+  <div class="readout" id="out"></div>
+
+  <div class="quiz">
+    <h3>Check yourself <span id="qn"></span></h3>
+    <div class="q" id="qq"></div>
+    <div class="a" id="qa"></div>
+    <div class="row buttons"><button id="qshow">Show answer</button><button id="qnext">Next ▶</button></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const VLL = 400, VPH = VLL / Math.sqrt(3), Z0 = 10, RT2 = Math.SQRT2, D = Math.PI / 180;
+  const COL = {a: 'var(--a)', b: 'var(--b)', c: 'var(--c)'};
+  const LLCOL = ['#7c3aed', '#c4b5fd', '#4c1d95'];
+
+  // ---------- complex helpers ----------
+  const C = (re, im) => ({re, im});
+  const P = (m, ang) => C(m * Math.cos(ang), m * Math.sin(ang));
+  const add = (...z) => z.reduce((s, w) => C(s.re + w.re, s.im + w.im), C(0, 0));
+  const sub = (x, y) => C(x.re - y.re, x.im - y.im);
+  const mul = (x, y) => C(x.re * y.re - x.im * y.im, x.re * y.im + x.im * y.re);
+  const sc = (x, k) => C(x.re * k, x.im * k);
+  const conj = x => C(x.re, -x.im);
+  const mag = x => Math.hypot(x.re, x.im);
+  const arg = x => Math.atan2(x.im, x.re);
+
+  const $ = id => document.getElementById(id);
+  const fig = $('fig'), thIn = $('th'), uaIn = $('ua');
+  const q = new URLSearchParams(location.search);
+  if (q.has('embed')) document.body.classList.add('embed');
+
+  let conn = q.get('conn') === 'delta' ? 'D' : 'Y';
+  let seq = q.get('seq') === 'acb' ? -1 : 1;     // +1: abc, -1: acb
+  let showLL = q.get('ll') === '1', showI = q.get('i') !== '0';
+  let wave = ['vph', 'vll', 'i'].includes(q.get('wave')) ? q.get('wave') : 'vph';
+  thIn.value = q.has('theta') ? +q.get('theta') : 36.87;
+  uaIn.value = q.has('ua') ? Math.max(10, +q.get('ua')) : 100;
+
+  let playing = q.get('play') === '1', slow = false, phase = 0, last = null, dirty = true;
+
+  // ---------- circuit ----------
+  let s = {};
+  function compute() {
+    const th = +thIn.value * D, ua = +uaIn.value / 100;
+    const Va = P(VPH, 0), Vb = P(VPH, -seq * 120 * D), Vc = P(VPH, seq * 120 * D);
+    const Vab = sub(Va, Vb), Vbc = sub(Vb, Vc), Vca = sub(Vc, Va);
+    const Y0 = P(1 / Z0, -th), Ya = sc(Y0, ua);
+    let Ia, Ib, Ic, In, load, Iph;
+    if (conn === 'Y') {
+      Ia = mul(Va, Ya); Ib = mul(Vb, Y0); Ic = mul(Vc, Y0); In = add(Ia, Ib, Ic);
+      load = [[Va, Ia], [Vb, Ib], [Vc, Ic]];
+      Iph = null;
+    } else {
+      const Iab = mul(Vab, Ya), Ibc = mul(Vbc, Y0), Ica = mul(Vca, Y0);
+      Ia = sub(Iab, Ica); Ib = sub(Ibc, Iab); Ic = sub(Ica, Ibc); In = C(0, 0);
+      load = [[Vab, Iab], [Vbc, Ibc], [Vca, Ica]];
+      Iph = [Iab, Ibc, Ica];
+    }
+    const Sk = load.map(([v, i]) => mul(v, conj(i)));
+    const St = add(...Sk);
+    const Iref = conn === 'Y' ? VPH / Z0 : Math.sqrt(3) * VLL / Z0;   // balanced line current
+    const Smax = Math.max(...Sk.map(mag), 1);
+    s = {th, ua, V: [Va, Vb, Vc], VL: [Vab, Vbc, Vca], I: [Ia, Ib, Ic], In, Iph, load, Sk, St, Iref,
+         balanced: Math.abs(ua - 1) < 1e-9,
+         pLo: 0, pHi: 1};
+    let lo = 0, hi = 1;
+    for (let n = 0; n < 72; n++) {
+      const t = n / 72 * 2 * Math.PI; let sum = 0;
+      load.forEach(([v, i]) => { const p = 2 * mag(v) * mag(i) * Math.sin(t + arg(v)) * Math.sin(t + arg(i));
+        sum += p; lo = Math.min(lo, p); hi = Math.max(hi, p); });
+      lo = Math.min(lo, sum); hi = Math.max(hi, sum);
+    }
+    s.pLo = lo - 0.06 * (hi - lo); s.pHi = hi + 0.3 * (hi - lo);
+    labels(); readout(); dirty = true;
+  }
+
+  const fmt = (v, u) => Math.abs(v) >= 1000 ? (v / 1000).toFixed(2) + ' k' + u : v.toFixed(0) + ' ' + u;
+  const fA = v => v.toFixed(1) + ' A';
+  const dg = r => { let d = r / D; while (d > 180) d -= 360; while (d <= -180) d += 360; return d; };
+
+  function labels() {
+    const t = +thIn.value, pf = Math.cos(t * D);
+    const ty = Math.abs(t) < 0.05 ? 'unity' : t > 0 ? 'lag' : 'lead';
+    $('thv').textContent = `${t.toFixed(1)}° (PF ${pf.toFixed(2)} ${ty})`;
+    const u = +uaIn.value;
+    $('uav').textContent = u + ' %';
+    $('cY').classList.toggle('on', conn === 'Y'); $('cD').classList.toggle('on', conn === 'D');
+    $('sABC').classList.toggle('on', seq === 1); $('sACB').classList.toggle('on', seq === -1);
+    $('shLL').classList.toggle('on', showLL); $('shI').classList.toggle('on', showI);
+    document.querySelectorAll('[data-w]').forEach(b => b.classList.toggle('on', b.dataset.w === wave));
+    document.querySelectorAll('#presets button').forEach(b =>
+      b.classList.toggle('on', Math.abs(+b.dataset.th - t) < 0.06 && +b.dataset.ua === u));
+  }
+
+  function readout() {
+    const [Va] = s.V, [Vab] = s.VL, [Ia] = s.I;
+    const vshift = dg(arg(Vab) - arg(Va));
+    const Vload = conn === 'Y' ? VPH : VLL;
+    const Iload = conn === 'Y' ? mag(Ia) : mag(s.Iph[0]);
+    const pf = Math.cos(s.th);
+    let h = `
+      <div><span class="k">V<sub>LL</sub> =</span> <b>400 V</b>, V<sub>phase</sub> = <b>${VPH.toFixed(1)} V</b></div>
+      <div><span class="k">V<sub>ab</sub> ${vshift > 0 ? 'leads' : 'lags'} V<sub>an</sub> by</span> <b>${Math.abs(vshift).toFixed(0)}°</b></div>
+      <div><span class="k">Load voltage (${conn === 'Y' ? 'Y' : 'Δ'}):</span> <b>${Vload.toFixed(0)} V</b> ${conn === 'Y' ? '= V<sub>LL</sub>/√3' : '= V<sub>LL</sub>'}</div>
+      <div><span class="k">I<sub>phase</sub> (a) =</span> <b>${fA(Iload)}</b></div>
+      <div><span class="k">I<sub>line</sub> =</span> <b>${s.I.map(i => mag(i).toFixed(1)).join(' / ')} A</b> <span class="k">(a/b/c)</span></div>`;
+    if (conn === 'D' && s.balanced)
+      h += `<div><span class="k">I<sub>a</sub> / I<sub>ab</sub> =</span> <b>√3 ∠ ${dg(arg(Ia) - arg(s.Iph[0])).toFixed(0)}°</b></div>`;
+    h += `<div><span class="k">I<sub>N</sub> =</span> <b style="color:var(--n)">${conn === 'Y' ? fA(mag(s.In)) : 'no neutral'}</b></div>
+      <div><span class="k">P =</span> <b style="color:var(--p)">${fmt(s.St.re, 'W')}</b>, Q = <b>${fmt(s.St.im, 'var')}</b></div>
+      <div><span class="k">S =</span> <b>${fmt(mag(s.St), 'VA')}</b></div>`;
+    if (s.balanced)
+      h += `<div><span class="k">√3·V<sub>LL</sub>·I<sub>L</sub>·cos θ =</span> <b>${fmt(Math.sqrt(3) * VLL * mag(Ia) * pf, 'W')}</b> ✓</div>`;
+    else
+      h += `<div class="warn">Unbalanced: √3·V<sub>LL</sub>·I<sub>L</sub>·cos θ does not apply</div>`;
+    $('out').innerHTML = h;
+  }
+
+  // ---------- layout ----------
+  function layout() {
+    const wide = fig.parentElement.clientWidth >= 640;
+    if (wide && document.body.classList.contains('embed'))
+      return {W:880, H:372, cx:125, cy:122, r0:100, wx0:262, wx1:866, px0:262, px1:866, py0:262, py1:368,
+              lgx:8, lgy:270, fs:14, sm:11, cyc:2, wide};
+    return wide
+      ? {W:880, H:446, cx:150, cy:150, r0:118, wx0:300, wx1:866, px0:300, px1:866, py0:312, py1:440,
+         lgx:12, lgy:322, fs:14, sm:11, cyc:2, wide}
+      : {W:400, H:392, cx:92, cy:98, r0:74, wx0:186, wx1:394, px0:8, px1:394, py0:206, py1:340,
+         lgx:8, lgy:358, fs:13, sm:11, cyc:1, wide};
+  }
+  let L = layout();
+
+  // ---------- svg helpers ----------
+  const T = (x, y, str, o = {}) =>
+    `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" font-size="${o.fs || L.fs}" fill="${o.c || 'var(--fg)'}" text-anchor="${o.a || 'start'}"` +
+    `${o.w ? ` font-weight="${o.w}"` : ''}${o.it ? ' font-style="italic"' : ''} dominant-baseline="${o.b || 'auto'}">${str}</text>`;
+  const sb = (m, x) => `${m}<tspan dy="3" font-size="75%">${x}</tspan>`;
+  const line = (x1, y1, x2, y2, c, w = 1, dash = '') =>
+    `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${c}" stroke-width="${w}"${dash ? ` stroke-dasharray="${dash}"` : ''}/>`;
+  function arrow(x1, y1, x2, y2, c, w = 3, dash = '') {
+    const a = Math.atan2(y2 - y1, x2 - x1), len = Math.hypot(x2 - x1, y2 - y1);
+    if (len < 3) return '';
+    const h = Math.min(11, len * 0.45), bx = x2 - h * Math.cos(a), by = y2 - h * Math.sin(a);
+    const p1 = [bx + h * 0.45 * Math.sin(a), by - h * 0.45 * Math.cos(a)];
+    const p2 = [bx - h * 0.45 * Math.sin(a), by + h * 0.45 * Math.cos(a)];
+    return line(x1, y1, bx, by, c, w, dash) +
+      `<polygon points="${x2.toFixed(1)},${y2.toFixed(1)} ${p1.map(v => v.toFixed(1))} ${p2.map(v => v.toFixed(1))}" fill="${c}"/>`;
+  }
+  const poly = pts => pts.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
+  function arc(cx, cy, r, a1, a2, label) {      // screen arc from angle a1 to a2 (math angles)
+    let d = a2 - a1; while (d > Math.PI) d -= 2 * Math.PI; while (d < -Math.PI) d += 2 * Math.PI;
+    if (Math.abs(d) < 0.03) return '';
+    const sx = cx + r * Math.cos(a1), sy = cy - r * Math.sin(a1), ex = cx + r * Math.cos(a1 + d), ey = cy - r * Math.sin(a1 + d);
+    const am = a1 + d / 2, rl = r + 13;
+    return `<path d="M${sx.toFixed(1)},${sy.toFixed(1)} A${r},${r} 0 0 ${d > 0 ? 0 : 1} ${ex.toFixed(1)},${ey.toFixed(1)}" fill="none" stroke="#374151" stroke-width="1.3"/>` +
+      (label ? T(cx + rl * Math.cos(am), cy - rl * Math.sin(am), label, {a: 'middle', b: 'middle', fs: L.sm, w: 600}) : '');
+  }
+
+  // ---------- frame ----------
+  function draw() {
+    const {cx, cy, r0, wx0, wx1, px0, px1, py0, py1} = L;
+    const a = phase;
+    const kV = 0.577 * r0 / VPH;                  // phasor length per V (rms); V_LL fills the circle
+    const kI = 0.5 * r0 / s.Iref;                  // balanced line current = half radius
+    const tip = (z, k) => [cx + mag(z) * k * Math.cos(arg(z) + a), cy - mag(z) * k * Math.sin(arg(z) + a)];
+    const ang = z => arg(z) + a;
+    let g = '';
+
+    // ---- phasor diagram ----
+    g += `<circle cx="${cx}" cy="${cy}" r="${r0}" fill="none" stroke="var(--grid)" stroke-dasharray="3 4"/>`;
+    g += `<circle cx="${cx}" cy="${cy}" r="${(0.577 * r0).toFixed(1)}" fill="none" stroke="var(--grid)" stroke-dasharray="2 5"/>`;
+    g += line(cx - r0 - 10, cy, cx + r0 + 10, cy, '#cbd5e1') + line(cx, cy - r0 - 10, cx, cy + r0 + 10, '#cbd5e1');
+
+    const names = ['a', 'b', 'c'], llN = ['ab', 'bc', 'ca'];
+    const label = (z, k, str, c, out = 14) => {
+      const [x, y] = tip(z, k), an = ang(z);
+      return T(x + out * Math.cos(an), y - out * Math.sin(an), str, {c, a: 'middle', b: 'middle', w: 700, fs: L.sm + 1});
+    };
+
+    // line voltages
+    if (showLL || conn === 'D') {
+      const tips = s.V.map(v => tip(v, kV));
+      g += `<polygon points="${poly(tips)}" fill="none" stroke="var(--ll)" stroke-opacity=".35" stroke-dasharray="3 3"/>`;
+      s.VL.forEach((v, k) => {
+        const [x, y] = tip(v, kV);
+        g += arrow(cx, cy, x, y, LLCOL[k], 2.2) + label(v, kV, sb('V', llN[k]), LLCOL[k] === '#c4b5fd' ? '#8b5cf6' : LLCOL[k]);
+      });
+      g += arc(cx, cy, 0.3 * r0, ang(s.V[0]), ang(s.VL[0]), '30°');
+    }
+    // phase voltages
+    s.V.forEach((v, k) => {
+      const [x, y] = tip(v, kV);
+      g += arrow(cx, cy, x, y, COL[names[k]], 3.2) + label(v, kV, sb('V', names[k] + 'n'), COL[names[k]]);
+    });
+    // currents
+    if (showI) {
+      const cap = r0 * 1.05;
+      const clip = (z, k) => Math.min(1, cap / Math.max(mag(z) * k, 1e-9));
+      if (conn === 'D') s.Iph.forEach((i, k) => {
+        if (mag(i) < 1e-6) return;
+        const kk = kI * clip(i, kI), [x, y] = tip(i, kk);
+        g += arrow(cx, cy, x, y, COL[names[k]], 1.6, '1.5 3') + label(i, kk, sb('I', llN[k]), COL[names[k]], 12);
+      });
+      s.I.forEach((i, k) => {
+        if (mag(i) < 1e-6) return;
+        const kk = kI * clip(i, kI), [x, y] = tip(i, kk);
+        g += arrow(cx, cy, x, y, COL[names[k]], 2.4, '6 3') + label(i, kk, sb('I', names[k]), COL[names[k]], 12);
+      });
+      if (conn === 'D' && s.balanced) g += arc(cx, cy, 0.22 * r0, ang(s.Iph[0]), ang(s.I[0]), '');
+      if (conn === 'Y' && mag(s.In) > 0.05) {
+        const [x, y] = tip(s.In, kI);
+        g += arrow(cx, cy, x, y, 'var(--n)', 2.6, '6 3') + label(s.In, kI, sb('I', 'N'), 'var(--n)', 12);
+      }
+    }
+
+    // ---- waveforms ----
+    const N = 220, span = L.cyc * 2 * Math.PI;
+    let set;
+    if (wave === 'vph') set = s.V.map((v, k) => [v, kV, COL[names[k]], 'v' + names[k] + 'n']);
+    else if (wave === 'vll') set = s.VL.map((v, k) => [v, kV, LLCOL[k], 'v' + llN[k]]);
+    else {
+      set = s.I.map((i, k) => [i, kI, COL[names[k]], 'i' + names[k]]);
+      if (conn === 'Y') set.push([s.In, kI, 'var(--n)', 'iN']);
+    }
+    g += line(wx0, cy, wx1, cy, '#cbd5e1') + line(wx0, cy - r0 - 8, wx0, cy + r0 + 8, '#cbd5e1');
+    for (let c = 1; c <= 2 * L.cyc; c++) {
+      const x = wx0 + c / (2 * L.cyc) * (wx1 - wx0);
+      g += line(x, cy - r0 - 8, x, cy + r0 + 8, 'var(--grid)', 1, '2 4');
+    }
+    const ymax = r0 * 1.06;
+    set.forEach(([z, k, c, nm], j) => {
+      const m = Math.min(mag(z) * k, ymax), ph = arg(z), pts = [];
+      for (let n = 0; n <= N; n++) {
+        const x = wx0 + n / N * (wx1 - wx0), d = n / N * span;
+        pts.push([x, cy - m * Math.sin(a + ph - d)]);
+      }
+      const y0 = cy - m * Math.sin(a + ph);
+      if (m > 0.5) {
+        g += line(cx + m * Math.cos(a + ph), y0, wx0, y0, c, 0.8, '3 4');
+        g += `<polyline points="${poly(pts)}" fill="none" stroke="${c}" stroke-width="${nm === 'iN' ? 2.6 : 2.2}"${wave === 'i' ? ' stroke-dasharray="7 3"' : ''}/>`;
+        g += `<circle cx="${wx0}" cy="${y0.toFixed(1)}" r="4" fill="${c}"/>`;
+      }
+      const tag = nm[0] + `<tspan dy="3" font-size="75%">${nm.slice(1)}</tspan>`;
+      g += T(wx1 - (set.length - 1 - j) * (L.wide ? 52 : 40), cy - r0 - 10, tag, {c: c === '#c4b5fd' ? '#8b5cf6' : c, a: 'end', w: 700});
+    });
+    g += T(wx0 + 6, cy + r0 + 24, '◀ now', {c: 'var(--muted)', fs: L.sm}) +
+         T(wx1, cy + r0 + 24, L.wide ? 'past (2 cycles = 40 ms) ▶' : 'past (20 ms) ▶', {c: 'var(--muted)', fs: L.sm, a: 'end'});
+
+    // ---- power panel ----
+    const py = p => py1 - (p - s.pLo) / (s.pHi - s.pLo) * (py1 - py0);
+    const yz = py(0);
+    g += `<defs><clipPath id="cpP"><rect x="${px0}" y="${py0}" width="${px1 - px0}" height="${py1 - py0}"/></clipPath></defs>`;
+    g += `<rect x="${px0}" y="${py0}" width="${px1 - px0}" height="${py1 - py0}" fill="var(--panel)" stroke="var(--grid)"/>`;
+    g += line(px0, yz, px1, yz, '#94a3b8');
+    const tot = [], per = [[], [], []];
+    for (let n = 0; n <= N; n++) {
+      const x = px0 + n / N * (px1 - px0), d = n / N * span;
+      let sum = 0;
+      s.load.forEach(([v, i], k) => {
+        const p = 2 * mag(v) * mag(i) * Math.sin(a + arg(v) - d) * Math.sin(a + arg(i) - d);
+        sum += p; per[k].push([x, py(p)]);
+      });
+      tot.push([x, py(sum)]);
+    }
+    g += `<g clip-path="url(#cpP)">`;
+    per.forEach((pts, k) => g += `<polyline points="${poly(pts)}" fill="none" stroke="${COL[names[k]]}" stroke-width="1.4" stroke-opacity=".9"/>`);
+    g += `<polyline points="${poly(tot)}" fill="none" stroke="var(--p)" stroke-width="3"/>`;
+    g += `</g>`;
+    const yP = Math.max(py0 + 2, Math.min(py1 - 2, py(s.St.re)));
+    g += line(px0, yP, px1, yP, '#111827', 1.3, '7 5');
+    g += T(px1 - 6, yP + 15, (s.balanced ? 'p_total = P = ' : 'average P = ') + fmt(s.St.re, 'W'), {a: 'end', fs: L.sm + 1, w: 700});
+    g += T(px0 + 6, py0 + 15, 'p(t):', {fs: L.sm + 1, w: 700}) +
+         T(px0 + 44, py0 + 15, sb('p', 'a'), {c: 'var(--a)', fs: L.sm + 1, w: 700}) +
+         T(px0 + 68, py0 + 15, sb('p', 'b'), {c: 'var(--b)', fs: L.sm + 1, w: 700}) +
+         T(px0 + 92, py0 + 15, sb('p', 'c'), {c: 'var(--c)', fs: L.sm + 1, w: 700}) +
+         T(px0 + 116, py0 + 15, 'total', {c: 'var(--p)', fs: L.sm + 1, w: 700});
+
+    // ---- legend / notes ----
+    const lx = L.lgx, ly = L.lgy, ls = L.sm + 4;
+    const notes = L.wide ? [
+      ['Solid = voltage · dashed = current', 'var(--muted)'],
+      ['Colours follow the IEC code:', 'var(--muted)'],
+      ['L1 (a) brown · L2 (b) black · L3 (c) grey', 'var(--fg)'],
+      ['Inner circle: phase voltage', 'var(--muted)'],
+      ['Outer circle: line voltage (×√3)', 'var(--muted)'],
+      [conn === 'Y' ? 'Load: Y, neutral connected' : 'Load: Δ (sees line voltages)', 'var(--fg)'],
+      [s.balanced ? 'Balanced: p_total is constant' : 'Unbalanced: p_total pulsates', s.balanced ? 'var(--ok)' : 'var(--neg)'],
+    ] : [
+      ['Solid = V, dashed = I · IEC colours: a brown, b black, c grey', 'var(--muted)'],
+      [(conn === 'Y' ? 'Y load, neutral connected · ' : 'Δ load · ') + (s.balanced ? 'balanced: total p constant' : 'unbalanced: total p pulsates'),
+        s.balanced ? 'var(--ok)' : 'var(--neg)'],
+    ];
+    notes.forEach(([t, c], k) => g += T(lx, ly + k * ls + (L.wide ? 0 : 0), t, {c, fs: L.sm}));
+
+    fig.innerHTML = g;
+  }
+
+  // ---------- loop & events ----------
+  function tick(t) {
+    if (last !== null && playing) phase += (t - last) / 1000 * (2 * Math.PI / (slow ? 9 : 3.5));
+    last = t;
+    if (playing || dirty) { draw(); dirty = false; }
+    requestAnimationFrame(tick);
+  }
+  function setLayout() { L = layout(); fig.setAttribute('viewBox', `0 0 ${L.W} ${L.H}`); dirty = true; }
+  function setPlaying(on) {
+    playing = on; $('play').textContent = on ? '❚❚ Pause' : '▶ Play'; $('play').classList.toggle('on', on); dirty = true;
+  }
+
+  thIn.addEventListener('input', compute);
+  uaIn.addEventListener('input', compute);
+  $('cY').addEventListener('click', () => { conn = 'Y'; compute(); });
+  $('cD').addEventListener('click', () => { conn = 'D'; if (wave === 'i') {} compute(); });
+  $('sABC').addEventListener('click', () => { seq = 1; compute(); });
+  $('sACB').addEventListener('click', () => { seq = -1; compute(); });
+  $('shLL').addEventListener('click', () => { showLL = !showLL; labels(); dirty = true; });
+  $('shI').addEventListener('click', () => { showI = !showI; labels(); dirty = true; });
+  document.querySelectorAll('[data-w]').forEach(b => b.addEventListener('click', () => { wave = b.dataset.w; labels(); dirty = true; }));
+  document.querySelectorAll('#presets button').forEach(b => b.addEventListener('click', () => {
+    thIn.value = b.dataset.th; uaIn.value = b.dataset.ua; compute();
+  }));
+  $('play').addEventListener('click', () => setPlaying(!playing));
+  $('stop').addEventListener('click', () => { setPlaying(false); phase = 0; dirty = true; });
+  $('slow').addEventListener('click', e => { slow = !slow; e.currentTarget.classList.toggle('on', slow); });
+  window.addEventListener('resize', setLayout);
+
+  // When embedded in a remark.js deck, let slide keys pass through to the deck.
+  window.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT') return;
+    const nav = {ArrowRight: 'gotoNextSlide', PageDown: 'gotoNextSlide', ArrowLeft: 'gotoPreviousSlide', PageUp: 'gotoPreviousSlide'}[e.key];
+    if (e.key === ' ') { e.preventDefault(); $('play').click(); return; }
+    try { if (nav && window.parent !== window && window.parent.slideshow) window.parent.slideshow[nav](); } catch (_) {}
+  });
+
+  // ---------- quiz ----------
+  const QUIZ = [
+    ['The line-to-line voltage is 400 V. What is the phase (line-to-neutral) voltage?',
+     '400 / √3 ≈ 231 V. Check the inner and outer circles in the phasor diagram.'],
+    ['Press <b>Resistive</b>, then switch the load between Y and Δ. How does the total power change, and why?',
+     'Δ draws 3× the power: each impedance sees 400 V instead of 231 V, so P ∝ V² rises by (√3)² = 3. Star-delta motor starters use exactly this.'],
+    ['Balanced Y load: what is the neutral current? Now press <b>Unbalanced</b>.',
+     'Balanced: I<sub>a</sub> + I<sub>b</sub> + I<sub>c</sub> = 0, so I<sub>N</sub> = 0. Unbalanced: the sum is no longer zero and the neutral carries the difference.'],
+    ['Each phase has a pulsating p(t). Why is the total p(t) constant for a balanced load?',
+     'Each p<sub>k</sub>(t) = P/3 · [1 − cos(2ωt − …)] with the 2ω terms shifted by 240° from each other, so they add to zero. Only P remains.'],
+    ['V<sub>ab</sub> leads I<sub>a</sub> by 60° (balanced Y, abc). What is the power factor?',
+     'V<sub>ab</sub> leads V<sub>an</sub> by 30°, so θ = 60° − 30° = 30°: PF = cos 30° = 0.866 lagging. Set θ = 30° and show line voltages and currents to see it.'],
+    ['Switch the sequence from abc to acb. What changes for a 3-phase motor?',
+     'Phase b and c swap places, so the field rotates the other way and the motor reverses. In practice: swap any two supply wires. Note V<sub>ab</sub> now lags V<sub>an</sub> by 30°.'],
+  ];
+  let qi = 0;
+  function showQ() {
+    $('qn').textContent = `(${qi + 1}/${QUIZ.length})`;
+    $('qq').innerHTML = QUIZ[qi][0]; $('qa').innerHTML = QUIZ[qi][1]; $('qa').style.display = 'none';
+    $('qshow').textContent = 'Show answer';
+  }
+  $('qshow').addEventListener('click', () => {
+    const on = $('qa').style.display !== 'block';
+    $('qa').style.display = on ? 'block' : 'none'; $('qshow').textContent = on ? 'Hide answer' : 'Show answer';
+  });
+  $('qnext').addEventListener('click', () => { qi = (qi + 1) % QUIZ.length; showQ(); });
+
+  setLayout(); setPlaying(playing); compute(); showQ(); requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Line vs Phase: Where √3 and 30° Come From</title>
+<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1f2937; --muted:#6b7280; --grid:#e5e7eb; --panel:#f8fafc;
+    --a:#b45309; --b:#1f2937; --c:#9ca3af; --r:#7c3aed; --ok:#047857; --neg:#dc2626;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);
+    font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:920px;margin:0 auto;padding:6px 14px 10px}
+  header h1{font-family:'Yanone Kaffeesatz',sans-serif;font-weight:400;font-size:30px;margin:2px 0 0}
+  header p{margin:0 0 4px;color:var(--muted)}
+  body.embed header, body.embed .quiz{display:none}
+  svg{width:100%;height:auto;display:block;user-select:none}
+  svg text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .controls{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin-top:4px}
+  .slider{display:flex;align-items:center;gap:8px;flex:1 1 260px;min-width:0}
+  .slider label{white-space:nowrap;font-weight:600;min-width:120px}
+  .slider input{flex:1;min-width:0;accent-color:#374151}
+  .buttons{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .buttons .lbl{font-size:12px;color:var(--muted);margin-right:-2px}
+  .sep{width:1px;height:22px;background:var(--grid);margin:0 4px}
+  button{font:inherit;font-size:13px;padding:4px 11px;border:1px solid #d1d5db;border-radius:6px;
+    background:#fff;color:var(--fg);cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+  button:hover{background:#f3f4f6}
+  button.on{background:#1f2937;color:#fff;border-color:#1f2937}
+  button.step.on{background:var(--r);border-color:var(--r)}
+  input[type=range]{height:28px;touch-action:pan-y}
+  .explain{margin-top:6px;padding:7px 11px;border-radius:8px;border:1px solid #ddd6fe;background:#f5f3ff;min-height:44px}
+  .explain b{color:var(--r)}
+  .readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:3px 14px;
+    margin-top:6px;background:var(--panel);padding:7px 11px;border-radius:8px;border:1px solid var(--grid)}
+  .readout .k{color:var(--muted)}
+  .readout .wide{grid-column:1/-1}
+  .warn{color:var(--neg);font-weight:600}
+  .okc{color:var(--ok);font-weight:600}
+  .quiz{margin-top:10px;background:var(--panel);border:1px solid var(--grid);border-radius:8px;padding:7px 11px}
+  .quiz h3{margin:0 0 3px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .quiz .q{font-weight:600}
+  .quiz .a{margin-top:6px;display:none;border-left:3px solid var(--ok);padding:2px 0 2px 10px}
+  .quiz .a .ans{color:var(--ok);font-weight:600}
+  .quiz .a .sec{margin-top:5px}
+  .quiz .a .hd{font-weight:700;color:var(--r)}
+  .quiz .a button{margin-top:7px}
+  .quiz .row{display:flex;gap:6px;margin-top:6px}
+  body.embed .wrap{padding:0 6px 4px}
+  body.embed .controls{gap:3px 14px;margin-top:0}
+  body.embed .buttons{gap:4px}
+  body.embed button{font-size:12px;padding:2px 8px}
+  body.embed .slider input{height:22px}
+  body.embed .slider label{font-size:13px}
+  body.embed .explain{font-size:12.5px;padding:4px 9px;margin-top:3px;min-height:0}
+  body.embed .readout{font-size:12px;margin-top:3px;padding:3px 9px;gap:0 10px}
+  @media (max-height:500px){header{display:none}}
+  @media (max-width:640px){
+    .wrap{padding:4px 8px 12px}
+    header h1{font-size:26px}
+    .controls{gap:10px;margin-top:8px}
+    .slider{flex:1 1 100%}
+    .slider label{min-width:120px;font-size:15px}
+    input[type=range]{height:36px}
+    input[type=range]::-webkit-slider-thumb{width:26px;height:26px}
+    input[type=range]::-moz-range-thumb{width:26px;height:26px}
+    .buttons{width:100%}
+    .buttons button{flex:1;min-height:42px;font-size:15px;padding:6px 4px}
+    .buttons .lbl{width:100%}
+    .sep{display:none}
+    .readout{grid-template-columns:1fr;font-size:13px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Line vs Phase: Where √3 and 30° Come From</h1>
+    <p>Balanced 3-phase, 50 Hz. Phasors are RMS and stationary; the waveforms show instantaneous values.</p>
+  </header>
+
+  <svg id="fig" role="img" aria-label="Phasor construction of line quantities and the matching waveforms"></svg>
+
+  <div class="controls">
+    <div class="buttons">
+      <span class="lbl">Connection:</span>
+      <button id="cY">Y: line voltages</button><button id="cD">Δ: line currents</button>
+      <span class="sep"></span>
+      <span class="lbl">Sequence:</span>
+      <button id="sABC">abc</button><button id="sACB">acb</button>
+    </div>
+    <div class="buttons" id="steps">
+      <span class="lbl">Step:</span>
+      <button class="step" data-s="1">1</button><button class="step" data-s="2">2</button>
+      <button class="step" data-s="3">3</button><button class="step" data-s="4">4</button>
+      <button class="step" data-s="5">5</button>
+      <button id="prev">◀</button><button id="next">▶</button>
+    </div>
+    <div class="slider">
+      <label for="tc">t = <span id="tcv"></span></label>
+      <input id="tc" type="range" min="0" max="40" step="0.01">
+    </div>
+  </div>
+
+  <div class="explain" id="explain"></div>
+  <div class="readout" id="out"></div>
+
+  <div class="quiz">
+    <h3>Check yourself <span id="qn"></span></h3>
+    <div class="q" id="qq"></div>
+    <div class="a" id="qa"></div>
+    <div class="row buttons"><button id="qshow">Show answer</button><button id="qnext">Next ▶</button></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const F = 50, W = 2 * Math.PI * F, D = Math.PI / 180, RT2 = Math.SQRT2;
+  const VPH = 230, IPH = 10;
+  const COL = ['var(--a)', 'var(--b)', 'var(--c)'];
+  const RCOL = ['#7c3aed', '#a78bfa', '#4c1d95'];
+
+  // ---------- complex helpers ----------
+  const C = (re, im) => ({re, im});
+  const P = (m, a) => C(m * Math.cos(a), m * Math.sin(a));
+  const sub = (x, y) => C(x.re - y.re, x.im - y.im);
+  const neg = x => C(-x.re, -x.im);
+  const mag = x => Math.hypot(x.re, x.im);
+  const arg = x => Math.atan2(x.im, x.re);
+  const wrap = d => { while (d > 180) d -= 360; while (d <= -180) d += 360; return d; };
+
+  const $ = id => document.getElementById(id);
+  const fig = $('fig'), tcIn = $('tc');
+  const q = new URLSearchParams(location.search);
+  if (q.has('embed')) document.body.classList.add('embed');
+
+  let conn = q.get('conn') === 'delta' ? 'D' : 'Y';
+  let seq = q.get('seq') === 'acb' ? -1 : 1;
+  let step = Math.min(5, Math.max(1, +(q.get('step') || 1)));
+  tcIn.value = q.has('t') ? +q.get('t') : 5;
+
+  // ---------- model ----------
+  let s = {};
+  function compute() {
+    const Y = conn === 'Y', M = Y ? VPH : IPH, u = 1;
+    const base = [P(M, 0), P(M, -seq * 120 * D), P(M, seq * 120 * D)];
+    const i2 = Y ? 1 : 2;                    // the phasor that gets subtracted: V_bn (Y) or I_ca (Δ)
+    base[i2] = P(M * u, arg(base[i2]));
+    const res = Y ? [sub(base[0], base[1]), sub(base[1], base[2]), sub(base[2], base[0])]
+                  : [sub(base[0], base[2]), sub(base[1], base[0]), sub(base[2], base[1])];
+    s = {Y, M, u, base, res, i2, X1: base[0], X2: base[i2], R: res[0],
+      bn: Y ? ['V|an', 'V|bn', 'V|cn'] : ['I|ab', 'I|bc', 'I|ca'],
+      rn: Y ? ['V|ab', 'V|bc', 'V|ca'] : ['I|a', 'I|b', 'I|c'],
+      unit: Y ? 'V' : 'A', balanced: Math.abs(u - 1) < 1e-9};
+    s.ratio = mag(s.R) / mag(s.X1);
+    s.shift = wrap((arg(s.R) - arg(s.X1)) / D);
+    ui(); dirty = true;
+  }
+
+  // name helpers: 'V|an' → V<sub>an</sub> (HTML) or tspan (SVG)
+  const h = n => { const [m, x] = n.split('|'); return `${m}<sub>${x}</sub>`; };
+  const hl = n => { const [m, x] = n.split('|'); return `${m.toLowerCase()}<sub>${x}</sub>`; };
+  const sv = n => { const [m, x] = n.split('|'); return `${m}<tspan dy="3" font-size="75%">${x}</tspan>`; };
+  const svl = n => { const [m, x] = n.split('|'); return `${m.toLowerCase()}<tspan dy="3" font-size="75%">${x}</tspan>`; };
+
+  function ui() {
+    $('cY').classList.toggle('on', s.Y); $('cD').classList.toggle('on', !s.Y);
+    $('sABC').classList.toggle('on', seq === 1); $('sACB').classList.toggle('on', seq === -1);
+    document.querySelectorAll('.step').forEach(b => b.classList.toggle('on', +b.dataset.s === step));
+    $('tcv').textContent = (+tcIn.value).toFixed(2) + ' ms';
+    explain(); readout();
+  }
+
+  function explain() {
+    const [x1, x2, r] = [h(s.bn[0]), h(s.bn[s.i2]), h(s.rn[0])];
+    const lead = s.Y ? (seq === 1 ? 'leads' : 'lags') : (seq === 1 ? 'lags' : 'leads');
+    const kvl = s.Y ? 'KVL around a → n → b' : 'KCL at node a';
+    const T = s.Y ? [
+      `<b>Step 1.</b> Three phase (line-to-neutral) voltages ${h('V|an')}, ${h('V|bn')}, ${h('V|cn')}: equal size, 120° apart. A line-to-line voltage is measured <i>between two lines</i>, e.g. a and b.`,
+      `<b>Step 2.</b> ${kvl}: ${r} = ${x1} − ${x2} = ${x1} + (−${x2}). Flip ${x2}: −${x2} points the opposite way.`,
+      `<b>Step 3.</b> Add head-to-tail: put −${x2} at the tip of ${x1}. The sum from the origin to the new tip is ${r}. Check the waveforms: at every instant ${hl(s.rn[0])} = ${hl(s.bn[0])} − ${hl(s.bn[1])}.`,
+      `<b>Step 4. Why √3 and 30°?</b> The triangle has two sides of length V with 120° between them, so it is isosceles and its other two angles are 30°. Split it in half: each half of ${r} is V·cos 30° = (√3/2)·V, so |${r}| = <b>√3·V</b>, and ${r} ${lead} ${x1} by <b>30°</b>.`,
+      `<b>Step 5.</b> All three line voltages are √3 × the phase voltage and shifted by 30°. Their tips form the triangle joining the phase voltage tips: 230 V phase → 400 V line.`,
+    ] : [
+      `<b>Step 1.</b> Three phase currents ${h('I|ab')}, ${h('I|bc')}, ${h('I|ca')} flow inside the Δ: equal size, 120° apart. A line current flows in the wire feeding a corner of the Δ.`,
+      `<b>Step 2.</b> ${kvl}: ${h('I|ab')} leaves the node and ${h('I|ca')} enters it, so ${r} = ${x1} − ${x2} = ${x1} + (−${x2}). Flip ${x2}.`,
+      `<b>Step 3.</b> Add head-to-tail: put −${x2} at the tip of ${x1}. The sum is the line current ${r}. Check the waveforms: at every instant ${hl(s.rn[0])} = ${hl(s.bn[0])} − ${hl(s.bn[2])}.`,
+      `<b>Step 4. Why √3 and 30°?</b> Same triangle: two sides of length I with 120° between them, so the base angles are 30°. Each half of ${r} is I·cos 30°, so |${r}| = <b>√3·I</b>, and ${r} ${lead} ${x1} by <b>30°</b>.`,
+      `<b>Step 5.</b> All three line currents are √3 × the phase current and shifted by 30°. In Δ the line <i>voltage</i> equals the phase voltage, the <i>currents</i> get the √3 (in Y it is the other way round).`,
+    ];
+    let t = T[step - 1];
+    $('explain').innerHTML = t;
+  }
+
+  function inst(z, tms) { return RT2 * mag(z) * Math.sin(W * tms / 1000 + arg(z)); }
+
+  function readout() {
+    const t = +tcIn.value, u = s.unit;
+    const a = inst(s.X1, t), b = inst(s.X2, t), r = inst(s.R, t);
+    const lead = s.shift > 0 ? 'leads' : 'lags';
+    $('out').innerHTML = `
+      <div><span class="k">|${h(s.bn[0])}| =</span> <b>${mag(s.X1).toFixed(1)} ${u}</b>, |${h(s.rn[0])}| = <b>${mag(s.R).toFixed(1)} ${u}</b></div>
+      <div><span class="k">|${h(s.rn[0])}| / |${h(s.bn[0])}| =</span> <b class="${s.balanced ? 'okc' : 'warn'}">${s.ratio.toFixed(3)}</b> ${s.balanced ? '= √3' : '≠ √3'}</div>
+      <div><span class="k">${h(s.rn[0])} ${lead} ${h(s.bn[0])} by</span> <b class="${s.balanced ? 'okc' : 'warn'}">${Math.abs(s.shift).toFixed(1)}°</b></div>
+      <div class="wide"><span class="k">At t = ${t.toFixed(2)} ms:</span> ${hl(s.bn[0])} − ${hl(s.bn[s.i2])} = ${a.toFixed(1)} − (${b.toFixed(1)}) = <b>${(a - b).toFixed(1)} ${u}</b> = ${hl(s.rn[0])} ✓</div>`;
+  }
+
+  // ---------- layout ----------
+  function layout() {
+    const wide = fig.parentElement.clientWidth >= 640;
+    return wide
+      ? {W:900, H:400, pcx:400 / 2, pcy:200, pR:185, wx0:450, wx1:890, wy0:20, wy1:385, fs:14, sm:11.5, wide}
+      : {W:400, H:610, pcx:200, pcy:175, pR:165, wx0:10, wx1:392, wy0:355, wy1:602, fs:14, sm:11.5, wide};
+  }
+  let L = layout(), dirty = true;
+
+  // ---------- svg helpers ----------
+  const T = (x, y, str, o = {}) =>
+    `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" font-size="${o.fs || L.fs}" fill="${o.c || 'var(--fg)'}" text-anchor="${o.a || 'start'}"` +
+    `${o.w ? ` font-weight="${o.w}"` : ''}${o.it ? ' font-style="italic"' : ''} dominant-baseline="${o.b || 'auto'}">${str}</text>`;
+  const line = (x1, y1, x2, y2, c, w = 1, dash = '') =>
+    `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${c}" stroke-width="${w}"${dash ? ` stroke-dasharray="${dash}"` : ''}/>`;
+  function arrow(x1, y1, x2, y2, c, w = 3, dash = '') {
+    const a = Math.atan2(y2 - y1, x2 - x1), len = Math.hypot(x2 - x1, y2 - y1);
+    if (len < 3) return '';
+    const hh = Math.min(12, len * 0.4), bx = x2 - hh * Math.cos(a), by = y2 - hh * Math.sin(a);
+    const p1 = [bx + hh * 0.42 * Math.sin(a), by - hh * 0.42 * Math.cos(a)];
+    const p2 = [bx - hh * 0.42 * Math.sin(a), by + hh * 0.42 * Math.cos(a)];
+    return line(x1, y1, bx, by, c, w, dash) +
+      `<polygon points="${x2.toFixed(1)},${y2.toFixed(1)} ${p1.map(v => v.toFixed(1))} ${p2.map(v => v.toFixed(1))}" fill="${c}"/>`;
+  }
+  const poly = pts => pts.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
+  // arc around (cx,cy) from math angle a1 sweeping the short way to a2
+  function arc(cx, cy, r, a1, a2, label, c = '#374151') {
+    let d = a2 - a1; while (d > Math.PI) d -= 2 * Math.PI; while (d < -Math.PI) d += 2 * Math.PI;
+    if (Math.abs(d) < 0.02) return '';
+    const sx = cx + r * Math.cos(a1), sy = cy - r * Math.sin(a1), ex = cx + r * Math.cos(a1 + d), ey = cy - r * Math.sin(a1 + d);
+    const am = a1 + d / 2, rl = r + 15;
+    return `<path d="M${sx.toFixed(1)},${sy.toFixed(1)} A${r},${r} 0 0 ${d > 0 ? 0 : 1} ${ex.toFixed(1)},${ey.toFixed(1)}" fill="none" stroke="${c}" stroke-width="1.5"/>` +
+      (label ? T(cx + rl * Math.cos(am), cy - rl * Math.sin(am), label, {a: 'middle', b: 'middle', fs: L.sm + 1, w: 700, c}) : '');
+  }
+
+  // ---------- phasor diagram ----------
+  function phasors() {
+    const {pcx, pcy, pR} = L;
+    // fit everything that can appear (origin, phase tips, result tips) into the panel
+    const pts = step >= 5 ? [C(0, 0), ...s.base, ...s.res] : [C(0, 0), ...s.base, neg(s.X2), s.R];
+    let ext = 0; pts.forEach(p => ext = Math.max(ext, Math.abs(p.re), Math.abs(p.im)));
+    const cxr = (Math.max(...pts.map(p => p.re)) + Math.min(...pts.map(p => p.re))) / 2;
+    const cyr = (Math.max(...pts.map(p => p.im)) + Math.min(...pts.map(p => p.im))) / 2;
+    const span = Math.max(Math.max(...pts.map(p => p.re)) - Math.min(...pts.map(p => p.re)),
+                          Math.max(...pts.map(p => p.im)) - Math.min(...pts.map(p => p.im)));
+    const k = (2 * pR - 80) / span;
+    const ox = pcx - cxr * k, oy = pcy + cyr * k;
+    const X = z => ox + z.re * k, Yp = z => oy - z.im * k;
+    const lab = (z, str, c, from = C(0, 0), out = 16) => {
+      const a = arg(sub(z, from)), x = X(z) + out * Math.cos(a), y = Yp(z) - out * Math.sin(a);
+      return T(x, y, str, {c, a: 'middle', b: 'middle', w: 700});
+    };
+    let g = '';
+    g += line(pcx - pR, oy, pcx + pR, oy, '#e2e8f0') + line(ox, pcy - pR, ox, pcy + pR, '#e2e8f0');
+
+    const [x1, x2, R] = [s.X1, s.X2, s.R], i2 = s.i2;
+    const faint = step >= 5;
+    // base phasors
+    s.base.forEach((z, j) => {
+      const op = faint ? ' opacity=".45"' : (step >= 2 && j !== 0 && j !== i2 ? ' opacity=".35"' : '');
+      g += `<g${op}>` + arrow(ox, oy, X(z), Yp(z), COL[j], 3) + lab(z, sv(s.bn[j]), COL[j]) + '</g>';
+    });
+    if (step === 2) {
+      const nz = neg(x2);
+      g += arrow(ox, oy, X(nz), Yp(nz), COL[i2], 2.6, '7 4') + lab(nz, '−' + sv(s.bn[i2]), COL[i2]);
+      g += arc(ox, oy, 30, arg(x2), arg(nz), '180°', COL[i2] === 'var(--c)' ? '#6b7280' : COL[i2]);
+    }
+    if (step === 3 || step === 4) {
+      const A = x1, B = R;      // tip of x1, tip of result
+      if (step === 4) {
+        g += `<polygon points="${poly([[ox, oy], [X(A), Yp(A)], [X(B), Yp(B)]])}" fill="#7c3aed" fill-opacity=".08" stroke="none"/>`;
+      }
+      const nz = neg(x2);
+      g += `<g opacity=".35">` + arrow(ox, oy, X(nz), Yp(nz), COL[i2], 1.6, '4 4') + '</g>';
+      g += line(X(nz), Yp(nz), X(B), Yp(B), '#cbd5e1', 1, '2 4');
+      g += arrow(X(A), Yp(A), X(B), Yp(B), COL[i2], 2.8, '7 4') + lab(B, '', COL[i2]);
+      // label of -x2 at the middle of the head-to-tail segment
+      const mx = (X(A) + X(B)) / 2, my = (Yp(A) + Yp(B)) / 2, ang = Math.atan2(-(Yp(B) - Yp(A)), X(B) - X(A));
+      const nx = Math.sin(ang), ny = Math.cos(ang), away = ((mx - ox) * nx + (my - oy) * ny) > 0 ? 1 : -1;
+      g += T(mx + away * 20 * nx, my + away * 20 * ny, '−' + sv(s.bn[i2]), {c: COL[i2] === 'var(--c)' ? '#6b7280' : COL[i2], a: 'middle', b: 'middle', w: 700});
+      g += arrow(ox, oy, X(B), Yp(B), 'var(--r)', 3.6) + lab(B, sv(s.rn[0]), 'var(--r)');
+      if (step === 4) {
+        // perpendicular from A to the midpoint of OB
+        const M = C(B.re / 2, B.im / 2);
+        g += line(X(A), Yp(A), X(M), Yp(M), '#374151', 1.4, '5 4');
+        // right-angle marker
+        const ub = C(B.re / mag(B), B.im / mag(B)), ua = C(A.re - M.re, A.im - M.im), la = mag(ua) || 1;
+        const sq = 9 / k, p1 = C(M.re + ub.re * sq, M.im + ub.im * sq), p3 = C(M.re + ua.re / la * sq, M.im + ua.im / la * sq);
+        const p2 = C(p1.re + ua.re / la * sq, p1.im + ua.im / la * sq);
+        g += `<polyline points="${poly([[X(p1), Yp(p1)], [X(p2), Yp(p2)], [X(p3), Yp(p3)]])}" fill="none" stroke="#374151" stroke-width="1.2"/>`;
+        // angles
+        const lead = s.shift;
+        g += arc(ox, oy, 46, arg(A), arg(B), s.balanced ? '30°' : Math.abs(lead).toFixed(0) + '°', 'var(--r)');
+        const aAO = arg(neg(A)), aAB = arg(sub(B, A));
+        const intA = Math.abs(wrap((aAB - aAO) / D));
+        g += arc(X(A), Yp(A), 26, aAO, aAB, intA.toFixed(0) + '°');
+        if (s.balanced) g += arc(X(B), Yp(B), 40, arg(neg(B)), arg(sub(A, B)), '30°');
+        // half-length labels along OB, on the side away from A
+        const nrm = C(-ub.im, ub.re), side = (ua.re * nrm.re + ua.im * nrm.im) > 0 ? -1 : 1;
+        const half = (f, str) => {
+          const P0 = C(B.re * f, B.im * f), off = 16;
+          return T(X(P0) + side * nrm.re * off, Yp(P0) - side * nrm.im * off, str, {a: 'middle', b: 'middle', fs: L.sm + 1, c: 'var(--r)', w: 700});
+        };
+        const nmv = s.Y ? 'V' : 'I';
+        if (s.balanced) g += half(0.25, nmv + '·cos30°') + half(0.75, nmv + '·cos30°');
+        // side labels on OA and AB
+        const sideLab = (P1, P2, str) => {
+          const mx = (P1.re + P2.re) / 2, my = (P1.im + P2.im) / 2, d = sub(P2, P1), n = C(-d.im / mag(d), d.re / mag(d));
+          const toB = (B.re - mx) * n.re + (B.im - my) * n.im, sg = toB > 0 ? -1 : 1, mid = C(mx, my);
+          return T(X(mid) + sg * n.re * 14, Yp(mid) - sg * n.im * 14, str, {a: 'middle', b: 'middle', fs: L.sm + 1, w: 700, c: '#374151'});
+        };
+        if (s.balanced) g += sideLab(C(0, 0), A, nmv);
+      }
+    }
+    if (step >= 5) {
+      const tips = s.base.map(z => [X(z), Yp(z)]);
+      g += `<polygon points="${poly(tips)}" fill="#7c3aed" fill-opacity=".05" stroke="var(--r)" stroke-opacity=".5" stroke-dasharray="3 3"/>`;
+      s.res.forEach((z, j) => g += arrow(ox, oy, X(z), Yp(z), RCOL[j], 3.2) + lab(z, sv(s.rn[j]), RCOL[j] === '#a78bfa' ? '#8b5cf6' : RCOL[j]));
+      s.res.forEach((z, j) => {
+        const b = s.base[j];
+        if (s.balanced) g += arc(ox, oy, 52 + 0 * j, arg(b), arg(z), j === 0 ? '30°' : '', 'var(--r)');
+      });
+    }
+    g += `<circle cx="${ox.toFixed(1)}" cy="${oy.toFixed(1)}" r="3" fill="#374151"/>`;
+    g += T(L.wide ? 8 : 6, L.wide ? 392 : 346, 'Phasors (RMS, stationary)', {c: 'var(--muted)', fs: L.sm});
+    return g;
+  }
+
+  // ---------- waveforms ----------
+  function waves() {
+    const {wx0, wx1, wy0, wy1} = L;
+    const ymid = (wy0 + wy1) / 2 + 8, hgt = (wy1 - wy0) / 2 - 22;
+    const t0 = 0, t1 = 40, N = 400;
+    const xs = t => wx0 + (t - t0) / (t1 - t0) * (wx1 - wx0);
+    let set = [];
+    const i2 = s.i2;
+    if (step <= 1) set = [[s.X1, COL[0], svl(s.bn[0])], [s.X2, COL[i2], svl(s.bn[i2])]];
+    else if (step === 2) set = [[s.X1, COL[0], svl(s.bn[0])], [s.X2, COL[i2], svl(s.bn[i2])], [neg(s.X2), COL[i2], '−' + svl(s.bn[i2]), '6 4']];
+    else if (step <= 4) set = [[s.X1, COL[0], svl(s.bn[0])], [s.X2, COL[i2], svl(s.bn[i2])], [s.R, 'var(--r)', svl(s.rn[0])]];
+    else set = s.res.map((z, j) => [z, RCOL[j], svl(s.rn[j])]).concat([[s.X1, COL[0], svl(s.bn[0]), '2 3']]);
+    const amax = Math.max(...set.map(z => RT2 * mag(z[0]))) * (L.wide ? 1.22 : 1.32);
+    const ys = v => ymid - v / amax * hgt;
+    let g = `<rect x="${wx0}" y="${wy0 + 16}" width="${wx1 - wx0}" height="${wy1 - wy0 - 16}" fill="var(--panel)" stroke="var(--grid)"/>`;
+    g += line(wx0, ymid, wx1, ymid, '#94a3b8');
+    for (let tt = 5; tt < 40; tt += 5) {
+      const x = xs(tt);
+      g += line(x, wy0 + 16, x, wy1, 'var(--grid)', 1, tt % 10 ? '2 4' : '');
+      if (tt % 10 === 0) g += T(x, wy1 - 4, tt + ' ms', {a: 'middle', fs: L.sm - 1, c: 'var(--muted)'});
+    }
+    set.forEach(([z, c, nm, dash], j) => {
+      const pts = [];
+      for (let n = 0; n <= N; n++) { const t = t0 + n / N * (t1 - t0); pts.push([xs(t), ys(inst(z, t))]); }
+      const thick = c === 'var(--r)' || RCOL.includes(c) ? 2.8 : 2;
+      g += `<polyline points="${poly(pts)}" fill="none" stroke="${c}" stroke-width="${dash === '2 3' ? 1.3 : thick}"${dash ? ` stroke-dasharray="${dash}"` : ''}/>`;
+      g += T(wx1 - (set.length - 1 - j) * (L.wide ? 56 : 52) - 4, wy0 + 10, nm, {c: c === '#a78bfa' ? '#8b5cf6' : (c === 'var(--c)' ? '#6b7280' : c), a: 'end', w: 700});
+    });
+    // step 4: amplitude and time-shift annotations
+    if (step === 4) {
+      const per = 1000 / F;
+      const tpk = z => { let t = ((90 - arg(z) / D) / 360) * per; t = ((t % per) + per) % per; return t; };
+      const ta = tpk(s.X1); let tr = tpk(s.R);
+      if (tr - ta > per / 2) tr -= per; if (ta - tr > per / 2) tr += per;
+      const pa = RT2 * mag(s.X1), pr = RT2 * mag(s.R);
+      const ya = ys(pa), yr = ys(pr);
+      const yb = Math.min(ya, yr) - 30, x1 = Math.min(xs(ta), xs(tr)), x2 = Math.max(xs(ta), xs(tr));
+      g += line(xs(ta), ymid, xs(ta), yb - 4, COL[0], 1, '3 3') + line(xs(tr), ymid, xs(tr), yb - 4, 'var(--r)', 1, '3 3');
+      g += arrow(xs(ta), yb, xs(tr), yb, '#374151', 1.6);
+      const dt = Math.abs(ta - tr), deg = dt / per * 360;
+      g += T(x2 + 6, yb + 4, `${deg.toFixed(0)}° = ${dt.toFixed(2)} ms`, {fs: L.sm + 1, w: 700});
+      g += T(xs(tr) - 6, yr + 4, `${pr.toFixed(s.Y ? 0 : 1)} ${s.unit}`, {fs: L.sm, c: 'var(--r)', w: 700, a: 'end'});
+      g += T(xs(ta) + 6, ya - 6 + (Math.abs(ya - yr) < 16 ? 16 : 0), `${pa.toFixed(s.Y ? 0 : 1)} ${s.unit}`, {fs: L.sm, c: COL[0], w: 700});
+    }
+    // time cursor
+    const t = +tcIn.value, xc = xs(t);
+    g += line(xc, wy0 + 16, xc, wy1, '#111827', 1.4);
+    set.forEach(([z, c]) => g += `<circle cx="${xc.toFixed(1)}" cy="${ys(inst(z, t)).toFixed(1)}" r="4.5" fill="${c}" stroke="#fff" stroke-width="1.2"/>`);
+    g += T(wx0 + 4, wy0 + 10, 'Waveforms (instantaneous)', {c: 'var(--muted)', fs: L.sm});
+    return g;
+  }
+
+  function draw() { fig.innerHTML = phasors() + waves(); }
+  function tick() { if (dirty) { draw(); dirty = false; } requestAnimationFrame(tick); }
+  function setLayout() { L = layout(); fig.setAttribute('viewBox', `0 0 ${L.W} ${L.H}`); dirty = true; }
+
+  // ---------- events ----------
+  const setStep = n => { step = Math.min(5, Math.max(1, n)); ui(); dirty = true; };
+  $('cY').addEventListener('click', () => { conn = 'Y'; compute(); });
+  $('cD').addEventListener('click', () => { conn = 'D'; compute(); });
+  $('sABC').addEventListener('click', () => { seq = 1; compute(); });
+  $('sACB').addEventListener('click', () => { seq = -1; compute(); });
+  document.querySelectorAll('.step').forEach(b => b.addEventListener('click', () => setStep(+b.dataset.s)));
+  $('prev').addEventListener('click', () => setStep(step - 1));
+  $('next').addEventListener('click', () => setStep(step + 1));
+  tcIn.addEventListener('input', () => { ui(); dirty = true; });
+  window.addEventListener('resize', setLayout);
+
+  // Inside a remark.js deck: Up/Down step through the construction, Left/Right go to the deck.
+  window.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT') return;
+    if (e.key === 'ArrowDown') { e.preventDefault(); setStep(step + 1); return; }
+    if (e.key === 'ArrowUp') { e.preventDefault(); setStep(step - 1); return; }
+    const nav = {ArrowRight: 'gotoNextSlide', PageDown: 'gotoNextSlide', ArrowLeft: 'gotoPreviousSlide', PageUp: 'gotoPreviousSlide'}[e.key];
+    try { if (nav && window.parent !== window && window.parent.slideshow) window.parent.slideshow[nav](); } catch (_) {}
+  });
+
+  // ---------- quiz ----------
+  const QUIZ = [
+    {q: 'Why is |V<sub>ab</sub>| = √3·V and not 2·V?',
+     ans: 'It would be 2·V only if V<sub>an</sub> and V<sub>bn</sub> were 180° apart. They are 120° apart.',
+     ph: 'V<sub>ab</sub> = V∠0° − V∠−120° = V·(1 + 0.5) + j·V·0.866 = V·(1.5 + j0.866) = <b>√3·V ∠30°</b>.<br>Geometrically: V<sub>an</sub> and −V<sub>bn</sub> are 60° apart, so their sum is 2·V·cos 30° = √3·V long.',
+     sn: 'v<sub>an</sub> and v<sub>bn</sub> never reach +peak and −peak at the same instant. When v<sub>an</sub> = +325 V, v<sub>bn</sub> = −162.6 V. The largest difference, 563 V = √3 × 325 V, occurs at t = 3.33 ms, where v<sub>an</sub> ≈ +282 V and v<sub>bn</sub> ≈ −282 V (each is 325·cos 30°).',
+     state: {conn: 'Y', seq: 1, step: 4, t: 3.33}},
+    {q: 'The line-to-line voltage of a Y system is 400 V. What is the phase voltage?',
+     ans: '400 / √3 ≈ <b>231 V</b>.',
+     ph: '|V<sub>ab</sub>| = √3·|V<sub>an</sub>|, so |V<sub>an</sub>| = 400/√3 = 231 V. In the step 5 diagram the line voltages are the sides of the triangle joining the phase voltage tips.',
+     sn: 'RMS values: 231 V phase, 400 V line. Peak values: v<sub>an</sub> peaks at 231·√2 = 327 V, v<sub>ab</sub> at 400·√2 = 566 V. The √3 ratio holds for peaks too.',
+     state: {conn: 'Y', seq: 1, step: 5, t: 5}},
+    {q: 'With abc sequence, does V<sub>ab</sub> lead or lag V<sub>an</sub>? What about acb?',
+     ans: 'abc: V<sub>ab</sub> <b>leads</b> V<sub>an</sub> by 30°. acb: it <b>lags</b> by 30°.',
+     ph: 'abc: V<sub>bn</sub> is at −120°, so −V<sub>bn</sub> is at +60°. The sum V<sub>an</sub> + (−V<sub>bn</sub>) points halfway between 0° and 60°: <b>+30°</b>.<br>acb: V<sub>bn</sub> is at +120°, −V<sub>bn</sub> at −60°, and the sum points at <b>−30°</b>.',
+     sn: 'With abc, v<sub>ab</sub> reaches its peak 1.67 ms (30° of a 20 ms period) <i>before</i> v<sub>an</sub>. With acb it peaks 1.67 ms <i>after</i>. Press "acb" and watch the bracket flip.',
+     state: {conn: 'Y', seq: 1, step: 4, t: 5}},
+    {q: 'A balanced Δ load has a phase current of 10 A. What is the line current, and how is it shifted?',
+     ans: '√3 × 10 = <b>17.3 A</b>, lagging I<sub>ab</sub> by 30° (abc sequence).',
+     ph: 'Current balance at node a: I<sub>a</sub> = I<sub>ab</sub> − I<sub>ca</sub> = 10∠0° − 10∠120° = 10·(1 + 0.5) − j·10·0.866 = 10·(1.5 − j0.866) = <b>17.3 A ∠−30°</b>.',
+     sn: 'i<sub>ab</sub> peaks at 14.1 A, i<sub>a</sub> at 24.5 A (= √3 × 14.1). i<sub>a</sub> reaches its peak 1.67 ms <i>after</i> i<sub>ab</sub>. At every instant, i<sub>a</sub> = i<sub>ab</sub> − i<sub>ca</sub>: check it with the time slider.',
+     state: {conn: 'D', seq: 1, step: 4, t: 5}},
+    {q: 'At the instant v<sub>an</sub> reaches its peak (325 V), what is v<sub>ab</sub>? Why is it not the 563 V peak?',
+     ans: 'v<sub>ab</sub> = <b>487.9 V</b>. v<sub>ab</sub> has already passed its peak.',
+     ph: 'v<sub>an</sub> peaks when ωt = 90°. V<sub>ab</sub> is 30° ahead, so its angle is already at 120°: 563·sin 120° = 563·cos 30° = 487.9 V.',
+     sn: 'At t = 5 ms: v<sub>an</sub> = 325.3 sin 90° = 325.3 V, v<sub>bn</sub> = 325.3 sin(90° − 120°) = −162.6 V. So v<sub>ab</sub> = 325.3 − (−162.6) = 487.9 V. The waveform shows v<sub>ab</sub> peaked 1.67 ms earlier, at t = 3.33 ms.',
+     state: {conn: 'Y', seq: 1, step: 4, t: 5}},
+    {q: 'A balanced Δ load, Z = 40 Ω per phase, is connected to 400 V lines. Find the phase voltage, phase current and line current.',
+     ans: 'V<sub>phase</sub> = <b>400 V</b>, I<sub>phase</sub> = <b>10 A</b>, I<sub>line</sub> = <b>17.3 A</b>.',
+     ph: 'In Δ each impedance sits directly between two lines, so V<sub>phase</sub> = V<sub>line</sub> = 400 V (no √3 for voltage). I<sub>ab</sub> = 400/40 = 10 A. The √3 appears in the currents: I<sub>a</sub> = I<sub>ab</sub> − I<sub>ca</sub> = √3·10 ∠−30° relative to I<sub>ab</sub>.',
+     sn: 'The step 5 waveforms show i<sub>a</sub>, i<sub>b</sub>, i<sub>c</sub>: each peaks at 24.5 A = √3 × 14.1 A, with 120° (6.67 ms) between them.',
+     state: {conn: 'D', seq: 1, step: 5, t: 5}},
+  ];
+  let qi = 0;
+  function showQ() {
+    const Q = QUIZ[qi];
+    $('qn').textContent = `(${qi + 1}/${QUIZ.length})`;
+    $('qq').innerHTML = Q.q;
+    $('qa').innerHTML = `<div class="ans">${Q.ans}</div>
+      <div class="sec"><span class="hd">With phasors:</span> ${Q.ph}</div>
+      <div class="sec"><span class="hd">With sinusoids:</span> ${Q.sn}</div>
+      <button id="qdemo">Show it on the diagram ↑</button>`;
+    $('qa').style.display = 'none';
+    $('qshow').textContent = 'Show answer';
+    $('qdemo').addEventListener('click', () => {
+      const st = Q.state;
+      conn = st.conn; seq = st.seq; step = st.step; tcIn.value = st.t;
+      compute();
+      fig.scrollIntoView({behavior: 'smooth', block: 'start'});
+    });
+  }
+  $('qshow').addEventListener('click', () => {
+    const on = $('qa').style.display !== 'block';
+    $('qa').style.display = on ? 'block' : 'none'; $('qshow').textContent = on ? 'Hide answer' : 'Show answer';
+  });
+  $('qnext').addEventListener('click', () => { qi = (qi + 1) % QUIZ.length; showQ(); });
+
+  setLayout(); compute(); showQ(); requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
