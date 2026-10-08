@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diode Rectifier Commutation Explorer</title>
+<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1f2937; --muted:#6b7280; --grid:#e5e7eb; --panel:#f8fafc;
+    --vs:#9ca3af; --vd:#2563eb; --i:#ea580c; --vl:#0891b2; --h1:#7c3aed; --au:#dc2626;
+    --pos:#16a34a; --neg:#dc2626; --ok:#047857;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);
+    font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:920px;margin:0 auto;padding:6px 14px 10px}
+  header h1{font-family:'Yanone Kaffeesatz',sans-serif;font-weight:400;font-size:30px;margin:2px 0 0}
+  header p{margin:0 0 4px;color:var(--muted)}
+  body.embed header, body.embed .quiz{display:none}
+  svg{width:100%;height:auto;display:block;user-select:none}
+  svg text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .controls{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin-top:4px}
+  .slider{display:flex;align-items:center;gap:8px;flex:1 1 220px;min-width:0}
+  .slider label{white-space:nowrap;font-weight:600;min-width:104px}
+  .slider input{flex:1;min-width:0;accent-color:#374151}
+  .buttons{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .buttons .lbl{font-size:12px;color:var(--muted);margin-right:-2px}
+  .sep{width:1px;height:22px;background:var(--grid);margin:0 4px}
+  button{font:inherit;font-size:13px;padding:4px 11px;border:1px solid #d1d5db;border-radius:6px;
+    background:#fff;color:var(--fg);cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+  button:hover{background:#f3f4f6}
+  button.on{background:#1f2937;color:#fff;border-color:#1f2937}
+  input[type=range]{height:28px;touch-action:pan-y}
+  .explain{margin-top:6px;padding:6px 11px;border-radius:8px;border:1px solid #bfdbfe;background:#eff6ff}
+  .readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:3px 14px;
+    margin-top:6px;background:var(--panel);padding:7px 11px;border-radius:8px;border:1px solid var(--grid)}
+  .readout .k{color:var(--muted)}
+  .quiz{margin-top:10px;background:var(--panel);border:1px solid var(--grid);border-radius:8px;padding:7px 11px}
+  .quiz h3{margin:0 0 3px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .quiz .q{font-weight:600}
+  .quiz .a{margin-top:6px;display:none;border-left:3px solid var(--ok);padding:2px 0 2px 10px}
+  .quiz .a .ans{color:var(--ok);font-weight:600}
+  .quiz .a .sec{margin-top:5px}
+  .quiz .a .hd{font-weight:700;color:var(--vd)}
+  .quiz .a button{margin-top:7px}
+  .quiz .row{display:flex;gap:6px;margin-top:6px}
+  body.embed .wrap{padding:0 6px 4px}
+  body.embed .controls{gap:3px 12px;margin-top:0}
+  body.embed .buttons{gap:4px}
+  body.embed button{font-size:12px;padding:2px 8px}
+  body.embed .slider input{height:22px}
+  body.embed .slider label{font-size:13px;min-width:96px}
+  body.embed .explain{font-size:12.5px;padding:3px 9px;margin-top:3px}
+  body.embed .readout{font-size:12px;margin-top:3px;padding:3px 9px;gap:0 10px;grid-template-columns:repeat(4,1fr)}
+  @media (max-height:500px){header{display:none}}
+  @media (max-width:640px){
+    .wrap{padding:4px 8px 12px}
+    header h1{font-size:26px}
+    .controls{gap:10px;margin-top:8px}
+    .slider{flex:1 1 100%}
+    .slider label{min-width:110px;font-size:15px}
+    input[type=range]{height:36px}
+    input[type=range]::-webkit-slider-thumb{width:26px;height:26px}
+    input[type=range]::-moz-range-thumb{width:26px;height:26px}
+    .buttons{width:100%}
+    .buttons button{flex:1;min-height:42px;font-size:15px;padding:6px 4px}
+    .buttons .lbl{width:100%}
+    .sep{display:none}
+    .readout{grid-template-columns:1fr 1fr;font-size:13px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Diode Rectifier Commutation Explorer</h1>
+    <p>230 V<sub>rms</sub>, 50 Hz source with line inductance L<sub>s</sub>, load drawing a constant current I<sub>d</sub></p>
+  </header>
+
+  <svg id="fig" role="img" aria-label="Rectifier circuit, commutation waveforms and input current spectrum"></svg>
+
+  <div class="controls">
+    <div class="buttons">
+      <span class="lbl">Circuit:</span>
+      <button id="mB">Full bridge</button><button id="mS">Simple (2 diodes)</button>
+      <span class="sep"></span>
+      <button id="pIdeal">L<sub>s</sub> = 0</button><button id="pTyp">5 mH, 20 A</button>
+      <span class="sep"></span>
+      <button id="play">▶ Play</button><button id="slow">Slow</button>
+    </div>
+    <div class="slider"><label for="Ls">L<sub>s</sub> = <span id="Lsv"></span></label><input id="Ls" type="range" min="0" max="15" step="0.1"></div>
+    <div class="slider"><label for="Id">I<sub>d</sub> = <span id="Idv"></span></label><input id="Id" type="range" min="1" max="50" step="1"></div>
+    <div class="slider"><label for="tc">ωt = <span id="tcv"></span></label><input id="tc" type="range" min="0" max="720" step="1"></div>
+  </div>
+
+  <div class="explain" id="explain"></div>
+  <div class="readout" id="out"></div>
+
+  <div class="quiz">
+    <h3>Check yourself <span id="qn"></span></h3>
+    <div class="q" id="qq"></div>
+    <div class="a" id="qa"></div>
+    <div class="row buttons"><button id="qshow">Show answer</button><button id="qnext">Next ▶</button></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const VS = 230, VM = VS * Math.SQRT2, F = 50, W = 2 * Math.PI * F, D = Math.PI / 180, PI = Math.PI;
+  const KEEP = 0.5, NC = 360 / KEEP;          // samples per cycle
+  const $ = id => document.getElementById(id);
+  const fig = $('fig'), LsIn = $('Ls'), IdIn = $('Id'), tcIn = $('tc');
+  const q = new URLSearchParams(location.search);
+  if (q.has('embed')) document.body.classList.add('embed');
+  let mode = q.get('mode') === 'simple' ? 'S' : 'B';
+  LsIn.value = q.has('Ls') ? +q.get('Ls') : 5; IdIn.value = q.has('Id') ? +q.get('Id') : 20; tcIn.value = 20;
+  let playing = q.get('play') === '1', slow = false, last = null, dirty = true;
+
+  // ---------- analytical waveforms ----------
+  let s = {};
+  function compute() {
+    const Ls = +LsIn.value / 1000, Id = +IdIn.value, X = W * Ls, B = mode === 'B';
+    const k = (B ? 2 : 1) * X * Id / VM;
+    const u = X > 0 ? Math.acos(Math.max(-1, 1 - k)) : 0;
+    const one = th => {                         // th in [0, 2π)
+      const vs = VM * Math.sin(th);
+      if (th < u) return {vs, is: (B ? -Id : 0) + VM / X * (1 - Math.cos(th)), vd: 0, vL: vs, st: 'c1'};
+      if (th < PI) return {vs, is: Id, vd: vs, vL: 0, st: 'p'};
+      if (th < PI + u) return {vs, is: Id - VM / X * (1 + Math.cos(th)), vd: 0, vL: vs, st: 'c2'};
+      return {vs, is: B ? -Id : 0, vd: B ? -vs : 0, vL: 0, st: 'n'};
+    };
+    const S = {vs: [], is: [], vd: [], vL: [], st: [], sq: []};
+    for (let n = 0; n <= 2 * NC; n++) {
+      const th = ((n * KEEP) % 360) * D, r = one(th);
+      S.vs.push(r.vs); S.is.push(r.is); S.vd.push(r.vd); S.vL.push(r.vL); S.st.push(r.st);
+      S.sq.push(th < PI ? Id : (B ? -Id : 0));
+    }
+    // averages and Fourier over one cycle (fine grid)
+    const NF = 7200; let vdA = 0, i0 = 0, i2 = 0; const a = [], b = [];
+    for (let h = 0; h <= 15; h++) { a[h] = 0; b[h] = 0; }
+    for (let n = 0; n < NF; n++) {
+      const th = n / NF * 2 * PI, r = one(th);
+      vdA += r.vd; i0 += r.is; i2 += r.is * r.is;
+      for (let h = 1; h <= 15; h++) { a[h] += r.is * Math.cos(h * th); b[h] += r.is * Math.sin(h * th); }
+    }
+    const Ih = [0]; for (let h = 1; h <= 15; h++) Ih[h] = Math.hypot(a[h], b[h]) * 2 / NF / Math.SQRT2;
+    const I0 = i0 / NF, Irms = Math.sqrt(i2 / NF), I1 = Ih[1];
+    const phi1 = Math.atan2(a[1], b[1]);        // is1 = √2 I1 sin(θ + φ1)
+    const thd = Math.sqrt(Math.max(0, Irms * Irms - I0 * I0 - I1 * I1)) / I1;
+    const Vd0 = (B ? 0.9 : 0.45) * VS, dVd = B ? 2 * X * Id / PI : X * Id / (2 * PI);
+    s = {Ls, Id, X, B, u, S, Ih, I0, Irms, I1, phi1, thd, dpf: Math.cos(phi1), pf: I1 / Irms * Math.cos(phi1),
+         Vd: vdA / NF, Vd0, dVd, Au: VM * (1 - Math.cos(u))};
+    ui(); dirty = true;
+  }
+
+  const f1 = v => v.toFixed(1);
+  function ui() {
+    $('Lsv').textContent = (+LsIn.value).toFixed(1) + ' mH';
+    $('Idv').textContent = IdIn.value + ' A';
+    $('tcv').textContent = tcIn.value + '°';
+    $('mB').classList.toggle('on', s.B); $('mS').classList.toggle('on', !s.B);
+    $('pIdeal').classList.toggle('on', +LsIn.value === 0);
+    $('pTyp').classList.toggle('on', +LsIn.value === 5 && +IdIn.value === 20);
+    const um = s.u / D;
+    let h = `
+      <div><span class="k">Commutation angle u =</span> <b>${f1(um)}°</b> <span class="k">(${(um / 18).toFixed(2)} ms)</span></div>
+      <div><span class="k">cos u = 1 − ${s.B ? '2' : ''}ωL<sub>s</sub>I<sub>d</sub>/(√2V<sub>s</sub>) =</span> <b>${Math.cos(s.u).toFixed(3)}</b></div>
+      <div><span class="k">V<sub>d</sub> =</span> <b style="color:var(--vd)">${f1(s.Vd)} V</b> <span class="k">= ${f1(s.Vd0)} − ${f1(s.dVd)}</span></div>
+      <div><span class="k">ΔV<sub>d</sub> = ${s.B ? '2ωL<sub>s</sub>I<sub>d</sub>/π' : 'ωL<sub>s</sub>I<sub>d</sub>/2π'} =</span> <b style="color:var(--au)">${f1(s.dVd)} V</b></div>
+      <div><span class="k">I<sub>s1</sub> =</span> <b>${f1(s.I1)} A</b>, <span class="k">I<sub>s</sub> =</span> <b>${f1(s.Irms)} A</b>${s.B ? '' : `, <span class="k">DC</span> <b>${f1(s.I0)} A</b>`}</div>
+      <div><span class="k">THD<sub>i</sub> =</span> <b style="color:var(--i)">${(s.thd * 100).toFixed(1)} %</b></div>
+      <div><span class="k">DPF = cos φ<sub>1</sub> =</span> <b>${s.dpf.toFixed(3)}</b> <span class="k">(≈ cos(u/2))</span></div>
+      <div><span class="k">PF = (I<sub>s1</sub>/I<sub>s</sub>)·DPF =</span> <b>${s.pf.toFixed(3)}</b></div>`;
+    $('out').innerHTML = h;
+    let t;
+    if (s.X === 0) t = s.B
+      ? '<b>L<sub>s</sub> = 0:</b> the current reverses instantly, so i<sub>s</sub> is a square wave. I<sub>s1</sub> = 0.9·I<sub>d</sub>, the harmonics are I<sub>s1</sub>/h (odd h only) and THD = 48.4 %. V<sub>d</sub> = 0.9·V<sub>s</sub>.'
+      : '<b>L<sub>s</sub> = 0:</b> the current jumps from 0 to I<sub>d</sub> at 0° and back at 180°. V<sub>d</sub> = 0.45·V<sub>s</sub>.';
+    else t = s.B
+      ? '<b>Commutation:</b> L<sub>s</sub> cannot change its current instantly. During u all four diodes conduct, the bridge input is shorted (v<sub>d</sub> = 0) and v<sub>s</sub> drives i<sub>s</sub> from −I<sub>d</sub> to +I<sub>d</sub>: ∫<sub>0</sub><sup>u</sup> √2V<sub>s</sub> sin θ dθ = ωL<sub>s</sub>·2I<sub>d</sub>. The lost area A<sub>u</sub> occurs twice per cycle, so ΔV<sub>d</sub> = 2ωL<sub>s</sub>I<sub>d</sub>/π.'
+      : '<b>Commutation:</b> during u both diodes conduct, v<sub>d</sub> = 0 and v<sub>s</sub> drives i<sub>s</sub> from 0 to I<sub>d</sub> through L<sub>s</sub>: A<sub>u</sub> = ωL<sub>s</sub>·I<sub>d</sub>, so cos u = 1 − ωL<sub>s</sub>I<sub>d</sub>/(√2V<sub>s</sub>). The second commutation (at 180°) happens while v<sub>d</sub> is clamped to 0 anyway, so only one A<sub>u</sub> is lost: ΔV<sub>d</sub> = ωL<sub>s</sub>I<sub>d</sub>/2π.';
+    $('explain').innerHTML = t;
+  }
+
+  // ---------- layout ----------
+  function layout() {
+    const wide = fig.parentElement.clientWidth >= 640;
+    const emb = document.body.classList.contains('embed');
+    return wide
+      ? {W:880, H: emb ? 360 : 392, sx:16, sy:0, spx0:30, spx1:280, spy0: emb ? 220 : 236, spy1: emb ? 340 : 368, px0:310, px1:872,
+         p1:[14, emb ? 178 : 194], p2:[emb ? 192 : 210, emb ? 252 : 274], p3:[emb ? 266 : 290, emb ? 344 : 374], fs:13, sm:11, wide}
+      : {W:400, H:760, sx:50, sy:0, spx0:36, spx1:392, spy0:612, spy1:740, px0:36, px1:392,
+         p1:[210, 370], p2:[386, 446], p3:[462, 572], fs:13, sm:11, wide};
+  }
+  let L_ = layout();
+
+  // ---------- svg helpers ----------
+  const T = (x, y, str, o = {}) =>
+    `<text x="${(+x).toFixed(1)}" y="${(+y).toFixed(1)}" font-size="${o.fs || L_.fs}" fill="${o.c || 'var(--fg)'}" text-anchor="${o.a || 'start'}"` +
+    `${o.w ? ` font-weight="${o.w}"` : ''}${o.it ? ' font-style="italic"' : ''} dominant-baseline="${o.b || 'auto'}">${str}</text>`;
+  const sb = (m, x, tail = '') => `${m}<tspan dy="3" font-size="75%">${x}</tspan>${tail ? `<tspan dy="-3">${tail}</tspan>` : ''}`;
+  const line = (x1, y1, x2, y2, c, w = 1, dash = '') =>
+    `<line x1="${(+x1).toFixed(1)}" y1="${(+y1).toFixed(1)}" x2="${(+x2).toFixed(1)}" y2="${(+y2).toFixed(1)}" stroke="${c}" stroke-width="${w}"${dash ? ` stroke-dasharray="${dash}"` : ''}/>`;
+  const poly = pts => pts.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
+  // diode drawn along the segment anode P → cathode Q
+  function diode(P, Q, on, label, lside = 1, f = 0.5) {
+    const mx = P[0] + (Q[0] - P[0]) * f, my = P[1] + (Q[1] - P[1]) * f, ang = Math.atan2(Q[1] - P[1], Q[0] - P[0]) / D;
+    const c = on ? 'var(--pos)' : '#fff', wc = on ? 'var(--i)' : '#374151', ww = on ? 2.4 : 1.5;
+    const nx = -Math.sin(ang * D), ny = Math.cos(ang * D);
+    return line(P[0], P[1], Q[0], Q[1], wc, ww) +
+      `<g transform="translate(${mx.toFixed(1)},${my.toFixed(1)}) rotate(${ang.toFixed(1)})"><polygon points="-8,-8 -8,8 8,0" fill="${c}" stroke="#374151" stroke-width="1.5"/>` +
+      `<line x1="8" y1="-8" x2="8" y2="8" stroke="#374151" stroke-width="2.2"/></g>` +
+      T(mx + lside * nx * 17, my + lside * ny * 17 + 4, label, {a: 'middle', fs: L_.sm, w: 700, c: on ? 'var(--pos)' : 'var(--muted)'});
+  }
+  function coil(x0, y, len) {
+    let d = `M${x0},${y}`; const n = 4, w = len / n;
+    for (let k = 0; k < n; k++) d += ` a${w / 2},5 0 0 1 ${w},0`;
+    return `<path d="${d}" fill="none" stroke="#374151" stroke-width="1.8"/>`;
+  }
+  function source(x, y) {
+    return `<circle cx="${x}" cy="${y}" r="15" fill="#fff" stroke="#374151" stroke-width="1.5"/>` +
+      `<path d="M${x - 9},${y} q4.5,-9 9,0 t9,0" fill="none" stroke="#374151" stroke-width="1.5"/>`;
+  }
+  function isrc(x, y) {
+    return `<circle cx="${x}" cy="${y}" r="13" fill="#fff" stroke="#374151" stroke-width="1.5"/>` +
+      line(x, y - 7, x, y + 6, '#374151', 1.6) + `<polygon points="${x - 4},${y + 2} ${x + 4},${y + 2} ${x},${y + 8}" fill="#374151"/>`;
+  }
+
+  // ---------- circuits ----------
+  function circuit(st) {
+    const ox = L_.sx, oy = L_.sy, P = (x, y) => [ox + x, oy + y];
+    const comm = st === 'c1' || st === 'c2';
+    let g = '';
+    const wc = '#374151';
+    if (s.B) {
+      const xl = 128, xr = 176, yt = 18, yb = 184, ya = 80, yb2 = 132, xd = 258;
+      const on1 = st === 'p' || comm, on3 = st === 'n' || comm;
+      const A = P(xl, ya), B = P(xr, yb2), TL = P(xl, yt), TR = P(xr, yt), BL = P(xl, yb), BR = P(xr, yb);
+      // source, Ls, i_s arrow
+      g += source(ox + 30, oy + 106) + T(ox + 10, oy + 110, sb('v', 's'), {a: 'end', w: 700, c: 'var(--muted)'});
+      g += T(ox + 42, oy + 88, '+', {w: 700, fs: L_.sm}) + T(ox + 42, oy + 132, '−', {w: 700, fs: L_.sm});
+      g += line(ox + 30, oy + 91, ox + 30, oy + ya, wc, 1.5) + line(ox + 30, oy + ya, ox + 56, oy + ya, wc, 1.5);
+      g += (s.X > 0 ? coil(ox + 56, oy + ya, 36) : line(ox + 56, oy + ya, ox + 92, oy + ya, wc, 1.5)) + line(ox + 92, oy + ya, A[0], A[1], wc, 1.5);
+      g += T(ox + 74, oy + ya - 10, s.X > 0 ? sb('L', 's') : sb('L', 's', ' = 0'), {a: 'middle', fs: L_.sm, w: 700});
+      g += line(ox + 58, oy + ya + 12, ox + 86, oy + ya + 12, 'var(--i)', 1.4) + `<polygon points="${ox + 86},${oy + ya + 8} ${ox + 93},${oy + ya + 12} ${ox + 86},${oy + ya + 16}" fill="var(--i)"/>` +
+           T(ox + 74, oy + ya + 26, sb('i', 's'), {a: 'middle', fs: L_.sm, w: 700, c: 'var(--i)'});
+      // return wire to b, hopping over the left leg
+      g += line(ox + 30, oy + 121, ox + 30, oy + yb2, wc, 1.5) + line(ox + 30, oy + yb2, ox + xl - 6, B[1], wc, 1.5);
+      g += `<path d="M${(ox + xl - 6).toFixed(1)},${B[1]} a6,6 0 0 1 12,0" fill="none" stroke="${wc}" stroke-width="1.5"/>` + line(ox + xl + 6, B[1], B[0], B[1], wc, 1.5);
+      // legs: D1 (a→top), D4 (bottom→a), D3 (b→top), D2 (bottom→b); all point up
+      g += diode(A, TL, on1, sb('D', '1'), -1, 0.5) + diode(BL, A, on3, sb('D', '4'), -1, 0.2);
+      g += diode(B, TR, on3, sb('D', '3'), 1, 0.66) + diode(BR, B, on1, sb('D', '2'), 1, 0.5);
+      // DC buses and I_d
+      g += line(TL[0], TL[1], ox + xd, oy + yt, wc, 1.5) + line(BL[0], BL[1], ox + xd, oy + yb, wc, 1.5);
+      g += line(ox + xd, oy + yt, ox + xd, oy + 88, wc, 1.5) + isrc(ox + xd, oy + 101) + line(ox + xd, oy + 114, ox + xd, oy + yb, wc, 1.5);
+      g += T(ox + xd + 17, oy + 105, sb('I', 'd'), {fs: L_.sm, w: 700});
+      g += T(ox + 218, oy + 40, '+', {a: 'middle', w: 700, c: 'var(--vd)'}) + T(ox + 218, oy + 105, sb('v', 'd'), {a: 'middle', w: 700, c: 'var(--vd)'}) +
+           T(ox + 218, oy + 172, '−', {a: 'middle', w: 700, c: 'var(--vd)'});
+      [A, B, TR, BR].forEach(pt => g += `<circle cx="${pt[0]}" cy="${pt[1]}" r="2.6" fill="${wc}"/>`);
+    } else {
+      const n1 = P(176, 46), gnd = 160;
+      g += source(ox + 34, oy + 103) + T(ox + 54, oy + 107, sb('v', 's'), {w: 700, c: 'var(--muted)'});
+      g += line(ox + 34, oy + 88, ox + 34, oy + 46, wc, 1.5) + line(ox + 34, oy + 46, ox + 56, oy + 46, wc, 1.5);
+      g += (s.X > 0 ? coil(ox + 56, oy + 46, 34) : line(ox + 56, oy + 46, ox + 90, oy + 46, wc, 1.5));
+      g += T(ox + 73, oy + 34, s.X > 0 ? sb('L', 's') : sb('L', 's', ' = 0'), {a: 'middle', fs: L_.sm, w: 700});
+      const on1 = st !== 'n', on2 = st !== 'p';
+      g += diode(P(90, 46), n1, on1, sb('D', '1'), -1);
+      g += diode(P(176, gnd), n1, on2, sb('D', '2'), -1);
+      g += line(n1[0], n1[1], ox + 246, oy + 46, wc, 1.5) + line(ox + 246, oy + 46, ox + 246, oy + 90, wc, 1.5) + isrc(ox + 246, oy + 103) +
+           line(ox + 246, oy + 116, ox + 246, oy + gnd, wc, 1.5) + line(ox + 246, oy + gnd, ox + 34, oy + gnd, wc, 1.5) + line(ox + 34, oy + 118, ox + 34, oy + gnd, wc, 1.5);
+      g += T(ox + 262, oy + 107, sb('I', 'd'), {fs: L_.sm, w: 700});
+      g += `<circle cx="${n1[0]}" cy="${n1[1]}" r="2.5" fill="${wc}"/><circle cx="${ox + 176}" cy="${oy + gnd}" r="2.5" fill="${wc}"/>`;
+    }
+    const V = x => sb('v', x, '\u200b'), Dn = x => sb('D', x, '\u200b');
+    const tail = t => `<tspan dy="0">${t}</tspan>`;
+    const msg = comm && s.X > 0
+      ? (s.B ? 'All four diodes on: ' : `${Dn(1)}<tspan> and </tspan>${Dn(2)}<tspan> on: </tspan>`) + V('d') + tail(' = 0 (commutation)')
+      : st === 'p' || (st === 'c1' && s.X === 0) ? (s.B ? `${Dn(1)}<tspan>, </tspan>${Dn(2)}<tspan> on: </tspan>` : `${Dn(1)}<tspan> on: </tspan>`) + V('d') + tail(' = ') + V('s')
+      : s.B ? `${Dn(3)}<tspan>, </tspan>${Dn(4)}<tspan> on: </tspan>` + V('d') + tail(' = −') + V('s')
+            : `${Dn(2)}<tspan> freewheels: </tspan>` + V('d') + tail(' = 0');
+    g += T(ox + 8, oy + 202, msg, {fs: L_.sm, c: comm && s.X > 0 ? 'var(--au)' : 'var(--muted)', w: 600});
+    return g;
+  }
+
+  // ---------- plot panels ----------
+  function panel(y0, y1, lo, hi) {
+    const {px0, px1} = L_, N = 2 * NC;
+    const xs = k => px0 + k / N * (px1 - px0), ys = v => y1 - (v - lo) / (hi - lo) * (y1 - y0);
+    let g = `<rect x="${px0}" y="${y0}" width="${px1 - px0}" height="${y1 - y0}" fill="var(--panel)" stroke="var(--grid)"/>`;
+    for (let a = 90; a < 720; a += 90) g += line(xs(a / KEEP), y0, xs(a / KEEP), y1, 'var(--grid)', 1, a % 180 ? '2 4' : '');
+    g += line(px0, ys(0), px1, ys(0), '#94a3b8');
+    return {g, xs, ys};
+  }
+  const pl = (arr, P, c, w, dash = '') => `<polyline points="${poly(arr.map((v, k) => [P.xs(k), P.ys(v)]))}" fill="none" stroke="${c}" stroke-width="${w}"${dash ? ` stroke-dasharray="${dash}"` : ''}/>`;
+  function auShade(P, src) {          // fill v_s between 0 and the curve during commutation
+    let g = '', k = 0; const S = s.S, N = S.st.length;
+    while (k < N) {
+      if (S.st[k] === 'c1' || S.st[k] === 'c2') {
+        const a = k; while (k < N && (S.st[k] === 'c1' || S.st[k] === 'c2')) k++;
+        const pts = []; for (let j = a; j < Math.min(k + 1, N); j++) pts.push([P.xs(j), P.ys(src[j])]);
+        const xe = P.xs(Math.min(k, N - 1));
+        // in the bridge both commutations lose area; in the simple circuit only c1 does
+        const lossy = s.B || S.st[a] === 'c1';
+        g += `<polygon points="${poly(pts)} ${xe.toFixed(1)},${P.ys(0).toFixed(1)} ${P.xs(a).toFixed(1)},${P.ys(0).toFixed(1)}" fill="var(--au)" fill-opacity="${lossy ? 0.35 : 0.12}"/>`;
+      } else k++;
+    }
+    return g;
+  }
+
+  function draw() {
+    const S = s.S, {px0, px1} = L_, k = Math.min(S.vs.length - 1, Math.round(+tcIn.value / KEEP));
+    let g = circuit(S.st[k]);
+    // panel 1: vs, vd
+    const P1 = panel(L_.p1[0], L_.p1[1], -VM * 1.12, VM * 1.25);
+    g += P1.g + auShade(P1, S.vd.map((v, j) => s.B ? Math.abs(S.vs[j]) : S.vs[j]));
+    g += pl(S.vs, P1, 'var(--vs)', 1.5, '5 4') + pl(S.vd, P1, 'var(--vd)', 2.6);
+    g += line(px0, P1.ys(s.Vd0), px1, P1.ys(s.Vd0), 'var(--vd)', 1, '1 4') + line(px0, P1.ys(s.Vd), px1, P1.ys(s.Vd), 'var(--vd)', 1.6, '7 4');
+    g += T(px1 - 4, P1.ys(s.Vd) + 14, sb('V', 'd', ` = ${f1(s.Vd)} V`) + (s.X > 0 ? `  (ideal ${f1(s.Vd0)} V)` : ''), {a: 'end', c: 'var(--vd)', fs: L_.sm, w: 700});
+    g += T(px0 + 4, L_.p1[0] + 13, sb('v', 'd'), {c: 'var(--vd)', w: 700}) + T(px0 + 26, L_.p1[0] + 13, sb('v', 's'), {c: 'var(--vs)', w: 700}) +
+         (s.X > 0 ? T(px0 + 48, L_.p1[0] + 13, sb('A', 'u', ' (lost volt-seconds)'), {c: 'var(--au)', w: 700, fs: L_.sm}) : '');
+    // panel 2: vL
+    const P2 = panel(L_.p2[0], L_.p2[1], -VM * 1.1, VM * 1.1);
+    g += P2.g + auShade(P2, S.vL) + pl(S.vL, P2, 'var(--vl)', 2);
+    g += T(px1 - 4, L_.p2[0] + 13, sb('v', 'Ls', ' = L_s di_s/dt').replace('L_s', 'L<tspan dy="3" font-size="75%">s</tspan><tspan dy="-3"></tspan>').replace('di_s', 'di<tspan dy="3" font-size="75%">s</tspan><tspan dy="-3"></tspan>'), {c: 'var(--vl)', w: 700, fs: L_.sm, a: 'end'});
+    // panel 3: is, ideal square, fundamental
+    const Id = s.Id, P3 = panel(L_.p3[0], L_.p3[1], -Id * 1.6, Id * 1.6);
+    const fund = S.is.map((v, j) => Math.SQRT2 * s.I1 * Math.sin(j * KEEP * D + s.phi1) + s.I0);
+    g += P3.g + pl(S.sq, P3, '#94a3b8', 1.3, '4 3') + pl(fund, P3, 'var(--h1)', 1.4, '2 3') + pl(S.is, P3, 'var(--i)', 2.6);
+    g += T(px0 + 4, L_.p3[0] + 13, sb('i', 's'), {c: 'var(--i)', w: 700}) + T(px0 + 24, L_.p3[0] + 13, sb('i', 's1', ' (fundamental)'), {c: 'var(--h1)', w: 700, fs: L_.sm}) +
+         T(px1 - 4, L_.p3[0] + 13, 'ideal (L_s = 0)'.replace('L_s', 'L<tspan dy="3" font-size="75%">s</tspan><tspan dy="-3"></tspan>'), {a: 'end', c: '#94a3b8', fs: L_.sm, w: 700});
+    [0, 180, 360, 540, 720].forEach(a => g += T(P3.xs(a / KEEP), L_.p3[1] + 12, a + '°', {a: a === 0 ? 'start' : a === 720 ? 'end' : 'middle', fs: L_.sm - 1, c: 'var(--muted)'}));
+    // cursor
+    const xc = P1.xs(k);
+    g += line(xc, L_.p1[0], xc, L_.p3[1], '#111827', 1.3);
+    g += `<circle cx="${xc}" cy="${P1.ys(S.vd[k])}" r="4" fill="var(--vd)"/><circle cx="${xc}" cy="${P3.ys(S.is[k])}" r="4" fill="var(--i)"/>`;
+    g += spectrum();
+    fig.innerHTML = g;
+  }
+
+  function spectrum() {
+    const {spx0, spx1, spy0, spy1} = L_, H = 15, bw = (spx1 - spx0) / H;
+    const top = spy0 + 18, ys = p => spy1 - p / 100 * (spy1 - top);
+    let g = T(spx0 - 26, spy0 + 6, `Harmonics of i<tspan dy="3" font-size="75%">s</tspan><tspan dy="-3"> (% of I</tspan><tspan dy="3" font-size="75%">s1</tspan><tspan dy="-3">)   THD = ${(s.thd * 100).toFixed(1)} %</tspan>`, {fs: L_.sm, w: 700});
+    g += line(spx0, spy1, spx1, spy1, '#94a3b8');
+    [25, 50, 75, 100].forEach(p => g += line(spx0, ys(p), spx1, ys(p), 'var(--grid)', 1, '2 3') + T(spx0 - 3, ys(p) + 4, p, {a: 'end', fs: L_.sm - 2, c: 'var(--muted)'}));
+    for (let h = 1; h <= H; h++) {
+      const x = spx0 + (h - 0.5) * bw, p = s.Ih[h] / s.I1 * 100;
+      if (s.B && h % 2) { const pi = 100 / h; g += `<rect x="${(x - bw * 0.36).toFixed(1)}" y="${ys(pi).toFixed(1)}" width="${(bw * 0.72).toFixed(1)}" height="${(spy1 - ys(pi)).toFixed(1)}" fill="none" stroke="#94a3b8" stroke-dasharray="2 2"/>`; }
+      g += `<rect x="${(x - bw * 0.26).toFixed(1)}" y="${ys(Math.min(p, 100)).toFixed(1)}" width="${(bw * 0.52).toFixed(1)}" height="${(spy1 - ys(Math.min(p, 100))).toFixed(1)}" fill="${h === 1 ? 'var(--h1)' : 'var(--i)'}"/>`;
+      if (h % 2 || h === 2) g += T(x, spy1 + 11, h, {a: 'middle', fs: L_.sm - 2, c: 'var(--muted)'});
+    }
+    if (s.B) g += T(spx1, top - 2, '┄ square wave (1/h)', {a: 'end', fs: L_.sm - 2, c: 'var(--muted)'});
+    return g;
+  }
+
+  // ---------- loop & events ----------
+  function tick(t) {
+    if (last !== null && playing) {
+      let v = +tcIn.value + (t - last) / 1000 * (slow ? 40 : 120);
+      if (v > 720) v -= 720; tcIn.value = v; $('tcv').textContent = Math.round(v) + '°'; dirty = true;
+    }
+    last = t;
+    if (dirty) { draw(); dirty = false; }
+    requestAnimationFrame(tick);
+  }
+  function setLayout() { L_ = layout(); fig.setAttribute('viewBox', `0 0 ${L_.W} ${L_.H}`); dirty = true; }
+  LsIn.addEventListener('input', compute); IdIn.addEventListener('input', compute);
+  tcIn.addEventListener('input', () => { $('tcv').textContent = tcIn.value + '°'; dirty = true; });
+  $('mB').addEventListener('click', () => { mode = 'B'; compute(); });
+  $('mS').addEventListener('click', () => { mode = 'S'; compute(); });
+  $('pIdeal').addEventListener('click', () => { LsIn.value = 0; compute(); });
+  $('pTyp').addEventListener('click', () => { LsIn.value = 5; IdIn.value = 20; compute(); });
+  function setPlaying(on) { playing = on; $('play').textContent = on ? '❚❚ Pause' : '▶ Play'; $('play').classList.toggle('on', on); }
+  $('play').addEventListener('click', () => setPlaying(!playing));
+  $('slow').addEventListener('click', e => { slow = !slow; e.currentTarget.classList.toggle('on', slow); });
+  window.addEventListener('resize', setLayout);
+  window.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT') return;
+    if (e.key === ' ') { e.preventDefault(); $('play').click(); return; }
+    const nav = {ArrowRight: 'gotoNextSlide', PageDown: 'gotoNextSlide', ArrowLeft: 'gotoPreviousSlide', PageUp: 'gotoPreviousSlide'}[e.key];
+    try { if (nav && window.parent !== window && window.parent.slideshow) window.parent.slideshow[nav](); } catch (_) {}
+  });
+
+  // ---------- quiz ----------
+  const QUIZ = [
+    {q: 'Full bridge, L<sub>s</sub> = 0. What is the THD of the input current?',
+     ans: 'THD = <b>48.4 %</b>.',
+     wf: 'i<sub>s</sub> is a ±I<sub>d</sub> square wave. Its rms value is I<sub>d</sub> and its fundamental is I<sub>s1</sub> = (4/π)·I<sub>d</sub>/√2 = 0.9·I<sub>d</sub>. THD = √(I<sub>s</sub>² − I<sub>s1</sub>²)/I<sub>s1</sub> = √(1 − 0.81)/0.9 = 0.484. In the spectrum every odd harmonic is I<sub>s1</sub>/h (3rd 33 %, 5th 20 %, …).',
+     state: ['B', 0, 20, 90]},
+    {q: 'Full bridge, L<sub>s</sub> = 5 mH, I<sub>d</sub> = 20 A. Find u and V<sub>d</sub>.',
+     ans: 'u ≈ <b>36.2°</b>, V<sub>d</sub> ≈ 207 − 20 = <b>187 V</b>.',
+     wf: 'ωL<sub>s</sub> = 1.571 Ω. cos u = 1 − 2·1.571·20/325.3 = 0.807 → u = 36.2° (2.0 ms). ΔV<sub>d</sub> = 2ωL<sub>s</sub>I<sub>d</sub>/π = 2·1.571·20/π = 20.0 V.',
+     state: ['B', 5, 20, 20]},
+    {q: 'Where exactly does the lost voltage ΔV<sub>d</sub> go?',
+     ans: 'It is the area A<sub>u</sub>: during u, v<sub>d</sub> = 0 instead of following |v<sub>s</sub>|.',
+     wf: 'During commutation all four diodes conduct and the whole source voltage appears across L<sub>s</sub> (v<sub>Ls</sub> = v<sub>s</sub>, middle plot). That voltage is used to reverse the current: A<sub>u</sub> = ∫<sub>0</sub><sup>u</sup> √2V<sub>s</sub> sin θ dθ = ωL<sub>s</sub>·2I<sub>d</sub>. It happens twice per cycle, so ΔV<sub>d</sub> = 2A<sub>u</sub>/2π = 2ωL<sub>s</sub>I<sub>d</sub>/π.',
+     state: ['B', 5, 20, 18]},
+    {q: 'Increase L<sub>s</sub> from 0 to 5 mH (I<sub>d</sub> = 20 A). What happens to the THD and to the displacement power factor?',
+     ans: 'THD drops (48 % → 35 %), but DPF drops too (1 → 0.91).',
+     wf: 'The current edges become slopes, so i<sub>s</sub> looks more like a trapezoid and the higher harmonics shrink (compare the bars with the dashed 1/h outlines). But the current reversal is delayed by u, so the fundamental i<sub>s1</sub> lags v<sub>s</sub> by about u/2: DPF ≈ cos(u/2) = cos 18° ≈ 0.95 (exact: 0.91).',
+     state: ['B', 5, 20, 90]},
+    {q: 'Double the load current from 20 A to 40 A (L<sub>s</sub> = 5 mH). How do u and ΔV<sub>d</sub> change?',
+     ans: 'u grows from 36° to <b>52°</b>; ΔV<sub>d</sub> doubles from 20 V to <b>40 V</b>.',
+     wf: 'The inductor must reverse twice as much current, so it needs twice the volt-seconds: A<sub>u</sub> = 2ωL<sub>s</sub>I<sub>d</sub>. ΔV<sub>d</sub> is linear in I<sub>d</sub>: the rectifier behaves like a DC source with an internal resistance 2ωL<sub>s</sub>/π (= 1 Ω here). u is not linear, because the area under the sine grows faster for larger angles.',
+     state: ['B', 5, 40, 30]},
+    {q: 'Switch to the simple 2-diode circuit (same 5 mH, 20 A). Why is ΔV<sub>d</sub> only a quarter of the bridge value?',
+     ans: 'ΔV<sub>d</sub> = ωL<sub>s</sub>I<sub>d</sub>/2π = <b>5.0 V</b> instead of 20 V.',
+     wf: 'Two reasons, each a factor of 2. The current changes by I<sub>d</sub> (0 → I<sub>d</sub>), not 2I<sub>d</sub> (−I<sub>d</sub> → +I<sub>d</sub>), so A<sub>u</sub> is half. And only the commutation at 0° costs output voltage: at 180° the freewheeling diode D<sub>2</sub> already holds v<sub>d</sub> at 0 (lightly shaded area).',
+     state: ['S', 5, 20, 15]},
+  ];
+  let qi = 0;
+  function showQ() {
+    const Q = QUIZ[qi];
+    $('qn').textContent = `(${qi + 1}/${QUIZ.length})`;
+    $('qq').innerHTML = Q.q;
+    $('qa').innerHTML = `<div class="ans">${Q.ans}</div><div class="sec"><span class="hd">With waveforms:</span> ${Q.wf}</div>
+      <button id="qdemo">Show it on the diagram ↑</button>`;
+    $('qa').style.display = 'none'; $('qshow').textContent = 'Show answer';
+    $('qdemo').addEventListener('click', () => {
+      [mode, LsIn.value, IdIn.value, tcIn.value] = Q.state; setPlaying(false); compute();
+      fig.scrollIntoView({behavior: 'smooth', block: 'start'});
+    });
+  }
+  $('qshow').addEventListener('click', () => {
+    const on = $('qa').style.display !== 'block';
+    $('qa').style.display = on ? 'block' : 'none'; $('qshow').textContent = on ? 'Hide answer' : 'Show answer';
+  });
+  $('qnext').addEventListener('click', () => { qi = (qi + 1) % QUIZ.length; showQ(); });
+
+  setLayout(); setPlaying(playing); compute(); showQ(); requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

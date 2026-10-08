@@ -12,3 +12,10 @@ permalink: /animations/index.html
 * [3 Phase  Systems](./presentations/interactive/three_phase_explorer.html)
 * [3 Phase line vs phase variables](./presentations/interactive/line_phase_explorer.html)
 
+
+
+## EE-463 Power Electronics
+
+
+* [Half Wave Rectifier](./presentations/interactive/half_wave_rectifier_explorer.html)
+* [Commutation in Rectifiers](./presentations/interactive/bridge_commutation_explorer.html)

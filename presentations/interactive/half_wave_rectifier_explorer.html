@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Half-Wave Diode Rectifier Explorer</title>
+<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1f2937; --muted:#6b7280; --grid:#e5e7eb; --panel:#f8fafc;
+    --vs:#9ca3af; --vd:#2563eb; --i:#ea580c; --e:#16a34a; --vl:#0891b2; --dio:#7c3aed;
+    --pos:#16a34a; --neg:#dc2626; --ok:#047857;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);
+    font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:920px;margin:0 auto;padding:6px 14px 10px}
+  header h1{font-family:'Yanone Kaffeesatz',sans-serif;font-weight:400;font-size:30px;margin:2px 0 0}
+  header p{margin:0 0 4px;color:var(--muted)}
+  body.embed header, body.embed .quiz{display:none}
+  svg{width:100%;height:auto;display:block;user-select:none}
+  svg text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .controls{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin-top:4px}
+  .slider{display:flex;align-items:center;gap:8px;flex:1 1 200px;min-width:0}
+  .slider label{white-space:nowrap;font-weight:600;min-width:96px}
+  .slider input{flex:1;min-width:0;accent-color:#374151}
+  .buttons{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .buttons .lbl{font-size:12px;color:var(--muted);margin-right:-2px}
+  .sep{width:1px;height:22px;background:var(--grid);margin:0 4px}
+  button{font:inherit;font-size:13px;padding:4px 11px;border:1px solid #d1d5db;border-radius:6px;
+    background:#fff;color:var(--fg);cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+  button:hover{background:#f3f4f6}
+  button.on{background:#1f2937;color:#fff;border-color:#1f2937}
+  input[type=range]{height:28px;touch-action:pan-y}
+  .explain{margin-top:6px;padding:6px 11px;border-radius:8px;border:1px solid #bfdbfe;background:#eff6ff}
+  .readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:3px 14px;
+    margin-top:6px;background:var(--panel);padding:7px 11px;border-radius:8px;border:1px solid var(--grid)}
+  .readout .k{color:var(--muted)}
+  .warn{color:var(--neg);font-weight:600}
+  .quiz{margin-top:10px;background:var(--panel);border:1px solid var(--grid);border-radius:8px;padding:7px 11px}
+  .quiz h3{margin:0 0 3px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .quiz .q{font-weight:600}
+  .quiz .a{margin-top:6px;display:none;border-left:3px solid var(--ok);padding:2px 0 2px 10px}
+  .quiz .a .ans{color:var(--ok);font-weight:600}
+  .quiz .a .sec{margin-top:5px}
+  .quiz .a .hd{font-weight:700;color:var(--vd)}
+  .quiz .a button{margin-top:7px}
+  .quiz .row{display:flex;gap:6px;margin-top:6px}
+  body.embed .wrap{padding:0 6px 4px}
+  body.embed .controls{gap:3px 12px;margin-top:0}
+  body.embed .buttons{gap:4px}
+  body.embed button{font-size:12px;padding:2px 8px}
+  body.embed .slider input{height:22px}
+  body.embed .slider label{font-size:13px;min-width:88px}
+  body.embed .explain{font-size:12.5px;padding:3px 9px;margin-top:3px}
+  body.embed .readout{font-size:12px;margin-top:3px;padding:3px 9px;gap:0 10px;grid-template-columns:repeat(4,1fr)}
+  @media (max-height:500px){header{display:none}}
+  @media (max-width:640px){
+    .wrap{padding:4px 8px 12px}
+    header h1{font-size:26px}
+    .controls{gap:10px;margin-top:8px}
+    .slider{flex:1 1 100%}
+    .slider label{min-width:110px;font-size:15px}
+    input[type=range]{height:36px}
+    input[type=range]::-webkit-slider-thumb{width:26px;height:26px}
+    input[type=range]::-moz-range-thumb{width:26px;height:26px}
+    .buttons{width:100%}
+    .buttons button{flex:1;min-height:42px;font-size:15px;padding:6px 4px}
+    .buttons .lbl{width:100%}
+    .sep{display:none}
+    .readout{grid-template-columns:1fr 1fr;font-size:13px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Half-Wave Diode Rectifier Explorer</h1>
+    <p>230 V<sub>rms</sub>, 50 Hz source, one ideal diode, series R–L–E load</p>
+  </header>
+
+  <svg id="fig" role="img" aria-label="Circuit and waveforms of a single-diode rectifier"></svg>
+
+  <div class="controls">
+    <div class="buttons" id="presets">
+      <span class="lbl">Load:</span>
+      <button data-r="10" data-l="0" data-e="0">R</button>
+      <button data-r="10" data-l="40" data-e="0">R–L</button>
+      <button data-r="0" data-l="20" data-e="200">L–E (motor)</button>
+      <button data-r="5" data-l="30" data-e="120">R–L–E</button>
+      <span class="sep"></span>
+      <button id="play">▶ Play</button><button id="slow">Slow</button>
+    </div>
+    <div class="slider"><label for="R">R = <span id="Rv"></span></label><input id="R" type="range" min="0" max="20" step="0.5"></div>
+    <div class="slider"><label for="L">L = <span id="Lv"></span></label><input id="L" type="range" min="0" max="100" step="1"></div>
+    <div class="slider"><label for="E">E<sub>d</sub> = <span id="Ev"></span></label><input id="E" type="range" min="0" max="300" step="5"></div>
+    <div class="slider"><label for="tc">ωt = <span id="tcv"></span></label><input id="tc" type="range" min="0" max="720" step="1"></div>
+  </div>
+
+  <div class="explain" id="explain"></div>
+  <div class="readout" id="out"></div>
+
+  <div class="quiz">
+    <h3>Check yourself <span id="qn"></span></h3>
+    <div class="q" id="qq"></div>
+    <div class="a" id="qa"></div>
+    <div class="row buttons"><button id="qshow">Show answer</button><button id="qnext">Next ▶</button></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const VS = 230, VM = VS * Math.SQRT2, F = 50, W = 2 * Math.PI * F, D = Math.PI / 180;
+  const $ = id => document.getElementById(id);
+  const fig = $('fig'), Rin = $('R'), Lin = $('L'), Ein = $('E'), tcIn = $('tc');
+  const q = new URLSearchParams(location.search);
+  if (q.has('embed')) document.body.classList.add('embed');
+  const presets = {R: [10, 0, 0], RL: [10, 40, 0], LE: [0, 20, 200], RLE: [5, 30, 120]};
+  let [R0, L0, E0] = presets[q.get('preset')] || presets.RL;
+  Rin.value = q.has('R') ? +q.get('R') : R0; Lin.value = q.has('L') ? +q.get('L') : L0; Ein.value = q.has('E') ? +q.get('E') : E0;
+  tcIn.value = 150;
+  let playing = q.get('play') === '1', slow = false, last = null, dirty = true;
+
+  // ---------- simulation (ideal diode, series R-L-E) ----------
+  const STEP = 0.05;                      // degrees per integration step
+  const KEEP = 0.5;                       // degrees per stored sample
+  let s = {};
+  function simulate() {
+    let R = +Rin.value, L = +Lin.value / 1000, E = +Ein.value, warn = '';
+    if (L < 1e-4 && R < 0.5) { R = 0.5; warn = 'R = L = 0 would be a short circuit: using R = 0.5 Ω.'; }
+    const h = STEP * D, cycles = 6, nTot = Math.round(cycles * 360 / STEP), keepEvery = Math.round(KEEP / STEP);
+    const startKeep = (cycles - 2) * 360 / STEP;
+    const di = (th, i) => (VM * Math.sin(th) - R * i - E) / (W * L);
+    let i = 0, on = false;
+    const S = {vs: [], vd: [], i: [], vL: [], vD: [], on: []};
+    for (let n = 0; n <= nTot; n++) {
+      const th = n * h, vs = VM * Math.sin(th);
+      if (L < 1e-4) {                       // purely resistive (+E)
+        i = Math.max(0, (vs - E) / R); on = i > 0;
+      } else {
+        if (!on && vs - E > 0) on = true;
+        if (on && n > 0) {
+          const k1 = di(th - h, i), k2 = di(th, i + h * k1);
+          i = i + h * (k1 + k2) / 2;
+          if (i <= 0) { i = 0; on = vs - E > 0; }
+        }
+      }
+      if (n >= startKeep && (n - startKeep) % keepEvery === 0) {
+        const vd = on ? vs : E;
+        S.vs.push(vs); S.vd.push(vd); S.i.push(i);
+        S.vL.push(on && L >= 1e-4 ? vs - R * i - E : 0); S.vD.push(on ? 0 : vs - E); S.on.push(on);
+      }
+    }
+    // metrics over the last stored cycle (720 samples = 2 cycles; use the 2nd)
+    const N = S.vs.length, per = Math.round(360 / KEEP), a0 = N - 1 - per;
+    let vdA = 0, iA = 0, i2 = 0, A = 0, B = 0, imax = 0, kmax = -1, ton = null, toff = null;
+    for (let k = a0; k < a0 + per; k++) {
+      vdA += S.vd[k]; iA += S.i[k]; i2 += S.i[k] ** 2;
+      const vl = S.vL[k]; if (vl > 0) A += vl; else B -= vl;
+      if (S.i[k] > imax) { imax = S.i[k]; kmax = k; }
+      if (S.on[k] && !S.on[k - 1]) ton = (k - a0) * KEEP;
+      if (k === a0 && S.on[k] && S.on[k - 1] === false) ton = 0;
+      if (!S.on[k] && S.on[k - 1]) toff = (k - a0) * KEEP;
+    }
+    const dt = KEEP * D / W * 1000;        // ms per sample
+    if (ton !== null && ton < 1.01 && E === 0) ton = 0;
+    s = {R, L, E, S, warn, Vd: vdA / per, Iav: iA / per, Irms: Math.sqrt(i2 / per),
+         A: A * dt, B: B * dt, imax, thPk: kmax >= 0 ? (kmax - a0) * KEEP : null, ton, toff,
+         never: imax < 1e-6};
+    if (s.ton !== null && s.toff !== null && s.toff < s.ton) s.toff += 360;
+    labels(); readout(); explain(); dirty = true;
+  }
+
+  const f1 = v => v.toFixed(1);
+  function labels() {
+    $('Rv').textContent = (+Rin.value).toFixed(1) + ' Ω';
+    $('Lv').textContent = Lin.value + ' mH';
+    $('Ev').textContent = Ein.value + ' V';
+    $('tcv').textContent = tcIn.value + '°';
+    document.querySelectorAll('#presets button[data-r]').forEach(b => b.classList.toggle('on',
+      +b.dataset.r === +Rin.value && +b.dataset.l === +Lin.value && +b.dataset.e === +Ein.value));
+  }
+
+  function readout() {
+    const g = s.ton !== null && s.toff !== null ? s.toff - s.ton : null;
+    let h = '';
+    if (s.never) h = `<div class="warn">E<sub>d</sub> ≥ V̂<sub>s</sub> = ${VM.toFixed(0)} V: the diode never turns on</div>`;
+    else h = `
+      <div><span class="k">On at</span> <b>${s.ton !== null ? f1(s.ton) : '0.0'}°</b>, <span class="k">off at</span> <b>${s.toff !== null ? f1(s.toff) : '—'}°</b></div>
+      <div><span class="k">Conduction angle</span> <b>${g !== null ? f1(g) + '°' : '—'}</b></div>
+      <div><span class="k">V<sub>d,avg</sub> =</span> <b style="color:var(--vd)">${f1(s.Vd)} V</b> <span class="k">(R only: ${f1(0.45 * VS)} V)</span></div>
+      <div><span class="k">I<sub>avg</sub> =</span> <b>${s.Iav.toFixed(2)} A</b>, <span class="k">I<sub>rms</sub> =</span> <b>${s.Irms.toFixed(2)} A</b></div>`;
+    if (!s.never && s.L >= 1e-4)
+      h += `<div><span class="k">Area A =</span> <b style="color:var(--pos)">${s.A.toFixed(2)}</b>, <span class="k">B =</span> <b style="color:var(--neg)">${s.B.toFixed(2)}</b> <span class="k">V·ms</span></div>`;
+    if (!s.never && s.E > 0)
+      h += `<div><span class="k">Power into E<sub>d</sub> =</span> <b>${(s.E * s.Iav).toFixed(0)} W</b></div>`;
+    if (s.warn) h += `<div class="warn">${s.warn}</div>`;
+    $('out').innerHTML = h;
+  }
+
+  function explain() {
+    let t;
+    if (s.never) t = 'The source never exceeds E<sub>d</sub>, so the diode is always reverse biased and no current flows.';
+    else if (s.L < 1e-4 && s.E === 0) t = '<b>R load:</b> the diode conducts whenever v<sub>s</sub> &gt; 0, so v<sub>d</sub> is the positive half of v<sub>s</sub>: V<sub>d</sub> = √2·V<sub>s</sub>/π = 0.45·V<sub>s</sub>. The current has the same shape as v<sub>d</sub>.';
+    else if (s.L < 1e-4) t = '<b>R–E load:</b> current flows only while v<sub>s</sub> &gt; E<sub>d</sub>; it stops as soon as v<sub>s</sub> falls below E<sub>d</sub> (no inductor to keep it going).';
+    else if (s.E === 0) t = '<b>R–L load:</b> the inductor keeps the current flowing after v<sub>s</sub> turns negative (t<sub>2</sub> → t<sub>3</sub>), so v<sub>d</sub> goes negative and V<sub>d</sub> drops. The diode turns off when area B equals area A: the average inductor voltage over a cycle must be zero.';
+    else t = '<b>Back-emf load:</b> the diode turns on only when v<sub>s</sub> exceeds E<sub>d</sub> (t<sub>1</sub>). The current peaks where v<sub>L</sub> = 0 (t<sub>2</sub>, v<sub>s</sub> = E<sub>d</sub> + R·i) and stops at t<sub>3</sub>, when area B equals area A.';
+    $('explain').innerHTML = t;
+  }
+
+  // ---------- layout ----------
+  function layout() {
+    const wide = fig.parentElement.clientWidth >= 640;
+    const emb = document.body.classList.contains('embed');
+    return wide
+      ? {W:880, H: emb ? 360 : 392, sx:0, sy:6, sw:250, sh:200, px0:300, px1:872,
+         p1:[14, emb ? 196 : 214], p2:[emb ? 214 : 232, emb ? 280 : 304], p3:[emb ? 296 : 320, emb ? 350 : 380], fs:13, sm:11, wide}
+      : {W:400, H:640, sx:70, sy:0, sw:250, sh:190, px0:36, px1:392,
+         p1:[204, 400], p2:[418, 510], p3:[528, 620], fs:13, sm:11, wide};
+  }
+  let L_ = layout();
+
+  // ---------- svg helpers ----------
+  const T = (x, y, str, o = {}) =>
+    `<text x="${(+x).toFixed(1)}" y="${(+y).toFixed(1)}" font-size="${o.fs || L_.fs}" fill="${o.c || 'var(--fg)'}" text-anchor="${o.a || 'start'}"` +
+    `${o.w ? ` font-weight="${o.w}"` : ''}${o.it ? ' font-style="italic"' : ''} dominant-baseline="${o.b || 'auto'}">${str}</text>`;
+  const sb = (m, x) => `${m}<tspan dy="3" font-size="75%">${x}</tspan>`;
+  const line = (x1, y1, x2, y2, c, w = 1, dash = '') =>
+    `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${c}" stroke-width="${w}"${dash ? ` stroke-dasharray="${dash}"` : ''}/>`;
+  const poly = pts => pts.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
+
+  // ---------- circuit ----------
+  function circuit(onNow) {
+    const {sx, sy} = L_, x0 = sx + 34, x1 = sx + 214, y0 = sy + 34, y1 = sy + 170, ym = (y0 + y1) / 2;
+    const wc = onNow ? 'var(--i)' : '#374151', ww = onNow ? 2.6 : 1.6;
+    let g = '';
+    // wires
+    g += line(x0, y0, x0, ym - 18, wc, ww) + line(x0, ym + 18, x0, y1, wc, ww) + line(x0, y1, x1, y1, wc, ww);
+    g += line(x0, y0, x0 + 46, y0, wc, ww) + line(x0 + 76, y0, x1, y0, wc, ww);
+    // source
+    g += `<circle cx="${x0}" cy="${ym}" r="18" fill="#fff" stroke="#374151" stroke-width="1.6"/>`;
+    g += `<path d="M${x0 - 10},${ym} q5,-10 10,0 t10,0" fill="none" stroke="#374151" stroke-width="1.6"/>`;
+    g += T(x0 + 24, ym + 5, sb('v', 's'), {w: 700, c: 'var(--muted)'});
+    // diode (anode left)
+    const dx = x0 + 46, dc = onNow ? 'var(--pos)' : '#fff';
+    g += `<polygon points="${dx},${y0 - 11} ${dx},${y0 + 11} ${dx + 26},${y0}" fill="${dc}" stroke="#374151" stroke-width="1.6"/>`;
+    g += line(dx + 26, y0 - 11, dx + 26, y0 + 11, '#374151', 2.2) + line(dx + 26, y0, dx + 30, y0, wc, ww);
+    g += T(dx + 13, y0 - 16, onNow ? 'ON' : 'OFF', {a: 'middle', w: 700, fs: L_.sm, c: onNow ? 'var(--pos)' : 'var(--neg)'});
+    if (onNow) g += `<polygon points="${x0 + 108},${y0 - 5} ${x0 + 118},${y0} ${x0 + 108},${y0 + 5}" fill="var(--i)"/>` + T(x0 + 113, y0 - 9, 'i', {a: 'middle', c: 'var(--i)', w: 700, it: true});
+    // load column
+    const parts = [];
+    if (s.R > 0) parts.push('R'); if (s.L >= 1e-4) parts.push('L'); if (s.E > 0) parts.push('E');
+    const segH = (y1 - y0 - 20) / Math.max(parts.length, 1);
+    let y = y0 + 10;
+    g += line(x1, y0, x1, y, wc, ww);
+    parts.forEach(p => {
+      const c0 = y + segH / 2;
+      if (p === 'R') {
+        g += line(x1, y, x1, c0 - 14, wc, ww) + `<rect x="${x1 - 7}" y="${c0 - 14}" width="14" height="28" fill="#fff" stroke="#374151" stroke-width="1.6"/>` + line(x1, c0 + 14, x1, y + segH, wc, ww);
+        g += T(x1 + 12, c0 + 4, `R = ${(+s.R).toFixed(1)} Ω`, {fs: L_.sm});
+      } else if (p === 'L') {
+        g += line(x1, y, x1, c0 - 16, wc, ww);
+        let d = `M${x1},${c0 - 16}`; for (let k = 0; k < 4; k++) d += ` a6,4 0 0 1 0,8`;
+        g += `<path d="${d}" fill="none" stroke="#374151" stroke-width="1.8"/>` + line(x1, c0 + 16, x1, y + segH, wc, ww);
+        g += T(x1 + 12, c0 + 4, `L = ${Lin.value} mH`, {fs: L_.sm});
+      } else {
+        g += line(x1, y, x1, c0 - 5, wc, ww) + line(x1 - 12, c0 - 5, x1 + 12, c0 - 5, '#374151', 2) + line(x1 - 6, c0 + 3, x1 + 6, c0 + 3, '#374151', 3) + line(x1, c0 + 3, x1, y + segH, wc, ww);
+        g += T(x1 + 14, c0 + 4, `E<tspan dy="3" font-size="75%">d</tspan><tspan dy="-3"> = ${s.E} V</tspan>`, {fs: L_.sm, c: 'var(--e)'});
+      }
+      y += segH;
+    });
+    g += line(x1, y, x1, y1, wc, ww);
+    // vd marker
+    g += T(x1 - 22, y0 + 18, '+', {a: 'middle', w: 700, c: 'var(--vd)'}) + T(x1 - 22, y1 - 6, '−', {a: 'middle', w: 700, c: 'var(--vd)'}) +
+         T(x1 - 22, ym + 4, sb('v', 'd'), {a: 'middle', w: 700, c: 'var(--vd)'});
+    g += T(sx + 6, sy + 198 - (L_.wide ? 0 : 6), onNow ? 'Diode ON: ' + sb('v', 'd') + '<tspan dy="-3"> = </tspan>' + sb('v', 's') : 'Diode OFF: i = 0, ' + sb('v', 'd') + '<tspan dy="-3"> = </tspan>' + sb('E', 'd'), {fs: L_.sm, c: 'var(--muted)'});
+    return g;
+  }
+
+  // ---------- plots ----------
+  function panel(y0, y1, series, opt = {}) {
+    const {px0, px1} = L_, N = s.S.vs.length;
+    const xs = k => px0 + k / (N - 1) * (px1 - px0);
+    let lo = Infinity, hi = -Infinity;
+    series.forEach(sr => { if (sr.noscale) return; sr.d.forEach(v => { lo = Math.min(lo, v); hi = Math.max(hi, v); }); });
+    if (opt.sym) { const m = Math.max(Math.abs(lo), Math.abs(hi), 1); lo = -m; hi = m; }
+    lo = Math.min(lo, 0); hi = Math.max(hi, 1); const pad = (hi - lo) * 0.08; lo -= pad; hi += pad;
+    const ys = v => y1 - (v - lo) / (hi - lo) * (y1 - y0);
+    let g = `<rect x="${px0}" y="${y0}" width="${px1 - px0}" height="${y1 - y0}" fill="var(--panel)" stroke="var(--grid)"/>`;
+    for (let a = 90; a < 720; a += 90) g += line(xs(a / KEEP), y0, xs(a / KEEP), y1, 'var(--grid)', 1, a % 180 ? '2 4' : '');
+    // conduction shading
+    if (opt.shade) {
+      let k = 0;
+      while (k < N) {
+        if (s.S.on[k]) { const a = k; while (k < N && s.S.on[k]) k++; g += `<rect x="${xs(a).toFixed(1)}" y="${y0}" width="${(xs(k - 1) - xs(a)).toFixed(1)}" height="${y1 - y0}" fill="var(--pos)" fill-opacity=".07"/>`; }
+        else k++;
+      }
+    }
+    g += line(px0, ys(0), px1, ys(0), '#94a3b8');
+    if (opt.areas) {
+      const pts = s.S.vL.map((v, k) => [xs(k), ys(v)]);
+      const area = poly(pts) + ` ${px1},${ys(0)} ${px0},${ys(0)}`;
+      g += `<defs><clipPath id="cpA"><rect x="${px0}" y="${y0}" width="${px1 - px0}" height="${ys(0) - y0}"/></clipPath>
+             <clipPath id="cpB"><rect x="${px0}" y="${ys(0)}" width="${px1 - px0}" height="${y1 - ys(0)}"/></clipPath></defs>`;
+      g += `<polygon points="${area}" fill="var(--pos)" fill-opacity=".25" clip-path="url(#cpA)"/>`;
+      g += `<polygon points="${area}" fill="var(--neg)" fill-opacity=".25" clip-path="url(#cpB)"/>`;
+    }
+    series.forEach(sr => {
+      const sc = sr.scale ? sr.scale(lo, hi) : null;
+      const yy = sc ? v => y1 - (v - sc[0]) / (sc[1] - sc[0]) * (y1 - y0) : ys;
+      g += `<polyline points="${poly(sr.d.map((v, k) => [xs(k), yy(v)]))}" fill="none" stroke="${sr.c}" stroke-width="${sr.w || 2}"${sr.dash ? ` stroke-dasharray="${sr.dash}"` : ''}/>`;
+    });
+    return {g, xs, ys, lo, hi};
+  }
+
+  function draw() {
+    const {px0, px1} = L_, S = s.S, N = S.vs.length, k = Math.min(N - 1, Math.round(+tcIn.value / KEEP));
+    let g = circuit(S.on[k]);
+    // panel 1: vs, vd, E, i
+    const imax = Math.max(s.imax, 1e-6);
+    const P1 = panel(L_.p1[0], L_.p1[1], [
+      {d: S.vs, c: 'var(--vs)', w: 1.6, dash: '5 4'},
+      {d: S.vd, c: 'var(--vd)', w: 2.6},
+    ], {shade: true});
+    g += P1.g;
+    if (s.E > 0) g += line(px0, P1.ys(s.E), px1, P1.ys(s.E), 'var(--e)', 1.6, '8 4') + T(px1 - 6, P1.ys(s.E) + 14, sb('E', 'd'), {c: 'var(--e)', w: 700, fs: L_.sm, a: 'end'});
+    // current on its own scale, drawn in the upper part of panel 1
+    const iy = v => P1.ys(0) - v / imax * (P1.ys(0) - L_.p1[0] - 8) * 0.62;
+    g += `<polyline points="${poly(S.i.map((v, j) => [P1.xs(j), iy(v)]))}" fill="none" stroke="var(--i)" stroke-width="2.2"/>`;
+    g += T(px1 - 4, L_.p1[0] + 13, `${sb('v', 's')}  `, {a: 'end', c: 'var(--vs)', w: 700}) ;
+    g += T(px1 - 34, L_.p1[0] + 13, sb('v', 'd'), {a: 'end', c: 'var(--vd)', w: 700}) +
+         T(px1 - 62, L_.p1[0] + 13, `i (peak ${s.imax.toFixed(1)} A)`, {a: 'end', c: 'var(--i)', w: 700});
+    // t1, t2, t3 markers (second cycle)
+    if (!s.never && L_.wide) {
+      const mk = (deg, lab) => { if (deg === null) return ''; const x = P1.xs((deg + 360) / KEEP);
+        return line(x, L_.p1[0], x, L_.p1[1], '#374151', 1, '3 3') + T(x, L_.p1[1] - 4, lab, {a: 'middle', fs: L_.sm, w: 700}); };
+      const sub = n => `t<tspan dy="3" font-size="75%">${n}</tspan>`;
+      if (s.E > 0 || s.ton > 0.6) g += mk(s.ton, sub(1));
+      if (s.L >= 1e-4 && s.thPk !== null) g += mk(s.thPk, sub(2));
+      if (s.toff !== null) g += mk(s.toff > 360 ? s.toff - 360 : s.toff, sub(3));
+    }
+    // average vd
+    g += line(px0, P1.ys(s.Vd), px1, P1.ys(s.Vd), 'var(--vd)', 1.2, '2 3') + T(px0 + 4, P1.ys(s.Vd) + 13, `V<tspan dy="3" font-size="75%">d,avg</tspan><tspan dy="-3"> = ${f1(s.Vd)} V</tspan>`, {c: 'var(--vd)', fs: L_.sm, w: 700});
+    // panel 2: vL with areas
+    const P2 = panel(L_.p2[0], L_.p2[1], [{d: S.vL, c: 'var(--vl)', w: 2}], {areas: true, sym: true});
+    g += P2.g + T(px0 + 4, L_.p2[0] + 13, sb('v', 'L') + (s.L >= 1e-4 ? '   (area A = area B)' : '   (no inductor)'), {c: 'var(--vl)', w: 700, fs: L_.sm + 1});
+    // panel 3: v_diode
+    const P3 = panel(L_.p3[0], L_.p3[1], [{d: S.vD, c: 'var(--dio)', w: 2}]);
+    const vdmin = Math.min(...S.vD);
+    g += P3.g + T(px0 + 4, L_.p3[0] + 13, `v<tspan dy="3" font-size="75%">diode</tspan><tspan dy="-3">  (max reverse ${(-vdmin).toFixed(0)} V)</tspan>`, {c: 'var(--dio)', w: 700, fs: L_.sm + 1});
+    // x labels
+    [0, 180, 360, 540, 720].forEach(a => g += T(P3.xs(a / KEEP), L_.p3[1] + 12, a + '°', {a: a === 0 ? 'start' : a === 720 ? 'end' : 'middle', fs: L_.sm - 1, c: 'var(--muted)'}));
+    // cursor
+    const xc = P1.xs(k);
+    g += line(xc, L_.p1[0], xc, L_.p3[1], '#111827', 1.3);
+    g += `<circle cx="${xc}" cy="${P1.ys(S.vd[k])}" r="4" fill="var(--vd)"/><circle cx="${xc}" cy="${iy(S.i[k])}" r="4" fill="var(--i)"/>`;
+    fig.innerHTML = g;
+  }
+
+  // ---------- loop & events ----------
+  function tick(t) {
+    if (last !== null && playing) {
+      let v = +tcIn.value + (t - last) / 1000 * (slow ? 40 : 120);
+      if (v > 720) v -= 720; tcIn.value = v; labels(); dirty = true;
+    }
+    last = t;
+    if (dirty) { draw(); dirty = false; }
+    requestAnimationFrame(tick);
+  }
+  function setLayout() { L_ = layout(); fig.setAttribute('viewBox', `0 0 ${L_.W} ${L_.H}`); dirty = true; }
+  [Rin, Lin, Ein].forEach(el => el.addEventListener('input', simulate));
+  tcIn.addEventListener('input', () => { labels(); dirty = true; });
+  document.querySelectorAll('#presets button[data-r]').forEach(b => b.addEventListener('click', () => {
+    Rin.value = b.dataset.r; Lin.value = b.dataset.l; Ein.value = b.dataset.e; simulate();
+  }));
+  function setPlaying(on) { playing = on; $('play').textContent = on ? '❚❚ Pause' : '▶ Play'; $('play').classList.toggle('on', on); }
+  $('play').addEventListener('click', () => setPlaying(!playing));
+  $('slow').addEventListener('click', e => { slow = !slow; e.currentTarget.classList.toggle('on', slow); });
+  window.addEventListener('resize', setLayout);
+  window.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT') return;
+    if (e.key === ' ') { e.preventDefault(); $('play').click(); return; }
+    const nav = {ArrowRight: 'gotoNextSlide', PageDown: 'gotoNextSlide', ArrowLeft: 'gotoPreviousSlide', PageUp: 'gotoPreviousSlide'}[e.key];
+    try { if (nav && window.parent !== window && window.parent.slideshow) window.parent.slideshow[nav](); } catch (_) {}
+  });
+
+  // ---------- quiz ----------
+  const QUIZ = [
+    {q: 'R load (10 Ω), V<sub>s</sub> = 230 V. What is the average output voltage?',
+     ans: 'V<sub>d</sub> = 0.45·V<sub>s</sub> = <b>103.5 V</b>.',
+     wf: 'v<sub>d</sub> is the positive half-sine only: V<sub>d</sub> = (1/2π)∫<sub>0</sub><sup>π</sup> √2·V<sub>s</sub>·sin θ dθ = √2·V<sub>s</sub>/π = 0.45·V<sub>s</sub>. The diode conducts exactly 180°.',
+     state: [10, 0, 0, 90]},
+    {q: 'Add L = 40 mH in series with R. Does the average output voltage go up or down? Why?',
+     ans: 'It goes <b>down</b>: from 103.5 V to about 83 V here.',
+     wf: 'The inductor keeps the current flowing past 180°, so the diode stays on while v<sub>s</sub> is negative and v<sub>d</sub> follows v<sub>s</sub> below zero (from t<sub>2</sub>… to t<sub>3</sub>). That negative piece of v<sub>d</sub> subtracts from the average.',
+     state: [10, 40, 0, 220]},
+    {q: 'Why does the diode turn off exactly at t<sub>3</sub>, and not at 180°?',
+     ans: 'It turns off when the current reaches zero, which happens when <b>area B = area A</b>.',
+     wf: 'v<sub>L</sub> = L·di/dt, so ∫v<sub>L</sub> dt = L·Δi. The current starts at zero and ends at zero, so the positive volt-seconds (area A, current rising) must be cancelled by the negative ones (area B, current falling). Compare the two areas in the readout.',
+     state: [10, 40, 0, 200]},
+    {q: 'L–E load: E<sub>d</sub> = 200 V. At what angle does the diode start conducting?',
+     ans: 'θ<sub>1</sub> = sin⁻¹(200/325) ≈ <b>38°</b>.',
+     wf: 'The diode is forward biased only once v<sub>s</sub> exceeds E<sub>d</sub>. Before t<sub>1</sub>, v<sub>diode</sub> = v<sub>s</sub> − E<sub>d</sub> &lt; 0. The current then peaks at t<sub>2</sub>, where v<sub>s</sub> falls back to E<sub>d</sub> (v<sub>L</sub> = 0).',
+     state: [0, 20, 200, 38]},
+    {q: 'With the L–E load, what is the maximum reverse voltage on the diode?',
+     ans: 'V̂<sub>s</sub> + E<sub>d</sub> = 325 + 200 ≈ <b>525 V</b>, at 270°.',
+     wf: 'When the diode is off, i = 0, so v<sub>d</sub> = E<sub>d</sub> and v<sub>diode</sub> = v<sub>s</sub> − E<sub>d</sub>. Its most negative value is at the negative peak of v<sub>s</sub>: −325 − 200 = −525 V. A back-emf load raises the diode voltage rating.',
+     state: [0, 20, 200, 270]},
+  ];
+  let qi = 0;
+  function showQ() {
+    const Q = QUIZ[qi];
+    $('qn').textContent = `(${qi + 1}/${QUIZ.length})`;
+    $('qq').innerHTML = Q.q;
+    $('qa').innerHTML = `<div class="ans">${Q.ans}</div><div class="sec"><span class="hd">With waveforms:</span> ${Q.wf}</div>
+      <button id="qdemo">Show it on the diagram ↑</button>`;
+    $('qa').style.display = 'none'; $('qshow').textContent = 'Show answer';
+    $('qdemo').addEventListener('click', () => {
+      [Rin.value, Lin.value, Ein.value, tcIn.value] = Q.state; setPlaying(false); simulate();
+      fig.scrollIntoView({behavior: 'smooth', block: 'start'});
+    });
+  }
+  $('qshow').addEventListener('click', () => {
+    const on = $('qa').style.display !== 'block';
+    $('qa').style.display = on ? 'block' : 'none'; $('qshow').textContent = on ? 'Hide answer' : 'Show answer';
+  });
+  $('qnext').addEventListener('click', () => { qi = (qi + 1) % QUIZ.length; showQ(); });
+
+  setLayout(); setPlaying(playing); simulate(); showQ(); requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
