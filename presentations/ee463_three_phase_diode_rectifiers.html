@@ -53,6 +53,7 @@ class: center, middle
 <img src="./images/ee463/3phase_half.png" alt="Drawing" style="width: 400px;"/>
 
 
+## [Try Yourself](./interactive/three_phase_rectifier_explorer.html)
 ---
 ## 3-Phase Half Wave Rectifier
 
@@ -64,10 +65,27 @@ class: center, middle
 
 --
 
+### = 270 V for a 400V grid
+
 ### Comparison with the single phase rectifier?
 
 ---
+
+## 3-Phase Half Wave Rectifier
+
+## Disadvantages:
+
+- ### All current passes through the neutral line
+
+- ### DC current in transformer windings
+
+- ### A ripple of 163 V at 150 Hz
+
+
+
+---
 ## 3-Phase Full Wave (Bridge) Rectifier
+## also called 6-pulse rectifier
 
 <img src="http://2.bp.blogspot.com/-cumirN3mjC0/UiVln-LDtTI/AAAAAAAAALw/f9hwfKSzZb0/s640/3-Phase-Bridge-Rectifier1.jpg" alt="Drawing" style="width: 600px;"/>
 
@@ -104,7 +122,7 @@ class: center, middle
 
 ## Average voltage?
 --
-: Twice of the half wave rectifier
+: Twice the half-wave rectifier value
 
 
 ## \\(V\_{dc}= \dfrac{3\sqrt{6}}{ \pi} V\_{ph}\\)
@@ -124,11 +142,11 @@ class: center, middle
 
 <img src="./images/ee463/3phase_full.png" alt="Drawing" style="width: 500px;"/>
 
+## [Try Yourself](./interactive/three_phase_rectifier_explorer.html)
 ---
-## 3-Phase Full Wave (Bridge) Rectifier
 
-### Output voltage waveforms
 
+<iframe src="interactive/three_phase_rectifier_explorer.html?embed" width="800" height="600" style="border:0"></iframe>
 ---
 ## What about the current waveforms?
 --
@@ -143,16 +161,17 @@ class: center, middle
 
 <img src="./images/ee463/3ph_diode_current2.png" alt="Drawing" style="width: 800px;"/>
 
-## No 3rd order harmonics!
+### No 3rd order harmonics!
+### Phase currents cancel each other, zero neutral line current.
 
 ---
 # Comparison of Rectifiers
 
 | Type                | Vout | \\(\Delta\\)Vout | \\(f\_{ripple}\\) |
-|:---------------------:|:------:|:---------:|:---------:|:---------:|
+|:---------------------:|:------:|:---------:|:---------:|
 | **Single Phase**        | \\(\;\dfrac{2\sqrt{2}}{\pi}V\_{ph}\\) = 207 V    |  \\(\;\sqrt{2} V\_{ph} = 325 V\\)       |      100 Hz           |
-| **3-phase Half Bridge** |  \\(\;\dfrac{3\sqrt{2}}{2\pi}V\_{l-l}\\) = 270 V |   \\(\;\dfrac{\sqrt{2}}{2} V\_{ph} = 162.5 V\\)              |  150 Hz  |
-| **3-phase Full Bridge** |  \\(\;\dfrac{3\sqrt{2}}{\pi}V\_{l-l}\\) = 540 V  |    \\(\;( 1-\frac{\sqrt{3}}{2}) \sqrt{2}V\_{l-l} = 75.8 V\\)             |  300 Hz  |
+| **3-phase Half-wave** |  \\(\;\dfrac{3\sqrt{2}}{2\pi}V\_{l-l}\\) = 270 V |   \\(\;\dfrac{\sqrt{2}}{2} V\_{ph} = 162.5 V\\)    |  150 Hz  |
+| **3-phase Full Bridge** |  \\(\;\dfrac{3\sqrt{2}}{\pi}V\_{l-l}\\) = 540 V  |  \\(\;( 1-\frac{\sqrt{3}}{2}) \sqrt{2}V\_{l-l} = 75.8 V\\)  |  300 Hz  |
 ---
 
 # Commutation in 3-Phase Rectifiers
@@ -164,14 +183,16 @@ class: center, middle
 # Commutation in 3-Phase Rectifiers
 --
 
-<img src="./images/ee463/3ph_commutation1.png" alt="Drawing" style="width: 700px;"/>
+<img src="./images/ee463/3ph_commutation1.png" alt="Drawing" style="width: 600px;"/>
 
+## [Try Yourself](./interactive/three_phase_rectifier_explorer.html)
 ---
 # Commutation in 3-Phase Rectifiers
 --
 
 <img src="./images/ee463/3ph_commutation2.png" alt="Drawing" style="width: 800px;"/>
 
+## [Try Yourself](./interactive/three_phase_rectifier_explorer.html)
 ---
 ### Average Voltage
 
@@ -186,9 +207,10 @@ class: center, middle
 
 ### [More info](http://www.ehu.eus/electronica-industrial/ElectronicaIndustrial_Automatica/apuntes/overlap1.pdf)
 
-### [Commutation Simulation](https://www.multisim.com/content/xMSLkaeX6EGfqoLtHJ8xjn/3phase_commutation/), [MultiSim Simulation Examples](https://www.multisim.com/discover/)
+### [Try simulation with commutation](./interactive/three_phase_rectifier_explorer.html?Ls=2&Id=40)
+
 ---
-## You can download this presentation from: [keysan.me/ee463](http://keysan.me/ee463)
+## You can download this presentation from: [keysan.me/ee463](https://keysan.me/ee463)
 
 
     </textarea>
