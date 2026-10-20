@@ -11,6 +11,7 @@ permalink: /animations/index.html
 * [AC Power, Lagging, Leading, Phasors](./presentations/interactive/ac_power_explorer.html)
 * [3 Phase  Systems](./presentations/interactive/three_phase_explorer.html)
 * [3 Phase line vs phase variables](./presentations/interactive/line_phase_explorer.html)
+* [Magnetic Circuits](./presentations/interactive/magnetic_circuit_explorer.html)
 
 
 

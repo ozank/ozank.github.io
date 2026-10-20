@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Magnetic Circuit Explorer</title>
+<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1f2937; --muted:#6b7280; --grid:#e5e7eb; --panel:#f8fafc;
+    --cu:#b45309; --core:#3b82f6; --gap:#f59e0b; --phi:#1d4ed8; --ind:#7c3aed; --op:#dc2626; --air:#0891b2;
+    --neg:#dc2626; --ok:#047857;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);
+    font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:940px;margin:0 auto;padding:6px 14px 10px}
+  header h1{font-family:'Yanone Kaffeesatz',sans-serif;font-weight:400;font-size:30px;margin:2px 0 0}
+  header p{margin:0 0 4px;color:var(--muted)}
+  svg{width:100%;height:auto;display:block;user-select:none}
+  svg text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .figs{display:grid;grid-template-columns:1fr 1.08fr;grid-template-areas:"core circ" "out bh";gap:4px 16px;align-items:start}
+  #core{grid-area:core} #circ{grid-area:circ} #bh{grid-area:bh} #out{grid-area:out}
+  .panel-t{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:2px 0 0}
+  .controls{display:flex;flex-wrap:wrap;gap:4px 22px;align-items:center;margin-top:6px}
+  .slider{display:flex;align-items:center;gap:8px;flex:1 1 380px;min-width:0}
+  .slider label{white-space:nowrap;font-weight:600;min-width:118px}
+  .slider input{flex:1;min-width:0;accent-color:#374151}
+  .slider .ends{font-size:12px;color:var(--muted);white-space:nowrap}
+  .buttons{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .buttons .lbl{font-size:12px;color:var(--muted);margin-right:-2px}
+  .sep{width:1px;height:22px;background:var(--grid);margin:0 4px}
+  button{font:inherit;font-size:13px;padding:4px 11px;border:1px solid #d1d5db;border-radius:6px;
+    background:#fff;color:var(--fg);cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+  button:hover{background:#f3f4f6}
+  button.on{background:#1f2937;color:#fff;border-color:#1f2937}
+  input[type=range]{height:28px;touch-action:pan-y}
+  .readout{display:grid;grid-template-columns:1fr 1fr;gap:2px 14px;font-size:13px;
+    background:var(--panel);padding:7px 11px;border-radius:8px;border:1px solid var(--grid)}
+  .readout .k{color:var(--muted)}
+  .readout .full{grid-column:1/-1}
+  .warn{color:var(--neg);font-weight:600}
+  .quiz{margin-top:10px;background:var(--panel);border:1px solid var(--grid);border-radius:8px;padding:7px 11px}
+  .quiz h3{margin:0 0 3px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .quiz .q{font-weight:600}
+  .quiz .a{margin-top:4px;color:var(--ok);display:none}
+  .quiz .row{display:flex;gap:6px;margin-top:6px}
+
+  /* embedded in a slide (iframe ~790 × 520) */
+  body.embed header, body.embed .quiz, body.embed #out, body.embed .panel-t{display:none}
+  body.embed .wrap{padding:0 6px 2px}
+  body.embed .figs{grid-template-columns:0.92fr 1fr;grid-template-areas:"core circ" "core bh";gap:0 10px}
+  body.embed .controls{gap:0 16px;margin-top:0}
+  body.embed .slider{flex:1 1 340px}
+  body.embed .slider label{font-size:13px;min-width:104px}
+  body.embed .slider input{height:22px}
+  body.embed .buttons{gap:4px}
+  body.embed button{font-size:12px;padding:2px 8px}
+
+  @media (max-width:700px){
+    .wrap{display:flex;flex-direction:column;padding:4px 8px 14px}
+    .figs{display:contents}
+    header{order:0} #core{order:1} .controls{order:2} #out{order:3} #circ{order:4} #bh{order:5} .quiz{order:6}
+    header h1{font-size:26px}
+    #out{margin-top:8px}
+    .panel-t{margin-top:10px}
+    .controls{gap:6px;margin-top:4px}
+    .slider{flex:1 1 100%}
+    .slider label{min-width:112px;font-size:15px}
+    input[type=range]{height:36px}
+    input[type=range]::-webkit-slider-thumb{width:26px;height:26px}
+    input[type=range]::-moz-range-thumb{width:26px;height:26px}
+    .buttons{width:100%}
+    .buttons button{flex:1;min-height:42px;font-size:14px;padding:6px 4px}
+    .buttons .lbl{width:100%}
+    .sep{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Magnetic Circuit Explorer</h1>
+    <p>C-core with an N-turn coil and an air gap: l<sub>c</sub> = 500 mm, A<sub>c</sub> = A<sub>g</sub> = 2500 mm² (no leakage, no fringing)</p>
+  </header>
+
+  <div class="figs">
+    <div id="core">
+      <svg id="svgCore" viewBox="0 0 400 322" role="img" aria-label="C-core with coil, air gap and moving flux"></svg>
+    </div>
+    <div id="circ">
+      <div class="panel-t">Equivalent magnetic circuit</div>
+      <svg id="svgCirc" viewBox="0 0 400 196" role="img" aria-label="Equivalent reluctance circuit"></svg>
+    </div>
+    <div id="bh">
+      <div class="panel-t">Core B–H curve</div>
+      <svg id="svgBH" viewBox="0 0 400 196" role="img" aria-label="B-H curve with operating point"></svg>
+    </div>
+    <div class="readout" id="out"></div>
+  </div>
+
+  <div class="controls">
+    <div class="slider">
+      <label for="iN">N = <span id="vN"></span> turns</label>
+      <input id="iN" type="range" min="1" max="200" step="1">
+    </div>
+    <div class="slider">
+      <label for="iI">I = <span id="vI"></span></label>
+      <input id="iI" type="range" min="0" max="50" step="0.5">
+    </div>
+    <div class="slider">
+      <label for="iG">g = <span id="vG"></span></label>
+      <input id="iG" type="range" min="0" max="5" step="0.1">
+    </div>
+    <div class="slider">
+      <label for="iM">μ<sub>r</sub> = <span id="vM"></span></label>
+      <input id="iM" type="range" min="100" max="10000" step="100">
+    </div>
+    <div class="buttons">
+      <span class="lbl">Iron:</span>
+      <button id="mLin">Linear</button><button id="mSat">Saturating</button>
+      <span class="sep"></span>
+      <button id="play">❚❚ Pause</button>
+    </div>
+    <div class="buttons" id="presets">
+      <span class="lbl">Presets:</span>
+      <button data-p="5,10,0,4000,lin">Exercise: no gap</button>
+      <button data-p="5,10,3,4000,lin">Exercise: 3 mm gap</button>
+      <button data-p="200,10,0,4000,sat">Saturation</button>
+    </div>
+  </div>
+
+  <div class="quiz">
+    <h3>Check yourself <span id="qn"></span></h3>
+    <div class="q" id="qq"></div>
+    <div class="a" id="qa"></div>
+    <div class="row buttons"><button id="qshow">Show answer</button><button id="qnext">Next ▶</button></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const MU0 = 4e-7 * Math.PI, LC = 0.5, AC = 2.5e-3, BS = 1.6;   // SI units; BS: iron saturation term
+  const $ = id => document.getElementById(id);
+  const q = new URLSearchParams(location.search);
+  if (q.has('embed')) document.body.classList.add('embed');
+
+  const iN = $('iN'), iI = $('iI'), iG = $('iG'), iM = $('iM');
+  const num = (key, def) => (q.has(key) && isFinite(+q.get(key)) ? +q.get(key) : def);
+  iN.value = num('N', 5); iI.value = num('I', 10); iG.value = num('g', 0); iM.value = num('mur', 4000);
+  let model = q.get('model') === 'sat' ? 'sat' : 'lin';
+  let playing = q.get('play') !== '0';
+
+  // ---------- formatting ----------
+  const sig = (x, d = 3) => String(parseFloat(x.toPrecision(d)));
+  function si(v, u, d = 3) {
+    if (v === 0 || !isFinite(v)) return (v === 0 ? '0' : '∞') + ' ' + u;
+    const a = Math.abs(v);
+    for (const [k, p] of [[1e6, 'M'], [1e3, 'k'], [1, ''], [1e-3, 'm'], [1e-6, 'µ'], [1e-9, 'n']])
+      if (a >= k * 0.9995) return sig(v / k, d) + ' ' + p + u;
+    return v.toExponential(2) + ' ' + u;
+  }
+  const fB = B => (Math.abs(B) >= 10 ? Math.abs(B).toFixed(1) : Math.abs(B) >= 0.1 ? Math.abs(B).toFixed(2) : sig(Math.abs(B), 2)) + ' T';
+
+  // ---------- physics ----------
+  // Saturating iron: B = μ0·H + Bs·(2/π)·atan(π·μ0(μr−1)·H / 2Bs)  → initial slope μ0·μr, saturates near Bs + μ0H
+  const Bsat = (H, mur) => MU0 * H + BS * 2 / Math.PI * Math.atan(Math.PI * MU0 * (mur - 1) * H / (2 * BS));
+  const Bcore = (H, mur) => model === 'sat' ? Bsat(H, mur) : MU0 * mur * H;
+
+  let s = {};
+  function compute() {
+    const N = +iN.value, I = +iI.value, g = +iG.value * 1e-3, mur = +iM.value;
+    const F = N * I, a = Math.abs(F), sg = Math.sign(F) || 1;
+    const Rg = g / (MU0 * AC);
+    const Rc0 = LC / (MU0 * mur * AC);
+    function solve(a) {                         // returns [Hc, B] for MMF a ≥ 0
+      if (model === 'lin') { const b = a / (Rc0 + Rg) / AC; return [b / (MU0 * mur), b]; }
+      let lo = 0, hi = a / LC;                  // solve  Hc·lc + B(Hc)·g/μ0 = a  by bisection
+      for (let k = 0; k < 80; k++) {
+        const m = (lo + hi) / 2;
+        (m * LC + Bsat(m, mur) * g / MU0 > a) ? hi = m : lo = m;
+      }
+      const h = (lo + hi) / 2; return [h, Bsat(h, mur)];
+    }
+    const [Hc, B] = solve(a);
+    const Phi = B * AC, Hg = B / MU0, Fc = Hc * LC, Fg = Hg * g;
+    const Rc = Phi > 0 ? Fc / Phi : Rc0;
+    // inductance: L = λ/i (secant) and dλ/di (incremental); both = N²/(ℛc+ℛg) for linear iron
+    const L0 = N * N / (Rc0 + Rg);
+    const di = 0.01, lam = I0 => N * solve(N * I0)[1] * AC;
+    const Lsec = Math.abs(I) > 1e-9 ? N * Phi / Math.abs(I) : L0;
+    const Linc = model === 'lin' ? L0 : (lam(Math.abs(I) + di) - lam(Math.max(Math.abs(I) - di, 0))) / (Math.abs(I) + di - Math.max(Math.abs(I) - di, 0));
+    s = {N, I, g, mur, F, sg, Rc, Rg, Phi, B, Hc, Hg, Fc, Fg, lam: N * Phi, L0, Lsec, Linc,
+         murEff: Hc > 0 ? B / (MU0 * Hc) : mur};
+    $('vN').textContent = N; $('vI').textContent = I.toFixed(1) + ' A';
+    $('vG').textContent = g > 0 ? (g * 1e3).toFixed(1) + ' mm' : '0 (no gap)'; $('vM').textContent = mur;
+    $('mLin').classList.toggle('on', model === 'lin'); $('mSat').classList.toggle('on', model === 'sat');
+    drawCore(); drawCirc(); drawBH(); readout();
+  }
+
+  // ---------- svg helpers ----------
+  const T = (x, y, str, o = {}) =>
+    `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" font-size="${o.fs || 13}" fill="${o.c || 'var(--fg)'}" text-anchor="${o.a || 'start'}"` +
+    `${o.w ? ` font-weight="${o.w}"` : ''}${o.it ? ' font-style="italic"' : ''}>${str}</text>`;
+  const sb = (m, x) => `${m}<tspan dy="3" font-size="75%">${x}</tspan><tspan dy="-3"></tspan>`;
+  const ln = (x1, y1, x2, y2, c, w = 1.5, dash = '') =>
+    `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="${w}"${dash ? ` stroke-dasharray="${dash}"` : ''}/>`;
+  function arrowHead(x, y, ang, c, sz = 8) {
+    const p = k => `${(x + sz * Math.cos(ang + k)).toFixed(1)},${(y + sz * Math.sin(ang + k)).toFixed(1)}`;
+    return `<polygon points="${x},${y} ${p(Math.PI - 0.45)} ${p(Math.PI + 0.45)}" fill="${c}"/>`;
+  }
+  const mix = (c1, c2, t) => {
+    const h = c => [1, 3, 5].map(i => parseInt(c.substr(i, 2), 16));
+    const a = h(c1), b = h(c2);
+    return `rgb(${a.map((v, i) => Math.round(v + (b[i] - v) * t)).join(',')})`;
+  };
+  // point at distance d along a rectangle loop (x0,y0)-(x1,y1), clockwise starting bottom-left going up
+  function onRect(r, d) {
+    const w = r.x1 - r.x0, h = r.y1 - r.y0, P = 2 * (w + h);
+    d = ((d % P) + P) % P;
+    if (d < h) return [r.x0, r.y1 - d]; d -= h;
+    if (d < w) return [r.x0 + d, r.y0]; d -= w;
+    if (d < h) return [r.x1, r.y0 + d]; d -= h;
+    return [r.x1 - d, r.y1];
+  }
+
+  // ---------- core drawing ----------
+  const X0 = 80, Y0 = 22, X1 = 330, Y1 = 286, TH = 54, YG = (Y0 + Y1) / 2;
+  let coreArrows = [], circDots = [];
+  const BPL = 0.2;                                   // tesla per drawn flux line
+  // closed flux line at a given inset from the outer core edge; clockwise, starting on the left leg going up
+  function fluxPath(i) {
+    const x0 = X0 + i, y0 = Y0 + i, x1 = X1 - i, y1 = Y1 - i, r = (TH - i) * 0.6 + 2;
+    return `M${x0} ${y1 - r}V${y0 + r}A${r} ${r} 0 0 1 ${x0 + r} ${y0}H${x1 - r}A${r} ${r} 0 0 1 ${x1} ${y0 + r}` +
+           `V${y1 - r}A${r} ${r} 0 0 1 ${x1 - r} ${y1}H${x0 + r}A${r} ${r} 0 0 1 ${x0} ${y1 - r}Z`;
+  }
+  const loop = {x0: 34, y0: 30, x1: 250, y1: 146};
+
+  function drawCore() {
+    const B = s.B, t = Math.min(B / 1.8, 1);
+    const sat = model === 'sat' && s.murEff < 0.4 * s.mur;
+    const fill = mix('#e5e7eb', sat ? '#fdba74' : '#93c5fd', t);
+    const gp = s.g > 0 ? Math.min(3 + s.g * 1e3 * 7, 40) : 0;
+    let h = `<path d="M${X0} ${Y0}H${X1}V${Y1}H${X0}Z M${X0 + TH} ${Y0 + TH}V${Y1 - TH}H${X1 - TH}V${Y0 + TH}Z"
+               fill="${fill}" fill-rule="evenodd" stroke="#6b7280" stroke-width="1.5"/>`;
+    if (gp) {
+      const ya = YG - gp / 2, yb = YG + gp / 2;
+      h += `<rect x="${X1 - TH - 1}" y="${ya}" width="${TH + 2}" height="${gp}" fill="var(--bg)"/>`;
+      h += `<rect x="${X1 - TH}" y="${ya}" width="${TH}" height="${gp}" fill="${mix('#ffffff', '#fde68a', Math.min(1, 0.3 + t))}" opacity=".7"/>`;
+      h += ln(X1 - TH, ya, X1, ya, '#6b7280') + ln(X1 - TH, yb, X1, yb, '#6b7280');
+      // dimension
+      h += ln(X1 + 6, ya, X1 + 16, ya, 'var(--muted)', 1) + ln(X1 + 6, yb, X1 + 16, yb, 'var(--muted)', 1);
+      h += T(X1 + 8, ya - 8, 'g', {it: 1, fs: 14, w: 600}) + T(X1 + 8, yb + 16, (s.g * 1e3).toFixed(1) + ' mm', {fs: 12, c: 'var(--muted)'});
+    } else {
+      h += T(X1 + 7, YG + 4, 'no gap', {fs: 12, c: 'var(--muted)'});
+    }
+    // flux lines: count ∝ B (uniform flux density across the core, no leakage, no fringing)
+    const nL = s.Phi > 0 ? Math.max(1, Math.min(10, Math.round(s.B / BPL))) : 0;
+    const insets = Array.from({length: nL}, (_, k) => TH * (k + 0.5) / nL);
+    h += `<g id="flines" fill="none" stroke="#1e3a8a" stroke-width="1.7">` +
+         insets.map(i => `<path d="${fluxPath(i)}"/>`).join('') + `</g><g id="farrows" fill="#1e3a8a"></g>`;
+    if (nL) h += T(200, 13, `Flux lines: 1 line ≈ ${BPL} T${model === 'lin' && s.B > BPL * 10.5 ? ' (max 10 drawn)' : ''}`,
+                   {a: 'middle', fs: 11.5, c: 'var(--muted)'});
+
+    // coil on the left leg (front half-turns drawn over the flux lines)
+    const nT = Math.min(s.N, 14), yT = Y0 + TH + 14, yB = Y1 - TH - 14;
+    const ys = Array.from({length: nT}, (_, k) => nT === 1 ? (yT + yB) / 2 : yT + k * (yB - yT) / (nT - 1));
+    ys.forEach(y => { h += `<line x1="${X0 - 7}" y1="${y + 5}" x2="${X0 + TH + 7}" y2="${y - 5}" stroke="var(--cu)" stroke-width="${nT > 10 ? 3.2 : 4.5}" stroke-linecap="round"/>`; });
+    const y1 = ys[0] + 5, y2 = ys[ys.length - 1] + 5;
+    h += `<path d="M${X0 - 7} ${y1}H22 M${X0 - 7} ${y2}H22" stroke="var(--cu)" stroke-width="2" fill="none"/>`;
+    h += `<circle cx="18" cy="${y1}" r="4" fill="var(--bg)" stroke="var(--fg)" stroke-width="1.5"/>`;
+    h += `<circle cx="18" cy="${y2}" r="4" fill="var(--bg)" stroke="var(--fg)" stroke-width="1.5"/>`;
+    if (s.I !== 0) h += arrowHead(s.I > 0 ? 58 : 34, y1, s.I > 0 ? 0 : Math.PI, 'var(--fg)', 9);
+    h += T(46, y1 - 8, 'i = ' + Math.abs(s.I).toFixed(1) + ' A', {fs: 12, a: 'middle'});
+    h += T(44, (y1 + y2) / 2 - 2, 'N = ' + s.N, {fs: 12, a: 'middle', w: 600});
+    h += T(44, (y1 + y2) / 2 + 13, s.N > 14 ? '(14 drawn)' : 'turns', {fs: 11, a: 'middle', c: 'var(--muted)'});
+
+    // window text
+    const cx = (X0 + X1) / 2 + 4, cy = (Y0 + Y1) / 2;
+    h += T(cx, cy - 26, 'Φ = ' + si(s.Phi * s.sg, 'Wb'), {a: 'middle', fs: 14, w: 600, c: 'var(--phi)'});
+    h += T(cx, cy - 6, 'B = ' + fB(s.B), {a: 'middle', fs: 14, w: 600});
+    if (model === 'lin' && s.B > 1.8)
+      h += T(cx, cy + 14, 'impossible:', {a: 'middle', fs: 12, c: 'var(--neg)', w: 600}) +
+           T(cx, cy + 29, 'iron saturates', {a: 'middle', fs: 12, c: 'var(--neg)', w: 600});
+    else if (sat)
+      h += T(cx, cy + 14, 'saturated', {a: 'middle', fs: 12, c: '#c2410c', w: 600}) +
+           T(cx, cy + 29, sb('μ', 'r,eff') + ' ≈ ' + sig(s.murEff, 2), {a: 'middle', fs: 12, c: '#c2410c'});
+    else if (s.Phi === 0)
+      h += T(cx, cy + 14, 'no current,', {a: 'middle', fs: 12, c: 'var(--muted)'}) + T(cx, cy + 29, 'no flux', {a: 'middle', fs: 12, c: 'var(--muted)'});
+    h += T(200, 310, `Mean path ${sb('l', 'c')} = 500 mm · ${sb('A', 'c')} = 2500 mm²${s.g > 0 ? ' · gap not to scale' : ''}`,
+           {a: 'middle', fs: 11.5, c: 'var(--muted)'});
+
+    const svg = $('svgCore'); svg.innerHTML = h;
+    const g = svg.querySelector('#farrows'); coreArrows = [];
+    svg.querySelectorAll('#flines path').forEach((path, k) => {
+      const len = path.getTotalLength(), m = Math.max(3, Math.round(len / 110));
+      for (let j = 0; j < m; j++) {
+        const a = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        a.setAttribute('d', 'M4 0L-4 -4.5L-4 4.5Z'); g.appendChild(a);
+        coreArrows.push({a, path, len, d0: (j + 0.37 * k) * len / m});
+      }
+    });
+    placeDots();
+  }
+
+  // ---------- equivalent circuit ----------
+  function zig(x, ya, yb, amp = 9, n = 6) {
+    let d = `M${x} ${ya}`; const st = (yb - ya) / (2 * n);
+    for (let k = 0; k < 2 * n; k++) d += ` L${x + (k % 2 ? -amp : amp)} ${(ya + st * (k + 0.5)).toFixed(1)}`;
+    return `<path d="${d} L${x} ${yb}" fill="none" stroke="var(--fg)" stroke-width="2" stroke-linejoin="round"/>`;
+  }
+  function drawCirc() {
+    const {x0, y0, x1, y1} = loop, sx = x0, sy = (y0 + y1) / 2, gapOn = s.g > 0;
+    const ra = y0 + 10, rb = sy - 6, ga = sy + 6, gb = y1 - 10;
+    let h = `<g id="ldots"></g>`;
+    h += `<path d="M${sx} ${sy - 20}V${y0}H${x1}V${ra} M${x1} ${rb}V${ga} M${x1} ${gb}V${y1}H${sx}V${sy + 20}" fill="none" stroke="var(--fg)" stroke-width="2"/>`;
+    h += zig(x1, ra, rb);
+    h += gapOn ? zig(x1, ga, gb) : ln(x1, ga, x1, gb, 'var(--fg)', 2);
+    h += `<circle cx="${sx}" cy="${sy}" r="20" fill="var(--bg)" stroke="var(--fg)" stroke-width="2"/>`;
+    h += T(sx, sy - 4, '+', {a: 'middle', fs: 15}) + T(sx, sy + 14, '−', {a: 'middle', fs: 15});
+    h += T(sx + 30, sy - 15, 'ℱ = NI', {fs: 14, w: 600}) + T(sx + 30, sy + 2, '= ' + sig(s.F) + ' A·t', {fs: 13});
+    if (model === 'lin')
+      h += T(sx + 30, y1 - 30, 'L = N²/(' + sb('ℛ', 'c') + ' + ' + sb('ℛ', 'g') + ')', {fs: 12.5, c: 'var(--ind)', w: 600}) +
+           T(sx + 30, y1 - 14, '= ' + si(s.L0, 'H'), {fs: 13.5, c: 'var(--ind)', w: 700});
+    else
+      h += T(sx + 30, y1 - 30, 'L = λ/i = ' + si(s.Lsec, 'H'), {fs: 12.5, c: 'var(--ind)', w: 700}) +
+           T(sx + 30, y1 - 14, 'dλ/di = ' + si(s.Linc, 'H'), {fs: 12.5, c: 'var(--ind)', w: 600});
+    // flux arrow
+    const mx = (x0 + x1) / 2;
+    if (s.Phi > 0) h += arrowHead(mx + (s.sg > 0 ? 8 : -8), y0, s.sg > 0 ? 0 : Math.PI, 'var(--phi)', 11);
+    h += T(mx, y0 - 10, 'Φ = ' + si(s.Phi * s.sg, 'Wb'), {a: 'middle', fs: 13, w: 600, c: 'var(--phi)'});
+    // labels
+    const lx = x1 + 16;
+    h += T(lx, (ra + rb) / 2 - 4, sb('ℛ', 'c') + ' = ' + si(s.Rc, 'A/Wb'), {fs: 13, w: 600});
+    h += T(lx, (ra + rb) / 2 + 12, 'Φ' + sb('ℛ', 'c') + ' = ' + sig(s.Fc * s.sg) + ' A·t', {fs: 12, c: 'var(--muted)'});
+    if (gapOn) {
+      h += T(lx, (ga + gb) / 2 - 4, sb('ℛ', 'g') + ' = ' + si(s.Rg, 'A/Wb'), {fs: 13, w: 600});
+      h += T(lx, (ga + gb) / 2 + 12, 'Φ' + sb('ℛ', 'g') + ' = ' + sig(s.Fg * s.sg) + ' A·t', {fs: 12, c: 'var(--muted)'});
+    } else h += T(lx, (ga + gb) / 2 + 4, sb('ℛ', 'g') + ' = 0 (no gap)', {fs: 13, c: 'var(--muted)'});
+    if (model === 'sat') h += T(lx, (ra + rb) / 2 + 26, '(at this B)', {fs: 11, c: 'var(--muted)'});
+
+    // MMF split bar
+    const F = s.Fc + s.Fg, fc = F > 0 ? s.Fc / F : (gapOn ? 0 : 1), bx0 = 82, bx1 = 318, by = 172, bh = 15;
+    const wc = (bx1 - bx0) * fc;
+    h += T(200, by - 6, 'Where does the MMF go?  ℱ = Φ' + sb('ℛ', 'c') + ' + Φ' + sb('ℛ', 'g'), {a: 'middle', fs: 11.5, c: 'var(--muted)'});
+    h += `<rect x="${bx0}" y="${by}" width="${wc.toFixed(1)}" height="${bh}" fill="#93c5fd"/>`;
+    h += `<rect x="${(bx0 + wc).toFixed(1)}" y="${by}" width="${(bx1 - bx0 - wc).toFixed(1)}" height="${bh}" fill="#fcd34d"/>`;
+    h += `<rect x="${bx0}" y="${by}" width="${bx1 - bx0}" height="${bh}" fill="none" stroke="#9ca3af"/>`;
+    const pc = v => (v > 0.995 || v < 0.005 || v > 0.1 ? Math.round(v * 100) : (v * 100).toFixed(1)) + '%';
+    h += T(bx0 - 6, by + 12, 'core ' + pc(fc), {a: 'end', fs: 12, w: 600, c: '#1d4ed8'});
+    h += T(bx1 + 6, by + 12, 'gap ' + pc(1 - fc), {fs: 12, w: 600, c: '#b45309'});
+
+    const svg = $('svgCirc'); svg.innerHTML = h;
+    const g = svg.querySelector('#ldots'); circDots = [];
+    const P = 2 * (x1 - x0 + y1 - y0), n = Math.round(P / 26);
+    for (let k = 0; k < n; k++) {
+      const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      c.setAttribute('r', 3.2); c.setAttribute('fill', '#fff'); c.setAttribute('stroke', 'var(--phi)'); c.setAttribute('stroke-width', 1.4);
+      g.appendChild(c); circDots.push({c, r: loop, d0: k * P / n});
+    }
+    g.setAttribute('opacity', s.Phi === 0 ? 0 : Math.min(1, 0.35 + s.B / 1.2).toFixed(2));
+    placeDots();
+  }
+
+  // ---------- B-H curve ----------
+  function drawBH() {
+    const px0 = 46, px1 = 388, py0 = 12, py1 = 158, BMAX = 2.2;
+    const Hmax = [100, 200, 500, 1e3, 2e3, 5e3, 1e4, 2e4, 5e4, 1e5].find(v => v >= Math.max(s.Hc * 1.3, 100)) || 1e5;
+    const X = H => px0 + (px1 - px0) * H / Hmax, Y = B => py1 - (py1 - py0) * Math.min(B, BMAX * 1.05) / BMAX;
+    let h = `<defs><clipPath id="clipBH"><rect x="${px0}" y="${py0 - 2}" width="${px1 - px0}" height="${py1 - py0 + 2}"/></clipPath></defs>`;
+    for (let k = 0; k <= 4; k++) {
+      const x = px0 + (px1 - px0) * k / 4;
+      h += ln(x, py0, x, py1, 'var(--grid)', 1) + T(x, py1 + 15, (v => v >= 1000 ? sig(v / 1000) + 'k' : sig(v))(Hmax * k / 4), {a: 'middle', fs: 11, c: 'var(--muted)'});
+    }
+    [0, 0.5, 1, 1.5, 2].forEach(b => { h += ln(px0, Y(b), px1, Y(b), 'var(--grid)', 1) + T(px0 - 5, Y(b) + 4, b.toFixed(1), {a: 'end', fs: 11, c: 'var(--muted)'}); });
+    h += ln(px0, py1, px1, py1, 'var(--fg)', 1.2) + ln(px0, py0, px0, py1, 'var(--fg)', 1.2);
+    h += T(px1, py1 + 31, 'H (A/m)', {a: 'end', fs: 12, c: 'var(--muted)'});
+    h += `<text x="12" y="${(py0 + py1) / 2}" font-size="12" fill="var(--muted)" text-anchor="middle" transform="rotate(-90 12 ${(py0 + py1) / 2})">B (T)</text>`;
+
+    const pts = f => Array.from({length: 161}, (_, k) => { const H = Hmax * k / 160; return `${X(H).toFixed(1)},${Y(f(H)).toFixed(1)}`; }).join(' ');
+    const lin = model === 'lin';
+    h += `<g clip-path="url(#clipBH)">`;
+    h += `<polyline points="${pts(H => Bsat(H, s.mur))}" fill="none" stroke="#ea580c" stroke-width="${lin ? 1.5 : 3}"${lin ? ' stroke-dasharray="5 4" opacity=".6"' : ''}/>`;
+    h += `<polyline points="${pts(H => MU0 * s.mur * H)}" fill="none" stroke="var(--core)" stroke-width="${lin ? 3 : 1.5}"${lin ? '' : ' stroke-dasharray="5 4" opacity=".6"'}/>`;
+    h += `<polyline points="${pts(H => MU0 * H)}" fill="none" stroke="var(--air)" stroke-width="2"/>`;
+    h += `</g>`;
+    // legend under the axis
+    let lx = px0 - 30;
+    [['var(--core)', 'linear μ', lin ? '' : '5 4'], ['#ea580c', 'real iron', lin ? '5 4' : ''], ['var(--air)', 'air (≈ 0 here)', '']].forEach(([c, t, d]) => {
+      h += ln(lx, py1 + 27, lx + 16, py1 + 27, c, 3, d) + T(lx + 20, py1 + 31, t, {fs: 11.5, c, w: 600});
+      lx += 28 + t.length * 6.4;
+    });
+    // operating point
+    if (s.Phi > 0) {
+      const ox = X(s.Hc), off = s.B > BMAX, oy = off ? py0 : Y(s.B);
+      h += ln(ox, oy, ox, py1, 'var(--op)', 1, '3 3') + (off ? '' : ln(px0, oy, ox, oy, 'var(--op)', 1, '3 3'));
+      h += off ? arrowHead(ox, py0 - 2, -Math.PI / 2, 'var(--op)', 10) : `<circle cx="${ox}" cy="${oy}" r="5.5" fill="var(--op)" stroke="#fff" stroke-width="1.5"/>`;
+      const lbl = `H = ${sig(s.Hc)} A/m, B = ${fB(s.B)}${off ? ' (off scale!)' : ''}`;
+      h += `<text x="${px1 - 4}" y="${off ? py0 + 30 : py0 + 12}" font-size="12" font-weight="700" fill="var(--op)"
+             text-anchor="end" stroke="var(--bg)" stroke-width="4" paint-order="stroke">● ${lbl}</text>`;
+    }
+    $('svgBH').innerHTML = h;
+  }
+
+  // ---------- readout ----------
+  function readout() {
+    let h = `<div><span class="k">ℱ = NI =</span> <b>${sig(s.F)} A·t</b></div>
+      <div><span class="k">Φ =</span> <b style="color:var(--phi)">${si(s.Phi * s.sg, 'Wb')}</b></div>
+      <div><span class="k">ℛ<sub>c</sub> =</span> <b>${si(s.Rc, 'A/Wb')}</b></div>
+      <div><span class="k">ℛ<sub>g</sub> =</span> <b>${s.g > 0 ? si(s.Rg, 'A/Wb') : '0'}</b></div>
+      <div><span class="k">B = Φ/A =</span> <b>${fB(s.B)}</b></div>
+      <div><span class="k">λ = NΦ =</span> <b>${si(s.lam * s.sg, 'Wb·t')}</b></div>
+      <div class="full"><span class="k">${model === 'lin' ? 'L = λ/i = N²/(ℛ<sub>c</sub> + ℛ<sub>g</sub>) =' : 'L = λ/i ='}</span> <b style="color:var(--ind)">${si(model === 'lin' ? s.L0 : s.Lsec, 'H')}</b>${model === 'sat' ? ` · dλ/di = <b style="color:var(--ind)">${si(s.Linc, 'H')}</b> · unsaturated N²/ℛ = ${si(s.L0, 'H')}` : ''}</div>
+      <div><span class="k">H<sub>core</sub> =</span> <b>${si(s.Hc, 'A/m')}</b></div>
+      <div><span class="k">H<sub>gap</sub> =</span> <b>${s.g > 0 ? si(s.Hg, 'A/m') : '—'}</b></div>`;
+    if (model === 'sat') h += `<div class="full"><span class="k">μ<sub>r</sub> at this point:</span> <b>${sig(s.murEff, 3)}</b> (initial ${s.mur})</div>`;
+    if (model === 'lin' && s.B > 1.8)
+      h += `<div class="full warn">B = ${fB(s.B)}? Real iron saturates around 1.6–1.8 T. Switch to Saturating.</div>`;
+    $('out').innerHTML = h;
+  }
+
+  // ---------- animation ----------
+  let off = 0, last = null;
+  function placeDots() {
+    for (const d of coreArrows) {
+      const u = (((d.d0 + off) % d.len) + d.len) % d.len;
+      const p = d.path.getPointAtLength(u), q2 = d.path.getPointAtLength((u + 1) % d.len);
+      const ang = Math.atan2(q2.y - p.y, q2.x - p.x) * 180 / Math.PI + (s.sg < 0 ? 180 : 0);
+      d.a.setAttribute('transform', `translate(${p.x.toFixed(1)} ${p.y.toFixed(1)}) rotate(${ang.toFixed(0)})`);
+    }
+    for (const d of circDots) { const [x, y] = onRect(d.r, d.d0 + off * 0.8); d.c.setAttribute('cx', x.toFixed(1)); d.c.setAttribute('cy', y.toFixed(1)); }
+  }
+  function tick(ts) {
+    const dt = last === null ? 0 : Math.min((ts - last) / 1000, 0.05); last = ts;
+    if (playing && s.Phi > 0) { off += s.sg * Math.min(70 * s.B, 160) * dt; placeDots(); }
+    requestAnimationFrame(tick);
+  }
+  function setPlaying(on) { playing = on; $('play').textContent = on ? '❚❚ Pause' : '▶ Play'; }
+
+  [iN, iI, iG, iM].forEach(el => el.addEventListener('input', compute));
+  $('mLin').addEventListener('click', () => { model = 'lin'; compute(); });
+  $('mSat').addEventListener('click', () => { model = 'sat'; compute(); });
+  $('play').addEventListener('click', () => setPlaying(!playing));
+  document.querySelectorAll('#presets button').forEach(b => b.addEventListener('click', () => {
+    const [N, I, g, m, md] = b.dataset.p.split(',');
+    iN.value = N; iI.value = I; iG.value = g; iM.value = m; model = md; compute();
+  }));
+
+  // When embedded in a remark.js deck, let slide keys pass through to the deck.
+  window.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT') return;
+    const nav = {ArrowRight: 'gotoNextSlide', PageDown: 'gotoNextSlide', ArrowLeft: 'gotoPreviousSlide', PageUp: 'gotoPreviousSlide'}[e.key];
+    if (e.key === ' ') { e.preventDefault(); $('play').click(); return; }
+    try { if (nav && window.parent !== window && window.parent.slideshow) window.parent.slideshow[nav](); } catch (_) {}
+  });
+
+  // ---------- quiz ----------
+  const QUIZ = [
+    ['Exercise: μ<sub>r</sub> = 4000, l = 500 mm, A = 2500 mm². What is the core reluctance in terms of μ<sub>0</sub>?',
+     'ℛ<sub>c</sub> = l / (μ<sub>0</sub>μ<sub>r</sub>A) = 0.5 / (4000 · 2.5·10⁻³ · μ<sub>0</sub>) = 0.05/μ<sub>0</sub> ≈ 39.8 kA/Wb. Press <b>Exercise: no gap</b> to check.'],
+    ['Add the 3 mm air gap. What is ℛ<sub>g</sub>, and how does it compare with ℛ<sub>c</sub>?',
+     'ℛ<sub>g</sub> = 3·10⁻³ / (2.5·10⁻³ · μ<sub>0</sub>) = 1.2/μ<sub>0</sub> ≈ 955 kA/Wb: 24× the core, although the gap is only 0.6% of the path length.'],
+    ['N = 5, I = 10 A, no gap. Find H and B in the core.',
+     'ℱ = 50 A·t, so H = ℱ/l = 100 A/m and B = μ<sub>0</sub>μ<sub>r</sub>H ≈ 0.50 T (Φ ≈ 1.26 mWb).'],
+    ['Same coil, now with the 3 mm gap. What happens to B, and where does the MMF go?',
+     'B drops to ≈ 0.02 T (25× less). About 96% of the MMF is spent across the gap: air is a circuit element in magnetic circuits.'],
+    ['With the 3 mm gap, double μ<sub>r</sub> from 4000 to 8000. Does the flux double? Try it, then remove the gap.',
+     'With the gap, Φ hardly changes (+2%): ℛ<sub>g</sub> dominates. Without the gap, Φ doubles. This is why gapped cores give predictable inductors.'],
+    ['Double the current. Does the flux double?',
+     'In the linear model, yes: ℱ doubles, so Φ = ℱ/ℛ doubles. Press <b>Saturation</b> and change I: in real iron, B barely rises once it passes ~1.5 T.'],
+    ['Linear iron, N = 200, I = 20 A, no gap. What B does the model predict? Is it possible?',
+     'B ≈ 40 T. Not possible: iron saturates around 1.6–1.8 T, so B = μH with constant μ only holds below the knee of the B–H curve.'],
+    ['Inductance is flux linkage per ampere: L = λ/i. Show that for a linear core L = N²/ℛ.',
+     'λ = NΦ and Φ = ℱ/ℛ = Ni/ℛ, so λ = N²i/ℛ and L = λ/i = N²/ℛ. The core and gap reluctances are in series, so ℛ = ℛ<sub>c</sub> + ℛ<sub>g</sub>.'],
+    ['Exercise core, N = 5, no gap. What is L? Now add the 3 mm gap.',
+     'No gap: L = 25 / 39.8k ≈ 0.63 mH. With the gap: L = 25 / (39.8k + 955k) ≈ 25 µH, 25× smaller.'],
+    ['Double N from 5 to 10 turns. What happens to L, and why is it not just doubled?',
+     'L rises 4×: L ∝ N². Doubling N doubles ℱ (so Φ doubles) and each of the doubled turns links that flux (so λ doubles again).'],
+    ['With the 3 mm gap, the core reluctance is small. Estimate L using only the gap: L ≈ μ<sub>0</sub>N²A/g.',
+     'L ≈ 4π·10⁻⁷ · 25 · 2.5·10⁻³ / 3·10⁻³ ≈ 26 µH, close to the full answer of 25 µH. A gapped inductor is set by its gap, not by μ<sub>r</sub> (try changing μ<sub>r</sub>).'],
+    ['You need L = 100 µH from the gapped core (3 mm). How many turns?',
+     'N = √(L·ℛ) = √(100·10⁻⁶ · 995·10³) ≈ 10 turns. Set N = 10 and check.'],
+    ['Press <b>Saturation</b>, then increase I. What happens to L = λ/i and dλ/di?',
+     'Both fall: once the iron saturates, extra current adds little flux. At N = 200, I = 10 A, L = λ/i ≈ 78 mH, far below the unsaturated N²/ℛ ≈ 1 H. An air gap makes L stay constant up to higher currents.'],
+  ];
+  let qi = 0;
+  function showQ() {
+    $('qn').textContent = `(${qi + 1}/${QUIZ.length})`;
+    $('qq').innerHTML = QUIZ[qi][0]; $('qa').innerHTML = QUIZ[qi][1]; $('qa').style.display = 'none';
+    $('qshow').textContent = 'Show answer';
+  }
+  $('qshow').addEventListener('click', () => {
+    const on = $('qa').style.display !== 'block';
+    $('qa').style.display = on ? 'block' : 'none'; $('qshow').textContent = on ? 'Hide answer' : 'Show answer';
+  });
+  $('qnext').addEventListener('click', () => { qi = (qi + 1) % QUIZ.length; showQ(); });
+
+  setPlaying(playing); compute(); showQ(); requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
