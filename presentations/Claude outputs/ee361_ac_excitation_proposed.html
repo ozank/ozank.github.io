@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ee361_ac_excitation — Proposed Changes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <base href="../">
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      /* --- review markup --- */
+      .badge { position:absolute; top:14px; right:18px; padding:4px 12px; border-radius:6px;
+               font:bold 15px/1.3 system-ui,sans-serif; color:#fff; z-index:5; }
+      .badge.new { background:#16a34a; }
+      .badge.changed { background:#2563eb; }
+      .badge.remove { background:#dc2626; }
+      .badge.merge { background:#9333ea; }
+      .badge.keep { background:#6b7280; }
+      .added { background:#dcfce7; border-left:4px solid #16a34a; padding:0 8px; display:inline-block; }
+      div.added { display:block; }
+      .deleted { background:#fee2e2; color:#b91c1c; text-decoration:line-through; padding:0 6px; display:inline-block; }
+      div.deleted { display:block; }
+      .note { position:absolute; bottom:14px; left:20px; right:20px; font:italic 15px/1.35 system-ui,sans-serif;
+              color:#374151; background:#fef9c3; border:1px solid #facc15; border-radius:6px; padding:6px 10px; text-align:left; }
+      .remark-slide-content.removed > *:not(.badge):not(.note) { opacity:.3; }
+      .legend span { display:inline-block; min-width:110px; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-361 ELECTROMECHANICAL ENERGY CONVERSION
+
+## Ozan Keysan
+
+[keysan.me](http://keysan.me)
+
+Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Review copy: how to read it
+
+.legend[
+### <span class="badge new" style="position:static">NEW #</span> new slide
+### <span class="badge changed" style="position:static">CHANGED #</span> edited slide: .added[added text], .deleted[removed text]
+### <span class="badge remove" style="position:static">REMOVE #</span> slide to delete (faded)
+]
+
+### Numbers match `ee361_ac_excitation_changes.md`. Unmarked slides are unchanged.
+### Changes not visible on slides (#17, #19, #20) are listed on the last slide.
+
+---
+# What is an Inductor?
+--
+
+![](http://www.coilws.com/images/Inductors%20Group.jpg)
+
+---
+# Relation between Magnetic and Electric Circuits
+--
+
+## \\( V\_L = N \dfrac{d \Phi}{dt}= N \dfrac{d \Phi}{di} \dfrac{di}{dt}\\)
+--
+
+## \\( V\_L =L \dfrac{di}{dt}\\)
+
+---
+.badge.changed[CHANGED #2]
+
+# Inductance
+
+## Inductance is the flux linkage created per ampere
+
+## \\( L =  N \dfrac{d \Phi}{dI}= \dfrac{d \lambda}{d I}\\)
+
+.added[
+### In a linear core this is simply \\( L = \lambda / I \\). If the core saturates, the slope \\( d\lambda / dI \\) drops.
+]
+
+---
+# Inductance
+
+## If the inductance of an inductor with N turns is L. 
+## What happens to inductance if number of turns is doubled?
+---
+.badge.changed[CHANGED #1]
+
+### In linear systems (e.g. air-cored inductor):
+
+## \\( L =   \dfrac{d \lambda}{d I} =N \dfrac{\Phi}{I}\\)
+
+## \\( \Phi =   \dfrac{ N I}{\mathcal{R}} \\)
+
+## \\( L =  N \dfrac{\Phi}{I} = N \dfrac{N I }{I \mathcal{R}} =  \dfrac{N^2 }{\mathcal{R}}\\)
+
+.note[R → ℛ (reluctance), as in the magnetic circuits deck. Incremental reveals (--) kept in the real deck.]
+---
+.badge.changed[CHANGED #1]
+
+# Inductance
+
+
+## \\( L =   \dfrac{N^2}{\mathcal{R}} = \dfrac{N^2 \mu A }{l}\\)
+
+## Inductance increases with the square of number of turns \\(N^2\\)!
+
+---
+.badge.new[NEW #7]
+
+# Try it: Double the turns
+
+<iframe src="interactive/magnetic_circuit_explorer.html?embed&N=10&g=3" width="800" height="480" style="border:0"></iframe>
+
+#### Try it yourself: [keysan.me/presentations/interactive/magnetic_circuit_explorer.html](https://keysan.me/presentations/interactive/magnetic_circuit_explorer.html)
+---
+#Example
+
+## Toroidal Inductor
+
+<img src="https://5.imimg.com/data5/WK/MH/MY-36512415/toroidal-core-inductor-500x500.jpg" alt="Drawing" style="width: 500px;"/>
+---
+# Mutual Inductance:
+
+## Magnetic Interaction between two coils.
+
+## Exists if current in one coil induces voltage in another coil.
+
+[Example](https://www.miniphysics.com/uy1-mutual-inductance.html)
+
+---
+# Mutual Inductance:
+
+## \\( V_{2} = M \frac{dI_1}{dt} \\)
+
+<img src="https://ozank.gitbooks.io/ee361/content/images/mutual_flux.png" alt="Drawing" style="width: 380px;"/>
+
+---
+.badge.new[NEW #8]
+
+# Coupling Coefficient
+
+## Not all flux of coil 1 links coil 2 (leakage flux)
+--
+
+## \\( M = k \sqrt{L\_1 L\_2} \qquad 0 \le k \le 1 \\)
+--
+
+### k ≈ 1: coils on a shared iron core (transformers)
+### k ≪ 1: air-cored coils far apart
+--
+
+### On a shared core with no leakage: \\( M = \dfrac{N\_1 N\_2}{\mathcal{R}} \\)
+
+---
+class: removed
+.badge.remove[REMOVE #18]
+
+# Example
+
+.note[Empty slide. Replaced by #9 (series connected coupled coils).]
+---
+### What is the equivalent inductance if two inductors are connected in series?
+<img src="https://image.shutterstock.com/shutterstock/photos/2050849352/display_1500/stock-photo-electronic-components-to-receiving-radio-frequency-signal-on-green-printed-circuit-board-planar-2050849352.jpg" alt="Drawing" style="width: 380px;"/>
+--
+
+### \\(L_{eq} \ne L_1 + L_2\\) if there is mutual inductance between coils
+--
+
+### Equivalent inductance can be larger or smaller depending on the mutual inductance 
+---
+.badge.new[NEW #9]
+
+# Series Connected Coupled Coils
+
+### Same current through both coils. The dots show the winding direction.
+--
+
+## Series aiding: \\( L\_{eq} = L\_1 + L\_2 + 2M \\)
+--
+
+## Series opposing: \\( L\_{eq} = L\_1 + L\_2 - 2M \\)
+--
+
+### Measure both and find \\( M = \dfrac{L\_{aid} - L\_{opp}}{4} \\)
+
+---
+.badge.new[NEW #10]
+
+# Try it: Series Aiding vs. Opposing
+
+<iframe src="interactive/coupled_coils_explorer.html?embed&conn=aid&k=0.8" width="800" height="420" style="border:0"></iframe>
+
+#### Try it yourself: [keysan.me/presentations/interactive/coupled_coils_explorer.html](https://keysan.me/presentations/interactive/coupled_coils_explorer.html)
+---
+
+## Why we use twisted pair cables?
+<img src="https://stl.tech/wp-content/uploads/2022/05/Picture5-3.jpg" alt="Drawing" style="width: 800px;"/>
+
+---
+.badge.changed[CHANGED #4]
+
+## Why we use twisted pair cables?
+
+<img src="https://www.smar.com.br/public/img/2012_01_03-05.jpg" alt="Drawing" style="width: 800px;"/>
+
+.deleted[Twisted pair cables minimized the Mutual inductance from noise generating coils by minimizing net flux linkage.]
+
+.added[
+### Twisting minimizes the mutual inductance to nearby noise sources: the voltages induced in neighbouring loops cancel, so the net flux linkage is close to zero.
+]
+
+---
+.badge.changed[CHANGED #6]
+
+# Mutual Inductance:
+
+## Stored Energy in two inductances
+--
+
+## \\(= \dfrac{1}{2} L\_{1}i\_1^2 + \dfrac{1}{2} L\_{2}i\_2^2 +  M i\_1 i\_2\\)
+--
+
+### In the matrix form
+
+### \\(W\_{mag}=\dfrac{1}{2}  \begin{bmatrix}  i\_1 & i\_2  \end{bmatrix} \begin{bmatrix}  L\_{1} & M \\\ M & L\_{2} \end{bmatrix} \begin{bmatrix}  i\_1 \\\ i\_2  \end{bmatrix}\\)
+
+.note[L₁₁, L₂₂ → L₁, L₂ to match the other slides.]
+---
+.badge.new[NEW #11]
+
+# Try it: Can the Mutual Term be Negative?
+
+<iframe src="interactive/coupled_coils_explorer.html?embed&conn=sep&k=0.6&i1=5&i2=-5" width="800" height="420" style="border:0"></iframe>
+
+#### Try it yourself: [keysan.me/presentations/interactive/coupled_coils_explorer.html](https://keysan.me/presentations/interactive/coupled_coils_explorer.html)
+---
+.badge.changed[CHANGED #3]
+
+# AC Excitation
+
+## \\(\Phi(t) = \Phi_{max} \sin (\omega t)\\)
+
+### Linear magnetic material
+
+<img src="http://www.ibiblio.org/kuphaldt/electricCircuits/AC/02307.png" alt="Drawing" style="width: 800px;"/>
+
+.note[w → ω]
+---
+.badge.new[NEW #12]
+
+# Voltage Sets the Flux
+
+## \\( v(t) = N \dfrac{d\Phi}{dt} = N \omega \Phi\_{max} \cos(\omega t) \\)
+--
+
+## \\( V\_{rms} = \dfrac{2 \pi}{\sqrt{2}} f N \Phi\_{max} = 4.44 \, f N A B\_{max} \\)
+--
+
+### The supply (V and f) fixes the flux. The current is whatever the core needs to create that flux.
+--
+
+### Example: 230 V, 50 Hz, N = 300, A = 25 cm². What is \\(B\_{max}\\)?
+
+---
+#AC Excitation Non-linear B-H material
+
+<img src="http://upload.wikimedia.org/wikipedia/commons/8/81/Power_Transformer_Over-Excitation.gif" alt="Drawing" style="width: 500px;"/>
+---
+.badge.new[NEW #13]
+
+# Try it: Linear vs. Saturating Core
+
+<iframe src="interactive/ac_excitation_explorer.html?embed&model=lin" width="800" height="480" style="border:0"></iframe>
+
+#### Try it yourself: [keysan.me/presentations/interactive/ac_excitation_explorer.html](https://keysan.me/presentations/interactive/ac_excitation_explorer.html)
+---
+.badge.new[NEW #14]
+
+# What if the Frequency Drops?
+
+## \\( B\_{max} = \dfrac{V\_{rms}}{4.44 \, f N A} \\)
+--
+
+### A 60 Hz transformer connected to a 50 Hz grid carries 20% more flux
+--
+
+### This is why AC motor drives keep V/f constant
+
+---
+.badge.changed[CHANGED #5]
+
+## Variation of inductance with current
+
+<img src="https://www.researchgate.net/publication/338786751/figure/fig3/AS:850682408103936@1579829899639/Magnetization-curve-of-the-non-linear-inductor.ppm" alt="Drawing" style="width: 350px;"/>
+<img src="https://industrial.panasonic.com/content/data/common/ss-files/tech19-07_ww.png" alt="Drawing" style="width: 380px;"/>
+
+.deleted[If the core saturates with current, inductance get lower]
+.added[
+### If the core saturates, the inductance gets lower: \\( L = d\lambda/di \\) is the slope of the curve.
+]
+---
+# AC Excitation
+### Non-linear B-H material
+<img src="http://www.ibiblio.org/kuphaldt/electricCircuits/AC/02336.png" alt="Drawing" style="width: 800px;"/>
+
+---
+.badge.new[NEW #15]
+
+# Excitation Current
+
+## \\( i\_e(t) = i\_c(t) + i\_m(t) \\)
+
+### Core-loss component \\(i\_c\\): in phase with v, supplies hysteresis and eddy-current losses
+### Magnetizing component \\(i\_m\\): 90° behind v, creates the flux
+--
+
+### Energy lost per cycle = area of the B–H loop × core volume
+
+---
+.badge.new[NEW #16]
+
+# Try it: Core-loss and Magnetizing Current
+
+<iframe src="interactive/ac_excitation_explorer.html?embed&model=hys" width="800" height="480" style="border:0"></iframe>
+
+#### Try it yourself: [keysan.me/presentations/interactive/ac_excitation_explorer.html](https://keysan.me/presentations/interactive/ac_excitation_explorer.html)
+---
+## You can download this presentation from: [keysan.me/ee361](http://keysan.me/ee361)
+
+---
+
+.badge.keep[NOT VISIBLE ON SLIDES]
+
+# Other changes
+
+### **#17** Remove the broken `MathJax.Hub.Queue(...)` block (jQuery `$` isn't loaded), as in the other decks
+### **#19** Delete the commented-out review block at the top and the hysteresis/phasor block at the end (it links to EE281)
+### **#20** Hot-linked images (shutterstock watermark, researchgate .ppm, commercial sites): copy to `images/ee361/` or replace
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>

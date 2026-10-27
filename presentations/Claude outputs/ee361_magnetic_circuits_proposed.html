@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ee361_magnetic_circuits — Proposed Changes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <base href="../">
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      /* --- review markup --- */
+      .badge { position:absolute; top:14px; right:18px; padding:4px 12px; border-radius:6px;
+               font:bold 15px/1.3 system-ui,sans-serif; color:#fff; z-index:5; }
+      .badge.new { background:#16a34a; }
+      .badge.changed { background:#2563eb; }
+      .badge.remove { background:#dc2626; }
+      .badge.merge { background:#9333ea; }
+      .badge.keep { background:#6b7280; }
+      .added { background:#dcfce7; border-left:4px solid #16a34a; padding:0 8px; display:inline-block; }
+      div.added { display:block; }
+      .deleted { background:#fee2e2; color:#b91c1c; text-decoration:line-through; padding:0 6px; display:inline-block; }
+      div.deleted { display:block; }
+      .note { position:absolute; bottom:14px; left:20px; right:20px; font:italic 15px/1.35 system-ui,sans-serif;
+              color:#374151; background:#fef9c3; border:1px solid #facc15; border-radius:6px; padding:6px 10px; text-align:left; }
+      .remark-slide-content.removed > *:not(.badge):not(.note) { opacity:.3; }
+      .placeholder { margin:20px auto; width:760px; height:380px; border:3px dashed #9ca3af; border-radius:12px;
+                     display:flex; align-items:center; justify-content:center; color:#6b7280;
+                     font:20px/1.4 system-ui,sans-serif; text-align:center; }
+      .two img { width:45%; margin:0 2%; vertical-align:top; }
+      .legend span { display:inline-block; min-width:110px; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-361 ELECTROMECHANICAL ENERGY CONVERSION
+
+## Ozan Keysan
+
+[keysan.me](http://keysan.me)
+
+Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Review copy: how to read it
+
+.legend[
+### <span class="badge new" style="position:static">NEW #</span> new slide
+]
+
+### Numbers match `ee361_magnetic_circuits_changes.md`. Unmarked slides are unchanged.
+### New here: #1.
+
+---
+# Electric Circuits vs. Magnetic Circuits
+
+## Electric Materials
+--
+
+## Conductors:
+--
+ Copper, Aluminium, Iron...
+--
+
+## Insulators: Plastic, Air...
+---
+# Electric Circuits vs. Magnetic Circuits
+
+## What is the best conductor?
+
+--
+- ## **Copper:** \\(1.68 \; 10^{-8} \; \Omega.m \\)
+
+--
+- ## **Aluminium:** \\(2.82\; 10^{-8} \; \Omega.m \\)
+--
+
+- ## **Silver:** \\(1.59 \; 10^{-8} \; \Omega.m \\)
+
+--
+- ## **Gold:** \\(2.44 \; 10^{-8} \; \Omega.m \\)
+---
+### Why some connectors are gold plated?
+--
+
+<img src="https://productimages.hepsiburada.net/s/194/550/110000162422826.jpg" alt="Drawing" style="width: 300px;"/>
+
+### Gold Plated High Speed HDMI cable [>30.000 TL](https://www.hepsiburada.com/audioquest-cherry-cola-active-optical-hdmi-kablo-5m-p-HBV00000SX5L2): SCAM!
+
+
+AudioQuest's sophisticated Noise-Dissipation System combines RF noise-absorbing carbon and directionality-controlled silver-plated conductors to minimize the distortion caused by RF interference, ensuring a fully immersive entertainment experience ??
+
+---
+# Electric vs. Magnetic Materials
+--
+
+## Conductors --> 
+--
+Ferromagnets
+--
+ (e.g. Iron, Cobalt)
+
+## Large permeability ( `\(\mu_r >> 1\)`)
+<img src="https://c1.staticflickr.com/3/2716/4468925382_6c3ceecbfe.jpg" alt="Drawing" style="width: 450px;"/>
+---
+# Electric vs. Magnetic Materials
+
+## Insulator --> Non-magnetic
+--
+
+### (e.g. Plastic, Copper, Aluminium )
+---
+# How do you mine Iron ore?
+--
+
+## Use a magnetic separator
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PMxjordJ73o?rel=0" frameborder="0" allowfullscreen></iframe>
+--
+
+## [How do you recycle a car?](https://youtu.be/bh8j_N0OUSE?t=607)
+
+
+---
+# Non-magnetic Materials
+--
+
+## Paramagnetic 
+### ( `\(\mu_r \gtrsim 1\)`) (very slightly attracted)
+### E.g.:Aluminium
+--
+
+## Diamagnetic 
+### ( `\(\mu_r \lesssim 1\)`) (very slightly repulsed)
+
+### E.g.: Copper, Water, [Frogs](https://www.youtube.com/watch?v=KlJsVqc0ywM), [Diamagnetism of Water](https://www.youtube.com/watch?v=gJeqriqRYYE)
+
+---
+# Electric Circuits
+
+## Analogy to Hydraulic System
+
+### - Voltage --> Pressure
+### - Electric Current --> Water Current
+### - Hydraulic Resistance --> Resistance
+
+
+---
+
+# Magnetic Circuits
+
+## Magnetic circuits are analogous to electric circuits:
+
+<img src="magnetic_electric_circuit.png" alt="Drawing" style="width: 800px;"/>
+---
+# Conducting Materials: 
+--
+
+# Electric Circuits:
+
+--
+
+## - Copper
+## - Aluminium
+
+--
+
+# Magnetic Circuits:
+--
+
+## - Iron
+## - Electrical Steel
+
+---
+# Insulating Materials: 
+--
+
+## Electric Circuits:
+
+--
+
+## - Air, Plastics
+
+--
+
+## Magnetic Circuits:
+--
+
+## - Air, Copper, Aluminium
+
+---
+# Magnetic vs Electric Circuit
+--
+
+## Conductivity of Copper vs Air?
+--
+
+### Copper is \\(10^{22}\\) times more conductive than air.
+--
+
+### Copper is \\(10^{7}\\) times more conductive than sea water.
+
+---
+# Magnetic vs Electric Circuit
+--
+
+## How about Magnetic Circuits?
+--
+
+## Iron is JUST 3000 times more "permeable" than air
+
+## Therefore, air is a circuit element in magnetic circuits!
+
+---
+# Magnetic Circuits
+
+## Flux (Wb)
+--
+
+## Flux Density (Wb/m\\(^2\\) or T)
+--
+
+## Magneto-motive Force (MMF), (A.turns)
+
+---
+# Magnetic Circuits and Maxwell Equations:
+
+#### $$\textrm{Gauss' Law}\quad \nabla \cdot \vec{E}  =  \frac{\rho}{\varepsilon_0} $$
+#### $$\textrm{Gauss' Law ($\vec{B}$ Fields)} \quad \nabla \cdot \vec{B}  =  0 $$
+#### $$\textrm{Faraday's Law} \quad \nabla \times\quad \vec{E}  = - \frac{\partial \vec{B}}{\partial t}$$
+#### $$\textrm{Ampere's Law} \quad \nabla \times \vec{B}  =  \mu_0 \vec{J} + \mu_0\varepsilon_0\frac{\partial \vec{E}}{\partial t}$$
+
+####For curious students:
+
+#### - [Maxwell Equations](http://www.maxwells-equations.com/)
+#### - [Who's afraid of Maxwell equations?](https://www.majr.com/wp-content/uploads/2018/04/Elya-Joffe-Whos-Afraid-of-Maxwells-Equations-Pittsburgh-EMC-Chapter.compressed.pdf)
+#### - [An Intuitive Guide to Maxwell’s Equations](https://photonlines.substack.com/p/an-intuitive-guide-to-maxwells-equations)
+
+---
+# Ampere's Law
+
+### \\(\oint_C {\vec{H}.d\vec{\ell}}\\)=
+--
+
+### \\( \iint_{closed S} \vec{J}dA = \sum I_n \\)
+
+#### Magnetic field intensity(H) is independent of the material properties!
+
+![](http://farside.ph.utexas.edu/teaching/302l/lectures/img740.png)
+
+---
+# Maxwell Equations:
+
+### $$\textrm{Gauss' Law ($\vec{E}$ Fields) }\quad \nabla \cdot \vec{E}  =  \frac{\rho}{\varepsilon_0} $$
+--
+
+### $$\textrm{Gauss' Law ($\vec{B}$ Fields)} \quad \nabla \cdot \vec{B}  =  0 $$
+--
+
+## Need a reminder for vector calculus?
+
+## [Curl](http://betterexplained.com/articles/vector-calculus-understanding-circulation-and-curl/), [Divergence](http://betterexplained.com/articles/divergence/), [Cross Product](http://betterexplained.com/articles/vector-calculus-understanding-the-dot-product/)
+
+---
+# Gauss Law (for Magnetism)
+
+## $$\nabla \cdot {B} =0$$
+
+## $$\oint_S {B dA} = 0$$
+
+
+## Practical Meaning: 
+### - There are no magnetic flux sources. 
+### - No magnets with single pole!
+---
+
+# Ohm's Law (for Magnetic Circuit)
+
+## Electric Circuits: \\(\quad \quad V=IR\\)
+--
+
+## Magnetic Circuits: \\( \quad \quad \mathcal{F} = \Phi \mathcal{R} \\)
+--
+
+## Electrical Resistance: \\(\quad  R = \frac{\rho l}{A} = \frac{l}{\sigma A}\\)
+--
+
+## Magnetic Reluctance: \\(\quad \quad \mathcal{R} = \frac{l}{\mu A}\\)
+
+---
+# Current Density vs. Magnetic Flux Density
+
+## Current Density = Conductivity x Electric Field
+
+## $$\vec{J}=\sigma \vec{E}$$
+
+--
+## Flux Density = Permeability x Magnetic Field
+
+## $$\vec{B} = \mu \vec{H}$$
+
+---
+#Permeability
+
+## Permeability of free space:
+
+## $$\mu_0 = 4 \pi 10^{-7} \quad H/m$$
+
+--
+
+## Common to define permeability relative to vacuum:
+
+## $$\mu = \mu_o . \mu_r$$
+
+---
+# Exercise
+
+### Calculate the reluctance of the iron core in terms of \\(\mu_0\\), assuming \\(\mu_r=4000\\), \\(l=500 mm\\), \\(A_c=2500mm^2\\).
+
+<img src="./images/ee361/c_core1.jpg" alt="Drawing" style="width: 600px;"/>
+
+### Don't forget to convert to SI units (e.g. mm to m).
+ 
+---
+# Exercise
+
+### Now, calculate the reluctance again with the air-gap added as below. Relative permeability of air is 1, and assume the air-gap is 3 mm.
+
+<img src="./images/ee361/c_core2.png" alt="Drawing" style="width: 800px;"/>
+
+---
+#Draw Equivalent Circuits:
+--
+<img src="./images/ee361/c_core3.png" alt="Drawing" style="width: 800px;"/>
+
+---
+## [Solutions](./files/ee361-reluctance-solved.pdf)
+
+---
+.badge.new[NEW #1]
+
+# Try it: Reluctance of the C-core
+
+<iframe src="interactive/magnetic_circuit_explorer.html?embed&g=3" width="800" height="480" style="border:0"></iframe>
+
+#### Try it yourself: [keysan.me/presentations/interactive/magnetic_circuit_explorer.html](https://keysan.me/presentations/interactive/magnetic_circuit_explorer.html)
+---
+## You can download this presentation from: [keysan.me/ee361](http://keysan.me/ee361)
+
+
+---
+
+.badge.keep[NOT VISIBLE ON SLIDES]
+
+# Other changes
+
+### **#4** Remove the broken `MathJax.Hub.Queue(...)` block in both decks (jQuery `$` isn't loaded), as in the 3-phase deck
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+      MathJax.Hub.Queue(function() {
+          $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+              return(elem.SourceElement());
+          }).parent().addClass('has-jax');
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AC Excitation Explorer</title>
+<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1f2937; --muted:#6b7280; --grid:#e5e7eb; --panel:#f8fafc;
+    --v:#dc2626; --b:#2563eb; --i:#7c3aed; --ic:#059669; --im:#b45309; --sat:#fef3c7;
+    --neg:#dc2626; --ok:#047857;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);
+    font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:940px;margin:0 auto;padding:6px 14px 10px}
+  header h1{font-family:'Yanone Kaffeesatz',sans-serif;font-weight:400;font-size:30px;margin:2px 0 0}
+  header p{margin:0 0 4px;color:var(--muted)}
+  svg{width:100%;height:auto;display:block;user-select:none}
+  svg text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .figs{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"time right";gap:4px 16px;align-items:start}
+  #time{grid-area:time} #right{grid-area:right}
+  .panel-t{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:2px 0 0}
+  .controls{display:flex;flex-wrap:wrap;gap:4px 22px;align-items:center;margin-top:6px}
+  .slider{display:flex;align-items:center;gap:8px;flex:1 1 260px;min-width:0}
+  .slider label{white-space:nowrap;font-weight:600;min-width:118px}
+  .slider input{flex:1;min-width:0;accent-color:#374151}
+  .buttons{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .buttons .lbl{font-size:12px;color:var(--muted);margin-right:-2px}
+  .sep{width:1px;height:22px;background:var(--grid);margin:0 4px}
+  button{font:inherit;font-size:13px;padding:4px 11px;border:1px solid #d1d5db;border-radius:6px;
+    background:#fff;color:var(--fg);cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+  button:hover{background:#f3f4f6}
+  button.on{background:#1f2937;color:#fff;border-color:#1f2937}
+  input[type=range]{height:28px;touch-action:pan-y}
+  .readout{display:grid;grid-template-columns:repeat(4,1fr);gap:2px 14px;font-size:13px;margin-top:8px;
+    background:var(--panel);padding:7px 11px;border-radius:8px;border:1px solid var(--grid)}
+  .readout .k{color:var(--muted)}
+  .readout .full{grid-column:1/-1}
+  .warn{color:var(--neg);font-weight:600}
+  .okc{color:var(--ok);font-weight:600}
+  .quiz{margin-top:10px;background:var(--panel);border:1px solid var(--grid);border-radius:8px;padding:7px 11px}
+  .quiz h3{margin:0 0 3px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .quiz .q{font-weight:600}
+  .quiz .a{margin-top:4px;color:var(--ok);display:none}
+  .quiz .row{display:flex;gap:6px;margin-top:6px}
+
+  /* embedded in a slide (iframe ~800 × 480) */
+  body.embed header, body.embed .quiz, body.embed .readout .hide-embed, body.embed .panel-t{display:none}
+  body.embed .wrap{padding:0 6px 2px}
+  body.embed .figs{gap:0 10px}
+  body.embed .controls{gap:0 16px;margin-top:0}
+  body.embed .slider label{font-size:13px;min-width:100px}
+  body.embed .slider input{height:22px}
+  body.embed .buttons{gap:4px}
+  body.embed button{font-size:12px;padding:2px 8px}
+  body.embed .readout{margin-top:2px;padding:3px 9px;font-size:12px}
+
+  @media (max-width:700px){
+    .wrap{display:flex;flex-direction:column;padding:4px 8px 14px}
+    .figs{display:contents}
+    header{order:0} #time{order:1} .controls{order:2} #right{order:3} .readout{order:4} .quiz{order:5}
+    header h1{font-size:26px}
+    .panel-t{margin-top:10px}
+    .controls{gap:6px;margin-top:4px}
+    .slider{flex:1 1 100%}
+    .slider label{min-width:112px;font-size:15px}
+    input[type=range]{height:36px}
+    input[type=range]::-webkit-slider-thumb{width:26px;height:26px}
+    input[type=range]::-moz-range-thumb{width:26px;height:26px}
+    .buttons{width:100%}
+    .buttons button{flex:1;min-height:42px;font-size:14px;padding:6px 4px}
+    .buttons .lbl{width:100%}
+    .sep{display:none}
+    .readout{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>AC Excitation Explorer</h1>
+    <p>A sinusoidal voltage on an N-turn coil sets the flux; the B–H curve of the iron decides the current. Core: l = 500 mm, A = 2500 mm² (winding resistance and leakage neglected).</p>
+  </header>
+
+  <div class="figs">
+    <div id="time">
+      <div class="panel-t">Waveforms (slow motion)</div>
+      <svg id="svgT" viewBox="0 0 400 312" role="img" aria-label="Voltage, flux density and current waveforms"></svg>
+    </div>
+    <div id="right">
+      <div class="panel-t">Core B–H curve</div>
+      <svg id="svgBH" viewBox="0 0 400 218" role="img" aria-label="B-H curve with operating point"></svg>
+      <div class="panel-t">Current harmonics (% of fundamental)</div>
+      <svg id="svgH" viewBox="0 0 400 92" role="img" aria-label="Current harmonic spectrum"></svg>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="slider">
+      <label for="iV">V = <span id="vV"></span></label>
+      <input id="iV" type="range" min="0" max="300" step="1">
+    </div>
+    <div class="slider">
+      <label for="iF">f = <span id="vF"></span></label>
+      <input id="iF" type="range" min="25" max="100" step="1">
+    </div>
+    <div class="slider">
+      <label for="iN">N = <span id="vN"></span> turns</label>
+      <input id="iN" type="range" min="100" max="600" step="10">
+    </div>
+    <div class="buttons">
+      <span class="lbl">Iron:</span>
+      <button id="mLin">Linear</button><button id="mSat">Saturating</button><button id="mHys">Hysteresis</button>
+      <span class="sep"></span>
+      <button id="play">❚❚ Pause</button>
+    </div>
+    <div class="buttons" id="presets">
+      <span class="lbl">Try:</span>
+      <button data-p="230,50,300">230 V, 50 Hz</button>
+      <button data-p="276,50,300">+20% voltage</button>
+      <button data-p="230,40,300">40 Hz supply</button>
+      <button data-p="230,50,250">Fewer turns</button>
+    </div>
+  </div>
+
+  <div class="readout" id="out"></div>
+
+  <div class="quiz">
+    <h3>Check yourself <span id="qn"></span></h3>
+    <div class="q" id="qq"></div>
+    <div class="a" id="qa"></div>
+    <div class="row buttons"><button id="qshow">Show answer</button><button id="qnext">Next ▶</button></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const $ = id => document.getElementById(id);
+  const q = new URLSearchParams(location.search);
+  if (q.has('embed')) document.body.classList.add('embed');
+
+  const MU0 = 4e-7 * Math.PI, AREA = 2.5e-3, LEN = 0.5, MUR = 4000, VOL = AREA * LEN;
+  const WIN = 0.04;            // 40 ms time window
+  const SLOW = 100;            // slow-motion factor for the cursor
+  const NS = 600;              // samples in the window
+  const C = {v:'#dc2626', b:'#2563eb', i:'#7c3aed', ic:'#059669', im:'#b45309', grid:'#e5e7eb', mut:'#6b7280', fg:'#1f2937'};
+
+  const iV = $('iV'), iF = $('iF'), iN = $('iN');
+  iV.value = +q.get('V') || 230; iF.value = +q.get('f') || 50; iN.value = +q.get('N') || 300;
+  let model = ({lin:'lin', sat:'sat', hys:'hys'})[q.get('model')] || 'sat';
+  let playing = q.get('play') !== '0';
+
+  // ----- material model: H as a function of B -----
+  const Hlin = B => B / (MU0 * MUR);
+  const Hanh = B => model === 'lin' ? Hlin(B) : Hlin(B) + 400 * Math.sign(B) * Math.pow(Math.abs(B) / 1.5, 15);
+  const HcOf = Bm => model === 'hys' ? 80 * Bm / 1.5 : 0;   // loop half-width at B = 0 (A/m)
+
+  // ----- helpers -----
+  function nice(x) {
+    if (!(x > 0)) return 1;
+    const p = Math.pow(10, Math.floor(Math.log10(x)));
+    for (const m of [1, 2, 5, 10]) if (m * p >= x * 0.999) return m * p;
+    return 10 * p;
+  }
+  function fmt(x, d = 3) {
+    if (!isFinite(x)) return '—';
+    const a = Math.abs(x);
+    if (a === 0) return '0';
+    if (a >= 1000) return x.toFixed(0);
+    return (+x.toPrecision(d)).toString();
+  }
+  function fmtA(x) { return Math.abs(x) < 1 ? fmt(x * 1000) + ' mA' : fmt(x) + ' A'; }
+  const svgNS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent) {
+    const e = document.createElementNS(svgNS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function txt(parent, x, y, s, attrs = {}) {
+    const t = el('text', Object.assign({x, y, 'font-size': 11, fill: C.mut}, attrs), parent);
+    t.innerHTML = s; return t;
+  }
+  const path = pts => 'M' + pts.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join('L');
+
+  // ----- state computed from sliders -----
+  let S = {};
+  function compute() {
+    const V = +iV.value, f = +iF.value, N = +iN.value, w = 2 * Math.PI * f;
+    const Vpk = Math.SQRT2 * V;
+    const Bm = Vpk / (w * N * AREA);
+    const Hc = HcOf(Bm);
+    const t = [], v = [], B = [], im = [], ic = [], i = [];
+    for (let k = 0; k <= NS; k++) {
+      const tk = WIN * k / NS, th = w * tk;
+      const Bk = Bm * Math.sin(th);
+      const imk = Hanh(Bk) * LEN / N, ick = Hc * Math.cos(th) * LEN / N;
+      t.push(tk); v.push(Vpk * Math.cos(th)); B.push(Bk); im.push(imk); ic.push(ick); i.push(imk + ick);
+    }
+    // one-period analysis (Fourier, rms, loss)
+    const M = 1024; let s2 = 0, p = 0, ipk = 0, impk = 0;
+    const a = new Array(10).fill(0), b = new Array(10).fill(0);
+    for (let k = 0; k < M; k++) {
+      const th = 2 * Math.PI * k / M, Bk = Bm * Math.sin(th);
+      const imk = Hanh(Bk) * LEN / N, ik = imk + Hc * Math.cos(th) * LEN / N;
+      s2 += ik * ik; p += Vpk * Math.cos(th) * ik;
+      ipk = Math.max(ipk, Math.abs(ik)); impk = Math.max(impk, Math.abs(imk));
+      for (let n = 1; n <= 9; n += 2) { a[n] += ik * Math.cos(n * th); b[n] += ik * Math.sin(n * th); }
+    }
+    const harm = {};
+    for (let n = 1; n <= 9; n += 2) harm[n] = 2 / M * Math.hypot(a[n], b[n]);
+    S = {V, f, N, w, Vpk, Bm, Hc, t, v, B, im, ic, i,
+      Irms: Math.sqrt(s2 / M), P: p / M, ipk, impk, harm,
+      lam: N * Bm * AREA, Hmax: Math.max(...i.map(x => Math.abs(x))) * N / LEN};
+    $('vV').textContent = V + ' V rms'; $('vF').textContent = f + ' Hz'; $('vN').textContent = N;
+    ['mLin', 'mSat', 'mHys'].forEach((id, k) => $(id).classList.toggle('on', ['lin', 'sat', 'hys'][k] === model));
+    drawTime(); drawBH(); drawHarm(); readout();
+    cursor();
+  }
+
+  // ----- waveform panel -----
+  const T = {x0: 44, x1: 392, rows: [{y: 8, h: 88}, {y: 110, h: 88}, {y: 212, h: 88}]};
+  const tx = t => T.x0 + (T.x1 - T.x0) * t / WIN;
+  let curT = {};
+  function drawTime() {
+    const svg = $('svgT'); svg.innerHTML = '';
+    const rows = [
+      {key: 'v', lab: 'v(t)', col: C.v, max: 450, unit: 'V'},
+      {key: 'B', lab: 'B(t)', col: C.b, max: 2.2, unit: 'T'},
+      {key: 'i', lab: 'i(t)', col: C.i, max: nice(S.ipk * 1.05), unit: 'A'}];
+    rows.forEach((r, k) => {
+      const R = T.rows[k], mid = R.y + R.h / 2, sc = (R.h / 2) / r.max;
+      r.y = x => mid - x * sc; R.map = r.y;
+      // saturation band
+      if (r.key === 'B') {
+        el('rect', {x: T.x0, y: r.y(2.2), width: T.x1 - T.x0, height: r.y(1.6) - r.y(2.2), fill: '#fef3c7'}, svg);
+        el('rect', {x: T.x0, y: r.y(-1.6), width: T.x1 - T.x0, height: r.y(-2.2) - r.y(-1.6), fill: '#fef3c7'}, svg);
+        txt(svg, T.x1 - 4, r.y(1.9) + 4, 'saturation', {'text-anchor': 'end', 'font-size': 10, fill: '#b45309'});
+      }
+      el('line', {x1: T.x0, x2: T.x1, y1: mid, y2: mid, stroke: C.grid}, svg);
+      el('line', {x1: T.x0, x2: T.x0, y1: R.y, y2: R.y + R.h, stroke: C.grid}, svg);
+      txt(svg, T.x0 - 4, R.y + 9, fmt(r.max) + ' ' + r.unit, {'text-anchor': 'end', 'font-size': 9.5});
+      txt(svg, T.x0 - 4, R.y + R.h, '−' + fmt(r.max), {'text-anchor': 'end', 'font-size': 9.5});
+      txt(svg, 4, mid + 4, r.lab, {fill: r.col, 'font-weight': 600, 'font-size': 12});
+      const clip = y => Math.max(R.y - 2, Math.min(R.y + R.h + 2, y));
+      if (r.key === 'i' && model === 'hys') {
+        el('path', {d: path(S.t.map((t, j) => [tx(t), clip(r.y(S.im[j]))])), fill: 'none', stroke: C.im, 'stroke-width': 1.3, 'stroke-dasharray': '4 3'}, svg);
+        el('path', {d: path(S.t.map((t, j) => [tx(t), clip(r.y(S.ic[j]))])), fill: 'none', stroke: C.ic, 'stroke-width': 1.3, 'stroke-dasharray': '2 2'}, svg);
+      }
+      const arr = S[r.key];
+      el('path', {d: path(S.t.map((t, j) => [tx(t), clip(r.y(arr[j]))])), fill: 'none', stroke: r.col, 'stroke-width': 2}, svg);
+    });
+    // time axis
+    for (let ms = 0; ms <= 40; ms += 10) txt(svg, tx(ms / 1000), 312, ms + (ms === 40 ? ' ms' : ''), {'text-anchor': ms === 40 ? 'end' : 'middle', 'font-size': 10});
+    if (model === 'hys') {
+      txt(svg, T.x1, T.rows[2].y + 8, '<tspan fill="' + C.im + '">– – i<tspan baseline-shift="sub" font-size="8">m</tspan></tspan>  <tspan fill="' + C.ic + '">··· i<tspan baseline-shift="sub" font-size="8">c</tspan></tspan>', {'text-anchor': 'end', 'font-size': 11});
+    }
+    curT.line = el('line', {y1: 4, y2: 302, stroke: '#9ca3af', 'stroke-width': 1}, svg);
+    curT.dots = [C.v, C.b, C.i].map(c => el('circle', {r: 4, fill: c, stroke: '#fff', 'stroke-width': 1.5}, svg));
+    curT.rows = rows;
+  }
+
+  // ----- B-H panel -----
+  const P = {x0: 30, x1: 392, y0: 6, y1: 200};
+  let curBH = {};
+  function drawBH() {
+    const svg = $('svgBH'); svg.innerHTML = '';
+    const Hx = nice(Math.max(S.Hmax, 300) * 1.08);
+    const X = H => (P.x0 + P.x1) / 2 + H / Hx * (P.x1 - P.x0) / 2;
+    const Y = B => (P.y0 + P.y1) / 2 - B / 2.2 * (P.y1 - P.y0) / 2;
+    curBH.X = X; curBH.Y = Y;
+    el('rect', {x: P.x0, y: Y(2.2), width: P.x1 - P.x0, height: Y(1.6) - Y(2.2), fill: '#fef3c7'}, svg);
+    el('rect', {x: P.x0, y: Y(-1.6), width: P.x1 - P.x0, height: Y(-2.2) - Y(-1.6), fill: '#fef3c7'}, svg);
+    el('line', {x1: P.x0, x2: P.x1, y1: Y(0), y2: Y(0), stroke: C.grid}, svg);
+    el('line', {x1: X(0), x2: X(0), y1: P.y0, y2: P.y1, stroke: C.grid}, svg);
+    txt(svg, P.x1, Y(0) - 4, 'H', {'text-anchor': 'end', 'font-style': 'italic'});
+    txt(svg, X(0) + 5, P.y0 + 9, 'B', {'font-style': 'italic'});
+    txt(svg, P.x1, P.y1 + 14, fmt(Hx) + ' A/m', {'text-anchor': 'end', 'font-size': 10});
+    txt(svg, P.x0, P.y1 + 14, '−' + fmt(Hx), {'font-size': 10});
+    txt(svg, X(0) - 4, Y(2) + 4, '2 T', {'text-anchor': 'end', 'font-size': 10});
+    txt(svg, X(0) - 4, Y(-2) + 4, '−2 T', {'text-anchor': 'end', 'font-size': 10});
+    // full material curve (faint)
+    const pts = [];
+    for (let k = -200; k <= 200; k++) { const B = 2.2 * k / 200, H = Hanh(B); if (Math.abs(H) <= Hx * 1.02) pts.push([X(H), Y(B)]); }
+    el('path', {d: path(pts), fill: 'none', stroke: '#cbd5e1', 'stroke-width': 2}, svg);
+    // operating loop over one period
+    const loop = [];
+    for (let k = 0; k <= 400; k++) {
+      const th = 2 * Math.PI * k / 400, B = S.Bm * Math.sin(th);
+      loop.push([X(Hanh(B) + S.Hc * Math.cos(th)), Y(B)]);
+    }
+    el('path', {d: path(loop) + (model === 'hys' ? 'Z' : ''), fill: model === 'hys' ? 'rgba(124,58,237,.10)' : 'none', stroke: C.i, 'stroke-width': 2.2}, svg);
+    if (model === 'hys') txt(svg, P.x0 + 4, Y(1.15), 'loop area = energy lost per cycle', {'font-size': 10, fill: C.i});
+    curBH.dot = el('circle', {r: 5, fill: C.i, stroke: '#fff', 'stroke-width': 1.5}, svg);
+  }
+
+  // ----- harmonics panel -----
+  function drawHarm() {
+    const svg = $('svgH'); svg.innerHTML = '';
+    const x0 = 44, y0 = 74, h = 62, bw = 34;
+    el('line', {x1: x0, x2: 392, y1: y0, y2: y0, stroke: C.grid}, svg);
+    txt(svg, x0 - 4, y0 - h + 8, '100%', {'text-anchor': 'end', 'font-size': 9.5});
+    txt(svg, x0 - 4, y0, '0', {'text-anchor': 'end', 'font-size': 9.5});
+    const f1 = S.harm[1] || 1e-12;
+    [1, 3, 5, 7, 9].forEach((n, k) => {
+      const pc = S.ipk > 0 ? 100 * S.harm[n] / f1 : 0, hh = Math.min(1, pc / 100) * h;
+      const x = x0 + 18 + k * 68;
+      el('rect', {x, y: y0 - hh, width: bw, height: Math.max(hh, 0.5), fill: n === 1 ? C.i : '#a78bfa', rx: 2}, svg);
+      txt(svg, x + bw / 2, y0 + 13, n === 1 ? '1st (' + fmt(S.f) + ' Hz)' : n + (n === 3 ? 'rd' : 'th'), {'text-anchor': 'middle', 'font-size': 10});
+      if (n > 1) txt(svg, x + bw / 2, y0 - hh - 3, pc < 0.05 ? '0' : fmt(pc, 2) + '%', {'text-anchor': 'middle', 'font-size': 10, fill: C.fg});
+    });
+  }
+
+  function readout() {
+    const sat = S.Bm > 1.6;
+    const h3 = S.ipk > 0 ? 100 * S.harm[3] / S.harm[1] : 0;
+    let msg;
+    if (S.V === 0) msg = 'No voltage, no flux.';
+    else if (model === 'lin') msg = '<span class="okc">Linear iron: i(t) is a sinusoid, 90° behind v(t).</span>';
+    else if (sat) msg = '<span class="warn">Core saturating: the current becomes peaky and rich in odd harmonics.</span>';
+    else if (S.Bm > 1.2) msg = '<span class="okc">Near the knee: the current is already a little peaky (normal for a transformer).</span>';
+    else msg = '<span class="okc">Below the knee: current is nearly sinusoidal.</span>';
+    $('out').innerHTML =
+      `<div><span class="k">B<sub>max</sub></span> <b>${fmt(S.Bm)} T</b></div>` +
+      `<div><span class="k">Φ<sub>max</sub></span> ${fmt(S.Bm * AREA * 1000)} mWb</div>` +
+      `<div><span class="k">î</span> <b>${fmtA(S.ipk)}</b></div>` +
+      `<div><span class="k">I<sub>rms</sub></span> ${fmtA(S.Irms)}</div>` +
+      `<div class="hide-embed"><span class="k">V/f</span> ${fmt(S.V / S.f)} V/Hz</div>` +
+      `<div class="hide-embed"><span class="k">L = λ̂/î<sub>m</sub></span> ${S.impk > 0 ? fmt(S.lam / S.impk) + ' H' : '—'}</div>` +
+      `<div class="hide-embed"><span class="k">3rd harmonic</span> ${fmt(h3, 2)}%</div>` +
+      `<div class="hide-embed"><span class="k">Core loss</span> ${model === 'hys' ? fmt(S.P) + ' W' : '0 W'}</div>` +
+      `<div class="full">${msg}</div>`;
+  }
+
+  // ----- animation -----
+  let tc = 0, last = null;
+  function cursor() {
+    if (!S.t) return;
+    const j = Math.round(tc / WIN * NS);
+    const x = tx(S.t[j]);
+    curT.line.setAttribute('x1', x); curT.line.setAttribute('x2', x);
+    ['v', 'B', 'i'].forEach((k, n) => {
+      const R = T.rows[n], y = Math.max(R.y - 2, Math.min(R.y + R.h + 2, R.map(S[k][j])));
+      curT.dots[n].setAttribute('cx', x); curT.dots[n].setAttribute('cy', y);
+    });
+    const H = S.i[j] * S.N / LEN;
+    curBH.dot.setAttribute('cx', curBH.X(H)); curBH.dot.setAttribute('cy', curBH.Y(S.B[j]));
+  }
+  function tick(ts) {
+    if (playing && last !== null) tc = (tc + (ts - last) / 1000 / SLOW) % WIN;
+    last = ts; cursor(); requestAnimationFrame(tick);
+  }
+  function setPlaying(p) { playing = p; $('play').textContent = p ? '❚❚ Pause' : '▶ Play'; }
+
+  [iV, iF, iN].forEach(e => e.addEventListener('input', compute));
+  $('mLin').addEventListener('click', () => { model = 'lin'; compute(); });
+  $('mSat').addEventListener('click', () => { model = 'sat'; compute(); });
+  $('mHys').addEventListener('click', () => { model = 'hys'; compute(); });
+  $('play').addEventListener('click', () => setPlaying(!playing));
+  document.querySelectorAll('#presets button').forEach(b => b.addEventListener('click', () => {
+    const [V, f, N] = b.dataset.p.split(','); iV.value = V; iF.value = f; iN.value = N; compute();
+  }));
+  // scrub: tap/drag on the waveform panel moves the cursor
+  function scrub(e) {
+    const r = $('svgT').getBoundingClientRect(), x = (e.clientX - r.left) / r.width * 400;
+    tc = Math.max(0, Math.min(WIN * 0.9999, (x - T.x0) / (T.x1 - T.x0) * WIN)); cursor();
+  }
+  $('svgT').addEventListener('pointerdown', e => { setPlaying(false); scrub(e); $('svgT').setPointerCapture(e.pointerId); });
+  $('svgT').addEventListener('pointermove', e => { if (e.buttons) scrub(e); });
+
+  // When embedded in a remark.js deck, let slide keys pass through to the deck.
+  window.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT') return;
+    const nav = {ArrowRight: 'gotoNextSlide', PageDown: 'gotoNextSlide', ArrowLeft: 'gotoPreviousSlide', PageUp: 'gotoPreviousSlide'}[e.key];
+    if (e.key === ' ') { e.preventDefault(); $('play').click(); return; }
+    try { if (nav && window.parent !== window && window.parent.slideshow) window.parent.slideshow[nav](); } catch (_) {}
+  });
+
+  // ---------- quiz ----------
+  const QUIZ = [
+    ['V = 230 V rms, f = 50 Hz, N = 300, A = 2500 mm². Find B<sub>max</sub> without the simulator.',
+     'V<sub>rms</sub> = 4.44 f N A B<sub>max</sub>, so B<sub>max</sub> = 230 / (4.44 · 50 · 300 · 2.5·10⁻³) ≈ 1.38 T. Press <b>230 V, 50 Hz</b> to check.'],
+    ['Switch to <b>Linear</b> and double the voltage. What happens to B<sub>max</sub> and to the current?',
+     'Both double. The voltage sets the flux (Faraday), and in a linear core the current needed for that flux is proportional to it.'],
+    ['Now <b>Saturating</b>: raise the voltage by 20%. B<sub>max</sub> rises 20%. How much does the peak current rise?',
+     'More than 5× (≈ 0.65 A → 3.5 A). Past the knee, a little more flux costs a lot more current. This is why transformers must not be over-excited.'],
+    ['Keep 230 V but drop the frequency to 40 Hz. Why does the core saturate although the voltage did not change?',
+     'B<sub>max</sub> ∝ V/f. Lower f means more volt-seconds per half cycle, so more flux. A 60 Hz transformer on a 50 Hz grid sees 20% more flux.'],
+    ['The magnetizing current is not sinusoidal. Which harmonic dominates, and why only odd ones?',
+     'The 3rd. The B–H curve is symmetric (H(−B) = −H(B)), so the current has half-wave symmetry: only odd harmonics appear.'],
+    ['Press <b>Hysteresis</b>. Which part of the current is in phase with the voltage, and what does it represent?',
+     'i<sub>c</sub> (green), the core-loss component. It is in phase with v, so it carries real power: the B–H loop area × volume × f. The rest, i<sub>m</sub>, is the magnetizing current, 90° behind v.'],
+    ['You rewind the coil with fewer turns at the same voltage. Does the core saturate more or less?',
+     'More. B<sub>max</sub> = V / (4.44 f N A): fewer turns means each turn must carry more volts, so more flux. Try <b>Fewer turns</b>.'],
+  ];
+  let qi = 0;
+  function showQ() {
+    $('qn').textContent = `(${qi + 1}/${QUIZ.length})`;
+    $('qq').innerHTML = QUIZ[qi][0]; $('qa').innerHTML = QUIZ[qi][1]; $('qa').style.display = 'none';
+    $('qshow').textContent = 'Show answer';
+  }
+  $('qshow').addEventListener('click', () => {
+    const on = $('qa').style.display !== 'block';
+    $('qa').style.display = on ? 'block' : 'none'; $('qshow').textContent = on ? 'Hide answer' : 'Show answer';
+  });
+  $('qnext').addEventListener('click', () => { qi = (qi + 1) % QUIZ.length; showQ(); });
+
+  setPlaying(playing); compute(); showQ(); requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

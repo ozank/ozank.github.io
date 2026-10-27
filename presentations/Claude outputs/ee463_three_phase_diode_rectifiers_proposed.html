@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE463 3-Phase Diode Rectifiers — Proposed Changes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <base href="../">
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      /* --- review markup --- */
+      .badge { position:absolute; top:14px; right:18px; padding:4px 12px; border-radius:6px;
+               font:bold 15px/1.3 system-ui,sans-serif; color:#fff; z-index:5; }
+      .badge.new { background:#16a34a; }
+      .badge.changed { background:#2563eb; }
+      .badge.remove { background:#dc2626; }
+      .badge.merge { background:#9333ea; }
+      .badge.keep { background:#6b7280; }
+      .added { background:#dcfce7; border-left:4px solid #16a34a; padding:0 8px; display:inline-block; }
+      div.added { display:block; }
+      .deleted { background:#fee2e2; color:#b91c1c; text-decoration:line-through; padding:0 6px; display:inline-block; }
+      div.deleted { display:block; }
+      .note { position:absolute; bottom:14px; left:20px; right:20px; font:italic 15px/1.35 system-ui,sans-serif;
+              color:#374151; background:#fef9c3; border:1px solid #facc15; border-radius:6px; padding:6px 10px; text-align:left; }
+      .remark-slide-content.removed > *:not(.badge):not(.note) { opacity:.3; }
+      .legend span { display:inline-block; min-width:110px; }
+      table { margin:0 auto; border-collapse:collapse; }
+      td, th { padding:4px 10px; border-bottom:1px solid #e5e7eb; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-463 STATIC POWER CONVERSION-I
+
+# 3-Phase Diode Rectifiers
+
+## Ozan Keysan
+
+## [keysan.me](https://keysan.me)
+
+### Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Review copy: how to read it
+
+.legend[
+### <span class="badge new" style="position:static">NEW #</span> new slide
+### <span class="badge changed" style="position:static">CHANGED #</span> edited slide; .added[green = added], .deleted[red = removed text]
+### <span class="badge remove" style="position:static">REMOVE #</span> slide to drop (faded)
+]
+
+### Numbers match `ee463_three_phase_diode_rectifiers_changes.md`. Unmarked slides are unchanged.
+### Reply e.g. "apply 1–10, skip 14" or comment on any slide number.
+
+---
+
+## 3-Phase Half Wave Rectifier
+--
+
+### N-Phase Generalized Form
+--
+
+<img src="./images/ee463/n_phase_half_bridge.png" alt="Drawing" style="width: 600px;"/>
+
+---
+## 3-Phase Half Wave Rectifier
+
+## Voltage Waveforms
+
+<img src="./images/ee463/3ph_half_bridge_voltage.png" alt="Drawing" style="width: 600px;"/>
+---
+## 3-Phase Half Wave Rectifier
+
+<img src="./images/ee463/3phase_half.png" alt="Drawing" style="width: 400px;"/>
+
+
+---
+
+.badge.changed[CHANGED #3]
+
+## 3-Phase Half Wave Rectifier
+
+
+## Average Voltage?
+
+
+## .deleted[\\(V\_{dc}= \dfrac{3\sqrt{6}}{2 \pi} V\_{rms}\\)]
+## .added[\\(V\_{dc}= \dfrac{3\sqrt{6}}{2 \pi} V\_{ph} = \dfrac{3\sqrt{2}}{2 \pi} V\_{LL} = 0.675\,V\_{LL}\\)]
+### .added[= 270 V for a 400 V grid]
+
+--
+
+### Comparison with the single phase rectifier?
+
+---
+
+.badge.new[NEW #10]
+
+## 3-Phase Half Wave Rectifier: the catch
+--
+### Each phase current is a one-way 120° pulse: average \\(I\_d/3\\)
+## DC current in every transformer winding → core saturation
+--
+### The neutral carries the full \\(I\_d\\)
+--
+### Ripple: 163 V pk-pk at 150 Hz (bridge: 75.8 V at 300 Hz)
+
+#### [Try it: half-wave mode](./interactive/three_phase_rectifier_explorer.html?mode=half)
+
+---
+class: removed
+
+.badge.remove[REMOVE #14]
+
+## 3-Phase Full Wave (Bridge) Rectifier
+
+<img src="http://2.bp.blogspot.com/-cumirN3mjC0/UiVln-LDtTI/AAAAAAAAALw/f9hwfKSzZb0/s640/3-Phase-Bridge-Rectifier1.jpg" alt="Drawing" style="width: 600px;"/>
+
+.note[Hotlinked image; the next slide shows the same circuit from your own images folder.]
+---
+## 3-Phase Full Wave (Bridge) Rectifier
+--
+
+<img src="./images/ee463/3ph_full_bridge.png" alt="Drawing" style="width: 700px;"/>
+
+---
+## 3-Phase Full Wave (Bridge) Rectifier
+
+### Ignore Ls and redraw
+--
+
+<img src="./images/ee463/3ph_full_bridge2.png" alt="Drawing" style="width: 500px;"/>
+
+---
+
+.badge.new[NEW #9]
+
+# Quick Question
+### At \\(\omega t = 45^∘\\): \\(v\_{an}\\) is the most positive, \\(v\_{bn}\\) the most negative
+## Which diodes conduct? What is \\(v\_d\\)?
+--
+
+## \\(D\_1\\) (top group picks the highest anode) and \\(D\_6\\) (bottom group picks the lowest cathode)
+## \\(v\_d = v\_{an} - v\_{bn} = v\_{ab}\\): always the largest line-to-line voltage
+
+---
+## 3-Phase Full Wave (Bridge) Rectifier
+
+### Can you draw the voltage and current waveforms?
+--
+
+<img src="./images/ee463/3ph_diode_voltage.png" alt="Drawing" style="width: 800px;"/>
+---
+## 3-Phase Full Wave (Bridge) Rectifier
+
+### Can you draw the voltage and current waveforms?
+
+<img src="./images/ee463/3ph_diode_voltage2.png" alt="Drawing" style="width: 800px;"/>
+
+---
+
+.badge.changed[CHANGED #4]
+
+## 3-Phase Full Wave (Bridge) Rectifier
+
+## Average voltage?
+--
+.deleted[: Twice of the half wave rectifier]
+
+### .added[Twice the half-wave value (two 3-pulse groups in series, shifted by 60°)]
+
+## \\(V\_{dc}= \dfrac{3\sqrt{6}}{ \pi} V\_{ph}\\)
+
+### or
+--
+
+## \\(V\_{dc}= \dfrac{3\sqrt{2}}{ \pi} V\_{l-l} = 1.35 V\_{l-l}\\)
+
+### =540 Vdc for a 400 V grid
+
+---
+## 3-Phase Full Wave (Bridge) Rectifier
+
+### Output voltage waveforms
+
+
+<img src="./images/ee463/3phase_full.png" alt="Drawing" style="width: 500px;"/>
+
+---
+
+.badge.new[NEW #8]
+
+## 3-Phase Full Wave (Bridge) Rectifier
+### Which diodes conduct? Press Play, or "Next step"
+
+<iframe src="interactive/three_phase_rectifier_explorer.html?embed" width="790" height="560" style="border:0"></iframe>
+
+#### Try it on your phone: [keysan.me/presentations/interactive/three_phase_rectifier_explorer.html](https://keysan.me/presentations/interactive/three_phase_rectifier_explorer.html)
+
+---
+class: removed
+
+.badge.remove[REMOVE #15]
+
+## 3-Phase Full Wave (Bridge) Rectifier
+
+### Output voltage waveforms
+
+.note[Empty slide (title only). Replaced by the interactive slide #8.]
+
+---
+## What about the current waveforms?
+--
+
+<img src="./images/ee463/3ph_diode_current.png" alt="Drawing" style="width: 800px;"/>
+---
+
+.badge.changed[CHANGED #5]
+
+## What about the current waveforms?
+
+### What are the differences wrt single phase?
+--
+
+<img src="./images/ee463/3ph_diode_current2.png" alt="Drawing" style="width: 700px;"/>
+
+.deleted[## No 3rd order harmonics!]
+.added[## Only \\(h = 6k \pm 1\\): 5, 7, 11, 13 … with \\(I\_{sh} = I\_{s1}/h\\)]
+.added[### No even harmonics (half-wave symmetry), no triplens (120° conduction)]
+
+---
+
+.badge.new[NEW #11]
+
+## Input Current: How Good Is It?
+### \\(i\_a = \pm I\_d\\) for 120°, zero for 60°
+--
+## \\(I\_{s1} = \dfrac{\sqrt{6}}{\pi} I\_d = 0.78\, I\_d \qquad I\_s = \sqrt{\dfrac{2}{3}}\, I\_d = 0.816\, I\_d\\)
+--
+## THD = 31 % (1-phase bridge: 48 %)
+--
+## DPF = 1, \\(PF = \dfrac{I\_{s1}}{I\_s} DPF = \dfrac{3}{\pi} = 0.955\\)
+
+---
+
+.badge.new[NEW #13]
+
+## Diode Ratings (Bridge)
+### Each diode conducts for 120°
+## \\(I\_{D,avg} = I\_d/3 \qquad I\_{D,rms} = I\_d/\sqrt3\\)
+--
+## Peak reverse voltage = \\(\sqrt2 V\_{LL}\\) = 566 V for a 400 V grid
+### (same for the half-wave circuit). With margin: 1200 V diodes
+
+---
+
+.badge.changed[CHANGED #2]
+
+# Comparison of Rectifiers
+### .added[230 V / 400 V, 50 Hz supply, constant \\(I\_d\\) load, \\(L\_s = 0\\)]
+
+| Type | \\(V\_{d}\\) | \\(\Delta v\_{d}\\) (pk-pk) | \\(f\_{ripple}\\) | .added[PF] |
+|:---:|:---:|:---:|:---:|:---:|
+| **1-phase bridge** | \\(\dfrac{2\sqrt{2}}{\pi}V\_{ph}\\) = 207 V | \\(\sqrt{2} V\_{ph}\\) = 325 V | 100 Hz | .added[0.90] |
+| **3-phase .deleted[Half Bridge] .added[half-wave (3-pulse)]** | \\(\dfrac{3\sqrt{2}}{2\pi}V\_{LL}\\) = 270 V | \\(\dfrac{\sqrt{2}}{2} V\_{ph}\\) = 163 V | 150 Hz | .added[0.68] |
+| **3-phase bridge .added[(6-pulse)]** | \\(\dfrac{3\sqrt{2}}{\pi}V\_{LL}\\) = 540 V | \\(( 1-\frac{\sqrt{3}}{2}) \sqrt{2}V\_{LL}\\) = 75.8 V | 300 Hz | .added[0.955] |
+
+.note[Also fixes the separator row (it had 5 columns for a 4-column table).]
+---
+
+# Commutation in 3-Phase Rectifiers
+
+<img src="./images/ee463/3ph_full_bridge.png" alt="Drawing" style="width: 700px;"/>
+
+---
+
+# Commutation in 3-Phase Rectifiers
+--
+
+<img src="./images/ee463/3ph_commutation1.png" alt="Drawing" style="width: 700px;"/>
+
+---
+# Commutation in 3-Phase Rectifiers
+--
+
+<img src="./images/ee463/3ph_commutation2.png" alt="Drawing" style="width: 800px;"/>
+
+---
+
+.badge.changed[CHANGED #6, #7]
+
+### Average Voltage
+
+## Without Commutation
+
+### \\(V\_{dc}= \dfrac{3\sqrt{2}}{ \pi} V\_{l-l} = 1.35 V\_{l-l}\\)
+--
+
+## With Commutation
+
+### \\(V\_{dc}= \dfrac{3\sqrt{2}}{ \pi} V\_{l-l} - \dfrac{3}{\pi}\omega L\_s I\_d\\)
+
+### .deleted[[More info](http://www.ehu.eus/electronica-industrial/ElectronicaIndustrial_Automatica/apuntes/overlap1.pdf)]
+
+### .deleted[[Commutation Simulation](https://www.multisim.com/content/xMSLkaeX6EGfqoLtHJ8xjn/3phase_commutation/), [MultiSim Simulation Examples](https://www.multisim.com/discover/)]
+### .added[[Interactive: 3-phase rectifier with commutation](interactive/three_phase_rectifier_explorer.html?Ls=2&Id=40)]
+
+.note[#7: MultiSim Live links redirect to NI's product page (service discontinued). The ehu.eus PDF didn't load; check it in a browser.]
+---
+
+.badge.new[NEW #12]
+
+# Commutation: Overlap Angle
+### Two phases conduct together; the terminal sits at their average
+## \\(\cos u = 1 - \dfrac{2\omega L\_s I\_d}{\sqrt{2}\,V\_{LL}}\\)
+--
+
+### Example: 400 V, \\(L\_s\\) = 2 mH, \\(I\_d\\) = 40 A: \\(\omega L\_s = 0.628\,\Omega\\), \\(\cos u = 0.911\\) → \\(u = 24.3^∘\\)
+### \\(\Delta V\_d = \dfrac{3}{\pi}\omega L\_s I\_d = 24\\) V → \\(V\_d = 516\\) V
+--
+
+### Like a DC source with internal resistance \\(3\omega L\_s/\pi\\) (lossless!)
+
+---
+
+.badge.new[NEW #12]
+
+## Commutation: see it
+
+<iframe src="interactive/three_phase_rectifier_explorer.html?embed&Ls=2&Id=40&wt=42" width="790" height="560" style="border:0"></iframe>
+
+---
+## You can download this presentation from: [keysan.me/ee463](https://keysan.me/ee463)
+
+---
+
+.badge.keep[NOT VISIBLE ON SLIDES]
+
+# Other changes
+
+### **#1** Remove the broken `MathJax.Hub.Queue(...)` block (jQuery `$` isn't loaded). Already applied in this review copy.
+### **#6** Escape the underscores in `L_s I_d` → `L\_s I\_d` (applied above)
+### **#16** `http://` → `https://` for the keysan.me links
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EE361 3-Phase — Proposed Changes</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <base href="../">
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      /* --- review markup --- */
+      .badge { position:absolute; top:14px; right:18px; padding:4px 12px; border-radius:6px;
+               font:bold 15px/1.3 system-ui,sans-serif; color:#fff; z-index:5; }
+      .badge.new { background:#16a34a; }
+      .badge.changed { background:#2563eb; }
+      .badge.remove { background:#dc2626; }
+      .badge.merge { background:#9333ea; }
+      .badge.keep { background:#6b7280; }
+      .added { background:#dcfce7; border-left:4px solid #16a34a; padding:0 8px; display:inline-block; }
+      div.added { display:block; }
+      .deleted { background:#fee2e2; color:#b91c1c; text-decoration:line-through; padding:0 6px; display:inline-block; }
+      div.deleted { display:block; }
+      .note { position:absolute; bottom:14px; left:20px; right:20px; font:italic 15px/1.35 system-ui,sans-serif;
+              color:#374151; background:#fef9c3; border:1px solid #facc15; border-radius:6px; padding:6px 10px; text-align:left; }
+      .remark-slide-content.removed > *:not(.badge):not(.note) { opacity:.3; }
+      .placeholder { margin:20px auto; width:760px; height:380px; border:3px dashed #9ca3af; border-radius:12px;
+                     display:flex; align-items:center; justify-content:center; color:#6b7280;
+                     font:20px/1.4 system-ui,sans-serif; text-align:center; }
+      .two img { width:45%; margin:0 2%; vertical-align:top; }
+      .legend span { display:inline-block; min-width:110px; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# EE-361
+# 3-PHASE SYSTEMS 
+
+## Ozan Keysan
+
+[keysan.me](http://keysan.me)
+
+Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
+
+---
+# Review copy: how to read it
+
+.legend[
+### <span class="badge new" style="position:static">NEW #</span> new slide
+### <span class="badge changed" style="position:static">CHANGED #</span> edited slide; .added[green = added], .deleted[red = removed text]
+### <span class="badge merge" style="position:static">MERGED #</span> two slides combined into one
+### <span class="badge remove" style="position:static">REMOVE #</span> slide to drop (faded)
+]
+
+### Numbers match `ee361_3phase_ac_changes.md`. Unmarked slides are unchanged.
+### Reply e.g. "apply 1–13, skip 15" or comment on any slide number.
+
+---
+class: removed
+
+.badge.remove[REMOVE #15]
+
+## Electric Plugs & Sockets
+
+<img src="https://www.netio-products.com/files/styles/glossary_552x414/public/Glossary_type-F-German-electrical-plug-type-schuko.png?itok=v1PLk2qK" alt="Drawing" style="width: 500px;"/>
+
+### [Why some countries use different voltage, frequency?](https://www.quora.com/Why-does-India-use-230-V-50HZ-while-the-USA-uses-120V-60HZ)
+
+.note[The world-plugs slide that follows makes the same point (and carries the same "why?" link).]
+---
+
+## Electric Plugs & Sockets
+<img src="https://www.szapphone.com/wp-content/uploads/2024/10/World-of-Power-Plug-Standards.webp" alt="Drawing" style="width: 800px;"/>
+
+[Different plugs around the world](https://www.iec.ch/world-plugs),  [but WHY?](https://www.quora.com/Why-does-India-use-230-V-50HZ-while-the-USA-uses-120V-60HZ)
+---
+
+## Electric Plugs & Sockets
+<img src="https://imgs.xkcd.com/comics/standards.png" alt="Drawing" style="width: 800px;"/>
+
+---
+class: removed
+
+.badge.remove[REMOVE #15]
+
+# Introduction to Three Phase
+## Industrial Electric Plugs
+
+<img src="https://rukminim1.flixcart.com/image/832/832/k3t21zk0/wire-joint-connector/b/x/r/2-industrial-plug-and-socket-32-a-x-5-pin-415v-weatherproof-ip44-original-imafmuxqgpym6hzx.jpeg" alt="Drawing" style="width: 450px;"/>
+
+.note[The next slide (terminal identification) shows the same plug and also explains the pins.]
+---
+
+.badge.changed[CHANGED #19]
+
+.deleted[# Introduction to Three Phase]
+# Industrial Electric Plugs
+
+<img src="https://1.bp.blogspot.com/-0D8kS1zy0WQ/XeENlYkdrwI/AAAAAAAACWA/0q_9JmkCDms-7D5VEbzIzuY5uyJi1pFnQCLcBGAsYHQ/s640/Industrial%2BPlug%2BTerminal%2BIdentification.jpg" alt="Drawing" style="width: 450px;"/>
+
+---
+## Industrial Electric Plugs
+
+<img src="https://www.plugsocketmuseum.nl/IEC/IEC60309-plugSizes.jpg" alt="Drawing" style="width: 750px;"/>
+
+### [IEC 60309 industrial standard](https://www.plugsocketmuseum.nl/IEC60309_2.html)
+---
+
+.badge.merge[MERGED #15]
+
+# 3-Phase Color Code
+
+.two[
+<img src="./images/ee361/old_color_code.jpg" alt="Old"/>
+<img src="./images/ee361/new_color_code.jpg" alt="New"/>
+]
+
+### Before 2011 (expired) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Since 2011
+
+.note[Replaces the two separate "Expired / New 3-Phase Color Code" slides.]
+---
+# Electric Vehicle Chargers
+
+<img src="https://www.researchgate.net/profile/Pawan-Maske/publication/356892277/figure/fig2/AS:1098983523008515@1639029498915/Types-of-electric-vehicle-chargers-30-i-Combined-Charging-System-Charger-CCS-This.jpg" alt="Drawing" style="width:800px;"/>
+
+### .deleted[[What are all these pins for?](http://tesla.o.auroraobjects.eu/Design_Guide_Combined_Charging_System_V3_1_1.pdf)]
+
+.note[#17: the Aurora CCS PDF link is likely dead. Please check it; drop or replace.]
+---
+# CCS: Combined Charging System
+
+<img src="https://b2232832.smushcdn.com/2232832/wp-content/uploads/2018/11/chademo-css.jpg?lossy=1&strip=0&webp=1" alt="Drawing" style="width:800px;"/>
+
+---
+
+.badge.changed[CHANGED #19]
+
+.deleted[# Introduction to Three Phase]
+# Offshore Power Plugs
+--
+<img src="http://i.kinja-img.com/gawker-media/image/upload/s--lCQmivgV--/c_fit,fl_progressive,q_80,w_636/yvnjg8sxmbvgya1luf6n.jpg" alt="Drawing" style="width:800px;"/>
+
+.note[#17: kinja images are likely gone. If this is blank, the image needs replacing.]
+---
+class: removed
+
+.badge.remove[REMOVE #15]
+
+# Introduction to Three Phase
+## Offshore Power Plugs
+
+<img src="http://i.kinja-img.com/gawker-media/image/upload/s--Mb48YYZM--/c_fit,fl_progressive,q_80,w_636/vs2m6ydklatpy6u0ngje.jpg" alt="Drawing" style="width:700px;"/>
+---
+class: removed
+
+.badge.remove[REMOVE #15]
+
+# Introduction to Three Phase
+## Transmission Lines
+
+<img src="https://cdn-images-1.medium.com/max/2000/1*6lCTsj6fN1y2nP_Y44Icqw.jpeg" alt="Drawing" style="width: 800px;"/>
+
+.note[Keeping one transmission line slide (the insulators). Swap if you prefer this photo.]
+---
+
+.badge.changed[CHANGED #19]
+
+.deleted[# Introduction to Three Phase]
+# Transmission Lines
+
+<img src="https://www.inmr.com/wp-content/uploads/2022/03/Overhead-Line-Insulators.jpg" alt="Drawing" style="width: 800px;"/>
+
+---
+# WHY 3 PHASE? (but not 2 or 5?)
+--
+
+<iframe width="800" height="500" src="https://www.youtube.com/embed/mQIYJ3Y-Tpo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+# WHY 3 PHASE? (but not 2 or 5?)
+--
+
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/3_phase_AC_waveform.svg/2000px-3_phase_AC_waveform.svg.png" alt="Drawing" style="width: 700px;"/>
+
+---
+
+.badge.changed[CHANGED #7, #14, #17]
+
+# WHY 3-PHASE?
+--
+
+- ## .deleted[More power per unit wire length.]
+.added[
+## Less conductor material for the same power
+### 3 single-phase circuits need 6 wires; one 3-phase circuit needs 3 (the return currents cancel)
+]
+
+--
+- ## Constant Power
+.deleted[[Power Graphs](https://docs.google.com/spreadsheets/d/1RP-MsrHwybAG6J3CFTbdLOCTvGdIdkaWUkhRuAHPWd0/edit?usp=sharing)] .added[see the 3-Phase Explorer]
+
+--
+- ## Rotating MMF
+### .deleted[[3-phase](http://people.ece.umn.edu/users/riaz/animations/sinwaves0.gif), [phasor](http://people.ece.umn.edu/users/riaz/animations/vecmovieslow.gif)] (wait until EE362 for details)
+
+---
+
+.badge.new[NEW #9]
+
+# Why not 2 or 5 phases?
+--
+
+## 2-phase (90° apart) existed (Niagara Falls, 1895)
+## Needs 4 wires, or 3 wires with a common return carrying \\(\sqrt2 I\\)
+--
+
+## 3 is the minimum number of symmetric phases whose currents sum to zero: **no return wire**
+--
+
+## More phases: more conductors, switchgear and transformer windings, for little gain
+### (Multi-phase is still used inside rectifiers, ship propulsion, some EV motors)
+
+---
+
+.badge.changed[CHANGED #6]
+
+# Voltages & Currents
+
+## \\(V\_a = V_{max} \mathrm{sin} (\omega t)\\)
+## \\(V\_b = V_{max} \mathrm{sin} (\omega t - 2 \pi /3)\\)
+## \\(V\_c = V_{max} \mathrm{sin} (\omega t - 4 \pi /3)\\)
+
+.added[
+### \\(V\_{max}\\) is the peak value; phasors use RMS: \\(\vec{V\_{an}} = \frac{V\_{max}}{\sqrt2}\angle 0^∘\\)
+]
+
+.note[Also renamed Va, Vb, Vc → V_a, V_b, V_c for consistent notation.]
+---
+# Voltages & Currents
+![](3phase_phasors.png)
+
+---
+# 3 Phase Phasors
+
+<img src="./images/ee361/three_phase_phasor.gif" alt="Drawing" style="width: 800px;"/>
+
+---
+
+.badge.new[NEW #14]
+
+## Explore: 3-Phase Waveforms, Phasors & Power
+<iframe src="interactive/three_phase_explorer.html?embed" width="790" height="560" style="border:0"></iframe>
+
+#### Try it yourself: [keysan.me/presentations/interactive/three_phase_explorer.html](https://keysan.me/presentations/interactive/three_phase_explorer.html)
+
+---
+
+.badge.new[NEW #10]
+
+# Balanced 3-Phase System
+## \\(\vec{V\_{a}} + \vec{V\_{b}} + \vec{V\_{c}} = 0 \qquad \vec{I\_{a}} + \vec{I\_{b}} + \vec{I\_{c}} = 0\\)
+--
+
+## So the neutral current is zero → the neutral wire can be thin or omitted
+--
+
+## Phase sequence: abc (positive) or acb (negative)
+### Swap any two wires → sequence reverses → a 3-phase motor turns the other way
+
+---
+
+.badge.merge[MERGED #16]
+
+# How to measure voltage & currents?
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/48/3-phase_flow.gif" alt="Drawing" style="width: 800px;"/>
+
+.note[Keeps the GIF; the static 3phase_voltages.png slide that follows is removed.]
+---
+class: removed
+
+.badge.remove[REMOVE #16]
+
+# How to measure voltage & currents?
+
+<img src="3phase_voltages.png" alt="Drawing" style="width: 800px;"/>
+---
+# How to measure voltage & currents?
+
+## \\(\vec{V\_{ab}}=\vec{V\_{an}} + \vec{V\_{nb}} = \vec{V\_{an}} - \vec{V\_{bn}}  \\)
+
+## If \\(\vec{V\_{an}} = V \angle 0^∘ \\)
+
+--
+## \\(\vec{V\_{ab}}= \sqrt 3 V \angle 30^∘\\)
+
+---
+
+.badge.new[NEW #20]
+
+## Where do √3 and 30° come from?
+<iframe src="interactive/line_phase_explorer.html?embed" width="790" height="560" style="border:0"></iframe>
+#### Try it yourself: [keysan.me/presentations/interactive/line_phase_explorer.html](https://keysan.me/presentations/interactive/line_phase_explorer.html)
+
+---
+# What is the Grid Voltage Level?
+
+## Used to be 220 V
+--
+(line-to-neutral RMS)
+
+--
+
+## Peak (line-to-neutral) \\(= 220 \sqrt{2} = 311 \\) V 
+
+--
+
+## RMS (line-to-line) \\(= 220 \sqrt{3} \approx 380 \\) V 
+---
+
+.badge.changed[CHANGED #5]
+
+# What is the Grid Voltage Level?
+
+# NOW  [the standard is 230 V](http://www.schneider-electric.co.uk/en/faqs/FA144717/) 
+## ± 10% (line-to-neutral RMS)
+
+### .deleted[Due to connection of UK to [European System](https://www.entsoe.eu/data/map/)]
+.added[
+### IEC 60038 harmonised Europe's 220 V and the UK's 240 V into a single 230 V standard
+### Turkey's grid has run synchronously with the [European system (ENTSO-E)](https://www.entsoe.eu/data/map/) since 2010 (permanently since 2015)
+]
+
+--
+
+## Peak (line-to-neutral) \\(= 230 \sqrt{2} = 325 \\) V 
+
+--
+
+## RMS (line-to-line) \\(= 230 \sqrt{3} \approx 400 \\) V 
+
+---
+# Star/Wye (Y) & Delta (\\(\Delta\\)) Connections 
+<img src="https://www.electricalvolt.com/wp-content/uploads/2023/11/image-67.png?ezimgfmt=ng:webp/ngcb1" alt="Drawing" style="width: 800px;"/>
+
+---
+
+.badge.changed[CHANGED #2]
+
+# Wye(or Star) Connection (Y)
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/3_Phase_Power_Connected_to_Wye_Load.svg/2000px-3_Phase_Power_Connected_to_Wye_Load.svg.png" alt="Drawing" style="width: 450px;"/>
+
+### \\( |V\_{line-to-line}| = \sqrt{3} \; |V\_{phase}|\\)
+### \\( |I\_{line}| = |I\_{phase}|\\)
+.added[
+### \\( \vec{V\_{ab}} = \sqrt{3}\,\vec{V\_{an}} \angle 30^∘\\) (line voltage leads phase voltage by 30°)
+]
+
+---
+
+.badge.changed[CHANGED #3]
+
+# Delta Connection (\\(\Delta\\))
+
+<img src="https://www.emetor.com/static/glossary/deltaStar.jpg" alt="Drawing" style="width: 650px;"/>
+
+### \\( |V\_{line-to-line}| = |V\_{phase}|\\)
+### \\( |I\_{line}| = \sqrt{3} \; |I\_{phase}|\\)
+.added[
+### \\( \vec{I\_{a}} = \sqrt{3}\,\vec{I\_{ab}} \angle -30^∘\\) (line current lags phase current by 30°)
+]
+
+---
+
+.badge.changed[CHANGED #1, #17]
+
+# Power Relations
+--
+
+## Regardless of the connection type .added[(balanced load):]
+
+## .deleted[\\( S= 3V\_{phase}I\_{phase}\\) or \\( S= \sqrt{3}V\_{line-to-line}I\_{line}\\)]
+.added[
+## \\( |S| = 3V\_{phase}I\_{phase} = \sqrt{3}V\_{LL}I\_{L}\\)
+]
+--
+
+.added[
+## \\( P = \sqrt{3}V\_{LL}I\_{L} \, cos\theta \qquad Q = \sqrt{3}V\_{LL}I\_{L} \, sin\theta\\)
+]
+--
+
+.added[
+## Careful: \\(\theta\\) is the angle of the **phase impedance** (between \\(V\_{phase}\\) and \\(I\_{phase}\\))
+## It is **not** the angle between \\(V\_{LL}\\) and \\(I\_{L}\\) (that one is \\(\theta + 30^∘\\) in a Y load)
+]
+
+#### .deleted[[Review of three phase AC circuits](http://www.egr.unlv.edu/~eebag/EE%20340%20-%20Review%203-Phase%20Ckts.pdf)]
+
+---
+
+.badge.changed[CHANGED #4]
+
+# Impedance Transformation
+
+![](http://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Wye-delta-2.svg/750px-Wye-delta-2.svg.png)
+
+## \\(Z_{\Delta} = 3 Z\_Y \\) .added[(balanced loads)]
+
+---
+
+.badge.new[NEW #11]
+
+# Per-Phase Analysis (balanced systems)
+
+### 1. Convert any \\(\Delta\\) to an equivalent Y (\\(Z\_Y = Z\_\Delta/3\\))
+--
+
+### 2. Solve **phase a** only: a single-phase circuit, line-to-neutral
+--
+
+### 3. Phases b and c: same magnitude, shifted by \\(-120^∘\\) and \\(+120^∘\\)
+--
+
+### 4. Total power = 3 × phase power
+
+---
+
+.badge.new[NEW #12]
+
+# Example
+### 400 V (line-to-line), 50 Hz supply. Balanced load \\(Z = 8 + j6\,\Omega\\) per phase.
+### Find \\(I\_L\\), PF, P, Q, S for Y and for \\(\Delta\\) connection
+--
+
+### **Y:** \\(V\_{ph} = 400/\sqrt3 = 231\\) V, \\(Z = 10\angle 36.9^∘ \,\Omega\\), \\(I\_L = I\_{ph} = 23.1\\) A
+### PF = 0.8 lagging, P = 12.8 kW, Q = 9.6 kvar, S = 16 kVA
+--
+
+### **\\(\Delta\\):** \\(V\_{ph} = 400\\) V, \\(I\_{ph} = 40\\) A, \\(I\_L = 69.3\\) A
+### P = 38.4 kW, Q = 28.8 kvar, S = 48 kVA
+--
+
+## Same impedances, **3× the power** in delta (that's how Y-Δ starters work)
+
+---
+
+.badge.new[NEW #13]
+
+# Quick Question
+### A balanced Y load is supplied with abc sequence. You measure that \\(V\_{ab}\\) leads \\(I\_a\\) by 60°.
+## What is the power factor?
+### A) 0.5 lagging &nbsp;&nbsp; B) 0.866 lagging &nbsp;&nbsp; C) 0.866 leading &nbsp;&nbsp; D) Not enough information
+--
+
+## **B.** \\(V\_{ab}\\) leads \\(V\_{an}\\) by 30°, so \\(V\_{an}\\) leads \\(I\_a\\) by 30°
+## PF = cos 30° = 0.866 lagging
+
+---
+# Examples
+
+- ### [AC Power Solved Problem](./files/ee361-ac-solved1.pdf)
+- ### [AC Power Solved Problem 2](./files/ee361-ac-solved2.pdf)
+- ### [3 Phase Power Solved Problem](./files/ee361-3phase-solved.pdf)
+
+
+---
+## You can download this presentation from: [keysan.me/ee361](http://keysan.me/ee361)
+
+---
+
+.badge.keep[NOT VISIBLE ON SLIDES]
+
+# Other changes
+
+### **#8** Remove the broken `MathJax.Hub.Queue(...)` block (jQuery `$` isn't loaded). Already applied in this review copy.
+### **#18** Copy the ~20 hotlinked images into `images/ee361/`; several use `http://`, which can break on https
+### **#17** Check in a browser: UMN animations, UNLV PDF, Aurora CCS PDF, kinja images (couldn't test from here)
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({countIncrementalSlides: false});
+
+      // Setup MathJax
+      MathJax.Hub.Config({
+          tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+          }
+      });
+
+      MathJax.Hub.Configured();
+    </script>
+  </body>
+</html>
