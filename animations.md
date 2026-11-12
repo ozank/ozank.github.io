@@ -21,3 +21,6 @@ permalink: /animations/index.html
 * [Half Wave Rectifier](./presentations/interactive/half_wave_rectifier_explorer.html)
 * [Commutation in Rectifiers](./presentations/interactive/bridge_commutation_explorer.html)
 * [3-phase Full Wave Rectifier](./presentations/interactive/three_phase_rectifier_explorer.html)
+* [Buck Converter](./presentations/interactive/buck_converter_explorer.html)
+* [Boost Converter](./presentations/interactive/boost_converter_explorer.html)
+* [Buck-boost Converter](./presentations/interactive/buck_boost_converter_explorer.html)

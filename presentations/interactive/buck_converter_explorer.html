@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en" data-topo="buck">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Buck Converter Explorer</title>
+<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1f2937; --muted:#6b7280; --grid:#e5e7eb; --panel:#f8fafc;
+    --on:#ea580c; --off:#16a34a; --vx:#2563eb; --vl:#0891b2; --cap:#7c3aed; --load:#374151;
+    --idle:#cbd5e1; --vo:#be185d; --ok:#047857;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);
+    font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:920px;margin:0 auto;padding:6px 14px 10px}
+  header h1{font-family:'Yanone Kaffeesatz',sans-serif;font-weight:400;font-size:30px;margin:2px 0 0}
+  header p{margin:0 0 4px;color:var(--muted)}
+  body.embed header, body.embed .quiz{display:none}
+  svg{width:100%;height:auto;display:block;user-select:none}
+  svg text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  #ckt{max-width:600px;margin:0 auto}
+  .legend{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 14px;font-size:12px;color:var(--muted);margin:0 0 4px}
+  .legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;vertical-align:1px}
+  .controls{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin-top:4px}
+  .slider{display:flex;align-items:center;gap:8px;flex:1 1 220px;min-width:0}
+  .slider label{white-space:nowrap;font-weight:600;min-width:104px}
+  .slider input{flex:1;min-width:0;accent-color:#374151}
+  .buttons{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .buttons .lbl{font-size:12px;color:var(--muted);margin-right:-2px}
+  .sep{width:1px;height:22px;background:var(--grid);margin:0 4px}
+  button{font:inherit;font-size:13px;padding:4px 11px;border:1px solid #d1d5db;border-radius:6px;
+    background:#fff;color:var(--fg);cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+  button:hover{background:#f3f4f6}
+  button.on{background:#1f2937;color:#fff;border-color:#1f2937}
+  input[type=range]{height:28px;touch-action:pan-y}
+  .explain{margin-top:6px;padding:6px 11px;border-radius:8px;border:1px solid #bfdbfe;background:#eff6ff;min-height:3.2em}
+  .readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:3px 14px;
+    margin-top:6px;background:var(--panel);padding:7px 11px;border-radius:8px;border:1px solid var(--grid)}
+  .readout .k{color:var(--muted)}
+  .readout .rip{grid-column:1/-1;border-top:1px dashed var(--grid);padding-top:3px;margin-top:2px}
+  .chk{display:flex;align-items:center;gap:6px;font-weight:600;white-space:nowrap;cursor:pointer}
+  .chk input{width:18px;height:18px;accent-color:#be185d;margin:0}
+  .badge{display:inline-block;padding:0 7px;border-radius:9px;color:#fff;font-weight:700;font-size:12px}
+  .quiz{margin-top:10px;background:var(--panel);border:1px solid var(--grid);border-radius:8px;padding:7px 11px}
+  .quiz h3{margin:0 0 3px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .quiz .q{font-weight:600}
+  .quiz .a{margin-top:6px;display:none;border-left:3px solid var(--ok);padding:2px 0 2px 10px}
+  .quiz .a .ans{color:var(--ok);font-weight:600}
+  .quiz .a .sec{margin-top:5px}
+  .quiz .a .hd{font-weight:700;color:var(--vx)}
+  .quiz .a button{margin-top:7px}
+  .quiz .row{display:flex;gap:6px;margin-top:6px}
+  body.embed .wrap{padding:0 6px 4px}
+  body.embed #ckt{max-width:470px}
+  body.embed .controls{gap:3px 12px;margin-top:0}
+  body.embed .buttons{gap:4px}
+  body.embed button{font-size:12px;padding:2px 8px}
+  body.embed .slider input{height:22px}
+  body.embed .slider label{font-size:13px;min-width:96px}
+  body.embed .explain{font-size:12.5px;padding:3px 9px;margin-top:3px}
+  body.embed .readout{font-size:12px;margin-top:3px;padding:3px 9px;gap:0 10px;grid-template-columns:repeat(3,1fr)}
+  @media (max-height:500px){header{display:none}}
+  @media (max-width:640px){
+    .wrap{padding:4px 8px 12px}
+    header h1{font-size:26px}
+    .controls{gap:10px;margin-top:8px}
+    .slider{flex:1 1 100%}
+    .slider label{min-width:110px;font-size:15px}
+    input[type=range]{height:36px}
+    input[type=range]::-webkit-slider-thumb{width:26px;height:26px}
+    input[type=range]::-moz-range-thumb{width:26px;height:26px}
+    .buttons{width:100%}
+    .buttons button{flex:1;min-height:42px;font-size:15px;padding:6px 4px}
+    .buttons .lbl{width:100%}
+    .sep{display:none}
+    .readout{grid-template-columns:1fr;font-size:13px}
+  }
+</style>
+
+<style>
+  .nav{font-size:13px;margin:0 0 2px;color:var(--muted)}
+  .nav a{color:var(--vx);text-decoration:none;margin-right:10px}
+  .nav b{margin-right:10px;color:var(--fg)}
+  body.embed .nav{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1 id="h1"></h1>
+    <div class="nav" id="nav"></div>
+    <p>V<sub>d</sub> = 24 V, ideal switch and diode, large C (V<sub>o</sub> ≈ constant; tick <i>Show output ripple</i> to see its small variation)</p>
+  </header>
+
+  <svg id="ckt" viewBox="20 6 580 182" role="img" aria-label="Converter circuit with animated current flow"></svg>
+  <div class="legend" id="legend"></div>
+  <svg id="wf" role="img" aria-label="Switch state, voltage and current waveforms">
+    <g id="wfs"></g><g id="wfc"></g>
+  </svg>
+
+  <div class="controls">
+    <div class="buttons">
+      <span class="lbl">Preset:</span>
+      <button id="pC">CCM</button><button id="pB">Boundary</button><button id="pD">DCM</button>
+      <span class="sep"></span>
+      <button id="play">▶ Play</button><button id="slow">Slow</button>
+    </div>
+    <div class="slider"><label for="D">D = <span id="Dv"></span></label><input id="D" type="range" min="0.05" step="0.01"></div>
+    <div class="slider"><label for="R">R = <span id="Rv"></span></label><input id="R" type="range"></div>
+    <div class="slider"><label for="L">L = <span id="Lv"></span></label><input id="L" type="range" min="20" max="400" step="5"></div>
+    <div class="slider"><label for="F">f<sub>s</sub> = <span id="Fv"></span></label><input id="F" type="range" min="10" max="200" step="5"></div>
+    <label class="chk"><input type="checkbox" id="rip"> Show output ripple</label>
+    <div class="slider" id="Cbox" style="display:none"><label for="C">C = <span id="Cv"></span></label><input id="C" type="range" min="0.3" max="2" step="0.01"></div>
+    <div class="slider"><label for="tc">t = <span id="tcv"></span></label><input id="tc" type="range" min="0" max="1.999" step="0.001"></div>
+  </div>
+
+  <div class="explain" id="explain"></div>
+  <div class="readout" id="out"></div>
+
+  <div class="quiz">
+    <h3>Check yourself <span id="qn"></span></h3>
+    <div class="q" id="qq"></div>
+    <div class="a" id="qa"></div>
+    <div class="row buttons"><button id="qshow">Show answer</button><button id="qnext">Next ▶</button></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const TOPO = document.documentElement.dataset.topo;   // 'buck' | 'boost' | 'bb'
+  const BUCK = TOPO === 'buck', BOOST = TOPO === 'boost', BB = TOPO === 'bb';
+  const VD = 24; let TS = 20e-6, US = 20;               // Ts in s and in µs (set from f_s)
+  const NORM = 2.4, SLOW = 7;                           // real seconds per switching period
+  const CFG = {
+    buck:  {name: 'Buck Converter Explorer', D: [0.95], R: [2, 60, 0.5], pre: [10, 20, 50], ratio: 'D', IB: 'I<sub>LB</sub>'},
+    boost: {name: 'Boost Converter Explorer', D: [0.9], R: [5, 250, 1], pre: [40, 80, 200], ratio: '1/(1−D)', IB: 'I<sub>oB</sub>'},
+    bb:    {name: 'Buck-Boost Converter Explorer', D: [0.9], R: [2, 150, 1], pre: [20, 40, 100], ratio: 'D/(1−D)', IB: 'I<sub>oB</sub>'},
+  }[TOPO];
+  const $ = id => document.getElementById(id);
+  const ckt = $('ckt'), wf = $('wf'), wfs = $('wfs'), wfc = $('wfc');
+  const DIn = $('D'), RIn = $('R'), LIn = $('L'), tcIn = $('tc'), CIn = $('C'), ripIn = $('rip'), FIn = $('F');
+  $('h1').textContent = CFG.name;
+  $('nav').innerHTML = [['buck', 'Buck', 'buck_converter_explorer.html'], ['boost', 'Boost', 'boost_converter_explorer.html'], ['bb', 'Buck-boost', 'buck_boost_converter_explorer.html']]
+    .map(([k, n, f]) => k === TOPO ? `<b>${n}</b>` : `<a href="${f}">${n}</a>`).join('');
+  const iOut = BUCK ? 'i<sub>L</sub>' : 'i<sub>D</sub>';
+  $('legend').innerHTML = `<span><i style="background:var(--on)"></i>S path</span><span><i style="background:var(--off)"></i>diode path</span><span><i style="background:var(--cap)"></i>i<sub>C</sub> = ${iOut} − I<sub>o</sub></span><span>dots: conventional current, speed ∝ current</span>`;
+  DIn.max = CFG.D[0]; [RIn.min, RIn.max, RIn.step] = CFG.R;
+  const q = new URLSearchParams(location.search);
+  if (q.has('embed')) document.body.classList.add('embed');
+  DIn.value = q.has('D') ? +q.get('D') : 0.5; RIn.value = q.has('R') ? +q.get('R') : CFG.pre[0];
+  LIn.value = q.has('L') ? +q.get('L') : 100; tcIn.value = 0.2;
+  FIn.value = q.has('fs') ? +q.get('fs') : 50;
+  CIn.value = Math.log10(q.has('C') ? +q.get('C') : 10); ripIn.checked = q.has('C');
+  let playing = q.get('play') !== '0', slow = false, last = null, dirty = true;
+
+  // ---------- helpers ----------
+  const f1 = v => v.toFixed(1), f2 = v => v.toFixed(2);
+  const fV = v => v >= 1 ? v.toFixed(2) + ' V' : (v * 1000).toFixed(v >= 0.1 ? 0 : 1) + ' mV';
+  const fC = c => c < 10 ? c.toFixed(1) : c.toFixed(0);
+  const sb = (b, s, rest = '') => `${b}<tspan dy="3" font-size="75%">${s}</tspan><tspan dy="-3">${rest}</tspan>`;
+  const T = (x, y, t, o = {}) => `<text x="${x}" y="${y}" font-size="${o.fs || 13}" fill="${o.c || 'var(--fg)'}" text-anchor="${o.a || 'start'}" font-weight="${o.w || 400}">${t}</text>`;
+  const line = (x1, y1, x2, y2, c, w = 1, d = '') => `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="${w}"${d ? ` stroke-dasharray="${d}"` : ''}/>`;
+  const poly = (pts, c, w = 2, d = '') => `<polyline points="${pts.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ')}" fill="none" stroke="${c}" stroke-width="${w}" stroke-linejoin="round"${d ? ` stroke-dasharray="${d}"` : ''}/>`;
+  const nice = v => { const e = Math.pow(10, Math.floor(Math.log10(v))), m = v / e; return (m <= 1 ? 1 : m <= 2 ? 2 : m <= 2.5 ? 2.5 : m <= 5 ? 5 : 10) * e; };
+
+  // ---------- analysis (steady state, constant Vo) ----------
+  let s = {};
+  function compute() {
+    TS = 1 / (+FIn.value * 1e3); US = TS * 1e6;
+    const D = +DIn.value, R = +RIn.value, L = +LIn.value * 1e-6;
+    const K = 2 * L / (R * TS);
+    const Kc = BUCK ? 1 - D : BOOST ? D * (1 - D) ** 2 : (1 - D) ** 2;
+    const Mccm = BUCK ? D : BOOST ? 1 / (1 - D) : D / (1 - D);
+    const ccm = K >= Kc;
+    const M = ccm ? Mccm : BUCK ? 2 / (1 + Math.sqrt(1 + 4 * K / (D * D))) : BOOST ? (1 + Math.sqrt(1 + 4 * D * D / K)) / 2 : D / Math.sqrt(K);
+    const Vo = M * VD, Io = Vo / R;
+    const vLon = BUCK ? VD - Vo : VD, vLoff = BOOST ? Vo - VD : Vo;     // magnitudes of v_L in the two intervals
+    let Imin, Imax, D2;
+    if (ccm) {
+      const di = vLon * D * TS / L, IL = BUCK ? Io : Io / (1 - D);
+      Imin = IL - di / 2; Imax = IL + di / 2; D2 = 1 - D;
+    } else {
+      Imin = 0; Imax = vLon * D * TS / L; D2 = D * vLon / vLoff;
+    }
+    const IoB = VD * Mccm * TS * Kc / (2 * L);
+    s = {D, R, L, K, Kc, ccm, M, Mccm, Vo, Io, vLon, vLoff, Imin, Imax, D2, IoB, boundary: Math.abs(K - Kc) / Kc < 0.02};
+    // averages and output ripple: v_C = (1/C)∫(i_out − I_o)dt, mean removed
+    const C = Math.pow(10, +CIn.value) * 1e-6, N = 1000, v = [0];
+    let acc = 0;
+    for (let n = 1; n <= N; n++) {
+      const a = at((n - 1) / N), b = at(Math.min(0.999999, n / N));
+      acc += (a.iC + b.iC) / 2 * TS / N; v.push(acc / C);
+    }
+    const mean = v.slice(0, N).reduce((x, y) => x + y, 0) / N;
+    const avgOn = D * (Imin + Imax) / 2, avgOff = D2 * (Imin + Imax) / 2;     // exact averages of the linear segments
+    Object.assign(s, {C, rip: ripIn.checked, vr: v.map(x => x - mean), NR: N, Id: BOOST ? avgOn + avgOff : avgOn, IL: avgOn + avgOff});
+    s.dV = Math.max(...s.vr) - Math.min(...s.vr);
+    s.fc = 1 / (2 * Math.PI * Math.sqrt(L * C));
+    ui(); drawStatic(); dirty = true;
+  }
+  // state at a point θ ∈ [0,1) inside the period
+  function at(th) {
+    const {D, D2, Imin, Imax, Vo, Io, vLon, vLoff} = s;
+    let iL, st;
+    if (th < D) { iL = Imin + (Imax - Imin) * th / D; st = 'on'; }
+    else if (th < D + D2) { iL = Imax - (Imax - Imin) * (th - D) / D2; st = 'off'; }
+    else { iL = 0; st = 'idle'; }
+    const vL = st === 'on' ? vLon : st === 'off' ? -vLoff : 0;
+    // panel-1 voltage: buck → diode voltage v_oi; boost / buck-boost → switch voltage v_S
+    const vx = BUCK ? {on: VD, off: 0, idle: Vo}[st] : BOOST ? {on: 0, off: Vo, idle: VD}[st] : {on: 0, off: VD + Vo, idle: VD}[st];
+    const iS = st === 'on' ? iL : 0, iD = st === 'off' ? iL : 0;
+    const vo = s.vr ? Vo + s.vr[Math.round(th * s.NR)] : Vo;
+    return {iL, vx, vo, vL, st, iS, iD, iC: (BUCK ? iL : iD) - Io, iin: BOOST ? iL : iS};
+  }
+  const stCol = st => st === 'on' ? 'var(--on)' : st === 'off' ? 'var(--off)' : 'var(--idle)';
+
+  // ---------- UI text ----------
+  function ui() {
+    $('Dv').textContent = f2(s.D);
+    $('Rv').textContent = (+RIn.value) + ' Ω';
+    $('Lv').textContent = LIn.value + ' µH';
+    $('Fv').textContent = FIn.value + ' kHz';
+    ['pC', 'pB', 'pD'].forEach((id, i) => $(id).classList.toggle('on', s.D === 0.5 && +RIn.value === CFG.pre[i] && +LIn.value === 100 && +FIn.value === 50));
+    const mode = s.boundary ? `<span class="badge" style="background:#a16207">Boundary</span>` :
+      s.ccm ? `<span class="badge" style="background:var(--vx)">CCM</span>` : `<span class="badge" style="background:var(--cap)">DCM</span>`;
+    const ratio = s.Vo / VD, eq = s.ccm || s.boundary;
+    $('out').innerHTML = `
+      <div><span class="k">Mode:</span> ${mode} <span class="k">I<sub>o</sub> ${s.boundary ? '≈' : s.Io >= s.IoB ? '≥' : '<'} ${CFG.IB} = ${f2(s.IoB)} A</span></div>
+      <div><span class="k">${BB ? '|V<sub>o</sub>|' : 'V<sub>o</sub>'} =</span> <b>${f1(s.Vo)} V</b> <span class="k">(V<sub>o</sub>/V<sub>d</sub> = ${ratio.toFixed(3)} ${eq ? '= ' + CFG.ratio : '> ' + CFG.ratio + ' = ' + s.Mccm.toFixed(3)})</span>${BB ? ' <span class="k">· inverted polarity</span>' : ''}</div>
+      <div><span class="k">I<sub>o</sub> = V<sub>o</sub>/R =</span> <b>${f2(s.Io)} A</b></div>
+      <div><span class="k">Δi<sub>L</sub> =</span> <b>${f2(s.Imax - s.Imin)} A</b> <span class="k">(${f2(s.Imin)} → ${f2(s.Imax)} A${BUCK ? '' : `, avg I<sub>L</sub> = ${f2(s.IL)} A`})</span></div>
+      <div><span class="k">Input I<sub>d</sub> =</span> <b>${f2(s.Id)} A</b> <span class="k">(I<sub>d</sub>/I<sub>o</sub> = ${(s.Id / s.Io).toFixed(3)})</span></div>
+      <div><span class="k">P<sub>in</sub> = P<sub>out</sub> =</span> <b>${f1(VD * s.Id)} W</b> <span class="k">(ideal)</span></div>
+      <div><span class="k">T<sub>s</sub> = 1/f<sub>s</sub> =</span> <b>${+US.toFixed(1)} µs</b> <span class="k">· switching loss ∝ f<sub>s</sub>: <b>${(+FIn.value / 50).toFixed(1)}×</b> the 50 kHz value</span></div>` + (!s.rip ? '' : `
+      <div class="rip"><span class="k">ΔV<sub>o</sub> =</span> <b style="color:var(--vo)">${fV(s.dV)}</b> <span class="k">(ΔV<sub>o</sub>/V<sub>o</sub> = <b>${(100 * s.dV / s.Vo).toFixed(2)} %</b>)</span>${s.dV / s.Vo > 0.1 ? ' <span style="color:#b45309">⚠ large: the constant-V<sub>o</sub> assumption gets rough</span>' : ''}</div>` +
+      (!s.ccm ? `<div><span class="k">(the textbook ΔV<sub>o</sub> formula assumes CCM)</span></div>` : BUCK ? `
+      <div><span class="k">Δi<sub>L</sub>T<sub>s</sub>/8C =</span> <b>${fV((s.Imax - s.Imin) * TS / (8 * s.C))}</b></div>
+      <div><span class="k">f<sub>c</sub> = 1/2π√(LC) =</span> <b>${(s.fc / 1000).toFixed(2)} kHz</b></div>
+      <div><span class="k">π²(1−D)/2 · (f<sub>c</sub>/f<sub>s</sub>)² =</span> <b>${(100 * Math.PI ** 2 * (1 - s.D) / 2 * (s.fc * TS) ** 2).toFixed(2)} %</b></div>` : `
+      <div><span class="k">ΔQ/C = I<sub>o</sub>DT<sub>s</sub>/C =</span> <b>${fV(s.Io * s.D * TS / s.C)}</b></div>
+      <div><span class="k">ΔV<sub>o</sub>/V<sub>o</sub> = DT<sub>s</sub>/RC =</span> <b>${(100 * s.D * TS / (s.R * s.C)).toFixed(2)} %</b></div>`));
+    $('Cv').textContent = fC(s.C * 1e6) + ' µF';
+    $('Cbox').style.display = s.rip ? '' : 'none';
+  }
+
+  // ---------- waveform layout ----------
+  let Lw = {};
+  function setLayout() {
+    const w = wf.clientWidth || 900, narrow = w < 640;
+    const W = narrow ? 480 : 900, px0 = narrow ? 40 : 52, px1 = W - 8, fs = 13;
+    const gh = 22, ph = narrow ? 92 : 96, gap = 20;
+    let y = 4;
+    const g = [y, y + gh]; y += gh + gap;
+    const p1 = [y, y + ph]; y += ph + gap;
+    const p2 = [y, y + ph]; y += ph + gap;
+    const p3 = [y, y + ph + 10]; y += ph + 10;
+    let p4 = null;
+    if (ripIn.checked) { y += gap; p4 = [y, y + ph]; y += ph; }
+    y += 30;
+    Lw = {W, H: y, px0, px1, fs, sm: fs - 1, g, p1, p2, p3, p4, last: p4 || p3, narrow};
+    wf.setAttribute('viewBox', `0 0 ${W} ${y}`);
+  }
+  const xs = tau => Lw.px0 + tau / 2 * (Lw.px1 - Lw.px0);
+  function panel(y0, y1, lo, hi, ticks, fmt = v => +v.toFixed(1)) {
+    const ys = v => y1 - (v - lo) / (hi - lo) * (y1 - y0);
+    let g = `<rect x="${Lw.px0}" y="${y0}" width="${Lw.px1 - Lw.px0}" height="${y1 - y0}" fill="none" stroke="var(--grid)"/>`;
+    ticks.forEach(v => {
+      g += line(Lw.px0, ys(v), Lw.px1, ys(v), v === 0 ? '#9ca3af' : 'var(--grid)', 1);
+      g += T(Lw.px0 - 5, ys(v) + 4, fmt(v), {a: 'end', fs: Lw.sm - 1, c: 'var(--muted)'});
+    });
+    return {g, ys, y0, y1};
+  }
+  function segs() {
+    const out = [];
+    for (let k = 0; k < 2; k++) {
+      out.push([k, k + s.D, 'on']);
+      out.push([k + s.D, k + Math.min(1, s.D + s.D2), 'off']);
+      if (s.D + s.D2 < 0.9999) out.push([k + s.D + s.D2, k + 1, 'idle']);
+    }
+    return out.filter(g => g[1] - g[0] > 1e-9);
+  }
+  const ev = tau => at(Math.min(0.999999, Math.max(0, (tau % 1) + 1e-7)));
+  const evE = tau => { const k = Math.floor(tau - 1e-9); return at(Math.min(0.999999, tau - k - 1e-7)); };
+  const uniq = a => a.filter((v, i) => a.findIndex(w => Math.abs(w - v) < 1e-6 * (1 + Math.abs(v)) + 0.5) === i);
+
+  let P = {};
+  function drawStatic() {
+    const {px0, px1, sm, g: G, p1, p2, p3, p4} = Lw, S = segs(), BOT = Lw.last[1];
+    let g = '';
+    S.forEach(([a, b, st]) => { if (st !== 'off') g += `<rect x="${xs(a)}" y="${G[0]}" width="${xs(b) - xs(a)}" height="${BOT - G[0]}" fill="${st === 'on' ? '#fff7ed' : '#f3f4f6'}"/>`; });
+    // gate strip
+    S.forEach(([a, b, st]) => {
+      const yy = st === 'on' ? G[0] + 3 : G[1] - 3;
+      g += line(xs(a), yy, xs(b), yy, stCol(st), 2.4);
+      const lbl = st === 'on' ? 'S on' : st === 'off' ? 'diode on' : 'both off';
+      if (xs(b) - xs(a) > (Lw.narrow ? 46 : 58)) g += T((xs(a) + xs(b)) / 2, G[0] + 15, lbl, {a: 'middle', fs: sm - 1, c: stCol(st) === 'var(--idle)' ? 'var(--muted)' : stCol(st), w: 700});
+    });
+    S.forEach(([a], i) => { if (i) g += line(xs(a), G[0] + 3, xs(a), G[1] - 3, '#9ca3af', 1); });
+    g += T(px0 - 5, G[0] + 15, 'S', {a: 'end', fs: sm, w: 700});
+
+    // panel 1: diode voltage (buck) or switch voltage (boost, buck-boost)
+    const vmax = BUCK ? VD : BOOST ? s.Vo : VD + s.Vo;
+    const P1 = panel(p1[0], p1[1], -vmax * 0.12, vmax * 1.15, uniq([0, VD, vmax]));
+    let pts = [];
+    S.forEach(([a, b]) => { pts.push([xs(a), P1.ys(ev(a).vx)]); pts.push([xs(b), P1.ys(evE(b).vx)]); });
+    g += P1.g + poly(pts, 'var(--vx)', 2.4);
+    const avg1 = BUCK ? s.Vo : VD;
+    g += line(px0, P1.ys(avg1), px1, P1.ys(avg1), 'var(--vx)', 1.4, '7 4');
+    g += T(px1 - 4, P1.ys(avg1) - 5, BUCK ? sb('V', 'o', ` = avg(v`) + sb('', 'oi', `) = ${f1(s.Vo)} V`) : 'avg(v' + sb('', 'S', ') = V') + sb('', 'd', ` = ${VD} V`), {a: 'end', c: 'var(--vx)', fs: sm, w: 700});
+    g += T(px0, p1[0] - 5, BUCK ? sb('v', 'oi', '  (switch node / diode voltage)') : sb('v', 'S', '  (switch voltage)'), {c: 'var(--vx)', w: 700, fs: sm});
+
+    // panel 2: inductor voltage with volt-second areas
+    const m = Math.max(s.vLon, s.vLoff);
+    const P2 = panel(p2[0], p2[1], -m * 1.18, m * 1.18, uniq([-s.vLoff, 0, s.vLon]));
+    pts = [];
+    S.forEach(([a, b, st]) => {
+      const va = ev(a).vL, vb = evE(b).vL;
+      if (st !== 'idle') g += `<polygon points="${xs(a)},${P2.ys(0)} ${xs(a)},${P2.ys(va)} ${xs(b)},${P2.ys(vb)} ${xs(b)},${P2.ys(0)}" fill="${st === 'on' ? 'rgba(234,88,12,.18)' : 'rgba(22,163,74,.18)'}"/>`;
+      pts.push([xs(a), P2.ys(va)]); pts.push([xs(b), P2.ys(vb)]);
+    });
+    g += P2.g + poly(pts, 'var(--vl)', 2.4);
+    const A = s.vLon * s.D * US, B = s.vLoff * s.D2 * US;
+    if (xs(s.D) - xs(0) > 40) g += T((xs(0) + xs(s.D)) / 2, P2.ys(s.vLon / 2) + 4, Lw.narrow ? 'A' : `A = ${A.toFixed(0)} V·µs`, {a: 'middle', c: 'var(--on)', fs: sm, w: 700});
+    if (xs(s.D + s.D2) - xs(s.D) > 40) g += T((xs(s.D) + xs(s.D + s.D2)) / 2, P2.ys(-s.vLoff / 2) + 4, Lw.narrow ? 'B' : `B = ${B.toFixed(0)} V·µs`, {a: 'middle', c: 'var(--off)', fs: sm, w: 700});
+    g += T(px0, p2[0] - 5, sb('v', 'L', ' = L di') + sb('', 'L', '/dt'), {c: 'var(--vl)', w: 700, fs: sm});
+    g += T(px1, p2[0] - 5, Lw.narrow ? 'area A = area B' : 'area A = area B  →  avg(v' + sb('', 'L', ') = 0'), {a: 'end', c: 'var(--muted)', w: 700, fs: sm});
+
+    // panel 3: inductor current
+    const hi = nice(Math.max(s.Imax, s.Io) * 1.18 / 2) * 2;
+    const P3 = panel(p3[0], p3[1], -hi * 0.08, hi, [0, hi / 2, hi], v => +v.toFixed(2));
+    g += P3.g;
+    // charge ΔQ delivered to C (i_out above I_o) in the first period
+    if (s.rip) {
+      const qp = []; let inside = false;
+      for (let n = 0; n <= 600; n++) {
+        const th = Math.min(0.999999, n / 600), r = at(th), io = BUCK ? r.iL : r.iD;
+        if (io > s.Io) { if (!inside) { qp.push([xs(th), P3.ys(s.Io)]); inside = true; } qp.push([xs(th), P3.ys(io)]); }
+        else if (inside) { qp.push([xs(th), P3.ys(s.Io)]); break; }
+      }
+      if (inside && qp[qp.length - 1][1] !== P3.ys(s.Io)) qp.push([qp[qp.length - 1][0], P3.ys(s.Io)]);
+      if (qp.length > 2) {
+        g += `<polygon points="${qp.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ')}" fill="rgba(190,24,93,.22)"/>`;
+        const xm = qp.reduce((a, p) => a + p[0], 0) / qp.length;
+        g += T(xm, P3.ys(s.Io) - 4, 'ΔQ', {a: 'middle', fs: sm, c: 'var(--vo)', w: 700});
+      }
+    }
+    S.forEach(([a, b, st]) => g += poly([[xs(a), P3.ys(ev(a).iL)], [xs(b), P3.ys(evE(b).iL)]], stCol(st) === 'var(--idle)' ? '#64748b' : stCol(st), 2.6));
+    g += line(px0, P3.ys(s.Io), px1, P3.ys(s.Io), 'var(--load)', 1.3, '7 4');
+    g += T(px1 - 4, P3.ys(s.Io) + (s.Io > hi * 0.75 ? 16 : -5), sb('I', 'o', ` = ${f2(s.Io)} A`), {a: 'end', c: 'var(--load)', fs: sm, w: 700});
+    g += T(px0, p3[0] - 5, sb('i', 'L', ' = ') + `<tspan fill="var(--on)">${sb('i', 'S')}</tspan> + <tspan fill="var(--off)">${sb('i', 'D')}</tspan>`, {w: 700, fs: sm});
+    // ripple bracket on the second peak
+    const xp = xs(1 + s.D);
+    g += line(xp + 8, P3.ys(s.Imax), xp + 8, P3.ys(s.Imin), '#6b7280', 1) + line(xp + 4, P3.ys(s.Imax), xp + 12, P3.ys(s.Imax), '#6b7280', 1) + line(xp + 4, P3.ys(s.Imin), xp + 12, P3.ys(s.Imin), '#6b7280', 1);
+    g += T(xp + 15, (P3.ys(s.Imax) + P3.ys(s.Imin)) / 2 + 4, sb('Δi', 'L'), {fs: sm, c: '#6b7280', w: 700});
+    // panel 4: output voltage ripple (zoomed)
+    let P4 = null;
+    if (p4) {
+      const h = nice(Math.max(s.dV, 1e-6) * 0.55), dec = h >= 1 ? 0 : h >= 0.1 ? 1 : h >= 0.01 ? 2 : 3;
+      P4 = panel(p4[0], p4[1], s.Vo - 1.3 * h, s.Vo + 1.3 * h, [s.Vo - h, s.Vo, s.Vo + h], v => v.toFixed(dec));
+      g += P4.g;
+      const vp = [];
+      for (let n = 0; n <= 800; n++) { const tau = n / 400; vp.push([xs(tau), P4.ys(at(Math.min(0.999999, tau % 1 || (n ? 0.999999 : 0))).vo)]); }
+      g += line(px0, P4.ys(s.Vo), px1, P4.ys(s.Vo), 'var(--vo)', 1.2, '7 4') + poly(vp, 'var(--vo)', 2.4);
+      const vmx = s.Vo + Math.max(...s.vr), vmn = s.Vo + Math.min(...s.vr), xb = px1 - 10;
+      g += line(xb, P4.ys(vmx), xb, P4.ys(vmn), '#6b7280', 1) + line(xb - 4, P4.ys(vmx), xb + 4, P4.ys(vmx), '#6b7280', 1) + line(xb - 4, P4.ys(vmn), xb + 4, P4.ys(vmn), '#6b7280', 1);
+      g += T(xb - 7, (P4.ys(vmx) + P4.ys(vmn)) / 2 + 4, sb('ΔV', 'o'), {a: 'end', fs: sm, c: '#6b7280', w: 700});
+      g += T(px0, p4[0] - 5, sb(BB ? '|v' : 'v', 'o', BB ? '|  (zoomed in)' : '  (zoomed in)'), {c: 'var(--vo)', w: 700, fs: sm});
+      g += T(px1, p4[0] - 5, sb('ΔV', 'o', ` = ΔQ/C = ${fV(s.dV)}`), {a: 'end', c: 'var(--vo)', w: 700, fs: sm});
+    }
+    // time axis
+    const ax = Lw.last;
+    for (let k = 0; k <= 4; k++) g += T(xs(k / 2), ax[1] + 14, +(k * US / 2).toFixed(1) + (k === 4 ? ' µs' : ''), {a: k === 0 ? 'start' : k === 4 ? 'end' : 'middle', fs: sm - 1, c: 'var(--muted)'});
+    g += T(xs(1), ax[1] + 27, sb('T', 's'), {a: 'middle', fs: sm - 1, c: 'var(--muted)'}) + T(xs(2), ax[1] + 27, sb('2T', 's'), {a: 'end', fs: sm - 1, c: 'var(--muted)'});
+    wfs.innerHTML = g;
+    P = {P1, P2, P3, P4};
+  }
+
+  function drawCursor(tau) {
+    const r = at(tau % 1), xc = xs(tau);
+    let g = line(xc, Lw.g[0], xc, Lw.last[1], '#111827', 1.3);
+    if (P.P4) g += `<circle cx="${xc}" cy="${P.P4.ys(r.vo)}" r="4" fill="var(--vo)"/>`;
+    g += `<circle cx="${xc}" cy="${P.P1.ys(r.vx)}" r="4" fill="var(--vx)"/>`;
+    g += `<circle cx="${xc}" cy="${P.P2.ys(r.vL)}" r="4" fill="var(--vl)"/>`;
+    g += `<circle cx="${xc}" cy="${P.P3.ys(r.iL)}" r="4.5" fill="${r.st === 'idle' ? '#64748b' : stCol(r.st)}"/>`;
+    wfc.innerHTML = g;
+  }
+
+  // ---------- circuit ----------
+  const YT = 50, YB = 175, YM = 112, XS = 80, XN = 270, XC = 430, XR = 520;
+  const BR = BUCK ? {
+    S:   [[XN, YB], [XS, YB], [XS, YT], [XN, YT]],
+    D:   [[XN, YB], [XN, YT]],
+    L:   [[XN, YT], [XC, YT]],
+    C:   [[XC, YT], [XC, YB]],
+    R:   [[XC, YT], [XR, YT], [XR, YB], [XC, YB]],
+    Ret: [[XC, YB], [XN, YB]],
+  } : BOOST ? {
+    L:   [[XN, YB], [XS, YB], [XS, YT], [XN, YT]],      // source + inductor carry i_L
+    S:   [[XN, YT], [XN, YB]],
+    D:   [[XN, YT], [XC, YT]],
+    C:   [[XC, YT], [XC, YB]],
+    R:   [[XC, YT], [XR, YT], [XR, YB], [XC, YB]],
+    Ret: [[XC, YB], [XN, YB]],
+  } : {
+    S:   [[XN, YB], [XS, YB], [XS, YT], [XN, YT]],
+    L:   [[XN, YT], [XN, YB]],
+    Ret: [[XN, YB], [XC, YB]],
+    C:   [[XC, YB], [XC, YT]],                            // positive i_C flows upward
+    R:   [[XC, YB], [XR, YB], [XR, YT], [XC, YT]],
+    D:   [[XC, YT], [XN, YT]],
+  };
+  const len = {}; for (const k in BR) { let l = 0; const p = BR[k]; for (let i = 1; i < p.length; i++) l += Math.hypot(p[i][0] - p[i - 1][0], p[i][1] - p[i - 1][1]); len[k] = l; }
+  const ptAt = (k, d) => { const p = BR[k]; for (let i = 1; i < p.length; i++) { const l = Math.hypot(p[i][0] - p[i - 1][0], p[i][1] - p[i - 1][1]); if (d <= l) { const t = d / l; return [p[i - 1][0] + t * (p[i][0] - p[i - 1][0]), p[i - 1][1] + t * (p[i][1] - p[i - 1][1])]; } d -= l; } return p[p.length - 1]; };
+  const ph = {S: 0, D: 0, L: 0, C: 0, R: 0, Ret: 0}, SPACING = 20, SPD = 75;
+  const curr = r => ({S: r.iS, D: r.iD, L: r.iL, C: r.iC, R: s.Io, Ret: BUCK ? r.iL : r.iD});
+  function moveDots(r, dt) {
+    const c = curr(r), Iref = Math.max(s.Imax, s.Io, 1e-6), k = SPD * NORM / (slow ? SLOW : NORM);
+    for (const b in ph) ph[b] = (ph[b] + c[b] / Iref * k * dt + 1e6 * SPACING) % SPACING;
+  }
+
+  // component symbols (drawn over wires and dots)
+  const W_ = (x, y, w, h) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#fff"/>`;
+  function swH(x1, x2, y, on) {                       // horizontal switch, label below, state above
+    const xm = (x1 + x2) / 2;
+    return W_(x1 - 4, y - 6, x2 - x1 + 8, 12) + `<circle cx="${x1}" cy="${y}" r="3.5" fill="var(--fg)"/><circle cx="${x2}" cy="${y}" r="3.5" fill="var(--fg)"/>` +
+      line(x1, y, on ? x2 : x2 - 6, on ? y : y - 24, on ? 'var(--on)' : 'var(--fg)', 3) +
+      T(xm, y + 24, 'S', {a: 'middle', fs: 17, w: 700}) + T(xm, 18, on ? 'ON' : 'OFF', {a: 'middle', fs: 13, w: 700, c: on ? 'var(--on)' : 'var(--muted)'});
+  }
+  function swV(x, y1, y2, on) {                       // vertical switch, labels on the left
+    return W_(x - 6, y1 - 4, 12, y2 - y1 + 8) + `<circle cx="${x}" cy="${y1}" r="3.5" fill="var(--fg)"/><circle cx="${x}" cy="${y2}" r="3.5" fill="var(--fg)"/>` +
+      line(x, y2, on ? x : x + 24, on ? y1 : y1 + 6, on ? 'var(--on)' : 'var(--fg)', 3) +
+      T(x - 14, YM + 16, 'S', {a: 'end', fs: 17, w: 700}) + T(x - 14, YM - 6, on ? 'ON' : 'OFF', {a: 'end', fs: 13, w: 700, c: on ? 'var(--on)' : 'var(--muted)'});
+  }
+  function diode(cx, cy, dir, live, col) {           // dir = direction of forward current
+    const c = live ? col : 'var(--fg)', f = live ? col : '#fff';
+    const P = {up: [[-13, 10], [13, 10], [0, -10]], right: [[-10, -13], [-10, 13], [10, 0]], left: [[10, -13], [10, 13], [-10, 0]]}[dir];
+    const bar = {up: [-14, -10, 14, -10], right: [10, -14, 10, 14], left: [-10, -14, -10, 14]}[dir];
+    return W_(cx - 15, cy - 15, 30, 30) + `<polygon points="${P.map(p => (cx + p[0]) + ',' + (cy + p[1])).join(' ')}" fill="${f}" stroke="${c}" stroke-width="2" stroke-linejoin="round"/>` +
+      line(cx + bar[0], cy + bar[1], cx + bar[2], cy + bar[3], c, 2.6);
+  }
+  function indH(x1, y, col) { let d = `M${x1},${y}`; for (let i = 0; i < 4; i++) d += ' a11.25,11.25 0 0 1 22.5,0'; return W_(x1 - 2, y - 14, 94, 19) + `<path d="${d}" fill="none" stroke="${col}" stroke-width="2.6"/>`; }
+  function indV(x, y1, col) { let d = `M${x},${y1}`; for (let i = 0; i < 4; i++) d += ' a11.25,11.25 0 0 1 0,22.5'; return W_(x - 5, y1 - 2, 19, 94) + `<path d="${d}" fill="none" stroke="${col}" stroke-width="2.6"/>`; }
+
+  function drawCircuit(tau) {
+    const r = at(tau % 1), c = curr(r), live = v => Math.abs(v) > 1e-6;
+    const main = stCol(r.st), on = r.st === 'on';
+    const col = {S: live(c.S) ? 'var(--on)' : 'var(--idle)', D: live(c.D) ? 'var(--off)' : 'var(--idle)',
+                 L: live(c.L) ? main : 'var(--idle)', Ret: live(c.Ret) ? (BUCK ? main : 'var(--off)') : 'var(--idle)',
+                 C: live(c.C) ? 'var(--cap)' : 'var(--idle)', R: 'var(--load)'};
+    let g = '';
+    for (const b in BR) g += poly(BR[b], col[b], 2.6);
+    for (const b in BR) {
+      if (!live(c[b])) continue;
+      for (let d = ph[b]; d < len[b]; d += SPACING) { const [x, y] = ptAt(b, d); g += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.3" fill="${col[b]}" stroke="#fff" stroke-width="0.8"/>`; }
+    }
+    // source
+    g += `<circle cx="${XS}" cy="${YM}" r="19" fill="#fff" stroke="var(--fg)" stroke-width="2"/>` +
+         T(XS, 108, '+', {a: 'middle', fs: 16, w: 700}) + T(XS, 127, '−', {a: 'middle', fs: 16, w: 700}) +
+         T(XS - 26, 110, sb('V', 'd'), {a: 'end', fs: 17, w: 700}) + T(XS - 26, 128, '24 V', {a: 'end', fs: 13, c: 'var(--muted)'});
+    const lc = live(c.L) ? main : 'var(--fg)', iLlbl = sb('i', 'L', ` = ${f2(r.iL)} A`), iLc = live(c.L) ? main : 'var(--muted)';
+    if (BUCK) {
+      g += swH(150, 206, YT, on) + diode(XN, YM, 'up', live(c.D), col.D);
+      g += T(296, 80, '+', {fs: 14, w: 700, c: 'var(--vx)'}) + T(296, 117, sb('v', 'oi'), {fs: 17, w: 700, c: 'var(--vx)'}) + T(296, 158, '−', {fs: 14, w: 700, c: 'var(--vx)'});
+      g += indH(300, YT, lc) + T(345, YT - 20, 'L', {a: 'middle', fs: 17, w: 700}) + T(345, YT + 22, iLlbl, {a: 'middle', fs: 15, w: 700, c: iLc});
+    } else if (BOOST) {
+      g += indH(130, YT, lc) + T(175, YT - 20, 'L', {a: 'middle', fs: 17, w: 700}) + T(175, YT + 22, iLlbl, {a: 'middle', fs: 15, w: 700, c: iLc});
+      g += swV(XN, YM - 24, YM + 24, on) + diode(350, YT, 'right', live(c.D), col.D);
+      g += T(306, 84, '+', {fs: 14, w: 700, c: 'var(--vx)'}) + T(306, 118, sb('v', 'S'), {fs: 17, w: 700, c: 'var(--vx)'}) + T(306, 152, '−', {fs: 14, w: 700, c: 'var(--vx)'});
+    } else {
+      g += swH(150, 206, YT, on) + diode(350, YT, 'left', live(c.D), col.D);
+      g += indV(XN, YM - 45, lc) + T(XN - 14, YM + 6, 'L', {a: 'end', fs: 17, w: 700}) + T(XN + 22, YM + 6, iLlbl, {fs: 15, w: 700, c: iLc});
+    }
+    // capacitor
+    const cUp = BB ? r.iC >= 0 : r.iC < 0;
+    g += W_(412, 107, 36, 11) + line(413, 106, 447, 106, 'var(--fg)', 2.6) + line(413, 119, 447, 119, 'var(--fg)', 2.6);
+    g += T(452, 100, 'C', {fs: 17, w: 700}) + (s.rip ? T(452, 122, fC(s.C * 1e6) + ' µF', {fs: 13, c: 'var(--vo)', w: 700}) : '') +
+         T(422, 150, sb('i', 'C', (cUp ? ' ↑ ' : ' ↓ ') + f2(Math.abs(r.iC))), {a: 'end', fs: 14, w: 700, c: 'var(--cap)'});
+    // resistor
+    let zz = `${XR},86`; for (let i = 0; i < 6; i++) zz += ` ${XR + (i % 2 ? -9 : 9)},${90 + i * 8} `; zz += ` ${XR},140`;
+    g += W_(XR - 12, 84, 24, 58) + `<polyline points="${zz}" fill="none" stroke="var(--load)" stroke-width="2.4" stroke-linejoin="round"/>`;
+    g += T(XR - 16, 117, 'R', {a: 'end', fs: 17, w: 700});
+    // output voltage (buck-boost: inverted polarity)
+    g += T(560, 76, BB ? '−' : '+', {a: 'middle', fs: 17, w: 700, c: BB ? 'var(--vo)' : 'var(--fg)'}) + T(560, 112, sb('V', 'o'), {a: 'middle', fs: 17, w: 700}) +
+         T(560, 130, f1(s.Vo) + ' V', {a: 'middle', fs: 13, c: 'var(--muted)', w: 700}) + T(560, 162, BB ? '+' : '−', {a: 'middle', fs: 17, w: 700, c: BB ? 'var(--vo)' : 'var(--fg)'});
+    [[XN, YT], [XN, YB], [XC, YT], [XC, YB]].forEach(([x, y]) => g += `<circle cx="${x}" cy="${y}" r="3.6" fill="var(--fg)"/>`);
+    ckt.innerHTML = g;
+  }
+
+  function explain(tau) {
+    const r = at(tau % 1), t = (tau * US).toFixed(1);
+    const up = v => (1e-6 * v / s.L).toFixed(3);
+    let h;
+    if (BUCK) {
+      if (r.st === 'on') h = `<b style="color:var(--on)">Switch ON.</b> v<sub>oi</sub> = V<sub>d</sub>, so the inductor sees v<sub>L</sub> = V<sub>d</sub> − V<sub>o</sub> = ${f1(s.vLon)} V and i<sub>L</sub> rises with slope ${up(s.vLon)} A/µs. The source supplies the current; the diode is reverse biased.`;
+      else if (r.st === 'off') h = `<b style="color:var(--off)">Switch OFF.</b> The inductor keeps its current flowing, so the diode turns on (<i>freewheeling</i>). v<sub>oi</sub> ≈ 0, v<sub>L</sub> = −V<sub>o</sub> = −${f1(s.Vo)} V and i<sub>L</sub> falls with slope ${up(s.vLoff)} A/µs. The source supplies nothing.`;
+      else h = `<b style="color:var(--muted)">Both OFF (DCM).</b> i<sub>L</sub> has reached zero, so the diode stops conducting. v<sub>L</sub> = 0 and v<sub>oi</sub> = V<sub>o</sub>. The capacitor alone feeds the load.`;
+    } else if (BOOST) {
+      if (r.st === 'on') h = `<b style="color:var(--on)">Switch ON.</b> The inductor is connected straight across the source: v<sub>L</sub> = V<sub>d</sub> = ${VD} V and i<sub>L</sub> rises with slope ${up(s.vLon)} A/µs (energy is stored in L). The diode is reverse biased by V<sub>o</sub>, so the capacitor alone feeds the load.`;
+      else if (r.st === 'off') h = `<b style="color:var(--off)">Switch OFF.</b> The inductor current is forced through the diode into the output. v<sub>S</sub> = V<sub>o</sub>, v<sub>L</sub> = V<sub>d</sub> − V<sub>o</sub> = −${f1(s.vLoff)} V and i<sub>L</sub> falls with slope ${up(s.vLoff)} A/µs. Source <i>and</i> inductor together feed the load and recharge C.`;
+      else h = `<b style="color:var(--muted)">Both OFF (DCM).</b> i<sub>L</sub> has reached zero, so the diode stops conducting. v<sub>L</sub> = 0 and v<sub>S</sub> = V<sub>d</sub>. The capacitor alone feeds the load.`;
+    } else {
+      if (r.st === 'on') h = `<b style="color:var(--on)">Switch ON.</b> The inductor is connected across the source: v<sub>L</sub> = V<sub>d</sub> = ${VD} V and i<sub>L</sub> rises with slope ${up(s.vLon)} A/µs (energy is stored in L). The diode is reverse biased, so the capacitor alone feeds the load.`;
+      else if (r.st === 'off') h = `<b style="color:var(--off)">Switch OFF.</b> The inductor pushes its current down to ground, up through the load and back through the diode, so the output is <i>negative</i>. v<sub>L</sub> = −|V<sub>o</sub>| = −${f1(s.Vo)} V, i<sub>L</sub> falls with slope ${up(s.vLoff)} A/µs. The source supplies nothing.`;
+      else h = `<b style="color:var(--muted)">Both OFF (DCM).</b> i<sub>L</sub> has reached zero, so the diode stops conducting. v<sub>L</sub> = 0 and v<sub>S</sub> = V<sub>d</sub>. The capacitor alone feeds the load.`;
+    }
+    const cap = r.st === 'idle' || (!BUCK && r.st === 'on') ? '' : ` Capacitor ${r.iC >= 0 ? 'charging' : 'discharging'} (${iOut} ${r.iC >= 0 ? '>' : '<'} I<sub>o</sub>).`;
+    $('explain').innerHTML = `<b>t = ${t} µs</b> · ` + h + cap;
+    $('tcv').textContent = t + ' µs';
+  }
+
+  // ---------- controls ----------
+  function setPlaying(p) { playing = p; $('play').textContent = p ? '❚❚ Pause' : '▶ Play'; $('play').classList.toggle('on', p); last = null; }
+  $('play').addEventListener('click', () => setPlaying(!playing));
+  $('slow').addEventListener('click', () => { slow = !slow; $('slow').classList.toggle('on', slow); });
+  [DIn, RIn, LIn, CIn, FIn].forEach(el => el.addEventListener('input', compute));
+  ripIn.addEventListener('change', () => { setLayout(); compute(); });
+  tcIn.addEventListener('input', () => { setPlaying(false); dirty = true; });
+  const preset = R => { FIn.value = 50; DIn.value = 0.5; RIn.value = R; LIn.value = 100; compute(); };
+  ['pC', 'pB', 'pD'].forEach((id, i) => $(id).addEventListener('click', () => preset(CFG.pre[i])));
+  let rz; addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { const n = Lw.narrow; setLayout(); if (n !== Lw.narrow) { drawStatic(); dirty = true; } }, 120); });
+
+  function tick(ts) {
+    let tau = +tcIn.value;
+    if (playing) {
+      const dt = last == null ? 0 : Math.min(0.05, (ts - last) / 1000);
+      last = ts;
+      tau = (tau + dt / (slow ? SLOW : NORM)) % 2;
+      tcIn.value = tau;
+      moveDots(at(tau % 1), dt);
+    }
+    if (playing || dirty) { drawCircuit(tau); drawCursor(tau); explain(tau); dirty = false; }
+    requestAnimationFrame(tick);
+  }
+
+  // ---------- quiz ----------  state: [D, R, L(µH), t/Ts, C(µF, enables ripple), fs(kHz)]
+  const QUIZ = [
+    {q: 'D = 0.5, R = 10 Ω. What is V<sub>o</sub>, and what is the average current drawn from the 24 V source?',
+     ans: 'V<sub>o</sub> = DV<sub>d</sub> = <b>12 V</b>, I<sub>o</sub> = 1.2 A, and I<sub>d</sub> = DI<sub>o</sub> = <b>0.6 A</b>.',
+     wf: 'The source only delivers current while S is on (orange segments of i<sub>L</sub>), i.e. for half the period. P<sub>in</sub> = 24 × 0.6 = 14.4 W = P<sub>out</sub> = 12 × 1.2 W. The converter acts like a DC transformer with turns ratio D : 1.',
+     state: [0.5, 10, 100, 0.2]},
+    {q: 'Set D = 0.25, R = 10 Ω. Why must the two shaded areas on the v<sub>L</sub> plot be equal?',
+     ans: 'In steady state i<sub>L</sub> returns to the same value every period, so ∫v<sub>L</sub>dt = 0: A = B = <b>90 V·µs</b>.',
+     wf: 'A = (V<sub>d</sub> − V<sub>o</sub>)·DT<sub>s</sub> = 18 V × 5 µs; B = V<sub>o</sub>·(1 − D)T<sub>s</sub> = 6 V × 15 µs. Setting A = B gives V<sub>o</sub> = DV<sub>d</sub> = 6 V. This volt-second balance is the same method you will use for the boost and buck-boost converters.',
+     state: [0.25, 10, 100, 0.1]},
+    {q: 'At D = 0.5, R = 10 Ω, increase L from 100 µH to 400 µH. What happens to V<sub>o</sub>, I<sub>o</sub> and Δi<sub>L</sub>?',
+     ans: 'V<sub>o</sub> and I<sub>o</sub> do not change; Δi<sub>L</sub> drops from 1.2 A to <b>0.3 A</b>.',
+     wf: 'Δi<sub>L</sub> = (V<sub>d</sub> − V<sub>o</sub>)DT<sub>s</sub>/L, so 4× the inductance gives ¼ of the ripple. The slopes on the i<sub>L</sub> plot get flatter but the average (I<sub>o</sub>) stays at 1.2 A. The price is a larger, heavier inductor.',
+     state: [0.5, 10, 400, 0.3]},
+    {q: 'At D = 0.5 and L = 100 µH, which load resistance puts the converter exactly at the CCM/DCM boundary?',
+     ans: '<b>R = 20 Ω</b>: I<sub>o</sub> = 0.6 A = I<sub>LB</sub>.',
+     wf: 'I<sub>LB</sub> = DT<sub>s</sub>(V<sub>d</sub> − V<sub>o</sub>)/2L = 0.5 × 20 µs × 12 V / 200 µH = 0.6 A. At the boundary i<sub>L</sub> just touches zero at the end of every period, so Δi<sub>L</sub> = 2I<sub>o</sub>. I<sub>LB</sub> is largest at D = 0.5.',
+     state: [0.5, 20, 100, 0.9]},
+    {q: 'Now increase R to 50 Ω (light load). What happens to V<sub>o</sub> if D is kept at 0.5?',
+     ans: 'The converter enters DCM and V<sub>o</sub> rises to <b>15.7 V</b>, above DV<sub>d</sub> = 12 V.',
+     wf: 'i<sub>L</sub> reaches zero before the period ends and both devices are off (grey interval). There v<sub>L</sub> = 0 instead of −V<sub>o</sub>, so area B is squeezed into a shorter time and V<sub>o</sub> must rise to keep A = B. To hold 12 V in DCM the controller has to reduce D.',
+     state: [0.5, 50, 100, 0.45]},
+    {q: 'Look at the capacitor current. When does C charge, and what is its average current?',
+     ans: 'C charges whenever i<sub>L</sub> > I<sub>o</sub>; its average current is <b>zero</b>.',
+     wf: 'i<sub>C</sub> = i<sub>L</sub> − I<sub>o</sub>: the purple dots reverse direction each time i<sub>L</sub> crosses the dashed I<sub>o</sub> line. The charge gained above the line equals the charge lost below it. That charge ΔQ is what sets the output ripple ΔV<sub>o</sub> = ΔQ/C, tick <i>Show output ripple</i> to see it.',
+     state: [0.5, 10, 100, 0.5]},
+    {q: 'Tick <i>Show output ripple</i> with C = 10 µF (D = 0.5, R = 10 Ω, L = 100 µH). What is ΔV<sub>o</sub>? What happens if you reduce C to 5 µF, or raise L to 400 µH?',
+     ans: 'ΔV<sub>o</sub> = Δi<sub>L</sub>T<sub>s</sub>/8C = <b>300 mV</b> (2.5 %). Halving C doubles it to 600 mV; 4× L cuts it to 75 mV.',
+     wf: 'ΔQ is the triangle of i<sub>L</sub> above I<sub>o</sub>: ½ · (T<sub>s</sub>/2) · (Δi<sub>L</sub>/2) = Δi<sub>L</sub>T<sub>s</sub>/8. Note that v<sub>o</sub> peaks where i<sub>L</sub> crosses I<sub>o</sub> on its way down, not at the end of the on-time. In terms of the LC corner frequency, ΔV<sub>o</sub>/V<sub>o</sub> = π²(1−D)/2 · (f<sub>c</sub>/f<sub>s</sub>)²: keep f<sub>c</sub> well below f<sub>s</sub>.',
+     state: [0.5, 10, 100, 0.3, 10]},
+    {q: 'Keep D = 0.5, R = 10 Ω, L = 100 µH, C = 10 µF and double f<sub>s</sub> from 50 kHz to 100 kHz. What happens to Δi<sub>L</sub>, ΔV<sub>o</sub> and the CCM/DCM boundary? What is the price?',
+     ans: 'Δi<sub>L</sub> halves (1.2 → <b>0.6 A</b>), ΔV<sub>o</sub> drops to a quarter (300 → <b>75 mV</b>), and I<sub>LB</sub> halves to 0.3 A (boundary now at R = 40 Ω). The price is twice the switching loss.',
+     wf: 'Δi<sub>L</sub> = (V<sub>d</sub> − V<sub>o</sub>)DT<sub>s</sub>/L is proportional to T<sub>s</sub>, and ΔV<sub>o</sub> = Δi<sub>L</sub>T<sub>s</sub>/8C is proportional to T<sub>s</sub>², so you get the same ripple with a smaller L and C. That is why a higher f<sub>s</sub> gives a smaller converter. But each switching transition costs energy, so the switching loss grows ∝ f<sub>s</sub> (and so does the heatsink). Note the time axis: the plot always shows two periods.',
+     state: [0.5, 10, 100, 0.3, 10, 100]},
+  ];
+  let qi = 0;
+  function showQ() {
+    const Q = QUIZ[qi];
+    $('qn').textContent = `(${qi + 1}/${QUIZ.length})`;
+    $('qq').innerHTML = Q.q;
+    $('qa').innerHTML = `<div class="ans">${Q.ans}</div><div class="sec"><span class="hd">With waveforms:</span> ${Q.wf}</div>
+      <button id="qdemo">Show it on the diagram ↑</button>`;
+    $('qa').style.display = 'none'; $('qshow').textContent = 'Show answer';
+    $('qdemo').addEventListener('click', () => {
+      [DIn.value, RIn.value, LIn.value, tcIn.value] = Q.state; FIn.value = Q.state[5] || 50;
+      if (Q.state[4]) { CIn.value = Math.log10(Q.state[4]); ripIn.checked = true; }
+      setPlaying(false); setLayout(); compute();
+      ckt.scrollIntoView({behavior: 'smooth', block: 'start'});
+    });
+  }
+  $('qshow').addEventListener('click', () => {
+    const on = $('qa').style.display !== 'block';
+    $('qa').style.display = on ? 'block' : 'none'; $('qshow').textContent = on ? 'Hide answer' : 'Show answer';
+  });
+  $('qnext').addEventListener('click', () => { qi = (qi + 1) % QUIZ.length; showQ(); });
+
+  setLayout(); setPlaying(playing); compute(); showQ(); requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
