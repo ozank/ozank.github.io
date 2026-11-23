@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3-Phase Transformer Connections: Voltage Ratio &amp; Phase Shift</title>
+<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#1f2937; --muted:#6b7280; --grid:#e5e7eb; --panel:#f8fafc;
+    --a:#b45309; --b:#1f2937; --c:#9ca3af; --r:#7c3aed; --ok:#047857; --neg:#dc2626;
+    --hv:#1f2937; --lv:#d97706;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);
+    font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .wrap{max-width:920px;margin:0 auto;padding:6px 14px 10px}
+  header h1{font-family:'Yanone Kaffeesatz',sans-serif;font-weight:400;font-size:30px;margin:2px 0 0}
+  header p{margin:0 0 4px;color:var(--muted)}
+  body.embed header, body.embed .quiz, body.embed .units{display:none}
+  .figs{display:grid;grid-template-columns:1.1fr 1fr;gap:6px;align-items:center}
+  svg{width:100%;height:auto;display:block;user-select:none}
+  svg text{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  .controls{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin-top:4px}
+  .buttons{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .buttons .lbl{font-size:12px;color:var(--muted);margin-right:-2px}
+  .sep{width:1px;height:22px;background:var(--grid);margin:0 4px}
+  button{font:inherit;font-size:13px;padding:4px 11px;border:1px solid #d1d5db;border-radius:6px;
+    background:#fff;color:var(--fg);cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+  button:hover{background:#f3f4f6}
+  button.on{background:#1f2937;color:#fff;border-color:#1f2937}
+  button.step.on{background:var(--r);border-color:var(--r)}
+  button:disabled{opacity:.35;cursor:default}
+  .units{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-top:6px;
+    background:var(--panel);border:1px solid var(--grid);border-radius:8px;padding:6px 10px}
+  .units label{font-size:13px;display:flex;align-items:center;gap:5px}
+  .units input{width:84px;font:inherit;padding:3px 6px;border:1px solid #d1d5db;border-radius:6px}
+  .explain{margin-top:6px;padding:7px 11px;border-radius:8px;border:1px solid #ddd6fe;background:#f5f3ff;min-height:44px}
+  .explain b{color:var(--r)}
+  .readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:3px 14px;
+    margin-top:6px;background:var(--panel);padding:7px 11px;border-radius:8px;border:1px solid var(--grid)}
+  .readout .k{color:var(--muted)}
+  .readout .wide{grid-column:1/-1}
+  .vg{font-size:18px;font-weight:700;color:var(--r)}
+  .okc{color:var(--ok);font-weight:600}
+  .warn{color:var(--neg);font-weight:600}
+  .quiz{margin-top:10px;background:var(--panel);border:1px solid var(--grid);border-radius:8px;padding:7px 11px}
+  .quiz h3{margin:0 0 3px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .quiz .q{font-weight:600}
+  .quiz .a{margin-top:6px;display:none;border-left:3px solid var(--ok);padding:2px 0 2px 10px}
+  .quiz .a .ans{color:var(--ok);font-weight:600}
+  .quiz .row{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+  body.embed .wrap{padding:0 6px 4px}
+  body.embed .controls{gap:3px 12px;margin-top:0}
+  body.embed .buttons{gap:4px}
+  body.embed button{font-size:12px;padding:2px 7px}
+  body.embed .explain{font-size:12.5px;padding:4px 9px;margin-top:3px;min-height:0}
+  body.embed .readout{font-size:12px;margin-top:3px;padding:3px 9px;gap:0 10px}
+  body.embed .readout .hideembed{display:none}
+  body.embed .vg{font-size:15px}
+  body.embed svg{max-height:288px}
+  body.embed .figs{justify-items:center}
+  @media (max-height:500px){header{display:none}}
+  @media (max-width:640px){
+    .wrap{padding:4px 8px 12px}
+    header h1{font-size:25px}
+    .figs{grid-template-columns:1fr}
+    .controls{gap:8px;margin-top:8px}
+    .buttons{width:100%}
+    .buttons button{flex:1;min-height:40px;font-size:15px;padding:6px 4px}
+    .buttons .lbl{width:100%}
+    .sep{display:none}
+    .units input{width:100%;font-size:16px}
+    .units label{flex:1 1 30%;flex-direction:column;align-items:stretch;gap:2px}
+    .readout{grid-template-columns:1fr;font-size:13px}
+    /* phone: phasors first, controls right under it, circuit after the explanation */
+    .wrap{display:flex;flex-direction:column}
+    .figs{display:contents}
+    header{order:0} #ph{order:1} .controls{order:2} .explain{order:3} #ckt{order:4;margin-top:6px}
+    .units{order:5} .readout{order:6} .quiz{order:7}
+    #ph{max-width:360px;margin:0 auto}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>3-Phase Transformer Connections</h1>
+    <p>Three single-phase transformers (or one 3-phase core). Pick how each side is connected and watch the line-voltage ratio and the phase shift change.</p>
+  </header>
+
+  <div class="figs">
+    <svg id="ckt" viewBox="0 0 420 310" role="img" aria-label="Schematic of primary and secondary windings"></svg>
+    <svg id="ph" viewBox="0 0 360 360" role="img" aria-label="Primary and secondary line voltage phasors"></svg>
+  </div>
+
+  <div class="controls">
+    <div class="buttons">
+      <span class="lbl">Primary–secondary:</span>
+      <button data-c="YY">Y–Y</button><button data-c="YD">Y–Δ</button>
+      <button data-c="DY">Δ–Y</button><button data-c="DD">Δ–Δ</button>
+    </div>
+    <div class="buttons">
+      <span class="lbl">Δ wiring:</span>
+      <button id="pv">Primary Δ: A→B</button><button id="sv">Secondary Δ: a→b</button>
+      <span class="sep"></span>
+      <button id="rev">Secondary polarity: normal</button>
+      <button id="seq">Sequence: abc</button>
+    </div>
+    <div class="buttons" id="steps">
+      <span class="lbl">Step:</span>
+      <button class="step" data-s="1">1</button><button class="step" data-s="2">2</button>
+      <button class="step" data-s="3">3</button><button class="step" data-s="4">4</button>
+      <button class="step" data-s="5">5</button>
+      <button id="prev">◀</button><button id="next">▶</button>
+    </div>
+  </div>
+
+  <div class="units">
+    <b style="font-size:13px">Each 1-φ unit:</b>
+    <label><span>V<sub>1</sub> (V)</span><input id="v1" type="number" min="1" step="any"></label>
+    <label><span>V<sub>2</sub> (V)</span><input id="v2" type="number" min="1" step="any"></label>
+    <label><span>S (kVA)</span><input id="s1" type="number" min="0" step="any"></label>
+    <span class="buttons">
+      <span class="lbl">Presets:</span>
+      <button id="ex1">Lecture example (Δ–Y 10 kV/230 V)</button>
+      <button id="ex2">Sen Ex. 2.8 (Y–Δ 1330/230 V)</button>
+    </span>
+  </div>
+
+  <div class="explain" id="explain"></div>
+  <div class="readout" id="out"></div>
+
+  <div class="quiz">
+    <h3>Check yourself <span id="qn"></span></h3>
+    <div class="q" id="qq"></div>
+    <div class="a" id="qa"></div>
+    <div class="row buttons"><button id="qshow">Show answer</button><button id="qset">Set it up</button><button id="qnext">Next ▶</button></div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const D = Math.PI / 180, RT3 = Math.sqrt(3);
+  // ---------- complex helpers ----------
+  const C = (re, im) => ({re, im});
+  const P = (m, a) => C(m * Math.cos(a), m * Math.sin(a));
+  const sub = (x, y) => C(x.re - y.re, x.im - y.im);
+  const neg = x => C(-x.re, -x.im);
+  const mag = x => Math.hypot(x.re, x.im);
+  const arg = x => Math.atan2(x.im, x.re);
+  const wrap = d => { while (d > 180) d -= 360; while (d <= -180) d += 360; return d; };
+
+  const $ = id => document.getElementById(id);
+  const q = new URLSearchParams(location.search);
+  if (q.has('embed')) document.body.classList.add('embed');
+
+  // ---------- state ----------
+  const st = {
+    pri: 'D', sec: 'Y',       // 'Y' or 'D'
+    pv: 1, sv: 1,             // Δ wiring: +1 → winding k from line k to line k+1 (A→B), -1 → k to k-1 (A→C)
+    rev: false, seq: 1,
+    v1: 10000, v2: 230, s1: 2000,
+    step: 5
+  };
+  const c0 = (q.get('conn') || '').toUpperCase().replace('Δ', 'D');
+  if (/^[YD][YD]$/.test(c0)) { st.pri = c0[0]; st.sec = c0[1]; }
+  if (q.has('step')) st.step = Math.min(5, Math.max(1, +q.get('step') || 5));
+  if (q.get('seq') === 'acb') st.seq = -1;
+  if (q.has('rev')) st.rev = true;
+
+  const PB = ['A', 'B', 'C', 'N'], SB = ['a', 'b', 'c', 'n'];
+  const PH = ['var(--a)', 'var(--b)', 'var(--c)'];
+
+  // winding k → which buses its dotted (p) and undotted (q) ends go to. Bus 3 = neutral.
+  function wiring(kind, v, rev) {
+    return [0, 1, 2].map(k => {
+      let p = k, qq = kind === 'Y' ? 3 : (k + v + 3) % 3;
+      return rev ? {p: qq, q: p} : {p, q: qq};
+    });
+  }
+
+  // ---------- model (unit phasors; magnitudes handled separately) ----------
+  let m = {};
+  function compute() {
+    const s = st.seq;
+    const vp = [P(1, 0), P(1, -s * 120 * D), P(1, s * 120 * D), C(0, 0)];      // V_AN, V_BN, V_CN, N
+    const VL1 = [sub(vp[0], vp[1]), sub(vp[1], vp[2]), sub(vp[2], vp[0])];     // V_AB, V_BC, V_CA
+    const wp = wiring(st.pri, st.pv, false);
+    const ws = wiring(st.sec, st.sv, st.rev);
+    const W1 = wp.map(w => sub(vp[w.p], vp[w.q]));                             // primary winding voltages (dot → undot)
+    const W2 = W1.map(x => x);                                                 // same limb → same direction (per unit of turns)
+    // secondary line voltages
+    let VL2;
+    if (st.sec === 'Y') {
+      const vl = [null, null, null];
+      ws.forEach((w, k) => { if (w.p < 3) vl[w.p] = W2[k]; else vl[w.q] = neg(W2[k]); });
+      VL2 = [sub(vl[0], vl[1]), sub(vl[1], vl[2]), sub(vl[2], vl[0])];
+    } else {
+      const ll = (i, j) => { for (let k = 0; k < 3; k++) { const w = ws[k];
+        if (w.p === i && w.q === j) return W2[k]; if (w.p === j && w.q === i) return neg(W2[k]); } };
+      VL2 = [ll(0, 1), ll(1, 2), ll(2, 0)];
+    }
+    const shift = Math.round(wrap((arg(VL2[0]) - arg(VL1[0])) / D));
+    // ratings
+    const kY1 = st.pri === 'Y' ? RT3 : 1, kY2 = st.sec === 'Y' ? RT3 : 1;
+    const S3 = 3 * st.s1 * 1e3;
+    const VLL1 = kY1 * st.v1, VLL2 = kY2 * st.v2;
+    m = {vp, VL1, VL2, W1, W2, wp, ws, shift,
+      n: st.v1 / st.v2, VLL1, VLL2, S3,
+      IL1: S3 / (RT3 * VLL1), IL2: S3 / (RT3 * VLL2),
+      IW1: st.s1 * 1e3 / st.v1, IW2: st.s1 * 1e3 / st.v2};
+    m.llr = VLL1 / VLL2;
+    draw(); ui();
+  }
+
+  // ---------- formatting ----------
+  const sig = x => x >= 100 ? x.toFixed(0) : x >= 10 ? x.toFixed(1) : x.toFixed(2);
+  const fV = v => v >= 1000 ? sig(v / 1000) + ' kV' : sig(v) + ' V';
+  const fI = i => i >= 1000 ? sig(i / 1000) + ' kA' : sig(i) + ' A';
+  const fS = s => s >= 1e6 ? sig(s / 1e6) + ' MVA' : sig(s / 1e3) + ' kVA';
+  const fR = r => r >= 100 ? r.toFixed(1) : r >= 10 ? r.toFixed(2) : r.toFixed(3);
+  const sb = (x, y) => `${x}<sub>${y}</sub>`;
+  const relStr = (f = sb, b = x => `<b>${x}</b>`) => {
+    const d = m.shift, Vab = f('V', 'ab'), VAB = f('V', 'AB');
+    if (d === 0) return `${Vab} is in phase with ${VAB}`;
+    if (Math.abs(d) === 180) return `${Vab} is 180° from ${VAB}`;
+    return d < 0 ? `${Vab} ${b('lags')} ${VAB} by ${-d}°` : `${Vab} ${b('leads')} ${VAB} by ${d}°`;
+  };
+  const shiftSvg = () => relStr((a, x) => `${a}<tspan dy="3" font-size="75%">${x}</tspan><tspan dy="-3"></tspan>`, x => x);
+  const vn = (bus, w) => sb('V', bus[w.p] + bus[w.q]);
+  const relTxt = (d, ref) => {
+    d = wrap(d);
+    if (Math.abs(d) < 0.5) return `in phase with ${ref}`;
+    if (Math.abs(Math.abs(d) - 180) < 0.5) return `180° from ${ref}`;
+    return d < 0 ? `lags ${ref} by ${-d}°` : `leads ${ref} by ${d}°`;
+  };
+
+  // ---------- drawing: schematic (Y / Δ), windings drawn along their voltage direction ----------
+  const ckt = $('ckt'), ph = $('ph');
+  function draw() {
+    const hl = st.step === 2 || st.step === 3;
+    const rot = 90 * D - arg(m.VL1[0]);                    // same orientation as the phasor diagram
+    const L = 70, CY = 150;
+    const sv2 = (a, b) => `${a}<tspan dy="3" font-size="75%">${b}</tspan><tspan dy="-3"></tspan>`;
+    // line-to-neutral (actual or virtual) phasors of each side
+    const vs = [0, 1, 2].map(k => { const ll = m.VL2[k], prev = m.VL2[(k + 2) % 3];
+      return C((ll.re - prev.re) / 3, (ll.im - prev.im) / 3); });
+    let g = '';
+    const side = (cx, vln, kind, wiring, labs, title, Nlab) => {
+      const sc = L / mag(vln[0]);
+      const pos = i => i === 3 ? [cx, CY] : [cx + sc * mag(vln[i]) * Math.cos(arg(vln[i]) + rot), CY - sc * mag(vln[i]) * Math.sin(arg(vln[i]) + rot)];
+      let s = '';
+      // line leads and terminals
+      for (let i = 0; i < 3; i++) {
+        const [x, y] = pos(i), ux = (x - cx) / L, uy = (y - CY) / L;
+        const xt = cx + (L + 18) * ux, yt = CY + (L + 18) * uy;
+        s += `<line x1="${x}" y1="${y}" x2="${xt}" y2="${yt}" stroke="#374151" stroke-width="1.5"/>
+          <circle cx="${xt}" cy="${yt}" r="3.2" fill="#fff" stroke="#374151" stroke-width="1.3"/>
+          <text x="${cx + (L + 30) * ux}" y="${CY + (L + 30) * uy + 5}" text-anchor="middle" font-size="14" font-weight="700">${labs[i]}</text>`;
+      }
+      // windings
+      for (let k = 0; k < 3; k++) {
+        const w = wiring[k], [px, py] = pos(w.p), [qx, qy] = pos(w.q);
+        const d = Math.hypot(px - qx, py - qy), th = Math.atan2(py - qy, px - qx), on = hl && k === 0;
+        const col = on ? 'var(--r)' : PH[k], sw = on ? 3 : 2;
+        const c0 = d * (kind === 'Y' ? 0.2 : 0.28), c1 = d * (kind === 'Y' ? 0.8 : 0.72), n = 4, hh = (c1 - c0) / n;
+        let path = `M0,0 L${c0},0`;
+        for (let i = 0; i < n; i++) path += ` a${hh / 2},${hh / 2} 0 0 1 ${hh},0`;
+        path += ` L${d},0`;
+        s += `<g transform="translate(${qx},${qy}) rotate(${th / D})">
+          <path d="${path}" fill="none" stroke="${col}" stroke-width="${sw}"/>
+          <circle cx="${c1 - 2}" cy="-9" r="2.8" fill="${col}"/></g>`;
+        const nx = (px + qx) / 2 - 14 * Math.sin(th), ny = (py + qy) / 2 + 14 * Math.cos(th);
+        s += `<text x="${nx}" y="${ny + 4}" text-anchor="middle" font-size="12" font-weight="600" fill="${col}">${'abc'[k]}</text>`;
+      }
+      // neutral
+      if (kind === 'Y') { const [ax, ay] = pos(0), ux = (ax - cx) / L, uy = (ay - CY) / L;
+        s += `<circle cx="${cx}" cy="${CY}" r="3.2" fill="#374151"/>
+        <text x="${cx - 15 * ux}" y="${CY - 15 * uy + 4}" text-anchor="middle" font-size="11" fill="#6b7280">${labs[3]}</text>`; }
+      s += `<text x="${cx}" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#374151">${title} (${kind === 'Y' ? 'Y' : 'Δ'})</text>
+        <text x="${cx}" y="38" text-anchor="middle" font-size="11" fill="#6b7280">${Nlab} turns per winding</text>`;
+      return s;
+    };
+    g += side(108, m.vp, st.pri, m.wp, ['A', 'B', 'C', 'N'], 'Primary', sv2('N', '1'));
+    g += side(312, vs, st.sec, m.ws, ['a', 'b', 'c', 'n'], 'Secondary', sv2('N', '2'));
+    g += `<text x="210" y="286" text-anchor="middle" font-size="11" fill="#6b7280">Same colour = same core limb (same flux). Dot = polarity.</text>
+      <text x="210" y="301" text-anchor="middle" font-size="11" fill="#6b7280">Each winding is drawn in the direction of its voltage phasor.</text>`;
+    ckt.innerHTML = g;
+    drawPhasors();
+  }
+
+  // ---------- drawing: phasor diagram ----------
+  function drawPhasors() {
+    const cx = 180, cy = 182, R = 92, R2 = R * 0.78;
+    const rot = 90 * D - arg(m.VL1[0]);
+    const pt = (r, a) => [cx + r * Math.cos(a + rot), cy - r * Math.sin(a + rot)];
+    const arrow = (z, len, col, wid, dash, lab, labCol, op = 1, perp = 0) => {
+      const a = arg(z), [x, y] = pt(len, a);
+      const ux = (x - cx) / len, uy = (y - cy) / len, hx = -uy, hy = ux, L = 9 + wid;
+      const head = `${x},${y} ${x - L * ux + 0.45 * L * hx},${y - L * uy + 0.45 * L * hy} ${x - L * ux - 0.45 * L * hx},${y - L * uy - 0.45 * L * hy}`;
+      let [tx, ty] = pt(len + 14, a), anc = 'middle';
+      if (perp) { tx += perp * hx; ty += perp * hy; }
+      if (dash) { [tx, ty] = pt(len * 0.55, a); tx += 12 * hx * -1 + 10; ty += 12 * hy * -1; anc = 'start'; }
+      return `<g opacity="${op}"><line x1="${cx}" y1="${cy}" x2="${x - (L - 2) * ux}" y2="${y - (L - 2) * uy}" stroke="${col}" stroke-width="${wid}" ${dash ? 'stroke-dasharray="5 3"' : ''}/>
+        <polygon points="${head}" fill="${col}"/>
+        ${lab ? `<text x="${tx}" y="${ty + 4}" text-anchor="${anc}" font-size="${dash ? 10.5 : 12}" font-weight="600" fill="${labCol || col}">${lab}</text>` : ''}</g>`;
+    };
+    const svs = (a, b) => `${a}<tspan dy="3" font-size="75%">${b}</tspan><tspan dy="-3"></tspan>`;
+    let g = '';
+    // background: circle with 30° ticks (for reading angles)
+    g += `<circle cx="${cx}" cy="${cy}" r="140" fill="#fafafa" stroke="#e5e7eb"/>`;
+    for (let h = 0; h < 12; h++) {
+      const a = (90 - 30 * h) * D, x1 = cx + 133 * Math.cos(a), y1 = cy - 133 * Math.sin(a),
+        x2 = cx + 140 * Math.cos(a), y2 = cy - 140 * Math.sin(a);
+      g += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#c4c8ce" stroke-width="1"/>`;
+    }
+    const s = st.step;
+    // primary line voltages
+    const pl = [['A', 'B'], ['B', 'C'], ['C', 'A']], sl = [['a', 'b'], ['b', 'c'], ['c', 'a']];
+    m.VL1.forEach((z, i) => g += arrow(z, R, 'var(--hv)', i ? 1.4 : 3, false, svs('V', pl[i].join('')), null, i ? 0.45 : 1));
+    // winding a voltages
+    if (s >= 2 && s <= 4) {
+      const l1 = R * mag(m.W1[0]) / mag(m.VL1[0]);
+      g += arrow(m.W1[0], l1, 'var(--r)', 2.4, true, s === 2 ? 'winding a (pri)' : '', null);
+    }
+    if (s >= 3 && s <= 4) {
+      const l2 = R2 * mag(m.W2[0]) / mag(m.VL2[0]);
+      g += arrow(m.W2[0], l2 * 0.92, '#a78bfa', 2.4, true, s === 3 ? 'winding a (sec)' : '', 'var(--r)');
+    }
+    if (s >= 4) {
+      m.VL2.forEach((z, i) => g += arrow(z, R2, 'var(--lv)', i ? 1.4 : 3, false, svs('V', sl[i].join('')), null, i ? 0.45 : 1, (m.shift % 180 === 0) ? 16 : 0));
+    }
+    if (s >= 5 && m.shift !== 0) {
+      const a0 = arg(m.VL1[0]) + rot, a1 = a0 + m.shift * D, r = 44;
+      const x0 = cx + r * Math.cos(a0), y0 = cy - r * Math.sin(a0), x1 = cx + r * Math.cos(a1), y1 = cy - r * Math.sin(a1);
+      const large = Math.abs(m.shift) > 180 ? 1 : 0, sweep = m.shift > 0 ? 0 : 1;
+      g += `<path d="M${x0},${y0} A${r},${r} 0 ${large} ${sweep} ${x1},${y1}" fill="none" stroke="var(--ok)" stroke-width="2.4"/>`;
+      const am = a0 + m.shift * D / 2;
+      g += `<text x="${cx + (r + 16) * Math.cos(am)}" y="${cy - (r + 16) * Math.sin(am) + 4}" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ok)">${Math.abs(m.shift)}°</text>`;
+    }
+    g += `<circle cx="${cx}" cy="${cy}" r="3" fill="#374151"/>`;
+    if (s >= 5) g += `<text x="${cx}" y="345" text-anchor="middle" font-size="14" font-weight="700" fill="var(--ok)">${shiftSvg()}</text>`;
+    g += `<text x="6" y="14" font-size="10" fill="#6b7280">HV line V (dark) · LV line V (amber)</text>`;
+    g += `<text x="6" y="27" font-size="10" fill="#6b7280">${svs('V', 'AB')} drawn pointing up (reference)</text>`;
+    ph.innerHTML = g;
+  }
+
+  // ---------- text ----------
+  function explain() {
+    const s = st.step, wp = m.wp[0], ws = m.ws[0];
+    const VAB = sb('V', 'AB'), Vab = sb('V', 'ab');
+    const w1n = vn(PB, wp), w2n = vn(SB, ws);
+    const d1 = Math.round(wrap((arg(m.W1[0]) - arg(m.VL1[0])) / D));
+    let t = '';
+    if (s === 1) t = `<b>Step 1.</b> Primary line voltages ${VAB}, ${sb('V', 'BC')}, ${sb('V', 'CA')}. We draw ${VAB} pointing up: it is the reference.`;
+    if (s === 2) t = `<b>Step 2.</b> Primary winding on limb a is connected ${st.pri === 'Y' ? 'from line A to the neutral' : `between lines ${PB[wp.p]} and ${PB[wp.q]}`}, so it sees ${w1n}, which ${relTxt(d1, VAB)}.` +
+      (st.pri === 'Y' ? ` Its magnitude is ${sb('V', 'LL')}/√3.` : ` Its magnitude is the full ${sb('V', 'LL')}.`);
+    if (s === 3) t = `<b>Step 3.</b> The secondary winding on the <b>same limb</b> links the same flux, so its voltage (dot to dot) is in phase with the primary winding voltage, scaled by 1/n. ` +
+      `It is wired as ${w2n}${st.rev ? ` (polarity <b>reversed</b>: the undotted end goes where the dotted end used to, adding 180°)` : ''}.`;
+    if (s === 4) t = st.sec === 'Y'
+      ? `<b>Step 4.</b> Secondary is Y: ${Vab} = ${sb('V', 'an')} − ${sb('V', 'bn')}. That is √3 × the winding voltage, and <b>30° ahead</b> of ${sb('V', 'an')} (abc sequence).`
+      : `<b>Step 4.</b> Secondary is Δ: each line-to-line voltage <b>is</b> a winding voltage. ${Vab} is the winding connected between a and b.`;
+    if (s === 5) {
+      const rel = relStr();
+      t = `<b>Step 5.</b> ${rel}. ` + (m.shift === 0
+        ? `Y–Y and Δ–Δ (wired as drawn) give no phase shift.`
+        : st.pri !== st.sec
+          ? `The 30° comes from mixing Y and Δ: one side's windings see phase voltages, the other side's see line voltages.` + (st.rev ? ` Reversed polarity adds 180°.` : '')
+          : `Here the shift comes only from the wiring (how the Δ is closed or the polarity), not from the connection type.`) +
+        ` Transformers in parallel must have the <b>same phase shift</b> and the same line-voltage ratio.`;
+    }
+    $('explain').innerHTML = t;
+  }
+
+  function readout() {
+    const P1 = st.pri === 'Y' ? 'Y' : 'Δ', S1 = st.sec === 'Y' ? 'Y' : 'Δ';
+    const rel = relStr();
+    const same = Math.abs(m.llr - m.n) / m.n < 1e-6;
+    const ratioNote = same ? '<span class="okc">= turns ratio</span>' :
+      `<span class="warn">≠ turns ratio</span> (${st.pri === 'Y' ? '×√3' : '÷√3'})`;
+    $('out').innerHTML = `
+      <div class="wide"><span class="k">Phase shift:</span> <span class="vg">${rel}</span></div>
+      <div><span class="k">Turns ratio n = N<sub>1</sub>/N<sub>2</sub>:</span> ${fR(m.n)}</div>
+      <div><span class="k">Line-voltage ratio:</span> ${fR(m.llr)} ${ratioNote}</div>
+      <div><span class="k">Primary (${P1}):</span> V<sub>LL</sub> = ${fV(m.VLL1)}, I<sub>L</sub> = ${fI(m.IL1)}</div>
+      <div><span class="k">Secondary (${S1}):</span> V<sub>LL</sub> = ${fV(m.VLL2)}, I<sub>L</sub> = ${fI(m.IL2)}</div>
+      <div class="hideembed"><span class="k">Winding currents:</span> ${fI(m.IW1)} / ${fI(m.IW2)}</div>
+      <div class="hideembed"><span class="k">Bank rating:</span> 3 × ${fS(st.s1 * 1e3)} = ${fS(m.S3)}</div>
+      <div class="wide hideembed"><span class="k">Refer an HV impedance to the LV per-phase-Y circuit:</span> multiply by (${fV(m.VLL2)}/${fV(m.VLL1)})² = 1/${(m.llr * m.llr).toFixed(m.llr * m.llr >= 100 ? 0 : 2)}</div>`;
+  }
+
+  function ui() {
+    document.querySelectorAll('[data-c]').forEach(b => b.classList.toggle('on', b.dataset.c === st.pri + st.sec));
+    $('pv').disabled = st.pri !== 'D'; $('sv').disabled = st.sec !== 'D';
+    $('pv').textContent = `Primary Δ: A→${st.pv > 0 ? 'B' : 'C'}`;
+    $('sv').textContent = `Secondary Δ: a→${st.sv > 0 ? 'b' : 'c'}`;
+    $('rev').textContent = `Secondary polarity: ${st.rev ? 'reversed' : 'normal'}`; $('rev').classList.toggle('on', st.rev);
+    $('seq').textContent = `Sequence: ${st.seq > 0 ? 'abc' : 'acb'}`; $('seq').classList.toggle('on', st.seq < 0);
+    document.querySelectorAll('.step').forEach(b => b.classList.toggle('on', +b.dataset.s === st.step));
+    $('v1').value = +st.v1.toPrecision(6); $('v2').value = +st.v2.toPrecision(6); $('s1').value = +st.s1.toPrecision(6);
+    explain(); readout();
+  }
+
+  // ---------- events ----------
+  document.querySelectorAll('[data-c]').forEach(b => b.addEventListener('click', () => {
+    st.pri = b.dataset.c[0]; st.sec = b.dataset.c[1]; compute(); }));
+  $('pv').addEventListener('click', () => { st.pv = -st.pv; compute(); });
+  $('sv').addEventListener('click', () => { st.sv = -st.sv; compute(); });
+  $('rev').addEventListener('click', () => { st.rev = !st.rev; compute(); });
+  $('seq').addEventListener('click', () => { st.seq = -st.seq; compute(); });
+  document.querySelectorAll('.step').forEach(b => b.addEventListener('click', () => { st.step = +b.dataset.s; compute(); }));
+  const go = d => { st.step = Math.min(5, Math.max(1, st.step + d)); compute(); };
+  $('prev').addEventListener('click', () => go(-1)); $('next').addEventListener('click', () => go(1));
+  ['v1', 'v2', 's1'].forEach(id => $(id).addEventListener('change', e => {
+    const v = parseFloat(e.target.value); if (v > 0) st[id] = v; compute(); }));
+  const preset = (pri, sec, v1, v2, s1) => { Object.assign(st, {pri, sec, v1, v2, s1, pv: 1, sv: 1, rev: false, seq: 1, step: 5}); compute(); };
+  $('ex1').addEventListener('click', () => preset('D', 'Y', 10000, 230, 2000));
+  $('ex2').addEventListener('click', () => preset('Y', 'D', 1330, 230, 10));
+  // in a remark slide: ↑/↓ step through, ←/→ stay with the slideshow
+  window.addEventListener('keydown', e => {
+    if (e.key === 'ArrowUp') { go(-1); e.preventDefault(); }
+    if (e.key === 'ArrowDown') { go(1); e.preventDefault(); }
+  });
+
+  // ---------- quiz ----------
+  const QUIZ = [
+    {q: 'Three single-phase 2 MVA, 10 kV/230 V transformers are connected Δ–Y. What are the line-to-line voltage and line current on the LV side?',
+     a: '<span class="ans">398 V and 8.70 kA.</span> The Y side puts each 230 V winding between line and neutral, so V<sub>LL</sub> = √3·230 = 398 V. The bank is 6 MVA, so I<sub>L</sub> = 6 MVA/(√3·398 V) = 8.70 kA (same as the winding current, since it is Y).',
+     set: () => preset('D', 'Y', 10000, 230, 2000)},
+    {q: 'Same bank (Δ–Y, 10 kV/230 V). Turns ratio and line-voltage ratio?',
+     a: '<span class="ans">n = 43.5, line-voltage ratio = 25.1.</span> 10 000/230 = 43.5 per winding, but 10 kV/398 V = 25.1 between lines. Use the line ratio when you refer impedances in a per-phase-Y circuit.',
+     set: () => preset('D', 'Y', 10000, 230, 2000)},
+    {q: 'In a Y–Δ bank wired as in the slides, V<sub>ab</sub> lags V<sub>AB</sub> by 30°. You reverse the polarity of all three secondary windings. Where is V<sub>ab</sub> now?',
+     a: '<span class="ans">It leads V<sub>AB</sub> by 150°.</span> Reversing polarity adds 180°: −30° + 180° = +150°.',
+     set: () => { Object.assign(st, {pri: 'Y', sec: 'D', sv: 1, rev: true, seq: 1, step: 5}); compute(); }},
+    {q: 'In a Δ–Y bank wired as in the slides, V<sub>ab</sub> leads V<sub>AB</sub> by 30°. The supply phase sequence is changed to acb (two lines swapped). Where does V<sub>ab</sub> end up?',
+     a: '<span class="ans">It now lags V<sub>AB</sub> by 30°.</span> The direction of the 30° step between phase and line voltages depends on the phase sequence.',
+     set: () => { Object.assign(st, {pri: 'D', sec: 'Y', pv: 1, rev: false, seq: -1, step: 5}); compute(); }},
+    {q: 'Transformer 1 is Δ–Y with V<sub>ab</sub> leading V<sub>AB</sub> by 30°. Transformer 2 is Y–Δ with V<sub>ab</sub> lagging by 30°. Same line-voltage ratio. Can they be connected in parallel?',
+     a: '<span class="ans">No.</span> Their LV voltages are 60° apart (one leads by 30°, the other lags by 30°). The difference voltage drives a huge circulating current through the two leakage impedances. Closing transformer 2\'s Δ the other way (a→c) would make the shifts match.',
+     set: () => { Object.assign(st, {pri: 'Y', sec: 'D', sv: 1, rev: false, seq: 1, step: 5}); compute(); }},
+    {q: 'In a Y–Δ transformer, does V<sub>ab</sub> lag or lead V<sub>AB</sub> by 30°?',
+     a: '<span class="ans">Either one.</span> It depends on how the Δ is closed: a→b gives 30° lag, a→c gives 30° lead. Try the "Secondary Δ" button.',
+     set: () => { Object.assign(st, {pri: 'Y', sec: 'D', sv: -1, rev: false, seq: 1, step: 5}); compute(); }},
+    {q: 'Why are distribution transformers usually Δ–Y rather than Y–Y?',
+     a: '<span class="ans">Neutral on the LV side, plus a Δ on the HV side.</span> The Y secondary gives a neutral for 230 V single-phase loads. The Δ gives the 3rd-harmonic magnetising current a path, so the flux and voltages stay sinusoidal, and it handles unbalanced LV loads better than Y–Y.',
+     set: () => preset('D', 'Y', 10000, 230, 400)}
+  ];
+  let qi = 0;
+  function showQ() {
+    const Q = QUIZ[qi];
+    $('qn').textContent = `(${qi + 1}/${QUIZ.length})`; $('qq').innerHTML = Q.q; $('qa').innerHTML = Q.a;
+    $('qa').style.display = 'none'; $('qshow').textContent = 'Show answer';
+  }
+  $('qshow').addEventListener('click', () => {
+    const on = $('qa').style.display !== 'block';
+    $('qa').style.display = on ? 'block' : 'none'; $('qshow').textContent = on ? 'Hide answer' : 'Show answer';
+  });
+  $('qset').addEventListener('click', () => QUIZ[qi].set());
+  $('qnext').addEventListener('click', () => { qi = (qi + 1) % QUIZ.length; showQ(); });
+
+  showQ(); compute();
+  window.__m = () => m; window.__st = st; window.__compute = compute;
+})();
+</script>
+</body>
+</html>

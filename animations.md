@@ -14,7 +14,7 @@ permalink: /animations/index.html
 * [Magnetic Circuits](./presentations/interactive/magnetic_circuit_explorer.html)
 * [Coupled Coils & Mutual Inductance](./presentations/interactive/coupled_coils_explorer.html)
 * [AC Excitation in Coupled Coils](./presentations/interactive/ac_excitation_explorer.html)
-
+* [3-phase Transformers](./presentations/interactive/three_phase_transformer_explorer.html)
 
 ## EE-463 Power Electronics
 

@@ -46,11 +46,11 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
 # Delta (\\(\Delta\\)) - Wye (Y) Connection
-<img src="https://cdn.thumpertalk.com/uploads/imageproxy/stator_delta_y.png.2de9fa26b418c1b71590912ab729e5e9.png" alt="Drawing" style="width: 700px;"/>
+<img src="./images/ee361/delta_wye.png" alt="Drawing" style="width: 700px;"/>
 
 ---
 # Wye(or Star) Connection (Y)
-<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/3_Phase_Power_Connected_to_Wye_Load.svg/2000px-3_Phase_Power_Connected_to_Wye_Load.svg.png" alt="Drawing" style="width: 500px;"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/48/3_Phase_Power_Connected_to_Wye_Load.svg" alt="Drawing" style="width: 500px;"/>
 
 ### \\( |V\_{line-to-line}| = \sqrt{3} \; |V\_{phase}|\\)
 ### \\( |I\_{line}| = |I\_{phase}|\\)
@@ -76,12 +76,14 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ## \\( S= \sqrt{3}V\_{line-to-line}I\_{line}\\)
 
+### Refresher: [Line vs Phase explorer](https://keysan.me/presentations/interactive/line_phase_explorer.html)
 ---
 # Impedance Transformation
 
-![](http://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Wye-delta-2.svg/750px-Wye-delta-2.svg.png)
 
-## \\(Z_{\Delta} = 3 Z\_Y \\)
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Wye-delta-2.svg" alt="Drawing" style="width: 700px;"/>
+
+# \\(Z_{\Delta} = 3 Z\_Y \\)
 
 ---
 # 3-Phase Transformers
@@ -94,12 +96,13 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ---
 # 3-Phase Transformer
 <img src="3phase_transformer_separate.png" alt="Drawing" style="width: 800px;"/>
-### Combined transformer is lighter, cheaper, more efficient
+### Combined transformer core is lighter, cheaper and more efficient
 ---
 # 3-Phase Transformers
- ![](http://www.mathworks.com/help/physmod/sps/powersys/ref/3ph_trans_matrix_2wind_1.gif)
+
+<img src="./images/ee361/3ph_trans_matrix_2wind_1.gif" alt="Drawing" style="width:800px;"/>
 ---
-# 3-Phase Transformers
+# A Real 3-Phase Transformers
 <img src="http://img.directindustry.com/images_di/photo-g/three-phase-transformers-25208-2513135.jpg" alt="Drawing" style="width: 500px;"/>
 ---
 # Flux Path in a 3-Phase Transformer
@@ -131,7 +134,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 
 ---
 ### Transformer Nameplates
-<img src="https://www.energize.co.za/sites/default/files/inline-images/202201/figure_1-_transformer_nameplate.jpg" alt="Drawing" style="width: 400px;"/>
+<img src="https://eepower.com/uploads/articles/transformer-nameplate-details-and-sound-levels-fig1(revised).jpg" alt="Drawing" style="width: 300px;"/>
 
 [3-phase transformer assembly](http://www.youtube.com/watch?v=9Y958Vc5ohI&feature=BFa),
 [Info about vector group](http://en.wikipedia.org/wiki/Vector_group), [Nameplate info](https://electricalacademia.com/transformer/transformer-nameplate-details-explained/)
@@ -147,7 +150,7 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ![](delta_delta.png)
 
 - ### Common in medium voltage transformers
-- ### No 3rd Current Harmonics
+- ### No 3rd Current Harmonics in line currents
 - ### Phase Shift: 0
 
 ---
@@ -155,16 +158,23 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ![](wye_delta_t.png)
 
 - ### Usually as step-down transformer
-- ### Phase shift: 30 deg.
+- ### Phase shift of 30 deg. between primary and secondary line-to-line voltages
 ---
 # Delta-Wye: (\\(\Delta-Y\\))
 ![](delta_wye_t.png)
 
 - ### Usually as step-up transformer
-- ### Also used in distribution transformers (because of neutral)
-- ### Phase shift: -30 deg.
+- ### Also used in distribution transformers (because of neutral on the LV side)
+- ### Phase shift of 30 deg. between primary and secondary line-to-line voltages
+
 ---
-# Turns-Ratio vs Voltage Ratio
+### Explore: Connection Types
+<iframe src="interactive/three_phase_transformer_explorer.html?embed" width="790" height="500" style="border:0"></iframe>
+
+#### Try it yourself: [keysan.me/presentations/interactive/three_phase_transformer_explorer.html](https://keysan.me/presentations/interactive/three_phase_transformer_explorer.html)
+
+---
+# Turns-Ratio vs Line Voltage Ratio
 
 - ## Turns Ratio: \\(n=\frac{N\_1}{N\_2}=\frac{V1\_{ph}}{V2\_{ph}}\\)
 --
@@ -177,6 +187,19 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 --
 
 ### Line-to-line voltage ratio is more useful in 3-phase transformers
+---
+# Per-Phase Analysis of 3-Phase Transformers
+### 1. Replace every \\(\Delta\\) (sources, loads, windings) with its Y equivalent: \\(Z\_Y = Z\_\Delta/3\\)
+--
+
+### 2. Draw one phase (line-to-neutral)
+--
+
+### 3. Refer impedances with the **line-to-line voltage ratio**: \\(Z' = Z\left(\frac{V\_{2,LL}}{V\_{1,LL}}\right)^2\\)
+--
+
+### 4. Ignore the ±30° shift for magnitudes (it matters only when paralleling or comparing angles across the transformer)
+
 ---
 #Example on 3-ph Transformers
 
@@ -205,6 +228,18 @@ Office: C-113 <span class="meta">&#8226;</span> Tel: 210 7586
 ---
 
 ## e) Now assume the load is drawing rated current at unity pf. when phase voltage(i.e. line-to-neutral) at the load is 230 V. Calculate the referred voltage \\(V_s'\\) and the actual line-to-line voltage of the source.
+---
+# Example: Solution
+### a) HV (Δ): \\(V\_{LL}\\) = 10 kV, \\(I\_L = \frac{6\,MVA}{\sqrt3 \cdot 10\,kV}\\) = 346 A
+### LV (Y): \\(V\_{LL} = \sqrt3 \cdot 230\\) = 398 V, \\(I\_L\\) = 8.70 kA
+
+### b) \\(S = 3 \times 2\\) = 6 MVA
+
+### c) Turns ratio 10000/230 = 43.5, V-line ratio 10000/398 = 25.1
+
+#### d) \\(X\_s' = 0.3125/25.1^2\\) = 0.5 mΩ → total \\(j(0.5 + 8 + 1.5)\\) = j10 mΩ per phase
+
+#### e) \\(V\_s' = 230 + j\,8696 \times 0.010\\) = 245.9∠20.7° V → \\(E\_{s,LL} = 245.9 \cdot \sqrt3 \cdot 25.1\\) = 10.69 kV
 
 ---
 ## Example (P.Sen Ex. 2.8)
@@ -245,6 +280,19 @@ by a feeder whose impedance is 0.003+j0.015 Ω per phase.
 ## Single Line Diagram  (Referred to LV Side)
 
 <img src="./images/ee361/sen_ex3.png" alt="Drawing" style="width: 750px;"/>
+---
+## Example (P.Sen Ex. 2.8): Solution (per-phase Y, LV side)
+#### \\(I = \frac{27\,kVA}{\sqrt3 \cdot 230}\\) = 67.8∠−25.8° A, \\(V\_L\\) = 132.8 V
+--
+
+#### Transformer (Δ side → Y): \\((0.12+j0.25)/3\\) = 0.04 + j0.083 Ω
+#### HV feeder: \\((0.8+j5.0)/10.0^2\\) = 0.008 + j0.050 Ω (line ratio \\(\sqrt3\cdot1330/230 = 10.0\\))
+--
+
+#### \\(Z\_{tot}\\) = 0.051 + j0.148 Ω → \\(V\_s'\\) = 140.5 V
+--
+
+#### \\(V\_{s,LL} = 140.5 \times 10.0 \times \sqrt3\\) = **2437 V**
 
 
 ---
@@ -258,9 +306,9 @@ by a feeder whose impedance is 0.003+j0.015 Ω per phase.
 ---
 # Extra Reading Material
 
-## [Three Phase Transformers](http://my.ece.msstate.edu/faculty/donohoe/ece3614three_phase_transformers.pdf)
-## [Review of three phase AC circuits](http://www.egr.unlv.edu/~eebag/EE%20340%20-%20Review%203-Phase%20Ckts.pdf)
-## [Power Transformers](http://www.egr.unlv.edu/~eebag/Power%20Transformers.pdf)
+## [Three Phase Transformers](https://nit-edu.org/wp-content/uploads/2021/09/Ch-33-Transformer-3-phase.pdf)
+## [3-phase transformer module](https://www.idc-online.com/technical_references/pdfs/electrical_engineering/Three_Phase_Transformer.pdf)
+## [Transformers by Osman Sevaioglu](https://ocw.metu.edu.tr/pluginfile.php/3942/mod_resource/content/0/Transformers.pdf)
 
 ---
 ## You can download this presentation from: [keysan.me/ee361](http://keysan.me/ee361)
